@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://dcyyd.github.io/hexo_websites/images/favicon.svg">
+
+<link rel="stylesheet" href="https://dcyyd.github.io/hexo_websites/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"dcyyd.github.io","root":"https://dcyyd.github.io/hexo_websites/","images":"https://dcyyd.github.io/hexo_websites/images","scheme":"Gemini","darkmode":"auto","version":"8.21.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":{"valine":{"text":"Valine","order":-1}}},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"https://dcyyd.github.io/hexo_websites/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://dcyyd.github.io/hexo_websites/js/config.js"></script>
+
+    <meta name="description" content="这篇文档主要介绍了网络工程师考试的知识点，涵盖了计算机存储与中断、项目管理与网络图表、网络设备与协议、网络传输、结构化布线系统、xDSL....">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络工程师考试知识点_02">
+<meta property="og:url" content="https://dcyyd.github.io/2024/11/24/Networking-Knowledge-Points-02/index.html">
+<meta property="og:site_name" content="Smart Space">
+<meta property="og:description" content="这篇文档主要介绍了网络工程师考试的知识点，涵盖了计算机存储与中断、项目管理与网络图表、网络设备与协议、网络传输、结构化布线系统、xDSL....">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-11-24T07:24:24.000Z">
+<meta property="article:modified_time" content="2024-11-24T07:24:24.000Z">
+<meta property="article:author" content="Dou ChangYou">
+<meta property="article:tag" content="网络工程师">
+<meta property="article:tag" content="考试知识点">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://dcyyd.github.io/2024/11/24/Networking-Knowledge-Points-02/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://dcyyd.github.io/2024/11/24/Networking-Knowledge-Points-02/","path":"2024/11/24/Networking-Knowledge-Points-02/","title":"网络工程师考试知识点_02"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>网络工程师考试知识点_02 | Smart Space</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="https://dcyyd.github.io/hexo_websites/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="https://dcyyd.github.io/hexo_websites/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Smart Space</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="https://dcyyd.github.io/hexo_websites/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="https://dcyyd.github.io/hexo_websites/2020/11/24/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="https://dcyyd.github.io/hexo_websites/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="https://dcyyd.github.io/hexo_websites/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="https://dcyyd.github.io/hexo_websites/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BA%8B%E5%8A%A1%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">一、事务：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">二、寄存器：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%AD%98%E5%82%A8%E5%99%A8%E5%88%86%E7%B1%BB%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">三、存储器分类：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%8C%87%E4%BB%A4%E9%9B%86%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">四、指令集：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%86%85%E5%AD%98%E5%AD%98%E5%82%A8%E5%AE%B9%E9%87%8F%EF%BC%9A"><span class="nav-number">5.</span> <span class="nav-text">五、内存存储容量：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E5%91%A8%E6%9C%9F%EF%BC%9A"><span class="nav-number">6.</span> <span class="nav-text">六、周期：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%83%E3%80%81CPU-%E4%B8%8E%E5%A4%96%E8%AE%BE%E9%97%B4%E9%80%9A%E4%BF%A1%EF%BC%9A"><span class="nav-number">7.</span> <span class="nav-text">七、CPU 与外设间通信：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E6%8C%87%E4%BB%A4%E6%B5%81%E6%B0%B4%E7%BA%BF%EF%BC%9A"><span class="nav-number">8.</span> <span class="nav-text">八、指令流水线：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B9%9D%E3%80%81%E6%8C%87%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%97%B6%E9%97%B4%EF%BC%9A"><span class="nav-number">9.</span> <span class="nav-text">九、指令执行时间：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E3%80%81%E4%B8%AD%E6%96%AD%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4%EF%BC%9A"><span class="nav-number">10.</span> <span class="nav-text">十、中断响应时间：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E6%9C%BA%E5%99%A8%E6%8C%87%E4%BB%A4%E5%AF%BB%E5%9D%80%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="nav-number">11.</span> <span class="nav-text">十一、机器指令寻址方式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81Flynn%E5%88%86%E7%B1%BB%E6%B3%95%EF%BC%9A"><span class="nav-number">12.</span> <span class="nav-text">十二、Flynn分类法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E4%B8%89%E3%80%81%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE%E9%87%8F%EF%BC%9A"><span class="nav-number">13.</span> <span class="nav-text">十三、图像数据量：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E5%9B%9B%E3%80%81CPI%E3%80%81MIPS%E3%80%81PCI%E3%80%81MFLOPS%EF%BC%9A"><span class="nav-number">14.</span> <span class="nav-text">十四、CPI、MIPS、PCI、MFLOPS：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E4%BA%94%E3%80%81WLAN%E6%A0%87%E5%87%86%EF%BC%9A"><span class="nav-number">15.</span> <span class="nav-text">十五、WLAN标准：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E5%85%AD%E3%80%81%E5%BE%AE%E6%B3%A2%EF%BC%9A"><span class="nav-number">16.</span> <span class="nav-text">十六、微波：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E4%B8%83%E3%80%81CRC%E6%A0%A1%E9%AA%8C%EF%BC%88%E5%BE%AA%E7%8E%AF%E5%86%97%E4%BD%99%E6%A0%A1%E9%AA%8C%EF%BC%89%EF%BC%9A"><span class="nav-number">17.</span> <span class="nav-text">十七、CRC校验（循环冗余校验）：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E5%85%AB%E3%80%81%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%8C%87%E6%95%B0%E9%80%80%E9%81%BF%E7%AE%97%E6%B3%95%EF%BC%9A"><span class="nav-number">18.</span> <span class="nav-text">十八、二进制指数退避算法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%81%E4%B9%9D%E3%80%81ipconfig%E5%8F%82%E6%95%B0%E8%A1%A8%E6%A0%BC%EF%BC%9A"><span class="nav-number">19.</span> <span class="nav-text">十九、ipconfig参数表格：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E5%8D%81%E3%80%81RAID%EF%BC%9A"><span class="nav-number">20.</span> <span class="nav-text">二十、RAID：</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Dou ChangYou"
+      src="https://dcyyd.github.io/hexo_websites/images/favicon.svg">
+  <p class="site-author-name" itemprop="name">Dou ChangYou</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="https://dcyyd.github.io/hexo_websites/archives/">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="https://dcyyd.github.io/hexo_websites/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="https://dcyyd.github.io/hexo_websites/tags/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dcyyd" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dcyyd" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:dcyyd_kcug@yeah.net" title="E-Mail → mailto:dcyyd_kcug@yeah.net" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+<div style="">
+	<canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+	(function() {
+
+		var digit = [
+			[
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 1, 1, 0, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 0, 1, 1, 0],
+				[0, 0, 1, 1, 1, 0, 0]
+			], //0
+			[
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 1, 1, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[1, 1, 1, 1, 1, 1, 1]
+			], //1
+			[
+				[0, 1, 1, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 1, 1, 0, 0, 0, 0],
+				[1, 1, 0, 0, 0, 0, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 1, 1, 1, 1, 1]
+			], //2
+			[
+				[1, 1, 1, 1, 1, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0]
+			], //3
+			[
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 1, 0],
+				[0, 0, 1, 1, 1, 1, 0],
+				[0, 1, 1, 0, 1, 1, 0],
+				[1, 1, 0, 0, 1, 1, 0],
+				[1, 1, 1, 1, 1, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 1, 1]
+			], //4
+			[
+				[1, 1, 1, 1, 1, 1, 1],
+				[1, 1, 0, 0, 0, 0, 0],
+				[1, 1, 0, 0, 0, 0, 0],
+				[1, 1, 1, 1, 1, 1, 0],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0]
+			], //5
+			[
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 1, 1, 0, 0, 0, 0],
+				[1, 1, 0, 0, 0, 0, 0],
+				[1, 1, 0, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0]
+			], //6
+			[
+				[1, 1, 1, 1, 1, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0]
+			], //7
+			[
+				[0, 1, 1, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0]
+			], //8
+			[
+				[0, 1, 1, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 1, 1, 0, 0, 0, 0]
+			], //9
+			[
+				[0, 0, 0, 0, 0, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 0, 0, 0, 0, 0],
+				[0, 0, 0, 0, 0, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 0, 0, 0, 0, 0]
+			] //:
+		];
+
+		var canvas = document.getElementById('canvas');
+
+		if (canvas.getContext) {
+			var cxt = canvas.getContext('2d');
+			//声明canvas的宽高
+			var H = 100,
+				W = 700;
+			canvas.height = H;
+			canvas.width = W;
+			cxt.fillStyle = '#f00';
+			cxt.fillRect(10, 10, 50, 50);
+
+			//存储时间数据
+			var data = [];
+			//存储运动的小球
+			var balls = [];
+			//设置粒子半径
+			var R = canvas.height / 20 - 1;
+			(function() {
+				var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+				//存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+				data.push(temp[1], temp[2], 10, temp[3], temp[4], 10, temp[5], temp[6]);
+			})();
+
+			/*生成点阵数字*/
+			function renderDigit(index, num) {
+				for (var i = 0; i < digit[num].length; i++) {
+					for (var j = 0; j < digit[num][i].length; j++) {
+						if (digit[num][i][j] == 1) {
+							cxt.beginPath();
+							cxt.arc(14 * (R + 2) * index + j * 2 * (R + 1) + (R + 1), i * 2 * (R + 1) + (R + 1), R, 0,
+								2 * Math.PI);
+							cxt.closePath();
+							cxt.fill();
+						}
+					}
+				}
+			}
+
+			/*更新时钟*/
+			function updateDigitTime() {
+				var changeNumArray = [];
+				var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+				var NewData = [];
+				NewData.push(temp[1], temp[2], 10, temp[3], temp[4], 10, temp[5], temp[6]);
+				for (var i = data.length - 1; i >= 0; i--) {
+					//时间发生变化
+					if (NewData[i] !== data[i]) {
+						//将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+						changeNumArray.push(i + '_' + (Number(data[i]) + 1) % 10);
+					}
+				}
+				//增加小球
+				for (var i = 0; i < changeNumArray.length; i++) {
+					addBalls.apply(this, changeNumArray[i].split('_'));
+				}
+				data = NewData.concat();
+			}
+
+			/*更新小球状态*/
+			function updateBalls() {
+				for (var i = 0; i < balls.length; i++) {
+					balls[i].stepY += balls[i].disY;
+					balls[i].x += balls[i].stepX;
+					balls[i].y += balls[i].stepY;
+					if (balls[i].x > W + R || balls[i].y > H + R) {
+						balls.splice(i, 1);
+						i--;
+					}
+				}
+			}
+
+			/*增加要运动的小球*/
+			function addBalls(index, num) {
+				var numArray = [1, 2, 3];
+				var colorArray = ["#3BE", "#09C", "#A6C", "#93C", "#9C0", "#690", "#FB3", "#F80", "#F44", "#C00"];
+				for (var i = 0; i < digit[num].length; i++) {
+					for (var j = 0; j < digit[num][i].length; j++) {
+						if (digit[num][i][j] == 1) {
+							var ball = {
+								x: 14 * (R + 2) * index + j * 2 * (R + 1) + (R + 1),
+								y: i * 2 * (R + 1) + (R + 1),
+								stepX: Math.floor(Math.random() * 4 - 2),
+								stepY: -2 * numArray[Math.floor(Math.random() * numArray.length)],
+								color: colorArray[Math.floor(Math.random() * colorArray.length)],
+								disY: 1
+							};
+							balls.push(ball);
+						}
+					}
+				}
+			}
+
+			/*渲染*/
+			function render() {
+				//重置画布宽度，达到清空画布的效果
+				canvas.height = 100;
+				//渲染时钟
+				for (var i = 0; i < data.length; i++) {
+					renderDigit(i, data[i]);
+				}
+				//渲染小球
+				for (var i = 0; i < balls.length; i++) {
+					cxt.beginPath();
+					cxt.arc(balls[i].x, balls[i].y, R, 0, 2 * Math.PI);
+					cxt.fillStyle = balls[i].color;
+					cxt.closePath();
+					cxt.fill();
+				}
+			}
+
+			clearInterval(oTimer);
+			var oTimer = setInterval(function() {
+				//更新时钟
+				updateDigitTime();
+				//更新小球状态
+				updateBalls();
+				//渲染
+				render();
+			}, 50);
+		}
+
+	})();
+</script>
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dcyyd.github.io/2024/11/24/Networking-Knowledge-Points-02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://dcyyd.github.io/hexo_websites/images/favicon.svg">
+      <meta itemprop="name" content="Dou ChangYou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smart Space">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="网络工程师考试知识点_02 | Smart Space">
+      <meta itemprop="description" content="这篇文档主要介绍了网络工程师考试的知识点，涵盖了计算机存储与中断、项目管理与网络图表、网络设备与协议、网络传输、结构化布线系统、xDSL....">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          网络工程师考试知识点_02
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-11-24 15:24:24" itemprop="dateCreated datePublished" datetime="2024-11-24T15:24:24+08:00">2024-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="https://dcyyd.github.io/hexo_websites/categories/%E7%BD%91%E5%B7%A5/" itemprop="url" rel="index"><span itemprop="name">网工</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>11k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>10 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">这篇文档主要介绍了网络工程师考试的知识点，涵盖了计算机存储与中断、项目管理与网络图表、网络设备与协议、网络传输、结构化布线系统、xDSL....</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h4 id="一、事务："><a href="#一、事务：" class="headerlink" title="一、事务："></a><strong>一、事务：</strong></h4><ul>
+<li><strong>原子性：</strong>事务包含的操作要么全部成功，要么全部失败回滚。</li>
+<li><strong>一致性：</strong>事务执行前后都必须处于一个一致性状态。</li>
+<li><strong>隔离性：</strong>多事务并发执行，任一事务更新操作到成功提交的过程，对其他事务都是不可见的。</li>
+<li><strong>持久性：</strong>事务一经提交，对数据库数据的改变是永久性的。</li>
+</ul>
+<h4 id="二、寄存器："><a href="#二、寄存器：" class="headerlink" title="二、寄存器："></a><strong>二、寄存器：</strong></h4><ul>
+<li><strong>程序计数器：</strong>存放指令地址。</li>
+<li><strong>状态寄存器：</strong>记录运算中产生的标志信息。</li>
+<li><strong>通用寄存器：</strong>运算时暂存操作数、地址。</li>
+<li><strong>累加器：</strong>数据寄存器，运算中暂存操作数和中间结果，数据不长存。</li>
+</ul>
+<blockquote>
+<p>CPU在<strong>一个总线周期</strong>结束时响应DMA请求。<br><strong>加法器</strong>是算术逻辑单元的部件。<br>在程序执行过程中，cache与主存的地址映像由<strong>硬件自动完成</strong>。<br>补码自带符号位，0是唯一的，n位二进制编码可以表示<strong>2<sup>n</sup><strong>个不同的数。<br>浮点数表示为阶和尾数两部分。两浮点数相加，先对阶，即</strong>将小阶向大阶对其，同时将尾数右移n位</strong>。<br>指令寄存器位数取决于<strong>指令字长</strong>。<br>为了便于多级中断，使用<strong>堆栈</strong>保护断点和现场最有效。</p>
+</blockquote>
+<h4 id="三、存储器分类："><a href="#三、存储器分类：" class="headerlink" title="三、存储器分类："></a><strong>三、存储器分类：</strong></h4><ul>
+<li><strong>位置：</strong>内存、外存。</li>
+<li><strong>材料：</strong>磁存储器、半导体存储器、光存储器。</li>
+<li><strong>工作方式：</strong>读写存储器、只读存储器。</li>
+<li><strong>访问方式：</strong>按地址访问、按内容访问。</li>
+<li><strong>寻址方式：</strong>随机存储器、顺序存储器、直接存储器。</li>
+</ul>
+<h4 id="四、指令集："><a href="#四、指令集：" class="headerlink" title="四、指令集："></a><strong>四、指令集：</strong></h4><ol>
+<li><strong>概念：</strong><ul>
+<li><strong>RISC（Reduced Instruction Set Computer）</strong>：即精简指令集计算机。它的设计理念是通过简化指令系统，使计算机的硬件结构更简单、更规则。指令集的指令数量较少，格式相对简单且长度固定，每条指令的执行时间较短。</li>
+<li><strong>CISC（Complex Instruction Set Computer）</strong>：是复杂指令集计算机。它的指令系统较为复杂，包含大量不同功能和复杂程度的指令，指令格式多样，长度可变，能完成复杂多样的操作。</li>
+</ul>
+</li>
+<li><strong>指令特点：</strong><ul>
+<li><strong>RISC：</strong><ul>
+<li>指令数量通常较少，一般在几十条到一百多条之间。这些指令的功能比较单一，例如加法指令就只进行加法操作。</li>
+<li>指令格式简单且固定，有利于指令的快速译码和执行。</li>
+</ul>
+</li>
+<li><strong>CISC：</strong><ul>
+<li>指令数量很多，可能包含几百条甚至上千条指令。它有各种功能强大的指令，比如可以一条指令完成从内存中读取数据、进行复杂运算并且存储结果的操作。</li>
+<li>指令格式多样且长度可变。这是为了适应各种复杂指令的需求，但也使得指令的译码过程相对复杂，因为硬件需要花费更多时间来识别指令的具体格式和操作内容。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>性能特点：</strong><ul>
+<li><strong>RISC：</strong><ul>
+<li>由于指令简单、格式固定，RISC 处理器可以采用流水线技术来高效地执行指令。</li>
+<li>执行速度通常较快，尤其是对于简单、重复的任务，如数值计算等。</li>
+</ul>
+</li>
+<li><strong>CISC：</strong><ul>
+<li>CISC 处理器的优势在于可以用较少的指令完成复杂的任务。例如在处理复杂的图形绘制或者文件系统操作时，它可以通过一条复杂指令完成多个简单指令的功能，从而减少程序的指令数量。</li>
+<li>但是，由于指令复杂，其执行速度可能会受到影响。复杂指令的译码和执行需要更多的硬件资源和时间，而且指令长度可变也会对指令读取和存储产生一定的干扰。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>硬件实现复杂度：</strong><ul>
+<li><strong>RISC：</strong><ul>
+<li>硬件结构相对简单。因为指令集简单，处理器的控制单元设计比较规则，不需要复杂的微代码（微代码是一种用于解释和执行复杂指令的底层代码）生成电路。例如，在 RISC 处理器中，控制单元可以通过简单的逻辑电路来直接控制指令的执行流程。</li>
+<li>寄存器数量通常较多，这有助于提高数据的处理速度。数据可以快速地存储在寄存器中，减少了频繁访问内存的次数，因为访问寄存器比访问内存要快得多。</li>
+</ul>
+</li>
+<li><strong>CISC：</strong><ul>
+<li>硬件实现复杂。由于指令集复杂，CISC 处理器需要复杂的控制单元和微代码生成电路来处理各种不同类型的指令。这些电路的设计和实现难度较大，需要更多的芯片面积和功耗。</li>
+<li>寄存器数量可能相对较少，因为一些复杂指令可以直接在内存和运算单元之间进行操作，对寄存器的依赖程度相对较低。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>应用场景：</strong><ul>
+<li><strong>RISC：</strong><ul>
+<li>在嵌入式系统中应用广泛，如手机、平板电脑等移动设备中的处理器。这些设备通常需要高效地处理简单、重复的任务，如音频视频播放、图形显示等，RISC 处理器的快速执行和低功耗特点非常适合这些应用。</li>
+<li>也用于高性能计算领域，特别是在处理大量数据的并行计算任务时，RISC 处理器的流水线技术和多核心架构可以发挥优势。</li>
+</ul>
+</li>
+<li><strong>CISC：</strong><ul>
+<li>在传统的桌面计算机和服务器中仍然有应用。因为这些系统需要运行各种复杂的软件，包括操作系统、数据库管理系统等，CISC 处理器的复杂指令可以更高效地处理这些软件中的复杂操作。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="五、内存存储容量："><a href="#五、内存存储容量：" class="headerlink" title="五、内存存储容量："></a><strong>五、内存存储容量：</strong></h4><ul>
+<li>内存按字节编址，从A1000H–&gt;B13FFH的区域，存储容量为<strong>65KB</strong>。</li>
+<li>结束地址与起始地址差值加1为存储单元个数：B13FFH-A1000H+1&#x3D;10400H，转为十进制：65536+1024&#x3D;64KB+1KB&#x3D;65K。</li>
+</ul>
+<h4 id="六、周期："><a href="#六、周期：" class="headerlink" title="六、周期："></a><strong>六、周期：</strong></h4><ul>
+<li>计算机操作的最小时间单位：<strong>时钟周期</strong>。</li>
+<li>一个<strong>指令周期</strong>需要多个时钟周期。</li>
+<li>一个<strong>机器周期</strong>（CPU周期）完成一个计算机基本操作的时间，需要多个时钟周期。</li>
+</ul>
+<h4 id="七、CPU-与外设间通信："><a href="#七、CPU-与外设间通信：" class="headerlink" title="七、CPU 与外设间通信："></a><strong>七、CPU 与外设间通信：</strong></h4><ol>
+<li><p><strong>程序中断方式：</strong></p>
+<ul>
+<li><p>某一外设的数据准备就绪后，它“主动”向CPU发出中断请求信号，请求CPU暂时中断目前正在执行的程序转而进行数据交换；</p>
+</li>
+<li><p>当CPU响应这个中断时，便暂停运行主程序，自动转去执行该设备的中断服务程序；</p>
+</li>
+<li><p>当中断服务程序执行完毕（数据交换结束）后，CPU又<strong>回到原来的主程序继续执行</strong>。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>程序查询方式：</strong></p>
+<ul>
+<li>CPU 不断地查询外部设备的状态寄存器，以确定设备是否准备好进行数据传输。</li>
+<li>例如，在从磁盘读取数据时，CPU 会周期性地检查磁盘控制器的状态位，看数据是否已经准备好被读取。</li>
+<li>如果状态位显示数据未准备好，CPU 就继续查询；</li>
+<li>如果准备好了，CPU 就开始读取数据。（<strong>CPU 利用率很低</strong>）。</li>
+</ul>
+</li>
+<li><p><strong>直接存储器访问（DMA）方式：</strong></p>
+<ul>
+<li><p>DMA 控制器可以在不需要 CPU 干预的情况下，直接在外部设备和内存之间进行数据传输。</p>
+</li>
+<li><p>在传输数据之前，CPU 需要对 DMA 控制器进行初始化，设置好传输的起始地址、数据长度、传输方向等参数。</p>
+</li>
+<li><p>例如，在从硬盘读取大量数据到内存时，DMA 控制器会接管总线控制权，按照预先设定的参数，将硬盘中的数据直接传输到内存指定区域，期间 CPU 可以去处理其他任务。（<strong>硬件成本相对较高</strong>）。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>通道方式：</strong></p>
+<ul>
+<li><p>通道是一种特殊的处理机，它可以独立于 CPU 执行通道程序，专门负责管理和控制外部设备与内存之间的数据传输。</p>
+</li>
+<li><p>通道有自己的指令系统，可以理解为是一个 “小 CPU”，用于执行通道程序。</p>
+</li>
+<li><p>例如，在大型计算机系统中，磁带机的大量数据读写可以由通道来完成。</p>
+</li>
+<li><p>CPU 将通道程序（包括数据传输的起始地址、长度、操作类型等信息）发送给通道，通道就按照程序指令进行操作，而 CPU 可以去做其他工作。（<strong>硬件和软件实现都比较复杂，成本较高</strong>）。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="八、指令流水线："><a href="#八、指令流水线：" class="headerlink" title="八、指令流水线："></a><strong>八、指令流水线：</strong></h4><ol>
+<li><p><strong>基本概念：</strong></p>
+<ul>
+<li>指令流水线是将指令的执行过程分解为多个阶段，如取指（IF）、译码（ID）、执行（EX）、访存（MEM）和写回（WB）等阶段。每个阶段由专门的硬件电路来处理，不同指令的不同阶段可以在同一时间内重叠执行，提高指令的执行效率。</li>
+</ul>
+</li>
+<li><p><strong>计算指标：</strong></p>
+<ul>
+<li><strong>吞吐率（Throughput）：</strong><ul>
+<li><strong>定义</strong>：单位时间内执行的指令数。它是衡量流水线性能的一个重要指标。</li>
+<li><strong>计算公式</strong>：吞吐率 $TP&#x3D;\frac{n}{T_k}$，其中 $n$ 是执行的指令数，$T_k$ 是处理 $n$ 条指令所用的时间。在理想情况下（各阶段时间相等且无流水线停顿），如果流水线的时钟周期为 $T$，流水线阶段数为 $k$，则执行 $n$ 条指令的时间 $T_k&#x3D;(k + n - 1)T$，所以理想吞吐率 $TP&#x3D;\frac{n}{(k + n - 1)T}$。当 $n$ 很大时，$TP\approx\frac{1}{T}$。</li>
+<li><strong>示例</strong>：假设有一个5阶段（$k &#x3D; 5$）的流水线，时钟周期 $T &#x3D; 1ns$，要执行100条指令（$n &#x3D; 100$）。按照公式计算，$T_k&#x3D;(5 + 100 - 1)\times1ns &#x3D; 104ns$，则吞吐率 $TP&#x3D;\frac{100}{104ns}\approx0.96\times10^9$ 条指令&#x2F;秒。</li>
+</ul>
+</li>
+<li><strong>加速比（Speed - up）：</strong><ul>
+<li><strong>定义</strong>：非流水线执行时间与流水线执行时间之比。它反映了流水线相对于非流水线方式在性能上的提升程度。</li>
+<li><strong>计算公式</strong>：设非流水线方式执行一条指令的时间为 $T_0$，流水线的时钟周期为 $T$，流水线阶段数为 $k$，则加速比 $S&#x3D;\frac{nT_0}{(k + n - 1)T}$。在理想情况下，当各阶段时间相等且 $T &#x3D; \frac{T_0}{k}$ 时，对于大量指令（$n\gg k$），加速比 $S\approx k$。</li>
+<li><strong>示例</strong>：假设非流水线方式执行一条指令需要 $10ns$（$T_0 &#x3D; 10ns$），采用一个4阶段（$k &#x3D; 4$）的流水线，且每个阶段时间相等，那么流水线的时钟周期 $T&#x3D;\frac{10ns}{4}&#x3D;2.5ns$。如果要执行1000条指令（$n &#x3D; 1000$），非流水线执行时间为 $1000\times10ns &#x3D; 10000ns$，流水线执行时间 $T_k&#x3D;(4 + 1000 - 1)\times2.5ns &#x3D; 2507.5ns$，加速比 $S&#x3D;\frac{1000\times10ns}{2507.5ns}\approx3.99$。</li>
+</ul>
+</li>
+<li><strong>效率（Efficiency）：</strong><ul>
+<li><strong>定义</strong>：流水线的设备利用率。它是指流水线中各功能段的实际使用时间与整个运行时间之比。</li>
+<li><strong>计算公式</strong>：在理想情况下（各阶段时间相等），效率 $E&#x3D;\frac{n}{k(k + n - 1)}$。当 $n$ 很大时，$E\approx\frac{1}{k}$。</li>
+<li><strong>示例</strong>：同样是上述4阶段（$k &#x3D; 4$）的流水线，执行1000条指令（$n &#x3D; 1000$），根据公式计算效率 $E&#x3D;\frac{1000}{4\times(4 + 1000 - 1)}\approx0.25$。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>指令流水线操作周期为“<strong>瓶颈</strong>”段所需时间。（最大操作时间段）。</p>
+</li>
+</ol>
+<h4 id="九、指令执行时间："><a href="#九、指令执行时间：" class="headerlink" title="九、指令执行时间："></a><strong>九、指令执行时间：</strong></h4><ol>
+<li><p><strong>顺序方式执行时间计算：</strong></p>
+<ul>
+<li><p>在<strong>顺序执行</strong>方式下，每条指令都要依次经过取指令、分析和执行这三个阶段，上一条指令执行完所有阶段后，下一条指令才开始执行。</p>
+</li>
+<li><p><strong>每条指令执行总时间：</strong></p>
+</li>
+<li><p>执行一条指令时间为取指、分析和执行三个阶段时间之和，即：[4\triangle t + 2\triangle t + 3\triangle t &#x3D; 9\triangle t]</p>
+</li>
+<li><p><strong>计算600条指令执行总时间：</strong></p>
+</li>
+<li><p>由于是顺序执行，执行完(600)条指令所需的总时间就是一条指令执行时间乘以指令的条数，即：[9\triangle t×600 &#x3D; 5400\triangle t]</p>
+</li>
+</ul>
+</li>
+<li><p><strong>流水线方式执行时间计算：</strong></p>
+<ul>
+<li><p>在流水线执行方式下，不同指令的不同阶段可以<strong>重叠进行</strong>，就像工厂的流水线一样，各个阶段同时开展工作。</p>
+</li>
+<li><p><strong>确定流水线的阶段数及各阶段时间：</strong></p>
+</li>
+<li><p>本题中流水线分为取指令、分析和执行这(3)个阶段，对应的时间分别为(4\triangle t)、(2\triangle t)、(3\triangle t)。</p>
+</li>
+<li><p><strong>计算第一条指令进入流水线到最后一条指令流出流水线的时间：</strong></p>
+<ul>
+<li><p>对于流水线，执行(n)条指令所需的总时间可以用公式(T &#x3D; (k + n - 1)×\Delta t_{max})来计算（其中(k)是流水线的阶段数，(n)是指令的条数，(\Delta t_{max})是流水线各阶段中时间最长的那个阶段所用时间）。</p>
+</li>
+<li><p>在本题中，k &#x3D; 3，n &#x3D; 600，(\Delta t_{max}&#x3D; 4\triangle t)，将这些值代入上述公式可得：<br>$$<br>[T &#x3D; (3 + 600 - 1)×4\triangle t]<br>[&#x3D;(602)×4\triangle t]<br>[&#x3D; 2408\triangle t]<br>$$</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="十、中断响应时间："><a href="#十、中断响应时间：" class="headerlink" title="十、中断响应时间："></a><strong>十、中断响应时间：</strong></h4><ul>
+<li>CPU 中断响应时间是指<strong>从 CPU 检测到中断请求信号到开始执行中断服务程序</strong>的第一条指令所需要的时间。</li>
+</ul>
+<h4 id="十一、机器指令寻址方式："><a href="#十一、机器指令寻址方式：" class="headerlink" title="十一、机器指令寻址方式："></a><strong>十一、机器指令寻址方式：</strong></h4><ol>
+<li><strong>立即寻址：</strong><ul>
+<li><strong>定义</strong>：操作数直接包含在指令中，作为指令的一部分。</li>
+<li><strong>特点和用途</strong>：优点是指令执行速度快，因为不需要额外的访存操作来获取操作数，它常用于给寄存器赋初值等操作。</li>
+</ul>
+</li>
+<li><strong>直接寻址</strong><ul>
+<li><strong>定义</strong>：指令的操作数部分直接给出操作数在内存中的地址。</li>
+<li><strong>特点和用途</strong>：直接寻址方式简单直观，能直接访问内存中的数据。但是，它只能访问固定的内存单元。</li>
+</ul>
+</li>
+<li><strong>间接寻址</strong><ul>
+<li><strong>定义</strong>：指令中给出的是存放操作数地址的存储单元的地址。</li>
+<li><strong>特点和用途</strong>：这种寻址方式增加了地址的灵活性。通过改变存放操作数地址的寄存器内容，可以方便地访问不同的内存单元。</li>
+</ul>
+</li>
+<li><strong>寄存器寻址</strong><ul>
+<li><strong>定义</strong>：操作数存放在寄存器中，指令直接指定寄存器来获取操作数。</li>
+<li><strong>特点和用途</strong>：寄存器寻址的速度非常快，因为寄存器位于CPU内部，数据访问速度比内存快得多。这种寻址方式常用于在CPU内部的寄存器之间进行数据传输和操作。</li>
+</ul>
+</li>
+<li><strong>寄存器间接寻址</strong><ul>
+<li><strong>定义</strong>：操作数的地址存放在寄存器中，通过寄存器间接获取操作数的地址。</li>
+<li><strong>特点和用途</strong>：结合了寄存器寻址的速度优势和间接寻址的灵活性。它在处理数组和缓冲区等数据结构时非常有用。</li>
+</ul>
+</li>
+<li><strong>相对寻址</strong><ul>
+<li><strong>定义</strong>：以程序计数器（PC）或指令指针（IP）的当前内容为基地址，加上指令中给出的偏移量来形成操作数的有效地址。</li>
+<li><strong>特点和用途</strong>：主要用于程序的分支和循环结构中。它的优点是代码的可移植性较好，因为相对地址不依赖于程序在内存中的绝对位置。</li>
+</ul>
+</li>
+<li><strong>基址寻址</strong><ul>
+<li><strong>定义</strong>：将CPU中的基址寄存器（如8086中的BX或BP）的内容与指令中给定的偏移量相加，得到操作数的地址。</li>
+<li><strong>特点和用途</strong>：可以方便地访问一片连续的内存区域。这种寻址方式常用于访问数组、结构体等数据结构，其中基址寄存器可以指向数据结构的起始地址，偏移量用于访问内部的元素。</li>
+</ul>
+</li>
+<li><strong>变址寻址</strong><ul>
+<li><strong>定义</strong>：以变址寄存器（如8086中的SI或DI）的内容为基础，加上指令中给定的偏移量来确定操作数的地址。</li>
+<li><strong>特点和用途</strong>：与基址寻址类似，变址寻址也用于访问连续的内存区域。它的特点是变址寄存器的内容可以在程序执行过程中动态变化，常用于循环访问数组元素。</li>
+</ul>
+</li>
+</ol>
+<h4 id="十二、Flynn分类法："><a href="#十二、Flynn分类法：" class="headerlink" title="十二、Flynn分类法："></a><strong>十二、Flynn分类法：</strong></h4><p>Flynn于1972年提出计算平台分类法主要根据指令流和数据流来分类，分为四类：</p>
+<ol>
+<li><p><strong>单指令流单数据流机器（S1SD)：</strong></p>
+<ul>
+<li>SISD机器是一种传统的串行计算机，它的硬件不支持任何形式的并行计算，所有的指令都是串行执行。并且在某个时钟周期内，CPU只能处理一个数据流。</li>
+</ul>
+</li>
+<li><p><strong>单指令流多数据流机器（SIMD)：</strong></p>
+<ul>
+<li>SIMD是采用一个指令流处理多个数据流。这类机器在数字信号处理、图像处理，以及多媒体信息处理等领域非常有效。</li>
+<li>Intel处理器实现的MMXTM、SSE (Streaming SIMD Extensions)、SSE2及SSE3扩展指令集，都能在单个时钟周期内处理多个数据单元。也就是说人们现在用的单核计算机基本上都属于SIMD机器。</li>
+</ul>
+</li>
+<li><p><strong>多指令流单数据流机器(MISD)：</strong></p>
+<ul>
+<li>MISD采用多指令流处理单个数据流。实际情况中，用多指令流处理多数据流才是更有效的方法，因此MISD只作为理论模型出现，没投入实际应用。</li>
+</ul>
+</li>
+<li><p><strong>多指令流多数据流机器(MIMD)：</strong></p>
+<ul>
+<li>MIMD机器可以同时执行多个指令流，这些指令流分别对不同数据流进行操作。</li>
+</ul>
+</li>
+</ol>
+<h4 id="十三、图像数据量："><a href="#十三、图像数据量：" class="headerlink" title="十三、图像数据量："></a><strong>十三、图像数据量：</strong></h4><ol>
+<li><p><strong>计算数据量的公式：</strong></p>
+<ul>
+<li>图像数据量 &#x3D; 图像水平分辨率×图像垂直分辨率×像素深度（单位为位）÷ 8（单位转换为字节）。<ul>
+<li><strong>图像水平分辨率和垂直分辨率</strong>：分别表示图像在水平和垂直方向上所包含的像素数量。</li>
+<li><strong>像素深度</strong>：指存储每个像素所用的位数。对于真彩色图像，像素深度为24位（因为每个像素有3个基色分量，每个分量8位）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>计算示例</strong></p>
+<ul>
+<li><p>假设有一幅真彩色图像：800<em>600px，像素深度为24位，根据上述公式计算其数据量：<br>$$<br>[<br>\begin{align</em>}<br>&amp;800×600×24÷8\<br>&#x3D;&amp;800×600×3\<br>&#x3D;&amp;480000×3\<br>&#x3D;&amp;1440000字节<br>\end{align*}<br>]</p>
+<p>[1440000÷1024÷1024≈1.37MB]<br>$$</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="十四、CPI、MIPS、PCI、MFLOPS："><a href="#十四、CPI、MIPS、PCI、MFLOPS：" class="headerlink" title="十四、CPI、MIPS、PCI、MFLOPS："></a><strong>十四、CPI、MIPS、PCI、MFLOPS：</strong></h4><ul>
+<li><p><strong>CPI（Cycles Per Instruction）：</strong>每条指令执行所需的时钟周期数。它是衡量计算机性能的一个重要指标，反映了CPU执行指令的效率。<br>$$<br>CPI &#x3D; \frac{CPU执行程序所用的时钟周期数}{程序包含的指令数}<br>$$</p>
+</li>
+<li><p><strong>MIPS（Million Instructions Per Second）：</strong>表示计算机在一秒钟内能够执行的指令数量，单位是百万条指令&#x2F;秒。用于衡量计算机的运算速度。<br>$$<br>MIPS &#x3D; \frac{指令数}{执行时间\times10^{6}}<br>$$</p>
+</li>
+<li><p><strong>PCI（Peripheral Component Interconnect）：</strong>外围部件互连，是一种计算机局部总线标准。</p>
+<table>
+<thead>
+<tr>
+<th>PCIe版本</th>
+<th>单通道传输速率（GT&#x2F;s）</th>
+<th>编码方式</th>
+<th>单通道有效数据传输速率（Gbps）</th>
+<th>x16模式总带宽（Gbps）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.0</td>
+<td>2.5</td>
+<td>8b&#x2F;10b</td>
+<td>2</td>
+<td>32</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>5</td>
+<td>8b&#x2F;10b</td>
+<td>4</td>
+<td>64</td>
+</tr>
+<tr>
+<td>3.0</td>
+<td>8</td>
+<td>128b&#x2F;130b</td>
+<td>约7.88</td>
+<td>约126</td>
+</tr>
+<tr>
+<td>4.0</td>
+<td>16</td>
+<td>128b&#x2F;130b</td>
+<td>约15.75</td>
+<td>约252</td>
+</tr>
+<tr>
+<td>5.0</td>
+<td>32</td>
+<td>128b&#x2F;130b</td>
+<td>约30.5</td>
+<td>约488</td>
+</tr>
+<tr>
+<td>6.0</td>
+<td>64</td>
+<td>新编码和信号传输技术</td>
+<td>大幅提升</td>
+<td>-</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>MFLOPS（Million Floating - Point Operations Per Second）：</strong>每秒百万次浮点运算数，主要用于衡量计算机在浮点运算方面的性能。<br>$$<br>MFLOPS &#x3D; \frac{浮点运算次数}{执行时间\times10^{6}}<br>$$</p>
+</li>
+</ul>
+<h4 id="十五、WLAN标准："><a href="#十五、WLAN标准：" class="headerlink" title="十五、WLAN标准："></a><strong>十五、WLAN标准：</strong></h4><table>
+<thead>
+<tr>
+<th>标准</th>
+<th>频段</th>
+<th>最大数据速率</th>
+<th>调制方式</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>802.11a</td>
+<td>5GHz</td>
+<td>54Mbps</td>
+<td>OFDM（正交频分复用）</td>
+<td>传输速率较高，但传输距离相对较短，受障碍物影响较大，频段干扰相对较少</td>
+</tr>
+<tr>
+<td>802.11b</td>
+<td>2.4GHz</td>
+<td>11Mbps</td>
+<td>DSSS（直接序列扩频）</td>
+<td>传输距离较远，但速率较低，频段容易受到干扰，是早期广泛使用的标准之一</td>
+</tr>
+<tr>
+<td>802.11g</td>
+<td>2.4GHz</td>
+<td>54Mbps</td>
+<td>OFDM（正交频分复用）</td>
+<td>与802.11b兼容，在2.4GHz频段实现了较高的数据传输速率，应用较为广泛</td>
+</tr>
+<tr>
+<td>802.11n</td>
+<td>2.4GHz和5GHz</td>
+<td>600Mbps</td>
+<td>MIMO - OFDM（多输入多输出 - 正交频分复用）</td>
+<td>采用MIMO技术，提高了传输速率和传输距离，同时在两个频段都能工作，兼容性较好</td>
+</tr>
+<tr>
+<td>802.11ac</td>
+<td>5GHz</td>
+<td>理论上可达6.93Gbps（实际应用中速率因多种因素降低）</td>
+<td>OFDM（正交频分复用）等高级调制技术</td>
+<td>主要工作在5GHz频段，进一步提高了传输速率，支持更宽的频带和更多的空间流，适合高清视频传输等高速应用场景</td>
+</tr>
+<tr>
+<td>802.11ax（Wi - Fi 6）</td>
+<td>2.4GHz和5GHz</td>
+<td>理论上可达9.6Gbps</td>
+<td>OFDMA（正交频分多址）等新技术</td>
+<td>采用新技术提升频谱效率、降低延迟，支持更多设备同时连接，在密集用户环境下性能出色，适用于智能家居等多设备场景</td>
+</tr>
+<tr>
+<td>802.11be（Wi - Fi 7）</td>
+<td>2.4GHz、5GHz和6GHz</td>
+<td>理论上可达46Gbps</td>
+<td>进一步优化的调制和多址接入技术</td>
+<td>新增6GHz频段资源，提供更高的传输速率、更低的延迟和更好的可靠性，有望满足未来虚拟现实、8K视频等高带宽需求应用</td>
+</tr>
+</tbody></table>
+<h4 id="十六、微波："><a href="#十六、微波：" class="headerlink" title="十六、微波："></a><strong>十六、微波：</strong></h4><table>
+<thead>
+<tr>
+<th>微波分类</th>
+<th>频率范围</th>
+<th>波长范围</th>
+<th>频带名称</th>
+<th>应用场景</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>分米波（UHF）</td>
+<td>300MHz - 3GHz</td>
+<td>1m - 10cm</td>
+<td>特高频（Ultra - High Frequency）</td>
+<td>广播电视信号传输、移动通信（如GSM网络部分频段）、无绳电话</td>
+<td>传播特性近似于光波，沿直线传播，绕射能力弱，但在建筑物内的穿透能力相对较好；能被电离层反射，受气象条件影响相对较小</td>
+</tr>
+<tr>
+<td>厘米波（SHF）</td>
+<td>3GHz - 30GHz</td>
+<td>10cm - 1cm</td>
+<td>超高频（Super - High Frequency）</td>
+<td>卫星通信、雷达（如气象雷达、防空雷达）、无线局域网（如Wi - Fi 5GHz频段）</td>
+<td>频率较高，带宽较宽，能实现较高的数据传输速率；方向性好，能量集中，但传播损耗比分米波大，易受雨雾等天气影响</td>
+</tr>
+<tr>
+<td>毫米波（EHF）</td>
+<td>30GHz - 300GHz</td>
+<td>1cm - 1mm</td>
+<td>极高频（Extremely - High Frequency）</td>
+<td>5G毫米波通信、高速短距离通信（如部分短距数据传输设备）、毫米波雷达（用于汽车自动驾驶等）</td>
+<td>频带宽，可利用的频谱资源丰富；波束窄，方向性极强，可实现高精度的定位和探测；但传播损耗大，传输距离短，对障碍物遮挡非常敏感</td>
+</tr>
+<tr>
+<td>丝米波</td>
+<td>300GHz - 3THz</td>
+<td>1mm - 0.1mm</td>
+<td>太赫兹（Terahertz）</td>
+<td>安检成像（如人体安检仪）、材料无损检测、高速通信（实验阶段）</td>
+<td>位于毫米波和红外线之间的频段，兼具两者部分特性；具有高穿透性和高分辨率成像能力，但技术实现难度较大，信号衰减较为严重</td>
+</tr>
+</tbody></table>
+<h4 id="十七、CRC校验（循环冗余校验）："><a href="#十七、CRC校验（循环冗余校验）：" class="headerlink" title="十七、CRC校验（循环冗余校验）："></a><strong>十七、CRC校验（循环冗余校验）：</strong></h4><ol>
+<li><p><strong>基本原理：</strong></p>
+<ul>
+<li><p>CRC校验是一种基于多项式除法的错误检测方法。发送方和接收方事先约定一个生成多项式（如CRC - 16、CRC - 32等）。发送方将待发送的数据看成一个多项式的系数序列，用这个数据多项式除以生成多项式，得到的余数就是CRC校验码。将校验码附加在原始数据后面一起发送。</p>
+</li>
+<li><p>例如，对于一个简单的生成多项式$G(x)&#x3D;x^3 + x + 1$（对应的二进制数为1011），假设要发送的数据为1010。将1010看作多项式$M(x)&#x3D;x^3 + x$，在数据后面添加3个0（因为生成多项式最高次幂为3），得到1010000。用1010000除以1011（模2除法），得到余数为011，这个011就是CRC校验码。发送的数据就是1010011。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>计算步骤：</strong></p>
+<ul>
+<li><p><strong>步骤一：确定生成多项式和数据多项式</strong>。根据应用场景和通信协议选择生成多项式，将发送的数据表示为多项式形式。</p>
+</li>
+<li><p><strong>步骤二：数据多项式左移</strong>。将数据多项式左移生成多项式最高次幂的位数，在低位补0。</p>
+</li>
+<li><p><strong>步骤三：进行模2除法</strong>。用左移后的多项式除以生成多项式，模2除法的规则是减法不借位，即异或运算。</p>
+</li>
+<li><p><strong>步骤四：得到校验码和发送数据</strong>。除法运算得到的余数就是CRC校验码，将校验码附加在原始数据后面作为发送数据。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>校验过程：</strong></p>
+<ul>
+<li>接收方收到数据后，用接收到的数据（包括原始数据和CRC校验码）除以相同的生成多项式。如果余数为0，则认为数据没有错误；如果余数不为0，则说明数据在传输过程中出现了错误。</li>
+</ul>
+</li>
+<li><p><strong>应用场景：</strong></p>
+<ul>
+<li>CRC校验广泛应用于数据存储和数据通信领域。在数据存储中，如硬盘、U盘等存储设备写入数据时计算CRC校验码，读取数据时进行校验，以检测数据是否因存储介质损坏等原因出现错误。在数据通信中，像以太网、蓝牙等通信协议都使用CRC校验来检测传输过程中的数据错误，确保数据的完整性。</li>
+</ul>
+</li>
+</ol>
+<h4 id="十八、二进制指数退避算法："><a href="#十八、二进制指数退避算法：" class="headerlink" title="十八、二进制指数退避算法："></a><strong>十八、二进制指数退避算法：</strong></h4><ol>
+<li><p><strong>基本原理：</strong></p>
+<ul>
+<li><p>二进制指数退避算法主要用于解决在共享介质（如以太网）的网络环境中，多个设备同时发送数据产生冲突后的重发问题。当发生冲突时，每个发送设备随机选择一个等待时间，这个等待时间是一个时隙（时间片）的整数倍，时隙的大小是固定的。</p>
+</li>
+<li><p>例如，第一次发生冲突后，设备随机选择等待0或1个时隙后重发；如果再次冲突，就随机选择等待0、1、2或3个时隙后重发；每冲突一次，等待时间的上限就成倍增加，这个倍数是2的指数形式，所以称为二进制指数退避。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>计算步骤：</strong></p>
+<ul>
+<li><p><strong>步骤一：确定冲突次数</strong>。设备检测到发送数据时发生冲突的次数。</p>
+</li>
+<li><p><strong>步骤二：计算等待时隙范围</strong>。根据冲突次数$n$，计算等待时隙的范围是$[0,2^n - 1]$。例如，第一次冲突$n &#x3D; 1$，等待时隙范围是$[0,1]$；第二次冲突$n &#x3D; 2$，范围是$[0,3]$。</p>
+</li>
+<li><p><strong>步骤三：随机选择等待时间</strong>。在计算出的等待时隙范围内随机选择一个值$k$，设备等待$k$个时隙后再尝试发送数据。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>应用场景：</strong></p>
+<ul>
+<li>该算法主要应用于以太网等采用CSMA&#x2F;CD（载波监听多路访问&#x2F;冲突检测）协议的网络中。在这种网络环境下，多个节点共享传输介质，通过二进制指数退避算法可以有效减少冲突的再次发生概率，提高网络的稳定性和传输效率。例如，在一个办公室的局域网中，多台计算机通过以太网连接到交换机，当计算机同时发送数据产生冲突时，就会使用二进制指数退避算法来重发数据。</li>
+</ul>
+</li>
+</ol>
+<h4 id="十九、ipconfig参数表格："><a href="#十九、ipconfig参数表格：" class="headerlink" title="十九、ipconfig参数表格："></a><strong>十九、ipconfig参数表格：</strong></h4><table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>/all</code></td>
+<td align="left">显示完整的TCP&#x2F;IP配置信息，包括IP地址、子网掩码、默认网关、DNS服务器地址、物理（MAC）地址等所有网络适配器的详细信息。</td>
+</tr>
+<tr>
+<td align="center"><code>/release</code></td>
+<td align="left">释放通过DHCP（动态主机配置协议）获取的IP地址。</td>
+</tr>
+<tr>
+<td align="center"><code>/renew</code></td>
+<td align="left">向DHCP服务器请求更新IP地址。通常在使用<code>/release</code>释放IP地址后，或者当网络连接出现异常需要重新获取有效的IP配置时使用。</td>
+</tr>
+<tr>
+<td align="center"><code>/flushdns</code></td>
+<td align="left">清除本地DNS缓存。</td>
+</tr>
+<tr>
+<td align="center"><code>/displaydns</code></td>
+<td align="left">显示本地DNS缓存的内容。用于查看当前系统缓存的DNS记录，了解哪些域名已经被解析并存储在本地缓存中。</td>
+</tr>
+</tbody></table>
+<h4 id="二十、RAID："><a href="#二十、RAID：" class="headerlink" title="二十、RAID："></a><strong>二十、RAID：</strong></h4><table>
+<thead>
+<tr>
+<th align="center">RAIA级别</th>
+<th align="left"><strong>特点</strong></th>
+<th align="center">磁盘利用率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">RAID 0</td>
+<td align="left">数据条带化分布在多个磁盘上，无数据冗余，读写效率高，但一个磁盘损坏会导致所有数据丢失。<br>最少需要两块盘。</td>
+<td align="center">100%</td>
+</tr>
+<tr>
+<td align="center">RAID 1</td>
+<td align="left">将数据同时写入两个或多个磁盘，实现数据完全镜像备份，提供高数据冗余，但磁盘利用率低，写性能相对较差。<br>最少需要两块盘，盘数需为偶数。</td>
+<td align="center">50%</td>
+</tr>
+<tr>
+<td align="center">RAID 3</td>
+<td align="left">一块盘单独做奇偶校验盘，其余盘做RAID 0，数据以位或字节为单位分散存储在数据盘中，校验盘用于存储奇偶校验信息。<br>读写效率高，一定程度上提供数据冗余，但校验盘损坏后无法恢复数据。<br>最少需要三块盘。</td>
+<td align="center">$(n - 1) &#x2F; n$，其中$n$为磁盘总数，当$n &#x3D; 3$时，利用率约为66.7%</td>
+</tr>
+<tr>
+<td align="center">RAID 5</td>
+<td align="left">数据和奇偶校验数据分布在所有磁盘上，以块为单位进行条带化存储，最多允许坏一块盘，通过奇偶校验信息恢复数据。<br>读写性能较好，读性能优于写性能，磁盘利用率较高。<br>最少需要三块盘。</td>
+<td align="center">$(n - 1) &#x2F; n$，例如，当有5块磁盘时，磁盘利用率为80%</td>
+</tr>
+<tr>
+<td align="center">RAID 6</td>
+<td align="left">在RAID 5的基础上增加了一种校验码，最多允许坏两块盘，数据安全性更高，但性能相对较低，写性能比RAID 5更差。<br>最少需要四块盘。</td>
+<td align="center">$(n - 2) &#x2F; n$，比如，当有6块磁盘时，磁盘利用率约为66.7%</td>
+</tr>
+<tr>
+<td align="center">RAID 10</td>
+<td align="left">先进行镜像，再进行条带化，结合了RAID 0的高读写性能和RAID 1的数据冗余优势，允许一半的磁盘（每组镜像中的一个）损坏而不丢失数据。<br>最少需要四块盘，盘数必须是偶数。</td>
+<td align="center">50%</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Dou ChangYou
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://dcyyd.github.io/2024/11/24/Networking-Knowledge-Points-02/" title="网络工程师考试知识点_02">https://dcyyd.github.io/2024/11/24/Networking-Knowledge-Points-02/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="https://dcyyd.github.io/hexo_websites/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E5%B8%88/" rel="tag"><i class="fa fa-tag"></i> 网络工程师</a>
+              <a href="https://dcyyd.github.io/hexo_websites/tags/%E8%80%83%E8%AF%95%E7%9F%A5%E8%AF%86%E7%82%B9/" rel="tag"><i class="fa fa-tag"></i> 考试知识点</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="https://dcyyd.github.io/hexo_websites/2024/11/23/Networking-Knowledge-Points-01/" rel="prev" title="网络工程师考试知识点_01">
+                  <i class="fa fa-angle-left"></i> 网络工程师考试知识点_01
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="https://dcyyd.github.io/hexo_websites/2024/12/07/%E5%9F%BA%E4%BA%8EGitHub-hexo%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81Blog/" rel="next" title="基于GitHub+hexo部署静态Blog">
+                  基于GitHub+hexo部署静态Blog <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heartbeat"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Dou ChangYou</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">29k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">26 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("11/16/2024 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous"></script>
+<script src="https://dcyyd.github.io/hexo_websites/js/comments.js"></script><script src="https://dcyyd.github.io/hexo_websites/js/utils.js"></script><script src="https://dcyyd.github.io/hexo_websites/js/motion.js"></script><script src="https://dcyyd.github.io/hexo_websites/js/sidebar.js"></script><script src="https://dcyyd.github.io/hexo_websites/js/next-boot.js"></script><script src="https://dcyyd.github.io/hexo_websites/js/bookmark.js"></script><script src="https://dcyyd.github.io/hexo_websites/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://dcyyd.github.io/hexo_websites/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="https://dcyyd.github.io/hexo_websites/js/third-party/fancybox.js"></script>
+
+
+
+  
+
+
+
+
+<!-- 页面点击小红心 -->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>
