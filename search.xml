@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Google Gemini 2.0 怎么用?</title>
-    <url>https://dcyyd.github.io/hexo_websites/2024/12/16/How-to-use-Google-Gemini-2-0/</url>
+    <url>https://dcyyd.github.io/hexo_websites/How-to-use-Google-Gemini-2-0/</url>
     <content><![CDATA[<img src="https://www.helloimg.com/i/2024/12/16/67600d097f9a3.png" alt="head">
 
 <p>最近，<code>Google</code>悄然发布了<code>Gemini 2.0</code>，一款功能强大的AI助手，而且完全免费！</p>
@@ -131,7 +131,7 @@
   </entry>
   <entry>
     <title>网络工程师考试知识点_01</title>
-    <url>https://dcyyd.github.io/hexo_websites/2024/11/23/Networking-Knowledge-Points-01/</url>
+    <url>https://dcyyd.github.io/hexo_websites/Networking-Knowledge-Points-01/</url>
     <content><![CDATA[<h4 id="一、计算机存储与中断相关"><a href="#一、计算机存储与中断相关" class="headerlink" title="一、计算机存储与中断相关"></a><strong>一、计算机存储与中断相关</strong><span id="more"></span></h4><ol>
 <li>常用的虚拟存储器由<strong>主存 - 辅存</strong>两级存储器组成。</li>
 <li>中断向量可提供<strong>中断程序的入口地址</strong>。</li>
@@ -640,7 +640,7 @@
   </entry>
   <entry>
     <title>网络工程师考试知识点_02</title>
-    <url>https://dcyyd.github.io/hexo_websites/2024/11/24/Networking-Knowledge-Points-02/</url>
+    <url>https://dcyyd.github.io/hexo_websites/Networking-Knowledge-Points-02/</url>
     <content><![CDATA[<h4 id="一、事务："><a href="#一、事务：" class="headerlink" title="一、事务："></a><strong>一、事务：</strong></h4><ul>
 <li><strong>原子性：</strong>事务包含的操作要么全部成功，要么全部失败回滚。</li>
 <li><strong>一致性：</strong>事务执行前后都必须处于一个一致性状态。</li>
@@ -1226,7 +1226,7 @@
   </entry>
   <entry>
     <title>终极 Nginx 配置指南（超详细）</title>
-    <url>https://dcyyd.github.io/hexo_websites/2024/12/16/Nginx-Configuration-Guide/</url>
+    <url>https://dcyyd.github.io/hexo_websites/Nginx-Configuration-Guide/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p>对于自己上线项目的前端来说，nginx也是必须要了解和熟悉的，查了很多的nginx文章，看着写的都很详细，但是却没有了整体的概念。这里就重新梳理一遍，也理清思路。</p>
 <p>我们在安装nginx之后，会自动生成很多的文件，但是nginx.conf这个文件是我们的核心，如何去正确的修改和优化它是nginx的核心。</p>
 <p>首先我们可以先看下原本的配置，你会觉得无所适从，因为感觉这个鬼东西也太多了吧。而且感觉根本就不理解，也不知道该怎么写。下面，就一步一步的教你如何入门到熟悉</p>
@@ -1418,7 +1418,7 @@
   </entry>
   <entry>
     <title>About</title>
-    <url>https://dcyyd.github.io/hexo_websites/2024/11/24/about/</url>
+    <url>https://dcyyd.github.io/hexo_websites/about/</url>
     <content><![CDATA[<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><hr>
 <ul>
 <li><p>我是<strong>窦长友</strong>，一名摄影爱好者，编程小渣渣~~</p>
@@ -1452,7 +1452,7 @@
   </entry>
   <entry>
     <title>基于GitHub+hexo部署静态Blog</title>
-    <url>https://dcyyd.github.io/hexo_websites/2024/12/07/%E5%9F%BA%E4%BA%8EGitHub-hexo%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81Blog/</url>
+    <url>https://dcyyd.github.io/hexo_websites/%E5%9F%BA%E4%BA%8EGitHub-hexo%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81Blog/</url>
     <content><![CDATA[<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a><strong>一、前言</strong></h3><p>本文详细介绍了如何使用Hexo框架搭建一个个人博客，并将其部署到GitHub Pages上。主要内容包括：</p>
 <ul>
 <li><strong>环境准备：</strong>安装Node.js和Git</li>
