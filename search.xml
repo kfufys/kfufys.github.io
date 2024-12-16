@@ -1,302 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Google Gemini 2.0 怎么用?</title>
-    <url>https://dcyyd.github.io/hexo_websites/2024/12/16/How-to-use-Google-Gemini-2-0/</url>
-    <content><![CDATA[<p>最近，Google悄然发布了Gemini 2.0，一款功能强大的AI助手，而且完全免费！</p>
-<p>相比ChatGPT Plus每月20美元的订阅费，这简直是给数字时代的生产力工作者送来的一份大礼。</p>
-<p>让我们一起来看看这款AI助手究竟有多强大，以及如何充分利用它提升工作效率。</p>
-<h2 id="一、核心功能：远超想象的生产力工具"><a href="#一、核心功能：远超想象的生产力工具" class="headerlink" title="一、核心功能：远超想象的生产力工具"></a>一、核心功能：远超想象的生产力工具</h2><p>—</p>
-<h3 id="1-超强的文本处理能力"><a href="#1-超强的文本处理能力" class="headerlink" title="1. 超强的文本处理能力"></a>1. 超强的文本处理能力</h3><p>Gemini 2.0最令人印象深刻的是它对文字的理解和生成能力。无论是写文案、做内容规划，还是进行文本分析，它都能精准理解你的需求。</p>
-<p>实际体验：我让它帮我写一篇小红书笔记，只需简单说明主题，它就能生成一篇地道的种草文，连常用的表情符号都安排得恰到好处。(文后有具体的代码示范)</p>
-<h3 id="2-屌炸天的实时音视频通话"><a href="#2-屌炸天的实时音视频通话" class="headerlink" title="2. 屌炸天的实时音视频通话"></a>2. 屌炸天的实时音视频通话</h3><p>这可能是最革命性的功能 - 你可以直接与AI进行视频通话！想象一下：</p>
-<ul>
-<li>做菜时遇到问题？打开摄像头让AI指导 </li>
-<li>学习编程卡壳？共享屏幕让AI帮你分析代码 </li>
-<li>健身动作不标准？AI可以实时纠正你的姿势</li>
-</ul>
-<h3 id="3-超长上下文理解"><a href="#3-超长上下文理解" class="headerlink" title="3. 超长上下文理解"></a>3. 超长上下文理解</h3><p>支持200万token的上下文处理能力</p>
-<blockquote>
-<p>一本像《红楼梦》这样经典的中文小说，字数约为百万字，转换为token后可能需要约100万token。因此，200万token大约可以处理2本这样的长篇小说，或者10到20本字数较少的普通小说<br>这意味着什么？</p>
-</blockquote>
-<p>你可以：</p>
-<ul>
-<li>上传整本电子书请它总结 </li>
-<li>导入长篇论文让它分析 </li>
-<li>输入完整项目文档进行梳理</li>
-</ul>
-<h2 id="二、上手指南：三步开启AI效率之旅"><a href="#二、上手指南：三步开启AI效率之旅" class="headerlink" title="二、上手指南：三步开启AI效率之旅"></a>二、上手指南：三步开启AI效率之旅</h2><p>—</p>
-<h3 id="第一步：访问平台"><a href="#第一步：访问平台" class="headerlink" title="第一步：访问平台"></a>第一步：访问平台</h3><p>打开Google AI Studio</p>
-<p>（<a href="https://aistudio.google.com/app/prompts/new_chat%EF%BC%89">https://aistudio.google.com/app/prompts/new_chat）</a><br>注意：需要确保网络环境流畅</p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4HWyricuhgQeos63LYmxUXo5WLElQlgsxgxVgDVeX0gPWP4t0E55OTKyqrTLXMyNzMlMoC30QVibkVsIyELQdffw/640?wx_fmt=png"></p>
-<h3 id="第二步：选择模型"><a href="#第二步：选择模型" class="headerlink" title="第二步：选择模型"></a>第二步：选择模型</h3><ul>
-<li>推荐选择”Gemini experimental 1206”模型，这是目前性能最强的版本 </li>
-<li>如果追求速度，可以选择”Gemini 2.0 Flash”版本<br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4HWyricuhgQeos63LYmxUXo5WLElQlgsxv8VcYCG4dSg7NhPX4SibpBRdW401V30yIED6ibgmLRsnHCCWs1tGmNicw/640?wx_fmt=png"></li>
-</ul>
-<h3 id="第三步：开始使用"><a href="#第三步：开始使用" class="headerlink" title="第三步：开始使用"></a>第三步：开始使用</h3><ul>
-<li>文字对话：直接输入问题即可 </li>
-<li>视频通话：点击左上角”实时流”按钮 </li>
-<li>视频分析：选择starter apps中的视频分析器</li>
-</ul>
-<p>通过屏幕共享提示获取实时回答的例子:<br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4HWyricuhgQeos63LYmxUXo5WLElQlgsxvsTkwnyzh6EagFKGPcQqGShmgS8SEjnCckIjD2YeRWnwUV19KiaMR7A/640?wx_fmt=png"></p>
-<h2 id="三、使用技巧：让AI更懂你"><a href="#三、使用技巧：让AI更懂你" class="headerlink" title="三、使用技巧：让AI更懂你"></a>三、使用技巧：让AI更懂你</h2><p>—</p>
-<ul>
-<li>提问技巧：  明确你的目标  提供具体场景  适当补充细  分步骤提问</li>
-</ul>
-<p>如果你需要更多场景更多加精确的提示词可以使用这个免费的提示词工具  Prompt 集合</p>
-<ul>
-<li>视频通话目前仅支持英文回答，但是他可以听得懂中文 ，  可配合翻译软件使用 ，  如遇到日语回复，输入”Please speak in English”即可</li>
-</ul>
-<h2 id="四、实用场景推荐"><a href="#四、实用场景推荐" class="headerlink" title="四、实用场景推荐"></a>四、实用场景推荐</h2><p>—</p>
-<ul>
-<li><p>内容创作者：  文案撰写  选题规划  视频脚本 </p>
-</li>
-<li><p>程序开发者：  代码审查  问题诊断  算法优化 </p>
-</li>
-<li><p>学习者：  课程笔记整理  知识点讲解  习题解析</p>
-</li>
-</ul>
-<h2 id="五、实战示例：代码展示"><a href="#五、实战示例：代码展示" class="headerlink" title="五、实战示例：代码展示"></a>五、实战示例：代码展示</h2><p>—</p>
-<p>Gemini 2.0 API 目前提供了官方 sdk<br>地址:<br><a href="https://ai.google.dev/gemini-api/docs/sdks">https://ai.google.dev/gemini-api/docs/sdks</a></p>
-<p>下面是 python的示范:</p>
-<h3 id="1-安装依赖"><a href="#1-安装依赖" class="headerlink" title="1. 安装依赖"></a>1. 安装依赖</h3><p>​    </p>
-<pre><code>pip install google-genai
-</code></pre>
-<h3 id="2-导入必要库"><a href="#2-导入必要库" class="headerlink" title="2. 导入必要库"></a>2. 导入必要库</h3><p>​    </p>
-<pre><code>from google import genai
-from google.genai import types
-</code></pre>
-<h3 id="3-初始化客户端"><a href="#3-初始化客户端" class="headerlink" title="3. 初始化客户端"></a>3. 初始化客户端</h3><p>​    </p>
-<pre><code># 使用API密钥初始化
-client = genai.Client(api_key=&#39;YOUR_API_KEY&#39;)
-</code></pre>
-<h2 id="基础使用方法"><a href="#基础使用方法" class="headerlink" title="基础使用方法"></a>基础使用方法</h2><p>—</p>
-<h3 id="1-简单文本生成"><a href="#1-简单文本生成" class="headerlink" title="1. 简单文本生成"></a>1. 简单文本生成</h3><p>​    </p>
-<pre><code># 基础文本生成
-response = client.models.generate_content(
-    model=&#39;gemini-1.5-pro-002&#39;,  # 选择模型版本
-    contents=&#39;用简单的话解释什么是人工智能&#39;
-)
-print(response.text)
-</code></pre>
-<h3 id="2-结构化提示"><a href="#2-结构化提示" class="headerlink" title="2. 结构化提示"></a>2. 结构化提示</h3><p>​    </p>
-<pre><code># 使用结构化提示获得更精确的回答
-prompt = &quot;&quot;&quot;
-分析以下产品的优缺点:
-产品：智能手表
-要求：
-1. 列出3个主要优点
-2. 列出2个主要缺点
-3. 给出总体评价
-&quot;&quot;&quot;
-
-response = client.models.generate_content(
-    model=&#39;gemini-1.5-pro-002&#39;,
-    contents=prompt
-)
-print(response.text)
-</code></pre>
-<h3 id="3-多轮对话"><a href="#3-多轮对话" class="headerlink" title="3. 多轮对话"></a>3. 多轮对话</h3><p>​    </p>
-<pre><code># 创建聊天会话
-chat = client.models.start_chat(model=&#39;gemini-1.5-pro-002&#39;)
-
-# 发送消息并获取回复
-response = chat.send_message(&quot;你好，我想学习Python编程&quot;)
-print(response.text)
-
-# 继续对话
-response = chat.send_message(&quot;可以给我一个简单的开始项目吗？&quot;)
-print(response.text)
-</code></pre>
-<p>三、高级功能</p>
-<h3 id="1-图片分析"><a href="#1-图片分析" class="headerlink" title="1. 图片分析"></a>1. 图片分析</h3><p>​    </p>
-<pre><code>from PIL import Image
-
-def analyze_image(image_path, prompt):
-    image = Image.open(image_path)
-    response = client.models.generate_content(
-        model=&#39;gemini-1.5-pro-002&#39;,
-        contents=[
-            &quot;分析这张图片&quot;,
-            image
-        ]
-    )
-    return response.text
-</code></pre>
-<h3 id="2-代码生成与分析"><a href="#2-代码生成与分析" class="headerlink" title="2. 代码生成与分析"></a>2. 代码生成与分析</h3><p>​    </p>
-<pre><code># 代码生成示例
-code_prompt = &quot;&quot;&quot;
-用Python写一个简单的网络爬虫，要求：
-1. 使用requests库
-2. 获取网页标题
-3. 包含错误处理
-&quot;&quot;&quot;
-
-response = client.models.generate_content(
-    model=&#39;gemini-1.5-pro-002&#39;,
-    contents=code_prompt
-)
-print(response.text)
-</code></pre>
-<h3 id="3-参数控制"><a href="#3-参数控制" class="headerlink" title="3. 参数控制"></a>3. 参数控制</h3><p>​    </p>
-<pre><code># 使用生成参数控制输出
-response = client.models.generate_content(
-    model=&#39;gemini-1.5-pro-002&#39;,
-    contents=&#39;写一个短故事&#39;,
-    generation_config=&#123;
-        &#39;temperature&#39;: 0.7,  # 控制创造性
-        &#39;max_output_tokens&#39;: 500,  # 控制长度
-        &#39;top_p&#39;: 0.8,  # 控制多样性
-    &#125;
-)
-</code></pre>
-<h2 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h2><p>—</p>
-<ul>
-<li><p>错误处理 </p>
-<p>try:<br>response &#x3D; client.models.generate_content(<br>    model&#x3D;’gemini-1.5-pro-002’,<br>    contents&#x3D;’你的提示词’<br>)<br>print(response.text)<br>except Exception as e:<br>print(f”发生错误: {str(e)}”)</p>
-</li>
-<li><p>流式输出 </p>
-<h1 id="获取流式响应"><a href="#获取流式响应" class="headerlink" title="获取流式响应"></a>获取流式响应</h1><p>response &#x3D; client.models.generate_content(<br>model&#x3D;’gemini-1.5-pro-002’,<br>contents&#x3D;’写一篇文章’,<br>stream&#x3D;True<br>)</p>
-<h1 id="逐步打印响应"><a href="#逐步打印响应" class="headerlink" title="逐步打印响应"></a>逐步打印响应</h1><p>for chunk in response:<br>print(chunk.text, end&#x3D;’’)</p>
-</li>
-</ul>
-<h3 id="小红书种草文案"><a href="#小红书种草文案" class="headerlink" title="小红书种草文案"></a><strong>小红书种草文案</strong></h3><p>​    </p>
-<pre><code># 写一篇小红书种草文案
-prompt = &quot;&quot;&quot;
-请以种草博主的身份写一篇小红书文案，主题是某个生产力工具。要求：
-1. 标题吸引人
-2. 内容真实可信
-3. 加入表情符号
-4. 分点描述优势
-&quot;&quot;&quot;
-
-# Gemini回复示例
-&quot;&quot;&quot;
-💫革命性效率工具｜我用它一周省下10小时 
-
-上周发现了一个神器，真的让我的工作效率直接起飞！🚀 
-
-先说重点：
-✨完全免费
-✨界面超简洁
-✨上手只需5分钟
-
-从此再也不用每天: 
-📝手动整理笔记
-📊费力做数据分析
-📅纠结日程安排
-
-#效率工具 #工作技巧 #职场神器
-&quot;&quot;&quot;
-</code></pre>
-<h3 id="代码审查示例"><a href="#代码审查示例" class="headerlink" title="代码审查示例"></a>代码审查示例</h3><p>​    </p>
-<pre><code># 让Gemini审查代码
-code_review_prompt = &quot;&quot;&quot;
-请审查以下Python代码，指出潜在问题和优化建议：
-
-def calculate_average(numbers):
-    total = 0
-    count = 0
-    for num in numbers:
-        total += num
-        count += 1
-    return total/count
-
-data = [1,2,3,4,5]
-result = calculate_average(data)
-&quot;&quot;&quot;
-
-# Gemini可能的回复
-&quot;&quot;&quot;
-代码审查结果：
-
-1. 错误处理：
-- 需添加空列表检查
-- 应处理除零异常
-
-2. 性能优化：
-- 可使用sum()和len()替代循环
-- count变量可直接用len()
-
-优化后的代码：
-
-def calculate_average(numbers):
-    if not numbers:
-        raise ValueError(&quot;Cannot calculate average of empty list&quot;)
-    return sum(numbers) / len(numbers)
-
-# 使用示例
-try:
-    data = [1,2,3,4,5]
-    result = calculate_average(data)
-    print(f&quot;Average: &#123;result&#125;&quot;)
-except ValueError as e:
-    print(f&quot;Error: &#123;e&#125;&quot;)
-&quot;&quot;&quot;
-</code></pre>
-<h3 id="数据分析示例"><a href="#数据分析示例" class="headerlink" title="数据分析示例"></a>数据分析示例</h3><p>​    </p>
-<pre><code># 让Gemini分析数据
-data_analysis_prompt = &quot;&quot;&quot;
-分析以下销售数据，生成可视化代码：
-
-sales_data = &#123;
-    &#39;Jan&#39;: 1200,
-    &#39;Feb&#39;: 1500,
-    &#39;Mar&#39;: 1300,
-    &#39;Apr&#39;: 1800
-&#125;
-&quot;&quot;&quot;
-
-# Gemini生成的可视化代码示例
-&quot;&quot;&quot;
-import matplotlib.pyplot as plt
-
-# 数据准备
-months = list(sales_data.keys())
-sales = list(sales_data.values())
-
-# 创建柱状图
-plt.figure(figsize=(10, 6))
-plt.bar(months, sales, color=&#39;skyblue&#39;)
-plt.title(&#39;Monthly Sales Performance&#39;)
-plt.xlabel(&#39;Month&#39;)
-plt.ylabel(&#39;Sales Amount&#39;)
-
-# 添加数值标签
-for i, v in enumerate(sales):
-    plt.text(i, v + 30, str(v), ha=&#39;center&#39;)
-
-plt.show()
-&quot;&quot;&quot;
-</code></pre>
-<p>建议读者在实际使用时：</p>
-<ul>
-<li>先理解代码逻辑 </li>
-<li>根据自己的需求修改参数 </li>
-<li>注意错误处理 </li>
-<li>适当添加日志记录</li>
-</ul>
-<h2 id="最后的建议"><a href="#最后的建议" class="headerlink" title="最后的建议"></a>最后的建议</h2><p>—</p>
-<p>虽然Gemini 2.0目前完全免费，但免费的好时光可能不会太久。建议大家趁早上手，熟悉各项功能，把它变成你的得力助手。</p>
-<p>记住：工具再好，也需要正确的使用方法。建议先从简单的任务开始，逐步探索更复杂的功能，这样能更好地发挥AI助手的潜力。</p>
-<p>欢迎关注本号，我会持续分享更多AI工具的使用技巧和最新动态。让我们一起在AI时代提升生产力！</p>
-<p>预览时标签不可点</p>
-<p>微信扫一扫<br>关注该公众号</p>
-<hr>
-<hr>
-<p>×  分析</p>
-<p>  收藏</p>
-]]></content>
-      <categories>
-        <category>AI工具,AIGC</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>Google</tag>
-        <tag>Gemini</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>网络工程师考试知识点_01</title>
     <url>https://dcyyd.github.io/hexo_websites/2024/11/23/Networking-Knowledge-Points-01/</url>
     <content><![CDATA[<h4 id="一、计算机存储与中断相关"><a href="#一、计算机存储与中断相关" class="headerlink" title="一、计算机存储与中断相关"></a><strong>一、计算机存储与中断相关</strong><span id="more"></span></h4><ol>
@@ -803,6 +507,302 @@ plt.show()
       <tags>
         <tag>网络工程师</tag>
         <tag>考试知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Google Gemini 2.0 怎么用?</title>
+    <url>https://dcyyd.github.io/hexo_websites/2024/12/16/How-to-use-Google-Gemini-2-0/</url>
+    <content><![CDATA[<p>最近，Google悄然发布了Gemini 2.0，一款功能强大的AI助手，而且完全免费！</p>
+<p>相比ChatGPT Plus每月20美元的订阅费，这简直是给数字时代的生产力工作者送来的一份大礼。</p>
+<p>让我们一起来看看这款AI助手究竟有多强大，以及如何充分利用它提升工作效率。</p>
+<h2 id="一、核心功能：远超想象的生产力工具"><a href="#一、核心功能：远超想象的生产力工具" class="headerlink" title="一、核心功能：远超想象的生产力工具"></a>一、核心功能：远超想象的生产力工具</h2><p>—</p>
+<h3 id="1-超强的文本处理能力"><a href="#1-超强的文本处理能力" class="headerlink" title="1. 超强的文本处理能力"></a>1. 超强的文本处理能力</h3><p>Gemini 2.0最令人印象深刻的是它对文字的理解和生成能力。无论是写文案、做内容规划，还是进行文本分析，它都能精准理解你的需求。</p>
+<p>实际体验：我让它帮我写一篇小红书笔记，只需简单说明主题，它就能生成一篇地道的种草文，连常用的表情符号都安排得恰到好处。(文后有具体的代码示范)</p>
+<h3 id="2-屌炸天的实时音视频通话"><a href="#2-屌炸天的实时音视频通话" class="headerlink" title="2. 屌炸天的实时音视频通话"></a>2. 屌炸天的实时音视频通话</h3><p>这可能是最革命性的功能 - 你可以直接与AI进行视频通话！想象一下：</p>
+<ul>
+<li>做菜时遇到问题？打开摄像头让AI指导 </li>
+<li>学习编程卡壳？共享屏幕让AI帮你分析代码 </li>
+<li>健身动作不标准？AI可以实时纠正你的姿势</li>
+</ul>
+<h3 id="3-超长上下文理解"><a href="#3-超长上下文理解" class="headerlink" title="3. 超长上下文理解"></a>3. 超长上下文理解</h3><p>支持200万token的上下文处理能力</p>
+<blockquote>
+<p>一本像《红楼梦》这样经典的中文小说，字数约为百万字，转换为token后可能需要约100万token。因此，200万token大约可以处理2本这样的长篇小说，或者10到20本字数较少的普通小说<br>这意味着什么？</p>
+</blockquote>
+<p>你可以：</p>
+<ul>
+<li>上传整本电子书请它总结 </li>
+<li>导入长篇论文让它分析 </li>
+<li>输入完整项目文档进行梳理</li>
+</ul>
+<h2 id="二、上手指南：三步开启AI效率之旅"><a href="#二、上手指南：三步开启AI效率之旅" class="headerlink" title="二、上手指南：三步开启AI效率之旅"></a>二、上手指南：三步开启AI效率之旅</h2><p>—</p>
+<h3 id="第一步：访问平台"><a href="#第一步：访问平台" class="headerlink" title="第一步：访问平台"></a>第一步：访问平台</h3><p>打开Google AI Studio</p>
+<p>（<a href="https://aistudio.google.com/app/prompts/new_chat%EF%BC%89">https://aistudio.google.com/app/prompts/new_chat）</a><br>注意：需要确保网络环境流畅</p>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4HWyricuhgQeos63LYmxUXo5WLElQlgsxgxVgDVeX0gPWP4t0E55OTKyqrTLXMyNzMlMoC30QVibkVsIyELQdffw/640?wx_fmt=png"></p>
+<h3 id="第二步：选择模型"><a href="#第二步：选择模型" class="headerlink" title="第二步：选择模型"></a>第二步：选择模型</h3><ul>
+<li>推荐选择”Gemini experimental 1206”模型，这是目前性能最强的版本 </li>
+<li>如果追求速度，可以选择”Gemini 2.0 Flash”版本<br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4HWyricuhgQeos63LYmxUXo5WLElQlgsxv8VcYCG4dSg7NhPX4SibpBRdW401V30yIED6ibgmLRsnHCCWs1tGmNicw/640?wx_fmt=png"></li>
+</ul>
+<h3 id="第三步：开始使用"><a href="#第三步：开始使用" class="headerlink" title="第三步：开始使用"></a>第三步：开始使用</h3><ul>
+<li>文字对话：直接输入问题即可 </li>
+<li>视频通话：点击左上角”实时流”按钮 </li>
+<li>视频分析：选择starter apps中的视频分析器</li>
+</ul>
+<p>通过屏幕共享提示获取实时回答的例子:<br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4HWyricuhgQeos63LYmxUXo5WLElQlgsxvsTkwnyzh6EagFKGPcQqGShmgS8SEjnCckIjD2YeRWnwUV19KiaMR7A/640?wx_fmt=png"></p>
+<h2 id="三、使用技巧：让AI更懂你"><a href="#三、使用技巧：让AI更懂你" class="headerlink" title="三、使用技巧：让AI更懂你"></a>三、使用技巧：让AI更懂你</h2><p>—</p>
+<ul>
+<li>提问技巧：  明确你的目标  提供具体场景  适当补充细  分步骤提问</li>
+</ul>
+<p>如果你需要更多场景更多加精确的提示词可以使用这个免费的提示词工具  Prompt 集合</p>
+<ul>
+<li>视频通话目前仅支持英文回答，但是他可以听得懂中文 ，  可配合翻译软件使用 ，  如遇到日语回复，输入”Please speak in English”即可</li>
+</ul>
+<h2 id="四、实用场景推荐"><a href="#四、实用场景推荐" class="headerlink" title="四、实用场景推荐"></a>四、实用场景推荐</h2><p>—</p>
+<ul>
+<li><p>内容创作者：  文案撰写  选题规划  视频脚本 </p>
+</li>
+<li><p>程序开发者：  代码审查  问题诊断  算法优化 </p>
+</li>
+<li><p>学习者：  课程笔记整理  知识点讲解  习题解析</p>
+</li>
+</ul>
+<h2 id="五、实战示例：代码展示"><a href="#五、实战示例：代码展示" class="headerlink" title="五、实战示例：代码展示"></a>五、实战示例：代码展示</h2><p>—</p>
+<p>Gemini 2.0 API 目前提供了官方 sdk<br>地址:<br><a href="https://ai.google.dev/gemini-api/docs/sdks">https://ai.google.dev/gemini-api/docs/sdks</a></p>
+<p>下面是 python的示范:</p>
+<h3 id="1-安装依赖"><a href="#1-安装依赖" class="headerlink" title="1. 安装依赖"></a>1. 安装依赖</h3><p>​    </p>
+<pre><code>pip install google-genai
+</code></pre>
+<h3 id="2-导入必要库"><a href="#2-导入必要库" class="headerlink" title="2. 导入必要库"></a>2. 导入必要库</h3><p>​    </p>
+<pre><code>from google import genai
+from google.genai import types
+</code></pre>
+<h3 id="3-初始化客户端"><a href="#3-初始化客户端" class="headerlink" title="3. 初始化客户端"></a>3. 初始化客户端</h3><p>​    </p>
+<pre><code># 使用API密钥初始化
+client = genai.Client(api_key=&#39;YOUR_API_KEY&#39;)
+</code></pre>
+<h2 id="基础使用方法"><a href="#基础使用方法" class="headerlink" title="基础使用方法"></a>基础使用方法</h2><p>—</p>
+<h3 id="1-简单文本生成"><a href="#1-简单文本生成" class="headerlink" title="1. 简单文本生成"></a>1. 简单文本生成</h3><p>​    </p>
+<pre><code># 基础文本生成
+response = client.models.generate_content(
+    model=&#39;gemini-1.5-pro-002&#39;,  # 选择模型版本
+    contents=&#39;用简单的话解释什么是人工智能&#39;
+)
+print(response.text)
+</code></pre>
+<h3 id="2-结构化提示"><a href="#2-结构化提示" class="headerlink" title="2. 结构化提示"></a>2. 结构化提示</h3><p>​    </p>
+<pre><code># 使用结构化提示获得更精确的回答
+prompt = &quot;&quot;&quot;
+分析以下产品的优缺点:
+产品：智能手表
+要求：
+1. 列出3个主要优点
+2. 列出2个主要缺点
+3. 给出总体评价
+&quot;&quot;&quot;
+
+response = client.models.generate_content(
+    model=&#39;gemini-1.5-pro-002&#39;,
+    contents=prompt
+)
+print(response.text)
+</code></pre>
+<h3 id="3-多轮对话"><a href="#3-多轮对话" class="headerlink" title="3. 多轮对话"></a>3. 多轮对话</h3><p>​    </p>
+<pre><code># 创建聊天会话
+chat = client.models.start_chat(model=&#39;gemini-1.5-pro-002&#39;)
+
+# 发送消息并获取回复
+response = chat.send_message(&quot;你好，我想学习Python编程&quot;)
+print(response.text)
+
+# 继续对话
+response = chat.send_message(&quot;可以给我一个简单的开始项目吗？&quot;)
+print(response.text)
+</code></pre>
+<p>三、高级功能</p>
+<h3 id="1-图片分析"><a href="#1-图片分析" class="headerlink" title="1. 图片分析"></a>1. 图片分析</h3><p>​    </p>
+<pre><code>from PIL import Image
+
+def analyze_image(image_path, prompt):
+    image = Image.open(image_path)
+    response = client.models.generate_content(
+        model=&#39;gemini-1.5-pro-002&#39;,
+        contents=[
+            &quot;分析这张图片&quot;,
+            image
+        ]
+    )
+    return response.text
+</code></pre>
+<h3 id="2-代码生成与分析"><a href="#2-代码生成与分析" class="headerlink" title="2. 代码生成与分析"></a>2. 代码生成与分析</h3><p>​    </p>
+<pre><code># 代码生成示例
+code_prompt = &quot;&quot;&quot;
+用Python写一个简单的网络爬虫，要求：
+1. 使用requests库
+2. 获取网页标题
+3. 包含错误处理
+&quot;&quot;&quot;
+
+response = client.models.generate_content(
+    model=&#39;gemini-1.5-pro-002&#39;,
+    contents=code_prompt
+)
+print(response.text)
+</code></pre>
+<h3 id="3-参数控制"><a href="#3-参数控制" class="headerlink" title="3. 参数控制"></a>3. 参数控制</h3><p>​    </p>
+<pre><code># 使用生成参数控制输出
+response = client.models.generate_content(
+    model=&#39;gemini-1.5-pro-002&#39;,
+    contents=&#39;写一个短故事&#39;,
+    generation_config=&#123;
+        &#39;temperature&#39;: 0.7,  # 控制创造性
+        &#39;max_output_tokens&#39;: 500,  # 控制长度
+        &#39;top_p&#39;: 0.8,  # 控制多样性
+    &#125;
+)
+</code></pre>
+<h2 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h2><p>—</p>
+<ul>
+<li><p>错误处理 </p>
+<p>try:<br>response &#x3D; client.models.generate_content(<br>    model&#x3D;’gemini-1.5-pro-002’,<br>    contents&#x3D;’你的提示词’<br>)<br>print(response.text)<br>except Exception as e:<br>print(f”发生错误: {str(e)}”)</p>
+</li>
+<li><p>流式输出 </p>
+<h1 id="获取流式响应"><a href="#获取流式响应" class="headerlink" title="获取流式响应"></a>获取流式响应</h1><p>response &#x3D; client.models.generate_content(<br>model&#x3D;’gemini-1.5-pro-002’,<br>contents&#x3D;’写一篇文章’,<br>stream&#x3D;True<br>)</p>
+<h1 id="逐步打印响应"><a href="#逐步打印响应" class="headerlink" title="逐步打印响应"></a>逐步打印响应</h1><p>for chunk in response:<br>print(chunk.text, end&#x3D;’’)</p>
+</li>
+</ul>
+<h3 id="小红书种草文案"><a href="#小红书种草文案" class="headerlink" title="小红书种草文案"></a><strong>小红书种草文案</strong></h3><p>​    </p>
+<pre><code># 写一篇小红书种草文案
+prompt = &quot;&quot;&quot;
+请以种草博主的身份写一篇小红书文案，主题是某个生产力工具。要求：
+1. 标题吸引人
+2. 内容真实可信
+3. 加入表情符号
+4. 分点描述优势
+&quot;&quot;&quot;
+
+# Gemini回复示例
+&quot;&quot;&quot;
+💫革命性效率工具｜我用它一周省下10小时 
+
+上周发现了一个神器，真的让我的工作效率直接起飞！🚀 
+
+先说重点：
+✨完全免费
+✨界面超简洁
+✨上手只需5分钟
+
+从此再也不用每天: 
+📝手动整理笔记
+📊费力做数据分析
+📅纠结日程安排
+
+#效率工具 #工作技巧 #职场神器
+&quot;&quot;&quot;
+</code></pre>
+<h3 id="代码审查示例"><a href="#代码审查示例" class="headerlink" title="代码审查示例"></a>代码审查示例</h3><p>​    </p>
+<pre><code># 让Gemini审查代码
+code_review_prompt = &quot;&quot;&quot;
+请审查以下Python代码，指出潜在问题和优化建议：
+
+def calculate_average(numbers):
+    total = 0
+    count = 0
+    for num in numbers:
+        total += num
+        count += 1
+    return total/count
+
+data = [1,2,3,4,5]
+result = calculate_average(data)
+&quot;&quot;&quot;
+
+# Gemini可能的回复
+&quot;&quot;&quot;
+代码审查结果：
+
+1. 错误处理：
+- 需添加空列表检查
+- 应处理除零异常
+
+2. 性能优化：
+- 可使用sum()和len()替代循环
+- count变量可直接用len()
+
+优化后的代码：
+
+def calculate_average(numbers):
+    if not numbers:
+        raise ValueError(&quot;Cannot calculate average of empty list&quot;)
+    return sum(numbers) / len(numbers)
+
+# 使用示例
+try:
+    data = [1,2,3,4,5]
+    result = calculate_average(data)
+    print(f&quot;Average: &#123;result&#125;&quot;)
+except ValueError as e:
+    print(f&quot;Error: &#123;e&#125;&quot;)
+&quot;&quot;&quot;
+</code></pre>
+<h3 id="数据分析示例"><a href="#数据分析示例" class="headerlink" title="数据分析示例"></a>数据分析示例</h3><p>​    </p>
+<pre><code># 让Gemini分析数据
+data_analysis_prompt = &quot;&quot;&quot;
+分析以下销售数据，生成可视化代码：
+
+sales_data = &#123;
+    &#39;Jan&#39;: 1200,
+    &#39;Feb&#39;: 1500,
+    &#39;Mar&#39;: 1300,
+    &#39;Apr&#39;: 1800
+&#125;
+&quot;&quot;&quot;
+
+# Gemini生成的可视化代码示例
+&quot;&quot;&quot;
+import matplotlib.pyplot as plt
+
+# 数据准备
+months = list(sales_data.keys())
+sales = list(sales_data.values())
+
+# 创建柱状图
+plt.figure(figsize=(10, 6))
+plt.bar(months, sales, color=&#39;skyblue&#39;)
+plt.title(&#39;Monthly Sales Performance&#39;)
+plt.xlabel(&#39;Month&#39;)
+plt.ylabel(&#39;Sales Amount&#39;)
+
+# 添加数值标签
+for i, v in enumerate(sales):
+    plt.text(i, v + 30, str(v), ha=&#39;center&#39;)
+
+plt.show()
+&quot;&quot;&quot;
+</code></pre>
+<p>建议读者在实际使用时：</p>
+<ul>
+<li>先理解代码逻辑 </li>
+<li>根据自己的需求修改参数 </li>
+<li>注意错误处理 </li>
+<li>适当添加日志记录</li>
+</ul>
+<h2 id="最后的建议"><a href="#最后的建议" class="headerlink" title="最后的建议"></a>最后的建议</h2><p>—</p>
+<p>虽然Gemini 2.0目前完全免费，但免费的好时光可能不会太久。建议大家趁早上手，熟悉各项功能，把它变成你的得力助手。</p>
+<p>记住：工具再好，也需要正确的使用方法。建议先从简单的任务开始，逐步探索更复杂的功能，这样能更好地发挥AI助手的潜力。</p>
+<p>欢迎关注本号，我会持续分享更多AI工具的使用技巧和最新动态。让我们一起在AI时代提升生产力！</p>
+<p>预览时标签不可点</p>
+<p>微信扫一扫<br>关注该公众号</p>
+<hr>
+<hr>
+<p>×  分析</p>
+<p>  收藏</p>
+]]></content>
+      <categories>
+        <category>AI工具,AIGC</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>Google</tag>
+        <tag>Gemini</tag>
       </tags>
   </entry>
   <entry>
