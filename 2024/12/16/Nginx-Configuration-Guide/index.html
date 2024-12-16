@@ -572,14 +572,14 @@
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br></pre></td></tr></table></figure>
 
 
-<p>这是 Nginx 服务器并发处理服务的关键配置，<code>worker_processes</code> 值越大，可以支持的并发处理量也越多，但是 会受到硬件、软件等设备的制约。</p>
-<h4 id="events块："><a href="#events块：" class="headerlink" title="events块："></a><strong><code>events</code>块：</strong></h4><p>作用：<code>events</code> 块涉及的指令主要影响 Nginx 服务器与用户的网络连接，常用的设置包括是否开启对多 <code>work process</code>下的网络连接进行序列化，是否 允许同时接收多个网络连接，选取哪种事件驱动模型来处理连接请求，每个<code> word process</code> 可以同时支持的最大连接数等。</p>
+<p>这是 <code>Nginx</code> 服务器并发处理服务的关键配置，<code>worker_processes</code> 值越大，可以支持的并发处理量也越多，但是 会受到硬件、软件等设备的制约。</p>
+<h4 id="events块："><a href="#events块：" class="headerlink" title="events块："></a><strong><code>events</code>块：</strong></h4><p>作用：<code>events</code> 块涉及的指令主要影响 <code>Nginx</code> 服务器与用户的网络连接，常用的设置包括是否开启对多 <code>work process</code>下的网络连接进行序列化，是否 允许同时接收多个网络连接，选取哪种事件驱动模型来处理连接请求，每个<code> word process</code> 可以同时支持的最大连接数等。</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br></pre></td></tr></table></figure>
 
 
 <p>上述例子就表示每个 <code>work process</code> 支持的最大连接数为 <code>1024</code>。</p>
-<p>这部分的配置对 Nginx 的性能影响较大，在实际中应该灵活配置。</p>
-<h4 id="http块："><a href="#http块：" class="headerlink" title="http块："></a><strong>http块：</strong></h4><p><strong>作用：</strong>这算是 Nginx 服务器配置中最频繁的部分，代理、缓存和日志定义等绝大多数功能和第三方模块的配置都在这里。</p>
+<p>这部分的配置对 <code>Nginx</code> 的性能影响较大，在实际中应该灵活配置。</p>
+<h4 id="http块："><a href="#http块：" class="headerlink" title="http块："></a><strong>http块：</strong></h4><p><strong>作用：</strong>这算是 <code>Nginx</code> 服务器配置中最频繁的部分，代理、缓存和日志定义等绝大多数功能和第三方模块的配置都在这里。</p>
 <blockquote>
 <p>需要注意的是：<code>http</code> 块也可以包括 <strong>http全局块</strong>、<strong>server 块</strong>。</p>
 </blockquote>
@@ -603,13 +603,13 @@
 </li>
 <li><p><strong>全局 server 块</strong></p>
 <ul>
-<li>最常见的配置是本虚拟机主机的监听配置和本虚拟主机的名称或IP配置。</li>
+<li>最常见的配置是本虚拟机主机的监听配置和本虚拟主机的名称或<code>IP</code>配置。</li>
 </ul>
 </li>
 <li><p><strong>location 块</strong></p>
 <ul>
 <li>一个 <code>server</code> 块可以配置多个 <code>location</code> 块。</li>
-<li>这块的主要作用是基于 Nginx 服务器接收到的请求字符串（例如 server_name&#x2F;uri-string），对虚拟主机名称 （也可以是IP别名）之外的字符串（例如 前面的 &#x2F;uri-string）进行匹配，对特定的请求进行处理。地址定向、数据缓存和应答控制等功能，还有许多第三方模块的配置也在这里进行。</li>
+<li>这块的主要作用是基于 <code>Nginx</code> 服务器接收到的请求字符串（例如 server_name&#x2F;uri-string），对虚拟主机名称 （也可以是<code>IP</code>别名）之外的字符串（例如 前面的 <code>/uri-string</code>）进行匹配，对特定的请求进行处理。地址定向、数据缓存和应答控制等功能，还有许多第三方模块的配置也在这里进行。</li>
 </ul>
 </li>
 </ul>
@@ -620,7 +620,7 @@
 <h3 id="三、最简单的上线"><a href="#三、最简单的上线" class="headerlink" title="三、最简单的上线"></a><strong>三、最简单的上线</strong></h3><p>以上，我们就知道了nginx整体大致的结构，以及每部分的结构是用于做什么的。接下来我们就修改nginx关键位置来实现我们网站的代理功能。看着nginx配置很繁琐，但是如果你只是需要上线一个网站，那么你只需要去修改两个地方即可：</p>
 <p><img src="https://dcyyd.github.io/hexo_websites/Nginx-Configuration-Guide/3.png" alt="上线"></p>
 <p>我们可以使用默认简单的配置，然后指定<code>server_name</code>和<code>root</code>，主要是告诉nginx代理的<code>ip</code>是xxx，然后我放在服务器的文件在bbb文件夹即可。nginx便会在用户访问这个ip时，自动的将bbb文件夹中的<code>index.html</code>返回到浏览器来展示页面。</p>
-<h3 id="四、Nginx-优化："><a href="#四、Nginx-优化：" class="headerlink" title="四、Nginx 优化："></a><strong>四、Nginx 优化：</strong></h3><h4 id="1-前端history模式404问题："><a href="#1-前端history模式404问题：" class="headerlink" title="1. 前端history模式404问题："></a><strong>1. 前端<code>history模式404</code>问题：</strong></h4><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">location</span> / &#123;  </span><br><span class="line">    <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+<h3 id="四、Nginx-优化："><a href="#四、Nginx-优化：" class="headerlink" title="四、Nginx 优化："></a><strong>四、<code>Nginx</code> 优化：</strong></h3><h4 id="1-前端history模式404问题："><a href="#1-前端history模式404问题：" class="headerlink" title="1. 前端history模式404问题："></a><strong>1. 前端<code>history模式404</code>问题：</strong></h4><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">location</span> / &#123;  </span><br><span class="line">    <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
 
 
 <p>这段代码的作用是，当用户刷新页面时，Nginx会先检查当前<code>URL</code>是否存在，如果不存在，就会尝试访问<code>index.htm</code>l，从而可以正常显示页面。</p>
