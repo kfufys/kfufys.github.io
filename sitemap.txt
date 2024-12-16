@@ -1,7 +1,7 @@
+https://dcyyd.github.io/2024/11/24/about/
 https://dcyyd.github.io/2024/12/16/How-to-use-Google-Gemini-2-0/
 https://dcyyd.github.io/2024/12/16/Nginx-Configuration-Guide/
 https://dcyyd.github.io/2024/12/07/%E5%9F%BA%E4%BA%8EGitHub-hexo%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81Blog/
-https://dcyyd.github.io/2020/11/24/about/
 https://dcyyd.github.io/categories/index.html
 https://dcyyd.github.io/tags/index.html
 https://dcyyd.github.io/2024/11/24/Networking-Knowledge-Points-02/
