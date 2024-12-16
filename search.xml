@@ -1416,7 +1416,7 @@ plt.show()
 <li>第三部分：<strong>http块</strong></li>
 </ul>
 <p><strong>对应图解：</strong></p>
-<p><img src="https://dcyyd.github.io/hexo_websites/Nginx-Configuration-Guide/1.png" alt="nginx.conf分块图解"></p>
+<p><img src="https://s21.ax1x.com/2024/12/16/pAqOqVH.png" alt="nginx.conf分块图解"></p>
 <h4 id="全局块："><a href="#全局块：" class="headerlink" title="全局块："></a><strong>全局块：</strong></h4><p><strong>作用：</strong>从配置文件开始到 <code>events</code>块之间的内容，主要会设置一些影响nginx服务器整体运行的配置指令，主要包括配置<strong>运行 <code>Nginx</code></strong><br><strong>服务器的用户（组）</strong>、<strong>允许生成的 <code>worker process</code> 数</strong>，<strong>进程 <code>PID</code> 存放路径</strong>、<strong>日志存放路径</strong>和<strong>类型以及配置文件的引入</strong>等。</p>
 <p>比如上面第一行配置的</p>
 <figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br></pre></td></tr></table></figure>
@@ -1470,7 +1470,7 @@ plt.show()
 <h3 id="三、最简单的上线"><a href="#三、最简单的上线" class="headerlink" title="三、最简单的上线"></a><strong>三、最简单的上线</strong></h3><p>以上，我们就知道了nginx整体大致的结构，以及每部分的结构是用于做什么的。接下来我们就修改nginx关键位置来实现我们网站的代理功能。看着nginx配置很繁琐，但是如果你只是需要上线一个网站，那么你只需要去修改两个地方即可：</p>
 <p><img src="https://dcyyd.github.io/hexo_websites/Nginx-Configuration-Guide/3.png" alt="上线"></p>
 <p>我们可以使用默认简单的配置，然后指定<code>server_name</code>和<code>root</code>，主要是告诉nginx代理的<code>ip</code>是xxx，然后我放在服务器的文件在bbb文件夹即可。nginx便会在用户访问这个ip时，自动的将bbb文件夹中的<code>index.html</code>返回到浏览器来展示页面。</p>
-<h3 id="四、Nginx-优化："><a href="#四、Nginx-优化：" class="headerlink" title="四、Nginx 优化："></a><strong>四、<code>Nginx</code> 优化：</strong></h3><h4 id="1-前端history模式404问题："><a href="#1-前端history模式404问题：" class="headerlink" title="1. 前端history模式404问题："></a><strong>1. 前端<code>history模式404</code>问题：</strong></h4><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">location</span> / &#123;  </span><br><span class="line">    <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+<h3 id="四、-Nginx-优化："><a href="#四、-Nginx-优化：" class="headerlink" title="四、&#96;Nginx 优化："></a><strong>四、&#96;Nginx 优化：</strong></h3><h4 id="1-前端history模式404问题："><a href="#1-前端history模式404问题：" class="headerlink" title="1. 前端history模式404问题："></a><strong>1. 前端<code>history模式404</code>问题：</strong></h4><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">location</span> / &#123;  </span><br><span class="line">    <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
 
 
 <p>这段代码的作用是，当用户刷新页面时，Nginx会先检查当前<code>URL</code>是否存在，如果不存在，就会尝试访问<code>index.htm</code>l，从而可以正常显示页面。</p>
