@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://dcyyd.github.io/2024/12/18/JavaWeb-Final-Review-Questions/</loc>
+    
+    <lastmod>2024-12-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://dcyyd.github.io/2024/11/24/about/</loc>
     
     <lastmod>2024-12-16</lastmod>
@@ -76,7 +85,7 @@
 
   <url>
     <loc>https://dcyyd.github.io/</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -84,77 +93,91 @@
   
   <url>
     <loc>https://dcyyd.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dcyyd.github.io/tags/Google/</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dcyyd.github.io/tags/Gemini/</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dcyyd.github.io/tags/AIGC/</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2024-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcyyd.github.io/tags/JavaWeb/</loc>
+    <lastmod>2024-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcyyd.github.io/tags/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</loc>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dcyyd.github.io/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E5%B8%88/</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dcyyd.github.io/tags/%E8%80%83%E8%AF%95%E7%9F%A5%E8%AF%86%E7%82%B9/</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dcyyd.github.io/tags/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dcyyd.github.io/tags/about/</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dcyyd.github.io/tags/%E5%85%B3%E4%BA%8E%E6%88%91/</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dcyyd.github.io/tags/GitHub/</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dcyyd.github.io/tags/Hexo/</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -163,28 +186,35 @@
   
   <url>
     <loc>https://dcyyd.github.io/categories/AI%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2024-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcyyd.github.io/categories/JavaWeb/</loc>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dcyyd.github.io/categories/%E7%BD%91%E5%B7%A5/</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dcyyd.github.io/categories/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://dcyyd.github.io/categories/About/</loc>
-    <lastmod>2024-12-16</lastmod>
+    <lastmod>2024-12-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
