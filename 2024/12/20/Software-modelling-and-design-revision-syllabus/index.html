@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://dcyyd.github.io/hexo_websites/images/favicon.svg">
+
+<link rel="stylesheet" href="https://dcyyd.github.io/hexo_websites/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"dcyyd.github.io","root":"https://dcyyd.github.io/hexo_websites/","images":"https://dcyyd.github.io/hexo_websites/images","scheme":"Gemini","darkmode":"auto","version":"8.21.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqusjs","storage":true,"lazyload":false,"nav":{"valine":{"text":"Valine","order":-1}}},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"https://dcyyd.github.io/hexo_websites/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://dcyyd.github.io/hexo_websites/js/config.js"></script>
+
+    <meta name="description" content="本复习提纲全面覆盖了软件工程的基础知识、软件建模与设计的核心概念和方法....">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《软件建模与设计》复习提纲">
+<meta property="og:url" content="https://dcyyd.github.io/2024/12/20/Software-modelling-and-design-revision-syllabus/index.html">
+<meta property="og:site_name" content="Smart Space">
+<meta property="og:description" content="本复习提纲全面覆盖了软件工程的基础知识、软件建模与设计的核心概念和方法....">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.imgdb.cn/item/67657501d0e0a243d4e744db.jpg">
+<meta property="og:image" content="https://files.superbed.cn/proxy/7569696d6e2732327b7471786e336e686d786f7f7879337e7e326e69726f783274707c7a786e32292932797e322b2a2b282a282d2c792d782d7c2f292e7929782a2929797e33776d7a.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/67657500d0e0a243d4e744da.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/67657501d0e0a243d4e744dd.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/67657637d0e0a243d4e7451d.png">
+<meta property="og:image" content="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/privattr.gif">
+<meta property="og:image" content="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/privoper.gif">
+<meta property="og:image" content="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/protattr.gif">
+<meta property="og:image" content="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/protoper.gif">
+<meta property="og:image" content="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/publattr.gif">
+<meta property="og:image" content="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/publoper.gif">
+<meta property="og:image" content="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/packattr.gif">
+<meta property="og:image" content="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/packoper.gif">
+<meta property="og:image" content="https://pic.imgdb.cn/item/676574dad0e0a243d4e744c5.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/676574dad0e0a243d4e744c7.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/676574dad0e0a243d4e744c8.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/67657637d0e0a243d4e7451f.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/67657638d0e0a243d4e74520.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/676574dbd0e0a243d4e744c9.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/67657638d0e0a243d4e74521.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/676574dad0e0a243d4e744c6.png">
+<meta property="article:published_time" content="2024-12-20T14:08:06.000Z">
+<meta property="article:modified_time" content="2024-12-20T14:08:06.000Z">
+<meta property="article:author" content="Dou ChangYou">
+<meta property="article:tag" content="期末复习">
+<meta property="article:tag" content="软件建模">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/67657501d0e0a243d4e744db.jpg">
+
+
+<link rel="canonical" href="https://dcyyd.github.io/2024/12/20/Software-modelling-and-design-revision-syllabus/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://dcyyd.github.io/2024/12/20/Software-modelling-and-design-revision-syllabus/","path":"2024/12/20/Software-modelling-and-design-revision-syllabus/","title":"《软件建模与设计》复习提纲"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>《软件建模与设计》复习提纲 | Smart Space</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="https://dcyyd.github.io/hexo_websites/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="https://dcyyd.github.io/hexo_websites/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Smart Space</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="https://dcyyd.github.io/hexo_websites/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="https://dcyyd.github.io/hexo_websites/2020/11/24/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="https://dcyyd.github.io/hexo_websites/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="https://dcyyd.github.io/hexo_websites/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="https://dcyyd.github.io/hexo_websites/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">第一章  软件工程基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%B8%B8%E8%A7%81%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%A8%A1%E5%9E%8B%E4%B8%8ERUP"><span class="nav-number">2.</span> <span class="nav-text">第二章 常见的软件模型与RUP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-UML%E4%B8%8ERational-Rose%E6%A6%82%E8%BF%B0"><span class="nav-number">3.</span> <span class="nav-text">第三章 UML与Rational Rose概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%94%A8%E4%BE%8B%E5%9B%BE"><span class="nav-number">4.</span> <span class="nav-text">第四章  用例图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%B4%BB%E5%8A%A8%E5%9B%BE"><span class="nav-number">5.</span> <span class="nav-text">第五章 活动图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E7%B1%BB%E5%9B%BE%E5%92%8C%E5%8C%85"><span class="nav-number">6.</span> <span class="nav-text">第六章 类图和包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E4%BA%A4%E4%BA%92%E5%9B%BE"><span class="nav-number">7.</span> <span class="nav-text">第七章 交互图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E6%9E%84%E4%BB%B6%E5%9B%BE%E5%92%8C%E9%83%A8%E7%BD%B2%E5%9B%BE"><span class="nav-number">8.</span> <span class="nav-text">第八章 构件图和部署图</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Dou ChangYou"
+      src="https://dcyyd.github.io/hexo_websites/images/favicon.svg">
+  <p class="site-author-name" itemprop="name">Dou ChangYou</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="https://dcyyd.github.io/hexo_websites/archives/">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="https://dcyyd.github.io/hexo_websites/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="https://dcyyd.github.io/hexo_websites/tags/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dcyyd" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dcyyd" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:dcyyd_kcug@yeah.net" title="E-Mail → mailto:dcyyd_kcug@yeah.net" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+<div style="">
+	<canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+	(function() {
+
+		var digit = [
+			[
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 1, 1, 0, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 0, 1, 1, 0],
+				[0, 0, 1, 1, 1, 0, 0]
+			], //0
+			[
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 1, 1, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[1, 1, 1, 1, 1, 1, 1]
+			], //1
+			[
+				[0, 1, 1, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 1, 1, 0, 0, 0, 0],
+				[1, 1, 0, 0, 0, 0, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 1, 1, 1, 1, 1]
+			], //2
+			[
+				[1, 1, 1, 1, 1, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0]
+			], //3
+			[
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 1, 0],
+				[0, 0, 1, 1, 1, 1, 0],
+				[0, 1, 1, 0, 1, 1, 0],
+				[1, 1, 0, 0, 1, 1, 0],
+				[1, 1, 1, 1, 1, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 1, 1]
+			], //4
+			[
+				[1, 1, 1, 1, 1, 1, 1],
+				[1, 1, 0, 0, 0, 0, 0],
+				[1, 1, 0, 0, 0, 0, 0],
+				[1, 1, 1, 1, 1, 1, 0],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0]
+			], //5
+			[
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 1, 1, 0, 0, 0, 0],
+				[1, 1, 0, 0, 0, 0, 0],
+				[1, 1, 0, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0]
+			], //6
+			[
+				[1, 1, 1, 1, 1, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0]
+			], //7
+			[
+				[0, 1, 1, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0]
+			], //8
+			[
+				[0, 1, 1, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 1, 1, 0, 0, 0, 0]
+			], //9
+			[
+				[0, 0, 0, 0, 0, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 0, 0, 0, 0, 0],
+				[0, 0, 0, 0, 0, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 0, 0, 0, 0, 0]
+			] //:
+		];
+
+		var canvas = document.getElementById('canvas');
+
+		if (canvas.getContext) {
+			var cxt = canvas.getContext('2d');
+			//声明canvas的宽高
+			var H = 100,
+				W = 700;
+			canvas.height = H;
+			canvas.width = W;
+			cxt.fillStyle = '#f00';
+			cxt.fillRect(10, 10, 50, 50);
+
+			//存储时间数据
+			var data = [];
+			//存储运动的小球
+			var balls = [];
+			//设置粒子半径
+			var R = canvas.height / 20 - 1;
+			(function() {
+				var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+				//存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+				data.push(temp[1], temp[2], 10, temp[3], temp[4], 10, temp[5], temp[6]);
+			})();
+
+			/*生成点阵数字*/
+			function renderDigit(index, num) {
+				for (var i = 0; i < digit[num].length; i++) {
+					for (var j = 0; j < digit[num][i].length; j++) {
+						if (digit[num][i][j] == 1) {
+							cxt.beginPath();
+							cxt.arc(14 * (R + 2) * index + j * 2 * (R + 1) + (R + 1), i * 2 * (R + 1) + (R + 1), R, 0,
+								2 * Math.PI);
+							cxt.closePath();
+							cxt.fill();
+						}
+					}
+				}
+			}
+
+			/*更新时钟*/
+			function updateDigitTime() {
+				var changeNumArray = [];
+				var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+				var NewData = [];
+				NewData.push(temp[1], temp[2], 10, temp[3], temp[4], 10, temp[5], temp[6]);
+				for (var i = data.length - 1; i >= 0; i--) {
+					//时间发生变化
+					if (NewData[i] !== data[i]) {
+						//将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+						changeNumArray.push(i + '_' + (Number(data[i]) + 1) % 10);
+					}
+				}
+				//增加小球
+				for (var i = 0; i < changeNumArray.length; i++) {
+					addBalls.apply(this, changeNumArray[i].split('_'));
+				}
+				data = NewData.concat();
+			}
+
+			/*更新小球状态*/
+			function updateBalls() {
+				for (var i = 0; i < balls.length; i++) {
+					balls[i].stepY += balls[i].disY;
+					balls[i].x += balls[i].stepX;
+					balls[i].y += balls[i].stepY;
+					if (balls[i].x > W + R || balls[i].y > H + R) {
+						balls.splice(i, 1);
+						i--;
+					}
+				}
+			}
+
+			/*增加要运动的小球*/
+			function addBalls(index, num) {
+				var numArray = [1, 2, 3];
+				var colorArray = ["#3BE", "#09C", "#A6C", "#93C", "#9C0", "#690", "#FB3", "#F80", "#F44", "#C00"];
+				for (var i = 0; i < digit[num].length; i++) {
+					for (var j = 0; j < digit[num][i].length; j++) {
+						if (digit[num][i][j] == 1) {
+							var ball = {
+								x: 14 * (R + 2) * index + j * 2 * (R + 1) + (R + 1),
+								y: i * 2 * (R + 1) + (R + 1),
+								stepX: Math.floor(Math.random() * 4 - 2),
+								stepY: -2 * numArray[Math.floor(Math.random() * numArray.length)],
+								color: colorArray[Math.floor(Math.random() * colorArray.length)],
+								disY: 1
+							};
+							balls.push(ball);
+						}
+					}
+				}
+			}
+
+			/*渲染*/
+			function render() {
+				//重置画布宽度，达到清空画布的效果
+				canvas.height = 100;
+				//渲染时钟
+				for (var i = 0; i < data.length; i++) {
+					renderDigit(i, data[i]);
+				}
+				//渲染小球
+				for (var i = 0; i < balls.length; i++) {
+					cxt.beginPath();
+					cxt.arc(balls[i].x, balls[i].y, R, 0, 2 * Math.PI);
+					cxt.fillStyle = balls[i].color;
+					cxt.closePath();
+					cxt.fill();
+				}
+			}
+
+			clearInterval(oTimer);
+			var oTimer = setInterval(function() {
+				//更新时钟
+				updateDigitTime();
+				//更新小球状态
+				updateBalls();
+				//渲染
+				render();
+			}, 50);
+		}
+
+	})();
+</script>
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dcyyd.github.io/2024/12/20/Software-modelling-and-design-revision-syllabus/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://dcyyd.github.io/hexo_websites/images/favicon.svg">
+      <meta itemprop="name" content="Dou ChangYou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smart Space">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="《软件建模与设计》复习提纲 | Smart Space">
+      <meta itemprop="description" content="本复习提纲全面覆盖了软件工程的基础知识、软件建模与设计的核心概念和方法....">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          《软件建模与设计》复习提纲
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-12-20 22:08:06" itemprop="dateCreated datePublished" datetime="2024-12-20T22:08:06+08:00">2024-12-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="https://dcyyd.github.io/hexo_websites/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">期末复习</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">本复习提纲全面覆盖了软件工程的基础知识、软件建模与设计的核心概念和方法....</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h3 id="第一章-软件工程基础"><a href="#第一章-软件工程基础" class="headerlink" title="第一章  软件工程基础"></a><strong>第一章  软件工程基础</strong></h3><ol>
+<li><p><strong>软件的定义：</strong>软件&#x3D;程序+数据+文档。</p>
+</li>
+<li><p><strong>软件的特点：</strong>抽象性、可复制性、不会磨损、依赖性、开发效率低、开发费用高。</p>
+</li>
+<li><p><strong>软件危机：</strong>落后的软件生产方式无法满足迅速增长的计算机软件需求，从而导致软件开发与维护过程中出现一系列严重问题的现象。</p>
+</li>
+<li><p><strong>软件工程的定义：</strong>软件工程是研究和如何以系统性的、规范化的、可定量的过程化方法去开发和维护软件，以及如何把经过时间考验而证明正确的管理技术和当前能够得到的最好的技术方法结合起来。</p>
+</li>
+<li><p><strong>软件的生命周期：</strong><code>3</code>个时期<code>8</code>个阶段</p>
+</li>
+</ol>
+<img src="https://pic.imgdb.cn/item/67657501d0e0a243d4e744db.jpg" alt="wps1.jpg">
+
+<ol start="6">
+<li><p><strong>简述在软件开发中，每个阶段的主要任务是什么？具体包括哪些内容？主要解决哪些问题？</strong></p>
+<p>软件开发通常遵循一个生命周期，每个阶段都有其特定的任务和目标。以下是软件开发过程中常见的几个阶段及其主要任务：</p>
+<ul>
+<li><strong>需求分析阶段</strong>：<ul>
+<li><strong>任务</strong>：收集和分析用户需求，明确项目目标。</li>
+<li><strong>内容</strong>：与用户沟通，确定软件的功能需求、性能需求、用户界面需求等。</li>
+<li><strong>解决的问题</strong>：确保开发团队对用户需求有准确理解，避免开发出不符合用户期望的产品。</li>
+</ul>
+</li>
+<li><strong>系统设计阶段</strong>：<ul>
+<li><strong>任务</strong>：设计软件的架构和组件。</li>
+<li><strong>内容</strong>：包括高层设计（架构设计）和低层设计（详细设计），确定软件的模块划分、接口设计、数据结构等。</li>
+<li><strong>解决的问题</strong>：确保软件设计满足需求，具有良好的可扩展性、可维护性和性能。</li>
+</ul>
+</li>
+<li><strong>实现阶段</strong>：<ul>
+<li><strong>任务</strong>：编写代码实现设计。</li>
+<li><strong>内容</strong>：编码、单元测试、集成测试等。</li>
+<li><strong>解决的问题</strong>：将设计转化为实际的软件产品，并确保代码质量。</li>
+</ul>
+</li>
+<li><strong>测试阶段</strong>：<ul>
+<li><strong>任务</strong>：验证软件是否满足需求，发现并修复缺陷。</li>
+<li><strong>内容</strong>：包括单元测试、集成测试、系统测试、验收测试等。</li>
+<li><strong>解决的问题</strong>：确保软件质量，减少缺陷，提高用户满意度。</li>
+</ul>
+</li>
+<li><strong>部署阶段</strong>：<ul>
+<li><strong>任务</strong>：将软件部署到生产环境。</li>
+<li><strong>内容</strong>：包括配置管理、部署策略、备份和恢复计划等。</li>
+<li><strong>解决的问题</strong>：确保软件能够在用户环境中稳定运行。</li>
+</ul>
+</li>
+<li><strong>维护阶段</strong>：<ul>
+<li><strong>任务</strong>：对软件进行持续改进和支持。</li>
+<li><strong>内容</strong>：包括错误修复、性能优化、功能增强等。</li>
+<li><strong>解决的问题</strong>：适应环境变化，延长软件的使用寿命，提高用户满意度。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>简述软件建模与设计的概念，主要内容和作用？</strong></p>
+</li>
+</ol>
+<ul>
+<li><strong>概念</strong>： 软件建模是使用模型来表示软件系统的过程，这些模型可以是图形的或文本的，用于描述系统的结构、行为和功能。软件设计则是基于这些模型来定义软件的架构和组件的过程。</li>
+<li><strong>主要内容</strong>：<ul>
+<li><strong>需求建模</strong>：使用用例图、活动图等<code>UML</code>图表来描述用户需求。</li>
+<li><strong>架构设计</strong>：定义软件的高层结构，包括组件、接口和它们的交互。</li>
+<li><strong>详细设计</strong>：设计软件的内部结构，包括类图、序列图等。</li>
+<li><strong>数据建模</strong>：定义数据结构和数据库模式。</li>
+</ul>
+</li>
+<li><strong>作用</strong>：<ul>
+<li><strong>沟通工具</strong>：模型提供了一种直观的方式来沟通和理解复杂系统。</li>
+<li><strong>设计验证</strong>：通过模型可以提前发现设计中的问题，减少后期修改的成本。</li>
+<li><strong>文档化</strong>：模型作为文档的一部分，帮助新团队成员快速理解系统。</li>
+<li><strong>指导实现</strong>：详细的设计模型可以指导开发人员进行编码。</li>
+<li><strong>促进重用</strong>：良好的设计模型可以促进代码和设计的重用。</li>
+<li><strong>支持维护</strong>：清晰的模型有助于后期的维护和升级工作。</li>
+</ul>
+</li>
+</ul>
+<ol start="8">
+<li><p><strong>面向对象技术三大特征：</strong>封装、继承、多态。</p>
+</li>
+<li><p><strong>接口的概念及作用：</strong>接口只有方法体，没有具体实现，谁实现接口谁定义具体方法，大大提高程序的灵活性，推迟决策，提高面向对象的灵活性。</p>
+</li>
+</ol>
+<h3 id="第二章-常见的软件模型与RUP"><a href="#第二章-常见的软件模型与RUP" class="headerlink" title="第二章 常见的软件模型与RUP"></a><strong>第二章 常见的软件模型与<code>RUP</code></strong></h3><ol>
+<li><p><strong>常用软件开发模型：</strong>瀑布模型、原型模型、演化模型、螺旋模型，每个模型的特点、优点和缺点。</p>
+</li>
+<li><p><strong><code>RUP</code>（统一软件开发过程）：</strong>四个阶段：初始、细化、构造、交付。</p>
+</li>
+<li><p><strong>核心工作流：</strong>业务建模、需求、分析和设计、实现、测试、部署。</p>
+</li>
+<li><p><strong>核心支持工作流：</strong>配置和变更管理、项目管理、环境。</p>
+</li>
+<li><p><strong>主要特点(方法)：</strong>面向对象、用例驱动、以架构为中心、迭代（螺旋上升式的开发过程）、以质量控制和风险管理为目标，与<code>UML</code>相结合，适用性强等特点。</p>
+</li>
+</ol>
+<h3 id="第三章-UML与Rational-Rose概述"><a href="#第三章-UML与Rational-Rose概述" class="headerlink" title="第三章 UML与Rational Rose概述"></a><strong>第三章 <code>UML</code>与<code>Rational Rose</code>概述</strong></h3><ol>
+<li><p><strong><code>Unified Modeling Language</code>（统一建模语言）：</strong></p>
+<ul>
+<li>是一种为面向对象系统的产品进行说明、可视化和编制文档的一种标准语言，是非专利的第三代建模和规约语言。</li>
+<li><code>UML</code>是面向对象设计的建模工具，独立于任何具体程序设计语言。</li>
+<li><code>UML</code>立足于对事物的实体、性质、关系、结构、状态和动态变化过程的全程描述和反映。</li>
+<li><code>UML</code>可以从不同角度描述人们所观察到的软件视图，也可以描述在不同开发阶段中的软件的形态。</li>
+<li><code>UML</code>可以建立需求模型、逻辑模型、设计模型和实现模型等，但在领域模型方面存在不足。</li>
+<li><code>UML</code>采用一组图形符号来描述软件模型，这些图形符号具有简单、直观和规范的特点，开发人员学习和掌握起来比较简单。</li>
+<li>所描述的软件模型，可以直观地理解和阅读，由于具有规范性，所以能够保证模型的准确、一致。</li>
+<li>此外，<code>UML</code>是可以根据用户需要扩展的语言。</li>
+</ul>
+</li>
+<li><p><strong><code>UML</code>的构成：</strong></p>
+<img src="https://files.superbed.cn/proxy/7569696d6e2732327b7471786e336e686d786f7f7879337e7e326e69726f783274707c7a786e32292932797e322b2a2b282a282d2c792d782d7c2f292e7929782a2929797e33776d7a.jpg">
+</li>
+<li><p><strong><code>UML</code>模型分类：</strong></p>
+<p><code>UML</code>模型可以分为两大类：<strong>结构图</strong>和<strong>行为图</strong>。</p>
+<img src="https://pic.imgdb.cn/item/67657500d0e0a243d4e744da.png" alt="wps0.png"></li>
+</ol>
+<h3 id="第四章-用例图"><a href="#第四章-用例图" class="headerlink" title="第四章  用例图"></a><strong>第四章  用例图</strong></h3><p><em><strong>*要求掌握：</strong></em>用例图的相关概念，用例图建模，include和extend的区别及应用。</p>
+<ol>
+<li><p><strong>用例图的重要性：</strong>软件系统要实现的功能通过用例来捕获，接下来的所有分析、设计、实现、测试都由用例来驱动。因此，在面向对象的软件生产过程由用例驱动，所以用例图建模也是所有模型中最重要的一种模型。</p>
+</li>
+<li><p><strong>用例图：</strong>从用户的角度来描述对软件产品的需求，分析产品的系统功能，并指出各功能的操作者，用来捕获系统的动态性质。用例图具体来说主要用于描述角色及角色和用例之间的连接关系。说明谁要使用系统，以及使用该系统做些什么。</p>
+</li>
+<li><p><strong>用例图的模型元素：</strong>一个用例图包含了多个模型元素，如系统、参与者和用例，并且显示这些元素之间的各种关系。如泛化、关联和依赖。</p>
+</li>
+<li><p><strong>参与者：</strong>在系统之外与系统交互的人&#x2F;事物，直接并主动向系统发出动作并获得反馈。</p>
+</li>
+<li><p><strong>用例：</strong>与参与者交互的，并且给参与者提供可观测的有意义的结果的一系列活动的集合。</p>
+</li>
+<li><p><strong>用例图中可能存在的关系：</strong></p>
+<ul>
+<li><p><strong>参与者与用例之间：</strong>关联关系。</p>
+</li>
+<li><p><strong>参与者与参与者之间：</strong>泛化关系。</p>
+</li>
+<li><p><strong>用例与用例之间：</strong>泛化关系、包含关系、扩展关系。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>用例说明：</strong>用例说明包括用例名称、参与者、概述、基础事件流、可选事件流。</p>
+</li>
+<li><p><strong>用例的粒度：</strong>  </p>
+<ul>
+<li><p>用例粒度所描述的就是对功能的细化和综合程度。</p>
+</li>
+<li><p>用例的细化程度越高，粒度就越小，这个用例所包含的功能就越少。</p>
+</li>
+<li><p>用例的细化程度越低，粒度就越大，这个用例所包含的功能就越多。</p>
+</li>
+<li><p>用例并不是越多越好，一般一个好的系统，用例在大于10个小于50个之间，否则应该考虑一下粒度的选择是否合适了。</p>
+</li>
+<li><p>不管粒度如何选择，必须把握的原则是在同一个需求阶段，所有用例的粒度应该是同一个量级的。</p>
+</li>
+<li><p>同级别的用例粒度相同。</p>
+</li>
+</ul>
+</li>
+<li><p><strong><code>include</code>和<code>extend</code>的区别及应用：</strong></p>
+<ul>
+<li><p><code>include</code>关系表示一个用例可以被另一个用例包含，意味着在某些情况下，一个用例的执行需要另一个用例的执行来完成。</p>
+</li>
+<li><p><code>extend</code>关系表示一个用例可以扩展另一个用例，意味着在某些条件下，一个用例可以增加额外的行为到另一个用例中。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="第五章-活动图"><a href="#第五章-活动图" class="headerlink" title="第五章 活动图"></a><strong>第五章 活动图</strong></h3><ol>
+<li><p><strong>活动图的定义：</strong></p>
+<ul>
+<li><strong>活动图</strong>：用于描述活动流程的图形称为活动图。</li>
+</ul>
+</li>
+<li><p><strong>活动图的主要元素：</strong></p>
+</li>
+</ol>
+<ul>
+<li><p><strong>活动</strong>：表示一个操作或一个步骤。</p>
+</li>
+<li><p><strong>泳道</strong>：用于将执行活动的参与者或组织进行分组。</p>
+</li>
+<li><p><strong>分支、分叉和汇合</strong>：表示活动流程中的决策点和合并点。</p>
+</li>
+<li><p><strong>对象流</strong>：表示对象在活动之间的流动。</p>
+</li>
+</ul>
+<img src="https://pic.imgdb.cn/item/67657501d0e0a243d4e744dd.png" alt="wps3.png">
+
+<ol start="3">
+<li><p><strong>活动图与流程图的区别：</strong></p>
+<ul>
+<li><p><strong>流程图</strong>着重描述处理过程，它的主要控制结构是顺序、分支和循环，各个处理之间有严格的顺序和时间关系。</p>
+</li>
+<li><p><strong>活动图</strong>描述的则是对象活动的顺序关系所遵循的规则，它着重表现的是系统的行为，而非系统的处理过程。</p>
+</li>
+<li><p>活动图能够表示并发活动的情形。</p>
+</li>
+<li><p>活动图是面向对象的，而流程图是面向过程的。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>泳道的作用：</strong></p>
+</li>
+</ol>
+<ul>
+<li><strong>泳道</strong>(<code>Swimlane</code>)是一种图形元素，用于将执行活动的参与者或组织进行分组。</li>
+<li>泳道可以帮助我们更清晰地描述系统中的不同参与者之间的交互和责任分配，使活动图的可读性更强。</li>
+</ul>
+<h3 id="第六章-类图和包"><a href="#第六章-类图和包" class="headerlink" title="第六章 类图和包"></a><strong>第六章 类图和包</strong></h3><p><em><strong>*要求掌握：</strong></em>类图的相关概念、类的属性、方法的表示、类之间的关系、属性和方法的可见性、类的版型及每种版型的作用。</p>
+<ol>
+<li><strong>类的定义：</strong><ul>
+<li>类是面向对象建模中的一个基本概念，它封装了数据（属性）和行为（方法）。类图用于描述系统中的类以及类之间的关系。</li>
+</ul>
+</li>
+</ol>
+<img src="https://pic.imgdb.cn/item/67657637d0e0a243d4e7451d.png" alt="wps6.png">
+
+<ol start="2">
+<li><p><strong>可见性：</strong></p>
+<ul>
+<li>在类图中，属性和方法的可见性用不同的标记表示，以指示它们是否可以被类外部访问。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>可视性级别</th>
+<th>属性的图标</th>
+<th>操作的图标</th>
+<th>文本符号</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>私有</td>
+<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/privattr.gif" alt="该图显示属性的“Eclipse 私有”可视性装饰图标。"></td>
+<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/privoper.gif" alt="该图显示操作的“Eclipse 私有”可视性装饰图标。"></td>
+<td><code>-</code></td>
+<td>只有位于同一个容器中的类才能看见和使用这些类。</td>
+</tr>
+<tr>
+<td>保护</td>
+<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/protattr.gif" alt="该图显示属性的“Eclipse 保护”可视性装饰图标。"></td>
+<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/protoper.gif" alt="该图显示操作的“Eclipse 保护”可视性装饰图标。"></td>
+<td><code>#</code></td>
+<td>只有位于同一容器或该容器的后代中的类才能看见和使用这些类。</td>
+</tr>
+<tr>
+<td>公有</td>
+<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/publattr.gif" alt="该图显示属性的“Eclipse 公有”可视性装饰图标。"></td>
+<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/publoper.gif" alt="该图显示操作的“Eclipse 公有”可视性装饰图标。"></td>
+<td><code>+</code></td>
+<td>任何可以看见容器的类也就可以看见和使用这些类。</td>
+</tr>
+<tr>
+<td>包</td>
+<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/packattr.gif" alt="该图显示属性的“Eclipse 包”可视性装饰图标。"></td>
+<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/packoper.gif" alt="该图显示操作的“Eclipse 包”可视性装饰图标。"></td>
+<td><code>~</code></td>
+<td>只有与容器位于同一个包中的类才能看见和使用这些类。</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>类之间的关系：</strong></p>
+<table>
+<thead>
+<tr>
+<th>关系类型</th>
+<th align="left">描述</th>
+<th>比较</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>关联 <code>Association</code></td>
+<td align="left">一个类 <strong>持有对另一个类的引用</strong></td>
+<td>两者之间并无明显包含关系、仅仅就是持有引用</td>
+</tr>
+<tr>
+<td>聚合 <code>Aggregation</code></td>
+<td align="left">一个类 <strong>包含</strong> 另一个类</td>
+<td>后者必须作为前者的部件或是组成元素</td>
+</tr>
+<tr>
+<td>组合 <code>Composition</code></td>
+<td align="left">一个类 <strong>包含</strong> 另一个类</td>
+<td>后者除了作为前者的部件或是组成元素之外，还必须是专属于前者的部件(离开前者则无含义的部件)</td>
+</tr>
+<tr>
+<td>依赖 <code>Dependency</code></td>
+<td align="left">一个类 <strong>使用(依赖)</strong> 另一个类</td>
+<td>前者在方法中直接、简介使用到了后者类型(参数、局部变量、静态方法调用)</td>
+</tr>
+<tr>
+<td>泛化 <code>Generalization</code></td>
+<td align="left">一个类 <strong>继承&#x2F;扩展&#x2F;泛化</strong> 另一个类</td>
+<td>前者基于一个具体存在的类型(后者)进行扩展</td>
+</tr>
+<tr>
+<td>实现 <code>Realization</code></td>
+<td align="left">一个类 <strong>实现</strong> 一个接口的方法</td>
+<td>前者实现接口的方法后具备接口的特征，也就可以作为接口的类型(如 Runnable)被引用</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>关联关系的组成：</strong></p>
+<ul>
+<li><p><strong>角色（Role）：</strong>关联中的每个类所扮演的角色。</p>
+</li>
+<li><p><strong>关联名（Name）：</strong>关联的名称。</p>
+</li>
+<li><p><strong>多重性（Multiplication）：</strong>表示一个类的对象可以与另一个类的对象形成多少个关联。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>聚合和组合的特征：</strong></p>
+</li>
+</ol>
+<ul>
+<li><p><strong>聚合（Aggregation）：</strong>表示整体与部分的关系，但部分可以独立于整体存在。</p>
+</li>
+<li><p><strong>组合（Composition）：</strong>表示整体与部分的强关系，部分不能独立于整体存在。</p>
+</li>
+</ul>
+<ol start="6">
+<li><p><strong>类的版型：</strong></p>
+<ul>
+<li><p><strong>边界类（Boundary Class）：</strong>与外部系统交互的类，如用户界面元素。</p>
+<img src="https://pic.imgdb.cn/item/676574dad0e0a243d4e744c5.png" alt="bianjielei.png">
+</li>
+<li><p><strong>控制类（Control Class）：</strong>协调其他类的行为，如业务逻辑类。</p>
+<img src="https://pic.imgdb.cn/item/676574dad0e0a243d4e744c7.png" alt="kzl.png">
+</li>
+<li><p><strong>实体类（Entity Class）：</strong>存储数据的类，通常与数据库表对应。</p>
+<img src="https://pic.imgdb.cn/item/676574dad0e0a243d4e744c8.png" alt="stl.png"></li>
+</ul>
+</li>
+<li><p><strong>包：</strong></p>
+<ul>
+<li><strong>包（Package）：</strong>用于把元素组织成组的通用机制。合理的分组能提高模型的可读性及可维护性。</li>
+</ul>
+</li>
+</ol>
+<img src="https://pic.imgdb.cn/item/67657637d0e0a243d4e7451f.jpg" alt="wps8.jpg">
+
+
+
+<h3 id="第七章-交互图"><a href="#第七章-交互图" class="headerlink" title="第七章 交互图"></a><strong>第七章 交互图</strong></h3><p><em><strong>*要求掌握：</strong></em>顺序图的相关概念，顺序图中的建模元素，及这些元素的特点。</p>
+<ol>
+<li>交互图的分类<ul>
+<li>交互图主要分为两种类型：<strong>顺序图</strong>和<strong>协作图</strong>。</li>
+</ul>
+</li>
+</ol>
+<img src="https://pic.imgdb.cn/item/67657638d0e0a243d4e74520.png" alt="wps9.png">
+
+<ol start="2">
+<li><p><strong>顺序图</strong></p>
+<ul>
+<li><p><strong>顺序图</strong>：也称为序列图，用于展示对象之间如何以及何时进行交互，强调时间顺序。</p>
+</li>
+<li><p><strong>主要元素</strong>：</p>
+<img src="https://pic.imgdb.cn/item/676574dbd0e0a243d4e744c9.png" alt="sxt.png"></li>
+</ul>
+</li>
+</ol>
+<h3 id="第八章-构件图和部署图"><a href="#第八章-构件图和部署图" class="headerlink" title="第八章 构件图和部署图"></a><strong>第八章 构件图和部署图</strong></h3><p><em><strong>*要求掌握：</strong></em>组件图部署图的概念、包含的建模元素，及组件图和部署图的作用。</p>
+<ol>
+<li><p><strong>构件图和部署图的作用：</strong></p>
+<ul>
+<li><strong>构件图(Component Diagram)：</strong>又称为组件图，他描述的是在软件系统中遵从并实现一组接口的物理的、可替换的*软件模块。</li>
+<li><strong>部署图(deployment diagram，配置图)：</strong>是用来显示系统中软件和硬件的物理架构。</li>
+</ul>
+</li>
+<li><p><strong>构件的定义、作用及分类：</strong></p>
+<ul>
+<li><p><strong>定义</strong>：遵从一定接口规范，具有提供其实现的物理的，可替换的部分。</p>
+</li>
+<li><p><strong>作用：</strong></p>
+<ul>
+<li>使系统测试人员和开发人员能够从整体上了解系统的所有物理部件；</li>
+<li>从软件架构的角度来描述一个系统的主要功能；</li>
+<li>方便项目组的成员了解系统的结构和功能；</li>
+<li>有利于软件复用。</li>
+</ul>
+</li>
+<li><p><strong>按照组件在系统中的角色分类：</strong></p>
+<ul>
+<li><strong>部署组件(Deployment Component) ：</strong>组成可执行系统的<strong>必要组件</strong>。例如Java虚拟机、数据库管理系统、<code>EXE</code>文件、<code>DLL</code>文件。</li>
+<li><strong>工作产品组件(Work Product Component) ：</strong>开发过程的<strong>中间产物</strong>，不直接参与到可执行系统中。例如源代码文件、数据文件。</li>
+<li><strong>执行组件</strong>(Execution Component)：在<strong>运行时</strong>创建的组件，<code>不常见</code>。例如实例化的<code>Servlets</code>、<code>COM+</code>对象、<code>XML</code>文档。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>构件图的组成：</strong></p>
+<ul>
+<li><strong>基本组成元素：</strong>构件（组件）+ 接口 + 关系（依赖和实现）</li>
+<li><strong>详细组成元素：</strong>构件 + 接口 + 关系 + 端口(Port) + 连接器(Connector)</li>
+</ul>
+</li>
+</ol>
+<img src="https://pic.imgdb.cn/item/67657638d0e0a243d4e74521.jpg" alt="wps10.jpg">
+
+<ol start="4">
+<li><p><strong>部署图：</strong></p>
+<ul>
+<li><strong>部署图</strong>：用于描述系统硬件的物理拓扑结构以及在此结构上运行的软构件。</li>
+</ul>
+</li>
+<li><p><strong>部署图的主要元素：</strong></p>
+<ul>
+<li><p><strong>节点</strong>：处理器、设备等。</p>
+</li>
+<li><p><strong>连接</strong>：表示节点之间的物理或逻辑连接。</p>
+<img src="https://pic.imgdb.cn/item/676574dad0e0a243d4e744c6.png" alt="bstys.png"></li>
+</ul>
+</li>
+<li><p><strong>部署图的特点：</strong></p>
+<ul>
+<li><strong>物理架构表示</strong>：部署图展示了系统的物理部署，包括硬件和软件的物理分布。</li>
+<li><strong>节点和构件</strong>：图中的节点代表物理设备（如服务器、数据库等），而构件代表部署在这些节点上的软件组件或文件。</li>
+<li><strong>通信连接</strong>：显示了节点之间的通信连接，如网络链接，体现了系统各部分之间的物理联系。</li>
+<li><strong>系统级视图</strong>：提供了整个系统的物理部署视图，通常一个系统只有一个部署图。</li>
+<li><strong>抽象级别</strong>：虽然关注物理部署，但部署图不涉及具体的技术实现细节，保持一定程度的抽象。</li>
+<li><strong>静态视图</strong>：部署图是静态的，它不展示系统随时间变化的行为，而是展示某一时刻的系统状态。</li>
+<li><strong>部署和配置</strong>：为系统部署和配置提供蓝图，有助于理解系统的物理配置需求。</li>
+<li><strong>维护和升级</strong>：通过可视化的部署图，可以更容易地规划和执行系统的维护和升级。</li>
+<li><strong>安全性分析</strong>：有助于分析系统的安全性，因为可以直观地看到数据和处理的分布。</li>
+<li><strong>可靠性和容错性</strong>：通过展示系统的物理组件和它们的连接，部署图有助于评估系统的可靠性和容错性。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>附件：</p>
+<p><a href="./%E4%B9%9D%E7%A7%8D%E5%B8%B8%E8%A7%81UML%E5%9B%BE%EF%BC%88%E5%88%86%E7%B1%BB+%E5%9B%BE%E8%A7%A3%EF%BC%89.pdf">九种常见<code>UML</code>图（分类+图解）</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Dou ChangYou
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://dcyyd.github.io/2024/12/20/Software-modelling-and-design-revision-syllabus/" title="《软件建模与设计》复习提纲">https://dcyyd.github.io/2024/12/20/Software-modelling-and-design-revision-syllabus/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="https://dcyyd.github.io/hexo_websites/tags/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> 期末复习</a>
+              <a href="https://dcyyd.github.io/hexo_websites/tags/%E8%BD%AF%E4%BB%B6%E5%BB%BA%E6%A8%A1/" rel="tag"><i class="fa fa-tag"></i> 软件建模</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="https://dcyyd.github.io/hexo_websites/2024/12/18/JavaWeb-Final-Review-Questions/" rel="prev" title="JavaWeb期末复习题">
+                  <i class="fa fa-angle-left"></i> JavaWeb期末复习题
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heartbeat"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Dou ChangYou</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">60k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">55 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("11/16/2024 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous"></script>
+<script src="https://dcyyd.github.io/hexo_websites/js/comments.js"></script><script src="https://dcyyd.github.io/hexo_websites/js/utils.js"></script><script src="https://dcyyd.github.io/hexo_websites/js/motion.js"></script><script src="https://dcyyd.github.io/hexo_websites/js/sidebar.js"></script><script src="https://dcyyd.github.io/hexo_websites/js/next-boot.js"></script><script src="https://dcyyd.github.io/hexo_websites/js/bookmark.js"></script><script src="https://dcyyd.github.io/hexo_websites/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://dcyyd.github.io/hexo_websites/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="https://dcyyd.github.io/hexo_websites/js/third-party/fancybox.js"></script>
+
+
+
+  
+
+
+
+
+<!-- 页面点击小红心 -->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>
