@@ -1466,7 +1466,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ffffb6;
+    background: #bab1fb;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3140,7 +3140,7 @@ header.header {
   }
 }
 body {
-  background: url("https://hexo-1257031621.cos.ap-chengdu.myqcloud.com/bg2.jpg");
+  background: url("https://bpic.588ku.com/back_our/20210816/bg/5c6f570357894.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
