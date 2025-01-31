@@ -212,467 +212,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JavaWeb期末复习题</title>
-    <url>https://kfufys.github.io/2024/12/18/JavaWeb-Final-Review-Questions/</url>
-    <content><![CDATA[<h3 id="选择题"><a href="#选择题" class="headerlink" title="选择题"></a><strong>选择题</strong></h3><p><strong>1.下面关于<code>Servlet</code>的描述，错误的是（B）</strong></p>
-<p>A. <code>Servlet</code>是位于<code>Web </code>服务器内部的服务器端的<code>Java</code>应用程序</p>
-<p>B. <code>Servlet</code>的运行方式和普通的<code>Java</code>应用程序是相同的</p>
-<p>C. <code>Servlet</code>可以生成动态的<code>Web</code>页面</p>
-<p>D. <code>Servlet</code>需要由包含支持<code>Servlet</code>的<code>Java</code>虚拟机<code>Web</code>服务器进行加载</p>
-<p><strong>2.在开发<code>Java Web</code>应用程序的时候，<code>HTTP</code>请求消息使用<code>Get</code>或<code>POST</code>方法以便在<code>WEB</code>上传输数据，下列关于<code>GET</code>和<code>POST </code>方法描述正确的是（A）</strong></p>
-<p>A. <code>POST</code>请求的数据在地址栏不可见</p>
-<p>B. <code>POST</code>请求对发送的数据的长度限制在<code>240——255</code>个字符</p>
-<p>C. <code>GET</code>请求提交数据更加安全</p>
-<p>D. <code>GET</code>请求提交的数据在理论上没有长度限制</p>
-<p><strong>3.下列选项哪个是正确的语法格式（A）</strong></p>
-<p>A. <code>&lt;%=&quot;YXQ&quot;%&gt;</code></p>
-<p>B. <code>&lt;%String name=&quot;YXQ&quot;%&gt;</code></p>
-<p>C.<code> &lt;%=&quot;您好;%&gt;</code></p>
-<p>D. <code>&lt;%=String name=&quot;您好&quot;%&gt;</code></p>
-<p><strong>4.以下哪个标记是用于在<code>JSP</code>中引用<code>Java</code>代码段的（A）</strong></p>
-<p>A. <code>&lt;%%&gt;</code></p>
-<p>B. <code>&lt;%!%&gt;</code></p>
-<p>C. <code>&lt;%=%&gt;</code></p>
-<p>D. <code>&lt;%@%&gt;</code></p>
-<p><strong>5.<code>JSP</code>文件的后缀为（A）</strong></p>
-<p>A. <code>.jsp</code></p>
-<p>B. <code>.xsl</code></p>
-<p>C. <code>.html</code></p>
-<p>D.<code> .css</code></p>
-<p><strong>6.以下哪个方法是获取请求转发器的（D）</strong></p>
-<p>A. <code>getAttrebute</code></p>
-<p>B. <code>getParameter</code></p>
-<p>C. <code>setAttribute</code></p>
-<p>D. <code>getRequestDispatcher</code></p>
-<p><strong>7.在<code>JSP</code>中如果要导入<code>java.io.*</code>包，应该使用(D)指令</strong></p>
-<p>A. <code>forward</code></p>
-<p>B.<code>taglib</code></p>
-<p>C. <code>include</code></p>
-<p>D. <code>page</code></p>
-<p><strong>8.以下哪个方法是用于实现<code>Servlet</code>的重定向的（D）</strong></p>
-<p>A. <code>getParameter</code></p>
-<p>B.<code> setAttribute</code></p>
-<p>C. <code>getAttrebute</code></p>
-<p>D. <code>sendRedirect</code></p>
-<p><strong>9.在<code>JDBC</code>中，下列（D）接口专用于执行<code>JDBC</code>中的预处理语句。</strong></p>
-<p>A. <code>CallableStatement</code></p>
-<p>B. <code>ProcedureStatement</code></p>
-<p>C.<code> Statement</code></p>
-<p>D. <code>PreparedStatement</code></p>
-<p><strong>10.<code>JSP</code>的编译指令标记通常是指（A）</strong></p>
-<p>A. <code>page</code>指令、<code>include</code>指令和<code>taglib</code>指令</p>
-<p>B. <code>page</code>指令、<code>include</code>指令和<code>plugin</code>指令</p>
-<p>C. <code>forward</code>指令、<code>include</code>指令和<code>taglib</code>指令</p>
-<p>D. <code>page</code>指令、<code>param</code>指令和<code>taglib</code>指令</p>
-<p><strong>11.<code>response</code>对象使用字符流向客户端响应文本时默认使用的编码是（B）</strong></p>
-<p>A. <code>GBK</code></p>
-<p>B. <code>ISO-8859-1</code></p>
-<p>C. <code>GB2312</code></p>
-<p>D. <code>UTF-8</code></p>
-<p><strong>12.当服务器上的第一个<code>JSP</code>页面被第一次请求执行时，服务器上的<code>JSP</code>引擎首先将<code>JSP</code>页面转译成一个（B）文件。</strong></p>
-<p>A. <code>HTML</code></p>
-<p>B. <code>Servlet</code></p>
-<p>C. <code>Java</code></p>
-<p>D. <code>JSP</code></p>
-<p><strong>13.下列<code>JS</code>语句，能实现单击按钮时弹出一个消息框的是（A）</strong></p>
-<p>A. <code>&lt;input type=&quot;button&quot; value=&quot;单击&quot; onClick=&quot;alert(‘确定’)&quot;/&gt;</code></p>
-<p>B. <code>&lt;button value=&quot;单击&quot; onChange=&quot;alert(‘确定’)&quot;&gt;&lt;/button&gt;</code></p>
-<p>C. <code>&lt;button value=&quot;单击&quot; onClick=&quot; alert(‘确定’)&quot;/&gt;&lt;/button&gt;</code></p>
-<p>D. <code>&lt;input type=&quot;button&quot; value=&quot;单击&quot; onChange=&quot;alert(‘确定’) &quot;/&gt;</code></p>
-<p><strong>14.可以利用<code>request</code>对象的哪个方法获取客户端的表单信息（B）</strong></p>
-<p>A. <code>request.writeParameter()</code></p>
-<p>B. <code>request.getParameter()</code></p>
-<p>C. <code>request.outParameter()</code></p>
-<p>D. <code>request.handlerParameter()</code></p>
-<p><strong>15.假定<code>login.getName() </code>返回类型为<code>java.lang.String</code> ，给定JSP代码: <code>Welcome &lt;%= login.getName() %&gt;</code>以下那个选项与此语句的功能相同?（B）</strong></p>
-<p>A. <code>Welocome &lt;% response.out.print(login.getName());%&gt;</code></p>
-<p>B. <code>Welocome &lt;% out.print(login.getName());%&gt;</code></p>
-<p>C. <code>Welocome &lt;% Writer.print(login.getName());%&gt;</code></p>
-<p>D. <code>Welocome &lt;% response.writer.print(login.getName());%&gt;</code></p>
-<p><strong>16.<code>JSP</code>页面经过编译之后，将创建一个</strong></p>
-<p>A. <code>exe</code>文件</p>
-<p>B. <code>application</code></p>
-<p>C. <code>applet</code></p>
-<p>D. <code>servlet</code></p>
-<p><strong>正确答案： D</strong></p>
-<p><strong>17.若想结束或关闭<code>HttpSession</code>对象，下列做法中错误的是</strong></p>
-<p>A. 关闭浏览器</p>
-<p>B. 调用<code>HttpSession</code>的<code>invalidate()</code>方法</p>
-<p>C. 调用<code>HttpSession</code>的<code>removeAttribute(String name)</code>方法</p>
-<p>D. 两次访问时间间隔大于定义的非活动时间间隔</p>
-<p><strong>正确答案： C</strong></p>
-<p><strong>18.<code>JDBC</code>中，常有这样的语句连接<code>MYSQL</code>数据库<code>Connection conn=DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/student&quot;,&quot;sa&quot;,&quot;123&quot;);</code>其中“<code>3306</code>”代表</strong></p>
-<p>A. 密码</p>
-<p>B. 端口号</p>
-<p>C. 用户名</p>
-<p>D. 所连接的数据库名</p>
-<p><strong>正确答案： B</strong></p>
-<p><strong>19.下面关于配置一个<code>WEB</code>应用的默认页面时，说法正确的是</strong></p>
-<p>A. 一个<code>Web</code>应用最多只能配置一个默认页面</p>
-<p>B. 一个<code>Web</code>应用最多只能配置三个默认页面</p>
-<p>C. 一个<code>Web</code>应用可以配置多个默认页面</p>
-<p>D. 一个<code>Web</code>应用最多只能配置两个默认页面</p>
-<p><strong>正确答案： C</strong></p>
-<p><strong>20.下列关于<code>JSTL</code>中条件标签说法错误的是</strong></p>
-<p>A. <code>&lt;c:if&gt;</code>标签用来进行条件判断</p>
-<p>B. <code>&lt;c:when&gt;</code>标签代表一个条件分支</p>
-<p>C. <code>&lt;c:if&gt;</code>标签可以实现形如<code>if ()&#123;…&#125; else &#123;…&#125;</code>的条件语句</p>
-<p>D. <code>&lt;c:choose&gt;</code>标签用于条件选择</p>
-<p><strong>正确答案： C</strong></p>
-<p><strong>21.下列有关<code>JSTL</code>标签库的描述，错误的是</strong></p>
-<p>A. 使用<code>JSTL</code>标签可以大大降低<code>JSP</code>页面的复杂度。</p>
-<p>B. &#96;JSTL标签库是由多个不同功能的标签库共同组成的。</p>
-<p>C. <code>JSTL标签库是由许多</code>Web&#96;应用厂商共同制定的。</p>
-<p>D. <code>JSTL</code>的核心标签库<code>core</code>，它包含了实现<code>Web</code>应用中通用操作的标签。</p>
-<p><strong>正确答案： C</strong></p>
-<p><strong>22.下列关于<code>CS</code>模式的缺点的描述不正确的是</strong></p>
-<p>A. 安全性差</p>
-<p>B. 重用性差</p>
-<p>C. 伸缩性差</p>
-<p>D. 移植性差</p>
-<p><strong>正确答案： A</strong></p>
-<p>23.下列选项中，关于<code>Cookie</code>中保存的数据，说法正确的是：</p>
-<p>A. 保存在服务器中</p>
-<p>B. 保存在客户端浏览器中</p>
-<p>C. 以上说法都不对</p>
-<p>D. 保存在数据库中</p>
-<p><strong>正确答案： B</strong></p>
-<p><strong>24.<code>JSTL</code> 中用于迭代集合的标签是哪个？</strong></p>
-<p>A. <code>&lt;c:if&gt;</code></p>
-<p>B. <code>&lt;c:forEach&gt;</code></p>
-<p>C. <code>&lt;c:choose&gt;</code></p>
-<p>D. <code>&lt;c:when&gt;</code></p>
-<p><strong>正确答案： B</strong></p>
-<p><strong>25.假设在<code>myServlet</code>应用中有一个<code>MyServlet</code>类，在<code>web.xml</code>文件中对其进行如下配置：</strong></p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>myservlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>cn.hpde.servlet.MyServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>myservlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/welcome<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>则以下选项可以访问到MyServlet的是</strong></p>
-<p>A. <code>http://localhost:8080/myservlet/welcome</code></p>
-<p>B. <code>http://localhost:8080/MyServlet</code></p>
-<p>C. <code>http://localhost:8080/com/yxq/servlet/MyServlet</code></p>
-<p>D. <code>http://localhost:8080/myservlet</code></p>
-<p><strong>正确答案： A</strong></p>
-<p><strong>26.创建<code>JSP</code>应用程序时，配置文件<code>web.xml</code>在程序下的(    )目录中。</strong></p>
-<p>A. <code>servlet</code></p>
-<p>B. <code>WebRoot</code></p>
-<p>C. <code>admin</code></p>
-<p>D. <code>WEB-INF</code></p>
-<p><strong>正确答案： D</strong></p>
-<p><strong>27.<code>JDBC</code> 中，连接<code>MYSQL</code>数据库<code>Connection conn=DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/javademo&quot;,&quot;sa&quot;,&quot;system&quot;);</code>其中“<code>javademo</code>”代表</strong></p>
-<p>A. 端口号</p>
-<p>B. 用户名</p>
-<p>C. 密码</p>
-<p>D. 所连接的数据库名</p>
-<p><strong>正确答案： D</strong></p>
-<p><strong>28.<code>Servlet</code>文件的文件名后缀为</strong></p>
-<p>A. <code>.js</code></p>
-<p>B. <code>.xsl</code></p>
-<p>C. <code>.java</code></p>
-<p>D. <code>.html</code></p>
-<p><strong>正确答案： C</strong></p>
-<p><strong>29.下面选项中，可以实现浏览器重定向的状态码是</strong></p>
-<p>A. <code>100</code></p>
-<p>B. <code>200</code></p>
-<p>C. <code>302</code></p>
-<p>D. <code>304</code></p>
-<p><strong>正确答案： C</strong></p>
-<p><strong>30.修改<code>Tomcat</code>端口号的文件<code>server.xml</code>位于哪个目录中</strong></p>
-<p>A. <code>work</code></p>
-<p>B. <code>lib</code></p>
-<p>C. <code>bin</code></p>
-<p>D. <code>conf</code></p>
-<p><strong>正确答案： D</strong></p>
-<p><strong>31.在<code>JSP</code>中 <code>EL</code>表达式：<code>$&#123;&quot;2&quot;+&quot;4&quot;&#125;</code>将输出</strong></p>
-<p>A. <code>6</code></p>
-<p>B. 不会输出，因为表达式是错误的</p>
-<p>C. <code>2+4</code></p>
-<p>D. <code>24</code></p>
-<p><strong>正确答案： D</strong></p>
-<p><strong>32.编写过滤器时,通过重载<code>Filter</code>接口中的(   )方法完成实际的过滤动作。</strong></p>
-<p>A. <code>doFilter()</code></p>
-<p>B. <code>Filter()</code></p>
-<p>C. <code>DoFilter()</code></p>
-<p>D. <code>filter()</code></p>
-<p><strong>正确答案： A</strong></p>
-<p><strong>33.以下哪种注释可以在服务器和客户端都可见。</strong></p>
-<p>A. <code>page</code></p>
-<p>B. <code>JavaScript</code></p>
-<p>C. <code>JSP</code></p>
-<p>D. <code>HTML</code></p>
-<p><strong>正确答案： D</strong></p>
-<p><strong>34.在<code>JSP</code>中，只有一行代码：<code>&lt;%=&#39;A&#39;+&#39;B&#39;%&gt;</code>，运行将输出</strong></p>
-<p>A. <code>A+B</code></p>
-<p>B. <code>AB</code></p>
-<p>C. 错误信息，因为表达式是错误的</p>
-<p>D. <code>131</code></p>
-<p><strong>正确答案： D</strong></p>
-<p><strong>35.下面关于<code>Servlet</code>的生命周期方法说法正确的是</strong></p>
-<p>A. <code>destroy()</code>方法是用来销毁<code>Servlet</code>的，可被执行多次</p>
-<p>B. <code>service()</code>方法是<code>Servlet</code>容器调用用来响应一次请求，且只能被执行一次</p>
-<p>C.<code> init()</code>方法是<code>Servlet</code>的初始化方法，在<code>Servlet</code>容器将<code>Servlet</code>装载时执行，仅执行一次</p>
-<p>D. <code>Servlet</code>的程序运行方式和普通的<code>Java</code>应用程序是相同的</p>
-<p><strong>正确答案： C</strong></p>
-<p><strong>36.下面哪项可以准确地获取请求页面的一个名称为<code>name</code>的文本框的输入内容</strong></p>
-<p>A. <code>request.getParameterValues(name)</code></p>
-<p>B. <code>request.getParameter(“name”)</code></p>
-<p>C. <code>request.getParameter(name)</code></p>
-<p>D. <code>request.getParameterValues(“name”)</code></p>
-<p><strong>正确答案： B</strong></p>
-<h3 id="判断题"><a href="#判断题" class="headerlink" title="判断题"></a><strong>判断题</strong></h3><p><strong>1.转发的<code>forward()</code>方法，必须在响应提交给客户端之前被调用，否则将抛出<code>IllegalStateException</code>异常。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： A</strong></p>
-<p><strong>2.<code>EL</code>表达式如果没有指明在哪个域中进行查找，默认先从<code>pageContext</code>域中查找。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： A</strong></p>
-<p><strong>3.<code>JSP</code> 页面在第一次打开时速度较慢,因为要将<code>JSP</code>文件转换成<code>Servlet</code>文件。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： A</strong></p>
-<p><strong>4.当浏览器禁用<code>cookie</code>后，原来已实现的关于<code>session</code>的应用程序，不会受到影响依然可以运行。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： B</strong></p>
-<p><strong>5.<code>Servlet</code>容器启动时，会为每个<code>Web</code>应用创建唯一的<code>ServletContext</code>对象，该对象和<code>Web</code>应用具有相同的生命周期。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： A</strong></p>
-<p><strong>6.<code>FilterChain</code>中只有一个方法<code>doFilter</code>，该方法是将请求“放行”，直接访问目标资源。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： B</strong></p>
-<p><strong>7.<code>JSP</code>标签库可以实现代码重用，提高开发效率。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： A</strong></p>
-<p><strong>8.<code>Servlet</code>容器启动时，所有<code>Web</code>应用共同使用一个<code>ServletContext</code>对象。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： B</strong></p>
-<p>9.一次性验证码可以限制人们使用软件来暴力猜测密码，从而保证了用户信息的安全。</p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p>正确答案： A</p>
-<p><strong>10.客户端路径如果以”<code>/</code>“，则”<code>/</code>“不包含应用名称；而服务器端路径以”<code>/</code>“，则”<code>/</code>“包含应用名称。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： A</strong></p>
-<p><strong>11.在<code>Servlet</code>技术中，提供了两个用于保存会话数据的对象，分别是<code>Cookie</code>和<code>Session</code>。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： A</strong></p>
-<p><strong>12.服务器向客户端发送<code>Cookie</code>时，会在<code>HTTP</code>响应头字段中增加<code>Set-Cookie</code>响应头字段。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： A</strong></p>
-<p><strong>13.<code>EL</code>表达式要访问<code>JavaBean</code>对象的属性，则该属性必须要有<code>setter</code>方法。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： B</strong></p>
-<p><strong>14.<code>MVC</code>是一种设计模式，它将应用程序的输入、处理、流程按照<code>Model</code>、<code>View</code>、<code>Controller</code>的方式进行分离。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： A</strong></p>
-<p><strong>15.<code>Session</code>对象的<code>getLastAccessedTime()</code>方法返回的是发送请求的时间与<code>1970年1月1日00:00:00</code>之间时间差的秒表示形式。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： B</strong></p>
-<p><strong>16.<code>Response</code>对象的<code>getOutputStream()</code>和<code>getWriter()</code>方法可以同时发送响应消息体。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： B</strong></p>
-<p><strong>17.<code>Servlet</code>容器启动时，会为每个<code>Web</code>应用创建唯一的<code>ServletContext</code>对象，该对象和<code>Web</code>应用具有相同的生命周期。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： A</strong></p>
-<p><strong>18.一次会话过程中，只允许客户端与服务器进行一次请求与响应过程。</strong></p>
-<p> A.正确</p>
-<p> B.错误</p>
-<p><strong>正确答案： B</strong></p>
-<h3 id="填空题（客观）"><a href="#填空题（客观）" class="headerlink" title="填空题（客观）"></a><strong>填空题（客观）</strong></h3><p>1.<code>Tomcat</code>服务器的默认端口是**<code>8080</code>**</p>
-<p>2.<code>MVC</code>模式中,<code>M</code>代表**<code>Model（模型）</code><strong>,<code>V</code>代表</strong><code>View（视图）</code><strong>,<code>C</code>代表</strong><code>Controller（控制器）</code>**</p>
-<p>3.创建<code>Servlet</code>我们经常继承**<code>HttpServlet</code>**类,创建过滤器则要实现 **<code>Filter</code>**接口</p>
-<p>4.<code>EL</code>表达式的内置对象一共有<code>11</code>个，其中用来表示域范围的内置对象有<code>4</code>个，分别是**<code>pageScope</code><strong>、</strong><code>requestScop</code><strong>、</strong><code>sessionScop</code><strong>、</strong><code>applicationScope</code>**</p>
-<p>5.在<code>web</code>项目中使用一个<code>Servlet</code>时，需配置<code>web.xml</code>中的**<code>&lt;servlet&gt;</code><strong>、</strong><code>&lt;servlet-mapping&gt;</code><strong>、</strong><code>&lt;load-on-startup&gt;</code>**三个标签</p>
-<p>6.<code>JSP</code>的内置对象有<code>page</code>、<code>config</code> 、<code>out</code> 、<code>page</code>、**<code>request</code><strong>、</strong><code>response</code><strong>、</strong><code>session</code><strong>、</strong><code>application</code>**、<code>Context</code>、<code>exception</code></p>
-<p>7.<code>JavaWeb</code>三层架构指的是**<code>web层（视图层）</code><strong>、</strong><code>业务逻辑层</code><strong>、</strong><code>数据访问层（持久层）</code>**</p>
-<p>8.<code>JavaWeb</code>经历了三个时期**<code>JSP Model1</code><strong>、</strong><code>JSP Model1二代</code><strong>、</strong><code>JSP Model2</code>**</p>
-<blockquote>
-<p>传统<code>Servlet/Jsp</code>时期</p>
-<p>框架兴起时期</p>
-<p><code>Java EE</code>标准化和微服务时期</p>
-</blockquote>
-<p>9.在<code>JavaWeb</code>中，使用**<code>@WebServlet</code>**注解来声明一个<code>Servlet</code></p>
-<p>10.<code>Tomcat</code>服务器的默认端口**<code>8080</code><strong>，是可以通过修改<code>Tomcat</code>服务器安装目录中<code>conf</code>文件下的主配置文件</strong><code>server.xml</code>**来更改端口号</p>
-<p>11.在<code>JSP</code>中使用<code>EL</code>表达式的基本语法是**<code>$&#123;属性名&#125;\$&#123;&#125;</code>**</p>
-<p>12.<code>Servlet</code>中表示初始化的方法是**<code>init()</code><strong>,表示销毁的方法是</strong><code>destroy()</code>**</p>
-<p>13.<code>JavaWeb</code>中的域对象有**<code>pageContext</code><strong>、</strong><code>request</code><strong>、</strong><code>session</code><strong>、</strong><code>application</code>**</p>
-<h3 id="填空题（主观）"><a href="#填空题（主观）" class="headerlink" title="填空题（主观）"></a><strong>填空题（主观）</strong></h3><p><strong>1.以下程序是某个<code>Servlet</code>的<code>doGet</code>方法，其功能是向客户端发送<code>Cookie</code>。根据注释在空白处填上合适的语句，使程序实现相应的功能。</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(request,response)</span>&#123;</span><br><span class="line">    <span class="comment">//创建Cookie对象cookie，名字是“c”，值是字符串“hello”</span></span><br><span class="line">    <span class="type">Cookie</span> <span class="variable">cookie</span> <span class="operator">=</span> 题<span class="number">1</span></span><br><span class="line">    <span class="comment">//设置Cookie的最大活动时间是30分钟</span></span><br><span class="line">    Cookie.setMaxAge(<span class="number">30</span>*<span class="number">60</span>)</span><br><span class="line">    <span class="comment">//将Cookie发送给客户端浏览器</span></span><br><span class="line">    题<span class="number">2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>参考答案：</strong></em> </p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">题<span class="number">1</span>：<span class="keyword">new</span> <span class="title class_">Cookie</span>(“c”,“hello”);</span><br><span class="line">题<span class="number">2</span>：response.addCookie(c);</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>2.以下程序是某个<code>Servlet</code>的<code>doPost</code>方法，其功能是从请求获取带中文的参数，并把参数的值存储到会话域中。根据注释在空白处填上合适的语句，使程序实现相应的功能。</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(request,response)</span>&#123;</span><br><span class="line">    <span class="comment">//设置请求编码为UTF-8</span></span><br><span class="line">    题<span class="number">1</span></span><br><span class="line">    <span class="comment">//从请求中获取带中文的参数msg</span></span><br><span class="line">    String msg= request.getParameter(“msg”)</span><br><span class="line">    <span class="comment">//将msg存储到会话域中</span></span><br><span class="line">    题<span class="number">2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>参考答案：</strong></em></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">题<span class="number">1</span>：request.setCharacterEncoding(<span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line">题<span class="number">2</span>：session.setAttribute(<span class="string">&quot;msg&quot;</span>,msg) ;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>3.下面的程序实现一个简单的登陆功能，只通过用户名判断是否登陆成功，登陆页面为<code>login.jsp</code>，处理登陆请求的<code>Servlet</code>名为<code>LoginServlet</code>。根据注释，在空白处填上合适的语句，使程序实现相应的功能。</strong></p>
-<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">&lt;%<span class="meta">@page</span> contentType=<span class="string">&quot;text/html;charset=utf-8&quot;</span>%&gt;</span><br><span class="line">&lt;form action=<span class="string">&quot;/web/LoginServlet&quot;</span> method=<span class="string">&quot;post&quot;</span>&gt;</span><br><span class="line">    用户名：&lt;input type=<span class="string">&quot;text&quot;</span> name=<span class="string">&quot;username&quot;</span>&gt;&lt;br&gt;</span><br><span class="line">    &lt;input type=<span class="string">&quot;submit&quot;</span> value=<span class="string">&quot;登陆&quot;</span>&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(request,response)</span>&#123;</span><br><span class="line">    <span class="comment">//从请求中获取用户名</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span>题<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="string">&quot;admin&quot;</span>.equals(username))&#123;</span><br><span class="line">        <span class="comment">//登陆成功，将用户名存入session域</span></span><br><span class="line">		题<span class="number">2</span></span><br><span class="line">        <span class="comment">//重定向到欢迎页面welcome.jsp</span></span><br><span class="line">		题<span class="number">3</span></span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//登陆失败，显示失败消息</span></span><br><span class="line">        response.getWriter.print(“登陆失败”);</span><br><span class="line">    &#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>参考答案：</strong></em></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">题<span class="number">1</span>：request.getParameter(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">题<span class="number">2</span>：session.setAttribute(“username”,username);</span><br><span class="line">题<span class="number">3</span>：response.sendRedirect(<span class="string">&quot;welcome.jsp&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>4.用过滤器<code>Filter</code>实现简单登陆校验，只有登陆用户才具备访问<code>index.jsp</code>页面的权限（用户已经登陆则在<code>session</code>存储有名称为“<code>user</code>”的登陆用户数据），否则将用户重定向到登陆页面<code>login.jsp</code>。根据注释在空白处填上合适的语句，使程序实现相应的功能。</strong> </p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">doFilter</span><span class="params">(request, response, chain)</span>&#123;	</span><br><span class="line">    <span class="type">HttpSession</span> <span class="variable">session</span> <span class="operator">=</span> request.getSession();</span><br><span class="line">    <span class="comment">//从session中获取用户信息user</span></span><br><span class="line">    <span class="type">Object</span> <span class="variable">user</span> <span class="operator">=</span> 题<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span>(user!=<span class="literal">null</span>)&#123;</span><br><span class="line">    	<span class="comment">//用户已经登陆，放行请求</span></span><br><span class="line">    	题<span class="number">2</span></span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    	<span class="comment">//用户未登陆，重定向到登陆页面进行登陆</span></span><br><span class="line">    	题<span class="number">3</span></span><br><span class="line">    &#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>参考答案：</strong></em></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">题<span class="number">1</span>：session.getAttribute(<span class="string">&quot;user&quot;</span>);</span><br><span class="line">题<span class="number">2</span>：chain.doFilter(request, response);</span><br><span class="line">题<span class="number">3</span>：response.sendRedirect(<span class="string">&quot;/web/login.jsp&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>5.以下程序是某个<code>Servlet</code>的<code>doGet</code>方法，功能向客户端发送“欢迎光临”。根据注释在空白处填上合适的语句，使程序实现相应的功能。</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(request,response)</span>&#123;	</span><br><span class="line">    <span class="comment">//因响应内容有中文，设置响应编码解决中文决乱码问题	</span></span><br><span class="line">	题<span class="number">1</span></span><br><span class="line">    <span class="comment">//通过响应字符流向客户端发送“欢迎光临”	</span></span><br><span class="line">	题<span class="number">2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>  <em><strong>参考答案：</strong></em></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">题<span class="number">1</span>：  response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);</span><br><span class="line">题<span class="number">2</span>：  response.getWriter().write(<span class="string">&quot;欢迎光临&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a><strong>简答题</strong></h3><p><strong>1.简述<code>Javabean</code>规范都有哪些 。</strong> </p>
-<ul>
-<li>类必须有一个无参构造函数</li>
-<li>类的所有成员变量必须是私有的</li>
-<li>类必须提供<code>getter</code>和<code>setter</code>方法来访问属性</li>
-</ul>
-<p><strong>2.简述<code>JavaWeb</code>三层架构及各层的功能？</strong></p>
-<ul>
-<li><strong>表现层（<code>web</code>层）：</strong>负责处理用户的请求，并将请求转发给业务逻辑层。表现层通常由 <code>HTML</code>、<code>CSS</code> 和 <code>JavaScript</code> 组成</li>
-<li><strong>业务逻辑层：</strong>负责处理业务逻辑，并将结果返回给表现层。业务逻辑层通常由 <code>Java</code> 代码组成</li>
-<li><strong>数据访问层：</strong>负责访问数据库，并将数据返回给业务逻辑层。数据访问层通常由 <code>JDBC</code> 或 <code>ORM</code> 框架组成</li>
-</ul>
-<p><strong>3.如何设置请求体和响应体编码？</strong></p>
-<ul>
-<li><strong>请求体编码设置：</strong><code>request.setCharacterEncoding(&quot;UTF-8&quot;)</code></li>
-<li><strong>响应体编码设置：</strong><code>response.setContentType(&quot;text/html;charset=UTF-8&quot;)</code>或者<code>response.setCharacterEncoding(&quot;UTF-8&quot;)</code></li>
-</ul>
-<p><strong>4.简述<code>ServletContext</code>的特点。</strong></p>
-<ul>
-<li>一个<code>Web</code>应用只有一个该类型对象</li>
-<li>随服务器的启动而创建，随服务器的关闭而销毁</li>
-<li>是域对象，可以在动态资源之间共享数据</li>
-</ul>
-<p><strong>5.简述重定向和请求转发的区别。</strong></p>
-<ul>
-<li>请求转发是一次请求，而重定向是两次请求</li>
-<li>请求转发后浏览器地址栏不变化，而重定向会有变化，因为重定向是两次请求</li>
-<li>请求转发的目标只能是本应用中的资源（包括<code>WEB-INF</code>中的内容），重定向的目标可以是其他应用</li>
-<li>请求转发要么都是<code>GET</code>，要么都是<code>POST</code>，重定向的第二个请求一定是<code>GET</code></li>
-</ul>
-<p><strong>6.简述<code>POST</code>请求和<code>GET</code>请求有什么不同？</strong></p>
-<ul>
-<li><code>Post</code>请求有请求体，<code>Get</code>请求没有请求体</li>
-<li><code>Post</code>请求传输数据大小无限制，<code>Get</code>请求有</li>
-<li><code>Post</code>请求数据不显示在地址栏，<code>Get</code>请求数据显示在地址栏</li>
-</ul>
-<p><strong>7.请描述一下<code>Sevlet</code>的生命周期方法。</strong></p>
-<ul>
-<li>生命周期方法有：<code>init()</code>,<code>service()</code>,<code>destroy()</code></li>
-<li><code>init</code>方法在<code>Servlet</code>对象被创建后只执行一次</li>
-<li><code>service()</code>方法会在每次请示时执行，可执行多次</li>
-<li><code>destroy()</code>方法在<code>Servlet</code>对象销毁之前只执行一次</li>
-</ul>
-<h3 id="综合题"><a href="#综合题" class="headerlink" title="综合题"></a><strong>综合题</strong></h3><p><strong>1.现有一个<code>JSP</code>页面<code>minus.jsp</code>，页面中有两个文本框用来接收两个数字，当点击“求差”按钮时，发送请求到服务器，由<code>MinusServlet</code>接收处理，<code>MinusServlet</code>将请求中的两个参数求差并转发到结果显示页面<code>result.jsp</code>显示两个数求差的结果。请完成<code>MinusServlet</code>的代码编写工作。</strong></p>
-<p><em><strong>注：下面是<code>minusjsp</code>页面在浏览器中的外观及页面代码</strong></em>                                                                                     </p>
-<p><em><strong>外观</strong></em></p>
-<center><img src="https://file.icve.com.cn/file_doc/142/123/2391EE4FBFF4EA2405670A80634F5306.png" width="800px"></center>         
-
-<p><em><strong><code>minus.jsp</code>页面代码</strong></em></p>
-<img src="https://file.icve.com.cn/file_doc/84/315/1524EF14A5A03B720A1B9D525050AB3F.png" width="800px">
-
-<p><em><strong>题目：</strong></em></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MinusServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">		<span class="comment">//可在此处以下开始编写代码</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>参考答案：</strong></em></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Integer</span> <span class="variable">num1</span> <span class="operator">=</span> Integer.parseInt(request.getParameter(<span class="string">&quot;num1&quot;</span>));</span><br><span class="line"><span class="type">Integer</span> <span class="variable">num2</span> <span class="operator">=</span> Integer.parseInt(request.getParameter(<span class="string">&quot;num2&quot;</span>));</span><br><span class="line"><span class="type">Integer</span> <span class="variable">result</span> <span class="operator">=</span> num1-num2;</span><br><span class="line">request.setAttribute(<span class="string">&quot;result&quot;</span>,result);</span><br><span class="line">request.getRequestDispatcher(<span class="string">&quot;/result.jsp&quot;</span>).forward(request,response);</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>2.现有一个数组<code>students</code>，数组中的元素都是<code>Student类型</code>的对象，将该集合放入<code>request</code>域：<code>request.setAttribute(“students”,students)</code>；有一个JSP页面：<code>list.jsp</code>，该页面要展示数组中所有学生的信息，需要用到EL表达式和<code>JSTL</code>标签库，请将<code>list.jsp</code>页面中的核心代码写出来。</strong></p>
-<p><em><strong>注：下图是<code>Student</code>类的结构</strong></em></p>
-<center><img src="https://file.icve.com.cn/file_doc/614/407/99865FA9041992F16CA1C56017CF4391.png"></center>
-
-<p><em><strong>页面最终在浏览器中显示效果参考如下：</strong></em></p>
-<center><img src="https://file.icve.com.cn/file_doc/483/907/78CE2EE59CB3B9CF2091FE221C0FB482.png" width="900px"></center>
-
-
-
-<p><em><strong>题目：</strong></em></p>
-<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">&lt;%@ page contentType=<span class="string">&quot;text/html;charset=UTF-8&quot;</span> language=<span class="string">&quot;java&quot;</span> %&gt;</span><br><span class="line">&lt;%@ taglib prefix=<span class="string">&quot;c&quot;</span> uri=<span class="string">&quot;http://java.sun.com/jsp/jstl/core&quot;</span> %&gt;</span><br><span class="line">&lt;html&gt; </span><br><span class="line">    &lt;head&gt;  </span><br><span class="line">    	&lt;title&gt;学生信息&lt;/title&gt; </span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">    	<span class="comment">//可在此处以下开始编写代码</span></span><br><span class="line">     &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>参考答案：</strong></em></p>
-<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">学生姓名：$&#123;student.stuName&#125;  年龄：$&#123;student.age&#125;  电话：$&#123;student.phone&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>3.现有一个JSP页面<code>add.jsp</code>，页面中有两个文本框用来接收两个数字，当点击“求和”按钮时，发送请求到服务器，由<code>AddServlet</code>接收处理，<code>AddServlet</code>将请求中的两个参数求和并转发到结果显示页面<code>result.jsp</code>显示两个数求和的结果。请完成<code>AddServlet</code>的代码编写工作。</strong></p>
-<p><em><strong>注：下面是<code>add.jsp</code>页面在浏览器中的外观及页面代码</strong></em></p>
-<p><em><strong>外观</strong></em></p>
-<center><img src="https://file.icve.com.cn/file_doc/568/375/8E05DD0E04238938A4B95FA4C5D5CD7E.png"></center>                     
-
-<p><em><strong><code>add.jsp</code>页面代码</strong></em></p>
-<center><img src="https://file.icve.com.cn/file_doc/508/335/7F153E6D8796F1EA5CB84A732F91CA0F.png" width="760px"></center>
-
-
-
-<p><em><strong>题目：</strong></em></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">AddServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">    	<span class="comment">//可在此处以下开始编写代码</span></span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>参考答案：</strong></em></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Integer</span> <span class="variable">num1</span> <span class="operator">=</span> Integer.parseInt(request.getParameter(<span class="string">&quot;num1&quot;</span>));</span><br><span class="line"><span class="type">Integer</span> <span class="variable">num2</span> <span class="operator">=</span> Integer.parseInt(request.getParameter(<span class="string">&quot;num2&quot;</span>));</span><br><span class="line"><span class="type">Integer</span> <span class="variable">result</span> <span class="operator">=</span> num1+num2;</span><br><span class="line">request.setAttribute(<span class="string">&quot;result&quot;</span>,result);</span><br><span class="line">request.getRequestDispatcher(<span class="string">&quot;/result.jsp&quot;</span>).forward(request,response);</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>4.现有一个<code>List</code>集合<code>users</code>，集合中的元素都是User类型的对象，将该集合放入<code>request</code>域：<code>request.setAttribute(“users”,users)；</code>有一个JSP页面：<code>list.jsp</code>，该页面要展示List集合中所有用户的信息，需要用到<code>EL</code>表达式和<code>JSTL</code>标签库，请将<code>list.jsp</code>页面中的核心代码写出来。</strong></p>
-<p><em><strong>注：下图是<code>User</code>类的结构</strong></em></p>
-<center><img src="https://file.icve.com.cn/file_doc/580/422/912698DEEDA83B1259E52BA89B568352.png" width="630px"></center>      
-
-<p><em><strong>页面最终在浏览器中显示效果参考如下：</strong></em></p>
-<center><img src="https://file.icve.com.cn/file_doc/159/156/27E271328D100E665A6CC10BEE5E9043.png"></center>      
-
-
-
-<p><em><strong>题目：</strong></em></p>
-<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">&lt;%@ page contentType=<span class="string">&quot;text/html;charset=UTF-8&quot;</span> language=<span class="string">&quot;java&quot;</span> %&gt;</span><br><span class="line">&lt;%@ taglib prefix=<span class="string">&quot;c&quot;</span> uri=<span class="string">&quot;http://java.sun.com/jsp/jstl/core&quot;</span> %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">    	&lt;title&gt;用户信息&lt;/title&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        <span class="comment">//可在此处以下开始编写代码</span></span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-<p><em><strong>参考答案：</strong></em></p>
-<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">&lt;c:/forEach <span class="keyword">var</span>=<span class="string">&quot;user&quot;</span> items=<span class="string">&quot;$&#123;users&#125;&quot;</span>&gt;</span><br><span class="line">	用户名：$&#123;user.username&#125; 年龄：$&#123;user.age&#125; 电话：$&#123;user.phone&#125;&lt;br/&gt;</span><br><span class="line">&lt;/c:forEach&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<center><b>- - Done. - -</b></center>
-]]></content>
-      <categories>
-        <category>JavaWeb</category>
-      </categories>
-      <tags>
-        <tag>期末复习</tag>
-        <tag>JavaWeb</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>网络工程师考试知识点_01</title>
     <url>https://kfufys.github.io/2024/11/23/Networking-Knowledge-Points-01/</url>
     <content><![CDATA[<h4 id="一、计算机存储与中断相关"><a href="#一、计算机存储与中断相关" class="headerlink" title="一、计算机存储与中断相关"></a><strong>一、计算机存储与中断相关</strong><span id="more"></span></h4><ol>
@@ -1179,6 +718,467 @@
       <tags>
         <tag>网络工程师</tag>
         <tag>考试知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaWeb期末复习题</title>
+    <url>https://kfufys.github.io/2024/12/18/JavaWeb-Final-Review-Questions/</url>
+    <content><![CDATA[<h3 id="选择题"><a href="#选择题" class="headerlink" title="选择题"></a><strong>选择题</strong></h3><p><strong>1.下面关于<code>Servlet</code>的描述，错误的是（B）</strong></p>
+<p>A. <code>Servlet</code>是位于<code>Web </code>服务器内部的服务器端的<code>Java</code>应用程序</p>
+<p>B. <code>Servlet</code>的运行方式和普通的<code>Java</code>应用程序是相同的</p>
+<p>C. <code>Servlet</code>可以生成动态的<code>Web</code>页面</p>
+<p>D. <code>Servlet</code>需要由包含支持<code>Servlet</code>的<code>Java</code>虚拟机<code>Web</code>服务器进行加载</p>
+<p><strong>2.在开发<code>Java Web</code>应用程序的时候，<code>HTTP</code>请求消息使用<code>Get</code>或<code>POST</code>方法以便在<code>WEB</code>上传输数据，下列关于<code>GET</code>和<code>POST </code>方法描述正确的是（A）</strong></p>
+<p>A. <code>POST</code>请求的数据在地址栏不可见</p>
+<p>B. <code>POST</code>请求对发送的数据的长度限制在<code>240——255</code>个字符</p>
+<p>C. <code>GET</code>请求提交数据更加安全</p>
+<p>D. <code>GET</code>请求提交的数据在理论上没有长度限制</p>
+<p><strong>3.下列选项哪个是正确的语法格式（A）</strong></p>
+<p>A. <code>&lt;%=&quot;YXQ&quot;%&gt;</code></p>
+<p>B. <code>&lt;%String name=&quot;YXQ&quot;%&gt;</code></p>
+<p>C.<code> &lt;%=&quot;您好;%&gt;</code></p>
+<p>D. <code>&lt;%=String name=&quot;您好&quot;%&gt;</code></p>
+<p><strong>4.以下哪个标记是用于在<code>JSP</code>中引用<code>Java</code>代码段的（A）</strong></p>
+<p>A. <code>&lt;%%&gt;</code></p>
+<p>B. <code>&lt;%!%&gt;</code></p>
+<p>C. <code>&lt;%=%&gt;</code></p>
+<p>D. <code>&lt;%@%&gt;</code></p>
+<p><strong>5.<code>JSP</code>文件的后缀为（A）</strong></p>
+<p>A. <code>.jsp</code></p>
+<p>B. <code>.xsl</code></p>
+<p>C. <code>.html</code></p>
+<p>D.<code> .css</code></p>
+<p><strong>6.以下哪个方法是获取请求转发器的（D）</strong></p>
+<p>A. <code>getAttrebute</code></p>
+<p>B. <code>getParameter</code></p>
+<p>C. <code>setAttribute</code></p>
+<p>D. <code>getRequestDispatcher</code></p>
+<p><strong>7.在<code>JSP</code>中如果要导入<code>java.io.*</code>包，应该使用(D)指令</strong></p>
+<p>A. <code>forward</code></p>
+<p>B.<code>taglib</code></p>
+<p>C. <code>include</code></p>
+<p>D. <code>page</code></p>
+<p><strong>8.以下哪个方法是用于实现<code>Servlet</code>的重定向的（D）</strong></p>
+<p>A. <code>getParameter</code></p>
+<p>B.<code> setAttribute</code></p>
+<p>C. <code>getAttrebute</code></p>
+<p>D. <code>sendRedirect</code></p>
+<p><strong>9.在<code>JDBC</code>中，下列（D）接口专用于执行<code>JDBC</code>中的预处理语句。</strong></p>
+<p>A. <code>CallableStatement</code></p>
+<p>B. <code>ProcedureStatement</code></p>
+<p>C.<code> Statement</code></p>
+<p>D. <code>PreparedStatement</code></p>
+<p><strong>10.<code>JSP</code>的编译指令标记通常是指（A）</strong></p>
+<p>A. <code>page</code>指令、<code>include</code>指令和<code>taglib</code>指令</p>
+<p>B. <code>page</code>指令、<code>include</code>指令和<code>plugin</code>指令</p>
+<p>C. <code>forward</code>指令、<code>include</code>指令和<code>taglib</code>指令</p>
+<p>D. <code>page</code>指令、<code>param</code>指令和<code>taglib</code>指令</p>
+<p><strong>11.<code>response</code>对象使用字符流向客户端响应文本时默认使用的编码是（B）</strong></p>
+<p>A. <code>GBK</code></p>
+<p>B. <code>ISO-8859-1</code></p>
+<p>C. <code>GB2312</code></p>
+<p>D. <code>UTF-8</code></p>
+<p><strong>12.当服务器上的第一个<code>JSP</code>页面被第一次请求执行时，服务器上的<code>JSP</code>引擎首先将<code>JSP</code>页面转译成一个（B）文件。</strong></p>
+<p>A. <code>HTML</code></p>
+<p>B. <code>Servlet</code></p>
+<p>C. <code>Java</code></p>
+<p>D. <code>JSP</code></p>
+<p><strong>13.下列<code>JS</code>语句，能实现单击按钮时弹出一个消息框的是（A）</strong></p>
+<p>A. <code>&lt;input type=&quot;button&quot; value=&quot;单击&quot; onClick=&quot;alert(‘确定’)&quot;/&gt;</code></p>
+<p>B. <code>&lt;button value=&quot;单击&quot; onChange=&quot;alert(‘确定’)&quot;&gt;&lt;/button&gt;</code></p>
+<p>C. <code>&lt;button value=&quot;单击&quot; onClick=&quot; alert(‘确定’)&quot;/&gt;&lt;/button&gt;</code></p>
+<p>D. <code>&lt;input type=&quot;button&quot; value=&quot;单击&quot; onChange=&quot;alert(‘确定’) &quot;/&gt;</code></p>
+<p><strong>14.可以利用<code>request</code>对象的哪个方法获取客户端的表单信息（B）</strong></p>
+<p>A. <code>request.writeParameter()</code></p>
+<p>B. <code>request.getParameter()</code></p>
+<p>C. <code>request.outParameter()</code></p>
+<p>D. <code>request.handlerParameter()</code></p>
+<p><strong>15.假定<code>login.getName() </code>返回类型为<code>java.lang.String</code> ，给定JSP代码: <code>Welcome &lt;%= login.getName() %&gt;</code>以下那个选项与此语句的功能相同?（B）</strong></p>
+<p>A. <code>Welocome &lt;% response.out.print(login.getName());%&gt;</code></p>
+<p>B. <code>Welocome &lt;% out.print(login.getName());%&gt;</code></p>
+<p>C. <code>Welocome &lt;% Writer.print(login.getName());%&gt;</code></p>
+<p>D. <code>Welocome &lt;% response.writer.print(login.getName());%&gt;</code></p>
+<p><strong>16.<code>JSP</code>页面经过编译之后，将创建一个</strong></p>
+<p>A. <code>exe</code>文件</p>
+<p>B. <code>application</code></p>
+<p>C. <code>applet</code></p>
+<p>D. <code>servlet</code></p>
+<p><strong>正确答案： D</strong></p>
+<p><strong>17.若想结束或关闭<code>HttpSession</code>对象，下列做法中错误的是</strong></p>
+<p>A. 关闭浏览器</p>
+<p>B. 调用<code>HttpSession</code>的<code>invalidate()</code>方法</p>
+<p>C. 调用<code>HttpSession</code>的<code>removeAttribute(String name)</code>方法</p>
+<p>D. 两次访问时间间隔大于定义的非活动时间间隔</p>
+<p><strong>正确答案： C</strong></p>
+<p><strong>18.<code>JDBC</code>中，常有这样的语句连接<code>MYSQL</code>数据库<code>Connection conn=DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/student&quot;,&quot;sa&quot;,&quot;123&quot;);</code>其中“<code>3306</code>”代表</strong></p>
+<p>A. 密码</p>
+<p>B. 端口号</p>
+<p>C. 用户名</p>
+<p>D. 所连接的数据库名</p>
+<p><strong>正确答案： B</strong></p>
+<p><strong>19.下面关于配置一个<code>WEB</code>应用的默认页面时，说法正确的是</strong></p>
+<p>A. 一个<code>Web</code>应用最多只能配置一个默认页面</p>
+<p>B. 一个<code>Web</code>应用最多只能配置三个默认页面</p>
+<p>C. 一个<code>Web</code>应用可以配置多个默认页面</p>
+<p>D. 一个<code>Web</code>应用最多只能配置两个默认页面</p>
+<p><strong>正确答案： C</strong></p>
+<p><strong>20.下列关于<code>JSTL</code>中条件标签说法错误的是</strong></p>
+<p>A. <code>&lt;c:if&gt;</code>标签用来进行条件判断</p>
+<p>B. <code>&lt;c:when&gt;</code>标签代表一个条件分支</p>
+<p>C. <code>&lt;c:if&gt;</code>标签可以实现形如<code>if ()&#123;…&#125; else &#123;…&#125;</code>的条件语句</p>
+<p>D. <code>&lt;c:choose&gt;</code>标签用于条件选择</p>
+<p><strong>正确答案： C</strong></p>
+<p><strong>21.下列有关<code>JSTL</code>标签库的描述，错误的是</strong></p>
+<p>A. 使用<code>JSTL</code>标签可以大大降低<code>JSP</code>页面的复杂度。</p>
+<p>B. &#96;JSTL标签库是由多个不同功能的标签库共同组成的。</p>
+<p>C. <code>JSTL标签库是由许多</code>Web&#96;应用厂商共同制定的。</p>
+<p>D. <code>JSTL</code>的核心标签库<code>core</code>，它包含了实现<code>Web</code>应用中通用操作的标签。</p>
+<p><strong>正确答案： C</strong></p>
+<p><strong>22.下列关于<code>CS</code>模式的缺点的描述不正确的是</strong></p>
+<p>A. 安全性差</p>
+<p>B. 重用性差</p>
+<p>C. 伸缩性差</p>
+<p>D. 移植性差</p>
+<p><strong>正确答案： A</strong></p>
+<p>23.下列选项中，关于<code>Cookie</code>中保存的数据，说法正确的是：</p>
+<p>A. 保存在服务器中</p>
+<p>B. 保存在客户端浏览器中</p>
+<p>C. 以上说法都不对</p>
+<p>D. 保存在数据库中</p>
+<p><strong>正确答案： B</strong></p>
+<p><strong>24.<code>JSTL</code> 中用于迭代集合的标签是哪个？</strong></p>
+<p>A. <code>&lt;c:if&gt;</code></p>
+<p>B. <code>&lt;c:forEach&gt;</code></p>
+<p>C. <code>&lt;c:choose&gt;</code></p>
+<p>D. <code>&lt;c:when&gt;</code></p>
+<p><strong>正确答案： B</strong></p>
+<p><strong>25.假设在<code>myServlet</code>应用中有一个<code>MyServlet</code>类，在<code>web.xml</code>文件中对其进行如下配置：</strong></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>myservlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>cn.hpde.servlet.MyServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>myservlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/welcome<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>则以下选项可以访问到MyServlet的是</strong></p>
+<p>A. <code>http://localhost:8080/myservlet/welcome</code></p>
+<p>B. <code>http://localhost:8080/MyServlet</code></p>
+<p>C. <code>http://localhost:8080/com/yxq/servlet/MyServlet</code></p>
+<p>D. <code>http://localhost:8080/myservlet</code></p>
+<p><strong>正确答案： A</strong></p>
+<p><strong>26.创建<code>JSP</code>应用程序时，配置文件<code>web.xml</code>在程序下的(    )目录中。</strong></p>
+<p>A. <code>servlet</code></p>
+<p>B. <code>WebRoot</code></p>
+<p>C. <code>admin</code></p>
+<p>D. <code>WEB-INF</code></p>
+<p><strong>正确答案： D</strong></p>
+<p><strong>27.<code>JDBC</code> 中，连接<code>MYSQL</code>数据库<code>Connection conn=DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/javademo&quot;,&quot;sa&quot;,&quot;system&quot;);</code>其中“<code>javademo</code>”代表</strong></p>
+<p>A. 端口号</p>
+<p>B. 用户名</p>
+<p>C. 密码</p>
+<p>D. 所连接的数据库名</p>
+<p><strong>正确答案： D</strong></p>
+<p><strong>28.<code>Servlet</code>文件的文件名后缀为</strong></p>
+<p>A. <code>.js</code></p>
+<p>B. <code>.xsl</code></p>
+<p>C. <code>.java</code></p>
+<p>D. <code>.html</code></p>
+<p><strong>正确答案： C</strong></p>
+<p><strong>29.下面选项中，可以实现浏览器重定向的状态码是</strong></p>
+<p>A. <code>100</code></p>
+<p>B. <code>200</code></p>
+<p>C. <code>302</code></p>
+<p>D. <code>304</code></p>
+<p><strong>正确答案： C</strong></p>
+<p><strong>30.修改<code>Tomcat</code>端口号的文件<code>server.xml</code>位于哪个目录中</strong></p>
+<p>A. <code>work</code></p>
+<p>B. <code>lib</code></p>
+<p>C. <code>bin</code></p>
+<p>D. <code>conf</code></p>
+<p><strong>正确答案： D</strong></p>
+<p><strong>31.在<code>JSP</code>中 <code>EL</code>表达式：<code>$&#123;&quot;2&quot;+&quot;4&quot;&#125;</code>将输出</strong></p>
+<p>A. <code>6</code></p>
+<p>B. 不会输出，因为表达式是错误的</p>
+<p>C. <code>2+4</code></p>
+<p>D. <code>24</code></p>
+<p><strong>正确答案： D</strong></p>
+<p><strong>32.编写过滤器时,通过重载<code>Filter</code>接口中的(   )方法完成实际的过滤动作。</strong></p>
+<p>A. <code>doFilter()</code></p>
+<p>B. <code>Filter()</code></p>
+<p>C. <code>DoFilter()</code></p>
+<p>D. <code>filter()</code></p>
+<p><strong>正确答案： A</strong></p>
+<p><strong>33.以下哪种注释可以在服务器和客户端都可见。</strong></p>
+<p>A. <code>page</code></p>
+<p>B. <code>JavaScript</code></p>
+<p>C. <code>JSP</code></p>
+<p>D. <code>HTML</code></p>
+<p><strong>正确答案： D</strong></p>
+<p><strong>34.在<code>JSP</code>中，只有一行代码：<code>&lt;%=&#39;A&#39;+&#39;B&#39;%&gt;</code>，运行将输出</strong></p>
+<p>A. <code>A+B</code></p>
+<p>B. <code>AB</code></p>
+<p>C. 错误信息，因为表达式是错误的</p>
+<p>D. <code>131</code></p>
+<p><strong>正确答案： D</strong></p>
+<p><strong>35.下面关于<code>Servlet</code>的生命周期方法说法正确的是</strong></p>
+<p>A. <code>destroy()</code>方法是用来销毁<code>Servlet</code>的，可被执行多次</p>
+<p>B. <code>service()</code>方法是<code>Servlet</code>容器调用用来响应一次请求，且只能被执行一次</p>
+<p>C.<code> init()</code>方法是<code>Servlet</code>的初始化方法，在<code>Servlet</code>容器将<code>Servlet</code>装载时执行，仅执行一次</p>
+<p>D. <code>Servlet</code>的程序运行方式和普通的<code>Java</code>应用程序是相同的</p>
+<p><strong>正确答案： C</strong></p>
+<p><strong>36.下面哪项可以准确地获取请求页面的一个名称为<code>name</code>的文本框的输入内容</strong></p>
+<p>A. <code>request.getParameterValues(name)</code></p>
+<p>B. <code>request.getParameter(“name”)</code></p>
+<p>C. <code>request.getParameter(name)</code></p>
+<p>D. <code>request.getParameterValues(“name”)</code></p>
+<p><strong>正确答案： B</strong></p>
+<h3 id="判断题"><a href="#判断题" class="headerlink" title="判断题"></a><strong>判断题</strong></h3><p><strong>1.转发的<code>forward()</code>方法，必须在响应提交给客户端之前被调用，否则将抛出<code>IllegalStateException</code>异常。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： A</strong></p>
+<p><strong>2.<code>EL</code>表达式如果没有指明在哪个域中进行查找，默认先从<code>pageContext</code>域中查找。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： A</strong></p>
+<p><strong>3.<code>JSP</code> 页面在第一次打开时速度较慢,因为要将<code>JSP</code>文件转换成<code>Servlet</code>文件。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： A</strong></p>
+<p><strong>4.当浏览器禁用<code>cookie</code>后，原来已实现的关于<code>session</code>的应用程序，不会受到影响依然可以运行。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： B</strong></p>
+<p><strong>5.<code>Servlet</code>容器启动时，会为每个<code>Web</code>应用创建唯一的<code>ServletContext</code>对象，该对象和<code>Web</code>应用具有相同的生命周期。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： A</strong></p>
+<p><strong>6.<code>FilterChain</code>中只有一个方法<code>doFilter</code>，该方法是将请求“放行”，直接访问目标资源。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： B</strong></p>
+<p><strong>7.<code>JSP</code>标签库可以实现代码重用，提高开发效率。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： A</strong></p>
+<p><strong>8.<code>Servlet</code>容器启动时，所有<code>Web</code>应用共同使用一个<code>ServletContext</code>对象。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： B</strong></p>
+<p>9.一次性验证码可以限制人们使用软件来暴力猜测密码，从而保证了用户信息的安全。</p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p>正确答案： A</p>
+<p><strong>10.客户端路径如果以”<code>/</code>“，则”<code>/</code>“不包含应用名称；而服务器端路径以”<code>/</code>“，则”<code>/</code>“包含应用名称。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： A</strong></p>
+<p><strong>11.在<code>Servlet</code>技术中，提供了两个用于保存会话数据的对象，分别是<code>Cookie</code>和<code>Session</code>。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： A</strong></p>
+<p><strong>12.服务器向客户端发送<code>Cookie</code>时，会在<code>HTTP</code>响应头字段中增加<code>Set-Cookie</code>响应头字段。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： A</strong></p>
+<p><strong>13.<code>EL</code>表达式要访问<code>JavaBean</code>对象的属性，则该属性必须要有<code>setter</code>方法。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： B</strong></p>
+<p><strong>14.<code>MVC</code>是一种设计模式，它将应用程序的输入、处理、流程按照<code>Model</code>、<code>View</code>、<code>Controller</code>的方式进行分离。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： A</strong></p>
+<p><strong>15.<code>Session</code>对象的<code>getLastAccessedTime()</code>方法返回的是发送请求的时间与<code>1970年1月1日00:00:00</code>之间时间差的秒表示形式。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： B</strong></p>
+<p><strong>16.<code>Response</code>对象的<code>getOutputStream()</code>和<code>getWriter()</code>方法可以同时发送响应消息体。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： B</strong></p>
+<p><strong>17.<code>Servlet</code>容器启动时，会为每个<code>Web</code>应用创建唯一的<code>ServletContext</code>对象，该对象和<code>Web</code>应用具有相同的生命周期。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： A</strong></p>
+<p><strong>18.一次会话过程中，只允许客户端与服务器进行一次请求与响应过程。</strong></p>
+<p> A.正确</p>
+<p> B.错误</p>
+<p><strong>正确答案： B</strong></p>
+<h3 id="填空题（客观）"><a href="#填空题（客观）" class="headerlink" title="填空题（客观）"></a><strong>填空题（客观）</strong></h3><p>1.<code>Tomcat</code>服务器的默认端口是**<code>8080</code>**</p>
+<p>2.<code>MVC</code>模式中,<code>M</code>代表**<code>Model（模型）</code><strong>,<code>V</code>代表</strong><code>View（视图）</code><strong>,<code>C</code>代表</strong><code>Controller（控制器）</code>**</p>
+<p>3.创建<code>Servlet</code>我们经常继承**<code>HttpServlet</code>**类,创建过滤器则要实现 **<code>Filter</code>**接口</p>
+<p>4.<code>EL</code>表达式的内置对象一共有<code>11</code>个，其中用来表示域范围的内置对象有<code>4</code>个，分别是**<code>pageScope</code><strong>、</strong><code>requestScop</code><strong>、</strong><code>sessionScop</code><strong>、</strong><code>applicationScope</code>**</p>
+<p>5.在<code>web</code>项目中使用一个<code>Servlet</code>时，需配置<code>web.xml</code>中的**<code>&lt;servlet&gt;</code><strong>、</strong><code>&lt;servlet-mapping&gt;</code><strong>、</strong><code>&lt;load-on-startup&gt;</code>**三个标签</p>
+<p>6.<code>JSP</code>的内置对象有<code>page</code>、<code>config</code> 、<code>out</code> 、<code>page</code>、**<code>request</code><strong>、</strong><code>response</code><strong>、</strong><code>session</code><strong>、</strong><code>application</code>**、<code>Context</code>、<code>exception</code></p>
+<p>7.<code>JavaWeb</code>三层架构指的是**<code>web层（视图层）</code><strong>、</strong><code>业务逻辑层</code><strong>、</strong><code>数据访问层（持久层）</code>**</p>
+<p>8.<code>JavaWeb</code>经历了三个时期**<code>JSP Model1</code><strong>、</strong><code>JSP Model1二代</code><strong>、</strong><code>JSP Model2</code>**</p>
+<blockquote>
+<p>传统<code>Servlet/Jsp</code>时期</p>
+<p>框架兴起时期</p>
+<p><code>Java EE</code>标准化和微服务时期</p>
+</blockquote>
+<p>9.在<code>JavaWeb</code>中，使用**<code>@WebServlet</code>**注解来声明一个<code>Servlet</code></p>
+<p>10.<code>Tomcat</code>服务器的默认端口**<code>8080</code><strong>，是可以通过修改<code>Tomcat</code>服务器安装目录中<code>conf</code>文件下的主配置文件</strong><code>server.xml</code>**来更改端口号</p>
+<p>11.在<code>JSP</code>中使用<code>EL</code>表达式的基本语法是**<code>$&#123;属性名&#125;\$&#123;&#125;</code>**</p>
+<p>12.<code>Servlet</code>中表示初始化的方法是**<code>init()</code><strong>,表示销毁的方法是</strong><code>destroy()</code>**</p>
+<p>13.<code>JavaWeb</code>中的域对象有**<code>pageContext</code><strong>、</strong><code>request</code><strong>、</strong><code>session</code><strong>、</strong><code>application</code>**</p>
+<h3 id="填空题（主观）"><a href="#填空题（主观）" class="headerlink" title="填空题（主观）"></a><strong>填空题（主观）</strong></h3><p><strong>1.以下程序是某个<code>Servlet</code>的<code>doGet</code>方法，其功能是向客户端发送<code>Cookie</code>。根据注释在空白处填上合适的语句，使程序实现相应的功能。</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(request,response)</span>&#123;</span><br><span class="line">    <span class="comment">//创建Cookie对象cookie，名字是“c”，值是字符串“hello”</span></span><br><span class="line">    <span class="type">Cookie</span> <span class="variable">cookie</span> <span class="operator">=</span> 题<span class="number">1</span></span><br><span class="line">    <span class="comment">//设置Cookie的最大活动时间是30分钟</span></span><br><span class="line">    Cookie.setMaxAge(<span class="number">30</span>*<span class="number">60</span>)</span><br><span class="line">    <span class="comment">//将Cookie发送给客户端浏览器</span></span><br><span class="line">    题<span class="number">2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>参考答案：</strong></em> </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">题<span class="number">1</span>：<span class="keyword">new</span> <span class="title class_">Cookie</span>(“c”,“hello”);</span><br><span class="line">题<span class="number">2</span>：response.addCookie(c);</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>2.以下程序是某个<code>Servlet</code>的<code>doPost</code>方法，其功能是从请求获取带中文的参数，并把参数的值存储到会话域中。根据注释在空白处填上合适的语句，使程序实现相应的功能。</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(request,response)</span>&#123;</span><br><span class="line">    <span class="comment">//设置请求编码为UTF-8</span></span><br><span class="line">    题<span class="number">1</span></span><br><span class="line">    <span class="comment">//从请求中获取带中文的参数msg</span></span><br><span class="line">    String msg= request.getParameter(“msg”)</span><br><span class="line">    <span class="comment">//将msg存储到会话域中</span></span><br><span class="line">    题<span class="number">2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>参考答案：</strong></em></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">题<span class="number">1</span>：request.setCharacterEncoding(<span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line">题<span class="number">2</span>：session.setAttribute(<span class="string">&quot;msg&quot;</span>,msg) ;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>3.下面的程序实现一个简单的登陆功能，只通过用户名判断是否登陆成功，登陆页面为<code>login.jsp</code>，处理登陆请求的<code>Servlet</code>名为<code>LoginServlet</code>。根据注释，在空白处填上合适的语句，使程序实现相应的功能。</strong></p>
+<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">&lt;%<span class="meta">@page</span> contentType=<span class="string">&quot;text/html;charset=utf-8&quot;</span>%&gt;</span><br><span class="line">&lt;form action=<span class="string">&quot;/web/LoginServlet&quot;</span> method=<span class="string">&quot;post&quot;</span>&gt;</span><br><span class="line">    用户名：&lt;input type=<span class="string">&quot;text&quot;</span> name=<span class="string">&quot;username&quot;</span>&gt;&lt;br&gt;</span><br><span class="line">    &lt;input type=<span class="string">&quot;submit&quot;</span> value=<span class="string">&quot;登陆&quot;</span>&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(request,response)</span>&#123;</span><br><span class="line">    <span class="comment">//从请求中获取用户名</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span>题<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="string">&quot;admin&quot;</span>.equals(username))&#123;</span><br><span class="line">        <span class="comment">//登陆成功，将用户名存入session域</span></span><br><span class="line">		题<span class="number">2</span></span><br><span class="line">        <span class="comment">//重定向到欢迎页面welcome.jsp</span></span><br><span class="line">		题<span class="number">3</span></span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//登陆失败，显示失败消息</span></span><br><span class="line">        response.getWriter.print(“登陆失败”);</span><br><span class="line">    &#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>参考答案：</strong></em></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">题<span class="number">1</span>：request.getParameter(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">题<span class="number">2</span>：session.setAttribute(“username”,username);</span><br><span class="line">题<span class="number">3</span>：response.sendRedirect(<span class="string">&quot;welcome.jsp&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>4.用过滤器<code>Filter</code>实现简单登陆校验，只有登陆用户才具备访问<code>index.jsp</code>页面的权限（用户已经登陆则在<code>session</code>存储有名称为“<code>user</code>”的登陆用户数据），否则将用户重定向到登陆页面<code>login.jsp</code>。根据注释在空白处填上合适的语句，使程序实现相应的功能。</strong> </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">doFilter</span><span class="params">(request, response, chain)</span>&#123;	</span><br><span class="line">    <span class="type">HttpSession</span> <span class="variable">session</span> <span class="operator">=</span> request.getSession();</span><br><span class="line">    <span class="comment">//从session中获取用户信息user</span></span><br><span class="line">    <span class="type">Object</span> <span class="variable">user</span> <span class="operator">=</span> 题<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span>(user!=<span class="literal">null</span>)&#123;</span><br><span class="line">    	<span class="comment">//用户已经登陆，放行请求</span></span><br><span class="line">    	题<span class="number">2</span></span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    	<span class="comment">//用户未登陆，重定向到登陆页面进行登陆</span></span><br><span class="line">    	题<span class="number">3</span></span><br><span class="line">    &#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>参考答案：</strong></em></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">题<span class="number">1</span>：session.getAttribute(<span class="string">&quot;user&quot;</span>);</span><br><span class="line">题<span class="number">2</span>：chain.doFilter(request, response);</span><br><span class="line">题<span class="number">3</span>：response.sendRedirect(<span class="string">&quot;/web/login.jsp&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>5.以下程序是某个<code>Servlet</code>的<code>doGet</code>方法，功能向客户端发送“欢迎光临”。根据注释在空白处填上合适的语句，使程序实现相应的功能。</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(request,response)</span>&#123;	</span><br><span class="line">    <span class="comment">//因响应内容有中文，设置响应编码解决中文决乱码问题	</span></span><br><span class="line">	题<span class="number">1</span></span><br><span class="line">    <span class="comment">//通过响应字符流向客户端发送“欢迎光临”	</span></span><br><span class="line">	题<span class="number">2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>  <em><strong>参考答案：</strong></em></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">题<span class="number">1</span>：  response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);</span><br><span class="line">题<span class="number">2</span>：  response.getWriter().write(<span class="string">&quot;欢迎光临&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a><strong>简答题</strong></h3><p><strong>1.简述<code>Javabean</code>规范都有哪些 。</strong> </p>
+<ul>
+<li>类必须有一个无参构造函数</li>
+<li>类的所有成员变量必须是私有的</li>
+<li>类必须提供<code>getter</code>和<code>setter</code>方法来访问属性</li>
+</ul>
+<p><strong>2.简述<code>JavaWeb</code>三层架构及各层的功能？</strong></p>
+<ul>
+<li><strong>表现层（<code>web</code>层）：</strong>负责处理用户的请求，并将请求转发给业务逻辑层。表现层通常由 <code>HTML</code>、<code>CSS</code> 和 <code>JavaScript</code> 组成</li>
+<li><strong>业务逻辑层：</strong>负责处理业务逻辑，并将结果返回给表现层。业务逻辑层通常由 <code>Java</code> 代码组成</li>
+<li><strong>数据访问层：</strong>负责访问数据库，并将数据返回给业务逻辑层。数据访问层通常由 <code>JDBC</code> 或 <code>ORM</code> 框架组成</li>
+</ul>
+<p><strong>3.如何设置请求体和响应体编码？</strong></p>
+<ul>
+<li><strong>请求体编码设置：</strong><code>request.setCharacterEncoding(&quot;UTF-8&quot;)</code></li>
+<li><strong>响应体编码设置：</strong><code>response.setContentType(&quot;text/html;charset=UTF-8&quot;)</code>或者<code>response.setCharacterEncoding(&quot;UTF-8&quot;)</code></li>
+</ul>
+<p><strong>4.简述<code>ServletContext</code>的特点。</strong></p>
+<ul>
+<li>一个<code>Web</code>应用只有一个该类型对象</li>
+<li>随服务器的启动而创建，随服务器的关闭而销毁</li>
+<li>是域对象，可以在动态资源之间共享数据</li>
+</ul>
+<p><strong>5.简述重定向和请求转发的区别。</strong></p>
+<ul>
+<li>请求转发是一次请求，而重定向是两次请求</li>
+<li>请求转发后浏览器地址栏不变化，而重定向会有变化，因为重定向是两次请求</li>
+<li>请求转发的目标只能是本应用中的资源（包括<code>WEB-INF</code>中的内容），重定向的目标可以是其他应用</li>
+<li>请求转发要么都是<code>GET</code>，要么都是<code>POST</code>，重定向的第二个请求一定是<code>GET</code></li>
+</ul>
+<p><strong>6.简述<code>POST</code>请求和<code>GET</code>请求有什么不同？</strong></p>
+<ul>
+<li><code>Post</code>请求有请求体，<code>Get</code>请求没有请求体</li>
+<li><code>Post</code>请求传输数据大小无限制，<code>Get</code>请求有</li>
+<li><code>Post</code>请求数据不显示在地址栏，<code>Get</code>请求数据显示在地址栏</li>
+</ul>
+<p><strong>7.请描述一下<code>Sevlet</code>的生命周期方法。</strong></p>
+<ul>
+<li>生命周期方法有：<code>init()</code>,<code>service()</code>,<code>destroy()</code></li>
+<li><code>init</code>方法在<code>Servlet</code>对象被创建后只执行一次</li>
+<li><code>service()</code>方法会在每次请示时执行，可执行多次</li>
+<li><code>destroy()</code>方法在<code>Servlet</code>对象销毁之前只执行一次</li>
+</ul>
+<h3 id="综合题"><a href="#综合题" class="headerlink" title="综合题"></a><strong>综合题</strong></h3><p><strong>1.现有一个<code>JSP</code>页面<code>minus.jsp</code>，页面中有两个文本框用来接收两个数字，当点击“求差”按钮时，发送请求到服务器，由<code>MinusServlet</code>接收处理，<code>MinusServlet</code>将请求中的两个参数求差并转发到结果显示页面<code>result.jsp</code>显示两个数求差的结果。请完成<code>MinusServlet</code>的代码编写工作。</strong></p>
+<p><em><strong>注：下面是<code>minusjsp</code>页面在浏览器中的外观及页面代码</strong></em>                                                                                     </p>
+<p><em><strong>外观</strong></em></p>
+<center><img src="https://file.icve.com.cn/file_doc/142/123/2391EE4FBFF4EA2405670A80634F5306.png" width="800px"></center>         
+
+<p><em><strong><code>minus.jsp</code>页面代码</strong></em></p>
+<img src="https://file.icve.com.cn/file_doc/84/315/1524EF14A5A03B720A1B9D525050AB3F.png" width="800px">
+
+<p><em><strong>题目：</strong></em></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MinusServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">		<span class="comment">//可在此处以下开始编写代码</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>参考答案：</strong></em></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Integer</span> <span class="variable">num1</span> <span class="operator">=</span> Integer.parseInt(request.getParameter(<span class="string">&quot;num1&quot;</span>));</span><br><span class="line"><span class="type">Integer</span> <span class="variable">num2</span> <span class="operator">=</span> Integer.parseInt(request.getParameter(<span class="string">&quot;num2&quot;</span>));</span><br><span class="line"><span class="type">Integer</span> <span class="variable">result</span> <span class="operator">=</span> num1-num2;</span><br><span class="line">request.setAttribute(<span class="string">&quot;result&quot;</span>,result);</span><br><span class="line">request.getRequestDispatcher(<span class="string">&quot;/result.jsp&quot;</span>).forward(request,response);</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>2.现有一个数组<code>students</code>，数组中的元素都是<code>Student类型</code>的对象，将该集合放入<code>request</code>域：<code>request.setAttribute(“students”,students)</code>；有一个JSP页面：<code>list.jsp</code>，该页面要展示数组中所有学生的信息，需要用到EL表达式和<code>JSTL</code>标签库，请将<code>list.jsp</code>页面中的核心代码写出来。</strong></p>
+<p><em><strong>注：下图是<code>Student</code>类的结构</strong></em></p>
+<center><img src="https://file.icve.com.cn/file_doc/614/407/99865FA9041992F16CA1C56017CF4391.png"></center>
+
+<p><em><strong>页面最终在浏览器中显示效果参考如下：</strong></em></p>
+<center><img src="https://file.icve.com.cn/file_doc/483/907/78CE2EE59CB3B9CF2091FE221C0FB482.png" width="900px"></center>
+
+
+
+<p><em><strong>题目：</strong></em></p>
+<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">&lt;%@ page contentType=<span class="string">&quot;text/html;charset=UTF-8&quot;</span> language=<span class="string">&quot;java&quot;</span> %&gt;</span><br><span class="line">&lt;%@ taglib prefix=<span class="string">&quot;c&quot;</span> uri=<span class="string">&quot;http://java.sun.com/jsp/jstl/core&quot;</span> %&gt;</span><br><span class="line">&lt;html&gt; </span><br><span class="line">    &lt;head&gt;  </span><br><span class="line">    	&lt;title&gt;学生信息&lt;/title&gt; </span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">    	<span class="comment">//可在此处以下开始编写代码</span></span><br><span class="line">     &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>参考答案：</strong></em></p>
+<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">学生姓名：$&#123;student.stuName&#125;  年龄：$&#123;student.age&#125;  电话：$&#123;student.phone&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>3.现有一个JSP页面<code>add.jsp</code>，页面中有两个文本框用来接收两个数字，当点击“求和”按钮时，发送请求到服务器，由<code>AddServlet</code>接收处理，<code>AddServlet</code>将请求中的两个参数求和并转发到结果显示页面<code>result.jsp</code>显示两个数求和的结果。请完成<code>AddServlet</code>的代码编写工作。</strong></p>
+<p><em><strong>注：下面是<code>add.jsp</code>页面在浏览器中的外观及页面代码</strong></em></p>
+<p><em><strong>外观</strong></em></p>
+<center><img src="https://file.icve.com.cn/file_doc/568/375/8E05DD0E04238938A4B95FA4C5D5CD7E.png"></center>                     
+
+<p><em><strong><code>add.jsp</code>页面代码</strong></em></p>
+<center><img src="https://file.icve.com.cn/file_doc/508/335/7F153E6D8796F1EA5CB84A732F91CA0F.png" width="760px"></center>
+
+
+
+<p><em><strong>题目：</strong></em></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">AddServlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">    	<span class="comment">//可在此处以下开始编写代码</span></span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>参考答案：</strong></em></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Integer</span> <span class="variable">num1</span> <span class="operator">=</span> Integer.parseInt(request.getParameter(<span class="string">&quot;num1&quot;</span>));</span><br><span class="line"><span class="type">Integer</span> <span class="variable">num2</span> <span class="operator">=</span> Integer.parseInt(request.getParameter(<span class="string">&quot;num2&quot;</span>));</span><br><span class="line"><span class="type">Integer</span> <span class="variable">result</span> <span class="operator">=</span> num1+num2;</span><br><span class="line">request.setAttribute(<span class="string">&quot;result&quot;</span>,result);</span><br><span class="line">request.getRequestDispatcher(<span class="string">&quot;/result.jsp&quot;</span>).forward(request,response);</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>4.现有一个<code>List</code>集合<code>users</code>，集合中的元素都是User类型的对象，将该集合放入<code>request</code>域：<code>request.setAttribute(“users”,users)；</code>有一个JSP页面：<code>list.jsp</code>，该页面要展示List集合中所有用户的信息，需要用到<code>EL</code>表达式和<code>JSTL</code>标签库，请将<code>list.jsp</code>页面中的核心代码写出来。</strong></p>
+<p><em><strong>注：下图是<code>User</code>类的结构</strong></em></p>
+<center><img src="https://file.icve.com.cn/file_doc/580/422/912698DEEDA83B1259E52BA89B568352.png" width="630px"></center>      
+
+<p><em><strong>页面最终在浏览器中显示效果参考如下：</strong></em></p>
+<center><img src="https://file.icve.com.cn/file_doc/159/156/27E271328D100E665A6CC10BEE5E9043.png"></center>      
+
+
+
+<p><em><strong>题目：</strong></em></p>
+<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">&lt;%@ page contentType=<span class="string">&quot;text/html;charset=UTF-8&quot;</span> language=<span class="string">&quot;java&quot;</span> %&gt;</span><br><span class="line">&lt;%@ taglib prefix=<span class="string">&quot;c&quot;</span> uri=<span class="string">&quot;http://java.sun.com/jsp/jstl/core&quot;</span> %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">    	&lt;title&gt;用户信息&lt;/title&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        <span class="comment">//可在此处以下开始编写代码</span></span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>参考答案：</strong></em></p>
+<figure class="highlight jsp"><table><tr><td class="code"><pre><span class="line">&lt;c:/forEach <span class="keyword">var</span>=<span class="string">&quot;user&quot;</span> items=<span class="string">&quot;$&#123;users&#125;&quot;</span>&gt;</span><br><span class="line">	用户名：$&#123;user.username&#125; 年龄：$&#123;user.age&#125; 电话：$&#123;user.phone&#125;&lt;br/&gt;</span><br><span class="line">&lt;/c:forEach&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<center><b>- - Done. - -</b></center>
+]]></content>
+      <categories>
+        <category>JavaWeb</category>
+      </categories>
+      <tags>
+        <tag>期末复习</tag>
+        <tag>JavaWeb</tag>
       </tags>
   </entry>
   <entry>

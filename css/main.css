@@ -1466,7 +1466,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ff86a2;
+    background: #fffff5;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3140,7 +3140,7 @@ header.header {
   }
 }
 body {
-  background: url("https://bpic.588ku.com/back_our/20210816/bg/5c6f570357894.png");
+  background: url("img/125.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
