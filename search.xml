@@ -407,17 +407,7 @@
 <li>各个节点（如 <code>A</code>、<code>B</code> 等）通过箭头连接，并且可以添加条件判断（如 <code>|是|</code>、<code>|否|</code>）。</li>
 </ul>
 <p><strong>示例代码</strong>：（在支持 Mermaid 的环境中）</p>
-<pre class="mermaid">graph LR
-    classDef startend fill:#F5EBFF,stroke:#BE8FED,stroke-width:2px;
-    classDef process fill:#E5F6FF,stroke:#73A6FF,stroke-width:2px;
-    classDef decision fill:#FFF6CC,stroke:#FFBC52,stroke-width:2px;
-    
-    A([开始]):::startend --> B{是否需要帮助?}:::decision
-    B -->|是| C(寻求帮助):::process
-    B -->|否| D(自行解决):::process
-    C --> E(问题解决):::process
-    D --> E
-    E --> F([结束]):::startend</pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;graph LR</span><br><span class="line">    classDef startend fill:#F5EBFF,stroke:#BE8FED,stroke-width:2px;</span><br><span class="line">    classDef process fill:#E5F6FF,stroke:#73A6FF,stroke-width:2px;</span><br><span class="line">    classDef decision fill:#FFF6CC,stroke:#FFBC52,stroke-width:2px;</span><br><span class="line">    </span><br><span class="line">    A([开始]):::startend --&gt; B&#123;是否需要帮助?&#125;:::decision</span><br><span class="line">    B --&gt;|是| C(寻求帮助):::process</span><br><span class="line">    B --&gt;|否| D(自行解决):::process</span><br><span class="line">    C --&gt; E(问题解决):::process</span><br><span class="line">    D --&gt; E</span><br><span class="line">    E --&gt; F([结束]):::startend&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
 
 <p> <strong>渲染效果</strong>：</p>
 <img src="https://kfufys.github.io/posts/c079e252/4-3.png" alt="Markdown_flow chart" width="1200">
@@ -428,7 +418,25 @@
 <li><code>-&gt;&gt;</code> 表示实线箭头（主动消息），<code>--&gt;&gt;</code> 表示虚线箭头（返回消息）。</li>
 </ul>
 <p><strong>示例代码</strong>：（在支持 Mermaid 的环境中）</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">pre</span> <span class="attr">class</span>=<span class="string">&quot;mermaid&quot;</span>&gt;</span></span>sequenceDiagram</span><br><span class="line"><span class="code">    participant User</span></span><br><span class="line"><span class="code">    participant System</span></span><br><span class="line"><span class="code">    User-&gt;&gt;System: 发起请求</span></span><br><span class="line"><span class="code">    System--&gt;&gt;User: 请求接收确认</span></span><br><span class="line"><span class="code">    System-&gt;&gt;System: 处理请求</span></span><br><span class="line"><span class="code">    System--&gt;&gt;User: 返回处理结果&lt;/pre&gt;</span></span><br><span class="line"><span class="code"> </span></span><br><span class="line"><span class="code">&lt;img src=&quot;./Markdown教程/4-4.png&quot; alt=&quot;Markdown_sequence diagram&quot; width=&quot;1200&quot;&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="section">#### 4.5 绘制甘特图 </span></span><br><span class="line"></span><br><span class="line"><span class="strong">**代码解释**</span>：</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="code">`title`</span>：设置甘特图的标题。</span><br><span class="line"><span class="bullet">-</span> <span class="code">`dateFormat`</span>：指定日期的格式。</span><br><span class="line"><span class="bullet">-</span> <span class="code">`section`</span>：划分不同的项目阶段，每个任务通过任务名、任务标识（如 <span class="code">`a1`</span>）、开始日期和持续时间来定义。</span><br><span class="line"></span><br><span class="line"><span class="strong">**示例代码**</span>：（在支持 Mermaid 的环境中）</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">pre</span> <span class="attr">class</span>=<span class="string">&quot;mermaid&quot;</span>&gt;</span></span>gantt</span><br><span class="line"><span class="code">    title 项目进度甘特图</span></span><br><span class="line"><span class="code">    dateFormat  YYYY-MM-DD</span></span><br><span class="line"><span class="code">    section 项目阶段</span></span><br><span class="line"><span class="code">    需求分析           :a1, 2024-01-01, 30d</span></span><br><span class="line"><span class="code">    设计阶段           :after a1, 20d</span></span><br><span class="line"><span class="code">    开发阶段           :after a2, 60d</span></span><br><span class="line"><span class="code">    测试阶段           :after a3, 20d</span></span><br><span class="line"><span class="code">    上线发布           :after a4, 1d&lt;/pre&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"> <span class="strong">**渲染效果**</span>：</span><br><span class="line"> </span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./Markdown教程/4-5.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Markdown_Gantt chart&quot;</span> <span class="attr">width</span>=<span class="string">&quot;1200&quot;</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="section">#### 4.6 内嵌Html</span></span><br><span class="line"></span><br><span class="line">Markdown 允许直接嵌入 HTML 标签，在 Markdown 文件中编写 HTML 代码时，Markdown 解析器会将 HTML 代码原样保留并按照 HTML 的规则进行渲染。不过要注意，不同的 Markdown 解析器对 HTML 的支持可能会有细微差异。</span><br><span class="line"></span><br><span class="line"><span class="strong">**示例代码**</span>：</span><br><span class="line"></span><br><span class="line">使用 HTML 的 <span class="language-xml"><span class="tag">&lt;<span class="name">a</span>&gt;</span></span> 标签结合 CSS 样式可以创建链接按钮。</span><br><span class="line"></span><br><span class="line"><span class="code">```html</span></span><br><span class="line"><span class="code">&lt;a href=&quot;https://kfufys.github.io&quot; style=&quot;display: inline-block; background-color: #007BFF; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;&quot;&gt;访问示例网站&lt;/a&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;sequenceDiagram</span><br><span class="line">    participant User</span><br><span class="line">    participant System</span><br><span class="line">    User-&gt;&gt;System: 发起请求</span><br><span class="line">    System--&gt;&gt;User: 请求接收确认</span><br><span class="line">    System-&gt;&gt;System: 处理请求</span><br><span class="line">    System--&gt;&gt;User: 返回处理结果&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
+<img src="https://kfufys.github.io/posts/c079e252/4-4.png" alt="Markdown_sequence diagram" width="1200">
+
+<h4 id="4-5-绘制甘特图"><a href="#4-5-绘制甘特图" class="headerlink" title="4.5 绘制甘特图"></a>4.5 绘制甘特图</h4><p><strong>代码解释</strong>：</p>
+<ul>
+<li><code>title</code>：设置甘特图的标题。</li>
+<li><code>dateFormat</code>：指定日期的格式。</li>
+<li><code>section</code>：划分不同的项目阶段，每个任务通过任务名、任务标识（如 <code>a1</code>）、开始日期和持续时间来定义。</li>
+</ul>
+<p><strong>示例代码</strong>：（在支持 Mermaid 的环境中）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;gantt</span><br><span class="line">    title 项目进度甘特图</span><br><span class="line">    dateFormat  YYYY-MM-DD</span><br><span class="line">    section 项目阶段</span><br><span class="line">    需求分析           :a1, 2024-01-01, 30d</span><br><span class="line">    设计阶段           :after a1, 20d</span><br><span class="line">    开发阶段           :after a2, 60d</span><br><span class="line">    测试阶段           :after a3, 20d</span><br><span class="line">    上线发布           :after a4, 1d&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/4-5.png" alt="Markdown_Gantt chart" width="1200">
+
+<h4 id="4-6-内嵌Html"><a href="#4-6-内嵌Html" class="headerlink" title="4.6 内嵌Html"></a>4.6 内嵌Html</h4><p>Markdown 允许直接嵌入 HTML 标签，在 Markdown 文件中编写 HTML 代码时，Markdown 解析器会将 HTML 代码原样保留并按照 HTML 的规则进行渲染。不过要注意，不同的 Markdown 解析器对 HTML 的支持可能会有细微差异。</p>
+<p><strong>示例代码</strong>：</p>
+<p>使用 HTML 的 <a> 标签结合 CSS 样式可以创建链接按钮。</a></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://kfufys.github.io&quot;</span> <span class="attr">style</span>=<span class="string">&quot;display: inline-block; background-color: #007BFF; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;&quot;</span>&gt;</span>访问示例网站<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p> <strong>渲染效果</strong>：</p>
 <img src="https://kfufys.github.io/posts/c079e252/4-6.png" alt="Markdown_Embedded Html" width="1200">
@@ -1586,40 +1594,6 @@
       </tags>
   </entry>
   <entry>
-    <title>About</title>
-    <url>https://kfufys.github.io/posts/7477.html</url>
-    <content><![CDATA[<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><hr>
-<ul>
-<li><p>我是<strong>窦长友</strong>，一名摄影爱好者，编程小渣渣~~</p>
-</li>
-<li><p>目前就读于<strong>开封大学</strong>….</p>
-</li>
-</ul>
-<h3 id="我的爱好"><a href="#我的爱好" class="headerlink" title="我的爱好"></a>我的爱好</h3><hr>
-<p>热衷于研究所有与计算机相关的事物，包括：</p>
-<ul>
-<li><p><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。 </p>
-</li>
-<li><p><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。 </p>
-</li>
-<li><p><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</p>
-</li>
-<li><p><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</p>
-</li>
-</ul>
-<h3 id="我的白日梦"><a href="#我的白日梦" class="headerlink" title="我的白日梦"></a>我的白日梦</h3><hr>
-<p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
-<p>要是大家有什么好的建议，欢迎告知呀！</p>
-]]></content>
-      <categories>
-        <category>About</category>
-      </categories>
-      <tags>
-        <tag>about</tag>
-        <tag>关于我</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>终极 Nginx 配置指南（超详细）</title>
     <url>https://kfufys.github.io/posts/59687.html</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p>对于自己上线项目的前端来说，nginx也是必须要了解和熟悉的，查了很多的nginx文章，看着写的都很详细，但是却没有了整体的概念。这里就重新梳理一遍，也理清思路。</p>
@@ -1859,6 +1833,40 @@
       <tags>
         <tag>website</tag>
         <tag>log</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About</title>
+    <url>https://kfufys.github.io/posts/7477.html</url>
+    <content><![CDATA[<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><hr>
+<ul>
+<li><p>我是<strong>窦长友</strong>，一名摄影爱好者，编程小渣渣~~</p>
+</li>
+<li><p>目前就读于<strong>开封大学</strong>….</p>
+</li>
+</ul>
+<h3 id="我的爱好"><a href="#我的爱好" class="headerlink" title="我的爱好"></a>我的爱好</h3><hr>
+<p>热衷于研究所有与计算机相关的事物，包括：</p>
+<ul>
+<li><p><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。 </p>
+</li>
+<li><p><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。 </p>
+</li>
+<li><p><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</p>
+</li>
+<li><p><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</p>
+</li>
+</ul>
+<h3 id="我的白日梦"><a href="#我的白日梦" class="headerlink" title="我的白日梦"></a>我的白日梦</h3><hr>
+<p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
+<p>要是大家有什么好的建议，欢迎告知呀！</p>
+]]></content>
+      <categories>
+        <category>About</category>
+      </categories>
+      <tags>
+        <tag>about</tag>
+        <tag>关于我</tag>
       </tags>
   </entry>
   <entry>
