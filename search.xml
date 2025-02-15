@@ -209,515 +209,6 @@
       </tags>
   </entry>
   <entry>
-    <title>网络工程师考试知识点_01</title>
-    <url>https://kfufys.github.io/posts/65522.html</url>
-    <content><![CDATA[<h4 id="一、计算机存储与中断相关"><a href="#一、计算机存储与中断相关" class="headerlink" title="一、计算机存储与中断相关"></a><strong>一、计算机存储与中断相关</strong><span id="more"></span></h4><ol>
-<li>常用的虚拟存储器由<strong>主存 - 辅存</strong>两级存储器组成。</li>
-<li>中断向量可提供<strong>中断程序的入口地址</strong>。</li>
-<li>DMA工作方式在<strong>主存与外设</strong>之间建立直接的数据通信。</li>
-</ol>
-<h4 id="二、项目管理与网络图表相关"><a href="#二、项目管理与网络图表相关" class="headerlink" title="二、项目管理与网络图表相关"></a><strong>二、项目管理与网络图表相关</strong></h4><ol>
-<li>PERT不能清晰描述各个任务之间的<strong>并行情况</strong>，甘特图不能清晰描述各个问题之间的<strong>依赖关系</strong>。</li>
-</ol>
-<h4 id="三、网络设备与协议相关"><a href="#三、网络设备与协议相关" class="headerlink" title="三、网络设备与协议相关"></a><strong>三、网络设备与协议相关</strong></h4><ol>
-<li>路由器出厂时，默认的串口封装协议是HDLC。</li>
-<li>报文摘要算法生成报文摘要的目的是防止发送的报文被篡改。</li>
-<li>PGP是支持电子<strong>邮件加密</strong>的协议。</li>
-<li>根域名服务器采用的<strong>迭代</strong>查询。</li>
-<li>中介域名服务器采用的是<strong>递归</strong>查询。</li>
-<li><strong>AH隧道模式：</strong>使用AH与IP报头来封装IP数据包并对整个数据包进行签名以获得完整性并进行身份验证。</li>
-<li><strong>ESP隧道模式：</strong>采用ESP与IP报头以及ESP身份验证尾端来封装IP数据包。</li>
-<li><strong>L2TP数据包封装格式：</strong>IP - UDP - L2TP - PPP。</li>
-<li>SNMP是在<strong>UDP</strong>协议之上的异步&#x2F;请求响应。</li>
-</ol>
-<h4 id="四、网络传输相关"><a href="#四、网络传输相关" class="headerlink" title="四、网络传输相关"></a><strong>四、网络传输相关</strong></h4><ol>
-<li><p>支持1000m以上传输距离的是<strong>1000 BASE-Lx</strong>。</p>
-</li>
-<li><p><strong>nslookup参数：</strong></p>
-<ul>
-<li><p><strong>Set all ：</strong>列出当前设置的默认选项。</p>
-</li>
-<li><p><strong>Set type &#x3D; mx ：</strong>查询本地域的邮件交换器信息。</p>
-</li>
-<li><p><strong>Server NAME ：</strong>由当前默认服务器切换到制定的名字服务器NAME。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>DNS服务器主要资源记录：</strong></p>
-<ul>
-<li><p><strong>A：</strong>域名到IP地址的映射。</p>
-</li>
-<li><p><strong>PTR：</strong>IP地址到域名的映射。</p>
-</li>
-<li><p><strong>MX：</strong>邮件服务器及优先级。</p>
-</li>
-<li><p><strong>CNAME：</strong>别名。</p>
-</li>
-<li><p><strong>NS：</strong>区域的授权服务器。</p>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="五、结构化布线系统相关"><a href="#五、结构化布线系统相关" class="headerlink" title="五、结构化布线系统相关"></a><strong>五、结构化布线系统相关</strong></h4><ol>
-<li><strong>工作区子系统：</strong>由终端设备到信息插座的整个区域，用于将用户终端设备连接到布线系统，主要包括信息插座、跳线、适配器。</li>
-<li><strong>水平布线子系统：</strong>是结构化综合布线系统中连接用户工作区与布线系统主干的子系统。</li>
-<li><strong>管理子系统：</strong>是结构化布线系统中对布线电缆进行端接及配线管理的子系统，通常设置在楼层的接线间内。</li>
-<li><strong>干线子系统：</strong>是结构化综合布线系统中连接各管理间、设备间的子系统，又称垂直子系统。</li>
-<li><strong>设备间子系统：</strong>主要是用来安放网络关键设备。并非每一个综合布线都有设备间子系统。</li>
-<li><strong>建筑群子系统：</strong>是结构化综合布线系统中由连接楼群之间的通信传输介质及各种支持设备组成的子系统。</li>
-</ol>
-<h4 id="六、xDSL相关"><a href="#六、xDSL相关" class="headerlink" title="六、xDSL相关"></a><strong>六、xDSL相关</strong></h4><ol>
-<li><strong>HDSL：</strong>中断距离可达3 - 5KM、传输速率2.048Mbits&#x2F;s。</li>
-<li><strong>ADSL：</strong>是一种非对称的DSL技术。</li>
-<li><strong>VDSL：</strong>是一种非对称的技术，也是DSL中传输速度最快的技术。</li>
-<li><strong>SDSL：</strong>单线路数字用户技术是对称的。</li>
-<li><strong>RADSL：</strong>速率自适应数字用户线技术，是采用非对称技术。</li>
-</ol>
-<h4 id="七、私有地址相关"><a href="#七、私有地址相关" class="headerlink" title="七、私有地址相关"></a><strong>七、私有地址相关</strong></h4><ol>
-<li><strong>A类：</strong>10.0.0.0 - 10.255.255.255。</li>
-<li><strong>B类：</strong>172.16.0.0 - 172.31.255.255。</li>
-<li><strong>C类：</strong>192.168.0.0 - 192.168.255.255。</li>
-</ol>
-<h4 id="八、阻止路由环路相关"><a href="#八、阻止路由环路相关" class="headerlink" title="八、阻止路由环路相关"></a><strong>八、阻止路由环路相关</strong></h4><ol>
-<li><p><strong>最大跳计数（Maximum Hop Count）</strong></p>
-<ul>
-<li><strong>原理：</strong><ul>
-<li>在许多路由协议（如 RIP）中，会为数据包经过的路由器数量设置一个最大值。例如，RIP 协议默认的最大跳数是 15。当一个数据包经过的路由器数量达到这个最大值时，该数据包将被丢弃。这是因为随着跳数的不断增加，网络环路的可能性也在增大。如果没有最大跳数的限制，数据包可能会在网络中无限循环，消耗网络资源。</li>
-</ul>
-</li>
-<li><strong>示例：</strong><ul>
-<li>假设有一个简单的网络拓扑，包括路由器 A、B、C、D 和 E，它们之间通过链路相连。如果一个数据包从路由器 A 出发，经过 B、C、D、E，然后又回到 A，并且这个过程不断循环，没有最大跳数限制，这个数据包就会一直在这个环路中传递。但如果设置了最大跳数为 5，当数据包经过 5 个路由器后，就会被丢弃，从而防止了无限循环。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>水平分割（Split Horizon）</strong></p>
-<ul>
-<li><strong>原理：</strong><ul>
-<li>水平分割规则规定，从一个接口学到的路由信息不会再从这个接口发送出去。这样可以避免路由器将从某个邻居学到的路由信息又发送回给这个邻居，从而防止产生路由环路。它基于一个简单的逻辑，即如果路由器已经从某个方向学到了到达某个网络的路由，那么它不应该再向这个方向通告这个路由，因为这个方向的邻居很可能就是通过它才学到这个路由的。</li>
-</ul>
-</li>
-<li><strong>示例：</strong><ul>
-<li>假设路由器 R1 和 R2 是邻居，它们之间通过接口 E0 相连。R1 通过接口 E0 向 R2 通告了到达网络 N 的路由。根据水平分割规则，R2 不会再通过接口 E0 向 R1 通告到达网络 N 的路由。这样就避免了 R1 和 R2 之间可能产生的路由环路。例如，在一个帧中继网络中，多个路由器通过虚电路相连，水平分割可以有效地防止路由信息在相邻路由器之间的来回传递，避免环路的形成。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>路由毒化（Route Poisoning）</strong></p>
-<ul>
-<li><strong>原理：</strong><ul>
-<li>当一个路由不可达时，路由器会将该路由标记为不可达（通常将其度量值设置为无穷大），并且向相邻路由器通告这个不可达信息。相邻路由器收到这个中毒的路由信息后，会更新自己的路由表，并且也会向它的相邻路由器通告这个不可达信息。这样，网络中的所有路由器都会快速地知道这个路由已经不可达，从而避免将数据包转发到这个不可达的路径上，防止了路由环路的产生。</li>
-</ul>
-</li>
-<li><strong>示例：</strong><ul>
-<li>比如在一个网络中有路由器 A、B、C。路由器 A 发现它到网络 X 的链路出现故障，它就会将到网络 X 的路由标记为不可达（如将跳数设置为 16，在 RIP 协议中表示不可达），并向路由器 B 通告这个中毒的路由。路由器 B 收到后更新自己的路由表，然后也向路由器 C 通告这个中毒的路由。这样，整个网络就会很快知道网络 X 不可达，避免了因为链路故障而可能导致的数据包在 A - B - C - A 这样的环路中转发。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>保持关闭（Hold - down）</strong></p>
-<ul>
-<li><p><strong>原理</strong></p>
-<p>：</p>
-<ul>
-<li>当路由器从邻居收到一个路由不可达的消息后，它会进入一个保持关闭状态。在这个状态下，路由器会忽略来自同一个邻居的关于这条路由的任何更新信息（通常会持续一段时间，如 180 秒）。这是因为在网络不稳定的情况下，可能会出现错误的路由更新信息。例如，当一条链路刚刚出现故障时，可能会因为网络的收敛过程而产生一些错误的更新，导致路由器错误地更新路由表，进而产生路由环路。保持关闭机制可以让路由器在一段时间内不被这些可能错误的更新所干扰，等待网络稳定后再更新路由表。</li>
-</ul>
-</li>
-<li><p><strong>示例：</strong></p>
-<ul>
-<li>假设路由器 R1 收到来自邻居 R2 的消息，说到达网络 Y 的路由不可达。R1 进入保持关闭状态。如果在这个状态期间，R2 又发送了一个关于网络 Y 的更新（可能是由于网络波动，这个更新是错误的），R1 会忽略这个更新。只有当保持关闭时间结束后，R1 才会考虑来自 R2 的关于网络 Y 的更新，这样就避免了在网络不稳定时，因为错误的更新而导致的路由环路。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="九、链路状态通告相关"><a href="#九、链路状态通告相关" class="headerlink" title="九、链路状态通告相关"></a><strong>九、链路状态通告相关</strong></h4><ol>
-<li><strong>链路状态通告（LSA - Link - State Advertisement）的定义与作用：</strong><ul>
-<li>链路状态通告是链路状态路由协议（如 OSPF、IS - IS）中的关键元素。它是一种包含了路由器自身以及其直连链路信息的数据包。这些信息包括接口的 IP 地址、子网掩码、链路的开销（cost）、链路的连接状态（是 up 还是 down）等。路由器通过在网络中泛洪 LSA，使得网络中的其他路由器能够了解整个网络的拓扑结构。</li>
-<li>例如，在一个企业网络中，使用 OSPF 协议。路由器 A 通过生成 LSA 来通告自己的接口连接到网络 192.168.1.0&#x2F;24，开销为 10，并且接口状态是 up。这个 LSA 会在网络中传播，让其他路由器知道如何到达这个网络以及相关的链路成本。</li>
-</ul>
-</li>
-<li><strong>LSA 的内容构成：</strong><ul>
-<li><strong>路由器标识符（Router ID）：</strong><ul>
-<li>这是一个用于唯一标识路由器的编号。在 OSPF 中，通常是路由器上最大的活动接口的 IP 地址，或者可以手动配置。它用于区分不同的路由器发送的 LSA。例如，在一个有多个路由器的网络中，路由器 A 的 Router ID 为 1.1.1.1，路由器 B 的 Router ID 为 2.2.2.2，这样其他路由器就可以根据 Router ID 来识别 LSA 的来源。</li>
-</ul>
-</li>
-<li><strong>链路类型（Link Type）：</strong><ul>
-<li>描述了路由器与其他设备之间链路的性质。常见的链路类型包括点到点链路（如两个路由器之间通过串行接口直接相连）、广播链路（如连接到以太网段）和非广播多路访问（NBMA，例如帧中继网络）。不同的链路类型在 LSA 中会有不同的表示方式，并且会影响路由计算和数据包转发。例如，在广播链路中，路由器需要选举出一个指定路由器（DR）和备份指定路由器（BDR）来管理 LSA 的泛洪过程。</li>
-</ul>
-</li>
-<li><strong>链路开销（Link Cost）：</strong><ul>
-<li>代表了通过该链路传输数据的代价。开销的计算可以基于链路的带宽、延迟等因素。例如，一条 100Mbps 的以太网链路的开销可能比一条 10Mbps 的以太网链路的开销小。开销是用于计算最短路径的重要参数，路由器会根据收到的 LSA 中的开销信息来选择到达目标网络的最优路径。</li>
-</ul>
-</li>
-<li><strong>邻居信息（Neighbor Information）：</strong><ul>
-<li>列出了与该路由器直接相连的其他路由器的标识符（如 Router ID）。这有助于构建完整的网络拓扑图。例如，路由器 A 在 LSA 中列出它的邻居是路由器 B 和路由器 C，它们的 Router ID 分别为 2.2.2.2 和 3.3.3.3，这样其他路由器收到这个 LSA 后，就可以知道路由器 A 与哪些路由器相连。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>LSA 的泛洪过程（Flooding）：</strong><ul>
-<li>当路由器生成一个新的 LSA 或者收到一个更新的 LSA 时，它会将这个 LSA 发送给除了接收该 LSA 的接口之外的所有接口。这个过程称为泛洪。例如，在一个由多个路由器组成的网状网络中，路由器 A 生成了一个新的 LSA，它会将这个 LSA 发送给与它相连的路由器 B、C 和 D。路由器 B 收到这个 LSA 后，会检查自己的链路状态数据库（LSDB），如果这个 LSA 是新的或者比自己已有的 LSA 更新（根据序列号、校验和等信息判断），它会将这个 LSA 存储到自己的 LSDB 中，然后再向它的其他邻居（除了发送这个 LSA 给它的路由器 A）泛洪这个 LSA。这个过程会一直持续，直到网络中的所有路由器都收到并存储了这个最新的 LSA。</li>
-<li>在这个过程中，为了防止 LSA 在网络中无限循环，每个 LSA 都有一个序列号。路由器通过比较序列号来判断 LSA 的新旧。当一个 LSA 的序列号达到最大值后，会重新从初始值开始，但同时会有其他机制（如老化时间）来确保 LSA 的准确性和及时性。</li>
-</ul>
-</li>
-<li><strong>LSA 的老化与更新：</strong><ul>
-<li><strong>老化（Aging）：</strong><ul>
-<li>LSA 有一个老化时间，通常在 OSPF 中是 30 分钟。从 LSA 产生开始计算时间，当老化时间到期后，这个 LSA 会被标记为无效。这是为了确保网络拓扑信息的及时性。如果网络拓扑发生变化，旧的 LSA 不应该一直存在于网络中影响路由决策。例如，一个路由器的接口连接的网络被重新划分了子网，旧的 LSA 中关于这个网络的信息就需要更新，老化机制可以促使这种更新。</li>
-</ul>
-</li>
-<li><strong>更新（Update）：</strong><ul>
-<li>当路由器的链路状态发生变化时（如接口的状态从 up 变为 down，或者链路的开销发生变化），它会生成一个新的 LSA 来更新网络中的其他路由器。这个新的 LSA 会包含更新后的链路信息，并且会按照泛洪过程在网络中传播。例如，路由器 A 和路由器 B 之间的链路带宽从 10Mbps 提升到 100Mbps，路由器 A 会更新关于这条链路的 LSA，将链路开销等信息更新后，在网络中泛洪这个新的 LSA，让其他路由器知道网络拓扑的这个变化。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="十、VTP、STP及ACL相关"><a href="#十、VTP、STP及ACL相关" class="headerlink" title="十、VTP、STP及ACL相关"></a><strong>十、VTP、STP及ACL相关</strong></h4><ol>
-<li><p><strong>访问控制列表的分类：</strong></p>
-<ul>
-<li><strong>标准访问控制列表：</strong>主要基于源 IP 地址进行过滤，通常使用的编号范围是 1 - 99 以及 1300 - 1999（不同的 IOS 版本可能略有差异）。它的功能相对较为基础，只能对数据包的源 IP 地址进行匹配判断，进而决定是否允许该数据包通过。</li>
-<li><strong>扩展访问控制列表：</strong>功能更强大，可以基于源 IP 地址、目的 IP 地址、协议类型、端口号等多种条件来进行过滤，编号范围一般是 100 - 199 以及 2000 - 2699。通过综合考虑多个因素，能实现更精细、更复杂的访问控制策略。</li>
-</ul>
-</li>
-<li><p><strong>具体 ACL 语句分析：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">（1）Access-list 10 deny host 10.37.168.137 与 access-list 10 deny 10.37.168.137 等价，拒绝任何来自 10.23.168.137 的分组。</span><br><span class="line">（2）Any 与 0.0.0.0 255.255.255.255 等价，表示整个 IP 地址范围。</span><br><span class="line">（3）Access-list 10 deny tcp any (源地址) host 172.16.30.2 (目的地址) eq 23/telnet ：禁止任何主机访问 10.37.16.30.2 的 telnet 服务。</span><br><span class="line">（4）Access-list 110 permit tcp host 192.168.177.2 host 172.22.89.26 eq www/80 ，允许源 IP 地址为 192.168.177.2 的主机，通过 TCP 协议访问目的 IP 地址为 172.22.89.26 的主机的 80 端口。</span><br><span class="line">（5）Access-list 110 deny tcp any host 172.22.89.26 eq 80 ，只允许指定的 192.168.177.2 访问该主机的 80 端口。</span><br><span class="line">（6）Access-list 110 permit ip any any ，放行其他所有流量。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>接口应用 ACL 规则：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Interface S0</span><br><span class="line">Ip access-group 110 out</span><br><span class="line">允许 192.168.177.2 以 http 方式访问主机 172.22.89.26，但是拒绝其他主机的数据流访问 172.22.89.26 的 web 服务（80 端口）。</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h4 id="十一、NAT相关："><a href="#十一、NAT相关：" class="headerlink" title="十一、NAT相关："></a><strong>十一、NAT相关：</strong></h4><ol>
-<li><p><strong>NAT（网络地址转换）分类：</strong></p>
-<ul>
-<li><p><strong>静态 NAT：</strong>内部本地地址和内部全局地址进行一对一的永久映射。</p>
-<ul>
-<li><p>示例配置（以 Cisco 路由器为例）：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 定义内部本地地址和内部全局地址的映射关系：</span><br><span class="line">Router(config)#ip nat inside source static 192.168.1.2 209.165.200.22</span><br><span class="line"># 指定内部接口和外部接口：</span><br><span class="line">Router(config)#interface FastEthernet0/0</span><br><span class="line">Router(config - if)#ip nat inside</span><br><span class="line">Router(config - if)#interface Serial0/0/0</span><br><span class="line">Router(config - if)#ip nat outside</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p><strong>动态 NAT：</strong>从一个内部全局地址池中动态地分配地址给内部本地地址（临时映射关系）。</p>
-<ul>
-<li><p>示例配置（以 Cisco 路由器为例）：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 进入全局配置模式：</span><br><span class="line">Router#conf t</span><br><span class="line"># 定义内部全局地址池。假设地址池名为 POOL1，包含的地址范围是 209.165.200.20 - 209.165.200.30：</span><br><span class="line">Router(config)#ip nat pool POOL1 209.165.200.20 209.165.200.30 netmask 255.255.255.0</span><br><span class="line"># 定义访问控制列表（ACL）来指定哪些内部本地地址可以进行 NAT 转换。假设允许 192.168.1.0/24 网段的主机进行 NAT 转换：</span><br><span class="line">Router(config)#access - list 1 permit 192.168.1.0 0.0.0.255</span><br><span class="line"># 将 ACL 与地址池关联，实现动态 NAT：</span><br><span class="line">Router(config)#ip nat inside source list 1 pool POOL1</span><br><span class="line"># 指定内部接口和外部接口（同静态 NAT）：</span><br><span class="line">Router(config)#interface FastEthernet0/0</span><br><span class="line">Router(config - if)#ip nat inside</span><br><span class="line">Router(config - if)#interface Serial0/0/0</span><br><span class="line">Router(config - if)#ip nat outside</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>配置 PAT（NAT 重载，也叫端口地址转换）：</strong></p>
-<ul>
-<li><p><strong>原理</strong>：PAT 通过使用不同的端口号来区分不同的内部本地地址的连接，使得多个内部本地地址可以共享一个或少数几个内部全局地址。这样可以更有效地利用 IP 地址资源，是一种多对一的地址转换方式。</p>
-</li>
-<li><p>示例配置（以 Cisco 路由器为例）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 进入全局配置模式：</span><br><span class="line">Router(config)#conf t</span><br><span class="line"># 定义访问控制列表（ACL）来指定哪些内部本地地址可以进行 NAT 转换。假设允许 192.168.1.0/24 网段的主机进行 NAT 转换：</span><br><span class="line">Router(config)#access - list 1 permit 192.168.1.0 0.0.0.255</span><br><span class="line"># 将 ACL 与外部接口关联，实现 PAT。假设外部接口是 Serial0/0/0：</span><br><span class="line">Router(config)#ip nat inside source list 1 interface Serial0/0/0 overload</span><br><span class="line"># 指定内部接口和外部接口（同静态 NAT）：</span><br><span class="line">Router(config)#interface FastEthernet0/0</span><br><span class="line">Router(config - if)#ip nat inside</span><br><span class="line">Router(config - if)#interface Serial0/0/0</span><br><span class="line">Router(config - if)#ip nat outside</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ol>
-<h4 id="十二、无线网络相关："><a href="#十二、无线网络相关：" class="headerlink" title="十二、无线网络相关："></a><strong>十二、无线网络相关：</strong></h4><ol>
-<li><p><strong>IEEE802.11标准：</strong></p>
-<ul>
-<li><p>IEEE802.11a：54Mbits&#x2F;s 、5GHz标准。</p>
-</li>
-<li><p>IEEE802.11b：对802.11的改进，以支持5.5.Mbits&#x2F;s和11Mbits&#x2F;s。</p>
-</li>
-<li><p>IEEE892.11g：54Mbits&#x2F;s、2.4GHz标准（向后兼容802.11b）。</p>
-</li>
-<li><p>IEEE892.11n：使用MIMO(多入多出天线)提高吞吐量。</p>
-</li>
-<li><p>Wi-fi联盟认可了802.11i标准，并称之为wap2。</p>
-</li>
-<li><p>Wap2使用了aes-ccmp机密技术。</p>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="十三、IPv6相关："><a href="#十三、IPv6相关：" class="headerlink" title="十三、IPv6相关："></a><strong>十三、IPv6相关：</strong></h4><ol>
-<li><p><strong>特殊IPv6地址：</strong></p>
-<ul>
-<li><p>0:0:0:0:0:0:0:0(::) 相当于IPv4地址0.0.0.0，通常在使用有状态DHCP配置时，用作主机的源地址。</p>
-</li>
-<li><p>0:0:0:0:0:0:0:1(::1) 相当于IPv4地址127.0.0.1。</p>
-</li>
-<li><p>0:0:0:0:0:0:192.168.100.1 在同时支持IPv4和IPv6的网络中，从IPv4地址转换而来的IPv6地址通常这样写。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>IPv6地址类型：</strong></p>
-<ul>
-<li><p>2000::&#x2F;3全局单播地址。</p>
-</li>
-<li><p>FC00::&#x2F;7唯一的本地单播地址范围。</p>
-</li>
-<li><p>FE80::&#x2F;10链路本地单播地址范围。</p>
-</li>
-<li><p>FF00::&#x2F;8组播地址范围 。</p>
-</li>
-<li><p>2001:0DB8::&#x2F;32保留举例和编写文档时使用。</p>
-</li>
-<li><p>3FFF:FFFF::&#x2F;32 保留举例和编写文档时使用。</p>
-</li>
-<li><p>2002::&#x2F;16 保留供6to4隧道技术使用。</p>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="十四、软件设计相关："><a href="#十四、软件设计相关：" class="headerlink" title="十四、软件设计相关："></a><strong>十四、软件设计相关：</strong></h4><p>在软件设计阶段，划分模块的原则是一个模块的控制范围应该在作用范围之内。</p>
-<ol>
-<li><strong>模块的控制范围和作用范围的定义：</strong><ul>
-<li><strong>控制范围：</strong>是指模块本身及其所有下属模块（如果有）的集合。</li>
-<li><strong>作用范围：</strong>是指受该模块内一个判定影响的所有其他模块的集合。</li>
-</ul>
-</li>
-<li><strong>为什么控制范围应该在作用范围之内：</strong><ul>
-<li><strong>可维护性：</strong>模块控制范围在作用范围内，当需对软件进行维护或修改时，开发人员可以很容易地确定修改一个模块可能会影响到哪些其他模块。</li>
-<li><strong>可读性和理解性</strong>：这种原则有助于提高软件设计的可读性和理解性。</li>
-<li><strong>降低耦合度</strong>：使得模块之间的耦合度降低。</li>
-</ul>
-</li>
-</ol>
-<h4 id="十五、软件项目活动图相关："><a href="#十五、软件项目活动图相关：" class="headerlink" title="十五、软件项目活动图相关："></a><strong>十五、软件项目活动图相关：</strong></h4><p>软件项目活动图中，松弛时间表示在不影响整个工作的前提下，完成该项任务有多少机动余地，松弛时间为0的任务构成了完成整个工程的关键任务，即所需时间最长的任务。</p>
-<h4 id="十六、其他网络概念相关"><a href="#十六、其他网络概念相关" class="headerlink" title="十六、其他网络概念相关"></a><strong>十六、其他网络概念相关</strong></h4><ol>
-<li><p><strong>VPI与CIR：</strong>VPI用来表示不同虚拟路径，CIR用来约束数据速率。</p>
-</li>
-<li><p><strong>代理ARP：</strong>是指由离目标主机最近的交换机假装目标主机回答源主机的ARP请求。</p>
-</li>
-<li><p><strong>距离矢量路由协议：</strong>每一个路由器接收的路由信息来源于它的邻居路由器。</p>
-</li>
-<li><p><strong>BGP4协议：</strong></p>
-<ul>
-<li><p>打开（open）报文建立两个路由之间的邻居关系。</p>
-</li>
-<li><p>更新（UPDATE）报文给出了新的路由信息。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>OSPF协议：</strong></p>
-<ul>
-<li><p>链路状态算法用于计算路由表。</p>
-</li>
-<li><p>一个路由器的链路状态只涉及与相邻路由器的连通状态。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>组播地址：</strong></p>
-<ul>
-<li><p>224.0.0.0 - 224.0.0.255为预留的组播地址（永久组地址），地址224.0.0.0保留不做分配，其他地址供路由协议用。</p>
-</li>
-<li><p>224.0.1.0 - 224.0.1.255是公用组播地址，可以用于Internet。</p>
-</li>
-<li><p>224.0.2.0 - 238.255.255.255可为用户可用的组播地址（临时组播地址），全网范围内有效。</p>
-</li>
-<li><p>239.0.0.0 - 239.255.255.255为本地管理组地址，仅在特定的本地范围内有效。</p>
-</li>
-<li><p>组播服务发送信息只需要发送一个分组，组内所有成员即可全部收到。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>数字签名验证：</strong>用户B收到用户A带数字签名的消息M，为了验证M的真实性，首先需要从CA获取用户的数字证书，并利用CA的公钥验证证书的真伪，然后利用A的公钥验证M的真实性。</p>
-</li>
-<li><p><strong>SDES算法</strong>：是一种共享秘钥算法。</p>
-</li>
-<li><p><strong>IPSEC安全关联：</strong>IPSEC中安全关联（security Associations）三元组是&lt;安全参数索引SPI，目标IP地址，安全协议&gt;。</p>
-</li>
-<li><p><strong>SNMP协议：</strong>当代理收到一个GET请求时，如果有一个值不可或者不能提供，则返回该实例的下一个值。</p>
-</li>
-<li><p><strong>SNMP网络管理：</strong>一个代理可以由多个管理站管理。</p>
-</li>
-<li><p><strong>自动专用IP地址：</strong></p>
-<ul>
-<li><p>用途是DHCP服务器的专用地址。</p>
-</li>
-<li><p>自动专用IP地址的范围是169.254.0.0 - 169.254.255.255。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>以太网结构填充字段：</strong>作用是保持最小帧长。</p>
-</li>
-<li><p><strong>物联网无线传感网络技术</strong>：是802.15.3ZigBee微微网。</p>
-</li>
-<li><p><strong>4G标准：</strong>LTE、LTE-Advanced、WIMAXII、Wireless MAN、UMB等属于4G标准。</p>
-</li>
-<li><p><strong>扩展频谱通信：</strong>主要思想是将信号散步到更宽的带宽上以减少阻塞和干扰的机会。</p>
-</li>
-<li><p><strong>CLOSE-WAIT状态：</strong>等待从本地用户发来的连接中断请求。</p>
-</li>
-<li><p><strong>BGP报文：</strong></p>
-<ul>
-<li><p>Open报文：用于建立邻居关系。</p>
-</li>
-<li><p>Update报文：用于发送新的路由信息。</p>
-</li>
-<li><p>Keepalive报文：用于对Open的应答和周期性地确认邻居关系。</p>
-</li>
-<li><p>Notification报文：用于报告监测到的错误。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>Vsftp服务：</strong>可以通过 service Vsftpd start&#x2F;down&#x2F;restart 三个命令来启动、关闭和重启，主配置文件名为 vsftpd.conf 。</p>
-</li>
-<li><p><strong>SNMP团体名设置：</strong></p>
-<ul>
-<li><p>R2(config)#snmp-server community publicr  ro ：设置snmp-server的只读团体名为publicr。</p>
-</li>
-<li><p>R2(config)# snmp-server community publicw  rw ：设置snmp-server的读写团体名为publicw。</p>
-</li>
-<li><p>Nat(inside) 1 0 或者 nat(inside) 1.0.0.0 0.0.0.0 表示内网的所有主机均可以访问外网。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>华为静态路由与默认路由配置：</strong></p>
-<ol>
-<li><p><strong>静态路由配置：</strong></p>
-<ul>
-<li><p><strong>配置基本静态路由：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system - view  # 进入系统视图，这是配置大多数华为设备命令的前提操作，后续配置都在此视图下进行</span><br><span class="line">[Huawei]ip route - static 192.168.2.0 255.255.255.0 192.168.1.2  # 配置一条静态路由</span><br><span class="line"># “ip route-static”是配置静态路由的命令关键字</span><br><span class="line"># “192.168.2.0”是目的网络地址，表示要去往的目标网络段</span><br><span class="line"># “255.255.255.0”是对应的子网掩码，用于精确界定目的网络的范围</span><br><span class="line"># “192.168.1.2”是下一跳地址，也就是数据包从本路由器发出去后，下一个接收该数据包的设备接口地址</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>配置负载分担的静态路由（多条链路到同一目的网络）：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Huawei]ip route - static 10.0.0.0 255.0.0.0 172.16.1.2  # 配置第一条到达目的网络10.0.0.0/8的静态路由</span><br><span class="line"># 这条命令含义与上面基本静态路由类似，这里目的网络是10.0.0.0，子网掩码255.0.0.0，下一跳为172.16.1.2，用于和下一条命令共同实现负载分担</span><br><span class="line">[Huawei]ip route - static 10.0.0.0 255.0.0.0 172.16.2.2  # 配置第二条到达目的网络10.0.0.0/8的静态路由</span><br><span class="line"># 同样是去往10.0.0.0/8网络，但下一跳变为172.16.2.2，两条链路可同时分担去往该目的网络的流量，实现负载分担功能</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>静态路由的优先级调整：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Huawei]ip route - static 10.0.0.0 255.0.0.0 172.16.1.2 preference 70  # 调整特定静态路由的优先级</span><br><span class="line"># “preference”关键字用于设置优先级，此处将之前配置的去往10.0.0.0/8网络且下一跳为172.16.1.2的静态路由优先级设置为70</span><br><span class="line"># 优先级数值越大，表示该路由相对其他到达相同目的网络的路由被优先选用的程度越低，默认静态路由优先级是60</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p><strong>默认路由配置：</strong></p>
-<ul>
-<li><p><strong>配置基本默认路由：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Huawei]ip route - static 0.0.0.0 0.0.0.0 192.168.1.1  # 配置默认路由</span><br><span class="line"># “0.0.0.0 0.0.0.0”表示所有网络（目的网络地址和子网掩码都为全0），意味着如果数据包的目的地址在本地路由表中没有更精确匹配的路由条目时，都将按照这条默认路由转发</span><br><span class="line"># “192.168.1.1”是下一跳地址，即数据包将被转发到这个地址对应的设备接口</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>配置默认路由的应用场景示例（完整配置）：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system - view  # 进入系统视图</span><br><span class="line">[Huawei]interface GigabitEthernet0/0/1  # 进入路由器的一个接口（假设是连接内部网络的接口）视图，GigabitEthernet0/0/1是接口名称，可根据实际设备接口情况改变</span><br><span class="line">[Huawei - GigabitEthernet0/0/1]ip address 192.168.1.254 255.255.255.0  # 配置该接口的IP地址为192.168.1.254，子网掩码为255.255.255.0，使其能与内部网络通信</span><br><span class="line">[Huawei - GigabitEthernet0/0/1]quit  # 退出接口视图，回到系统视图</span><br><span class="line">[Huawei]interface GigabitEthernet0/0/2  # 进入另一个接口（假设是连接外部网络，比如ISP的接口）视图</span><br><span class="line">[Huawei - GigabitEthernet0/0/2]ip address 202.100.1.2 255.255.255.252  # 配置该接口的IP地址为202.100.1.2，子网掩码为255.255.255.252，使其能与外部网络通信</span><br><span class="line">[Huawei - GigabitEthernet0/0/2]quit  # 退出接口视图，回到系统视图</span><br><span class="line">[Huawei]ip route - static 0.0.0.0 0.0.0.0 202.100.1.1  # 配置默认路由，下一跳地址为202.100.1.1，这样内部网络的数据可以通过这个接口转发出去访问互联网等外部网络</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p><strong>运算器：</strong>主要完成算术运算、逻辑运算和移位操作，主要部件有算术逻辑单元（ALU）、累加器（ACC）、标志寄存器、寄存器组、多路转换器、数据总线等。</p>
-</li>
-<li><p><strong>控制器：</strong>主要实现指令的读入、寄存、译码和执行过程有序地发出控制信号。控制器主要由指令寄存器、程序计数器、指令译码器、状态&#x2F;条件寄存器、时序产生器、微操作信号发生器组成。</p>
-</li>
-<li><p><strong>地址映射方式：</strong>有：全相联方式、直接方式和组相联方式。</p>
-</li>
-<li><p><strong>专利保护期限：</strong>根据我国《专利法》规定，发明专利的保护期限为20年，实用型和外观设计专利为10年。</p>
-</li>
-<li><p><strong>交换机与路由器连接：</strong>交换机与路由器用直通电缆连接。</p>
-</li>
-<li><p><strong>默认静态路由配置：</strong>例如： Router(config)#ip route 0.0.0.0 0.0.0.0 [exit-interface | ip-address ] 。</p>
-</li>
-<li><p><strong>cache与内存转换：</strong>cache与内存之间的转换是由硬件完成的。</p>
-</li>
-<li><p><strong>相联存储器：</strong>按内容方式访问。</p>
-</li>
-<li><p><strong>E1、E2、E3、T1载波数据速率：</strong></p>
-<ul>
-<li><p>E1载波的数据速率为2.048Mbit&#x2F;s。</p>
-</li>
-<li><p>E2由4个E1组成。</p>
-</li>
-<li><p>E3由4个E2组成。</p>
-</li>
-<li><p>T1载波的数据速率为1.544Mbit&#x2F;s。</p>
-</li>
-</ul>
-</li>
-<li><p>**<code>route print</code><strong>与</strong><code>netstat –r</code>**功能是一样的。</p>
-</li>
-<li><p>在Linux中，DNS服务器的配置文件为<code>/etc/resolv.conf</code>。</p>
-</li>
-<li><p>MD5算法属于<strong>摘要算法</strong>。</p>
-</li>
-<li><p><strong>集成windows身份验证</strong>是安全级别最高的验证方法。</p>
-</li>
-<li><p><strong>网络可用性</strong>是指用户可利用网络时间得百分比。</p>
-</li>
-<li><p><strong>网络管理功能：</strong>网络管理的5大功能为：配置管理、故障管理、计费管理、性能管理和安全管理。</p>
-</li>
-<li><p><strong>BGP传输协议及端口：</strong>BGP将TCP用作其传输协议，运行在TCP的179端口上（目的端口）。</p>
-</li>
-<li><p><strong>BGP邻居关系维持：</strong>BGP使用keepalive周期性的发送存活消息（60s）维持邻居关系。</p>
-</li>
-<li><p><strong>IPsec传输模式选择：</strong>IPsec传输模式和隧道模式，实现端到端的传输应选择传输模式。</p>
-</li>
-<li><p><strong>IPv6地址类型：</strong>IPv6地址分为3中类型，它们是单播地址、组播地址、任意播地址。</p>
-</li>
-<li><p><strong>802.11 MAC层算法：</strong>802.11在MAC层采用了CSMA&#x2F;CA算法。</p>
-</li>
-<li><p><strong>Ieee802.11n数据速率：</strong>Ieee802.11n提供的最高数据速率可达到300Mbit&#x2F;s。</p>
-</li>
-<li><p><strong>IEEE802.16标准：</strong>IEEE802.16工作组提出的无线接入系统空中接口标准是WiMAX。</p>
-</li>
-<li><p><strong>安全电子邮件协议：</strong>安全电子邮件使用PGP协议。</p>
-</li>
-<li><p>Linux服务器中DHCP服务器程序对应的配置文件的名称为<code>dhcp.conf</code>，该文件的默认目录是<code>/etc</code>。</p>
-</li>
-<li><p><strong>CSMA&#x2F;CD（载波监听多路访问 &#x2F; 碰撞检测）算法：</strong></p>
-<ul>
-<li><strong>基本原理：</strong><ul>
-<li>CSMA&#x2F;CD 主要用于解决在共享介质的以太网中，多个节点同时访问介质时可能产生的冲突问题。其工作过程主要包括载波监听、冲突检测和退避。</li>
-<li>当一个节点要发送数据时，首先会进行载波监听，也就是检测信道是否空闲。如果信道空闲，节点就开始发送数据；如果信道忙，则节点会等待，直到信道空闲。</li>
-</ul>
-</li>
-<li><strong>冲突检测机制：</strong><ul>
-<li>在发送数据过程中，节点同时进行冲突检测。这是因为电磁波在介质中传播需要时间，即使在发送数据时检测到信道空闲，但在数据传输过程中仍有可能与其他节点发送的数据发生冲突。</li>
-<li>节点通过比较自己发送的数据信号和从信道上接收到的信号来判断是否发生冲突。如果发现信号不同，就表示发生了冲突。</li>
-</ul>
-</li>
-<li><strong>退避算法：</strong><ul>
-<li>一旦检测到冲突，发送节点会立即停止发送数据，并执行退避算法。退避算法的目的是让发生冲突的节点在不同的时间重新尝试发送数据，以减少再次冲突的可能性。</li>
-<li>常用的退避算法是二进制指数退避算法。在这种算法中，冲突次数 n 决定了节点重新发送数据前需要等待的时间间隔。等待时间间隔的计算公式为，其中是一个在区间均匀分布的随机数，是一个与网络参数相关的常量（如时隙时间）。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>监听算法分类：</strong></p>
-<ul>
-<li><strong>非坚持 CSMA（Non - persistent CSMA）：</strong><ul>
-<li><strong>工作原理：</strong><ul>
-<li>当一个节点要发送数据时，首先监听信道。如果信道空闲，就立即发送数据；如果信道忙，则不再继续监听，而是随机等待一段时间后，再重新监听信道是否空闲。</li>
-</ul>
-</li>
-<li><strong>特点：</strong><ul>
-<li>这种算法的优点是减少了节点等待信道空闲的时间，因为一旦发现信道忙就不再监听，而是等待一段时间后重新尝试。缺点是如果有多个节点同时等待发送数据，可能会导致频繁的冲突，因为它们重新开始监听的时间是随机的，很可能再次同时发现信道空闲而同时发送数据。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>1 - 坚持 CSMA（1 - persistent CSMA）<ul>
-<li>工作原理<ul>
-<li>当节点要发送数据时，首先监听信道。如果信道空闲，就立即发送数据；如果信道忙，则持续监听，直到信道空闲后立即发送数据。</li>
-</ul>
-</li>
-<li>特点<ul>
-<li>优点是只要信道空闲，节点就能很快地发送数据，减少了等待时间。缺点是如果有两个或多个节点同时等待发送数据，当信道空闲时，它们会同时发送数据，导致冲突概率较高。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>P - 坚持 CSMA（P - persistent CSMA）<ul>
-<li>工作原理<ul>
-<li>用于时分复用的信道。当节点要发送数据时，首先监听信道。如果信道空闲，就以概率发送数据，以概率推迟发送；如果信道忙，则持续监听，直到信道空闲后，再按照上述概率规则发送数据。</li>
-</ul>
-</li>
-<li>特点<ul>
-<li>这种算法试图在非坚持 CSMA 和 1 - 坚持 CSMA 之间找到一个平衡。当时，它就变成了 1 - 坚持 CSMA；当时，它就变成了非坚持 CSMA。但是，它的实现相对复杂，而且要选择合适的值才能有效地降低冲突概率。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>IEEE802.3最小帧长：</strong>IEEE802.3规定的最小帧长为64字节。</p>
-</li>
-<li><p>Apache的主配置文件名是<code>http.conf</code>，改文件所在所在目录为<code>/etc</code>。</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>网工</category>
-      </categories>
-      <tags>
-        <tag>网络工程师</tag>
-        <tag>考试知识点</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>网络工程师考试知识点_02</title>
     <url>https://kfufys.github.io/posts/65202.html</url>
     <content><![CDATA[<h4 id="一、事务："><a href="#一、事务：" class="headerlink" title="一、事务："></a><strong>一、事务：</strong></h4><ul>
@@ -1493,6 +984,515 @@
       <tags>
         <tag>教程</tag>
         <tag>网站部署</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网络工程师考试知识点_01</title>
+    <url>https://kfufys.github.io/posts/65522.html</url>
+    <content><![CDATA[<h4 id="一、计算机存储与中断相关"><a href="#一、计算机存储与中断相关" class="headerlink" title="一、计算机存储与中断相关"></a><strong>一、计算机存储与中断相关</strong><span id="more"></span></h4><ol>
+<li>常用的虚拟存储器由<strong>主存 - 辅存</strong>两级存储器组成。</li>
+<li>中断向量可提供<strong>中断程序的入口地址</strong>。</li>
+<li>DMA工作方式在<strong>主存与外设</strong>之间建立直接的数据通信。</li>
+</ol>
+<h4 id="二、项目管理与网络图表相关"><a href="#二、项目管理与网络图表相关" class="headerlink" title="二、项目管理与网络图表相关"></a><strong>二、项目管理与网络图表相关</strong></h4><ol>
+<li>PERT不能清晰描述各个任务之间的<strong>并行情况</strong>，甘特图不能清晰描述各个问题之间的<strong>依赖关系</strong>。</li>
+</ol>
+<h4 id="三、网络设备与协议相关"><a href="#三、网络设备与协议相关" class="headerlink" title="三、网络设备与协议相关"></a><strong>三、网络设备与协议相关</strong></h4><ol>
+<li>路由器出厂时，默认的串口封装协议是HDLC。</li>
+<li>报文摘要算法生成报文摘要的目的是防止发送的报文被篡改。</li>
+<li>PGP是支持电子<strong>邮件加密</strong>的协议。</li>
+<li>根域名服务器采用的<strong>迭代</strong>查询。</li>
+<li>中介域名服务器采用的是<strong>递归</strong>查询。</li>
+<li><strong>AH隧道模式：</strong>使用AH与IP报头来封装IP数据包并对整个数据包进行签名以获得完整性并进行身份验证。</li>
+<li><strong>ESP隧道模式：</strong>采用ESP与IP报头以及ESP身份验证尾端来封装IP数据包。</li>
+<li><strong>L2TP数据包封装格式：</strong>IP - UDP - L2TP - PPP。</li>
+<li>SNMP是在<strong>UDP</strong>协议之上的异步&#x2F;请求响应。</li>
+</ol>
+<h4 id="四、网络传输相关"><a href="#四、网络传输相关" class="headerlink" title="四、网络传输相关"></a><strong>四、网络传输相关</strong></h4><ol>
+<li><p>支持1000m以上传输距离的是<strong>1000 BASE-Lx</strong>。</p>
+</li>
+<li><p><strong>nslookup参数：</strong></p>
+<ul>
+<li><p><strong>Set all ：</strong>列出当前设置的默认选项。</p>
+</li>
+<li><p><strong>Set type &#x3D; mx ：</strong>查询本地域的邮件交换器信息。</p>
+</li>
+<li><p><strong>Server NAME ：</strong>由当前默认服务器切换到制定的名字服务器NAME。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>DNS服务器主要资源记录：</strong></p>
+<ul>
+<li><p><strong>A：</strong>域名到IP地址的映射。</p>
+</li>
+<li><p><strong>PTR：</strong>IP地址到域名的映射。</p>
+</li>
+<li><p><strong>MX：</strong>邮件服务器及优先级。</p>
+</li>
+<li><p><strong>CNAME：</strong>别名。</p>
+</li>
+<li><p><strong>NS：</strong>区域的授权服务器。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="五、结构化布线系统相关"><a href="#五、结构化布线系统相关" class="headerlink" title="五、结构化布线系统相关"></a><strong>五、结构化布线系统相关</strong></h4><ol>
+<li><strong>工作区子系统：</strong>由终端设备到信息插座的整个区域，用于将用户终端设备连接到布线系统，主要包括信息插座、跳线、适配器。</li>
+<li><strong>水平布线子系统：</strong>是结构化综合布线系统中连接用户工作区与布线系统主干的子系统。</li>
+<li><strong>管理子系统：</strong>是结构化布线系统中对布线电缆进行端接及配线管理的子系统，通常设置在楼层的接线间内。</li>
+<li><strong>干线子系统：</strong>是结构化综合布线系统中连接各管理间、设备间的子系统，又称垂直子系统。</li>
+<li><strong>设备间子系统：</strong>主要是用来安放网络关键设备。并非每一个综合布线都有设备间子系统。</li>
+<li><strong>建筑群子系统：</strong>是结构化综合布线系统中由连接楼群之间的通信传输介质及各种支持设备组成的子系统。</li>
+</ol>
+<h4 id="六、xDSL相关"><a href="#六、xDSL相关" class="headerlink" title="六、xDSL相关"></a><strong>六、xDSL相关</strong></h4><ol>
+<li><strong>HDSL：</strong>中断距离可达3 - 5KM、传输速率2.048Mbits&#x2F;s。</li>
+<li><strong>ADSL：</strong>是一种非对称的DSL技术。</li>
+<li><strong>VDSL：</strong>是一种非对称的技术，也是DSL中传输速度最快的技术。</li>
+<li><strong>SDSL：</strong>单线路数字用户技术是对称的。</li>
+<li><strong>RADSL：</strong>速率自适应数字用户线技术，是采用非对称技术。</li>
+</ol>
+<h4 id="七、私有地址相关"><a href="#七、私有地址相关" class="headerlink" title="七、私有地址相关"></a><strong>七、私有地址相关</strong></h4><ol>
+<li><strong>A类：</strong>10.0.0.0 - 10.255.255.255。</li>
+<li><strong>B类：</strong>172.16.0.0 - 172.31.255.255。</li>
+<li><strong>C类：</strong>192.168.0.0 - 192.168.255.255。</li>
+</ol>
+<h4 id="八、阻止路由环路相关"><a href="#八、阻止路由环路相关" class="headerlink" title="八、阻止路由环路相关"></a><strong>八、阻止路由环路相关</strong></h4><ol>
+<li><p><strong>最大跳计数（Maximum Hop Count）</strong></p>
+<ul>
+<li><strong>原理：</strong><ul>
+<li>在许多路由协议（如 RIP）中，会为数据包经过的路由器数量设置一个最大值。例如，RIP 协议默认的最大跳数是 15。当一个数据包经过的路由器数量达到这个最大值时，该数据包将被丢弃。这是因为随着跳数的不断增加，网络环路的可能性也在增大。如果没有最大跳数的限制，数据包可能会在网络中无限循环，消耗网络资源。</li>
+</ul>
+</li>
+<li><strong>示例：</strong><ul>
+<li>假设有一个简单的网络拓扑，包括路由器 A、B、C、D 和 E，它们之间通过链路相连。如果一个数据包从路由器 A 出发，经过 B、C、D、E，然后又回到 A，并且这个过程不断循环，没有最大跳数限制，这个数据包就会一直在这个环路中传递。但如果设置了最大跳数为 5，当数据包经过 5 个路由器后，就会被丢弃，从而防止了无限循环。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>水平分割（Split Horizon）</strong></p>
+<ul>
+<li><strong>原理：</strong><ul>
+<li>水平分割规则规定，从一个接口学到的路由信息不会再从这个接口发送出去。这样可以避免路由器将从某个邻居学到的路由信息又发送回给这个邻居，从而防止产生路由环路。它基于一个简单的逻辑，即如果路由器已经从某个方向学到了到达某个网络的路由，那么它不应该再向这个方向通告这个路由，因为这个方向的邻居很可能就是通过它才学到这个路由的。</li>
+</ul>
+</li>
+<li><strong>示例：</strong><ul>
+<li>假设路由器 R1 和 R2 是邻居，它们之间通过接口 E0 相连。R1 通过接口 E0 向 R2 通告了到达网络 N 的路由。根据水平分割规则，R2 不会再通过接口 E0 向 R1 通告到达网络 N 的路由。这样就避免了 R1 和 R2 之间可能产生的路由环路。例如，在一个帧中继网络中，多个路由器通过虚电路相连，水平分割可以有效地防止路由信息在相邻路由器之间的来回传递，避免环路的形成。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>路由毒化（Route Poisoning）</strong></p>
+<ul>
+<li><strong>原理：</strong><ul>
+<li>当一个路由不可达时，路由器会将该路由标记为不可达（通常将其度量值设置为无穷大），并且向相邻路由器通告这个不可达信息。相邻路由器收到这个中毒的路由信息后，会更新自己的路由表，并且也会向它的相邻路由器通告这个不可达信息。这样，网络中的所有路由器都会快速地知道这个路由已经不可达，从而避免将数据包转发到这个不可达的路径上，防止了路由环路的产生。</li>
+</ul>
+</li>
+<li><strong>示例：</strong><ul>
+<li>比如在一个网络中有路由器 A、B、C。路由器 A 发现它到网络 X 的链路出现故障，它就会将到网络 X 的路由标记为不可达（如将跳数设置为 16，在 RIP 协议中表示不可达），并向路由器 B 通告这个中毒的路由。路由器 B 收到后更新自己的路由表，然后也向路由器 C 通告这个中毒的路由。这样，整个网络就会很快知道网络 X 不可达，避免了因为链路故障而可能导致的数据包在 A - B - C - A 这样的环路中转发。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>保持关闭（Hold - down）</strong></p>
+<ul>
+<li><p><strong>原理</strong></p>
+<p>：</p>
+<ul>
+<li>当路由器从邻居收到一个路由不可达的消息后，它会进入一个保持关闭状态。在这个状态下，路由器会忽略来自同一个邻居的关于这条路由的任何更新信息（通常会持续一段时间，如 180 秒）。这是因为在网络不稳定的情况下，可能会出现错误的路由更新信息。例如，当一条链路刚刚出现故障时，可能会因为网络的收敛过程而产生一些错误的更新，导致路由器错误地更新路由表，进而产生路由环路。保持关闭机制可以让路由器在一段时间内不被这些可能错误的更新所干扰，等待网络稳定后再更新路由表。</li>
+</ul>
+</li>
+<li><p><strong>示例：</strong></p>
+<ul>
+<li>假设路由器 R1 收到来自邻居 R2 的消息，说到达网络 Y 的路由不可达。R1 进入保持关闭状态。如果在这个状态期间，R2 又发送了一个关于网络 Y 的更新（可能是由于网络波动，这个更新是错误的），R1 会忽略这个更新。只有当保持关闭时间结束后，R1 才会考虑来自 R2 的关于网络 Y 的更新，这样就避免了在网络不稳定时，因为错误的更新而导致的路由环路。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="九、链路状态通告相关"><a href="#九、链路状态通告相关" class="headerlink" title="九、链路状态通告相关"></a><strong>九、链路状态通告相关</strong></h4><ol>
+<li><strong>链路状态通告（LSA - Link - State Advertisement）的定义与作用：</strong><ul>
+<li>链路状态通告是链路状态路由协议（如 OSPF、IS - IS）中的关键元素。它是一种包含了路由器自身以及其直连链路信息的数据包。这些信息包括接口的 IP 地址、子网掩码、链路的开销（cost）、链路的连接状态（是 up 还是 down）等。路由器通过在网络中泛洪 LSA，使得网络中的其他路由器能够了解整个网络的拓扑结构。</li>
+<li>例如，在一个企业网络中，使用 OSPF 协议。路由器 A 通过生成 LSA 来通告自己的接口连接到网络 192.168.1.0&#x2F;24，开销为 10，并且接口状态是 up。这个 LSA 会在网络中传播，让其他路由器知道如何到达这个网络以及相关的链路成本。</li>
+</ul>
+</li>
+<li><strong>LSA 的内容构成：</strong><ul>
+<li><strong>路由器标识符（Router ID）：</strong><ul>
+<li>这是一个用于唯一标识路由器的编号。在 OSPF 中，通常是路由器上最大的活动接口的 IP 地址，或者可以手动配置。它用于区分不同的路由器发送的 LSA。例如，在一个有多个路由器的网络中，路由器 A 的 Router ID 为 1.1.1.1，路由器 B 的 Router ID 为 2.2.2.2，这样其他路由器就可以根据 Router ID 来识别 LSA 的来源。</li>
+</ul>
+</li>
+<li><strong>链路类型（Link Type）：</strong><ul>
+<li>描述了路由器与其他设备之间链路的性质。常见的链路类型包括点到点链路（如两个路由器之间通过串行接口直接相连）、广播链路（如连接到以太网段）和非广播多路访问（NBMA，例如帧中继网络）。不同的链路类型在 LSA 中会有不同的表示方式，并且会影响路由计算和数据包转发。例如，在广播链路中，路由器需要选举出一个指定路由器（DR）和备份指定路由器（BDR）来管理 LSA 的泛洪过程。</li>
+</ul>
+</li>
+<li><strong>链路开销（Link Cost）：</strong><ul>
+<li>代表了通过该链路传输数据的代价。开销的计算可以基于链路的带宽、延迟等因素。例如，一条 100Mbps 的以太网链路的开销可能比一条 10Mbps 的以太网链路的开销小。开销是用于计算最短路径的重要参数，路由器会根据收到的 LSA 中的开销信息来选择到达目标网络的最优路径。</li>
+</ul>
+</li>
+<li><strong>邻居信息（Neighbor Information）：</strong><ul>
+<li>列出了与该路由器直接相连的其他路由器的标识符（如 Router ID）。这有助于构建完整的网络拓扑图。例如，路由器 A 在 LSA 中列出它的邻居是路由器 B 和路由器 C，它们的 Router ID 分别为 2.2.2.2 和 3.3.3.3，这样其他路由器收到这个 LSA 后，就可以知道路由器 A 与哪些路由器相连。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>LSA 的泛洪过程（Flooding）：</strong><ul>
+<li>当路由器生成一个新的 LSA 或者收到一个更新的 LSA 时，它会将这个 LSA 发送给除了接收该 LSA 的接口之外的所有接口。这个过程称为泛洪。例如，在一个由多个路由器组成的网状网络中，路由器 A 生成了一个新的 LSA，它会将这个 LSA 发送给与它相连的路由器 B、C 和 D。路由器 B 收到这个 LSA 后，会检查自己的链路状态数据库（LSDB），如果这个 LSA 是新的或者比自己已有的 LSA 更新（根据序列号、校验和等信息判断），它会将这个 LSA 存储到自己的 LSDB 中，然后再向它的其他邻居（除了发送这个 LSA 给它的路由器 A）泛洪这个 LSA。这个过程会一直持续，直到网络中的所有路由器都收到并存储了这个最新的 LSA。</li>
+<li>在这个过程中，为了防止 LSA 在网络中无限循环，每个 LSA 都有一个序列号。路由器通过比较序列号来判断 LSA 的新旧。当一个 LSA 的序列号达到最大值后，会重新从初始值开始，但同时会有其他机制（如老化时间）来确保 LSA 的准确性和及时性。</li>
+</ul>
+</li>
+<li><strong>LSA 的老化与更新：</strong><ul>
+<li><strong>老化（Aging）：</strong><ul>
+<li>LSA 有一个老化时间，通常在 OSPF 中是 30 分钟。从 LSA 产生开始计算时间，当老化时间到期后，这个 LSA 会被标记为无效。这是为了确保网络拓扑信息的及时性。如果网络拓扑发生变化，旧的 LSA 不应该一直存在于网络中影响路由决策。例如，一个路由器的接口连接的网络被重新划分了子网，旧的 LSA 中关于这个网络的信息就需要更新，老化机制可以促使这种更新。</li>
+</ul>
+</li>
+<li><strong>更新（Update）：</strong><ul>
+<li>当路由器的链路状态发生变化时（如接口的状态从 up 变为 down，或者链路的开销发生变化），它会生成一个新的 LSA 来更新网络中的其他路由器。这个新的 LSA 会包含更新后的链路信息，并且会按照泛洪过程在网络中传播。例如，路由器 A 和路由器 B 之间的链路带宽从 10Mbps 提升到 100Mbps，路由器 A 会更新关于这条链路的 LSA，将链路开销等信息更新后，在网络中泛洪这个新的 LSA，让其他路由器知道网络拓扑的这个变化。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="十、VTP、STP及ACL相关"><a href="#十、VTP、STP及ACL相关" class="headerlink" title="十、VTP、STP及ACL相关"></a><strong>十、VTP、STP及ACL相关</strong></h4><ol>
+<li><p><strong>访问控制列表的分类：</strong></p>
+<ul>
+<li><strong>标准访问控制列表：</strong>主要基于源 IP 地址进行过滤，通常使用的编号范围是 1 - 99 以及 1300 - 1999（不同的 IOS 版本可能略有差异）。它的功能相对较为基础，只能对数据包的源 IP 地址进行匹配判断，进而决定是否允许该数据包通过。</li>
+<li><strong>扩展访问控制列表：</strong>功能更强大，可以基于源 IP 地址、目的 IP 地址、协议类型、端口号等多种条件来进行过滤，编号范围一般是 100 - 199 以及 2000 - 2699。通过综合考虑多个因素，能实现更精细、更复杂的访问控制策略。</li>
+</ul>
+</li>
+<li><p><strong>具体 ACL 语句分析：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">（1）Access-list 10 deny host 10.37.168.137 与 access-list 10 deny 10.37.168.137 等价，拒绝任何来自 10.23.168.137 的分组。</span><br><span class="line">（2）Any 与 0.0.0.0 255.255.255.255 等价，表示整个 IP 地址范围。</span><br><span class="line">（3）Access-list 10 deny tcp any (源地址) host 172.16.30.2 (目的地址) eq 23/telnet ：禁止任何主机访问 10.37.16.30.2 的 telnet 服务。</span><br><span class="line">（4）Access-list 110 permit tcp host 192.168.177.2 host 172.22.89.26 eq www/80 ，允许源 IP 地址为 192.168.177.2 的主机，通过 TCP 协议访问目的 IP 地址为 172.22.89.26 的主机的 80 端口。</span><br><span class="line">（5）Access-list 110 deny tcp any host 172.22.89.26 eq 80 ，只允许指定的 192.168.177.2 访问该主机的 80 端口。</span><br><span class="line">（6）Access-list 110 permit ip any any ，放行其他所有流量。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>接口应用 ACL 规则：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Interface S0</span><br><span class="line">Ip access-group 110 out</span><br><span class="line">允许 192.168.177.2 以 http 方式访问主机 172.22.89.26，但是拒绝其他主机的数据流访问 172.22.89.26 的 web 服务（80 端口）。</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="十一、NAT相关："><a href="#十一、NAT相关：" class="headerlink" title="十一、NAT相关："></a><strong>十一、NAT相关：</strong></h4><ol>
+<li><p><strong>NAT（网络地址转换）分类：</strong></p>
+<ul>
+<li><p><strong>静态 NAT：</strong>内部本地地址和内部全局地址进行一对一的永久映射。</p>
+<ul>
+<li><p>示例配置（以 Cisco 路由器为例）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 定义内部本地地址和内部全局地址的映射关系：</span><br><span class="line">Router(config)#ip nat inside source static 192.168.1.2 209.165.200.22</span><br><span class="line"># 指定内部接口和外部接口：</span><br><span class="line">Router(config)#interface FastEthernet0/0</span><br><span class="line">Router(config - if)#ip nat inside</span><br><span class="line">Router(config - if)#interface Serial0/0/0</span><br><span class="line">Router(config - if)#ip nat outside</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>动态 NAT：</strong>从一个内部全局地址池中动态地分配地址给内部本地地址（临时映射关系）。</p>
+<ul>
+<li><p>示例配置（以 Cisco 路由器为例）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 进入全局配置模式：</span><br><span class="line">Router#conf t</span><br><span class="line"># 定义内部全局地址池。假设地址池名为 POOL1，包含的地址范围是 209.165.200.20 - 209.165.200.30：</span><br><span class="line">Router(config)#ip nat pool POOL1 209.165.200.20 209.165.200.30 netmask 255.255.255.0</span><br><span class="line"># 定义访问控制列表（ACL）来指定哪些内部本地地址可以进行 NAT 转换。假设允许 192.168.1.0/24 网段的主机进行 NAT 转换：</span><br><span class="line">Router(config)#access - list 1 permit 192.168.1.0 0.0.0.255</span><br><span class="line"># 将 ACL 与地址池关联，实现动态 NAT：</span><br><span class="line">Router(config)#ip nat inside source list 1 pool POOL1</span><br><span class="line"># 指定内部接口和外部接口（同静态 NAT）：</span><br><span class="line">Router(config)#interface FastEthernet0/0</span><br><span class="line">Router(config - if)#ip nat inside</span><br><span class="line">Router(config - if)#interface Serial0/0/0</span><br><span class="line">Router(config - if)#ip nat outside</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>配置 PAT（NAT 重载，也叫端口地址转换）：</strong></p>
+<ul>
+<li><p><strong>原理</strong>：PAT 通过使用不同的端口号来区分不同的内部本地地址的连接，使得多个内部本地地址可以共享一个或少数几个内部全局地址。这样可以更有效地利用 IP 地址资源，是一种多对一的地址转换方式。</p>
+</li>
+<li><p>示例配置（以 Cisco 路由器为例）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 进入全局配置模式：</span><br><span class="line">Router(config)#conf t</span><br><span class="line"># 定义访问控制列表（ACL）来指定哪些内部本地地址可以进行 NAT 转换。假设允许 192.168.1.0/24 网段的主机进行 NAT 转换：</span><br><span class="line">Router(config)#access - list 1 permit 192.168.1.0 0.0.0.255</span><br><span class="line"># 将 ACL 与外部接口关联，实现 PAT。假设外部接口是 Serial0/0/0：</span><br><span class="line">Router(config)#ip nat inside source list 1 interface Serial0/0/0 overload</span><br><span class="line"># 指定内部接口和外部接口（同静态 NAT）：</span><br><span class="line">Router(config)#interface FastEthernet0/0</span><br><span class="line">Router(config - if)#ip nat inside</span><br><span class="line">Router(config - if)#interface Serial0/0/0</span><br><span class="line">Router(config - if)#ip nat outside</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h4 id="十二、无线网络相关："><a href="#十二、无线网络相关：" class="headerlink" title="十二、无线网络相关："></a><strong>十二、无线网络相关：</strong></h4><ol>
+<li><p><strong>IEEE802.11标准：</strong></p>
+<ul>
+<li><p>IEEE802.11a：54Mbits&#x2F;s 、5GHz标准。</p>
+</li>
+<li><p>IEEE802.11b：对802.11的改进，以支持5.5.Mbits&#x2F;s和11Mbits&#x2F;s。</p>
+</li>
+<li><p>IEEE892.11g：54Mbits&#x2F;s、2.4GHz标准（向后兼容802.11b）。</p>
+</li>
+<li><p>IEEE892.11n：使用MIMO(多入多出天线)提高吞吐量。</p>
+</li>
+<li><p>Wi-fi联盟认可了802.11i标准，并称之为wap2。</p>
+</li>
+<li><p>Wap2使用了aes-ccmp机密技术。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="十三、IPv6相关："><a href="#十三、IPv6相关：" class="headerlink" title="十三、IPv6相关："></a><strong>十三、IPv6相关：</strong></h4><ol>
+<li><p><strong>特殊IPv6地址：</strong></p>
+<ul>
+<li><p>0:0:0:0:0:0:0:0(::) 相当于IPv4地址0.0.0.0，通常在使用有状态DHCP配置时，用作主机的源地址。</p>
+</li>
+<li><p>0:0:0:0:0:0:0:1(::1) 相当于IPv4地址127.0.0.1。</p>
+</li>
+<li><p>0:0:0:0:0:0:192.168.100.1 在同时支持IPv4和IPv6的网络中，从IPv4地址转换而来的IPv6地址通常这样写。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>IPv6地址类型：</strong></p>
+<ul>
+<li><p>2000::&#x2F;3全局单播地址。</p>
+</li>
+<li><p>FC00::&#x2F;7唯一的本地单播地址范围。</p>
+</li>
+<li><p>FE80::&#x2F;10链路本地单播地址范围。</p>
+</li>
+<li><p>FF00::&#x2F;8组播地址范围 。</p>
+</li>
+<li><p>2001:0DB8::&#x2F;32保留举例和编写文档时使用。</p>
+</li>
+<li><p>3FFF:FFFF::&#x2F;32 保留举例和编写文档时使用。</p>
+</li>
+<li><p>2002::&#x2F;16 保留供6to4隧道技术使用。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="十四、软件设计相关："><a href="#十四、软件设计相关：" class="headerlink" title="十四、软件设计相关："></a><strong>十四、软件设计相关：</strong></h4><p>在软件设计阶段，划分模块的原则是一个模块的控制范围应该在作用范围之内。</p>
+<ol>
+<li><strong>模块的控制范围和作用范围的定义：</strong><ul>
+<li><strong>控制范围：</strong>是指模块本身及其所有下属模块（如果有）的集合。</li>
+<li><strong>作用范围：</strong>是指受该模块内一个判定影响的所有其他模块的集合。</li>
+</ul>
+</li>
+<li><strong>为什么控制范围应该在作用范围之内：</strong><ul>
+<li><strong>可维护性：</strong>模块控制范围在作用范围内，当需对软件进行维护或修改时，开发人员可以很容易地确定修改一个模块可能会影响到哪些其他模块。</li>
+<li><strong>可读性和理解性</strong>：这种原则有助于提高软件设计的可读性和理解性。</li>
+<li><strong>降低耦合度</strong>：使得模块之间的耦合度降低。</li>
+</ul>
+</li>
+</ol>
+<h4 id="十五、软件项目活动图相关："><a href="#十五、软件项目活动图相关：" class="headerlink" title="十五、软件项目活动图相关："></a><strong>十五、软件项目活动图相关：</strong></h4><p>软件项目活动图中，松弛时间表示在不影响整个工作的前提下，完成该项任务有多少机动余地，松弛时间为0的任务构成了完成整个工程的关键任务，即所需时间最长的任务。</p>
+<h4 id="十六、其他网络概念相关"><a href="#十六、其他网络概念相关" class="headerlink" title="十六、其他网络概念相关"></a><strong>十六、其他网络概念相关</strong></h4><ol>
+<li><p><strong>VPI与CIR：</strong>VPI用来表示不同虚拟路径，CIR用来约束数据速率。</p>
+</li>
+<li><p><strong>代理ARP：</strong>是指由离目标主机最近的交换机假装目标主机回答源主机的ARP请求。</p>
+</li>
+<li><p><strong>距离矢量路由协议：</strong>每一个路由器接收的路由信息来源于它的邻居路由器。</p>
+</li>
+<li><p><strong>BGP4协议：</strong></p>
+<ul>
+<li><p>打开（open）报文建立两个路由之间的邻居关系。</p>
+</li>
+<li><p>更新（UPDATE）报文给出了新的路由信息。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>OSPF协议：</strong></p>
+<ul>
+<li><p>链路状态算法用于计算路由表。</p>
+</li>
+<li><p>一个路由器的链路状态只涉及与相邻路由器的连通状态。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>组播地址：</strong></p>
+<ul>
+<li><p>224.0.0.0 - 224.0.0.255为预留的组播地址（永久组地址），地址224.0.0.0保留不做分配，其他地址供路由协议用。</p>
+</li>
+<li><p>224.0.1.0 - 224.0.1.255是公用组播地址，可以用于Internet。</p>
+</li>
+<li><p>224.0.2.0 - 238.255.255.255可为用户可用的组播地址（临时组播地址），全网范围内有效。</p>
+</li>
+<li><p>239.0.0.0 - 239.255.255.255为本地管理组地址，仅在特定的本地范围内有效。</p>
+</li>
+<li><p>组播服务发送信息只需要发送一个分组，组内所有成员即可全部收到。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>数字签名验证：</strong>用户B收到用户A带数字签名的消息M，为了验证M的真实性，首先需要从CA获取用户的数字证书，并利用CA的公钥验证证书的真伪，然后利用A的公钥验证M的真实性。</p>
+</li>
+<li><p><strong>SDES算法</strong>：是一种共享秘钥算法。</p>
+</li>
+<li><p><strong>IPSEC安全关联：</strong>IPSEC中安全关联（security Associations）三元组是&lt;安全参数索引SPI，目标IP地址，安全协议&gt;。</p>
+</li>
+<li><p><strong>SNMP协议：</strong>当代理收到一个GET请求时，如果有一个值不可或者不能提供，则返回该实例的下一个值。</p>
+</li>
+<li><p><strong>SNMP网络管理：</strong>一个代理可以由多个管理站管理。</p>
+</li>
+<li><p><strong>自动专用IP地址：</strong></p>
+<ul>
+<li><p>用途是DHCP服务器的专用地址。</p>
+</li>
+<li><p>自动专用IP地址的范围是169.254.0.0 - 169.254.255.255。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>以太网结构填充字段：</strong>作用是保持最小帧长。</p>
+</li>
+<li><p><strong>物联网无线传感网络技术</strong>：是802.15.3ZigBee微微网。</p>
+</li>
+<li><p><strong>4G标准：</strong>LTE、LTE-Advanced、WIMAXII、Wireless MAN、UMB等属于4G标准。</p>
+</li>
+<li><p><strong>扩展频谱通信：</strong>主要思想是将信号散步到更宽的带宽上以减少阻塞和干扰的机会。</p>
+</li>
+<li><p><strong>CLOSE-WAIT状态：</strong>等待从本地用户发来的连接中断请求。</p>
+</li>
+<li><p><strong>BGP报文：</strong></p>
+<ul>
+<li><p>Open报文：用于建立邻居关系。</p>
+</li>
+<li><p>Update报文：用于发送新的路由信息。</p>
+</li>
+<li><p>Keepalive报文：用于对Open的应答和周期性地确认邻居关系。</p>
+</li>
+<li><p>Notification报文：用于报告监测到的错误。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Vsftp服务：</strong>可以通过 service Vsftpd start&#x2F;down&#x2F;restart 三个命令来启动、关闭和重启，主配置文件名为 vsftpd.conf 。</p>
+</li>
+<li><p><strong>SNMP团体名设置：</strong></p>
+<ul>
+<li><p>R2(config)#snmp-server community publicr  ro ：设置snmp-server的只读团体名为publicr。</p>
+</li>
+<li><p>R2(config)# snmp-server community publicw  rw ：设置snmp-server的读写团体名为publicw。</p>
+</li>
+<li><p>Nat(inside) 1 0 或者 nat(inside) 1.0.0.0 0.0.0.0 表示内网的所有主机均可以访问外网。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>华为静态路由与默认路由配置：</strong></p>
+<ol>
+<li><p><strong>静态路由配置：</strong></p>
+<ul>
+<li><p><strong>配置基本静态路由：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system - view  # 进入系统视图，这是配置大多数华为设备命令的前提操作，后续配置都在此视图下进行</span><br><span class="line">[Huawei]ip route - static 192.168.2.0 255.255.255.0 192.168.1.2  # 配置一条静态路由</span><br><span class="line"># “ip route-static”是配置静态路由的命令关键字</span><br><span class="line"># “192.168.2.0”是目的网络地址，表示要去往的目标网络段</span><br><span class="line"># “255.255.255.0”是对应的子网掩码，用于精确界定目的网络的范围</span><br><span class="line"># “192.168.1.2”是下一跳地址，也就是数据包从本路由器发出去后，下一个接收该数据包的设备接口地址</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>配置负载分担的静态路由（多条链路到同一目的网络）：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Huawei]ip route - static 10.0.0.0 255.0.0.0 172.16.1.2  # 配置第一条到达目的网络10.0.0.0/8的静态路由</span><br><span class="line"># 这条命令含义与上面基本静态路由类似，这里目的网络是10.0.0.0，子网掩码255.0.0.0，下一跳为172.16.1.2，用于和下一条命令共同实现负载分担</span><br><span class="line">[Huawei]ip route - static 10.0.0.0 255.0.0.0 172.16.2.2  # 配置第二条到达目的网络10.0.0.0/8的静态路由</span><br><span class="line"># 同样是去往10.0.0.0/8网络，但下一跳变为172.16.2.2，两条链路可同时分担去往该目的网络的流量，实现负载分担功能</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>静态路由的优先级调整：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Huawei]ip route - static 10.0.0.0 255.0.0.0 172.16.1.2 preference 70  # 调整特定静态路由的优先级</span><br><span class="line"># “preference”关键字用于设置优先级，此处将之前配置的去往10.0.0.0/8网络且下一跳为172.16.1.2的静态路由优先级设置为70</span><br><span class="line"># 优先级数值越大，表示该路由相对其他到达相同目的网络的路由被优先选用的程度越低，默认静态路由优先级是60</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>默认路由配置：</strong></p>
+<ul>
+<li><p><strong>配置基本默认路由：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Huawei]ip route - static 0.0.0.0 0.0.0.0 192.168.1.1  # 配置默认路由</span><br><span class="line"># “0.0.0.0 0.0.0.0”表示所有网络（目的网络地址和子网掩码都为全0），意味着如果数据包的目的地址在本地路由表中没有更精确匹配的路由条目时，都将按照这条默认路由转发</span><br><span class="line"># “192.168.1.1”是下一跳地址，即数据包将被转发到这个地址对应的设备接口</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>配置默认路由的应用场景示例（完整配置）：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system - view  # 进入系统视图</span><br><span class="line">[Huawei]interface GigabitEthernet0/0/1  # 进入路由器的一个接口（假设是连接内部网络的接口）视图，GigabitEthernet0/0/1是接口名称，可根据实际设备接口情况改变</span><br><span class="line">[Huawei - GigabitEthernet0/0/1]ip address 192.168.1.254 255.255.255.0  # 配置该接口的IP地址为192.168.1.254，子网掩码为255.255.255.0，使其能与内部网络通信</span><br><span class="line">[Huawei - GigabitEthernet0/0/1]quit  # 退出接口视图，回到系统视图</span><br><span class="line">[Huawei]interface GigabitEthernet0/0/2  # 进入另一个接口（假设是连接外部网络，比如ISP的接口）视图</span><br><span class="line">[Huawei - GigabitEthernet0/0/2]ip address 202.100.1.2 255.255.255.252  # 配置该接口的IP地址为202.100.1.2，子网掩码为255.255.255.252，使其能与外部网络通信</span><br><span class="line">[Huawei - GigabitEthernet0/0/2]quit  # 退出接口视图，回到系统视图</span><br><span class="line">[Huawei]ip route - static 0.0.0.0 0.0.0.0 202.100.1.1  # 配置默认路由，下一跳地址为202.100.1.1，这样内部网络的数据可以通过这个接口转发出去访问互联网等外部网络</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>运算器：</strong>主要完成算术运算、逻辑运算和移位操作，主要部件有算术逻辑单元（ALU）、累加器（ACC）、标志寄存器、寄存器组、多路转换器、数据总线等。</p>
+</li>
+<li><p><strong>控制器：</strong>主要实现指令的读入、寄存、译码和执行过程有序地发出控制信号。控制器主要由指令寄存器、程序计数器、指令译码器、状态&#x2F;条件寄存器、时序产生器、微操作信号发生器组成。</p>
+</li>
+<li><p><strong>地址映射方式：</strong>有：全相联方式、直接方式和组相联方式。</p>
+</li>
+<li><p><strong>专利保护期限：</strong>根据我国《专利法》规定，发明专利的保护期限为20年，实用型和外观设计专利为10年。</p>
+</li>
+<li><p><strong>交换机与路由器连接：</strong>交换机与路由器用直通电缆连接。</p>
+</li>
+<li><p><strong>默认静态路由配置：</strong>例如： Router(config)#ip route 0.0.0.0 0.0.0.0 [exit-interface | ip-address ] 。</p>
+</li>
+<li><p><strong>cache与内存转换：</strong>cache与内存之间的转换是由硬件完成的。</p>
+</li>
+<li><p><strong>相联存储器：</strong>按内容方式访问。</p>
+</li>
+<li><p><strong>E1、E2、E3、T1载波数据速率：</strong></p>
+<ul>
+<li><p>E1载波的数据速率为2.048Mbit&#x2F;s。</p>
+</li>
+<li><p>E2由4个E1组成。</p>
+</li>
+<li><p>E3由4个E2组成。</p>
+</li>
+<li><p>T1载波的数据速率为1.544Mbit&#x2F;s。</p>
+</li>
+</ul>
+</li>
+<li><p>**<code>route print</code><strong>与</strong><code>netstat –r</code>**功能是一样的。</p>
+</li>
+<li><p>在Linux中，DNS服务器的配置文件为<code>/etc/resolv.conf</code>。</p>
+</li>
+<li><p>MD5算法属于<strong>摘要算法</strong>。</p>
+</li>
+<li><p><strong>集成windows身份验证</strong>是安全级别最高的验证方法。</p>
+</li>
+<li><p><strong>网络可用性</strong>是指用户可利用网络时间得百分比。</p>
+</li>
+<li><p><strong>网络管理功能：</strong>网络管理的5大功能为：配置管理、故障管理、计费管理、性能管理和安全管理。</p>
+</li>
+<li><p><strong>BGP传输协议及端口：</strong>BGP将TCP用作其传输协议，运行在TCP的179端口上（目的端口）。</p>
+</li>
+<li><p><strong>BGP邻居关系维持：</strong>BGP使用keepalive周期性的发送存活消息（60s）维持邻居关系。</p>
+</li>
+<li><p><strong>IPsec传输模式选择：</strong>IPsec传输模式和隧道模式，实现端到端的传输应选择传输模式。</p>
+</li>
+<li><p><strong>IPv6地址类型：</strong>IPv6地址分为3中类型，它们是单播地址、组播地址、任意播地址。</p>
+</li>
+<li><p><strong>802.11 MAC层算法：</strong>802.11在MAC层采用了CSMA&#x2F;CA算法。</p>
+</li>
+<li><p><strong>Ieee802.11n数据速率：</strong>Ieee802.11n提供的最高数据速率可达到300Mbit&#x2F;s。</p>
+</li>
+<li><p><strong>IEEE802.16标准：</strong>IEEE802.16工作组提出的无线接入系统空中接口标准是WiMAX。</p>
+</li>
+<li><p><strong>安全电子邮件协议：</strong>安全电子邮件使用PGP协议。</p>
+</li>
+<li><p>Linux服务器中DHCP服务器程序对应的配置文件的名称为<code>dhcp.conf</code>，该文件的默认目录是<code>/etc</code>。</p>
+</li>
+<li><p><strong>CSMA&#x2F;CD（载波监听多路访问 &#x2F; 碰撞检测）算法：</strong></p>
+<ul>
+<li><strong>基本原理：</strong><ul>
+<li>CSMA&#x2F;CD 主要用于解决在共享介质的以太网中，多个节点同时访问介质时可能产生的冲突问题。其工作过程主要包括载波监听、冲突检测和退避。</li>
+<li>当一个节点要发送数据时，首先会进行载波监听，也就是检测信道是否空闲。如果信道空闲，节点就开始发送数据；如果信道忙，则节点会等待，直到信道空闲。</li>
+</ul>
+</li>
+<li><strong>冲突检测机制：</strong><ul>
+<li>在发送数据过程中，节点同时进行冲突检测。这是因为电磁波在介质中传播需要时间，即使在发送数据时检测到信道空闲，但在数据传输过程中仍有可能与其他节点发送的数据发生冲突。</li>
+<li>节点通过比较自己发送的数据信号和从信道上接收到的信号来判断是否发生冲突。如果发现信号不同，就表示发生了冲突。</li>
+</ul>
+</li>
+<li><strong>退避算法：</strong><ul>
+<li>一旦检测到冲突，发送节点会立即停止发送数据，并执行退避算法。退避算法的目的是让发生冲突的节点在不同的时间重新尝试发送数据，以减少再次冲突的可能性。</li>
+<li>常用的退避算法是二进制指数退避算法。在这种算法中，冲突次数 n 决定了节点重新发送数据前需要等待的时间间隔。等待时间间隔的计算公式为，其中是一个在区间均匀分布的随机数，是一个与网络参数相关的常量（如时隙时间）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>监听算法分类：</strong></p>
+<ul>
+<li><strong>非坚持 CSMA（Non - persistent CSMA）：</strong><ul>
+<li><strong>工作原理：</strong><ul>
+<li>当一个节点要发送数据时，首先监听信道。如果信道空闲，就立即发送数据；如果信道忙，则不再继续监听，而是随机等待一段时间后，再重新监听信道是否空闲。</li>
+</ul>
+</li>
+<li><strong>特点：</strong><ul>
+<li>这种算法的优点是减少了节点等待信道空闲的时间，因为一旦发现信道忙就不再监听，而是等待一段时间后重新尝试。缺点是如果有多个节点同时等待发送数据，可能会导致频繁的冲突，因为它们重新开始监听的时间是随机的，很可能再次同时发现信道空闲而同时发送数据。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>1 - 坚持 CSMA（1 - persistent CSMA）<ul>
+<li>工作原理<ul>
+<li>当节点要发送数据时，首先监听信道。如果信道空闲，就立即发送数据；如果信道忙，则持续监听，直到信道空闲后立即发送数据。</li>
+</ul>
+</li>
+<li>特点<ul>
+<li>优点是只要信道空闲，节点就能很快地发送数据，减少了等待时间。缺点是如果有两个或多个节点同时等待发送数据，当信道空闲时，它们会同时发送数据，导致冲突概率较高。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>P - 坚持 CSMA（P - persistent CSMA）<ul>
+<li>工作原理<ul>
+<li>用于时分复用的信道。当节点要发送数据时，首先监听信道。如果信道空闲，就以概率发送数据，以概率推迟发送；如果信道忙，则持续监听，直到信道空闲后，再按照上述概率规则发送数据。</li>
+</ul>
+</li>
+<li>特点<ul>
+<li>这种算法试图在非坚持 CSMA 和 1 - 坚持 CSMA 之间找到一个平衡。当时，它就变成了 1 - 坚持 CSMA；当时，它就变成了非坚持 CSMA。但是，它的实现相对复杂，而且要选择合适的值才能有效地降低冲突概率。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>IEEE802.3最小帧长：</strong>IEEE802.3规定的最小帧长为64字节。</p>
+</li>
+<li><p>Apache的主配置文件名是<code>http.conf</code>，改文件所在所在目录为<code>/etc</code>。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>网工</category>
+      </categories>
+      <tags>
+        <tag>网络工程师</tag>
+        <tag>考试知识点</tag>
       </tags>
   </entry>
   <entry>
