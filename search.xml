@@ -1310,40 +1310,6 @@
       </tags>
   </entry>
   <entry>
-    <title>About</title>
-    <url>https://kfufys.github.io/posts/7477.html</url>
-    <content><![CDATA[<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><hr>
-<ul>
-<li><p>我是<strong>窦长友</strong>，一名摄影爱好者，编程小渣渣~~</p>
-</li>
-<li><p>目前就读于<strong>开封大学</strong>….</p>
-</li>
-</ul>
-<h3 id="我的爱好"><a href="#我的爱好" class="headerlink" title="我的爱好"></a>我的爱好</h3><hr>
-<p>热衷于研究所有与计算机相关的事物，包括：</p>
-<ul>
-<li><p><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。 </p>
-</li>
-<li><p><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。 </p>
-</li>
-<li><p><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</p>
-</li>
-<li><p><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</p>
-</li>
-</ul>
-<h3 id="我的白日梦"><a href="#我的白日梦" class="headerlink" title="我的白日梦"></a>我的白日梦</h3><hr>
-<p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
-<p>要是大家有什么好的建议，欢迎告知呀！</p>
-]]></content>
-      <categories>
-        <category>About</category>
-      </categories>
-      <tags>
-        <tag>about</tag>
-        <tag>关于我</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>终极 Nginx 配置指南（超详细）</title>
     <url>https://kfufys.github.io/posts/59687.html</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p>对于自己上线项目的前端来说，nginx也是必须要了解和熟悉的，查了很多的nginx文章，看着写的都很详细，但是却没有了整体的概念。这里就重新梳理一遍，也理清思路。</p>
@@ -1546,6 +1512,40 @@
       <tags>
         <tag>教程</tag>
         <tag>网站部署</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About</title>
+    <url>https://kfufys.github.io/posts/7477.html</url>
+    <content><![CDATA[<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><hr>
+<ul>
+<li><p>我是<strong>窦长友</strong>，一名摄影爱好者，编程小渣渣~~</p>
+</li>
+<li><p>目前就读于<strong>开封大学</strong>….</p>
+</li>
+</ul>
+<h3 id="我的爱好"><a href="#我的爱好" class="headerlink" title="我的爱好"></a>我的爱好</h3><hr>
+<p>热衷于研究所有与计算机相关的事物，包括：</p>
+<ul>
+<li><p><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。 </p>
+</li>
+<li><p><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。 </p>
+</li>
+<li><p><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</p>
+</li>
+<li><p><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</p>
+</li>
+</ul>
+<h3 id="我的白日梦"><a href="#我的白日梦" class="headerlink" title="我的白日梦"></a>我的白日梦</h3><hr>
+<p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
+<p>要是大家有什么好的建议，欢迎告知呀！</p>
+]]></content>
+      <categories>
+        <category>About</category>
+      </categories>
+      <tags>
+        <tag>about</tag>
+        <tag>关于我</tag>
       </tags>
   </entry>
   <entry>
