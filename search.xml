@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>AA</title>
-    <url>https://kfufys.github.io/posts/a9601dbd.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Google Gemini 2.0 怎么用?</title>
     <url>https://kfufys.github.io/posts/2266.html</url>
     <content><![CDATA[<img src="https://img.picui.cn/free/2025/01/09/677f4079926d9.png" alt="head">
@@ -1773,6 +1768,198 @@
       </tags>
   </entry>
   <entry>
+    <title>终极 Nginx 配置指南（超详细）</title>
+    <url>https://kfufys.github.io/posts/59687.html</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p>对于自己上线项目的前端来说，nginx也是必须要了解和熟悉的，查了很多的nginx文章，看着写的都很详细，但是却没有了整体的概念。这里就重新梳理一遍，也理清思路。</p>
+<p>我们在安装nginx之后，会自动生成很多的文件，但是nginx.conf这个文件是我们的核心，如何去正确的修改和优化它是nginx的核心。</p>
+<p>首先我们可以先看下原本的配置，你会觉得无所适从，因为感觉这个鬼东西也太多了吧。而且感觉根本就不理解，也不知道该怎么写。下面，就一步一步的教你如何入门到熟悉</p>
+<h3 id="一、nginx-conf原本配置到解释"><a href="#一、nginx-conf原本配置到解释" class="headerlink" title="一、nginx.conf原本配置到解释"></a><strong>一、<code>nginx.conf</code>原本配置到解释</strong></h3><p>看到这个118行是不是觉得有点害怕</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#user  nobody;</span></span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">#error_log  logs/error.log;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  notice;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  info;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#pid        logs/nginx.pid;</span></span><br><span class="line"></span><br><span class="line"><span class="section">events</span> &#123;</span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">    <span class="attribute">include</span>        mime.types;</span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#log_format  main  &#x27;$remote_addr  -  $remote_user  [$time_local]  &quot;$request&quot;  &#x27;</span></span><br><span class="line">    <span class="comment">#            &#x27;$status  $body_bytes_sent  &quot;$http_referer&quot;  &#x27;</span></span><br><span class="line">    <span class="comment">#            &#x27;&quot;$http_user_agent&quot;  &quot;$http_x_forwarded_for&quot;&#x27;;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#access_log  logs/access.log  main;</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;</span><br><span class="line">    <span class="comment">#tcp_nopush     on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#keepalive_timeout  0;</span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#gzip  on;</span></span><br><span class="line"></span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>        <span class="number">80</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  localhost;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#charset  koi8-r;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#access_log  logs/host.access.log  main;</span></span><br><span class="line"></span><br><span class="line">        <span class="section">location</span> / &#123;</span><br><span class="line">            <span class="attribute">root</span>   html;</span><br><span class="line">            <span class="attribute">index</span>  index.html  index.htm;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#error_page  404  /404.html;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#redirect  server  error  pages  to  the  static  page  /50x.html</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="attribute">error_page</span>  <span class="number">500</span>  <span class="number">502</span>  <span class="number">503</span>  <span class="number">504</span>  /50x.html;</span><br><span class="line">        <span class="section">location</span> = /50x.html &#123;</span><br><span class="line">            <span class="attribute">root</span>   html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#proxy  the  PHP  scripts  to  Apache  listening  on  127.0.0.1:80</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  \.php$  &#123;</span></span><br><span class="line">        <span class="comment">#    proxy_pass  http://127.0.0.1;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#pass  the  PHP  scripts  to  FastCGI  server  listening  on  127.0.0.1:9000</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  \.php$  &#123;</span></span><br><span class="line">        <span class="comment">#    root         html;</span></span><br><span class="line">        <span class="comment">#    fastcgi_pass  127.0.0.1:9000;</span></span><br><span class="line">        <span class="comment">#    fastcgi_index  index.php;</span></span><br><span class="line">        <span class="comment">#    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</span></span><br><span class="line">        <span class="comment">#    include       fastcgi_params;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#deny  access  to  .htaccess  files,  if  Apache&#x27;s  document  root</span></span><br><span class="line">        <span class="comment">#concurs  with  nginx&#x27;s  one</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  /\.ht  &#123;</span></span><br><span class="line">        <span class="comment">#    deny  all;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#another  virtual  host  using  mix  of  IP-,  name-,  and  port-based  configuration</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment">#server  &#123;</span></span><br><span class="line">    <span class="comment">#    listen        8000;</span></span><br><span class="line">    <span class="comment">#    listen        somename:8080;</span></span><br><span class="line">    <span class="comment">#    server_name   somename   alias   another.alias;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    location  /  &#123;</span></span><br><span class="line">    <span class="comment">#        root   html;</span></span><br><span class="line">    <span class="comment">#        index  index.html  index.htm;</span></span><br><span class="line">    <span class="comment">#    &#125;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#HTTPS  server</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment">#server  &#123;</span></span><br><span class="line">    <span class="comment">#    listen        443  ssl;</span></span><br><span class="line">    <span class="comment">#    server_name   localhost;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_certificate      cert.pem;</span></span><br><span class="line">    <span class="comment">#    ssl_certificate_key  cert.key;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_session_cache    shared:SSL:1m;</span></span><br><span class="line">    <span class="comment">#    ssl_session_timeout  5m;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_ciphers  HIGH:!aNULL:!MD5;</span></span><br><span class="line">    <span class="comment">#    ssl_prefer_server_ciphers  on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    location  /  &#123;</span></span><br><span class="line">    <span class="comment">#        root   html;</span></span><br><span class="line">    <span class="comment">#        index  index.html  index.htm;</span></span><br><span class="line">    <span class="comment">#    &#125;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>没关系，我们把其中的注释都删掉，除掉了注释之后的nginx代码，现在只有22行了。感觉好多了</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br><span class="line"><span class="section">events</span> &#123;  </span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">http</span> &#123;  </span><br><span class="line">    <span class="attribute">include</span>       mime.types;  </span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;  </span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;  </span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;  </span><br><span class="line">    <span class="section">server</span> &#123;  </span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;  </span><br><span class="line">        <span class="attribute">server_name</span>  localhost;  </span><br><span class="line">        <span class="section">location</span> / &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  </span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="attribute">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  /50x.html;  </span><br><span class="line">        <span class="section">location</span> = /50x.html &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<p><strong>注解版本：</strong></p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#nginx进程数，建议设置为等于CPU总核心数。  </span></span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br><span class="line"><span class="comment"># 事件区块开始  </span></span><br><span class="line"><span class="section">events</span> &#123;  </span><br><span class="line">    <span class="comment">#单个进程最大连接数（最大连接数=连接数*进程数）  </span></span><br><span class="line">    <span class="comment">#根据硬件调整，和前面工作进程配合起来用，尽量大，但是别把cpu跑到100%就行。每个进程允许的最多连接数，理论上每台nginx服务器的最大连接数为。  </span></span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">#设定http服务器，利用它的反向代理功能提供负载均衡支持  </span></span><br><span class="line"><span class="section">http</span> &#123;  </span><br><span class="line">    <span class="comment">#include：导入外部文件mime.types，将所有types提取为文件，然后导入到nginx配置文件中  </span></span><br><span class="line">    <span class="attribute">include</span>       mime.types;  </span><br><span class="line">     <span class="comment">#默认文件类型  </span></span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;  </span><br><span class="line">    <span class="comment">#开启高效文件传输模式，sendfile指令指定nginx是否调用sendfile函数来输出文件，对于普通应用设为 on，如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络I/O处理速度，降低系统的负载。注意：如果图片显示不正常把这个改成off。  </span></span><br><span class="line">    <span class="comment">#sendfile指令指定 nginx 是否调用sendfile 函数（zero copy 方式）来输出文件，对于普通应用，必须设为on。如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络IO处理速度，降低系统uptime。  </span></span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;  </span><br><span class="line">      <span class="comment">#长连接超时时间，单位是秒  </span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;  </span><br><span class="line">    <span class="comment"># 第一个Server区块开始，表示一个独立的虚拟主机站点  </span></span><br><span class="line">    <span class="section">server</span> &#123;  </span><br><span class="line">        <span class="comment"># 提供服务的端口，默认80  </span></span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;  </span><br><span class="line">        <span class="comment"># 提供服务的域名主机名  </span></span><br><span class="line">        <span class="attribute">server_name</span>  localhost;  </span><br><span class="line">        <span class="comment">#对 &quot;/&quot; 启用反向代理,第一个location区块开始  </span></span><br><span class="line">        <span class="section">location</span> / &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  <span class="comment">#服务默认启动目录  </span></span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm; <span class="comment"># 默认的首页文件，多个用空格分开  </span></span><br><span class="line">        &#125;  </span><br><span class="line">         <span class="comment"># 错误页面路由  </span></span><br><span class="line">        <span class="attribute">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  /50x.html; <span class="comment"># 出现对应的http状态码时，使用50x.html回应客户  </span></span><br><span class="line">        <span class="section">location</span> = /50x.html &#123; <span class="comment"># location区块开始，访问50x.html  </span></span><br><span class="line">            <span class="attribute">root</span>   html;  <span class="comment"># 指定对应的站点目录为html  </span></span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="二、整体基本理解"><a href="#二、整体基本理解" class="headerlink" title="二、整体基本理解"></a><strong>二、整体基本理解</strong></h3><p>虽然上面有了注解，但是看起来还是很迷糊。接着解释：我们可以把**<code>nginx.conf</code>**分为三个部分进行理解：</p>
+<ul>
+<li>第一部分：<strong>全局块</strong> </li>
+<li>第二部分：<strong>events块</strong> </li>
+<li>第三部分：<strong>http块</strong></li>
+</ul>
+<p><strong>对应图解：</strong></p>
+<p><img src="https://s21.ax1x.com/2024/12/16/pAqOqVH.png" alt="nginx.conf分块图解"></p>
+<h4 id="全局块："><a href="#全局块：" class="headerlink" title="全局块："></a><strong>全局块：</strong></h4><p><strong>作用：</strong>从配置文件开始到 <code>events</code>块之间的内容，主要会设置一些影响nginx服务器整体运行的配置指令，主要包括配置<strong>运行 <code>Nginx</code></strong><br><strong>服务器的用户（组）</strong>、<strong>允许生成的 <code>worker process</code> 数</strong>，<strong>进程 <code>PID</code> 存放路径</strong>、<strong>日志存放路径</strong>和<strong>类型以及配置文件的引入</strong>等。</p>
+<p>比如上面第一行配置的</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br></pre></td></tr></table></figure>
+
+
+<p>这是 <code>Nginx</code> 服务器并发处理服务的关键配置，<code>worker_processes</code> 值越大，可以支持的并发处理量也越多，但是 会受到硬件、软件等设备的制约。</p>
+<h4 id="events块："><a href="#events块：" class="headerlink" title="events块："></a><strong><code>events</code>块：</strong></h4><p>作用：<code>events</code> 块涉及的指令主要影响 <code>Nginx</code> 服务器与用户的网络连接，常用的设置包括是否开启对多 <code>work process</code>下的网络连接进行序列化，是否 允许同时接收多个网络连接，选取哪种事件驱动模型来处理连接请求，每个<code> word process</code> 可以同时支持的最大连接数等。</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br></pre></td></tr></table></figure>
+
+
+<p>上述例子就表示每个 <code>work process</code> 支持的最大连接数为 <code>1024</code>。</p>
+<p>这部分的配置对 <code>Nginx</code> 的性能影响较大，在实际中应该灵活配置。</p>
+<h4 id="http块："><a href="#http块：" class="headerlink" title="http块："></a><strong>http块：</strong></h4><p><strong>作用：</strong>这算是 <code>Nginx</code> 服务器配置中最频繁的部分，代理、缓存和日志定义等绝大多数功能和第三方模块的配置都在这里。</p>
+<blockquote>
+<p>需要注意的是：<code>http</code> 块也可以包括 <strong>http全局块</strong>、<strong>server 块</strong>。</p>
+</blockquote>
+<ul>
+<li><p><strong>http全局块</strong></p>
+<ul>
+<li>http全局块配置的指令包括<strong>文件引入</strong>、**<code>MIME-TYPE</code> 定义<strong>、</strong>日志自定义<strong>、</strong>连接超时时间<strong>、</strong>单链接请求数上限**等。</li>
+</ul>
+<ul>
+<li><p><strong>server 块</strong></p>
+<ul>
+<li><p>这块和虚拟主机有密切关系，虚拟主机从用户角度看，和一台独立的硬件主机是完全一样的，该技术的产生是为了 节省互联网服务器硬件成本。</p>
+<ul>
+<li><p>每个 http 块可以包括多个 server 块，而每个 server 块就相当于一个虚拟主机。 </p>
+</li>
+<li><p>而每个 server 块也分为全局 server 块，以及可以同时包含多个 locaton 块。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>全局 server 块</strong></p>
+<ul>
+<li>最常见的配置是本虚拟机主机的监听配置和本虚拟主机的名称或<code>IP</code>配置。</li>
+</ul>
+</li>
+<li><p><strong>location 块</strong></p>
+<ul>
+<li>一个 <code>server</code> 块可以配置多个 <code>location</code> 块。</li>
+<li>这块的主要作用是基于 <code>Nginx</code> 服务器接收到的请求字符串（例如 server_name&#x2F;uri-string），对虚拟主机名称 （也可以是<code>IP</code>别名）之外的字符串（例如 前面的 <code>/uri-string</code>）进行匹配，对特定的请求进行处理。地址定向、数据缓存和应答控制等功能，还有许多第三方模块的配置也在这里进行。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>对应图解：</strong></p>
+<p><img src="https://s21.ax1x.com/2024/12/16/pAqO7rD.png" alt="nginx.conf三部分"></p>
+<h3 id="三、最简单的上线"><a href="#三、最简单的上线" class="headerlink" title="三、最简单的上线"></a><strong>三、最简单的上线</strong></h3><p>以上，我们就知道了nginx整体大致的结构，以及每部分的结构是用于做什么的。接下来我们就修改nginx关键位置来实现我们网站的代理功能。看着nginx配置很繁琐，但是如果你只是需要上线一个网站，那么你只需要去修改两个地方即可：</p>
+<p><img src="https://s21.ax1x.com/2024/12/16/pAqOIxK.png" alt="上线"></p>
+<p>我们可以使用默认简单的配置，然后指定<code>server_name</code>和<code>root</code>，主要是告诉nginx代理的<code>ip</code>是xxx，然后我放在服务器的文件在bbb文件夹即可。nginx便会在用户访问这个ip时，自动的将bbb文件夹中的<code>index.html</code>返回到浏览器来展示页面。</p>
+<h3 id="四、-Nginx-优化："><a href="#四、-Nginx-优化：" class="headerlink" title="四、&#96;Nginx 优化："></a><strong>四、&#96;Nginx 优化：</strong></h3><h4 id="1-前端history模式404问题："><a href="#1-前端history模式404问题：" class="headerlink" title="1. 前端history模式404问题："></a><strong>1. 前端<code>history模式404</code>问题：</strong></h4><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">location</span> / &#123;  </span><br><span class="line">    <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+
+<p>这段代码的作用是，当用户刷新页面时，Nginx会先检查当前<code>URL</code>是否存在，如果不存在，就会尝试访问<code>index.htm</code>l，从而可以正常显示页面。</p>
+<p><img src="https://s21.ax1x.com/2024/12/16/pAqO526.png"></p>
+<h4 id="2-反向代理："><a href="#2-反向代理：" class="headerlink" title="2. 反向代理："></a><strong>2. 反向代理：</strong></h4><p>相信大家作为前端都了解跨域问题，目前前端的主流解决跨域的方式就是</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line">1. 开发生产cors解决 </span><br><span class="line">2. 开发proxy，生产nginx解决。 </span><br></pre></td></tr></table></figure>
+
+<p><strong>如何配置：</strong></p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#接口端  </span></span><br><span class="line"><span class="section">location</span> /police/ &#123;  </span><br><span class="line">    <span class="attribute">proxy_pass</span>   http://192.168.1.182:8852/police/;  </span><br><span class="line">    <span class="attribute">proxy_redirect</span> default;  </span><br><span class="line">    <span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>;  </span><br><span class="line">    <span class="attribute">proxy_connect_timeout</span>   <span class="number">60</span>;  </span><br><span class="line">    <span class="attribute">proxy_send_timeout</span>      <span class="number">60</span>;  </span><br><span class="line">    <span class="attribute">proxy_read_timeout</span>      <span class="number">90</span>;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<p><strong>具体位置：</strong></p>
+<p><img src="https://s21.ax1x.com/2024/12/16/pAqOTKO.png"></p>
+<p><strong>理解：</strong></p>
+<p><strong>这段代码的意思：</strong>大致就是如果遇到以<code>/police</code>请求开头的接口，那么就去访问这个ip地址(<code>http://192.168.1.182:8852/police/</code>)的后台端口。</p>
+<p><strong>例如：</strong>我们通过<code>axios</code>去访问<code>/police/getList</code>这个后台接口时，nginx会将这个请求转发到ip端口为<code>http://192.168.1.182:8852</code>的后台中，后台将结果返回给nginx，nginx再把结果给到浏览器，实现反向代理。</p>
+<p><strong>定义多个端口的反向代理：</strong></p>
+<p>copy上面的，直接修改<code>代理头</code>和<code>proxy_pass</code>即可。</p>
+<p><img src="https://s21.ax1x.com/2024/12/16/pAqOHqe.png"></p>
+<h4 id="3-开启gzip："><a href="#3-开启gzip：" class="headerlink" title="3. 开启gzip："></a><strong>3. 开启<code>gzip</code>：</strong></h4><p><strong>作用：</strong></p>
+<p>开启<code>gzip</code>对于前端来说还是比较重要的，浏览器加载的包大概能节约一半的空间。例如首页需要加载<code>a.js</code>文件，该文件为<code>900kb</code>，在开启<code>gzip</code>之后，浏览器会去加载<code>a.js</code>经过<code>gzip</code>之后的文件<code>a.js.gz</code>，大概只有<code>450kb</code>，能够很好的提升浏览速度。</p>
+<p><strong>如何配置：</strong></p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">gzip</span> <span class="literal">on</span>; <span class="comment"># 默认off，是否开启gzip  </span></span><br><span class="line"><span class="attribute">gzip_types</span> text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 上面两个开启基本就能跑起了，下面的愿意折腾就了解一下  </span></span><br><span class="line"><span class="attribute">gzip_static</span> <span class="literal">on</span>;  </span><br><span class="line"><span class="attribute">gzip_proxied</span> any;  </span><br><span class="line"><span class="attribute">gzip_vary</span> <span class="literal">on</span>;  </span><br><span class="line"><span class="attribute">gzip_comp_level</span> <span class="number">6</span>;  </span><br><span class="line"><span class="attribute">gzip_buffers</span> <span class="number">16</span> <span class="number">8k</span>;  </span><br><span class="line"><span class="comment"># gzip_min_length 1k;  </span></span><br><span class="line"><span class="attribute">gzip_http_version</span> <span class="number">1</span>.<span class="number">1</span>;  </span><br></pre></td></tr></table></figure>
+
+<p><strong>具体位置：</strong></p>
+<p><img src="https://s21.ax1x.com/2024/12/16/pAqOLad.png"></p>
+<h4 id="4-维护页面："><a href="#4-维护页面：" class="headerlink" title="4. 维护页面："></a><strong>4. 维护页面：</strong></h4><p><strong>作用：</strong></p>
+<p>在系统进行维护升级时，用户打开我们的网站看到的维护页面。</p>
+<p><strong>如何配置：</strong></p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 系统临时维护请打开下面这行注释，并重启nginx,维护完毕后请注释下年这行,并重启nginx  </span></span><br><span class="line"> <span class="comment"># rewrite ^(.*)$ /maintainace.html break;  </span></span><br></pre></td></tr></table></figure>
+
+<p><strong>具体位置：</strong></p>
+<p><img src="https://www.helloimg.com/i/2024/12/16/676009b0b09fe.png"></p>
+<h4 id="5-一个ip上线多个网站："><a href="#5-一个ip上线多个网站：" class="headerlink" title="5. 一个ip上线多个网站："></a><strong>5. 一个<code>ip</code>上线多个网站：</strong></h4><p><strong>作用：</strong></p>
+<p>只有一个<code>ip</code>。利用<code>nginx</code>上线多个网站。例如访问<code>192.168.1.154:8080</code>访问我们的个人博客网站，访问<code>192.168.1.154:8081</code>访问我们的直播网站。</p>
+<p><strong>如何配置：</strong></p>
+<p>直接复制<code>server块</code>即可，一个<code>server块</code>就代表了一个<code>website</code>，需要改端口和文件的路径等内容。</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 第一个网站：个人博客项目配置  </span></span><br><span class="line">  <span class="section">server</span> &#123;  </span><br><span class="line">   <span class="attribute">listen</span>       <span class="number">8080</span>;  </span><br><span class="line">   <span class="attribute">root</span>         /data/www/hexo;  </span><br><span class="line">   <span class="attribute">index</span>        index.html;  </span><br><span class="line">   <span class="section">location</span> / &#123;  </span><br><span class="line">    <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html; <span class="comment"># 路由模式history的修改  </span></span><br><span class="line">   &#125;  </span><br><span class="line">  &#125;  </span><br><span class="line">  </span><br><span class="line"> <span class="comment"># 第二个网站：直播网站项目配置  </span></span><br><span class="line"> <span class="section">server</span> &#123;  </span><br><span class="line">  <span class="attribute">listen</span>       <span class="number">8081</span>;  </span><br><span class="line">  <span class="attribute">root</span>         /data/www/geov;  </span><br><span class="line">  <span class="attribute">index</span>        index.html;  </span><br><span class="line">  <span class="section">location</span> / &#123;&#125;  </span><br><span class="line"> &#125;  </span><br></pre></td></tr></table></figure>
+
+<p><strong>具体位置：</strong></p>
+<p><img src="https://www.helloimg.com/i/2024/12/16/676009c92572f.png"></p>
+<p><strong>注意点：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 这里的8081一定要你的服务器开放了这个端口才可以使用，否则你按照这个配置了也会访问不到（让后端去配）。 </span><br><span class="line">2. 如果是云服务器（比如阿里云，腾讯云），则需要开放相应的入口为8081,否则用户访问不到。 </span><br></pre></td></tr></table></figure>
+
+<h4 id="6-动静分离："><a href="#6-动静分离：" class="headerlink" title="6. 动静分离："></a><strong>6. 动静分离：</strong></h4><p><strong>作用：</strong></p>
+<p>在Web开发中，通常来说，动态资源其实就是指那些后台资源，而静态资源就是指<code>HTML</code>，<code>JavaScript</code>，<code>CSS</code>，<code>img</code>等文件。</p>
+<p>一般来说，都需要将动态资源和静态资源分开，将静态资源部署在<code>Nginx</code>上，当一个请求来的时候，如果是静态资源的请求，就直接到<code>nginx</code>配置的静态资源目录下面获取资源，如果是动态资源的请求，<code>nginx</code>利用反向代理的原理，把请求转发给后台应用去处理，从而实现动静分离。</p>
+<p>在使用前后端分离之后，可以很大程度的提升静态资源的访问速度，同时在开过程中也可以让前后端开发并行可以有效的提高开发时间，也可以有些的减少联调时间 。</p>
+<p><strong>解析：</strong></p>
+<p>实际上我们在代理前端的<code>html</code>和接口时就已经做到了动静分离。我们打包后的dist包实际上就是纯静态的资源，所以直接访问<code>nginx</code>静态资源服务器，就不需要经过后台的tomcat。访问接口时，就需要<code>nginx</code>先去访问后台服务器，拿到结果再给到浏览器</p>
+<p><img src="https://www.helloimg.com/i/2024/12/16/676009ecead58.png"></p>
+<p><strong>图解：</strong></p>
+<p><img src="https://www.helloimg.com/i/2024/12/16/676009f06bafe.png"></p>
+<p><strong>如何配置（其实是优化，因为一般配置会有动静分离）：</strong></p>
+<p>假设有比较大的图片等需要放置到服务器上，然后通过<code>nginx</code>来转发。或者是有一个纯前端的开源项目（如<code>pdf.js</code>），也需要放在服务器上。如果放在本地代码包，打包出来体积会很大。</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">location</span> /image/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> /static/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> /car/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> <span class="regexp">~ .*\.(html|htm|gif|jpg|jpeg|bmp|png|ico|js|css)$</span> &#123;  </span><br><span class="line">  <span class="attribute">root</span> /Users/dalaoyang/Downloads/static;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<p><strong>具体位置：</strong></p>
+<p><img src="https://www.helloimg.com/i/2024/12/16/676009f2b03de.png"></p>
+<h4 id="7-其他优化"><a href="#7-其他优化" class="headerlink" title="7. 其他优化"></a><strong>7. 其他优化</strong></h4><p>这里只讲了一些<code>nginx</code>基础的知识和一些基础的优化，基本上够用了。但是如果你需要追求更高的性能，那么可以添加其他的优化，只需要根据一些搜索到的文章内容<code>copy</code>过来就行了，<code>nginx</code>主要还是配置多一些，但是理解了整体结构和脉络的话，其实就还是蛮简单的。这里就不做过多的讲解了。</p>
+<h3 id="五、Nginx基础命令：安装，启动，重启，关闭"><a href="#五、Nginx基础命令：安装，启动，重启，关闭" class="headerlink" title="五、Nginx基础命令：安装，启动，重启，关闭"></a><strong>五、<code>Nginx</code>基础命令：安装，启动，重启，关闭</strong></h3><ol>
+<li><strong>安装<code>nginx</code>：</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install nginx  </span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>看是否有<code>nginx</code>进程：</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -anput | grep nginx  </span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong>查看服务器端口占用情况：</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -ntlp  </span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><strong><code>nginx</code>启动:</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx  </span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><strong><code>nginx</code>重启:</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -s reload  </span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li><strong>关闭<code>nginx</code>：</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -s stop	<span class="comment"># 快速停止nginx </span></span><br><span class="line">nginx -s quit	<span class="comment"># 完整有序的停止nginx </span></span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li><strong>查看默认的<code>nginx</code>配置文件路径：</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -t  </span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p><strong>注：</strong>如果有<code>nginx.conf</code>配置的更改，需要重启<code>nginx</code>配置才会生效。如果只是更改<code>dist</code>包<code>/html</code>，则可以不重启<code>nginx</code>。</p>
+</blockquote>
+<h3 id="六、参考文章："><a href="#六、参考文章：" class="headerlink" title="六、参考文章："></a><strong>六、参考文章：</strong></h3><ul>
+<li><a href="https://github.com/rui-rui-an/nginxpages">rui-rui-an&#x2F;nginxpages: nginx的配置文件</a></li>
+<li><a href="https://juejin.cn/post/6844904144235413512">Nginx 从入门到实践，万字详解！ - 掘金</a></li>
+<li><a href="https://blog.csdn.net/qq_44691484/article/details/126354702">Nginx nginx.conf配置文件详解_nginxconf配置详解-CSDN博客</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>网站部署</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>网站部署</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《软件建模与设计》复习提纲</title>
     <url>https://kfufys.github.io/posts/21099.html</url>
     <content><![CDATA[<h3 id="第一章-软件工程基础"><a href="#第一章-软件工程基础" class="headerlink" title="第一章  软件工程基础"></a><strong>第一章  软件工程基础</strong></h3><ol>
@@ -2217,198 +2404,6 @@
       </tags>
   </entry>
   <entry>
-    <title>终极 Nginx 配置指南（超详细）</title>
-    <url>https://kfufys.github.io/posts/59687.html</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p>对于自己上线项目的前端来说，nginx也是必须要了解和熟悉的，查了很多的nginx文章，看着写的都很详细，但是却没有了整体的概念。这里就重新梳理一遍，也理清思路。</p>
-<p>我们在安装nginx之后，会自动生成很多的文件，但是nginx.conf这个文件是我们的核心，如何去正确的修改和优化它是nginx的核心。</p>
-<p>首先我们可以先看下原本的配置，你会觉得无所适从，因为感觉这个鬼东西也太多了吧。而且感觉根本就不理解，也不知道该怎么写。下面，就一步一步的教你如何入门到熟悉</p>
-<h3 id="一、nginx-conf原本配置到解释"><a href="#一、nginx-conf原本配置到解释" class="headerlink" title="一、nginx.conf原本配置到解释"></a><strong>一、<code>nginx.conf</code>原本配置到解释</strong></h3><p>看到这个118行是不是觉得有点害怕</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#user  nobody;</span></span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">#error_log  logs/error.log;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  notice;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  info;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#pid        logs/nginx.pid;</span></span><br><span class="line"></span><br><span class="line"><span class="section">events</span> &#123;</span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">    <span class="attribute">include</span>        mime.types;</span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#log_format  main  &#x27;$remote_addr  -  $remote_user  [$time_local]  &quot;$request&quot;  &#x27;</span></span><br><span class="line">    <span class="comment">#            &#x27;$status  $body_bytes_sent  &quot;$http_referer&quot;  &#x27;</span></span><br><span class="line">    <span class="comment">#            &#x27;&quot;$http_user_agent&quot;  &quot;$http_x_forwarded_for&quot;&#x27;;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#access_log  logs/access.log  main;</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;</span><br><span class="line">    <span class="comment">#tcp_nopush     on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#keepalive_timeout  0;</span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#gzip  on;</span></span><br><span class="line"></span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>        <span class="number">80</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  localhost;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#charset  koi8-r;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#access_log  logs/host.access.log  main;</span></span><br><span class="line"></span><br><span class="line">        <span class="section">location</span> / &#123;</span><br><span class="line">            <span class="attribute">root</span>   html;</span><br><span class="line">            <span class="attribute">index</span>  index.html  index.htm;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#error_page  404  /404.html;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#redirect  server  error  pages  to  the  static  page  /50x.html</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="attribute">error_page</span>  <span class="number">500</span>  <span class="number">502</span>  <span class="number">503</span>  <span class="number">504</span>  /50x.html;</span><br><span class="line">        <span class="section">location</span> = /50x.html &#123;</span><br><span class="line">            <span class="attribute">root</span>   html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#proxy  the  PHP  scripts  to  Apache  listening  on  127.0.0.1:80</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  \.php$  &#123;</span></span><br><span class="line">        <span class="comment">#    proxy_pass  http://127.0.0.1;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#pass  the  PHP  scripts  to  FastCGI  server  listening  on  127.0.0.1:9000</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  \.php$  &#123;</span></span><br><span class="line">        <span class="comment">#    root         html;</span></span><br><span class="line">        <span class="comment">#    fastcgi_pass  127.0.0.1:9000;</span></span><br><span class="line">        <span class="comment">#    fastcgi_index  index.php;</span></span><br><span class="line">        <span class="comment">#    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</span></span><br><span class="line">        <span class="comment">#    include       fastcgi_params;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#deny  access  to  .htaccess  files,  if  Apache&#x27;s  document  root</span></span><br><span class="line">        <span class="comment">#concurs  with  nginx&#x27;s  one</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  /\.ht  &#123;</span></span><br><span class="line">        <span class="comment">#    deny  all;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#another  virtual  host  using  mix  of  IP-,  name-,  and  port-based  configuration</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment">#server  &#123;</span></span><br><span class="line">    <span class="comment">#    listen        8000;</span></span><br><span class="line">    <span class="comment">#    listen        somename:8080;</span></span><br><span class="line">    <span class="comment">#    server_name   somename   alias   another.alias;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    location  /  &#123;</span></span><br><span class="line">    <span class="comment">#        root   html;</span></span><br><span class="line">    <span class="comment">#        index  index.html  index.htm;</span></span><br><span class="line">    <span class="comment">#    &#125;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#HTTPS  server</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment">#server  &#123;</span></span><br><span class="line">    <span class="comment">#    listen        443  ssl;</span></span><br><span class="line">    <span class="comment">#    server_name   localhost;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_certificate      cert.pem;</span></span><br><span class="line">    <span class="comment">#    ssl_certificate_key  cert.key;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_session_cache    shared:SSL:1m;</span></span><br><span class="line">    <span class="comment">#    ssl_session_timeout  5m;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_ciphers  HIGH:!aNULL:!MD5;</span></span><br><span class="line">    <span class="comment">#    ssl_prefer_server_ciphers  on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    location  /  &#123;</span></span><br><span class="line">    <span class="comment">#        root   html;</span></span><br><span class="line">    <span class="comment">#        index  index.html  index.htm;</span></span><br><span class="line">    <span class="comment">#    &#125;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<p>没关系，我们把其中的注释都删掉，除掉了注释之后的nginx代码，现在只有22行了。感觉好多了</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br><span class="line"><span class="section">events</span> &#123;  </span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">http</span> &#123;  </span><br><span class="line">    <span class="attribute">include</span>       mime.types;  </span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;  </span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;  </span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;  </span><br><span class="line">    <span class="section">server</span> &#123;  </span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;  </span><br><span class="line">        <span class="attribute">server_name</span>  localhost;  </span><br><span class="line">        <span class="section">location</span> / &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  </span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="attribute">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  /50x.html;  </span><br><span class="line">        <span class="section">location</span> = /50x.html &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-<p><strong>注解版本：</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#nginx进程数，建议设置为等于CPU总核心数。  </span></span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br><span class="line"><span class="comment"># 事件区块开始  </span></span><br><span class="line"><span class="section">events</span> &#123;  </span><br><span class="line">    <span class="comment">#单个进程最大连接数（最大连接数=连接数*进程数）  </span></span><br><span class="line">    <span class="comment">#根据硬件调整，和前面工作进程配合起来用，尽量大，但是别把cpu跑到100%就行。每个进程允许的最多连接数，理论上每台nginx服务器的最大连接数为。  </span></span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">#设定http服务器，利用它的反向代理功能提供负载均衡支持  </span></span><br><span class="line"><span class="section">http</span> &#123;  </span><br><span class="line">    <span class="comment">#include：导入外部文件mime.types，将所有types提取为文件，然后导入到nginx配置文件中  </span></span><br><span class="line">    <span class="attribute">include</span>       mime.types;  </span><br><span class="line">     <span class="comment">#默认文件类型  </span></span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;  </span><br><span class="line">    <span class="comment">#开启高效文件传输模式，sendfile指令指定nginx是否调用sendfile函数来输出文件，对于普通应用设为 on，如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络I/O处理速度，降低系统的负载。注意：如果图片显示不正常把这个改成off。  </span></span><br><span class="line">    <span class="comment">#sendfile指令指定 nginx 是否调用sendfile 函数（zero copy 方式）来输出文件，对于普通应用，必须设为on。如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络IO处理速度，降低系统uptime。  </span></span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;  </span><br><span class="line">      <span class="comment">#长连接超时时间，单位是秒  </span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;  </span><br><span class="line">    <span class="comment"># 第一个Server区块开始，表示一个独立的虚拟主机站点  </span></span><br><span class="line">    <span class="section">server</span> &#123;  </span><br><span class="line">        <span class="comment"># 提供服务的端口，默认80  </span></span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;  </span><br><span class="line">        <span class="comment"># 提供服务的域名主机名  </span></span><br><span class="line">        <span class="attribute">server_name</span>  localhost;  </span><br><span class="line">        <span class="comment">#对 &quot;/&quot; 启用反向代理,第一个location区块开始  </span></span><br><span class="line">        <span class="section">location</span> / &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  <span class="comment">#服务默认启动目录  </span></span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm; <span class="comment"># 默认的首页文件，多个用空格分开  </span></span><br><span class="line">        &#125;  </span><br><span class="line">         <span class="comment"># 错误页面路由  </span></span><br><span class="line">        <span class="attribute">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  /50x.html; <span class="comment"># 出现对应的http状态码时，使用50x.html回应客户  </span></span><br><span class="line">        <span class="section">location</span> = /50x.html &#123; <span class="comment"># location区块开始，访问50x.html  </span></span><br><span class="line">            <span class="attribute">root</span>   html;  <span class="comment"># 指定对应的站点目录为html  </span></span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="二、整体基本理解"><a href="#二、整体基本理解" class="headerlink" title="二、整体基本理解"></a><strong>二、整体基本理解</strong></h3><p>虽然上面有了注解，但是看起来还是很迷糊。接着解释：我们可以把**<code>nginx.conf</code>**分为三个部分进行理解：</p>
-<ul>
-<li>第一部分：<strong>全局块</strong> </li>
-<li>第二部分：<strong>events块</strong> </li>
-<li>第三部分：<strong>http块</strong></li>
-</ul>
-<p><strong>对应图解：</strong></p>
-<p><img src="https://s21.ax1x.com/2024/12/16/pAqOqVH.png" alt="nginx.conf分块图解"></p>
-<h4 id="全局块："><a href="#全局块：" class="headerlink" title="全局块："></a><strong>全局块：</strong></h4><p><strong>作用：</strong>从配置文件开始到 <code>events</code>块之间的内容，主要会设置一些影响nginx服务器整体运行的配置指令，主要包括配置<strong>运行 <code>Nginx</code></strong><br><strong>服务器的用户（组）</strong>、<strong>允许生成的 <code>worker process</code> 数</strong>，<strong>进程 <code>PID</code> 存放路径</strong>、<strong>日志存放路径</strong>和<strong>类型以及配置文件的引入</strong>等。</p>
-<p>比如上面第一行配置的</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br></pre></td></tr></table></figure>
-
-
-<p>这是 <code>Nginx</code> 服务器并发处理服务的关键配置，<code>worker_processes</code> 值越大，可以支持的并发处理量也越多，但是 会受到硬件、软件等设备的制约。</p>
-<h4 id="events块："><a href="#events块：" class="headerlink" title="events块："></a><strong><code>events</code>块：</strong></h4><p>作用：<code>events</code> 块涉及的指令主要影响 <code>Nginx</code> 服务器与用户的网络连接，常用的设置包括是否开启对多 <code>work process</code>下的网络连接进行序列化，是否 允许同时接收多个网络连接，选取哪种事件驱动模型来处理连接请求，每个<code> word process</code> 可以同时支持的最大连接数等。</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br></pre></td></tr></table></figure>
-
-
-<p>上述例子就表示每个 <code>work process</code> 支持的最大连接数为 <code>1024</code>。</p>
-<p>这部分的配置对 <code>Nginx</code> 的性能影响较大，在实际中应该灵活配置。</p>
-<h4 id="http块："><a href="#http块：" class="headerlink" title="http块："></a><strong>http块：</strong></h4><p><strong>作用：</strong>这算是 <code>Nginx</code> 服务器配置中最频繁的部分，代理、缓存和日志定义等绝大多数功能和第三方模块的配置都在这里。</p>
-<blockquote>
-<p>需要注意的是：<code>http</code> 块也可以包括 <strong>http全局块</strong>、<strong>server 块</strong>。</p>
-</blockquote>
-<ul>
-<li><p><strong>http全局块</strong></p>
-<ul>
-<li>http全局块配置的指令包括<strong>文件引入</strong>、**<code>MIME-TYPE</code> 定义<strong>、</strong>日志自定义<strong>、</strong>连接超时时间<strong>、</strong>单链接请求数上限**等。</li>
-</ul>
-<ul>
-<li><p><strong>server 块</strong></p>
-<ul>
-<li><p>这块和虚拟主机有密切关系，虚拟主机从用户角度看，和一台独立的硬件主机是完全一样的，该技术的产生是为了 节省互联网服务器硬件成本。</p>
-<ul>
-<li><p>每个 http 块可以包括多个 server 块，而每个 server 块就相当于一个虚拟主机。 </p>
-</li>
-<li><p>而每个 server 块也分为全局 server 块，以及可以同时包含多个 locaton 块。</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>全局 server 块</strong></p>
-<ul>
-<li>最常见的配置是本虚拟机主机的监听配置和本虚拟主机的名称或<code>IP</code>配置。</li>
-</ul>
-</li>
-<li><p><strong>location 块</strong></p>
-<ul>
-<li>一个 <code>server</code> 块可以配置多个 <code>location</code> 块。</li>
-<li>这块的主要作用是基于 <code>Nginx</code> 服务器接收到的请求字符串（例如 server_name&#x2F;uri-string），对虚拟主机名称 （也可以是<code>IP</code>别名）之外的字符串（例如 前面的 <code>/uri-string</code>）进行匹配，对特定的请求进行处理。地址定向、数据缓存和应答控制等功能，还有许多第三方模块的配置也在这里进行。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong>对应图解：</strong></p>
-<p><img src="https://s21.ax1x.com/2024/12/16/pAqO7rD.png" alt="nginx.conf三部分"></p>
-<h3 id="三、最简单的上线"><a href="#三、最简单的上线" class="headerlink" title="三、最简单的上线"></a><strong>三、最简单的上线</strong></h3><p>以上，我们就知道了nginx整体大致的结构，以及每部分的结构是用于做什么的。接下来我们就修改nginx关键位置来实现我们网站的代理功能。看着nginx配置很繁琐，但是如果你只是需要上线一个网站，那么你只需要去修改两个地方即可：</p>
-<p><img src="https://s21.ax1x.com/2024/12/16/pAqOIxK.png" alt="上线"></p>
-<p>我们可以使用默认简单的配置，然后指定<code>server_name</code>和<code>root</code>，主要是告诉nginx代理的<code>ip</code>是xxx，然后我放在服务器的文件在bbb文件夹即可。nginx便会在用户访问这个ip时，自动的将bbb文件夹中的<code>index.html</code>返回到浏览器来展示页面。</p>
-<h3 id="四、-Nginx-优化："><a href="#四、-Nginx-优化：" class="headerlink" title="四、&#96;Nginx 优化："></a><strong>四、&#96;Nginx 优化：</strong></h3><h4 id="1-前端history模式404问题："><a href="#1-前端history模式404问题：" class="headerlink" title="1. 前端history模式404问题："></a><strong>1. 前端<code>history模式404</code>问题：</strong></h4><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">location</span> / &#123;  </span><br><span class="line">    <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-
-<p>这段代码的作用是，当用户刷新页面时，Nginx会先检查当前<code>URL</code>是否存在，如果不存在，就会尝试访问<code>index.htm</code>l，从而可以正常显示页面。</p>
-<p><img src="https://s21.ax1x.com/2024/12/16/pAqO526.png"></p>
-<h4 id="2-反向代理："><a href="#2-反向代理：" class="headerlink" title="2. 反向代理："></a><strong>2. 反向代理：</strong></h4><p>相信大家作为前端都了解跨域问题，目前前端的主流解决跨域的方式就是</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line">1. 开发生产cors解决 </span><br><span class="line">2. 开发proxy，生产nginx解决。 </span><br></pre></td></tr></table></figure>
-
-<p><strong>如何配置：</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#接口端  </span></span><br><span class="line"><span class="section">location</span> /police/ &#123;  </span><br><span class="line">    <span class="attribute">proxy_pass</span>   http://192.168.1.182:8852/police/;  </span><br><span class="line">    <span class="attribute">proxy_redirect</span> default;  </span><br><span class="line">    <span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>;  </span><br><span class="line">    <span class="attribute">proxy_connect_timeout</span>   <span class="number">60</span>;  </span><br><span class="line">    <span class="attribute">proxy_send_timeout</span>      <span class="number">60</span>;  </span><br><span class="line">    <span class="attribute">proxy_read_timeout</span>      <span class="number">90</span>;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-<p><strong>具体位置：</strong></p>
-<p><img src="https://s21.ax1x.com/2024/12/16/pAqOTKO.png"></p>
-<p><strong>理解：</strong></p>
-<p><strong>这段代码的意思：</strong>大致就是如果遇到以<code>/police</code>请求开头的接口，那么就去访问这个ip地址(<code>http://192.168.1.182:8852/police/</code>)的后台端口。</p>
-<p><strong>例如：</strong>我们通过<code>axios</code>去访问<code>/police/getList</code>这个后台接口时，nginx会将这个请求转发到ip端口为<code>http://192.168.1.182:8852</code>的后台中，后台将结果返回给nginx，nginx再把结果给到浏览器，实现反向代理。</p>
-<p><strong>定义多个端口的反向代理：</strong></p>
-<p>copy上面的，直接修改<code>代理头</code>和<code>proxy_pass</code>即可。</p>
-<p><img src="https://s21.ax1x.com/2024/12/16/pAqOHqe.png"></p>
-<h4 id="3-开启gzip："><a href="#3-开启gzip：" class="headerlink" title="3. 开启gzip："></a><strong>3. 开启<code>gzip</code>：</strong></h4><p><strong>作用：</strong></p>
-<p>开启<code>gzip</code>对于前端来说还是比较重要的，浏览器加载的包大概能节约一半的空间。例如首页需要加载<code>a.js</code>文件，该文件为<code>900kb</code>，在开启<code>gzip</code>之后，浏览器会去加载<code>a.js</code>经过<code>gzip</code>之后的文件<code>a.js.gz</code>，大概只有<code>450kb</code>，能够很好的提升浏览速度。</p>
-<p><strong>如何配置：</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">gzip</span> <span class="literal">on</span>; <span class="comment"># 默认off，是否开启gzip  </span></span><br><span class="line"><span class="attribute">gzip_types</span> text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 上面两个开启基本就能跑起了，下面的愿意折腾就了解一下  </span></span><br><span class="line"><span class="attribute">gzip_static</span> <span class="literal">on</span>;  </span><br><span class="line"><span class="attribute">gzip_proxied</span> any;  </span><br><span class="line"><span class="attribute">gzip_vary</span> <span class="literal">on</span>;  </span><br><span class="line"><span class="attribute">gzip_comp_level</span> <span class="number">6</span>;  </span><br><span class="line"><span class="attribute">gzip_buffers</span> <span class="number">16</span> <span class="number">8k</span>;  </span><br><span class="line"><span class="comment"># gzip_min_length 1k;  </span></span><br><span class="line"><span class="attribute">gzip_http_version</span> <span class="number">1</span>.<span class="number">1</span>;  </span><br></pre></td></tr></table></figure>
-
-<p><strong>具体位置：</strong></p>
-<p><img src="https://s21.ax1x.com/2024/12/16/pAqOLad.png"></p>
-<h4 id="4-维护页面："><a href="#4-维护页面：" class="headerlink" title="4. 维护页面："></a><strong>4. 维护页面：</strong></h4><p><strong>作用：</strong></p>
-<p>在系统进行维护升级时，用户打开我们的网站看到的维护页面。</p>
-<p><strong>如何配置：</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 系统临时维护请打开下面这行注释，并重启nginx,维护完毕后请注释下年这行,并重启nginx  </span></span><br><span class="line"> <span class="comment"># rewrite ^(.*)$ /maintainace.html break;  </span></span><br></pre></td></tr></table></figure>
-
-<p><strong>具体位置：</strong></p>
-<p><img src="https://www.helloimg.com/i/2024/12/16/676009b0b09fe.png"></p>
-<h4 id="5-一个ip上线多个网站："><a href="#5-一个ip上线多个网站：" class="headerlink" title="5. 一个ip上线多个网站："></a><strong>5. 一个<code>ip</code>上线多个网站：</strong></h4><p><strong>作用：</strong></p>
-<p>只有一个<code>ip</code>。利用<code>nginx</code>上线多个网站。例如访问<code>192.168.1.154:8080</code>访问我们的个人博客网站，访问<code>192.168.1.154:8081</code>访问我们的直播网站。</p>
-<p><strong>如何配置：</strong></p>
-<p>直接复制<code>server块</code>即可，一个<code>server块</code>就代表了一个<code>website</code>，需要改端口和文件的路径等内容。</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 第一个网站：个人博客项目配置  </span></span><br><span class="line">  <span class="section">server</span> &#123;  </span><br><span class="line">   <span class="attribute">listen</span>       <span class="number">8080</span>;  </span><br><span class="line">   <span class="attribute">root</span>         /data/www/hexo;  </span><br><span class="line">   <span class="attribute">index</span>        index.html;  </span><br><span class="line">   <span class="section">location</span> / &#123;  </span><br><span class="line">    <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html; <span class="comment"># 路由模式history的修改  </span></span><br><span class="line">   &#125;  </span><br><span class="line">  &#125;  </span><br><span class="line">  </span><br><span class="line"> <span class="comment"># 第二个网站：直播网站项目配置  </span></span><br><span class="line"> <span class="section">server</span> &#123;  </span><br><span class="line">  <span class="attribute">listen</span>       <span class="number">8081</span>;  </span><br><span class="line">  <span class="attribute">root</span>         /data/www/geov;  </span><br><span class="line">  <span class="attribute">index</span>        index.html;  </span><br><span class="line">  <span class="section">location</span> / &#123;&#125;  </span><br><span class="line"> &#125;  </span><br></pre></td></tr></table></figure>
-
-<p><strong>具体位置：</strong></p>
-<p><img src="https://www.helloimg.com/i/2024/12/16/676009c92572f.png"></p>
-<p><strong>注意点：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 这里的8081一定要你的服务器开放了这个端口才可以使用，否则你按照这个配置了也会访问不到（让后端去配）。 </span><br><span class="line">2. 如果是云服务器（比如阿里云，腾讯云），则需要开放相应的入口为8081,否则用户访问不到。 </span><br></pre></td></tr></table></figure>
-
-<h4 id="6-动静分离："><a href="#6-动静分离：" class="headerlink" title="6. 动静分离："></a><strong>6. 动静分离：</strong></h4><p><strong>作用：</strong></p>
-<p>在Web开发中，通常来说，动态资源其实就是指那些后台资源，而静态资源就是指<code>HTML</code>，<code>JavaScript</code>，<code>CSS</code>，<code>img</code>等文件。</p>
-<p>一般来说，都需要将动态资源和静态资源分开，将静态资源部署在<code>Nginx</code>上，当一个请求来的时候，如果是静态资源的请求，就直接到<code>nginx</code>配置的静态资源目录下面获取资源，如果是动态资源的请求，<code>nginx</code>利用反向代理的原理，把请求转发给后台应用去处理，从而实现动静分离。</p>
-<p>在使用前后端分离之后，可以很大程度的提升静态资源的访问速度，同时在开过程中也可以让前后端开发并行可以有效的提高开发时间，也可以有些的减少联调时间 。</p>
-<p><strong>解析：</strong></p>
-<p>实际上我们在代理前端的<code>html</code>和接口时就已经做到了动静分离。我们打包后的dist包实际上就是纯静态的资源，所以直接访问<code>nginx</code>静态资源服务器，就不需要经过后台的tomcat。访问接口时，就需要<code>nginx</code>先去访问后台服务器，拿到结果再给到浏览器</p>
-<p><img src="https://www.helloimg.com/i/2024/12/16/676009ecead58.png"></p>
-<p><strong>图解：</strong></p>
-<p><img src="https://www.helloimg.com/i/2024/12/16/676009f06bafe.png"></p>
-<p><strong>如何配置（其实是优化，因为一般配置会有动静分离）：</strong></p>
-<p>假设有比较大的图片等需要放置到服务器上，然后通过<code>nginx</code>来转发。或者是有一个纯前端的开源项目（如<code>pdf.js</code>），也需要放在服务器上。如果放在本地代码包，打包出来体积会很大。</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">location</span> /image/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> /static/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> /car/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> <span class="regexp">~ .*\.(html|htm|gif|jpg|jpeg|bmp|png|ico|js|css)$</span> &#123;  </span><br><span class="line">  <span class="attribute">root</span> /Users/dalaoyang/Downloads/static;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-<p><strong>具体位置：</strong></p>
-<p><img src="https://www.helloimg.com/i/2024/12/16/676009f2b03de.png"></p>
-<h4 id="7-其他优化"><a href="#7-其他优化" class="headerlink" title="7. 其他优化"></a><strong>7. 其他优化</strong></h4><p>这里只讲了一些<code>nginx</code>基础的知识和一些基础的优化，基本上够用了。但是如果你需要追求更高的性能，那么可以添加其他的优化，只需要根据一些搜索到的文章内容<code>copy</code>过来就行了，<code>nginx</code>主要还是配置多一些，但是理解了整体结构和脉络的话，其实就还是蛮简单的。这里就不做过多的讲解了。</p>
-<h3 id="五、Nginx基础命令：安装，启动，重启，关闭"><a href="#五、Nginx基础命令：安装，启动，重启，关闭" class="headerlink" title="五、Nginx基础命令：安装，启动，重启，关闭"></a><strong>五、<code>Nginx</code>基础命令：安装，启动，重启，关闭</strong></h3><ol>
-<li><strong>安装<code>nginx</code>：</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install nginx  </span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><strong>看是否有<code>nginx</code>进程：</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -anput | grep nginx  </span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li><strong>查看服务器端口占用情况：</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -ntlp  </span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li><strong><code>nginx</code>启动:</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx  </span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li><strong><code>nginx</code>重启:</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -s reload  </span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li><strong>关闭<code>nginx</code>：</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -s stop	<span class="comment"># 快速停止nginx </span></span><br><span class="line">nginx -s quit	<span class="comment"># 完整有序的停止nginx </span></span><br></pre></td></tr></table></figure>
-
-<ol start="7">
-<li><strong>查看默认的<code>nginx</code>配置文件路径：</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -t  </span><br></pre></td></tr></table></figure>
-
-
-<blockquote>
-<p><strong>注：</strong>如果有<code>nginx.conf</code>配置的更改，需要重启<code>nginx</code>配置才会生效。如果只是更改<code>dist</code>包<code>/html</code>，则可以不重启<code>nginx</code>。</p>
-</blockquote>
-<h3 id="六、参考文章："><a href="#六、参考文章：" class="headerlink" title="六、参考文章："></a><strong>六、参考文章：</strong></h3><ul>
-<li><a href="https://github.com/rui-rui-an/nginxpages">rui-rui-an&#x2F;nginxpages: nginx的配置文件</a></li>
-<li><a href="https://juejin.cn/post/6844904144235413512">Nginx 从入门到实践，万字详解！ - 掘金</a></li>
-<li><a href="https://blog.csdn.net/qq_44691484/article/details/126354702">Nginx nginx.conf配置文件详解_nginxconf配置详解-CSDN博客</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>网站部署</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>网站部署</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>About</title>
     <url>https://kfufys.github.io/posts/7477.html</url>
     <content><![CDATA[<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><hr>
@@ -2478,6 +2473,16 @@
         <tag>website</tag>
         <tag>log</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>test_img</title>
+    <url>https://kfufys.github.io/posts/c2bf146b.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>test_img</title>
+    <url>https://kfufys.github.io/posts/c2bf146b.html</url>
+    <content><![CDATA[<img src="https://kfufys.github.io/posts/c2bf146b/1.png">]]></content>
   </entry>
   <entry>
     <title>基于GitHub+hexo部署静态Blog</title>
