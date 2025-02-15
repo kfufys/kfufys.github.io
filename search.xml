@@ -212,515 +212,6 @@
       </tags>
   </entry>
   <entry>
-    <title>网络工程师考试知识点_01</title>
-    <url>https://kfufys.github.io/2024/11/23/Networking-Knowledge-Points-01/</url>
-    <content><![CDATA[<h4 id="一、计算机存储与中断相关"><a href="#一、计算机存储与中断相关" class="headerlink" title="一、计算机存储与中断相关"></a><strong>一、计算机存储与中断相关</strong><span id="more"></span></h4><ol>
-<li>常用的虚拟存储器由<strong>主存 - 辅存</strong>两级存储器组成。</li>
-<li>中断向量可提供<strong>中断程序的入口地址</strong>。</li>
-<li>DMA工作方式在<strong>主存与外设</strong>之间建立直接的数据通信。</li>
-</ol>
-<h4 id="二、项目管理与网络图表相关"><a href="#二、项目管理与网络图表相关" class="headerlink" title="二、项目管理与网络图表相关"></a><strong>二、项目管理与网络图表相关</strong></h4><ol>
-<li>PERT不能清晰描述各个任务之间的<strong>并行情况</strong>，甘特图不能清晰描述各个问题之间的<strong>依赖关系</strong>。</li>
-</ol>
-<h4 id="三、网络设备与协议相关"><a href="#三、网络设备与协议相关" class="headerlink" title="三、网络设备与协议相关"></a><strong>三、网络设备与协议相关</strong></h4><ol>
-<li>路由器出厂时，默认的串口封装协议是HDLC。</li>
-<li>报文摘要算法生成报文摘要的目的是防止发送的报文被篡改。</li>
-<li>PGP是支持电子<strong>邮件加密</strong>的协议。</li>
-<li>根域名服务器采用的<strong>迭代</strong>查询。</li>
-<li>中介域名服务器采用的是<strong>递归</strong>查询。</li>
-<li><strong>AH隧道模式：</strong>使用AH与IP报头来封装IP数据包并对整个数据包进行签名以获得完整性并进行身份验证。</li>
-<li><strong>ESP隧道模式：</strong>采用ESP与IP报头以及ESP身份验证尾端来封装IP数据包。</li>
-<li><strong>L2TP数据包封装格式：</strong>IP - UDP - L2TP - PPP。</li>
-<li>SNMP是在<strong>UDP</strong>协议之上的异步&#x2F;请求响应。</li>
-</ol>
-<h4 id="四、网络传输相关"><a href="#四、网络传输相关" class="headerlink" title="四、网络传输相关"></a><strong>四、网络传输相关</strong></h4><ol>
-<li><p>支持1000m以上传输距离的是<strong>1000 BASE-Lx</strong>。</p>
-</li>
-<li><p><strong>nslookup参数：</strong></p>
-<ul>
-<li><p><strong>Set all ：</strong>列出当前设置的默认选项。</p>
-</li>
-<li><p><strong>Set type &#x3D; mx ：</strong>查询本地域的邮件交换器信息。</p>
-</li>
-<li><p><strong>Server NAME ：</strong>由当前默认服务器切换到制定的名字服务器NAME。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>DNS服务器主要资源记录：</strong></p>
-<ul>
-<li><p><strong>A：</strong>域名到IP地址的映射。</p>
-</li>
-<li><p><strong>PTR：</strong>IP地址到域名的映射。</p>
-</li>
-<li><p><strong>MX：</strong>邮件服务器及优先级。</p>
-</li>
-<li><p><strong>CNAME：</strong>别名。</p>
-</li>
-<li><p><strong>NS：</strong>区域的授权服务器。</p>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="五、结构化布线系统相关"><a href="#五、结构化布线系统相关" class="headerlink" title="五、结构化布线系统相关"></a><strong>五、结构化布线系统相关</strong></h4><ol>
-<li><strong>工作区子系统：</strong>由终端设备到信息插座的整个区域，用于将用户终端设备连接到布线系统，主要包括信息插座、跳线、适配器。</li>
-<li><strong>水平布线子系统：</strong>是结构化综合布线系统中连接用户工作区与布线系统主干的子系统。</li>
-<li><strong>管理子系统：</strong>是结构化布线系统中对布线电缆进行端接及配线管理的子系统，通常设置在楼层的接线间内。</li>
-<li><strong>干线子系统：</strong>是结构化综合布线系统中连接各管理间、设备间的子系统，又称垂直子系统。</li>
-<li><strong>设备间子系统：</strong>主要是用来安放网络关键设备。并非每一个综合布线都有设备间子系统。</li>
-<li><strong>建筑群子系统：</strong>是结构化综合布线系统中由连接楼群之间的通信传输介质及各种支持设备组成的子系统。</li>
-</ol>
-<h4 id="六、xDSL相关"><a href="#六、xDSL相关" class="headerlink" title="六、xDSL相关"></a><strong>六、xDSL相关</strong></h4><ol>
-<li><strong>HDSL：</strong>中断距离可达3 - 5KM、传输速率2.048Mbits&#x2F;s。</li>
-<li><strong>ADSL：</strong>是一种非对称的DSL技术。</li>
-<li><strong>VDSL：</strong>是一种非对称的技术，也是DSL中传输速度最快的技术。</li>
-<li><strong>SDSL：</strong>单线路数字用户技术是对称的。</li>
-<li><strong>RADSL：</strong>速率自适应数字用户线技术，是采用非对称技术。</li>
-</ol>
-<h4 id="七、私有地址相关"><a href="#七、私有地址相关" class="headerlink" title="七、私有地址相关"></a><strong>七、私有地址相关</strong></h4><ol>
-<li><strong>A类：</strong>10.0.0.0 - 10.255.255.255。</li>
-<li><strong>B类：</strong>172.16.0.0 - 172.31.255.255。</li>
-<li><strong>C类：</strong>192.168.0.0 - 192.168.255.255。</li>
-</ol>
-<h4 id="八、阻止路由环路相关"><a href="#八、阻止路由环路相关" class="headerlink" title="八、阻止路由环路相关"></a><strong>八、阻止路由环路相关</strong></h4><ol>
-<li><p><strong>最大跳计数（Maximum Hop Count）</strong></p>
-<ul>
-<li><strong>原理：</strong><ul>
-<li>在许多路由协议（如 RIP）中，会为数据包经过的路由器数量设置一个最大值。例如，RIP 协议默认的最大跳数是 15。当一个数据包经过的路由器数量达到这个最大值时，该数据包将被丢弃。这是因为随着跳数的不断增加，网络环路的可能性也在增大。如果没有最大跳数的限制，数据包可能会在网络中无限循环，消耗网络资源。</li>
-</ul>
-</li>
-<li><strong>示例：</strong><ul>
-<li>假设有一个简单的网络拓扑，包括路由器 A、B、C、D 和 E，它们之间通过链路相连。如果一个数据包从路由器 A 出发，经过 B、C、D、E，然后又回到 A，并且这个过程不断循环，没有最大跳数限制，这个数据包就会一直在这个环路中传递。但如果设置了最大跳数为 5，当数据包经过 5 个路由器后，就会被丢弃，从而防止了无限循环。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>水平分割（Split Horizon）</strong></p>
-<ul>
-<li><strong>原理：</strong><ul>
-<li>水平分割规则规定，从一个接口学到的路由信息不会再从这个接口发送出去。这样可以避免路由器将从某个邻居学到的路由信息又发送回给这个邻居，从而防止产生路由环路。它基于一个简单的逻辑，即如果路由器已经从某个方向学到了到达某个网络的路由，那么它不应该再向这个方向通告这个路由，因为这个方向的邻居很可能就是通过它才学到这个路由的。</li>
-</ul>
-</li>
-<li><strong>示例：</strong><ul>
-<li>假设路由器 R1 和 R2 是邻居，它们之间通过接口 E0 相连。R1 通过接口 E0 向 R2 通告了到达网络 N 的路由。根据水平分割规则，R2 不会再通过接口 E0 向 R1 通告到达网络 N 的路由。这样就避免了 R1 和 R2 之间可能产生的路由环路。例如，在一个帧中继网络中，多个路由器通过虚电路相连，水平分割可以有效地防止路由信息在相邻路由器之间的来回传递，避免环路的形成。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>路由毒化（Route Poisoning）</strong></p>
-<ul>
-<li><strong>原理：</strong><ul>
-<li>当一个路由不可达时，路由器会将该路由标记为不可达（通常将其度量值设置为无穷大），并且向相邻路由器通告这个不可达信息。相邻路由器收到这个中毒的路由信息后，会更新自己的路由表，并且也会向它的相邻路由器通告这个不可达信息。这样，网络中的所有路由器都会快速地知道这个路由已经不可达，从而避免将数据包转发到这个不可达的路径上，防止了路由环路的产生。</li>
-</ul>
-</li>
-<li><strong>示例：</strong><ul>
-<li>比如在一个网络中有路由器 A、B、C。路由器 A 发现它到网络 X 的链路出现故障，它就会将到网络 X 的路由标记为不可达（如将跳数设置为 16，在 RIP 协议中表示不可达），并向路由器 B 通告这个中毒的路由。路由器 B 收到后更新自己的路由表，然后也向路由器 C 通告这个中毒的路由。这样，整个网络就会很快知道网络 X 不可达，避免了因为链路故障而可能导致的数据包在 A - B - C - A 这样的环路中转发。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>保持关闭（Hold - down）</strong></p>
-<ul>
-<li><p><strong>原理</strong></p>
-<p>：</p>
-<ul>
-<li>当路由器从邻居收到一个路由不可达的消息后，它会进入一个保持关闭状态。在这个状态下，路由器会忽略来自同一个邻居的关于这条路由的任何更新信息（通常会持续一段时间，如 180 秒）。这是因为在网络不稳定的情况下，可能会出现错误的路由更新信息。例如，当一条链路刚刚出现故障时，可能会因为网络的收敛过程而产生一些错误的更新，导致路由器错误地更新路由表，进而产生路由环路。保持关闭机制可以让路由器在一段时间内不被这些可能错误的更新所干扰，等待网络稳定后再更新路由表。</li>
-</ul>
-</li>
-<li><p><strong>示例：</strong></p>
-<ul>
-<li>假设路由器 R1 收到来自邻居 R2 的消息，说到达网络 Y 的路由不可达。R1 进入保持关闭状态。如果在这个状态期间，R2 又发送了一个关于网络 Y 的更新（可能是由于网络波动，这个更新是错误的），R1 会忽略这个更新。只有当保持关闭时间结束后，R1 才会考虑来自 R2 的关于网络 Y 的更新，这样就避免了在网络不稳定时，因为错误的更新而导致的路由环路。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="九、链路状态通告相关"><a href="#九、链路状态通告相关" class="headerlink" title="九、链路状态通告相关"></a><strong>九、链路状态通告相关</strong></h4><ol>
-<li><strong>链路状态通告（LSA - Link - State Advertisement）的定义与作用：</strong><ul>
-<li>链路状态通告是链路状态路由协议（如 OSPF、IS - IS）中的关键元素。它是一种包含了路由器自身以及其直连链路信息的数据包。这些信息包括接口的 IP 地址、子网掩码、链路的开销（cost）、链路的连接状态（是 up 还是 down）等。路由器通过在网络中泛洪 LSA，使得网络中的其他路由器能够了解整个网络的拓扑结构。</li>
-<li>例如，在一个企业网络中，使用 OSPF 协议。路由器 A 通过生成 LSA 来通告自己的接口连接到网络 192.168.1.0&#x2F;24，开销为 10，并且接口状态是 up。这个 LSA 会在网络中传播，让其他路由器知道如何到达这个网络以及相关的链路成本。</li>
-</ul>
-</li>
-<li><strong>LSA 的内容构成：</strong><ul>
-<li><strong>路由器标识符（Router ID）：</strong><ul>
-<li>这是一个用于唯一标识路由器的编号。在 OSPF 中，通常是路由器上最大的活动接口的 IP 地址，或者可以手动配置。它用于区分不同的路由器发送的 LSA。例如，在一个有多个路由器的网络中，路由器 A 的 Router ID 为 1.1.1.1，路由器 B 的 Router ID 为 2.2.2.2，这样其他路由器就可以根据 Router ID 来识别 LSA 的来源。</li>
-</ul>
-</li>
-<li><strong>链路类型（Link Type）：</strong><ul>
-<li>描述了路由器与其他设备之间链路的性质。常见的链路类型包括点到点链路（如两个路由器之间通过串行接口直接相连）、广播链路（如连接到以太网段）和非广播多路访问（NBMA，例如帧中继网络）。不同的链路类型在 LSA 中会有不同的表示方式，并且会影响路由计算和数据包转发。例如，在广播链路中，路由器需要选举出一个指定路由器（DR）和备份指定路由器（BDR）来管理 LSA 的泛洪过程。</li>
-</ul>
-</li>
-<li><strong>链路开销（Link Cost）：</strong><ul>
-<li>代表了通过该链路传输数据的代价。开销的计算可以基于链路的带宽、延迟等因素。例如，一条 100Mbps 的以太网链路的开销可能比一条 10Mbps 的以太网链路的开销小。开销是用于计算最短路径的重要参数，路由器会根据收到的 LSA 中的开销信息来选择到达目标网络的最优路径。</li>
-</ul>
-</li>
-<li><strong>邻居信息（Neighbor Information）：</strong><ul>
-<li>列出了与该路由器直接相连的其他路由器的标识符（如 Router ID）。这有助于构建完整的网络拓扑图。例如，路由器 A 在 LSA 中列出它的邻居是路由器 B 和路由器 C，它们的 Router ID 分别为 2.2.2.2 和 3.3.3.3，这样其他路由器收到这个 LSA 后，就可以知道路由器 A 与哪些路由器相连。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>LSA 的泛洪过程（Flooding）：</strong><ul>
-<li>当路由器生成一个新的 LSA 或者收到一个更新的 LSA 时，它会将这个 LSA 发送给除了接收该 LSA 的接口之外的所有接口。这个过程称为泛洪。例如，在一个由多个路由器组成的网状网络中，路由器 A 生成了一个新的 LSA，它会将这个 LSA 发送给与它相连的路由器 B、C 和 D。路由器 B 收到这个 LSA 后，会检查自己的链路状态数据库（LSDB），如果这个 LSA 是新的或者比自己已有的 LSA 更新（根据序列号、校验和等信息判断），它会将这个 LSA 存储到自己的 LSDB 中，然后再向它的其他邻居（除了发送这个 LSA 给它的路由器 A）泛洪这个 LSA。这个过程会一直持续，直到网络中的所有路由器都收到并存储了这个最新的 LSA。</li>
-<li>在这个过程中，为了防止 LSA 在网络中无限循环，每个 LSA 都有一个序列号。路由器通过比较序列号来判断 LSA 的新旧。当一个 LSA 的序列号达到最大值后，会重新从初始值开始，但同时会有其他机制（如老化时间）来确保 LSA 的准确性和及时性。</li>
-</ul>
-</li>
-<li><strong>LSA 的老化与更新：</strong><ul>
-<li><strong>老化（Aging）：</strong><ul>
-<li>LSA 有一个老化时间，通常在 OSPF 中是 30 分钟。从 LSA 产生开始计算时间，当老化时间到期后，这个 LSA 会被标记为无效。这是为了确保网络拓扑信息的及时性。如果网络拓扑发生变化，旧的 LSA 不应该一直存在于网络中影响路由决策。例如，一个路由器的接口连接的网络被重新划分了子网，旧的 LSA 中关于这个网络的信息就需要更新，老化机制可以促使这种更新。</li>
-</ul>
-</li>
-<li><strong>更新（Update）：</strong><ul>
-<li>当路由器的链路状态发生变化时（如接口的状态从 up 变为 down，或者链路的开销发生变化），它会生成一个新的 LSA 来更新网络中的其他路由器。这个新的 LSA 会包含更新后的链路信息，并且会按照泛洪过程在网络中传播。例如，路由器 A 和路由器 B 之间的链路带宽从 10Mbps 提升到 100Mbps，路由器 A 会更新关于这条链路的 LSA，将链路开销等信息更新后，在网络中泛洪这个新的 LSA，让其他路由器知道网络拓扑的这个变化。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="十、VTP、STP及ACL相关"><a href="#十、VTP、STP及ACL相关" class="headerlink" title="十、VTP、STP及ACL相关"></a><strong>十、VTP、STP及ACL相关</strong></h4><ol>
-<li><p><strong>访问控制列表的分类：</strong></p>
-<ul>
-<li><strong>标准访问控制列表：</strong>主要基于源 IP 地址进行过滤，通常使用的编号范围是 1 - 99 以及 1300 - 1999（不同的 IOS 版本可能略有差异）。它的功能相对较为基础，只能对数据包的源 IP 地址进行匹配判断，进而决定是否允许该数据包通过。</li>
-<li><strong>扩展访问控制列表：</strong>功能更强大，可以基于源 IP 地址、目的 IP 地址、协议类型、端口号等多种条件来进行过滤，编号范围一般是 100 - 199 以及 2000 - 2699。通过综合考虑多个因素，能实现更精细、更复杂的访问控制策略。</li>
-</ul>
-</li>
-<li><p><strong>具体 ACL 语句分析：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">（1）Access-list 10 deny host 10.37.168.137 与 access-list 10 deny 10.37.168.137 等价，拒绝任何来自 10.23.168.137 的分组。</span><br><span class="line">（2）Any 与 0.0.0.0 255.255.255.255 等价，表示整个 IP 地址范围。</span><br><span class="line">（3）Access-list 10 deny tcp any (源地址) host 172.16.30.2 (目的地址) eq 23/telnet ：禁止任何主机访问 10.37.16.30.2 的 telnet 服务。</span><br><span class="line">（4）Access-list 110 permit tcp host 192.168.177.2 host 172.22.89.26 eq www/80 ，允许源 IP 地址为 192.168.177.2 的主机，通过 TCP 协议访问目的 IP 地址为 172.22.89.26 的主机的 80 端口。</span><br><span class="line">（5）Access-list 110 deny tcp any host 172.22.89.26 eq 80 ，只允许指定的 192.168.177.2 访问该主机的 80 端口。</span><br><span class="line">（6）Access-list 110 permit ip any any ，放行其他所有流量。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>接口应用 ACL 规则：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Interface S0</span><br><span class="line">Ip access-group 110 out</span><br><span class="line">允许 192.168.177.2 以 http 方式访问主机 172.22.89.26，但是拒绝其他主机的数据流访问 172.22.89.26 的 web 服务（80 端口）。</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h4 id="十一、NAT相关："><a href="#十一、NAT相关：" class="headerlink" title="十一、NAT相关："></a><strong>十一、NAT相关：</strong></h4><ol>
-<li><p><strong>NAT（网络地址转换）分类：</strong></p>
-<ul>
-<li><p><strong>静态 NAT：</strong>内部本地地址和内部全局地址进行一对一的永久映射。</p>
-<ul>
-<li><p>示例配置（以 Cisco 路由器为例）：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 定义内部本地地址和内部全局地址的映射关系：</span><br><span class="line">Router(config)#ip nat inside source static 192.168.1.2 209.165.200.22</span><br><span class="line"># 指定内部接口和外部接口：</span><br><span class="line">Router(config)#interface FastEthernet0/0</span><br><span class="line">Router(config - if)#ip nat inside</span><br><span class="line">Router(config - if)#interface Serial0/0/0</span><br><span class="line">Router(config - if)#ip nat outside</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p><strong>动态 NAT：</strong>从一个内部全局地址池中动态地分配地址给内部本地地址（临时映射关系）。</p>
-<ul>
-<li><p>示例配置（以 Cisco 路由器为例）：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 进入全局配置模式：</span><br><span class="line">Router#conf t</span><br><span class="line"># 定义内部全局地址池。假设地址池名为 POOL1，包含的地址范围是 209.165.200.20 - 209.165.200.30：</span><br><span class="line">Router(config)#ip nat pool POOL1 209.165.200.20 209.165.200.30 netmask 255.255.255.0</span><br><span class="line"># 定义访问控制列表（ACL）来指定哪些内部本地地址可以进行 NAT 转换。假设允许 192.168.1.0/24 网段的主机进行 NAT 转换：</span><br><span class="line">Router(config)#access - list 1 permit 192.168.1.0 0.0.0.255</span><br><span class="line"># 将 ACL 与地址池关联，实现动态 NAT：</span><br><span class="line">Router(config)#ip nat inside source list 1 pool POOL1</span><br><span class="line"># 指定内部接口和外部接口（同静态 NAT）：</span><br><span class="line">Router(config)#interface FastEthernet0/0</span><br><span class="line">Router(config - if)#ip nat inside</span><br><span class="line">Router(config - if)#interface Serial0/0/0</span><br><span class="line">Router(config - if)#ip nat outside</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>配置 PAT（NAT 重载，也叫端口地址转换）：</strong></p>
-<ul>
-<li><p><strong>原理</strong>：PAT 通过使用不同的端口号来区分不同的内部本地地址的连接，使得多个内部本地地址可以共享一个或少数几个内部全局地址。这样可以更有效地利用 IP 地址资源，是一种多对一的地址转换方式。</p>
-</li>
-<li><p>示例配置（以 Cisco 路由器为例）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 进入全局配置模式：</span><br><span class="line">Router(config)#conf t</span><br><span class="line"># 定义访问控制列表（ACL）来指定哪些内部本地地址可以进行 NAT 转换。假设允许 192.168.1.0/24 网段的主机进行 NAT 转换：</span><br><span class="line">Router(config)#access - list 1 permit 192.168.1.0 0.0.0.255</span><br><span class="line"># 将 ACL 与外部接口关联，实现 PAT。假设外部接口是 Serial0/0/0：</span><br><span class="line">Router(config)#ip nat inside source list 1 interface Serial0/0/0 overload</span><br><span class="line"># 指定内部接口和外部接口（同静态 NAT）：</span><br><span class="line">Router(config)#interface FastEthernet0/0</span><br><span class="line">Router(config - if)#ip nat inside</span><br><span class="line">Router(config - if)#interface Serial0/0/0</span><br><span class="line">Router(config - if)#ip nat outside</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ol>
-<h4 id="十二、无线网络相关："><a href="#十二、无线网络相关：" class="headerlink" title="十二、无线网络相关："></a><strong>十二、无线网络相关：</strong></h4><ol>
-<li><p><strong>IEEE802.11标准：</strong></p>
-<ul>
-<li><p>IEEE802.11a：54Mbits&#x2F;s 、5GHz标准。</p>
-</li>
-<li><p>IEEE802.11b：对802.11的改进，以支持5.5.Mbits&#x2F;s和11Mbits&#x2F;s。</p>
-</li>
-<li><p>IEEE892.11g：54Mbits&#x2F;s、2.4GHz标准（向后兼容802.11b）。</p>
-</li>
-<li><p>IEEE892.11n：使用MIMO(多入多出天线)提高吞吐量。</p>
-</li>
-<li><p>Wi-fi联盟认可了802.11i标准，并称之为wap2。</p>
-</li>
-<li><p>Wap2使用了aes-ccmp机密技术。</p>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="十三、IPv6相关："><a href="#十三、IPv6相关：" class="headerlink" title="十三、IPv6相关："></a><strong>十三、IPv6相关：</strong></h4><ol>
-<li><p><strong>特殊IPv6地址：</strong></p>
-<ul>
-<li><p>0:0:0:0:0:0:0:0(::) 相当于IPv4地址0.0.0.0，通常在使用有状态DHCP配置时，用作主机的源地址。</p>
-</li>
-<li><p>0:0:0:0:0:0:0:1(::1) 相当于IPv4地址127.0.0.1。</p>
-</li>
-<li><p>0:0:0:0:0:0:192.168.100.1 在同时支持IPv4和IPv6的网络中，从IPv4地址转换而来的IPv6地址通常这样写。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>IPv6地址类型：</strong></p>
-<ul>
-<li><p>2000::&#x2F;3全局单播地址。</p>
-</li>
-<li><p>FC00::&#x2F;7唯一的本地单播地址范围。</p>
-</li>
-<li><p>FE80::&#x2F;10链路本地单播地址范围。</p>
-</li>
-<li><p>FF00::&#x2F;8组播地址范围 。</p>
-</li>
-<li><p>2001:0DB8::&#x2F;32保留举例和编写文档时使用。</p>
-</li>
-<li><p>3FFF:FFFF::&#x2F;32 保留举例和编写文档时使用。</p>
-</li>
-<li><p>2002::&#x2F;16 保留供6to4隧道技术使用。</p>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="十四、软件设计相关："><a href="#十四、软件设计相关：" class="headerlink" title="十四、软件设计相关："></a><strong>十四、软件设计相关：</strong></h4><p>在软件设计阶段，划分模块的原则是一个模块的控制范围应该在作用范围之内。</p>
-<ol>
-<li><strong>模块的控制范围和作用范围的定义：</strong><ul>
-<li><strong>控制范围：</strong>是指模块本身及其所有下属模块（如果有）的集合。</li>
-<li><strong>作用范围：</strong>是指受该模块内一个判定影响的所有其他模块的集合。</li>
-</ul>
-</li>
-<li><strong>为什么控制范围应该在作用范围之内：</strong><ul>
-<li><strong>可维护性：</strong>模块控制范围在作用范围内，当需对软件进行维护或修改时，开发人员可以很容易地确定修改一个模块可能会影响到哪些其他模块。</li>
-<li><strong>可读性和理解性</strong>：这种原则有助于提高软件设计的可读性和理解性。</li>
-<li><strong>降低耦合度</strong>：使得模块之间的耦合度降低。</li>
-</ul>
-</li>
-</ol>
-<h4 id="十五、软件项目活动图相关："><a href="#十五、软件项目活动图相关：" class="headerlink" title="十五、软件项目活动图相关："></a><strong>十五、软件项目活动图相关：</strong></h4><p>软件项目活动图中，松弛时间表示在不影响整个工作的前提下，完成该项任务有多少机动余地，松弛时间为0的任务构成了完成整个工程的关键任务，即所需时间最长的任务。</p>
-<h4 id="十六、其他网络概念相关"><a href="#十六、其他网络概念相关" class="headerlink" title="十六、其他网络概念相关"></a><strong>十六、其他网络概念相关</strong></h4><ol>
-<li><p><strong>VPI与CIR：</strong>VPI用来表示不同虚拟路径，CIR用来约束数据速率。</p>
-</li>
-<li><p><strong>代理ARP：</strong>是指由离目标主机最近的交换机假装目标主机回答源主机的ARP请求。</p>
-</li>
-<li><p><strong>距离矢量路由协议：</strong>每一个路由器接收的路由信息来源于它的邻居路由器。</p>
-</li>
-<li><p><strong>BGP4协议：</strong></p>
-<ul>
-<li><p>打开（open）报文建立两个路由之间的邻居关系。</p>
-</li>
-<li><p>更新（UPDATE）报文给出了新的路由信息。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>OSPF协议：</strong></p>
-<ul>
-<li><p>链路状态算法用于计算路由表。</p>
-</li>
-<li><p>一个路由器的链路状态只涉及与相邻路由器的连通状态。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>组播地址：</strong></p>
-<ul>
-<li><p>224.0.0.0 - 224.0.0.255为预留的组播地址（永久组地址），地址224.0.0.0保留不做分配，其他地址供路由协议用。</p>
-</li>
-<li><p>224.0.1.0 - 224.0.1.255是公用组播地址，可以用于Internet。</p>
-</li>
-<li><p>224.0.2.0 - 238.255.255.255可为用户可用的组播地址（临时组播地址），全网范围内有效。</p>
-</li>
-<li><p>239.0.0.0 - 239.255.255.255为本地管理组地址，仅在特定的本地范围内有效。</p>
-</li>
-<li><p>组播服务发送信息只需要发送一个分组，组内所有成员即可全部收到。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>数字签名验证：</strong>用户B收到用户A带数字签名的消息M，为了验证M的真实性，首先需要从CA获取用户的数字证书，并利用CA的公钥验证证书的真伪，然后利用A的公钥验证M的真实性。</p>
-</li>
-<li><p><strong>SDES算法</strong>：是一种共享秘钥算法。</p>
-</li>
-<li><p><strong>IPSEC安全关联：</strong>IPSEC中安全关联（security Associations）三元组是&lt;安全参数索引SPI，目标IP地址，安全协议&gt;。</p>
-</li>
-<li><p><strong>SNMP协议：</strong>当代理收到一个GET请求时，如果有一个值不可或者不能提供，则返回该实例的下一个值。</p>
-</li>
-<li><p><strong>SNMP网络管理：</strong>一个代理可以由多个管理站管理。</p>
-</li>
-<li><p><strong>自动专用IP地址：</strong></p>
-<ul>
-<li><p>用途是DHCP服务器的专用地址。</p>
-</li>
-<li><p>自动专用IP地址的范围是169.254.0.0 - 169.254.255.255。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>以太网结构填充字段：</strong>作用是保持最小帧长。</p>
-</li>
-<li><p><strong>物联网无线传感网络技术</strong>：是802.15.3ZigBee微微网。</p>
-</li>
-<li><p><strong>4G标准：</strong>LTE、LTE-Advanced、WIMAXII、Wireless MAN、UMB等属于4G标准。</p>
-</li>
-<li><p><strong>扩展频谱通信：</strong>主要思想是将信号散步到更宽的带宽上以减少阻塞和干扰的机会。</p>
-</li>
-<li><p><strong>CLOSE-WAIT状态：</strong>等待从本地用户发来的连接中断请求。</p>
-</li>
-<li><p><strong>BGP报文：</strong></p>
-<ul>
-<li><p>Open报文：用于建立邻居关系。</p>
-</li>
-<li><p>Update报文：用于发送新的路由信息。</p>
-</li>
-<li><p>Keepalive报文：用于对Open的应答和周期性地确认邻居关系。</p>
-</li>
-<li><p>Notification报文：用于报告监测到的错误。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>Vsftp服务：</strong>可以通过 service Vsftpd start&#x2F;down&#x2F;restart 三个命令来启动、关闭和重启，主配置文件名为 vsftpd.conf 。</p>
-</li>
-<li><p><strong>SNMP团体名设置：</strong></p>
-<ul>
-<li><p>R2(config)#snmp-server community publicr  ro ：设置snmp-server的只读团体名为publicr。</p>
-</li>
-<li><p>R2(config)# snmp-server community publicw  rw ：设置snmp-server的读写团体名为publicw。</p>
-</li>
-<li><p>Nat(inside) 1 0 或者 nat(inside) 1.0.0.0 0.0.0.0 表示内网的所有主机均可以访问外网。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>华为静态路由与默认路由配置：</strong></p>
-<ol>
-<li><p><strong>静态路由配置：</strong></p>
-<ul>
-<li><p><strong>配置基本静态路由：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system - view  # 进入系统视图，这是配置大多数华为设备命令的前提操作，后续配置都在此视图下进行</span><br><span class="line">[Huawei]ip route - static 192.168.2.0 255.255.255.0 192.168.1.2  # 配置一条静态路由</span><br><span class="line"># “ip route-static”是配置静态路由的命令关键字</span><br><span class="line"># “192.168.2.0”是目的网络地址，表示要去往的目标网络段</span><br><span class="line"># “255.255.255.0”是对应的子网掩码，用于精确界定目的网络的范围</span><br><span class="line"># “192.168.1.2”是下一跳地址，也就是数据包从本路由器发出去后，下一个接收该数据包的设备接口地址</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>配置负载分担的静态路由（多条链路到同一目的网络）：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Huawei]ip route - static 10.0.0.0 255.0.0.0 172.16.1.2  # 配置第一条到达目的网络10.0.0.0/8的静态路由</span><br><span class="line"># 这条命令含义与上面基本静态路由类似，这里目的网络是10.0.0.0，子网掩码255.0.0.0，下一跳为172.16.1.2，用于和下一条命令共同实现负载分担</span><br><span class="line">[Huawei]ip route - static 10.0.0.0 255.0.0.0 172.16.2.2  # 配置第二条到达目的网络10.0.0.0/8的静态路由</span><br><span class="line"># 同样是去往10.0.0.0/8网络，但下一跳变为172.16.2.2，两条链路可同时分担去往该目的网络的流量，实现负载分担功能</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>静态路由的优先级调整：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Huawei]ip route - static 10.0.0.0 255.0.0.0 172.16.1.2 preference 70  # 调整特定静态路由的优先级</span><br><span class="line"># “preference”关键字用于设置优先级，此处将之前配置的去往10.0.0.0/8网络且下一跳为172.16.1.2的静态路由优先级设置为70</span><br><span class="line"># 优先级数值越大，表示该路由相对其他到达相同目的网络的路由被优先选用的程度越低，默认静态路由优先级是60</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p><strong>默认路由配置：</strong></p>
-<ul>
-<li><p><strong>配置基本默认路由：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Huawei]ip route - static 0.0.0.0 0.0.0.0 192.168.1.1  # 配置默认路由</span><br><span class="line"># “0.0.0.0 0.0.0.0”表示所有网络（目的网络地址和子网掩码都为全0），意味着如果数据包的目的地址在本地路由表中没有更精确匹配的路由条目时，都将按照这条默认路由转发</span><br><span class="line"># “192.168.1.1”是下一跳地址，即数据包将被转发到这个地址对应的设备接口</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>配置默认路由的应用场景示例（完整配置）：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system - view  # 进入系统视图</span><br><span class="line">[Huawei]interface GigabitEthernet0/0/1  # 进入路由器的一个接口（假设是连接内部网络的接口）视图，GigabitEthernet0/0/1是接口名称，可根据实际设备接口情况改变</span><br><span class="line">[Huawei - GigabitEthernet0/0/1]ip address 192.168.1.254 255.255.255.0  # 配置该接口的IP地址为192.168.1.254，子网掩码为255.255.255.0，使其能与内部网络通信</span><br><span class="line">[Huawei - GigabitEthernet0/0/1]quit  # 退出接口视图，回到系统视图</span><br><span class="line">[Huawei]interface GigabitEthernet0/0/2  # 进入另一个接口（假设是连接外部网络，比如ISP的接口）视图</span><br><span class="line">[Huawei - GigabitEthernet0/0/2]ip address 202.100.1.2 255.255.255.252  # 配置该接口的IP地址为202.100.1.2，子网掩码为255.255.255.252，使其能与外部网络通信</span><br><span class="line">[Huawei - GigabitEthernet0/0/2]quit  # 退出接口视图，回到系统视图</span><br><span class="line">[Huawei]ip route - static 0.0.0.0 0.0.0.0 202.100.1.1  # 配置默认路由，下一跳地址为202.100.1.1，这样内部网络的数据可以通过这个接口转发出去访问互联网等外部网络</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p><strong>运算器：</strong>主要完成算术运算、逻辑运算和移位操作，主要部件有算术逻辑单元（ALU）、累加器（ACC）、标志寄存器、寄存器组、多路转换器、数据总线等。</p>
-</li>
-<li><p><strong>控制器：</strong>主要实现指令的读入、寄存、译码和执行过程有序地发出控制信号。控制器主要由指令寄存器、程序计数器、指令译码器、状态&#x2F;条件寄存器、时序产生器、微操作信号发生器组成。</p>
-</li>
-<li><p><strong>地址映射方式：</strong>有：全相联方式、直接方式和组相联方式。</p>
-</li>
-<li><p><strong>专利保护期限：</strong>根据我国《专利法》规定，发明专利的保护期限为20年，实用型和外观设计专利为10年。</p>
-</li>
-<li><p><strong>交换机与路由器连接：</strong>交换机与路由器用直通电缆连接。</p>
-</li>
-<li><p><strong>默认静态路由配置：</strong>例如： Router(config)#ip route 0.0.0.0 0.0.0.0 [exit-interface | ip-address ] 。</p>
-</li>
-<li><p><strong>cache与内存转换：</strong>cache与内存之间的转换是由硬件完成的。</p>
-</li>
-<li><p><strong>相联存储器：</strong>按内容方式访问。</p>
-</li>
-<li><p><strong>E1、E2、E3、T1载波数据速率：</strong></p>
-<ul>
-<li><p>E1载波的数据速率为2.048Mbit&#x2F;s。</p>
-</li>
-<li><p>E2由4个E1组成。</p>
-</li>
-<li><p>E3由4个E2组成。</p>
-</li>
-<li><p>T1载波的数据速率为1.544Mbit&#x2F;s。</p>
-</li>
-</ul>
-</li>
-<li><p>**<code>route print</code><strong>与</strong><code>netstat –r</code>**功能是一样的。</p>
-</li>
-<li><p>在Linux中，DNS服务器的配置文件为<code>/etc/resolv.conf</code>。</p>
-</li>
-<li><p>MD5算法属于<strong>摘要算法</strong>。</p>
-</li>
-<li><p><strong>集成windows身份验证</strong>是安全级别最高的验证方法。</p>
-</li>
-<li><p><strong>网络可用性</strong>是指用户可利用网络时间得百分比。</p>
-</li>
-<li><p><strong>网络管理功能：</strong>网络管理的5大功能为：配置管理、故障管理、计费管理、性能管理和安全管理。</p>
-</li>
-<li><p><strong>BGP传输协议及端口：</strong>BGP将TCP用作其传输协议，运行在TCP的179端口上（目的端口）。</p>
-</li>
-<li><p><strong>BGP邻居关系维持：</strong>BGP使用keepalive周期性的发送存活消息（60s）维持邻居关系。</p>
-</li>
-<li><p><strong>IPsec传输模式选择：</strong>IPsec传输模式和隧道模式，实现端到端的传输应选择传输模式。</p>
-</li>
-<li><p><strong>IPv6地址类型：</strong>IPv6地址分为3中类型，它们是单播地址、组播地址、任意播地址。</p>
-</li>
-<li><p><strong>802.11 MAC层算法：</strong>802.11在MAC层采用了CSMA&#x2F;CA算法。</p>
-</li>
-<li><p><strong>Ieee802.11n数据速率：</strong>Ieee802.11n提供的最高数据速率可达到300Mbit&#x2F;s。</p>
-</li>
-<li><p><strong>IEEE802.16标准：</strong>IEEE802.16工作组提出的无线接入系统空中接口标准是WiMAX。</p>
-</li>
-<li><p><strong>安全电子邮件协议：</strong>安全电子邮件使用PGP协议。</p>
-</li>
-<li><p>Linux服务器中DHCP服务器程序对应的配置文件的名称为<code>dhcp.conf</code>，该文件的默认目录是<code>/etc</code>。</p>
-</li>
-<li><p><strong>CSMA&#x2F;CD（载波监听多路访问 &#x2F; 碰撞检测）算法：</strong></p>
-<ul>
-<li><strong>基本原理：</strong><ul>
-<li>CSMA&#x2F;CD 主要用于解决在共享介质的以太网中，多个节点同时访问介质时可能产生的冲突问题。其工作过程主要包括载波监听、冲突检测和退避。</li>
-<li>当一个节点要发送数据时，首先会进行载波监听，也就是检测信道是否空闲。如果信道空闲，节点就开始发送数据；如果信道忙，则节点会等待，直到信道空闲。</li>
-</ul>
-</li>
-<li><strong>冲突检测机制：</strong><ul>
-<li>在发送数据过程中，节点同时进行冲突检测。这是因为电磁波在介质中传播需要时间，即使在发送数据时检测到信道空闲，但在数据传输过程中仍有可能与其他节点发送的数据发生冲突。</li>
-<li>节点通过比较自己发送的数据信号和从信道上接收到的信号来判断是否发生冲突。如果发现信号不同，就表示发生了冲突。</li>
-</ul>
-</li>
-<li><strong>退避算法：</strong><ul>
-<li>一旦检测到冲突，发送节点会立即停止发送数据，并执行退避算法。退避算法的目的是让发生冲突的节点在不同的时间重新尝试发送数据，以减少再次冲突的可能性。</li>
-<li>常用的退避算法是二进制指数退避算法。在这种算法中，冲突次数 n 决定了节点重新发送数据前需要等待的时间间隔。等待时间间隔的计算公式为，其中是一个在区间均匀分布的随机数，是一个与网络参数相关的常量（如时隙时间）。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>监听算法分类：</strong></p>
-<ul>
-<li><strong>非坚持 CSMA（Non - persistent CSMA）：</strong><ul>
-<li><strong>工作原理：</strong><ul>
-<li>当一个节点要发送数据时，首先监听信道。如果信道空闲，就立即发送数据；如果信道忙，则不再继续监听，而是随机等待一段时间后，再重新监听信道是否空闲。</li>
-</ul>
-</li>
-<li><strong>特点：</strong><ul>
-<li>这种算法的优点是减少了节点等待信道空闲的时间，因为一旦发现信道忙就不再监听，而是等待一段时间后重新尝试。缺点是如果有多个节点同时等待发送数据，可能会导致频繁的冲突，因为它们重新开始监听的时间是随机的，很可能再次同时发现信道空闲而同时发送数据。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>1 - 坚持 CSMA（1 - persistent CSMA）<ul>
-<li>工作原理<ul>
-<li>当节点要发送数据时，首先监听信道。如果信道空闲，就立即发送数据；如果信道忙，则持续监听，直到信道空闲后立即发送数据。</li>
-</ul>
-</li>
-<li>特点<ul>
-<li>优点是只要信道空闲，节点就能很快地发送数据，减少了等待时间。缺点是如果有两个或多个节点同时等待发送数据，当信道空闲时，它们会同时发送数据，导致冲突概率较高。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>P - 坚持 CSMA（P - persistent CSMA）<ul>
-<li>工作原理<ul>
-<li>用于时分复用的信道。当节点要发送数据时，首先监听信道。如果信道空闲，就以概率发送数据，以概率推迟发送；如果信道忙，则持续监听，直到信道空闲后，再按照上述概率规则发送数据。</li>
-</ul>
-</li>
-<li>特点<ul>
-<li>这种算法试图在非坚持 CSMA 和 1 - 坚持 CSMA 之间找到一个平衡。当时，它就变成了 1 - 坚持 CSMA；当时，它就变成了非坚持 CSMA。但是，它的实现相对复杂，而且要选择合适的值才能有效地降低冲突概率。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>IEEE802.3最小帧长：</strong>IEEE802.3规定的最小帧长为64字节。</p>
-</li>
-<li><p>Apache的主配置文件名是<code>http.conf</code>，改文件所在所在目录为<code>/etc</code>。</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>网工</category>
-      </categories>
-      <tags>
-        <tag>网络工程师</tag>
-        <tag>考试知识点</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JavaWeb期末复习题</title>
     <url>https://kfufys.github.io/2024/12/18/JavaWeb-Final-Review-Questions/</url>
     <content><![CDATA[<h3 id="选择题"><a href="#选择题" class="headerlink" title="选择题"></a><strong>选择题</strong></h3><p><strong>1.下面关于<code>Servlet</code>的描述，错误的是（B）</strong></p>
@@ -1179,1010 +670,6 @@
       <tags>
         <tag>期末复习</tag>
         <tag>JavaWeb</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《软件建模与设计》复习提纲</title>
-    <url>https://kfufys.github.io/2024/12/20/Software-modelling-and-design-revision-syllabus/</url>
-    <content><![CDATA[<h3 id="第一章-软件工程基础"><a href="#第一章-软件工程基础" class="headerlink" title="第一章  软件工程基础"></a><strong>第一章  软件工程基础</strong></h3><ol>
-<li><p><strong>软件的定义：</strong>软件&#x3D;程序+数据+文档。</p>
-</li>
-<li><p><strong>软件的特点：</strong>抽象性、可复制性、不会磨损、依赖性、开发效率低、开发费用高。</p>
-</li>
-<li><p><strong>软件危机：</strong>落后的软件生产方式无法满足迅速增长的计算机软件需求，从而导致软件开发与维护过程中出现一系列严重问题的现象。</p>
-</li>
-<li><p><strong>软件工程的定义：</strong>软件工程是研究和如何以系统性的、规范化的、可定量的过程化方法去开发和维护软件，以及如何把经过时间考验而证明正确的管理技术和当前能够得到的最好的技术方法结合起来。</p>
-</li>
-<li><p><strong>软件的生命周期：</strong><code>3</code>个时期<code>8</code>个阶段</p>
-</li>
-</ol>
-<img src="https://pic.imgdb.cn/item/67657501d0e0a243d4e744db.jpg" alt="wps1.jpg">
-
-<ol start="6">
-<li><p><strong>简述在软件开发中，每个阶段的主要任务是什么？具体包括哪些内容？主要解决哪些问题？</strong></p>
-<p>软件开发通常遵循一个生命周期，每个阶段都有其特定的任务和目标。以下是软件开发过程中常见的几个阶段及其主要任务：</p>
-<ul>
-<li><strong>需求分析阶段</strong>：<ul>
-<li><strong>任务</strong>：收集和分析用户需求，明确项目目标。</li>
-<li><strong>内容</strong>：与用户沟通，确定软件的功能需求、性能需求、用户界面需求等。</li>
-<li><strong>解决的问题</strong>：确保开发团队对用户需求有准确理解，避免开发出不符合用户期望的产品。</li>
-</ul>
-</li>
-<li><strong>系统设计阶段</strong>：<ul>
-<li><strong>任务</strong>：设计软件的架构和组件。</li>
-<li><strong>内容</strong>：包括高层设计（架构设计）和低层设计（详细设计），确定软件的模块划分、接口设计、数据结构等。</li>
-<li><strong>解决的问题</strong>：确保软件设计满足需求，具有良好的可扩展性、可维护性和性能。</li>
-</ul>
-</li>
-<li><strong>实现阶段</strong>：<ul>
-<li><strong>任务</strong>：编写代码实现设计。</li>
-<li><strong>内容</strong>：编码、单元测试、集成测试等。</li>
-<li><strong>解决的问题</strong>：将设计转化为实际的软件产品，并确保代码质量。</li>
-</ul>
-</li>
-<li><strong>测试阶段</strong>：<ul>
-<li><strong>任务</strong>：验证软件是否满足需求，发现并修复缺陷。</li>
-<li><strong>内容</strong>：包括单元测试、集成测试、系统测试、验收测试等。</li>
-<li><strong>解决的问题</strong>：确保软件质量，减少缺陷，提高用户满意度。</li>
-</ul>
-</li>
-<li><strong>部署阶段</strong>：<ul>
-<li><strong>任务</strong>：将软件部署到生产环境。</li>
-<li><strong>内容</strong>：包括配置管理、部署策略、备份和恢复计划等。</li>
-<li><strong>解决的问题</strong>：确保软件能够在用户环境中稳定运行。</li>
-</ul>
-</li>
-<li><strong>维护阶段</strong>：<ul>
-<li><strong>任务</strong>：对软件进行持续改进和支持。</li>
-<li><strong>内容</strong>：包括错误修复、性能优化、功能增强等。</li>
-<li><strong>解决的问题</strong>：适应环境变化，延长软件的使用寿命，提高用户满意度。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>简述软件建模与设计的概念，主要内容和作用？</strong></p>
-</li>
-</ol>
-<ul>
-<li><strong>概念</strong>： 软件建模是使用模型来表示软件系统的过程，这些模型可以是图形的或文本的，用于描述系统的结构、行为和功能。软件设计则是基于这些模型来定义软件的架构和组件的过程。</li>
-<li><strong>主要内容</strong>：<ul>
-<li><strong>需求建模</strong>：使用用例图、活动图等<code>UML</code>图表来描述用户需求。</li>
-<li><strong>架构设计</strong>：定义软件的高层结构，包括组件、接口和它们的交互。</li>
-<li><strong>详细设计</strong>：设计软件的内部结构，包括类图、序列图等。</li>
-<li><strong>数据建模</strong>：定义数据结构和数据库模式。</li>
-</ul>
-</li>
-<li><strong>作用</strong>：<ul>
-<li><strong>沟通工具</strong>：模型提供了一种直观的方式来沟通和理解复杂系统。</li>
-<li><strong>设计验证</strong>：通过模型可以提前发现设计中的问题，减少后期修改的成本。</li>
-<li><strong>文档化</strong>：模型作为文档的一部分，帮助新团队成员快速理解系统。</li>
-<li><strong>指导实现</strong>：详细的设计模型可以指导开发人员进行编码。</li>
-<li><strong>促进重用</strong>：良好的设计模型可以促进代码和设计的重用。</li>
-<li><strong>支持维护</strong>：清晰的模型有助于后期的维护和升级工作。</li>
-</ul>
-</li>
-</ul>
-<ol start="8">
-<li><p><strong>面向对象技术三大特征：</strong>封装、继承、多态。</p>
-</li>
-<li><p><strong>接口的概念及作用：</strong>接口只有方法体，没有具体实现，谁实现接口谁定义具体方法，大大提高程序的灵活性，推迟决策，提高面向对象的灵活性。</p>
-</li>
-</ol>
-<h3 id="第二章-常见的软件模型与RUP"><a href="#第二章-常见的软件模型与RUP" class="headerlink" title="第二章 常见的软件模型与RUP"></a><strong>第二章 常见的软件模型与<code>RUP</code></strong></h3><ol>
-<li><p><strong>常用软件开发模型：</strong>瀑布模型、原型模型、演化模型、螺旋模型，每个模型的特点、优点和缺点。</p>
-</li>
-<li><p><strong><code>RUP</code>（统一软件开发过程）：</strong>四个阶段：初始、细化、构造、交付。</p>
-</li>
-<li><p><strong>核心工作流：</strong>业务建模、需求、分析和设计、实现、测试、部署。</p>
-</li>
-<li><p><strong>核心支持工作流：</strong>配置和变更管理、项目管理、环境。</p>
-</li>
-<li><p><strong>主要特点(方法)：</strong>面向对象、用例驱动、以架构为中心、迭代（螺旋上升式的开发过程）、以质量控制和风险管理为目标，与<code>UML</code>相结合，适用性强等特点。</p>
-</li>
-</ol>
-<h3 id="第三章-UML与Rational-Rose概述"><a href="#第三章-UML与Rational-Rose概述" class="headerlink" title="第三章 UML与Rational Rose概述"></a><strong>第三章 <code>UML</code>与<code>Rational Rose</code>概述</strong></h3><ol>
-<li><p><strong><code>Unified Modeling Language</code>（统一建模语言）：</strong></p>
-<ul>
-<li>是一种为面向对象系统的产品进行说明、可视化和编制文档的一种标准语言，是非专利的第三代建模和规约语言。</li>
-<li><code>UML</code>是面向对象设计的建模工具，独立于任何具体程序设计语言。</li>
-<li><code>UML</code>立足于对事物的实体、性质、关系、结构、状态和动态变化过程的全程描述和反映。</li>
-<li><code>UML</code>可以从不同角度描述人们所观察到的软件视图，也可以描述在不同开发阶段中的软件的形态。</li>
-<li><code>UML</code>可以建立需求模型、逻辑模型、设计模型和实现模型等，但在领域模型方面存在不足。</li>
-<li><code>UML</code>采用一组图形符号来描述软件模型，这些图形符号具有简单、直观和规范的特点，开发人员学习和掌握起来比较简单。</li>
-<li>所描述的软件模型，可以直观地理解和阅读，由于具有规范性，所以能够保证模型的准确、一致。</li>
-<li>此外，<code>UML</code>是可以根据用户需要扩展的语言。</li>
-</ul>
-</li>
-<li><p><strong><code>UML</code>的构成：</strong></p>
-<img src="https://files.superbed.cn/proxy/7569696d6e2732327b7471786e336e686d786f7f7879337e7e326e69726f783274707c7a786e32292932797e322b2a2b282a282d2c792d782d7c2f292e7929782a2929797e33776d7a.jpg">
-</li>
-<li><p><strong><code>UML</code>模型分类：</strong></p>
-<p><code>UML</code>模型可以分为两大类：<strong>结构图</strong>和<strong>行为图</strong>。</p>
-<img src="https://pic.imgdb.cn/item/67657500d0e0a243d4e744da.png" alt="wps0.png"></li>
-</ol>
-<h3 id="第四章-用例图"><a href="#第四章-用例图" class="headerlink" title="第四章  用例图"></a><strong>第四章  用例图</strong></h3><p><em><strong>*要求掌握：</strong></em>用例图的相关概念，用例图建模，include和extend的区别及应用。</p>
-<ol>
-<li><p><strong>用例图的重要性：</strong>软件系统要实现的功能通过用例来捕获，接下来的所有分析、设计、实现、测试都由用例来驱动。因此，在面向对象的软件生产过程由用例驱动，所以用例图建模也是所有模型中最重要的一种模型。</p>
-</li>
-<li><p><strong>用例图：</strong>从用户的角度来描述对软件产品的需求，分析产品的系统功能，并指出各功能的操作者，用来捕获系统的动态性质。用例图具体来说主要用于描述角色及角色和用例之间的连接关系。说明谁要使用系统，以及使用该系统做些什么。</p>
-</li>
-<li><p><strong>用例图的模型元素：</strong>一个用例图包含了多个模型元素，如系统、参与者和用例，并且显示这些元素之间的各种关系。如泛化、关联和依赖。</p>
-</li>
-<li><p><strong>参与者：</strong>在系统之外与系统交互的人&#x2F;事物，直接并主动向系统发出动作并获得反馈。</p>
-</li>
-<li><p><strong>用例：</strong>与参与者交互的，并且给参与者提供可观测的有意义的结果的一系列活动的集合。</p>
-</li>
-<li><p><strong>用例图中可能存在的关系：</strong></p>
-<ul>
-<li><p><strong>参与者与用例之间：</strong>关联关系。</p>
-</li>
-<li><p><strong>参与者与参与者之间：</strong>泛化关系。</p>
-</li>
-<li><p><strong>用例与用例之间：</strong>泛化关系、包含关系、扩展关系。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>用例说明：</strong>用例说明包括用例名称、参与者、概述、基础事件流、可选事件流。</p>
-</li>
-<li><p><strong>用例的粒度：</strong>  </p>
-<ul>
-<li><p>用例粒度所描述的就是对功能的细化和综合程度。</p>
-</li>
-<li><p>用例的细化程度越高，粒度就越小，这个用例所包含的功能就越少。</p>
-</li>
-<li><p>用例的细化程度越低，粒度就越大，这个用例所包含的功能就越多。</p>
-</li>
-<li><p>用例并不是越多越好，一般一个好的系统，用例在大于10个小于50个之间，否则应该考虑一下粒度的选择是否合适了。</p>
-</li>
-<li><p>不管粒度如何选择，必须把握的原则是在同一个需求阶段，所有用例的粒度应该是同一个量级的。</p>
-</li>
-<li><p>同级别的用例粒度相同。</p>
-</li>
-</ul>
-</li>
-<li><p><strong><code>include</code>和<code>extend</code>的区别及应用：</strong></p>
-<ul>
-<li><p><code>include</code>关系表示一个用例可以被另一个用例包含，意味着在某些情况下，一个用例的执行需要另一个用例的执行来完成。</p>
-</li>
-<li><p><code>extend</code>关系表示一个用例可以扩展另一个用例，意味着在某些条件下，一个用例可以增加额外的行为到另一个用例中。</p>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="第五章-活动图"><a href="#第五章-活动图" class="headerlink" title="第五章 活动图"></a><strong>第五章 活动图</strong></h3><ol>
-<li><p><strong>活动图的定义：</strong></p>
-<ul>
-<li><strong>活动图</strong>：用于描述活动流程的图形称为活动图。</li>
-</ul>
-</li>
-<li><p><strong>活动图的主要元素：</strong></p>
-</li>
-</ol>
-<ul>
-<li><p><strong>活动</strong>：表示一个操作或一个步骤。</p>
-</li>
-<li><p><strong>泳道</strong>：用于将执行活动的参与者或组织进行分组。</p>
-</li>
-<li><p><strong>分支、分叉和汇合</strong>：表示活动流程中的决策点和合并点。</p>
-</li>
-<li><p><strong>对象流</strong>：表示对象在活动之间的流动。</p>
-</li>
-</ul>
-<img src="https://pic.imgdb.cn/item/67657501d0e0a243d4e744dd.png" alt="wps3.png">
-
-<ol start="3">
-<li><p><strong>活动图与流程图的区别：</strong></p>
-<ul>
-<li><p><strong>流程图</strong>着重描述处理过程，它的主要控制结构是顺序、分支和循环，各个处理之间有严格的顺序和时间关系。</p>
-</li>
-<li><p><strong>活动图</strong>描述的则是对象活动的顺序关系所遵循的规则，它着重表现的是系统的行为，而非系统的处理过程。</p>
-</li>
-<li><p>活动图能够表示并发活动的情形。</p>
-</li>
-<li><p>活动图是面向对象的，而流程图是面向过程的。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>泳道的作用：</strong></p>
-</li>
-</ol>
-<ul>
-<li><strong>泳道</strong>(<code>Swimlane</code>)是一种图形元素，用于将执行活动的参与者或组织进行分组。</li>
-<li>泳道可以帮助我们更清晰地描述系统中的不同参与者之间的交互和责任分配，使活动图的可读性更强。</li>
-</ul>
-<h3 id="第六章-类图和包"><a href="#第六章-类图和包" class="headerlink" title="第六章 类图和包"></a><strong>第六章 类图和包</strong></h3><p><em><strong>*要求掌握：</strong></em>类图的相关概念、类的属性、方法的表示、类之间的关系、属性和方法的可见性、类的版型及每种版型的作用。</p>
-<ol>
-<li><strong>类的定义：</strong><ul>
-<li>类是面向对象建模中的一个基本概念，它封装了数据（属性）和行为（方法）。类图用于描述系统中的类以及类之间的关系。</li>
-</ul>
-</li>
-</ol>
-<img src="https://pic.imgdb.cn/item/67657637d0e0a243d4e7451d.png" alt="wps6.png">
-
-<ol start="2">
-<li><p><strong>可见性：</strong></p>
-<ul>
-<li>在类图中，属性和方法的可见性用不同的标记表示，以指示它们是否可以被类外部访问。</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>可视性级别</th>
-<th>属性的图标</th>
-<th>操作的图标</th>
-<th>文本符号</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>私有</td>
-<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/privattr.gif" alt="该图显示属性的“Eclipse 私有”可视性装饰图标。"></td>
-<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/privoper.gif" alt="该图显示操作的“Eclipse 私有”可视性装饰图标。"></td>
-<td><code>-</code></td>
-<td>只有位于同一个容器中的类才能看见和使用这些类。</td>
-</tr>
-<tr>
-<td>保护</td>
-<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/protattr.gif" alt="该图显示属性的“Eclipse 保护”可视性装饰图标。"></td>
-<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/protoper.gif" alt="该图显示操作的“Eclipse 保护”可视性装饰图标。"></td>
-<td><code>#</code></td>
-<td>只有位于同一容器或该容器的后代中的类才能看见和使用这些类。</td>
-</tr>
-<tr>
-<td>公有</td>
-<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/publattr.gif" alt="该图显示属性的“Eclipse 公有”可视性装饰图标。"></td>
-<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/publoper.gif" alt="该图显示操作的“Eclipse 公有”可视性装饰图标。"></td>
-<td><code>+</code></td>
-<td>任何可以看见容器的类也就可以看见和使用这些类。</td>
-</tr>
-<tr>
-<td>包</td>
-<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/packattr.gif" alt="该图显示属性的“Eclipse 包”可视性装饰图标。"></td>
-<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/packoper.gif" alt="该图显示操作的“Eclipse 包”可视性装饰图标。"></td>
-<td><code>~</code></td>
-<td>只有与容器位于同一个包中的类才能看见和使用这些类。</td>
-</tr>
-</tbody></table>
-</li>
-<li><p><strong>类之间的关系：</strong></p>
-<table>
-<thead>
-<tr>
-<th>关系类型</th>
-<th align="left">描述</th>
-<th>比较</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>关联 <code>Association</code></td>
-<td align="left">一个类 <strong>持有对另一个类的引用</strong></td>
-<td>两者之间并无明显包含关系、仅仅就是持有引用</td>
-</tr>
-<tr>
-<td>聚合 <code>Aggregation</code></td>
-<td align="left">一个类 <strong>包含</strong> 另一个类</td>
-<td>后者必须作为前者的部件或是组成元素</td>
-</tr>
-<tr>
-<td>组合 <code>Composition</code></td>
-<td align="left">一个类 <strong>包含</strong> 另一个类</td>
-<td>后者除了作为前者的部件或是组成元素之外，还必须是专属于前者的部件(离开前者则无含义的部件)</td>
-</tr>
-<tr>
-<td>依赖 <code>Dependency</code></td>
-<td align="left">一个类 <strong>使用(依赖)</strong> 另一个类</td>
-<td>前者在方法中直接、简介使用到了后者类型(参数、局部变量、静态方法调用)</td>
-</tr>
-<tr>
-<td>泛化 <code>Generalization</code></td>
-<td align="left">一个类 <strong>继承&#x2F;扩展&#x2F;泛化</strong> 另一个类</td>
-<td>前者基于一个具体存在的类型(后者)进行扩展</td>
-</tr>
-<tr>
-<td>实现 <code>Realization</code></td>
-<td align="left">一个类 <strong>实现</strong> 一个接口的方法</td>
-<td>前者实现接口的方法后具备接口的特征，也就可以作为接口的类型(如 Runnable)被引用</td>
-</tr>
-</tbody></table>
-</li>
-<li><p><strong>关联关系的组成：</strong></p>
-<ul>
-<li><p><strong>角色（Role）：</strong>关联中的每个类所扮演的角色。</p>
-</li>
-<li><p><strong>关联名（Name）：</strong>关联的名称。</p>
-</li>
-<li><p><strong>多重性（Multiplication）：</strong>表示一个类的对象可以与另一个类的对象形成多少个关联。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>聚合和组合的特征：</strong></p>
-</li>
-</ol>
-<ul>
-<li><p><strong>聚合（Aggregation）：</strong>表示整体与部分的关系，但部分可以独立于整体存在。</p>
-</li>
-<li><p><strong>组合（Composition）：</strong>表示整体与部分的强关系，部分不能独立于整体存在。</p>
-</li>
-</ul>
-<ol start="6">
-<li><p><strong>类的版型：</strong></p>
-<ul>
-<li><p><strong>边界类（Boundary Class）：</strong>与外部系统交互的类，如用户界面元素。</p>
-<img src="https://pic.imgdb.cn/item/676574dad0e0a243d4e744c5.png" alt="bianjielei.png">
-</li>
-<li><p><strong>控制类（Control Class）：</strong>协调其他类的行为，如业务逻辑类。</p>
-<img src="https://pic.imgdb.cn/item/676574dad0e0a243d4e744c7.png" alt="kzl.png">
-</li>
-<li><p><strong>实体类（Entity Class）：</strong>存储数据的类，通常与数据库表对应。</p>
-<img src="https://pic.imgdb.cn/item/676574dad0e0a243d4e744c8.png" alt="stl.png"></li>
-</ul>
-</li>
-<li><p><strong>包：</strong></p>
-<ul>
-<li><strong>包（Package）：</strong>用于把元素组织成组的通用机制。合理的分组能提高模型的可读性及可维护性。</li>
-</ul>
-</li>
-</ol>
-<img src="https://pic.imgdb.cn/item/67657637d0e0a243d4e7451f.jpg" alt="wps8.jpg">
-
-
-
-<h3 id="第七章-交互图"><a href="#第七章-交互图" class="headerlink" title="第七章 交互图"></a><strong>第七章 交互图</strong></h3><p><em><strong>*要求掌握：</strong></em>顺序图的相关概念，顺序图中的建模元素，及这些元素的特点。</p>
-<ol>
-<li>交互图的分类<ul>
-<li>交互图主要分为两种类型：<strong>顺序图</strong>和<strong>协作图</strong>。</li>
-</ul>
-</li>
-</ol>
-<img src="https://pic.imgdb.cn/item/67657638d0e0a243d4e74520.png" alt="wps9.png">
-
-<ol start="2">
-<li><p><strong>顺序图</strong></p>
-<ul>
-<li><p><strong>顺序图</strong>：也称为序列图，用于展示对象之间如何以及何时进行交互，强调时间顺序。</p>
-</li>
-<li><p><strong>主要元素</strong>：</p>
-<img src="https://pic.imgdb.cn/item/676574dbd0e0a243d4e744c9.png" alt="sxt.png"></li>
-</ul>
-</li>
-</ol>
-<h3 id="第八章-构件图和部署图"><a href="#第八章-构件图和部署图" class="headerlink" title="第八章 构件图和部署图"></a><strong>第八章 构件图和部署图</strong></h3><p><em><strong>*要求掌握：</strong></em>组件图部署图的概念、包含的建模元素，及组件图和部署图的作用。</p>
-<ol>
-<li><p><strong>构件图和部署图的作用：</strong></p>
-<ul>
-<li><strong>构件图(Component Diagram)：</strong>又称为组件图，他描述的是在软件系统中遵从并实现一组接口的物理的、可替换的*软件模块。</li>
-<li><strong>部署图(deployment diagram，配置图)：</strong>是用来显示系统中软件和硬件的物理架构。</li>
-</ul>
-</li>
-<li><p><strong>构件的定义、作用及分类：</strong></p>
-<ul>
-<li><p><strong>定义</strong>：遵从一定接口规范，具有提供其实现的物理的，可替换的部分。</p>
-</li>
-<li><p><strong>作用：</strong></p>
-<ul>
-<li>使系统测试人员和开发人员能够从整体上了解系统的所有物理部件；</li>
-<li>从软件架构的角度来描述一个系统的主要功能；</li>
-<li>方便项目组的成员了解系统的结构和功能；</li>
-<li>有利于软件复用。</li>
-</ul>
-</li>
-<li><p><strong>按照组件在系统中的角色分类：</strong></p>
-<ul>
-<li><strong>部署组件(Deployment Component) ：</strong>组成可执行系统的<strong>必要组件</strong>。例如Java虚拟机、数据库管理系统、<code>EXE</code>文件、<code>DLL</code>文件。</li>
-<li><strong>工作产品组件(Work Product Component) ：</strong>开发过程的<strong>中间产物</strong>，不直接参与到可执行系统中。例如源代码文件、数据文件。</li>
-<li><strong>执行组件</strong>(Execution Component)：在<strong>运行时</strong>创建的组件，<code>不常见</code>。例如实例化的<code>Servlets</code>、<code>COM+</code>对象、<code>XML</code>文档。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>构件图的组成：</strong></p>
-<ul>
-<li><strong>基本组成元素：</strong>构件（组件）+ 接口 + 关系（依赖和实现）</li>
-<li><strong>详细组成元素：</strong>构件 + 接口 + 关系 + 端口(Port) + 连接器(Connector)</li>
-</ul>
-</li>
-</ol>
-<img src="https://pic.imgdb.cn/item/67657638d0e0a243d4e74521.jpg" alt="wps10.jpg">
-
-<ol start="4">
-<li><p><strong>部署图：</strong></p>
-<ul>
-<li><strong>部署图</strong>：用于描述系统硬件的物理拓扑结构以及在此结构上运行的软构件。</li>
-</ul>
-</li>
-<li><p><strong>部署图的主要元素：</strong></p>
-<ul>
-<li><p><strong>节点</strong>：处理器、设备等。</p>
-</li>
-<li><p><strong>连接</strong>：表示节点之间的物理或逻辑连接。</p>
-<img src="https://pic.imgdb.cn/item/676574dad0e0a243d4e744c6.png" alt="bstys.png"></li>
-</ul>
-</li>
-<li><p><strong>部署图的特点：</strong></p>
-<ul>
-<li><strong>物理架构表示</strong>：部署图展示了系统的物理部署，包括硬件和软件的物理分布。</li>
-<li><strong>节点和构件</strong>：图中的节点代表物理设备（如服务器、数据库等），而构件代表部署在这些节点上的软件组件或文件。</li>
-<li><strong>通信连接</strong>：显示了节点之间的通信连接，如网络链接，体现了系统各部分之间的物理联系。</li>
-<li><strong>系统级视图</strong>：提供了整个系统的物理部署视图，通常一个系统只有一个部署图。</li>
-<li><strong>抽象级别</strong>：虽然关注物理部署，但部署图不涉及具体的技术实现细节，保持一定程度的抽象。</li>
-<li><strong>静态视图</strong>：部署图是静态的，它不展示系统随时间变化的行为，而是展示某一时刻的系统状态。</li>
-<li><strong>部署和配置</strong>：为系统部署和配置提供蓝图，有助于理解系统的物理配置需求。</li>
-<li><strong>维护和升级</strong>：通过可视化的部署图，可以更容易地规划和执行系统的维护和升级。</li>
-<li><strong>安全性分析</strong>：有助于分析系统的安全性，因为可以直观地看到数据和处理的分布。</li>
-<li><strong>可靠性和容错性</strong>：通过展示系统的物理组件和它们的连接，部署图有助于评估系统的可靠性和容错性。</li>
-</ul>
-</li>
-</ol>
-<hr>
-<p>附件：</p>
-<p><a href="./%E4%B9%9D%E7%A7%8D%E5%B8%B8%E8%A7%81UML%E5%9B%BE%EF%BC%88%E5%88%86%E7%B1%BB+%E5%9B%BE%E8%A7%A3%EF%BC%89.pdf">九种常见<code>UML</code>图（分类+图解）</a></p>
-]]></content>
-      <categories>
-        <category>期末复习</category>
-      </categories>
-      <tags>
-        <tag>期末复习</tag>
-        <tag>软件建模</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>终极 Nginx 配置指南（超详细）</title>
-    <url>https://kfufys.github.io/2024/12/16/Nginx-Configuration-Guide/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p>对于自己上线项目的前端来说，nginx也是必须要了解和熟悉的，查了很多的nginx文章，看着写的都很详细，但是却没有了整体的概念。这里就重新梳理一遍，也理清思路。</p>
-<p>我们在安装nginx之后，会自动生成很多的文件，但是nginx.conf这个文件是我们的核心，如何去正确的修改和优化它是nginx的核心。</p>
-<p>首先我们可以先看下原本的配置，你会觉得无所适从，因为感觉这个鬼东西也太多了吧。而且感觉根本就不理解，也不知道该怎么写。下面，就一步一步的教你如何入门到熟悉</p>
-<h3 id="一、nginx-conf原本配置到解释"><a href="#一、nginx-conf原本配置到解释" class="headerlink" title="一、nginx.conf原本配置到解释"></a><strong>一、<code>nginx.conf</code>原本配置到解释</strong></h3><p>看到这个118行是不是觉得有点害怕</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#user  nobody;</span></span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">#error_log  logs/error.log;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  notice;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  info;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#pid        logs/nginx.pid;</span></span><br><span class="line"></span><br><span class="line"><span class="section">events</span> &#123;</span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">    <span class="attribute">include</span>        mime.types;</span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#log_format  main  &#x27;$remote_addr  -  $remote_user  [$time_local]  &quot;$request&quot;  &#x27;</span></span><br><span class="line">    <span class="comment">#            &#x27;$status  $body_bytes_sent  &quot;$http_referer&quot;  &#x27;</span></span><br><span class="line">    <span class="comment">#            &#x27;&quot;$http_user_agent&quot;  &quot;$http_x_forwarded_for&quot;&#x27;;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#access_log  logs/access.log  main;</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;</span><br><span class="line">    <span class="comment">#tcp_nopush     on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#keepalive_timeout  0;</span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#gzip  on;</span></span><br><span class="line"></span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>        <span class="number">80</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  localhost;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#charset  koi8-r;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#access_log  logs/host.access.log  main;</span></span><br><span class="line"></span><br><span class="line">        <span class="section">location</span> / &#123;</span><br><span class="line">            <span class="attribute">root</span>   html;</span><br><span class="line">            <span class="attribute">index</span>  index.html  index.htm;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#error_page  404  /404.html;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#redirect  server  error  pages  to  the  static  page  /50x.html</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="attribute">error_page</span>  <span class="number">500</span>  <span class="number">502</span>  <span class="number">503</span>  <span class="number">504</span>  /50x.html;</span><br><span class="line">        <span class="section">location</span> = /50x.html &#123;</span><br><span class="line">            <span class="attribute">root</span>   html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#proxy  the  PHP  scripts  to  Apache  listening  on  127.0.0.1:80</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  \.php$  &#123;</span></span><br><span class="line">        <span class="comment">#    proxy_pass  http://127.0.0.1;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#pass  the  PHP  scripts  to  FastCGI  server  listening  on  127.0.0.1:9000</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  \.php$  &#123;</span></span><br><span class="line">        <span class="comment">#    root         html;</span></span><br><span class="line">        <span class="comment">#    fastcgi_pass  127.0.0.1:9000;</span></span><br><span class="line">        <span class="comment">#    fastcgi_index  index.php;</span></span><br><span class="line">        <span class="comment">#    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</span></span><br><span class="line">        <span class="comment">#    include       fastcgi_params;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#deny  access  to  .htaccess  files,  if  Apache&#x27;s  document  root</span></span><br><span class="line">        <span class="comment">#concurs  with  nginx&#x27;s  one</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  /\.ht  &#123;</span></span><br><span class="line">        <span class="comment">#    deny  all;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#another  virtual  host  using  mix  of  IP-,  name-,  and  port-based  configuration</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment">#server  &#123;</span></span><br><span class="line">    <span class="comment">#    listen        8000;</span></span><br><span class="line">    <span class="comment">#    listen        somename:8080;</span></span><br><span class="line">    <span class="comment">#    server_name   somename   alias   another.alias;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    location  /  &#123;</span></span><br><span class="line">    <span class="comment">#        root   html;</span></span><br><span class="line">    <span class="comment">#        index  index.html  index.htm;</span></span><br><span class="line">    <span class="comment">#    &#125;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#HTTPS  server</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment">#server  &#123;</span></span><br><span class="line">    <span class="comment">#    listen        443  ssl;</span></span><br><span class="line">    <span class="comment">#    server_name   localhost;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_certificate      cert.pem;</span></span><br><span class="line">    <span class="comment">#    ssl_certificate_key  cert.key;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_session_cache    shared:SSL:1m;</span></span><br><span class="line">    <span class="comment">#    ssl_session_timeout  5m;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_ciphers  HIGH:!aNULL:!MD5;</span></span><br><span class="line">    <span class="comment">#    ssl_prefer_server_ciphers  on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    location  /  &#123;</span></span><br><span class="line">    <span class="comment">#        root   html;</span></span><br><span class="line">    <span class="comment">#        index  index.html  index.htm;</span></span><br><span class="line">    <span class="comment">#    &#125;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<p>没关系，我们把其中的注释都删掉，除掉了注释之后的nginx代码，现在只有22行了。感觉好多了</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br><span class="line"><span class="section">events</span> &#123;  </span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">http</span> &#123;  </span><br><span class="line">    <span class="attribute">include</span>       mime.types;  </span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;  </span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;  </span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;  </span><br><span class="line">    <span class="section">server</span> &#123;  </span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;  </span><br><span class="line">        <span class="attribute">server_name</span>  localhost;  </span><br><span class="line">        <span class="section">location</span> / &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  </span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="attribute">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  /50x.html;  </span><br><span class="line">        <span class="section">location</span> = /50x.html &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-<p><strong>注解版本：</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#nginx进程数，建议设置为等于CPU总核心数。  </span></span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br><span class="line"><span class="comment"># 事件区块开始  </span></span><br><span class="line"><span class="section">events</span> &#123;  </span><br><span class="line">    <span class="comment">#单个进程最大连接数（最大连接数=连接数*进程数）  </span></span><br><span class="line">    <span class="comment">#根据硬件调整，和前面工作进程配合起来用，尽量大，但是别把cpu跑到100%就行。每个进程允许的最多连接数，理论上每台nginx服务器的最大连接数为。  </span></span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">#设定http服务器，利用它的反向代理功能提供负载均衡支持  </span></span><br><span class="line"><span class="section">http</span> &#123;  </span><br><span class="line">    <span class="comment">#include：导入外部文件mime.types，将所有types提取为文件，然后导入到nginx配置文件中  </span></span><br><span class="line">    <span class="attribute">include</span>       mime.types;  </span><br><span class="line">     <span class="comment">#默认文件类型  </span></span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;  </span><br><span class="line">    <span class="comment">#开启高效文件传输模式，sendfile指令指定nginx是否调用sendfile函数来输出文件，对于普通应用设为 on，如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络I/O处理速度，降低系统的负载。注意：如果图片显示不正常把这个改成off。  </span></span><br><span class="line">    <span class="comment">#sendfile指令指定 nginx 是否调用sendfile 函数（zero copy 方式）来输出文件，对于普通应用，必须设为on。如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络IO处理速度，降低系统uptime。  </span></span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;  </span><br><span class="line">      <span class="comment">#长连接超时时间，单位是秒  </span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;  </span><br><span class="line">    <span class="comment"># 第一个Server区块开始，表示一个独立的虚拟主机站点  </span></span><br><span class="line">    <span class="section">server</span> &#123;  </span><br><span class="line">        <span class="comment"># 提供服务的端口，默认80  </span></span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;  </span><br><span class="line">        <span class="comment"># 提供服务的域名主机名  </span></span><br><span class="line">        <span class="attribute">server_name</span>  localhost;  </span><br><span class="line">        <span class="comment">#对 &quot;/&quot; 启用反向代理,第一个location区块开始  </span></span><br><span class="line">        <span class="section">location</span> / &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  <span class="comment">#服务默认启动目录  </span></span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm; <span class="comment"># 默认的首页文件，多个用空格分开  </span></span><br><span class="line">        &#125;  </span><br><span class="line">         <span class="comment"># 错误页面路由  </span></span><br><span class="line">        <span class="attribute">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  /50x.html; <span class="comment"># 出现对应的http状态码时，使用50x.html回应客户  </span></span><br><span class="line">        <span class="section">location</span> = /50x.html &#123; <span class="comment"># location区块开始，访问50x.html  </span></span><br><span class="line">            <span class="attribute">root</span>   html;  <span class="comment"># 指定对应的站点目录为html  </span></span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="二、整体基本理解"><a href="#二、整体基本理解" class="headerlink" title="二、整体基本理解"></a><strong>二、整体基本理解</strong></h3><p>虽然上面有了注解，但是看起来还是很迷糊。接着解释：我们可以把**<code>nginx.conf</code>**分为三个部分进行理解：</p>
-<ul>
-<li>第一部分：<strong>全局块</strong> </li>
-<li>第二部分：<strong>events块</strong> </li>
-<li>第三部分：<strong>http块</strong></li>
-</ul>
-<p><strong>对应图解：</strong></p>
-<p><img src="https://s21.ax1x.com/2024/12/16/pAqOqVH.png" alt="nginx.conf分块图解"></p>
-<h4 id="全局块："><a href="#全局块：" class="headerlink" title="全局块："></a><strong>全局块：</strong></h4><p><strong>作用：</strong>从配置文件开始到 <code>events</code>块之间的内容，主要会设置一些影响nginx服务器整体运行的配置指令，主要包括配置<strong>运行 <code>Nginx</code></strong><br><strong>服务器的用户（组）</strong>、<strong>允许生成的 <code>worker process</code> 数</strong>，<strong>进程 <code>PID</code> 存放路径</strong>、<strong>日志存放路径</strong>和<strong>类型以及配置文件的引入</strong>等。</p>
-<p>比如上面第一行配置的</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br></pre></td></tr></table></figure>
-
-
-<p>这是 <code>Nginx</code> 服务器并发处理服务的关键配置，<code>worker_processes</code> 值越大，可以支持的并发处理量也越多，但是 会受到硬件、软件等设备的制约。</p>
-<h4 id="events块："><a href="#events块：" class="headerlink" title="events块："></a><strong><code>events</code>块：</strong></h4><p>作用：<code>events</code> 块涉及的指令主要影响 <code>Nginx</code> 服务器与用户的网络连接，常用的设置包括是否开启对多 <code>work process</code>下的网络连接进行序列化，是否 允许同时接收多个网络连接，选取哪种事件驱动模型来处理连接请求，每个<code> word process</code> 可以同时支持的最大连接数等。</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br></pre></td></tr></table></figure>
-
-
-<p>上述例子就表示每个 <code>work process</code> 支持的最大连接数为 <code>1024</code>。</p>
-<p>这部分的配置对 <code>Nginx</code> 的性能影响较大，在实际中应该灵活配置。</p>
-<h4 id="http块："><a href="#http块：" class="headerlink" title="http块："></a><strong>http块：</strong></h4><p><strong>作用：</strong>这算是 <code>Nginx</code> 服务器配置中最频繁的部分，代理、缓存和日志定义等绝大多数功能和第三方模块的配置都在这里。</p>
-<blockquote>
-<p>需要注意的是：<code>http</code> 块也可以包括 <strong>http全局块</strong>、<strong>server 块</strong>。</p>
-</blockquote>
-<ul>
-<li><p><strong>http全局块</strong></p>
-<ul>
-<li>http全局块配置的指令包括<strong>文件引入</strong>、**<code>MIME-TYPE</code> 定义<strong>、</strong>日志自定义<strong>、</strong>连接超时时间<strong>、</strong>单链接请求数上限**等。</li>
-</ul>
-<ul>
-<li><p><strong>server 块</strong></p>
-<ul>
-<li><p>这块和虚拟主机有密切关系，虚拟主机从用户角度看，和一台独立的硬件主机是完全一样的，该技术的产生是为了 节省互联网服务器硬件成本。</p>
-<ul>
-<li><p>每个 http 块可以包括多个 server 块，而每个 server 块就相当于一个虚拟主机。 </p>
-</li>
-<li><p>而每个 server 块也分为全局 server 块，以及可以同时包含多个 locaton 块。</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>全局 server 块</strong></p>
-<ul>
-<li>最常见的配置是本虚拟机主机的监听配置和本虚拟主机的名称或<code>IP</code>配置。</li>
-</ul>
-</li>
-<li><p><strong>location 块</strong></p>
-<ul>
-<li>一个 <code>server</code> 块可以配置多个 <code>location</code> 块。</li>
-<li>这块的主要作用是基于 <code>Nginx</code> 服务器接收到的请求字符串（例如 server_name&#x2F;uri-string），对虚拟主机名称 （也可以是<code>IP</code>别名）之外的字符串（例如 前面的 <code>/uri-string</code>）进行匹配，对特定的请求进行处理。地址定向、数据缓存和应答控制等功能，还有许多第三方模块的配置也在这里进行。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong>对应图解：</strong></p>
-<p><img src="https://s21.ax1x.com/2024/12/16/pAqO7rD.png" alt="nginx.conf三部分"></p>
-<h3 id="三、最简单的上线"><a href="#三、最简单的上线" class="headerlink" title="三、最简单的上线"></a><strong>三、最简单的上线</strong></h3><p>以上，我们就知道了nginx整体大致的结构，以及每部分的结构是用于做什么的。接下来我们就修改nginx关键位置来实现我们网站的代理功能。看着nginx配置很繁琐，但是如果你只是需要上线一个网站，那么你只需要去修改两个地方即可：</p>
-<p><img src="https://s21.ax1x.com/2024/12/16/pAqOIxK.png" alt="上线"></p>
-<p>我们可以使用默认简单的配置，然后指定<code>server_name</code>和<code>root</code>，主要是告诉nginx代理的<code>ip</code>是xxx，然后我放在服务器的文件在bbb文件夹即可。nginx便会在用户访问这个ip时，自动的将bbb文件夹中的<code>index.html</code>返回到浏览器来展示页面。</p>
-<h3 id="四、-Nginx-优化："><a href="#四、-Nginx-优化：" class="headerlink" title="四、&#96;Nginx 优化："></a><strong>四、&#96;Nginx 优化：</strong></h3><h4 id="1-前端history模式404问题："><a href="#1-前端history模式404问题：" class="headerlink" title="1. 前端history模式404问题："></a><strong>1. 前端<code>history模式404</code>问题：</strong></h4><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">location</span> / &#123;  </span><br><span class="line">    <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-
-<p>这段代码的作用是，当用户刷新页面时，Nginx会先检查当前<code>URL</code>是否存在，如果不存在，就会尝试访问<code>index.htm</code>l，从而可以正常显示页面。</p>
-<p><img src="https://s21.ax1x.com/2024/12/16/pAqO526.png"></p>
-<h4 id="2-反向代理："><a href="#2-反向代理：" class="headerlink" title="2. 反向代理："></a><strong>2. 反向代理：</strong></h4><p>相信大家作为前端都了解跨域问题，目前前端的主流解决跨域的方式就是</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line">1. 开发生产cors解决 </span><br><span class="line">2. 开发proxy，生产nginx解决。 </span><br></pre></td></tr></table></figure>
-
-<p><strong>如何配置：</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#接口端  </span></span><br><span class="line"><span class="section">location</span> /police/ &#123;  </span><br><span class="line">    <span class="attribute">proxy_pass</span>   http://192.168.1.182:8852/police/;  </span><br><span class="line">    <span class="attribute">proxy_redirect</span> default;  </span><br><span class="line">    <span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>;  </span><br><span class="line">    <span class="attribute">proxy_connect_timeout</span>   <span class="number">60</span>;  </span><br><span class="line">    <span class="attribute">proxy_send_timeout</span>      <span class="number">60</span>;  </span><br><span class="line">    <span class="attribute">proxy_read_timeout</span>      <span class="number">90</span>;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-<p><strong>具体位置：</strong></p>
-<p><img src="https://s21.ax1x.com/2024/12/16/pAqOTKO.png"></p>
-<p><strong>理解：</strong></p>
-<p><strong>这段代码的意思：</strong>大致就是如果遇到以<code>/police</code>请求开头的接口，那么就去访问这个ip地址(<code>http://192.168.1.182:8852/police/</code>)的后台端口。</p>
-<p><strong>例如：</strong>我们通过<code>axios</code>去访问<code>/police/getList</code>这个后台接口时，nginx会将这个请求转发到ip端口为<code>http://192.168.1.182:8852</code>的后台中，后台将结果返回给nginx，nginx再把结果给到浏览器，实现反向代理。</p>
-<p><strong>定义多个端口的反向代理：</strong></p>
-<p>copy上面的，直接修改<code>代理头</code>和<code>proxy_pass</code>即可。</p>
-<p><img src="https://s21.ax1x.com/2024/12/16/pAqOHqe.png"></p>
-<h4 id="3-开启gzip："><a href="#3-开启gzip：" class="headerlink" title="3. 开启gzip："></a><strong>3. 开启<code>gzip</code>：</strong></h4><p><strong>作用：</strong></p>
-<p>开启<code>gzip</code>对于前端来说还是比较重要的，浏览器加载的包大概能节约一半的空间。例如首页需要加载<code>a.js</code>文件，该文件为<code>900kb</code>，在开启<code>gzip</code>之后，浏览器会去加载<code>a.js</code>经过<code>gzip</code>之后的文件<code>a.js.gz</code>，大概只有<code>450kb</code>，能够很好的提升浏览速度。</p>
-<p><strong>如何配置：</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">gzip</span> <span class="literal">on</span>; <span class="comment"># 默认off，是否开启gzip  </span></span><br><span class="line"><span class="attribute">gzip_types</span> text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 上面两个开启基本就能跑起了，下面的愿意折腾就了解一下  </span></span><br><span class="line"><span class="attribute">gzip_static</span> <span class="literal">on</span>;  </span><br><span class="line"><span class="attribute">gzip_proxied</span> any;  </span><br><span class="line"><span class="attribute">gzip_vary</span> <span class="literal">on</span>;  </span><br><span class="line"><span class="attribute">gzip_comp_level</span> <span class="number">6</span>;  </span><br><span class="line"><span class="attribute">gzip_buffers</span> <span class="number">16</span> <span class="number">8k</span>;  </span><br><span class="line"><span class="comment"># gzip_min_length 1k;  </span></span><br><span class="line"><span class="attribute">gzip_http_version</span> <span class="number">1</span>.<span class="number">1</span>;  </span><br></pre></td></tr></table></figure>
-
-<p><strong>具体位置：</strong></p>
-<p><img src="https://s21.ax1x.com/2024/12/16/pAqOLad.png"></p>
-<h4 id="4-维护页面："><a href="#4-维护页面：" class="headerlink" title="4. 维护页面："></a><strong>4. 维护页面：</strong></h4><p><strong>作用：</strong></p>
-<p>在系统进行维护升级时，用户打开我们的网站看到的维护页面。</p>
-<p><strong>如何配置：</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 系统临时维护请打开下面这行注释，并重启nginx,维护完毕后请注释下年这行,并重启nginx  </span></span><br><span class="line"> <span class="comment"># rewrite ^(.*)$ /maintainace.html break;  </span></span><br></pre></td></tr></table></figure>
-
-<p><strong>具体位置：</strong></p>
-<p><img src="https://www.helloimg.com/i/2024/12/16/676009b0b09fe.png"></p>
-<h4 id="5-一个ip上线多个网站："><a href="#5-一个ip上线多个网站：" class="headerlink" title="5. 一个ip上线多个网站："></a><strong>5. 一个<code>ip</code>上线多个网站：</strong></h4><p><strong>作用：</strong></p>
-<p>只有一个<code>ip</code>。利用<code>nginx</code>上线多个网站。例如访问<code>192.168.1.154:8080</code>访问我们的个人博客网站，访问<code>192.168.1.154:8081</code>访问我们的直播网站。</p>
-<p><strong>如何配置：</strong></p>
-<p>直接复制<code>server块</code>即可，一个<code>server块</code>就代表了一个<code>website</code>，需要改端口和文件的路径等内容。</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 第一个网站：个人博客项目配置  </span></span><br><span class="line">  <span class="section">server</span> &#123;  </span><br><span class="line">   <span class="attribute">listen</span>       <span class="number">8080</span>;  </span><br><span class="line">   <span class="attribute">root</span>         /data/www/hexo;  </span><br><span class="line">   <span class="attribute">index</span>        index.html;  </span><br><span class="line">   <span class="section">location</span> / &#123;  </span><br><span class="line">    <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html; <span class="comment"># 路由模式history的修改  </span></span><br><span class="line">   &#125;  </span><br><span class="line">  &#125;  </span><br><span class="line">  </span><br><span class="line"> <span class="comment"># 第二个网站：直播网站项目配置  </span></span><br><span class="line"> <span class="section">server</span> &#123;  </span><br><span class="line">  <span class="attribute">listen</span>       <span class="number">8081</span>;  </span><br><span class="line">  <span class="attribute">root</span>         /data/www/geov;  </span><br><span class="line">  <span class="attribute">index</span>        index.html;  </span><br><span class="line">  <span class="section">location</span> / &#123;&#125;  </span><br><span class="line"> &#125;  </span><br></pre></td></tr></table></figure>
-
-<p><strong>具体位置：</strong></p>
-<p><img src="https://www.helloimg.com/i/2024/12/16/676009c92572f.png"></p>
-<p><strong>注意点：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 这里的8081一定要你的服务器开放了这个端口才可以使用，否则你按照这个配置了也会访问不到（让后端去配）。 </span><br><span class="line">2. 如果是云服务器（比如阿里云，腾讯云），则需要开放相应的入口为8081,否则用户访问不到。 </span><br></pre></td></tr></table></figure>
-
-<h4 id="6-动静分离："><a href="#6-动静分离：" class="headerlink" title="6. 动静分离："></a><strong>6. 动静分离：</strong></h4><p><strong>作用：</strong></p>
-<p>在Web开发中，通常来说，动态资源其实就是指那些后台资源，而静态资源就是指<code>HTML</code>，<code>JavaScript</code>，<code>CSS</code>，<code>img</code>等文件。</p>
-<p>一般来说，都需要将动态资源和静态资源分开，将静态资源部署在<code>Nginx</code>上，当一个请求来的时候，如果是静态资源的请求，就直接到<code>nginx</code>配置的静态资源目录下面获取资源，如果是动态资源的请求，<code>nginx</code>利用反向代理的原理，把请求转发给后台应用去处理，从而实现动静分离。</p>
-<p>在使用前后端分离之后，可以很大程度的提升静态资源的访问速度，同时在开过程中也可以让前后端开发并行可以有效的提高开发时间，也可以有些的减少联调时间 。</p>
-<p><strong>解析：</strong></p>
-<p>实际上我们在代理前端的<code>html</code>和接口时就已经做到了动静分离。我们打包后的dist包实际上就是纯静态的资源，所以直接访问<code>nginx</code>静态资源服务器，就不需要经过后台的tomcat。访问接口时，就需要<code>nginx</code>先去访问后台服务器，拿到结果再给到浏览器</p>
-<p><img src="https://www.helloimg.com/i/2024/12/16/676009ecead58.png"></p>
-<p><strong>图解：</strong></p>
-<p><img src="https://www.helloimg.com/i/2024/12/16/676009f06bafe.png"></p>
-<p><strong>如何配置（其实是优化，因为一般配置会有动静分离）：</strong></p>
-<p>假设有比较大的图片等需要放置到服务器上，然后通过<code>nginx</code>来转发。或者是有一个纯前端的开源项目（如<code>pdf.js</code>），也需要放在服务器上。如果放在本地代码包，打包出来体积会很大。</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">location</span> /image/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> /static/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> /car/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> <span class="regexp">~ .*\.(html|htm|gif|jpg|jpeg|bmp|png|ico|js|css)$</span> &#123;  </span><br><span class="line">  <span class="attribute">root</span> /Users/dalaoyang/Downloads/static;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-<p><strong>具体位置：</strong></p>
-<p><img src="https://www.helloimg.com/i/2024/12/16/676009f2b03de.png"></p>
-<h4 id="7-其他优化"><a href="#7-其他优化" class="headerlink" title="7. 其他优化"></a><strong>7. 其他优化</strong></h4><p>这里只讲了一些<code>nginx</code>基础的知识和一些基础的优化，基本上够用了。但是如果你需要追求更高的性能，那么可以添加其他的优化，只需要根据一些搜索到的文章内容<code>copy</code>过来就行了，<code>nginx</code>主要还是配置多一些，但是理解了整体结构和脉络的话，其实就还是蛮简单的。这里就不做过多的讲解了。</p>
-<h3 id="五、Nginx基础命令：安装，启动，重启，关闭"><a href="#五、Nginx基础命令：安装，启动，重启，关闭" class="headerlink" title="五、Nginx基础命令：安装，启动，重启，关闭"></a><strong>五、<code>Nginx</code>基础命令：安装，启动，重启，关闭</strong></h3><ol>
-<li><strong>安装<code>nginx</code>：</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install nginx  </span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><strong>看是否有<code>nginx</code>进程：</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -anput | grep nginx  </span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li><strong>查看服务器端口占用情况：</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -ntlp  </span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li><strong><code>nginx</code>启动:</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx  </span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li><strong><code>nginx</code>重启:</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -s reload  </span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li><strong>关闭<code>nginx</code>：</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -s stop	<span class="comment"># 快速停止nginx </span></span><br><span class="line">nginx -s quit	<span class="comment"># 完整有序的停止nginx </span></span><br></pre></td></tr></table></figure>
-
-<ol start="7">
-<li><strong>查看默认的<code>nginx</code>配置文件路径：</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -t  </span><br></pre></td></tr></table></figure>
-
-
-<blockquote>
-<p><strong>注：</strong>如果有<code>nginx.conf</code>配置的更改，需要重启<code>nginx</code>配置才会生效。如果只是更改<code>dist</code>包<code>/html</code>，则可以不重启<code>nginx</code>。</p>
-</blockquote>
-<h3 id="六、参考文章："><a href="#六、参考文章：" class="headerlink" title="六、参考文章："></a><strong>六、参考文章：</strong></h3><ul>
-<li><a href="https://github.com/rui-rui-an/nginxpages">rui-rui-an&#x2F;nginxpages: nginx的配置文件</a></li>
-<li><a href="https://juejin.cn/post/6844904144235413512">Nginx 从入门到实践，万字详解！ - 掘金</a></li>
-<li><a href="https://blog.csdn.net/qq_44691484/article/details/126354702">Nginx nginx.conf配置文件详解_nginxconf配置详解-CSDN博客</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>网站部署</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>网站部署</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>站点更新日志</title>
-    <url>https://kfufys.github.io/2024/11/16/sitelogs-md/</url>
-    <content><![CDATA[<h3 id="2024-11-16"><a href="#2024-11-16" class="headerlink" title="2024.11.16"></a>2024.11.16</h3><blockquote>
-<p><strong>网站初次上线</strong></p>
-<p><strong>域名</strong>：<a href="https://dcyyd.github.io/hexo_websites">https://dcyyd.github.io/hexo_websites</a></p>
-<p><strong>详细信息</strong>：基于 hexo和 Github搭建的静态 web blog站点，成功托管至Github Pages页，网站主题基于开源 Next 主题，并对其进行了一些优化。</p>
-</blockquote>
-<h3 id="2024-11-25"><a href="#2024-11-25" class="headerlink" title="2024.11.25"></a>2024.11.25</h3><blockquote>
-<p><strong>网站域名更换</strong></p>
-<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
-<p><strong>详细信息</strong>：因业务转型，旧域名停用，网站整体迁移至新域名 <a href="kfufys.github.io">kfufys.github.io</a> ，旧域名内容继续保留，但不再对其进行任何更新。</p>
-</blockquote>
-<h3 id="2024-12-02"><a href="#2024-12-02" class="headerlink" title="2024.12.02"></a>2024.12.02</h3><blockquote>
-<p><strong>对网站设备适配做了一些优化</strong></p>
-<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
-<p><strong>详细信息</strong>：运用响应式设计重写 CSS，不同设备屏幕下页面自适应。移动端导航栏变汉堡菜单，图片依像素密度加载，优化 touch 事件，提升多设备交互体验。</p>
-</blockquote>
-<h3 id="2024-12-20"><a href="#2024-12-20" class="headerlink" title="2024.12.20"></a>2024.12.20</h3><blockquote>
-<p><strong>新增网站亮暗主题变换功能</strong></p>
-<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
-<p><strong>详细信息</strong>：前端植入 JavaScript 脚本与 CSS 变量，实现亮暗主题切换。点右上角按钮可切换，系统还能依设备系统主题偏好预设默认主题，增强个性化。</p>
-</blockquote>
-<h3 id="2025-01-20"><a href="#2025-01-20" class="headerlink" title="2025.01.20"></a>2025.01.20</h3><blockquote>
-<p><strong>对网站 SEO 做了一些优化</strong></p>
-<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
-<p><strong>详细信息</strong>：优化页面 Title Tag 含核心关键词，更新 Meta Description 文案吸引点击，为图片添 alt 属性助搜索引擎理解，优化内链结构均衡权重。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>站点日志</category>
-      </categories>
-      <tags>
-        <tag>website</tag>
-        <tag>log</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>About</title>
-    <url>https://kfufys.github.io/2024/11/24/about/</url>
-    <content><![CDATA[<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><hr>
-<ul>
-<li><p>我是<strong>窦长友</strong>，一名摄影爱好者，编程小渣渣~~</p>
-</li>
-<li><p>目前就读于<strong>开封大学</strong>….</p>
-</li>
-</ul>
-<h3 id="我的爱好"><a href="#我的爱好" class="headerlink" title="我的爱好"></a>我的爱好</h3><hr>
-<p>热衷于研究所有与计算机相关的事物，包括：</p>
-<ul>
-<li><p><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。 </p>
-</li>
-<li><p><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。 </p>
-</li>
-<li><p><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</p>
-</li>
-<li><p><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</p>
-</li>
-</ul>
-<h3 id="我的白日梦"><a href="#我的白日梦" class="headerlink" title="我的白日梦"></a>我的白日梦</h3><hr>
-<p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
-<p>要是大家有什么好的建议，欢迎告知呀！</p>
-]]></content>
-      <categories>
-        <category>About</category>
-      </categories>
-      <tags>
-        <tag>about</tag>
-        <tag>关于我</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>基于GitHub+hexo部署静态Blog</title>
-    <url>https://kfufys.github.io/2024/12/07/%E5%9F%BA%E4%BA%8EGitHub-hexo%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81Blog/</url>
-    <content><![CDATA[<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a><strong>一、前言</strong></h3><p>本文详细介绍了如何使用Hexo框架搭建一个个人博客，并将其部署到GitHub Pages上。主要内容包括：</p>
-<ul>
-<li><strong>环境准备：</strong>安装Node.js和Git</li>
-<li><strong>配置Git和GitHub：</strong>设置SSH密钥，创建GitHub仓库</li>
-<li><strong>初始化Hexo项目：</strong>安装Hexo，创建新博客</li>
-<li><strong>部署到GitHub Pages：</strong>配置部署设置，推送静态文件</li>
-<li><strong>基本使用方法：</strong>创建新文章，本地预览，发布更新</li>
-</ul>
-<p>这个教程适合那些想要快速搭建个人博客，但又不想花费太多成本的人。通过使用Hexo和GitHub的免费服务，您可以轻松创建一个高效、简洁的博客网站。</p>
-<h3 id="二、事前准备"><a href="#二、事前准备" class="headerlink" title="二、事前准备"></a><strong>二、事前准备</strong></h3><ol>
-<li><h4 id="在线支持"><a href="#在线支持" class="headerlink" title="在线支持"></a><strong>在线支持</strong></h4><ul>
-<li><a href="https://app.rainyun.com/"><strong>域名注册 | 雨云</strong></a>：（非必须，你也可以使用免费域名，或者<code>GitHub.io</code>或<code>Pages.dev</code>分配的域名也可以）</li>
-<li><a href="https://github.com/"><strong>GitHub</strong></a>：（必须，你需要注册一个 GitHub 帐号）</li>
-</ul>
-</li>
-<li><h4 id="软件支持"><a href="#软件支持" class="headerlink" title="软件支持"></a><strong>软件支持</strong></h4><ul>
-<li><a href="https://blog.kingxujw.com/2024/10/07/%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/#2-1-%E5%AE%89%E8%A3%85-Node"><strong>Node</strong></a>：（必须，Nodejs 是一个基于<strong>Chrome V8</strong>引擎的<strong>JS</strong>运行环境，可以用<strong>JS</strong>写服务器和前端代码。）</li>
-<li><a href="https://blog.kingxujw.com/2024/10/07/%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/#2-2-%E5%AE%89%E8%A3%85-Git"><strong>Git</strong></a>：（必须，Git 是当前最先进、最主流的<strong>分布式</strong>版本控制系统，免费、开源）</li>
-<li><a href="https://gohugo.io/"><strong>Hugo</strong></a>：（必须，Hugo 是用<strong>Go</strong>语言写的静态网站生成器（Static Site Generator），可以把 Markdown 文件转化成 HTML 文件）</li>
-<li><a href="https://dcloud.io/hbuilderx.html"><strong>HBuilderX</strong></a>：（非必须，HBuilderX 是一款为<strong>Vue</strong>开发精心打造的超强集成开发环境（<strong>IDE</strong>））</li>
-</ul>
-</li>
-</ol>
-<h3 id="三、软件安装"><a href="#三、软件安装" class="headerlink" title="三、软件安装"></a><strong>三、软件安装</strong></h3><ol>
-<li><h4 id="安装-Node"><a href="#安装-Node" class="headerlink" title="安装 Node"></a><strong>安装 Node</strong></h4><ul>
-<li><p>打开<a href="https://nodejs.org/zh-cn/download/prebuilt-installer"><strong>Node.js</strong></a>官网，下载和自己系统相配的Node的安装程序，否则会出现安装问题</p>
-</li>
-<li><p>下载后安装，安装的目录可以使用默认目录<code>C:/Program Files/nodejs/</code></p>
-</li>
-<li><p>安装完成后，检查是否安装成功。在键盘按下win + R键，输入CMD，然后回车，打开CMD窗口，执行<code>node -v</code>命令，看到版本信息，则说明安装成功</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\Administrator&gt;node -v</span><br><span class="line">v20.18.0</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改npm源。npm下载各种模块，默认是从国处服务器下载，速度较慢，建议配置成华为云镜像源。打开CMD窗口，运行如下命令:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set registry https://mirrors.huaweicloud.com/repository/npm/</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><h4 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a><strong>安装 Git</strong></h4><ul>
-<li><p>进入<a href="https://git-scm.com/downloads/win"><strong>Git</strong></a>官网下载适合你当前系统的版本</p>
-</li>
-<li><p>下载后傻瓜式安装Git即可，安装的目录最好使用默认目录<code>C:/Program Files/Git</code></p>
-</li>
-<li><p>按win + R键，输入CMD，然后回车，打开CMD窗口，执行<code>git -v</code>命令，看到版本信息，则说明安装成功</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\Administrator&gt;git -v</span><br><span class="line">git version 2.42.0.windows.2</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>Git组件：</strong></p>
-<p><strong><code>Git CMD</code></strong> 是windows 命令行的指令风格</p>
-<p><strong><code>Git Bash</code></strong> 是linux系统的指令风格（建议使用）</p>
-<p>**<code>Git GUI</code>**是图形化界面（新手学习不建议使用）</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="四、配置-Git-密钥并连接至-Github"><a href="#四、配置-Git-密钥并连接至-Github" class="headerlink" title="四、配置 Git 密钥并连接至 Github"></a><strong>四、配置 Git 密钥并连接至 Github</strong></h3><ol>
-<li><h4 id="常用-Git-命令："><a href="#常用-Git-命令：" class="headerlink" title="常用 Git 命令："></a><strong>常用 Git 命令：</strong></h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config -l	//查看所有配置</span><br><span class="line">git config --system --list	//查看系统配置</span><br><span class="line">git config --global --list	//查看用户（全局）配置</span><br></pre></td></tr></table></figure>
-</li>
-<li><h4 id="配置用户名和邮箱："><a href="#配置用户名和邮箱：" class="headerlink" title="配置用户名和邮箱："></a><strong>配置用户名和邮箱：</strong></h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;你的用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><h4 id="配置公钥连接-Github："><a href="#配置公钥连接-Github：" class="headerlink" title="配置公钥连接 Github："></a><strong>配置公钥连接 Github：</strong></h4><ul>
-<li><p><strong>生成ssh公钥</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><code>id_rsa</code>私钥</p>
-<p><code>id_rsa.pub</code>公钥</p>
-</blockquote>
-</li>
-</ul>
-<p> 用记事本打开上述图片中的公钥<code>id_rsa.pub</code>，复制里面的内容，然后开始在github中配置ssh密钥。</p>
-<ul>
-<li><p><strong>将 SSH KEY 配置到 GitHub</strong>  </p>
-<ul>
-<li>进入github，点击右上角头像 选择<code>settings</code>，进入设置页后选择 <code>SSH and GPG keys</code>，名字随便起，公钥填到<code>Key</code>那一栏。</li>
-</ul>
-</li>
-<li><p><strong>测试连接，输入以下命令</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T [email protected]</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p> 第一次连接会提示<code>Are you sure you want to continue connecting (yes/no/[fingerprint])?</code>，输入<code>yes</code>即可<br> 出现连接到账户的信息，说明已经大功告成，至此完成了环境准备工作。
- </p>
-</li>
-<li><h4 id="创建GitHub-io仓库"><a href="#创建GitHub-io仓库" class="headerlink" title="创建GitHub.io仓库"></a><strong>创建GitHub.io仓库</strong></h4><ul>
-<li><p>注册登录<a href="https://github.com/"><strong>GitHub</strong></a></p>
-</li>
-<li><p>点击右上角的<code>+</code>按钮，选择<strong>New repository</strong>，创建一个<code>&lt;用户名&gt;.github.io</code>的仓库。</p>
-</li>
-<li><p>仓库名字的格式必须为：<code>&lt;用户名&gt;.github.io</code> (注意：前缀必须为用户名，此为预览博客需要，后期可修改仓库名)</p>
-</li>
-<li><p>可见性必须选择 <code>Public</code> 方便第一次部署检查问题，点击 <strong>Creat repository</strong> 进行创建即可</p>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="五、初始化-Hexo-博客"><a href="#五、初始化-Hexo-博客" class="headerlink" title="五、初始化 Hexo 博客"></a><strong>五、初始化 Hexo 博客</strong></h3><ol>
-<li><p>创建一个文件夹来保存博客源码（我这里选的路径为<code>D:/Hexo-Blog</code>），在文件夹内右键鼠标，选择<code>Open Git Bash here</code></p>
-</li>
-<li><p>在<code>Git BASH</code>输入如下命令安装 Hexo</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli &amp;&amp; hexo -v</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装完后输入<code>hexo -v</code>验证是否安装成功。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\Administrator&gt;hexo -v</span><br><span class="line">hexo-cli: 4.3.2</span><br><span class="line">os: win32 10.0.22631 undefined</span><br><span class="line">node: 20.18.0</span><br><span class="line">acorn: 8.12.1</span><br><span class="line">ada: 2.9.0</span><br><span class="line">ares: 1.33.1</span><br><span class="line">base64: 0.5.2</span><br><span class="line">brotli: 1.1.0</span><br><span class="line">cjs_module_lexer: 1.4.1</span><br><span class="line">cldr: 45.0</span><br><span class="line">icu: 75.1</span><br><span class="line">llhttp: 8.1.2</span><br><span class="line">modules: 115</span><br><span class="line">napi: 9</span><br><span class="line">nghttp2: 1.61.0</span><br><span class="line">nghttp3: 0.7.0</span><br><span class="line">ngtcp2: 1.1.0</span><br><span class="line">openssl: 3.0.13+quic</span><br><span class="line">simdutf: 5.5.0</span><br><span class="line">tz: 2024a</span><br><span class="line">undici: 6.19.8</span><br><span class="line">unicode: 15.1</span><br><span class="line">uv: 1.46.0</span><br><span class="line">uvwasi: 0.0.21</span><br><span class="line">v8: 11.3.244.8-node.23</span><br><span class="line">zlib: 1.3.0.1-motley-71660e1</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>初始化 Hexo 项目安装相关依赖。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init blog-demo //创建项目</span><br><span class="line">cd blog-demo //切换路径</span><br><span class="line">npm i //安装依赖</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>初始化项目后，<code>blog-demo</code>有如下结构：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">blog-demo</span><br><span class="line">├── node_modules //依赖包</span><br><span class="line">├── scaffolds //生成文章的一些模板</span><br><span class="line">├── source //用来存放你的文章</span><br><span class="line">├── themes //主题</span><br><span class="line">├──.npmignore //发布时忽略的文件（可忽略）</span><br><span class="line">├── _config.landscape.yml //主题的配置文件</span><br><span class="line">├── config.yml //博客的配置文件</span><br><span class="line">└── package.json //项目名称、描述、版本、运行和开发等信息</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>命令行输入<code>hexo cl &amp;&amp; hexo s</code>启动项目</p>
-</li>
-<li><p>打开浏览器，输入地址：<a href="http://localhost:4000/"><code>http://localhost:4000/</code></a> ，看到欢迎界面，说明你的博客已经构建成功了。</p>
-</li>
-</ol>
-<h3 id="六、将静态博客挂载到-GitHub-Pages"><a href="#六、将静态博客挂载到-GitHub-Pages" class="headerlink" title="六、将静态博客挂载到 GitHub Pages"></a><strong>六、将静态博客挂载到 GitHub Pages</strong></h3><ol>
-<li><p>安装 hexo-deployer-git</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改 <code>_config.yml</code> 文件<br>在blog-demo目录下的_config.yml，就是整个Hexo框架的配置文件，详细可参考官方的<a href="https://hexo.io/zh-cn/docs/configuration">配置描述</a><br>修改最后一行的配置，将repository修改为你自己的github项目地址即可，还有分支要改为<code>main</code>代表主分支（注意缩进）。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:  </span><br><span class="line">    type: git</span><br><span class="line">    repository: [email protected]:kingmoon3/kingmoon3.github.io.git</span><br><span class="line">    branch: main</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改好配置后，运行如下命令，将代码部署到 GitHub（Hexo三连）。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// Git BASH终端</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>**<code>hexo clean</code>**：删除之前生成的文件，可以用<code>hexo cl</code>缩写。</p>
-<p>**<code>hexo generate</code>**：生成静态文章，可以用<code>hexo g</code>缩写</p>
-<p>**<code>hexo deploy</code>**：部署文章，可以用<code>hexo d</code>缩写</p>
-</blockquote>
-</li>
-</ol>
-<p><em>注意：deploy时可能要你输入 username 和 password。</em></p>
-<p>如果出现 **<code>INFO  Deploy done: git</code>**，则说明部署成功了。</p>
-<p>稍等两分钟，打开浏览器访问：<a href="https://你的github用户名.github.io/">https:&#x2F;&#x2F;[你的github用户名].github.io</a> ，这时候我们就可以看到博客内容了。</p>
-<h3 id="附：GitHub网站部署常用命令："><a href="#附：GitHub网站部署常用命令：" class="headerlink" title="附：GitHub网站部署常用命令："></a>附：GitHub网站部署常用命令：</h3><ol>
-<li><h4 id="Git相关："><a href="#Git相关：" class="headerlink" title="Git相关："></a>Git相关：</h4></li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>git init</code></td>
-<td>在当前目录初始化一个Git仓库</td>
-<td><code>git init my_project</code>（在<code>my_project</code>目录下初始化仓库）</td>
-</tr>
-<tr>
-<td><code>git clone [url]</code></td>
-<td>克隆远程仓库到本地</td>
-<td><code>git clone https://github.com/user/repo.git</code>（克隆指定仓库）</td>
-</tr>
-<tr>
-<td><code>git status</code></td>
-<td>查看仓库中文件的状态</td>
-<td>在仓库目录下执行<code>git status</code>查看文件修改、暂存等状态</td>
-</tr>
-<tr>
-<td><code>git add [file/dir]</code></td>
-<td>将文件或目录添加到暂存区</td>
-<td><code>git add file.txt</code>（添加单个文件），<code>git add.</code>（添加当前目录下所有文件）</td>
-</tr>
-<tr>
-<td><code>git commit -m &quot;[message]&quot;</code></td>
-<td>提交暂存区的内容，并添加提交消息</td>
-<td><code>git commit -m &quot;Update README&quot;</code>（提交并添加消息）</td>
-</tr>
-<tr>
-<td><code>git branch</code></td>
-<td>查看本地分支列表</td>
-<td>执行<code>git branch</code>查看当前仓库的分支情况</td>
-</tr>
-<tr>
-<td><code>git branch [branch - name]</code></td>
-<td>创建一个新的本地分支</td>
-<td><code>git branch new_branch</code>（创建名为<code>new_branch</code>的分支）</td>
-</tr>
-<tr>
-<td><code>git checkout [branch - name]</code></td>
-<td>切换到指定分支</td>
-<td><code>git checkout master</code>（切换到<code>master</code>分支）</td>
-</tr>
-<tr>
-<td><code>git merge [branch - name]</code></td>
-<td>合并指定分支到当前分支</td>
-<td>假设在<code>master</code>分支，<code>git merge feature_branch</code>（合并<code>feature_branch</code>）</td>
-</tr>
-<tr>
-<td><code>git log</code></td>
-<td>查看提交历史</td>
-<td>执行<code>git log</code>查看之前的提交记录，包括作者、日期、消息等</td>
-</tr>
-<tr>
-<td><code>git remote add [name] [url]</code></td>
-<td>添加远程仓库</td>
-<td><code>git remote add origin https://github.com/user/repo.git</code>（添加名为<code>origin</code>的远程仓库）</td>
-</tr>
-<tr>
-<td><code>git push [remote - name] [branch - name]</code></td>
-<td>将本地分支推送到远程仓库</td>
-<td><code>git push origin master</code>（推送<code>master</code>分支到<code>origin</code>）</td>
-</tr>
-<tr>
-<td><code>git pull [remote - name] [branch - name]</code></td>
-<td>从远程仓库拉取并合并更新</td>
-<td><code>git pull origin master</code>（拉取<code>master</code>分支更新）</td>
-</tr>
-<tr>
-<td><code>git diff [file]</code></td>
-<td>查看文件的修改差异</td>
-<td><code>git diff file.txt</code>（查看<code>file.txt</code>的修改差异）</td>
-</tr>
-<tr>
-<td><code>git stash</code></td>
-<td>暂存当前工作区的修改</td>
-<td>在未完成的修改状态下，执行<code>git stash</code>暂存修改</td>
-</tr>
-<tr>
-<td><code>git stash pop</code></td>
-<td>恢复暂存的修改</td>
-<td>执行<code>git stash pop</code>恢复之前暂存的修改</td>
-</tr>
-<tr>
-<td><code>git tag [tag - name]</code></td>
-<td>给当前提交打标签</td>
-<td><code>git tag v1.0</code>（给当前提交打<code>v1.0</code>标签）</td>
-</tr>
-<tr>
-<td><code>git show [tag - name]</code></td>
-<td>查看标签相关的提交信息</td>
-<td><code>git show v1.0</code>查看<code>v1.0</code>标签对应的提交内容</td>
-</tr>
-</tbody></table>
-<ol start="2">
-<li><h4 id="Hexo相关："><a href="#Hexo相关：" class="headerlink" title="Hexo相关："></a>Hexo相关：</h4></li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-<th>示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>hexo init [folder]</code></td>
-<td>初始化一个 Hexo 项目，可选参数<code>[folder]</code>指定项目文件夹名称。</td>
-<td><code>hexo init my-blog</code>（在当前目录下创建名为<code>my-blog</code>的 Hexo 项目）</td>
-</tr>
-<tr>
-<td><code>hexo new [layout] &lt;title&gt;</code></td>
-<td>创建一篇新文章，<code>[layout]</code>是布局模板，<code>&lt;title&gt;</code>是文章标题。</td>
-<td><code>hexo new post &quot;My New Post&quot;</code>（创建一篇新的<code>post</code>布局的文章）</td>
-</tr>
-<tr>
-<td><code>hexo generate</code>或<code>hexo g</code></td>
-<td>生成静态文件。</td>
-<td>执行该命令会根据主题模板生成 HTML、CSS、JS 等静态文件到<code>public</code>目录。</td>
-</tr>
-<tr>
-<td><code>hexo server</code>或<code>hexo s</code></td>
-<td>启动本地服务器进行预览。</td>
-<td>在本地浏览器中输入<code>http://localhost:4000</code>可查看生成的博客效果。</td>
-</tr>
-<tr>
-<td><code>hexo clean</code></td>
-<td>清除之前生成的静态文件和缓存。</td>
-<td>当遇到生成问题或切换主题后可先执行此命令。</td>
-</tr>
-<tr>
-<td><code>hexo deploy</code>或<code>hexo d</code></td>
-<td>部署博客到指定平台。</td>
-<td>配置好后执行该命令可将静态文件推送到远程仓库等部署目标。</td>
-</tr>
-<tr>
-<td><code>hexo list &lt;type&gt;</code></td>
-<td>列出特定类型的内容，如<code>post</code>（文章）、<code>page</code>（页面）等。</td>
-<td><code>hexo list post</code>列出所有文章信息。</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>网站部署</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>网站部署</tag>
-        <tag>GitHub</tag>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -2769,6 +1256,1519 @@
       <tags>
         <tag>网络工程师</tag>
         <tag>考试知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网络工程师考试知识点_01</title>
+    <url>https://kfufys.github.io/2024/11/23/Networking-Knowledge-Points-01/</url>
+    <content><![CDATA[<h4 id="一、计算机存储与中断相关"><a href="#一、计算机存储与中断相关" class="headerlink" title="一、计算机存储与中断相关"></a><strong>一、计算机存储与中断相关</strong><span id="more"></span></h4><ol>
+<li>常用的虚拟存储器由<strong>主存 - 辅存</strong>两级存储器组成。</li>
+<li>中断向量可提供<strong>中断程序的入口地址</strong>。</li>
+<li>DMA工作方式在<strong>主存与外设</strong>之间建立直接的数据通信。</li>
+</ol>
+<h4 id="二、项目管理与网络图表相关"><a href="#二、项目管理与网络图表相关" class="headerlink" title="二、项目管理与网络图表相关"></a><strong>二、项目管理与网络图表相关</strong></h4><ol>
+<li>PERT不能清晰描述各个任务之间的<strong>并行情况</strong>，甘特图不能清晰描述各个问题之间的<strong>依赖关系</strong>。</li>
+</ol>
+<h4 id="三、网络设备与协议相关"><a href="#三、网络设备与协议相关" class="headerlink" title="三、网络设备与协议相关"></a><strong>三、网络设备与协议相关</strong></h4><ol>
+<li>路由器出厂时，默认的串口封装协议是HDLC。</li>
+<li>报文摘要算法生成报文摘要的目的是防止发送的报文被篡改。</li>
+<li>PGP是支持电子<strong>邮件加密</strong>的协议。</li>
+<li>根域名服务器采用的<strong>迭代</strong>查询。</li>
+<li>中介域名服务器采用的是<strong>递归</strong>查询。</li>
+<li><strong>AH隧道模式：</strong>使用AH与IP报头来封装IP数据包并对整个数据包进行签名以获得完整性并进行身份验证。</li>
+<li><strong>ESP隧道模式：</strong>采用ESP与IP报头以及ESP身份验证尾端来封装IP数据包。</li>
+<li><strong>L2TP数据包封装格式：</strong>IP - UDP - L2TP - PPP。</li>
+<li>SNMP是在<strong>UDP</strong>协议之上的异步&#x2F;请求响应。</li>
+</ol>
+<h4 id="四、网络传输相关"><a href="#四、网络传输相关" class="headerlink" title="四、网络传输相关"></a><strong>四、网络传输相关</strong></h4><ol>
+<li><p>支持1000m以上传输距离的是<strong>1000 BASE-Lx</strong>。</p>
+</li>
+<li><p><strong>nslookup参数：</strong></p>
+<ul>
+<li><p><strong>Set all ：</strong>列出当前设置的默认选项。</p>
+</li>
+<li><p><strong>Set type &#x3D; mx ：</strong>查询本地域的邮件交换器信息。</p>
+</li>
+<li><p><strong>Server NAME ：</strong>由当前默认服务器切换到制定的名字服务器NAME。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>DNS服务器主要资源记录：</strong></p>
+<ul>
+<li><p><strong>A：</strong>域名到IP地址的映射。</p>
+</li>
+<li><p><strong>PTR：</strong>IP地址到域名的映射。</p>
+</li>
+<li><p><strong>MX：</strong>邮件服务器及优先级。</p>
+</li>
+<li><p><strong>CNAME：</strong>别名。</p>
+</li>
+<li><p><strong>NS：</strong>区域的授权服务器。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="五、结构化布线系统相关"><a href="#五、结构化布线系统相关" class="headerlink" title="五、结构化布线系统相关"></a><strong>五、结构化布线系统相关</strong></h4><ol>
+<li><strong>工作区子系统：</strong>由终端设备到信息插座的整个区域，用于将用户终端设备连接到布线系统，主要包括信息插座、跳线、适配器。</li>
+<li><strong>水平布线子系统：</strong>是结构化综合布线系统中连接用户工作区与布线系统主干的子系统。</li>
+<li><strong>管理子系统：</strong>是结构化布线系统中对布线电缆进行端接及配线管理的子系统，通常设置在楼层的接线间内。</li>
+<li><strong>干线子系统：</strong>是结构化综合布线系统中连接各管理间、设备间的子系统，又称垂直子系统。</li>
+<li><strong>设备间子系统：</strong>主要是用来安放网络关键设备。并非每一个综合布线都有设备间子系统。</li>
+<li><strong>建筑群子系统：</strong>是结构化综合布线系统中由连接楼群之间的通信传输介质及各种支持设备组成的子系统。</li>
+</ol>
+<h4 id="六、xDSL相关"><a href="#六、xDSL相关" class="headerlink" title="六、xDSL相关"></a><strong>六、xDSL相关</strong></h4><ol>
+<li><strong>HDSL：</strong>中断距离可达3 - 5KM、传输速率2.048Mbits&#x2F;s。</li>
+<li><strong>ADSL：</strong>是一种非对称的DSL技术。</li>
+<li><strong>VDSL：</strong>是一种非对称的技术，也是DSL中传输速度最快的技术。</li>
+<li><strong>SDSL：</strong>单线路数字用户技术是对称的。</li>
+<li><strong>RADSL：</strong>速率自适应数字用户线技术，是采用非对称技术。</li>
+</ol>
+<h4 id="七、私有地址相关"><a href="#七、私有地址相关" class="headerlink" title="七、私有地址相关"></a><strong>七、私有地址相关</strong></h4><ol>
+<li><strong>A类：</strong>10.0.0.0 - 10.255.255.255。</li>
+<li><strong>B类：</strong>172.16.0.0 - 172.31.255.255。</li>
+<li><strong>C类：</strong>192.168.0.0 - 192.168.255.255。</li>
+</ol>
+<h4 id="八、阻止路由环路相关"><a href="#八、阻止路由环路相关" class="headerlink" title="八、阻止路由环路相关"></a><strong>八、阻止路由环路相关</strong></h4><ol>
+<li><p><strong>最大跳计数（Maximum Hop Count）</strong></p>
+<ul>
+<li><strong>原理：</strong><ul>
+<li>在许多路由协议（如 RIP）中，会为数据包经过的路由器数量设置一个最大值。例如，RIP 协议默认的最大跳数是 15。当一个数据包经过的路由器数量达到这个最大值时，该数据包将被丢弃。这是因为随着跳数的不断增加，网络环路的可能性也在增大。如果没有最大跳数的限制，数据包可能会在网络中无限循环，消耗网络资源。</li>
+</ul>
+</li>
+<li><strong>示例：</strong><ul>
+<li>假设有一个简单的网络拓扑，包括路由器 A、B、C、D 和 E，它们之间通过链路相连。如果一个数据包从路由器 A 出发，经过 B、C、D、E，然后又回到 A，并且这个过程不断循环，没有最大跳数限制，这个数据包就会一直在这个环路中传递。但如果设置了最大跳数为 5，当数据包经过 5 个路由器后，就会被丢弃，从而防止了无限循环。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>水平分割（Split Horizon）</strong></p>
+<ul>
+<li><strong>原理：</strong><ul>
+<li>水平分割规则规定，从一个接口学到的路由信息不会再从这个接口发送出去。这样可以避免路由器将从某个邻居学到的路由信息又发送回给这个邻居，从而防止产生路由环路。它基于一个简单的逻辑，即如果路由器已经从某个方向学到了到达某个网络的路由，那么它不应该再向这个方向通告这个路由，因为这个方向的邻居很可能就是通过它才学到这个路由的。</li>
+</ul>
+</li>
+<li><strong>示例：</strong><ul>
+<li>假设路由器 R1 和 R2 是邻居，它们之间通过接口 E0 相连。R1 通过接口 E0 向 R2 通告了到达网络 N 的路由。根据水平分割规则，R2 不会再通过接口 E0 向 R1 通告到达网络 N 的路由。这样就避免了 R1 和 R2 之间可能产生的路由环路。例如，在一个帧中继网络中，多个路由器通过虚电路相连，水平分割可以有效地防止路由信息在相邻路由器之间的来回传递，避免环路的形成。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>路由毒化（Route Poisoning）</strong></p>
+<ul>
+<li><strong>原理：</strong><ul>
+<li>当一个路由不可达时，路由器会将该路由标记为不可达（通常将其度量值设置为无穷大），并且向相邻路由器通告这个不可达信息。相邻路由器收到这个中毒的路由信息后，会更新自己的路由表，并且也会向它的相邻路由器通告这个不可达信息。这样，网络中的所有路由器都会快速地知道这个路由已经不可达，从而避免将数据包转发到这个不可达的路径上，防止了路由环路的产生。</li>
+</ul>
+</li>
+<li><strong>示例：</strong><ul>
+<li>比如在一个网络中有路由器 A、B、C。路由器 A 发现它到网络 X 的链路出现故障，它就会将到网络 X 的路由标记为不可达（如将跳数设置为 16，在 RIP 协议中表示不可达），并向路由器 B 通告这个中毒的路由。路由器 B 收到后更新自己的路由表，然后也向路由器 C 通告这个中毒的路由。这样，整个网络就会很快知道网络 X 不可达，避免了因为链路故障而可能导致的数据包在 A - B - C - A 这样的环路中转发。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>保持关闭（Hold - down）</strong></p>
+<ul>
+<li><p><strong>原理</strong></p>
+<p>：</p>
+<ul>
+<li>当路由器从邻居收到一个路由不可达的消息后，它会进入一个保持关闭状态。在这个状态下，路由器会忽略来自同一个邻居的关于这条路由的任何更新信息（通常会持续一段时间，如 180 秒）。这是因为在网络不稳定的情况下，可能会出现错误的路由更新信息。例如，当一条链路刚刚出现故障时，可能会因为网络的收敛过程而产生一些错误的更新，导致路由器错误地更新路由表，进而产生路由环路。保持关闭机制可以让路由器在一段时间内不被这些可能错误的更新所干扰，等待网络稳定后再更新路由表。</li>
+</ul>
+</li>
+<li><p><strong>示例：</strong></p>
+<ul>
+<li>假设路由器 R1 收到来自邻居 R2 的消息，说到达网络 Y 的路由不可达。R1 进入保持关闭状态。如果在这个状态期间，R2 又发送了一个关于网络 Y 的更新（可能是由于网络波动，这个更新是错误的），R1 会忽略这个更新。只有当保持关闭时间结束后，R1 才会考虑来自 R2 的关于网络 Y 的更新，这样就避免了在网络不稳定时，因为错误的更新而导致的路由环路。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="九、链路状态通告相关"><a href="#九、链路状态通告相关" class="headerlink" title="九、链路状态通告相关"></a><strong>九、链路状态通告相关</strong></h4><ol>
+<li><strong>链路状态通告（LSA - Link - State Advertisement）的定义与作用：</strong><ul>
+<li>链路状态通告是链路状态路由协议（如 OSPF、IS - IS）中的关键元素。它是一种包含了路由器自身以及其直连链路信息的数据包。这些信息包括接口的 IP 地址、子网掩码、链路的开销（cost）、链路的连接状态（是 up 还是 down）等。路由器通过在网络中泛洪 LSA，使得网络中的其他路由器能够了解整个网络的拓扑结构。</li>
+<li>例如，在一个企业网络中，使用 OSPF 协议。路由器 A 通过生成 LSA 来通告自己的接口连接到网络 192.168.1.0&#x2F;24，开销为 10，并且接口状态是 up。这个 LSA 会在网络中传播，让其他路由器知道如何到达这个网络以及相关的链路成本。</li>
+</ul>
+</li>
+<li><strong>LSA 的内容构成：</strong><ul>
+<li><strong>路由器标识符（Router ID）：</strong><ul>
+<li>这是一个用于唯一标识路由器的编号。在 OSPF 中，通常是路由器上最大的活动接口的 IP 地址，或者可以手动配置。它用于区分不同的路由器发送的 LSA。例如，在一个有多个路由器的网络中，路由器 A 的 Router ID 为 1.1.1.1，路由器 B 的 Router ID 为 2.2.2.2，这样其他路由器就可以根据 Router ID 来识别 LSA 的来源。</li>
+</ul>
+</li>
+<li><strong>链路类型（Link Type）：</strong><ul>
+<li>描述了路由器与其他设备之间链路的性质。常见的链路类型包括点到点链路（如两个路由器之间通过串行接口直接相连）、广播链路（如连接到以太网段）和非广播多路访问（NBMA，例如帧中继网络）。不同的链路类型在 LSA 中会有不同的表示方式，并且会影响路由计算和数据包转发。例如，在广播链路中，路由器需要选举出一个指定路由器（DR）和备份指定路由器（BDR）来管理 LSA 的泛洪过程。</li>
+</ul>
+</li>
+<li><strong>链路开销（Link Cost）：</strong><ul>
+<li>代表了通过该链路传输数据的代价。开销的计算可以基于链路的带宽、延迟等因素。例如，一条 100Mbps 的以太网链路的开销可能比一条 10Mbps 的以太网链路的开销小。开销是用于计算最短路径的重要参数，路由器会根据收到的 LSA 中的开销信息来选择到达目标网络的最优路径。</li>
+</ul>
+</li>
+<li><strong>邻居信息（Neighbor Information）：</strong><ul>
+<li>列出了与该路由器直接相连的其他路由器的标识符（如 Router ID）。这有助于构建完整的网络拓扑图。例如，路由器 A 在 LSA 中列出它的邻居是路由器 B 和路由器 C，它们的 Router ID 分别为 2.2.2.2 和 3.3.3.3，这样其他路由器收到这个 LSA 后，就可以知道路由器 A 与哪些路由器相连。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>LSA 的泛洪过程（Flooding）：</strong><ul>
+<li>当路由器生成一个新的 LSA 或者收到一个更新的 LSA 时，它会将这个 LSA 发送给除了接收该 LSA 的接口之外的所有接口。这个过程称为泛洪。例如，在一个由多个路由器组成的网状网络中，路由器 A 生成了一个新的 LSA，它会将这个 LSA 发送给与它相连的路由器 B、C 和 D。路由器 B 收到这个 LSA 后，会检查自己的链路状态数据库（LSDB），如果这个 LSA 是新的或者比自己已有的 LSA 更新（根据序列号、校验和等信息判断），它会将这个 LSA 存储到自己的 LSDB 中，然后再向它的其他邻居（除了发送这个 LSA 给它的路由器 A）泛洪这个 LSA。这个过程会一直持续，直到网络中的所有路由器都收到并存储了这个最新的 LSA。</li>
+<li>在这个过程中，为了防止 LSA 在网络中无限循环，每个 LSA 都有一个序列号。路由器通过比较序列号来判断 LSA 的新旧。当一个 LSA 的序列号达到最大值后，会重新从初始值开始，但同时会有其他机制（如老化时间）来确保 LSA 的准确性和及时性。</li>
+</ul>
+</li>
+<li><strong>LSA 的老化与更新：</strong><ul>
+<li><strong>老化（Aging）：</strong><ul>
+<li>LSA 有一个老化时间，通常在 OSPF 中是 30 分钟。从 LSA 产生开始计算时间，当老化时间到期后，这个 LSA 会被标记为无效。这是为了确保网络拓扑信息的及时性。如果网络拓扑发生变化，旧的 LSA 不应该一直存在于网络中影响路由决策。例如，一个路由器的接口连接的网络被重新划分了子网，旧的 LSA 中关于这个网络的信息就需要更新，老化机制可以促使这种更新。</li>
+</ul>
+</li>
+<li><strong>更新（Update）：</strong><ul>
+<li>当路由器的链路状态发生变化时（如接口的状态从 up 变为 down，或者链路的开销发生变化），它会生成一个新的 LSA 来更新网络中的其他路由器。这个新的 LSA 会包含更新后的链路信息，并且会按照泛洪过程在网络中传播。例如，路由器 A 和路由器 B 之间的链路带宽从 10Mbps 提升到 100Mbps，路由器 A 会更新关于这条链路的 LSA，将链路开销等信息更新后，在网络中泛洪这个新的 LSA，让其他路由器知道网络拓扑的这个变化。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="十、VTP、STP及ACL相关"><a href="#十、VTP、STP及ACL相关" class="headerlink" title="十、VTP、STP及ACL相关"></a><strong>十、VTP、STP及ACL相关</strong></h4><ol>
+<li><p><strong>访问控制列表的分类：</strong></p>
+<ul>
+<li><strong>标准访问控制列表：</strong>主要基于源 IP 地址进行过滤，通常使用的编号范围是 1 - 99 以及 1300 - 1999（不同的 IOS 版本可能略有差异）。它的功能相对较为基础，只能对数据包的源 IP 地址进行匹配判断，进而决定是否允许该数据包通过。</li>
+<li><strong>扩展访问控制列表：</strong>功能更强大，可以基于源 IP 地址、目的 IP 地址、协议类型、端口号等多种条件来进行过滤，编号范围一般是 100 - 199 以及 2000 - 2699。通过综合考虑多个因素，能实现更精细、更复杂的访问控制策略。</li>
+</ul>
+</li>
+<li><p><strong>具体 ACL 语句分析：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">（1）Access-list 10 deny host 10.37.168.137 与 access-list 10 deny 10.37.168.137 等价，拒绝任何来自 10.23.168.137 的分组。</span><br><span class="line">（2）Any 与 0.0.0.0 255.255.255.255 等价，表示整个 IP 地址范围。</span><br><span class="line">（3）Access-list 10 deny tcp any (源地址) host 172.16.30.2 (目的地址) eq 23/telnet ：禁止任何主机访问 10.37.16.30.2 的 telnet 服务。</span><br><span class="line">（4）Access-list 110 permit tcp host 192.168.177.2 host 172.22.89.26 eq www/80 ，允许源 IP 地址为 192.168.177.2 的主机，通过 TCP 协议访问目的 IP 地址为 172.22.89.26 的主机的 80 端口。</span><br><span class="line">（5）Access-list 110 deny tcp any host 172.22.89.26 eq 80 ，只允许指定的 192.168.177.2 访问该主机的 80 端口。</span><br><span class="line">（6）Access-list 110 permit ip any any ，放行其他所有流量。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>接口应用 ACL 规则：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Interface S0</span><br><span class="line">Ip access-group 110 out</span><br><span class="line">允许 192.168.177.2 以 http 方式访问主机 172.22.89.26，但是拒绝其他主机的数据流访问 172.22.89.26 的 web 服务（80 端口）。</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="十一、NAT相关："><a href="#十一、NAT相关：" class="headerlink" title="十一、NAT相关："></a><strong>十一、NAT相关：</strong></h4><ol>
+<li><p><strong>NAT（网络地址转换）分类：</strong></p>
+<ul>
+<li><p><strong>静态 NAT：</strong>内部本地地址和内部全局地址进行一对一的永久映射。</p>
+<ul>
+<li><p>示例配置（以 Cisco 路由器为例）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 定义内部本地地址和内部全局地址的映射关系：</span><br><span class="line">Router(config)#ip nat inside source static 192.168.1.2 209.165.200.22</span><br><span class="line"># 指定内部接口和外部接口：</span><br><span class="line">Router(config)#interface FastEthernet0/0</span><br><span class="line">Router(config - if)#ip nat inside</span><br><span class="line">Router(config - if)#interface Serial0/0/0</span><br><span class="line">Router(config - if)#ip nat outside</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>动态 NAT：</strong>从一个内部全局地址池中动态地分配地址给内部本地地址（临时映射关系）。</p>
+<ul>
+<li><p>示例配置（以 Cisco 路由器为例）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 进入全局配置模式：</span><br><span class="line">Router#conf t</span><br><span class="line"># 定义内部全局地址池。假设地址池名为 POOL1，包含的地址范围是 209.165.200.20 - 209.165.200.30：</span><br><span class="line">Router(config)#ip nat pool POOL1 209.165.200.20 209.165.200.30 netmask 255.255.255.0</span><br><span class="line"># 定义访问控制列表（ACL）来指定哪些内部本地地址可以进行 NAT 转换。假设允许 192.168.1.0/24 网段的主机进行 NAT 转换：</span><br><span class="line">Router(config)#access - list 1 permit 192.168.1.0 0.0.0.255</span><br><span class="line"># 将 ACL 与地址池关联，实现动态 NAT：</span><br><span class="line">Router(config)#ip nat inside source list 1 pool POOL1</span><br><span class="line"># 指定内部接口和外部接口（同静态 NAT）：</span><br><span class="line">Router(config)#interface FastEthernet0/0</span><br><span class="line">Router(config - if)#ip nat inside</span><br><span class="line">Router(config - if)#interface Serial0/0/0</span><br><span class="line">Router(config - if)#ip nat outside</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>配置 PAT（NAT 重载，也叫端口地址转换）：</strong></p>
+<ul>
+<li><p><strong>原理</strong>：PAT 通过使用不同的端口号来区分不同的内部本地地址的连接，使得多个内部本地地址可以共享一个或少数几个内部全局地址。这样可以更有效地利用 IP 地址资源，是一种多对一的地址转换方式。</p>
+</li>
+<li><p>示例配置（以 Cisco 路由器为例）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 进入全局配置模式：</span><br><span class="line">Router(config)#conf t</span><br><span class="line"># 定义访问控制列表（ACL）来指定哪些内部本地地址可以进行 NAT 转换。假设允许 192.168.1.0/24 网段的主机进行 NAT 转换：</span><br><span class="line">Router(config)#access - list 1 permit 192.168.1.0 0.0.0.255</span><br><span class="line"># 将 ACL 与外部接口关联，实现 PAT。假设外部接口是 Serial0/0/0：</span><br><span class="line">Router(config)#ip nat inside source list 1 interface Serial0/0/0 overload</span><br><span class="line"># 指定内部接口和外部接口（同静态 NAT）：</span><br><span class="line">Router(config)#interface FastEthernet0/0</span><br><span class="line">Router(config - if)#ip nat inside</span><br><span class="line">Router(config - if)#interface Serial0/0/0</span><br><span class="line">Router(config - if)#ip nat outside</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h4 id="十二、无线网络相关："><a href="#十二、无线网络相关：" class="headerlink" title="十二、无线网络相关："></a><strong>十二、无线网络相关：</strong></h4><ol>
+<li><p><strong>IEEE802.11标准：</strong></p>
+<ul>
+<li><p>IEEE802.11a：54Mbits&#x2F;s 、5GHz标准。</p>
+</li>
+<li><p>IEEE802.11b：对802.11的改进，以支持5.5.Mbits&#x2F;s和11Mbits&#x2F;s。</p>
+</li>
+<li><p>IEEE892.11g：54Mbits&#x2F;s、2.4GHz标准（向后兼容802.11b）。</p>
+</li>
+<li><p>IEEE892.11n：使用MIMO(多入多出天线)提高吞吐量。</p>
+</li>
+<li><p>Wi-fi联盟认可了802.11i标准，并称之为wap2。</p>
+</li>
+<li><p>Wap2使用了aes-ccmp机密技术。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="十三、IPv6相关："><a href="#十三、IPv6相关：" class="headerlink" title="十三、IPv6相关："></a><strong>十三、IPv6相关：</strong></h4><ol>
+<li><p><strong>特殊IPv6地址：</strong></p>
+<ul>
+<li><p>0:0:0:0:0:0:0:0(::) 相当于IPv4地址0.0.0.0，通常在使用有状态DHCP配置时，用作主机的源地址。</p>
+</li>
+<li><p>0:0:0:0:0:0:0:1(::1) 相当于IPv4地址127.0.0.1。</p>
+</li>
+<li><p>0:0:0:0:0:0:192.168.100.1 在同时支持IPv4和IPv6的网络中，从IPv4地址转换而来的IPv6地址通常这样写。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>IPv6地址类型：</strong></p>
+<ul>
+<li><p>2000::&#x2F;3全局单播地址。</p>
+</li>
+<li><p>FC00::&#x2F;7唯一的本地单播地址范围。</p>
+</li>
+<li><p>FE80::&#x2F;10链路本地单播地址范围。</p>
+</li>
+<li><p>FF00::&#x2F;8组播地址范围 。</p>
+</li>
+<li><p>2001:0DB8::&#x2F;32保留举例和编写文档时使用。</p>
+</li>
+<li><p>3FFF:FFFF::&#x2F;32 保留举例和编写文档时使用。</p>
+</li>
+<li><p>2002::&#x2F;16 保留供6to4隧道技术使用。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="十四、软件设计相关："><a href="#十四、软件设计相关：" class="headerlink" title="十四、软件设计相关："></a><strong>十四、软件设计相关：</strong></h4><p>在软件设计阶段，划分模块的原则是一个模块的控制范围应该在作用范围之内。</p>
+<ol>
+<li><strong>模块的控制范围和作用范围的定义：</strong><ul>
+<li><strong>控制范围：</strong>是指模块本身及其所有下属模块（如果有）的集合。</li>
+<li><strong>作用范围：</strong>是指受该模块内一个判定影响的所有其他模块的集合。</li>
+</ul>
+</li>
+<li><strong>为什么控制范围应该在作用范围之内：</strong><ul>
+<li><strong>可维护性：</strong>模块控制范围在作用范围内，当需对软件进行维护或修改时，开发人员可以很容易地确定修改一个模块可能会影响到哪些其他模块。</li>
+<li><strong>可读性和理解性</strong>：这种原则有助于提高软件设计的可读性和理解性。</li>
+<li><strong>降低耦合度</strong>：使得模块之间的耦合度降低。</li>
+</ul>
+</li>
+</ol>
+<h4 id="十五、软件项目活动图相关："><a href="#十五、软件项目活动图相关：" class="headerlink" title="十五、软件项目活动图相关："></a><strong>十五、软件项目活动图相关：</strong></h4><p>软件项目活动图中，松弛时间表示在不影响整个工作的前提下，完成该项任务有多少机动余地，松弛时间为0的任务构成了完成整个工程的关键任务，即所需时间最长的任务。</p>
+<h4 id="十六、其他网络概念相关"><a href="#十六、其他网络概念相关" class="headerlink" title="十六、其他网络概念相关"></a><strong>十六、其他网络概念相关</strong></h4><ol>
+<li><p><strong>VPI与CIR：</strong>VPI用来表示不同虚拟路径，CIR用来约束数据速率。</p>
+</li>
+<li><p><strong>代理ARP：</strong>是指由离目标主机最近的交换机假装目标主机回答源主机的ARP请求。</p>
+</li>
+<li><p><strong>距离矢量路由协议：</strong>每一个路由器接收的路由信息来源于它的邻居路由器。</p>
+</li>
+<li><p><strong>BGP4协议：</strong></p>
+<ul>
+<li><p>打开（open）报文建立两个路由之间的邻居关系。</p>
+</li>
+<li><p>更新（UPDATE）报文给出了新的路由信息。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>OSPF协议：</strong></p>
+<ul>
+<li><p>链路状态算法用于计算路由表。</p>
+</li>
+<li><p>一个路由器的链路状态只涉及与相邻路由器的连通状态。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>组播地址：</strong></p>
+<ul>
+<li><p>224.0.0.0 - 224.0.0.255为预留的组播地址（永久组地址），地址224.0.0.0保留不做分配，其他地址供路由协议用。</p>
+</li>
+<li><p>224.0.1.0 - 224.0.1.255是公用组播地址，可以用于Internet。</p>
+</li>
+<li><p>224.0.2.0 - 238.255.255.255可为用户可用的组播地址（临时组播地址），全网范围内有效。</p>
+</li>
+<li><p>239.0.0.0 - 239.255.255.255为本地管理组地址，仅在特定的本地范围内有效。</p>
+</li>
+<li><p>组播服务发送信息只需要发送一个分组，组内所有成员即可全部收到。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>数字签名验证：</strong>用户B收到用户A带数字签名的消息M，为了验证M的真实性，首先需要从CA获取用户的数字证书，并利用CA的公钥验证证书的真伪，然后利用A的公钥验证M的真实性。</p>
+</li>
+<li><p><strong>SDES算法</strong>：是一种共享秘钥算法。</p>
+</li>
+<li><p><strong>IPSEC安全关联：</strong>IPSEC中安全关联（security Associations）三元组是&lt;安全参数索引SPI，目标IP地址，安全协议&gt;。</p>
+</li>
+<li><p><strong>SNMP协议：</strong>当代理收到一个GET请求时，如果有一个值不可或者不能提供，则返回该实例的下一个值。</p>
+</li>
+<li><p><strong>SNMP网络管理：</strong>一个代理可以由多个管理站管理。</p>
+</li>
+<li><p><strong>自动专用IP地址：</strong></p>
+<ul>
+<li><p>用途是DHCP服务器的专用地址。</p>
+</li>
+<li><p>自动专用IP地址的范围是169.254.0.0 - 169.254.255.255。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>以太网结构填充字段：</strong>作用是保持最小帧长。</p>
+</li>
+<li><p><strong>物联网无线传感网络技术</strong>：是802.15.3ZigBee微微网。</p>
+</li>
+<li><p><strong>4G标准：</strong>LTE、LTE-Advanced、WIMAXII、Wireless MAN、UMB等属于4G标准。</p>
+</li>
+<li><p><strong>扩展频谱通信：</strong>主要思想是将信号散步到更宽的带宽上以减少阻塞和干扰的机会。</p>
+</li>
+<li><p><strong>CLOSE-WAIT状态：</strong>等待从本地用户发来的连接中断请求。</p>
+</li>
+<li><p><strong>BGP报文：</strong></p>
+<ul>
+<li><p>Open报文：用于建立邻居关系。</p>
+</li>
+<li><p>Update报文：用于发送新的路由信息。</p>
+</li>
+<li><p>Keepalive报文：用于对Open的应答和周期性地确认邻居关系。</p>
+</li>
+<li><p>Notification报文：用于报告监测到的错误。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Vsftp服务：</strong>可以通过 service Vsftpd start&#x2F;down&#x2F;restart 三个命令来启动、关闭和重启，主配置文件名为 vsftpd.conf 。</p>
+</li>
+<li><p><strong>SNMP团体名设置：</strong></p>
+<ul>
+<li><p>R2(config)#snmp-server community publicr  ro ：设置snmp-server的只读团体名为publicr。</p>
+</li>
+<li><p>R2(config)# snmp-server community publicw  rw ：设置snmp-server的读写团体名为publicw。</p>
+</li>
+<li><p>Nat(inside) 1 0 或者 nat(inside) 1.0.0.0 0.0.0.0 表示内网的所有主机均可以访问外网。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>华为静态路由与默认路由配置：</strong></p>
+<ol>
+<li><p><strong>静态路由配置：</strong></p>
+<ul>
+<li><p><strong>配置基本静态路由：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system - view  # 进入系统视图，这是配置大多数华为设备命令的前提操作，后续配置都在此视图下进行</span><br><span class="line">[Huawei]ip route - static 192.168.2.0 255.255.255.0 192.168.1.2  # 配置一条静态路由</span><br><span class="line"># “ip route-static”是配置静态路由的命令关键字</span><br><span class="line"># “192.168.2.0”是目的网络地址，表示要去往的目标网络段</span><br><span class="line"># “255.255.255.0”是对应的子网掩码，用于精确界定目的网络的范围</span><br><span class="line"># “192.168.1.2”是下一跳地址，也就是数据包从本路由器发出去后，下一个接收该数据包的设备接口地址</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>配置负载分担的静态路由（多条链路到同一目的网络）：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Huawei]ip route - static 10.0.0.0 255.0.0.0 172.16.1.2  # 配置第一条到达目的网络10.0.0.0/8的静态路由</span><br><span class="line"># 这条命令含义与上面基本静态路由类似，这里目的网络是10.0.0.0，子网掩码255.0.0.0，下一跳为172.16.1.2，用于和下一条命令共同实现负载分担</span><br><span class="line">[Huawei]ip route - static 10.0.0.0 255.0.0.0 172.16.2.2  # 配置第二条到达目的网络10.0.0.0/8的静态路由</span><br><span class="line"># 同样是去往10.0.0.0/8网络，但下一跳变为172.16.2.2，两条链路可同时分担去往该目的网络的流量，实现负载分担功能</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>静态路由的优先级调整：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Huawei]ip route - static 10.0.0.0 255.0.0.0 172.16.1.2 preference 70  # 调整特定静态路由的优先级</span><br><span class="line"># “preference”关键字用于设置优先级，此处将之前配置的去往10.0.0.0/8网络且下一跳为172.16.1.2的静态路由优先级设置为70</span><br><span class="line"># 优先级数值越大，表示该路由相对其他到达相同目的网络的路由被优先选用的程度越低，默认静态路由优先级是60</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>默认路由配置：</strong></p>
+<ul>
+<li><p><strong>配置基本默认路由：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Huawei]ip route - static 0.0.0.0 0.0.0.0 192.168.1.1  # 配置默认路由</span><br><span class="line"># “0.0.0.0 0.0.0.0”表示所有网络（目的网络地址和子网掩码都为全0），意味着如果数据包的目的地址在本地路由表中没有更精确匹配的路由条目时，都将按照这条默认路由转发</span><br><span class="line"># “192.168.1.1”是下一跳地址，即数据包将被转发到这个地址对应的设备接口</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>配置默认路由的应用场景示例（完整配置）：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system - view  # 进入系统视图</span><br><span class="line">[Huawei]interface GigabitEthernet0/0/1  # 进入路由器的一个接口（假设是连接内部网络的接口）视图，GigabitEthernet0/0/1是接口名称，可根据实际设备接口情况改变</span><br><span class="line">[Huawei - GigabitEthernet0/0/1]ip address 192.168.1.254 255.255.255.0  # 配置该接口的IP地址为192.168.1.254，子网掩码为255.255.255.0，使其能与内部网络通信</span><br><span class="line">[Huawei - GigabitEthernet0/0/1]quit  # 退出接口视图，回到系统视图</span><br><span class="line">[Huawei]interface GigabitEthernet0/0/2  # 进入另一个接口（假设是连接外部网络，比如ISP的接口）视图</span><br><span class="line">[Huawei - GigabitEthernet0/0/2]ip address 202.100.1.2 255.255.255.252  # 配置该接口的IP地址为202.100.1.2，子网掩码为255.255.255.252，使其能与外部网络通信</span><br><span class="line">[Huawei - GigabitEthernet0/0/2]quit  # 退出接口视图，回到系统视图</span><br><span class="line">[Huawei]ip route - static 0.0.0.0 0.0.0.0 202.100.1.1  # 配置默认路由，下一跳地址为202.100.1.1，这样内部网络的数据可以通过这个接口转发出去访问互联网等外部网络</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>运算器：</strong>主要完成算术运算、逻辑运算和移位操作，主要部件有算术逻辑单元（ALU）、累加器（ACC）、标志寄存器、寄存器组、多路转换器、数据总线等。</p>
+</li>
+<li><p><strong>控制器：</strong>主要实现指令的读入、寄存、译码和执行过程有序地发出控制信号。控制器主要由指令寄存器、程序计数器、指令译码器、状态&#x2F;条件寄存器、时序产生器、微操作信号发生器组成。</p>
+</li>
+<li><p><strong>地址映射方式：</strong>有：全相联方式、直接方式和组相联方式。</p>
+</li>
+<li><p><strong>专利保护期限：</strong>根据我国《专利法》规定，发明专利的保护期限为20年，实用型和外观设计专利为10年。</p>
+</li>
+<li><p><strong>交换机与路由器连接：</strong>交换机与路由器用直通电缆连接。</p>
+</li>
+<li><p><strong>默认静态路由配置：</strong>例如： Router(config)#ip route 0.0.0.0 0.0.0.0 [exit-interface | ip-address ] 。</p>
+</li>
+<li><p><strong>cache与内存转换：</strong>cache与内存之间的转换是由硬件完成的。</p>
+</li>
+<li><p><strong>相联存储器：</strong>按内容方式访问。</p>
+</li>
+<li><p><strong>E1、E2、E3、T1载波数据速率：</strong></p>
+<ul>
+<li><p>E1载波的数据速率为2.048Mbit&#x2F;s。</p>
+</li>
+<li><p>E2由4个E1组成。</p>
+</li>
+<li><p>E3由4个E2组成。</p>
+</li>
+<li><p>T1载波的数据速率为1.544Mbit&#x2F;s。</p>
+</li>
+</ul>
+</li>
+<li><p>**<code>route print</code><strong>与</strong><code>netstat –r</code>**功能是一样的。</p>
+</li>
+<li><p>在Linux中，DNS服务器的配置文件为<code>/etc/resolv.conf</code>。</p>
+</li>
+<li><p>MD5算法属于<strong>摘要算法</strong>。</p>
+</li>
+<li><p><strong>集成windows身份验证</strong>是安全级别最高的验证方法。</p>
+</li>
+<li><p><strong>网络可用性</strong>是指用户可利用网络时间得百分比。</p>
+</li>
+<li><p><strong>网络管理功能：</strong>网络管理的5大功能为：配置管理、故障管理、计费管理、性能管理和安全管理。</p>
+</li>
+<li><p><strong>BGP传输协议及端口：</strong>BGP将TCP用作其传输协议，运行在TCP的179端口上（目的端口）。</p>
+</li>
+<li><p><strong>BGP邻居关系维持：</strong>BGP使用keepalive周期性的发送存活消息（60s）维持邻居关系。</p>
+</li>
+<li><p><strong>IPsec传输模式选择：</strong>IPsec传输模式和隧道模式，实现端到端的传输应选择传输模式。</p>
+</li>
+<li><p><strong>IPv6地址类型：</strong>IPv6地址分为3中类型，它们是单播地址、组播地址、任意播地址。</p>
+</li>
+<li><p><strong>802.11 MAC层算法：</strong>802.11在MAC层采用了CSMA&#x2F;CA算法。</p>
+</li>
+<li><p><strong>Ieee802.11n数据速率：</strong>Ieee802.11n提供的最高数据速率可达到300Mbit&#x2F;s。</p>
+</li>
+<li><p><strong>IEEE802.16标准：</strong>IEEE802.16工作组提出的无线接入系统空中接口标准是WiMAX。</p>
+</li>
+<li><p><strong>安全电子邮件协议：</strong>安全电子邮件使用PGP协议。</p>
+</li>
+<li><p>Linux服务器中DHCP服务器程序对应的配置文件的名称为<code>dhcp.conf</code>，该文件的默认目录是<code>/etc</code>。</p>
+</li>
+<li><p><strong>CSMA&#x2F;CD（载波监听多路访问 &#x2F; 碰撞检测）算法：</strong></p>
+<ul>
+<li><strong>基本原理：</strong><ul>
+<li>CSMA&#x2F;CD 主要用于解决在共享介质的以太网中，多个节点同时访问介质时可能产生的冲突问题。其工作过程主要包括载波监听、冲突检测和退避。</li>
+<li>当一个节点要发送数据时，首先会进行载波监听，也就是检测信道是否空闲。如果信道空闲，节点就开始发送数据；如果信道忙，则节点会等待，直到信道空闲。</li>
+</ul>
+</li>
+<li><strong>冲突检测机制：</strong><ul>
+<li>在发送数据过程中，节点同时进行冲突检测。这是因为电磁波在介质中传播需要时间，即使在发送数据时检测到信道空闲，但在数据传输过程中仍有可能与其他节点发送的数据发生冲突。</li>
+<li>节点通过比较自己发送的数据信号和从信道上接收到的信号来判断是否发生冲突。如果发现信号不同，就表示发生了冲突。</li>
+</ul>
+</li>
+<li><strong>退避算法：</strong><ul>
+<li>一旦检测到冲突，发送节点会立即停止发送数据，并执行退避算法。退避算法的目的是让发生冲突的节点在不同的时间重新尝试发送数据，以减少再次冲突的可能性。</li>
+<li>常用的退避算法是二进制指数退避算法。在这种算法中，冲突次数 n 决定了节点重新发送数据前需要等待的时间间隔。等待时间间隔的计算公式为，其中是一个在区间均匀分布的随机数，是一个与网络参数相关的常量（如时隙时间）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>监听算法分类：</strong></p>
+<ul>
+<li><strong>非坚持 CSMA（Non - persistent CSMA）：</strong><ul>
+<li><strong>工作原理：</strong><ul>
+<li>当一个节点要发送数据时，首先监听信道。如果信道空闲，就立即发送数据；如果信道忙，则不再继续监听，而是随机等待一段时间后，再重新监听信道是否空闲。</li>
+</ul>
+</li>
+<li><strong>特点：</strong><ul>
+<li>这种算法的优点是减少了节点等待信道空闲的时间，因为一旦发现信道忙就不再监听，而是等待一段时间后重新尝试。缺点是如果有多个节点同时等待发送数据，可能会导致频繁的冲突，因为它们重新开始监听的时间是随机的，很可能再次同时发现信道空闲而同时发送数据。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>1 - 坚持 CSMA（1 - persistent CSMA）<ul>
+<li>工作原理<ul>
+<li>当节点要发送数据时，首先监听信道。如果信道空闲，就立即发送数据；如果信道忙，则持续监听，直到信道空闲后立即发送数据。</li>
+</ul>
+</li>
+<li>特点<ul>
+<li>优点是只要信道空闲，节点就能很快地发送数据，减少了等待时间。缺点是如果有两个或多个节点同时等待发送数据，当信道空闲时，它们会同时发送数据，导致冲突概率较高。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>P - 坚持 CSMA（P - persistent CSMA）<ul>
+<li>工作原理<ul>
+<li>用于时分复用的信道。当节点要发送数据时，首先监听信道。如果信道空闲，就以概率发送数据，以概率推迟发送；如果信道忙，则持续监听，直到信道空闲后，再按照上述概率规则发送数据。</li>
+</ul>
+</li>
+<li>特点<ul>
+<li>这种算法试图在非坚持 CSMA 和 1 - 坚持 CSMA 之间找到一个平衡。当时，它就变成了 1 - 坚持 CSMA；当时，它就变成了非坚持 CSMA。但是，它的实现相对复杂，而且要选择合适的值才能有效地降低冲突概率。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>IEEE802.3最小帧长：</strong>IEEE802.3规定的最小帧长为64字节。</p>
+</li>
+<li><p>Apache的主配置文件名是<code>http.conf</code>，改文件所在所在目录为<code>/etc</code>。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>网工</category>
+      </categories>
+      <tags>
+        <tag>网络工程师</tag>
+        <tag>考试知识点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>终极 Nginx 配置指南（超详细）</title>
+    <url>https://kfufys.github.io/2024/12/16/Nginx-Configuration-Guide/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p>对于自己上线项目的前端来说，nginx也是必须要了解和熟悉的，查了很多的nginx文章，看着写的都很详细，但是却没有了整体的概念。这里就重新梳理一遍，也理清思路。</p>
+<p>我们在安装nginx之后，会自动生成很多的文件，但是nginx.conf这个文件是我们的核心，如何去正确的修改和优化它是nginx的核心。</p>
+<p>首先我们可以先看下原本的配置，你会觉得无所适从，因为感觉这个鬼东西也太多了吧。而且感觉根本就不理解，也不知道该怎么写。下面，就一步一步的教你如何入门到熟悉</p>
+<h3 id="一、nginx-conf原本配置到解释"><a href="#一、nginx-conf原本配置到解释" class="headerlink" title="一、nginx.conf原本配置到解释"></a><strong>一、<code>nginx.conf</code>原本配置到解释</strong></h3><p>看到这个118行是不是觉得有点害怕</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#user  nobody;</span></span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">#error_log  logs/error.log;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  notice;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  info;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#pid        logs/nginx.pid;</span></span><br><span class="line"></span><br><span class="line"><span class="section">events</span> &#123;</span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">    <span class="attribute">include</span>        mime.types;</span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#log_format  main  &#x27;$remote_addr  -  $remote_user  [$time_local]  &quot;$request&quot;  &#x27;</span></span><br><span class="line">    <span class="comment">#            &#x27;$status  $body_bytes_sent  &quot;$http_referer&quot;  &#x27;</span></span><br><span class="line">    <span class="comment">#            &#x27;&quot;$http_user_agent&quot;  &quot;$http_x_forwarded_for&quot;&#x27;;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#access_log  logs/access.log  main;</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;</span><br><span class="line">    <span class="comment">#tcp_nopush     on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#keepalive_timeout  0;</span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#gzip  on;</span></span><br><span class="line"></span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>        <span class="number">80</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  localhost;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#charset  koi8-r;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#access_log  logs/host.access.log  main;</span></span><br><span class="line"></span><br><span class="line">        <span class="section">location</span> / &#123;</span><br><span class="line">            <span class="attribute">root</span>   html;</span><br><span class="line">            <span class="attribute">index</span>  index.html  index.htm;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#error_page  404  /404.html;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#redirect  server  error  pages  to  the  static  page  /50x.html</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="attribute">error_page</span>  <span class="number">500</span>  <span class="number">502</span>  <span class="number">503</span>  <span class="number">504</span>  /50x.html;</span><br><span class="line">        <span class="section">location</span> = /50x.html &#123;</span><br><span class="line">            <span class="attribute">root</span>   html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#proxy  the  PHP  scripts  to  Apache  listening  on  127.0.0.1:80</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  \.php$  &#123;</span></span><br><span class="line">        <span class="comment">#    proxy_pass  http://127.0.0.1;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#pass  the  PHP  scripts  to  FastCGI  server  listening  on  127.0.0.1:9000</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  \.php$  &#123;</span></span><br><span class="line">        <span class="comment">#    root         html;</span></span><br><span class="line">        <span class="comment">#    fastcgi_pass  127.0.0.1:9000;</span></span><br><span class="line">        <span class="comment">#    fastcgi_index  index.php;</span></span><br><span class="line">        <span class="comment">#    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</span></span><br><span class="line">        <span class="comment">#    include       fastcgi_params;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#deny  access  to  .htaccess  files,  if  Apache&#x27;s  document  root</span></span><br><span class="line">        <span class="comment">#concurs  with  nginx&#x27;s  one</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  /\.ht  &#123;</span></span><br><span class="line">        <span class="comment">#    deny  all;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#another  virtual  host  using  mix  of  IP-,  name-,  and  port-based  configuration</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment">#server  &#123;</span></span><br><span class="line">    <span class="comment">#    listen        8000;</span></span><br><span class="line">    <span class="comment">#    listen        somename:8080;</span></span><br><span class="line">    <span class="comment">#    server_name   somename   alias   another.alias;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    location  /  &#123;</span></span><br><span class="line">    <span class="comment">#        root   html;</span></span><br><span class="line">    <span class="comment">#        index  index.html  index.htm;</span></span><br><span class="line">    <span class="comment">#    &#125;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#HTTPS  server</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment">#server  &#123;</span></span><br><span class="line">    <span class="comment">#    listen        443  ssl;</span></span><br><span class="line">    <span class="comment">#    server_name   localhost;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_certificate      cert.pem;</span></span><br><span class="line">    <span class="comment">#    ssl_certificate_key  cert.key;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_session_cache    shared:SSL:1m;</span></span><br><span class="line">    <span class="comment">#    ssl_session_timeout  5m;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_ciphers  HIGH:!aNULL:!MD5;</span></span><br><span class="line">    <span class="comment">#    ssl_prefer_server_ciphers  on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    location  /  &#123;</span></span><br><span class="line">    <span class="comment">#        root   html;</span></span><br><span class="line">    <span class="comment">#        index  index.html  index.htm;</span></span><br><span class="line">    <span class="comment">#    &#125;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>没关系，我们把其中的注释都删掉，除掉了注释之后的nginx代码，现在只有22行了。感觉好多了</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br><span class="line"><span class="section">events</span> &#123;  </span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">http</span> &#123;  </span><br><span class="line">    <span class="attribute">include</span>       mime.types;  </span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;  </span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;  </span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;  </span><br><span class="line">    <span class="section">server</span> &#123;  </span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;  </span><br><span class="line">        <span class="attribute">server_name</span>  localhost;  </span><br><span class="line">        <span class="section">location</span> / &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  </span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="attribute">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  /50x.html;  </span><br><span class="line">        <span class="section">location</span> = /50x.html &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<p><strong>注解版本：</strong></p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#nginx进程数，建议设置为等于CPU总核心数。  </span></span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br><span class="line"><span class="comment"># 事件区块开始  </span></span><br><span class="line"><span class="section">events</span> &#123;  </span><br><span class="line">    <span class="comment">#单个进程最大连接数（最大连接数=连接数*进程数）  </span></span><br><span class="line">    <span class="comment">#根据硬件调整，和前面工作进程配合起来用，尽量大，但是别把cpu跑到100%就行。每个进程允许的最多连接数，理论上每台nginx服务器的最大连接数为。  </span></span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">#设定http服务器，利用它的反向代理功能提供负载均衡支持  </span></span><br><span class="line"><span class="section">http</span> &#123;  </span><br><span class="line">    <span class="comment">#include：导入外部文件mime.types，将所有types提取为文件，然后导入到nginx配置文件中  </span></span><br><span class="line">    <span class="attribute">include</span>       mime.types;  </span><br><span class="line">     <span class="comment">#默认文件类型  </span></span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;  </span><br><span class="line">    <span class="comment">#开启高效文件传输模式，sendfile指令指定nginx是否调用sendfile函数来输出文件，对于普通应用设为 on，如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络I/O处理速度，降低系统的负载。注意：如果图片显示不正常把这个改成off。  </span></span><br><span class="line">    <span class="comment">#sendfile指令指定 nginx 是否调用sendfile 函数（zero copy 方式）来输出文件，对于普通应用，必须设为on。如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络IO处理速度，降低系统uptime。  </span></span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;  </span><br><span class="line">      <span class="comment">#长连接超时时间，单位是秒  </span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;  </span><br><span class="line">    <span class="comment"># 第一个Server区块开始，表示一个独立的虚拟主机站点  </span></span><br><span class="line">    <span class="section">server</span> &#123;  </span><br><span class="line">        <span class="comment"># 提供服务的端口，默认80  </span></span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;  </span><br><span class="line">        <span class="comment"># 提供服务的域名主机名  </span></span><br><span class="line">        <span class="attribute">server_name</span>  localhost;  </span><br><span class="line">        <span class="comment">#对 &quot;/&quot; 启用反向代理,第一个location区块开始  </span></span><br><span class="line">        <span class="section">location</span> / &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  <span class="comment">#服务默认启动目录  </span></span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm; <span class="comment"># 默认的首页文件，多个用空格分开  </span></span><br><span class="line">        &#125;  </span><br><span class="line">         <span class="comment"># 错误页面路由  </span></span><br><span class="line">        <span class="attribute">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  /50x.html; <span class="comment"># 出现对应的http状态码时，使用50x.html回应客户  </span></span><br><span class="line">        <span class="section">location</span> = /50x.html &#123; <span class="comment"># location区块开始，访问50x.html  </span></span><br><span class="line">            <span class="attribute">root</span>   html;  <span class="comment"># 指定对应的站点目录为html  </span></span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="二、整体基本理解"><a href="#二、整体基本理解" class="headerlink" title="二、整体基本理解"></a><strong>二、整体基本理解</strong></h3><p>虽然上面有了注解，但是看起来还是很迷糊。接着解释：我们可以把**<code>nginx.conf</code>**分为三个部分进行理解：</p>
+<ul>
+<li>第一部分：<strong>全局块</strong> </li>
+<li>第二部分：<strong>events块</strong> </li>
+<li>第三部分：<strong>http块</strong></li>
+</ul>
+<p><strong>对应图解：</strong></p>
+<p><img src="https://s21.ax1x.com/2024/12/16/pAqOqVH.png" alt="nginx.conf分块图解"></p>
+<h4 id="全局块："><a href="#全局块：" class="headerlink" title="全局块："></a><strong>全局块：</strong></h4><p><strong>作用：</strong>从配置文件开始到 <code>events</code>块之间的内容，主要会设置一些影响nginx服务器整体运行的配置指令，主要包括配置<strong>运行 <code>Nginx</code></strong><br><strong>服务器的用户（组）</strong>、<strong>允许生成的 <code>worker process</code> 数</strong>，<strong>进程 <code>PID</code> 存放路径</strong>、<strong>日志存放路径</strong>和<strong>类型以及配置文件的引入</strong>等。</p>
+<p>比如上面第一行配置的</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br></pre></td></tr></table></figure>
+
+
+<p>这是 <code>Nginx</code> 服务器并发处理服务的关键配置，<code>worker_processes</code> 值越大，可以支持的并发处理量也越多，但是 会受到硬件、软件等设备的制约。</p>
+<h4 id="events块："><a href="#events块：" class="headerlink" title="events块："></a><strong><code>events</code>块：</strong></h4><p>作用：<code>events</code> 块涉及的指令主要影响 <code>Nginx</code> 服务器与用户的网络连接，常用的设置包括是否开启对多 <code>work process</code>下的网络连接进行序列化，是否 允许同时接收多个网络连接，选取哪种事件驱动模型来处理连接请求，每个<code> word process</code> 可以同时支持的最大连接数等。</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br></pre></td></tr></table></figure>
+
+
+<p>上述例子就表示每个 <code>work process</code> 支持的最大连接数为 <code>1024</code>。</p>
+<p>这部分的配置对 <code>Nginx</code> 的性能影响较大，在实际中应该灵活配置。</p>
+<h4 id="http块："><a href="#http块：" class="headerlink" title="http块："></a><strong>http块：</strong></h4><p><strong>作用：</strong>这算是 <code>Nginx</code> 服务器配置中最频繁的部分，代理、缓存和日志定义等绝大多数功能和第三方模块的配置都在这里。</p>
+<blockquote>
+<p>需要注意的是：<code>http</code> 块也可以包括 <strong>http全局块</strong>、<strong>server 块</strong>。</p>
+</blockquote>
+<ul>
+<li><p><strong>http全局块</strong></p>
+<ul>
+<li>http全局块配置的指令包括<strong>文件引入</strong>、**<code>MIME-TYPE</code> 定义<strong>、</strong>日志自定义<strong>、</strong>连接超时时间<strong>、</strong>单链接请求数上限**等。</li>
+</ul>
+<ul>
+<li><p><strong>server 块</strong></p>
+<ul>
+<li><p>这块和虚拟主机有密切关系，虚拟主机从用户角度看，和一台独立的硬件主机是完全一样的，该技术的产生是为了 节省互联网服务器硬件成本。</p>
+<ul>
+<li><p>每个 http 块可以包括多个 server 块，而每个 server 块就相当于一个虚拟主机。 </p>
+</li>
+<li><p>而每个 server 块也分为全局 server 块，以及可以同时包含多个 locaton 块。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>全局 server 块</strong></p>
+<ul>
+<li>最常见的配置是本虚拟机主机的监听配置和本虚拟主机的名称或<code>IP</code>配置。</li>
+</ul>
+</li>
+<li><p><strong>location 块</strong></p>
+<ul>
+<li>一个 <code>server</code> 块可以配置多个 <code>location</code> 块。</li>
+<li>这块的主要作用是基于 <code>Nginx</code> 服务器接收到的请求字符串（例如 server_name&#x2F;uri-string），对虚拟主机名称 （也可以是<code>IP</code>别名）之外的字符串（例如 前面的 <code>/uri-string</code>）进行匹配，对特定的请求进行处理。地址定向、数据缓存和应答控制等功能，还有许多第三方模块的配置也在这里进行。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>对应图解：</strong></p>
+<p><img src="https://s21.ax1x.com/2024/12/16/pAqO7rD.png" alt="nginx.conf三部分"></p>
+<h3 id="三、最简单的上线"><a href="#三、最简单的上线" class="headerlink" title="三、最简单的上线"></a><strong>三、最简单的上线</strong></h3><p>以上，我们就知道了nginx整体大致的结构，以及每部分的结构是用于做什么的。接下来我们就修改nginx关键位置来实现我们网站的代理功能。看着nginx配置很繁琐，但是如果你只是需要上线一个网站，那么你只需要去修改两个地方即可：</p>
+<p><img src="https://s21.ax1x.com/2024/12/16/pAqOIxK.png" alt="上线"></p>
+<p>我们可以使用默认简单的配置，然后指定<code>server_name</code>和<code>root</code>，主要是告诉nginx代理的<code>ip</code>是xxx，然后我放在服务器的文件在bbb文件夹即可。nginx便会在用户访问这个ip时，自动的将bbb文件夹中的<code>index.html</code>返回到浏览器来展示页面。</p>
+<h3 id="四、-Nginx-优化："><a href="#四、-Nginx-优化：" class="headerlink" title="四、&#96;Nginx 优化："></a><strong>四、&#96;Nginx 优化：</strong></h3><h4 id="1-前端history模式404问题："><a href="#1-前端history模式404问题：" class="headerlink" title="1. 前端history模式404问题："></a><strong>1. 前端<code>history模式404</code>问题：</strong></h4><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">location</span> / &#123;  </span><br><span class="line">    <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+
+<p>这段代码的作用是，当用户刷新页面时，Nginx会先检查当前<code>URL</code>是否存在，如果不存在，就会尝试访问<code>index.htm</code>l，从而可以正常显示页面。</p>
+<p><img src="https://s21.ax1x.com/2024/12/16/pAqO526.png"></p>
+<h4 id="2-反向代理："><a href="#2-反向代理：" class="headerlink" title="2. 反向代理："></a><strong>2. 反向代理：</strong></h4><p>相信大家作为前端都了解跨域问题，目前前端的主流解决跨域的方式就是</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line">1. 开发生产cors解决 </span><br><span class="line">2. 开发proxy，生产nginx解决。 </span><br></pre></td></tr></table></figure>
+
+<p><strong>如何配置：</strong></p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#接口端  </span></span><br><span class="line"><span class="section">location</span> /police/ &#123;  </span><br><span class="line">    <span class="attribute">proxy_pass</span>   http://192.168.1.182:8852/police/;  </span><br><span class="line">    <span class="attribute">proxy_redirect</span> default;  </span><br><span class="line">    <span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>;  </span><br><span class="line">    <span class="attribute">proxy_connect_timeout</span>   <span class="number">60</span>;  </span><br><span class="line">    <span class="attribute">proxy_send_timeout</span>      <span class="number">60</span>;  </span><br><span class="line">    <span class="attribute">proxy_read_timeout</span>      <span class="number">90</span>;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<p><strong>具体位置：</strong></p>
+<p><img src="https://s21.ax1x.com/2024/12/16/pAqOTKO.png"></p>
+<p><strong>理解：</strong></p>
+<p><strong>这段代码的意思：</strong>大致就是如果遇到以<code>/police</code>请求开头的接口，那么就去访问这个ip地址(<code>http://192.168.1.182:8852/police/</code>)的后台端口。</p>
+<p><strong>例如：</strong>我们通过<code>axios</code>去访问<code>/police/getList</code>这个后台接口时，nginx会将这个请求转发到ip端口为<code>http://192.168.1.182:8852</code>的后台中，后台将结果返回给nginx，nginx再把结果给到浏览器，实现反向代理。</p>
+<p><strong>定义多个端口的反向代理：</strong></p>
+<p>copy上面的，直接修改<code>代理头</code>和<code>proxy_pass</code>即可。</p>
+<p><img src="https://s21.ax1x.com/2024/12/16/pAqOHqe.png"></p>
+<h4 id="3-开启gzip："><a href="#3-开启gzip：" class="headerlink" title="3. 开启gzip："></a><strong>3. 开启<code>gzip</code>：</strong></h4><p><strong>作用：</strong></p>
+<p>开启<code>gzip</code>对于前端来说还是比较重要的，浏览器加载的包大概能节约一半的空间。例如首页需要加载<code>a.js</code>文件，该文件为<code>900kb</code>，在开启<code>gzip</code>之后，浏览器会去加载<code>a.js</code>经过<code>gzip</code>之后的文件<code>a.js.gz</code>，大概只有<code>450kb</code>，能够很好的提升浏览速度。</p>
+<p><strong>如何配置：</strong></p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">gzip</span> <span class="literal">on</span>; <span class="comment"># 默认off，是否开启gzip  </span></span><br><span class="line"><span class="attribute">gzip_types</span> text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 上面两个开启基本就能跑起了，下面的愿意折腾就了解一下  </span></span><br><span class="line"><span class="attribute">gzip_static</span> <span class="literal">on</span>;  </span><br><span class="line"><span class="attribute">gzip_proxied</span> any;  </span><br><span class="line"><span class="attribute">gzip_vary</span> <span class="literal">on</span>;  </span><br><span class="line"><span class="attribute">gzip_comp_level</span> <span class="number">6</span>;  </span><br><span class="line"><span class="attribute">gzip_buffers</span> <span class="number">16</span> <span class="number">8k</span>;  </span><br><span class="line"><span class="comment"># gzip_min_length 1k;  </span></span><br><span class="line"><span class="attribute">gzip_http_version</span> <span class="number">1</span>.<span class="number">1</span>;  </span><br></pre></td></tr></table></figure>
+
+<p><strong>具体位置：</strong></p>
+<p><img src="https://s21.ax1x.com/2024/12/16/pAqOLad.png"></p>
+<h4 id="4-维护页面："><a href="#4-维护页面：" class="headerlink" title="4. 维护页面："></a><strong>4. 维护页面：</strong></h4><p><strong>作用：</strong></p>
+<p>在系统进行维护升级时，用户打开我们的网站看到的维护页面。</p>
+<p><strong>如何配置：</strong></p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 系统临时维护请打开下面这行注释，并重启nginx,维护完毕后请注释下年这行,并重启nginx  </span></span><br><span class="line"> <span class="comment"># rewrite ^(.*)$ /maintainace.html break;  </span></span><br></pre></td></tr></table></figure>
+
+<p><strong>具体位置：</strong></p>
+<p><img src="https://www.helloimg.com/i/2024/12/16/676009b0b09fe.png"></p>
+<h4 id="5-一个ip上线多个网站："><a href="#5-一个ip上线多个网站：" class="headerlink" title="5. 一个ip上线多个网站："></a><strong>5. 一个<code>ip</code>上线多个网站：</strong></h4><p><strong>作用：</strong></p>
+<p>只有一个<code>ip</code>。利用<code>nginx</code>上线多个网站。例如访问<code>192.168.1.154:8080</code>访问我们的个人博客网站，访问<code>192.168.1.154:8081</code>访问我们的直播网站。</p>
+<p><strong>如何配置：</strong></p>
+<p>直接复制<code>server块</code>即可，一个<code>server块</code>就代表了一个<code>website</code>，需要改端口和文件的路径等内容。</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 第一个网站：个人博客项目配置  </span></span><br><span class="line">  <span class="section">server</span> &#123;  </span><br><span class="line">   <span class="attribute">listen</span>       <span class="number">8080</span>;  </span><br><span class="line">   <span class="attribute">root</span>         /data/www/hexo;  </span><br><span class="line">   <span class="attribute">index</span>        index.html;  </span><br><span class="line">   <span class="section">location</span> / &#123;  </span><br><span class="line">    <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html; <span class="comment"># 路由模式history的修改  </span></span><br><span class="line">   &#125;  </span><br><span class="line">  &#125;  </span><br><span class="line">  </span><br><span class="line"> <span class="comment"># 第二个网站：直播网站项目配置  </span></span><br><span class="line"> <span class="section">server</span> &#123;  </span><br><span class="line">  <span class="attribute">listen</span>       <span class="number">8081</span>;  </span><br><span class="line">  <span class="attribute">root</span>         /data/www/geov;  </span><br><span class="line">  <span class="attribute">index</span>        index.html;  </span><br><span class="line">  <span class="section">location</span> / &#123;&#125;  </span><br><span class="line"> &#125;  </span><br></pre></td></tr></table></figure>
+
+<p><strong>具体位置：</strong></p>
+<p><img src="https://www.helloimg.com/i/2024/12/16/676009c92572f.png"></p>
+<p><strong>注意点：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 这里的8081一定要你的服务器开放了这个端口才可以使用，否则你按照这个配置了也会访问不到（让后端去配）。 </span><br><span class="line">2. 如果是云服务器（比如阿里云，腾讯云），则需要开放相应的入口为8081,否则用户访问不到。 </span><br></pre></td></tr></table></figure>
+
+<h4 id="6-动静分离："><a href="#6-动静分离：" class="headerlink" title="6. 动静分离："></a><strong>6. 动静分离：</strong></h4><p><strong>作用：</strong></p>
+<p>在Web开发中，通常来说，动态资源其实就是指那些后台资源，而静态资源就是指<code>HTML</code>，<code>JavaScript</code>，<code>CSS</code>，<code>img</code>等文件。</p>
+<p>一般来说，都需要将动态资源和静态资源分开，将静态资源部署在<code>Nginx</code>上，当一个请求来的时候，如果是静态资源的请求，就直接到<code>nginx</code>配置的静态资源目录下面获取资源，如果是动态资源的请求，<code>nginx</code>利用反向代理的原理，把请求转发给后台应用去处理，从而实现动静分离。</p>
+<p>在使用前后端分离之后，可以很大程度的提升静态资源的访问速度，同时在开过程中也可以让前后端开发并行可以有效的提高开发时间，也可以有些的减少联调时间 。</p>
+<p><strong>解析：</strong></p>
+<p>实际上我们在代理前端的<code>html</code>和接口时就已经做到了动静分离。我们打包后的dist包实际上就是纯静态的资源，所以直接访问<code>nginx</code>静态资源服务器，就不需要经过后台的tomcat。访问接口时，就需要<code>nginx</code>先去访问后台服务器，拿到结果再给到浏览器</p>
+<p><img src="https://www.helloimg.com/i/2024/12/16/676009ecead58.png"></p>
+<p><strong>图解：</strong></p>
+<p><img src="https://www.helloimg.com/i/2024/12/16/676009f06bafe.png"></p>
+<p><strong>如何配置（其实是优化，因为一般配置会有动静分离）：</strong></p>
+<p>假设有比较大的图片等需要放置到服务器上，然后通过<code>nginx</code>来转发。或者是有一个纯前端的开源项目（如<code>pdf.js</code>），也需要放在服务器上。如果放在本地代码包，打包出来体积会很大。</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">location</span> /image/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> /static/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> /car/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> <span class="regexp">~ .*\.(html|htm|gif|jpg|jpeg|bmp|png|ico|js|css)$</span> &#123;  </span><br><span class="line">  <span class="attribute">root</span> /Users/dalaoyang/Downloads/static;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<p><strong>具体位置：</strong></p>
+<p><img src="https://www.helloimg.com/i/2024/12/16/676009f2b03de.png"></p>
+<h4 id="7-其他优化"><a href="#7-其他优化" class="headerlink" title="7. 其他优化"></a><strong>7. 其他优化</strong></h4><p>这里只讲了一些<code>nginx</code>基础的知识和一些基础的优化，基本上够用了。但是如果你需要追求更高的性能，那么可以添加其他的优化，只需要根据一些搜索到的文章内容<code>copy</code>过来就行了，<code>nginx</code>主要还是配置多一些，但是理解了整体结构和脉络的话，其实就还是蛮简单的。这里就不做过多的讲解了。</p>
+<h3 id="五、Nginx基础命令：安装，启动，重启，关闭"><a href="#五、Nginx基础命令：安装，启动，重启，关闭" class="headerlink" title="五、Nginx基础命令：安装，启动，重启，关闭"></a><strong>五、<code>Nginx</code>基础命令：安装，启动，重启，关闭</strong></h3><ol>
+<li><strong>安装<code>nginx</code>：</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install nginx  </span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>看是否有<code>nginx</code>进程：</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -anput | grep nginx  </span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong>查看服务器端口占用情况：</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -ntlp  </span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><strong><code>nginx</code>启动:</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx  </span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><strong><code>nginx</code>重启:</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -s reload  </span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li><strong>关闭<code>nginx</code>：</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -s stop	<span class="comment"># 快速停止nginx </span></span><br><span class="line">nginx -s quit	<span class="comment"># 完整有序的停止nginx </span></span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li><strong>查看默认的<code>nginx</code>配置文件路径：</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -t  </span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p><strong>注：</strong>如果有<code>nginx.conf</code>配置的更改，需要重启<code>nginx</code>配置才会生效。如果只是更改<code>dist</code>包<code>/html</code>，则可以不重启<code>nginx</code>。</p>
+</blockquote>
+<h3 id="六、参考文章："><a href="#六、参考文章：" class="headerlink" title="六、参考文章："></a><strong>六、参考文章：</strong></h3><ul>
+<li><a href="https://github.com/rui-rui-an/nginxpages">rui-rui-an&#x2F;nginxpages: nginx的配置文件</a></li>
+<li><a href="https://juejin.cn/post/6844904144235413512">Nginx 从入门到实践，万字详解！ - 掘金</a></li>
+<li><a href="https://blog.csdn.net/qq_44691484/article/details/126354702">Nginx nginx.conf配置文件详解_nginxconf配置详解-CSDN博客</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>网站部署</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>网站部署</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About</title>
+    <url>https://kfufys.github.io/2024/11/16/about/</url>
+    <content><![CDATA[<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><hr>
+<ul>
+<li><p>我是<strong>窦长友</strong>，一名摄影爱好者，编程小渣渣~~</p>
+</li>
+<li><p>目前就读于<strong>开封大学</strong>….</p>
+</li>
+</ul>
+<h3 id="我的爱好"><a href="#我的爱好" class="headerlink" title="我的爱好"></a>我的爱好</h3><hr>
+<p>热衷于研究所有与计算机相关的事物，包括：</p>
+<ul>
+<li><p><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。 </p>
+</li>
+<li><p><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。 </p>
+</li>
+<li><p><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</p>
+</li>
+<li><p><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</p>
+</li>
+</ul>
+<h3 id="我的白日梦"><a href="#我的白日梦" class="headerlink" title="我的白日梦"></a>我的白日梦</h3><hr>
+<p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
+<p>要是大家有什么好的建议，欢迎告知呀！</p>
+]]></content>
+      <categories>
+        <category>About</category>
+      </categories>
+      <tags>
+        <tag>about</tag>
+        <tag>关于我</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《软件建模与设计》复习提纲</title>
+    <url>https://kfufys.github.io/2024/12/20/Software-modelling-and-design-revision-syllabus/</url>
+    <content><![CDATA[<h3 id="第一章-软件工程基础"><a href="#第一章-软件工程基础" class="headerlink" title="第一章  软件工程基础"></a><strong>第一章  软件工程基础</strong></h3><ol>
+<li><p><strong>软件的定义：</strong>软件&#x3D;程序+数据+文档。</p>
+</li>
+<li><p><strong>软件的特点：</strong>抽象性、可复制性、不会磨损、依赖性、开发效率低、开发费用高。</p>
+</li>
+<li><p><strong>软件危机：</strong>落后的软件生产方式无法满足迅速增长的计算机软件需求，从而导致软件开发与维护过程中出现一系列严重问题的现象。</p>
+</li>
+<li><p><strong>软件工程的定义：</strong>软件工程是研究和如何以系统性的、规范化的、可定量的过程化方法去开发和维护软件，以及如何把经过时间考验而证明正确的管理技术和当前能够得到的最好的技术方法结合起来。</p>
+</li>
+<li><p><strong>软件的生命周期：</strong><code>3</code>个时期<code>8</code>个阶段</p>
+</li>
+</ol>
+<img src="https://pic.imgdb.cn/item/67657501d0e0a243d4e744db.jpg" alt="wps1.jpg">
+
+<ol start="6">
+<li><p><strong>简述在软件开发中，每个阶段的主要任务是什么？具体包括哪些内容？主要解决哪些问题？</strong></p>
+<p>软件开发通常遵循一个生命周期，每个阶段都有其特定的任务和目标。以下是软件开发过程中常见的几个阶段及其主要任务：</p>
+<ul>
+<li><strong>需求分析阶段</strong>：<ul>
+<li><strong>任务</strong>：收集和分析用户需求，明确项目目标。</li>
+<li><strong>内容</strong>：与用户沟通，确定软件的功能需求、性能需求、用户界面需求等。</li>
+<li><strong>解决的问题</strong>：确保开发团队对用户需求有准确理解，避免开发出不符合用户期望的产品。</li>
+</ul>
+</li>
+<li><strong>系统设计阶段</strong>：<ul>
+<li><strong>任务</strong>：设计软件的架构和组件。</li>
+<li><strong>内容</strong>：包括高层设计（架构设计）和低层设计（详细设计），确定软件的模块划分、接口设计、数据结构等。</li>
+<li><strong>解决的问题</strong>：确保软件设计满足需求，具有良好的可扩展性、可维护性和性能。</li>
+</ul>
+</li>
+<li><strong>实现阶段</strong>：<ul>
+<li><strong>任务</strong>：编写代码实现设计。</li>
+<li><strong>内容</strong>：编码、单元测试、集成测试等。</li>
+<li><strong>解决的问题</strong>：将设计转化为实际的软件产品，并确保代码质量。</li>
+</ul>
+</li>
+<li><strong>测试阶段</strong>：<ul>
+<li><strong>任务</strong>：验证软件是否满足需求，发现并修复缺陷。</li>
+<li><strong>内容</strong>：包括单元测试、集成测试、系统测试、验收测试等。</li>
+<li><strong>解决的问题</strong>：确保软件质量，减少缺陷，提高用户满意度。</li>
+</ul>
+</li>
+<li><strong>部署阶段</strong>：<ul>
+<li><strong>任务</strong>：将软件部署到生产环境。</li>
+<li><strong>内容</strong>：包括配置管理、部署策略、备份和恢复计划等。</li>
+<li><strong>解决的问题</strong>：确保软件能够在用户环境中稳定运行。</li>
+</ul>
+</li>
+<li><strong>维护阶段</strong>：<ul>
+<li><strong>任务</strong>：对软件进行持续改进和支持。</li>
+<li><strong>内容</strong>：包括错误修复、性能优化、功能增强等。</li>
+<li><strong>解决的问题</strong>：适应环境变化，延长软件的使用寿命，提高用户满意度。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>简述软件建模与设计的概念，主要内容和作用？</strong></p>
+</li>
+</ol>
+<ul>
+<li><strong>概念</strong>： 软件建模是使用模型来表示软件系统的过程，这些模型可以是图形的或文本的，用于描述系统的结构、行为和功能。软件设计则是基于这些模型来定义软件的架构和组件的过程。</li>
+<li><strong>主要内容</strong>：<ul>
+<li><strong>需求建模</strong>：使用用例图、活动图等<code>UML</code>图表来描述用户需求。</li>
+<li><strong>架构设计</strong>：定义软件的高层结构，包括组件、接口和它们的交互。</li>
+<li><strong>详细设计</strong>：设计软件的内部结构，包括类图、序列图等。</li>
+<li><strong>数据建模</strong>：定义数据结构和数据库模式。</li>
+</ul>
+</li>
+<li><strong>作用</strong>：<ul>
+<li><strong>沟通工具</strong>：模型提供了一种直观的方式来沟通和理解复杂系统。</li>
+<li><strong>设计验证</strong>：通过模型可以提前发现设计中的问题，减少后期修改的成本。</li>
+<li><strong>文档化</strong>：模型作为文档的一部分，帮助新团队成员快速理解系统。</li>
+<li><strong>指导实现</strong>：详细的设计模型可以指导开发人员进行编码。</li>
+<li><strong>促进重用</strong>：良好的设计模型可以促进代码和设计的重用。</li>
+<li><strong>支持维护</strong>：清晰的模型有助于后期的维护和升级工作。</li>
+</ul>
+</li>
+</ul>
+<ol start="8">
+<li><p><strong>面向对象技术三大特征：</strong>封装、继承、多态。</p>
+</li>
+<li><p><strong>接口的概念及作用：</strong>接口只有方法体，没有具体实现，谁实现接口谁定义具体方法，大大提高程序的灵活性，推迟决策，提高面向对象的灵活性。</p>
+</li>
+</ol>
+<h3 id="第二章-常见的软件模型与RUP"><a href="#第二章-常见的软件模型与RUP" class="headerlink" title="第二章 常见的软件模型与RUP"></a><strong>第二章 常见的软件模型与<code>RUP</code></strong></h3><ol>
+<li><p><strong>常用软件开发模型：</strong>瀑布模型、原型模型、演化模型、螺旋模型，每个模型的特点、优点和缺点。</p>
+</li>
+<li><p><strong><code>RUP</code>（统一软件开发过程）：</strong>四个阶段：初始、细化、构造、交付。</p>
+</li>
+<li><p><strong>核心工作流：</strong>业务建模、需求、分析和设计、实现、测试、部署。</p>
+</li>
+<li><p><strong>核心支持工作流：</strong>配置和变更管理、项目管理、环境。</p>
+</li>
+<li><p><strong>主要特点(方法)：</strong>面向对象、用例驱动、以架构为中心、迭代（螺旋上升式的开发过程）、以质量控制和风险管理为目标，与<code>UML</code>相结合，适用性强等特点。</p>
+</li>
+</ol>
+<h3 id="第三章-UML与Rational-Rose概述"><a href="#第三章-UML与Rational-Rose概述" class="headerlink" title="第三章 UML与Rational Rose概述"></a><strong>第三章 <code>UML</code>与<code>Rational Rose</code>概述</strong></h3><ol>
+<li><p><strong><code>Unified Modeling Language</code>（统一建模语言）：</strong></p>
+<ul>
+<li>是一种为面向对象系统的产品进行说明、可视化和编制文档的一种标准语言，是非专利的第三代建模和规约语言。</li>
+<li><code>UML</code>是面向对象设计的建模工具，独立于任何具体程序设计语言。</li>
+<li><code>UML</code>立足于对事物的实体、性质、关系、结构、状态和动态变化过程的全程描述和反映。</li>
+<li><code>UML</code>可以从不同角度描述人们所观察到的软件视图，也可以描述在不同开发阶段中的软件的形态。</li>
+<li><code>UML</code>可以建立需求模型、逻辑模型、设计模型和实现模型等，但在领域模型方面存在不足。</li>
+<li><code>UML</code>采用一组图形符号来描述软件模型，这些图形符号具有简单、直观和规范的特点，开发人员学习和掌握起来比较简单。</li>
+<li>所描述的软件模型，可以直观地理解和阅读，由于具有规范性，所以能够保证模型的准确、一致。</li>
+<li>此外，<code>UML</code>是可以根据用户需要扩展的语言。</li>
+</ul>
+</li>
+<li><p><strong><code>UML</code>的构成：</strong></p>
+<img src="https://files.superbed.cn/proxy/7569696d6e2732327b7471786e336e686d786f7f7879337e7e326e69726f783274707c7a786e32292932797e322b2a2b282a282d2c792d782d7c2f292e7929782a2929797e33776d7a.jpg">
+</li>
+<li><p><strong><code>UML</code>模型分类：</strong></p>
+<p><code>UML</code>模型可以分为两大类：<strong>结构图</strong>和<strong>行为图</strong>。</p>
+<img src="https://pic.imgdb.cn/item/67657500d0e0a243d4e744da.png" alt="wps0.png"></li>
+</ol>
+<h3 id="第四章-用例图"><a href="#第四章-用例图" class="headerlink" title="第四章  用例图"></a><strong>第四章  用例图</strong></h3><p><em><strong>*要求掌握：</strong></em>用例图的相关概念，用例图建模，include和extend的区别及应用。</p>
+<ol>
+<li><p><strong>用例图的重要性：</strong>软件系统要实现的功能通过用例来捕获，接下来的所有分析、设计、实现、测试都由用例来驱动。因此，在面向对象的软件生产过程由用例驱动，所以用例图建模也是所有模型中最重要的一种模型。</p>
+</li>
+<li><p><strong>用例图：</strong>从用户的角度来描述对软件产品的需求，分析产品的系统功能，并指出各功能的操作者，用来捕获系统的动态性质。用例图具体来说主要用于描述角色及角色和用例之间的连接关系。说明谁要使用系统，以及使用该系统做些什么。</p>
+</li>
+<li><p><strong>用例图的模型元素：</strong>一个用例图包含了多个模型元素，如系统、参与者和用例，并且显示这些元素之间的各种关系。如泛化、关联和依赖。</p>
+</li>
+<li><p><strong>参与者：</strong>在系统之外与系统交互的人&#x2F;事物，直接并主动向系统发出动作并获得反馈。</p>
+</li>
+<li><p><strong>用例：</strong>与参与者交互的，并且给参与者提供可观测的有意义的结果的一系列活动的集合。</p>
+</li>
+<li><p><strong>用例图中可能存在的关系：</strong></p>
+<ul>
+<li><p><strong>参与者与用例之间：</strong>关联关系。</p>
+</li>
+<li><p><strong>参与者与参与者之间：</strong>泛化关系。</p>
+</li>
+<li><p><strong>用例与用例之间：</strong>泛化关系、包含关系、扩展关系。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>用例说明：</strong>用例说明包括用例名称、参与者、概述、基础事件流、可选事件流。</p>
+</li>
+<li><p><strong>用例的粒度：</strong>  </p>
+<ul>
+<li><p>用例粒度所描述的就是对功能的细化和综合程度。</p>
+</li>
+<li><p>用例的细化程度越高，粒度就越小，这个用例所包含的功能就越少。</p>
+</li>
+<li><p>用例的细化程度越低，粒度就越大，这个用例所包含的功能就越多。</p>
+</li>
+<li><p>用例并不是越多越好，一般一个好的系统，用例在大于10个小于50个之间，否则应该考虑一下粒度的选择是否合适了。</p>
+</li>
+<li><p>不管粒度如何选择，必须把握的原则是在同一个需求阶段，所有用例的粒度应该是同一个量级的。</p>
+</li>
+<li><p>同级别的用例粒度相同。</p>
+</li>
+</ul>
+</li>
+<li><p><strong><code>include</code>和<code>extend</code>的区别及应用：</strong></p>
+<ul>
+<li><p><code>include</code>关系表示一个用例可以被另一个用例包含，意味着在某些情况下，一个用例的执行需要另一个用例的执行来完成。</p>
+</li>
+<li><p><code>extend</code>关系表示一个用例可以扩展另一个用例，意味着在某些条件下，一个用例可以增加额外的行为到另一个用例中。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="第五章-活动图"><a href="#第五章-活动图" class="headerlink" title="第五章 活动图"></a><strong>第五章 活动图</strong></h3><ol>
+<li><p><strong>活动图的定义：</strong></p>
+<ul>
+<li><strong>活动图</strong>：用于描述活动流程的图形称为活动图。</li>
+</ul>
+</li>
+<li><p><strong>活动图的主要元素：</strong></p>
+</li>
+</ol>
+<ul>
+<li><p><strong>活动</strong>：表示一个操作或一个步骤。</p>
+</li>
+<li><p><strong>泳道</strong>：用于将执行活动的参与者或组织进行分组。</p>
+</li>
+<li><p><strong>分支、分叉和汇合</strong>：表示活动流程中的决策点和合并点。</p>
+</li>
+<li><p><strong>对象流</strong>：表示对象在活动之间的流动。</p>
+</li>
+</ul>
+<img src="https://pic.imgdb.cn/item/67657501d0e0a243d4e744dd.png" alt="wps3.png">
+
+<ol start="3">
+<li><p><strong>活动图与流程图的区别：</strong></p>
+<ul>
+<li><p><strong>流程图</strong>着重描述处理过程，它的主要控制结构是顺序、分支和循环，各个处理之间有严格的顺序和时间关系。</p>
+</li>
+<li><p><strong>活动图</strong>描述的则是对象活动的顺序关系所遵循的规则，它着重表现的是系统的行为，而非系统的处理过程。</p>
+</li>
+<li><p>活动图能够表示并发活动的情形。</p>
+</li>
+<li><p>活动图是面向对象的，而流程图是面向过程的。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>泳道的作用：</strong></p>
+</li>
+</ol>
+<ul>
+<li><strong>泳道</strong>(<code>Swimlane</code>)是一种图形元素，用于将执行活动的参与者或组织进行分组。</li>
+<li>泳道可以帮助我们更清晰地描述系统中的不同参与者之间的交互和责任分配，使活动图的可读性更强。</li>
+</ul>
+<h3 id="第六章-类图和包"><a href="#第六章-类图和包" class="headerlink" title="第六章 类图和包"></a><strong>第六章 类图和包</strong></h3><p><em><strong>*要求掌握：</strong></em>类图的相关概念、类的属性、方法的表示、类之间的关系、属性和方法的可见性、类的版型及每种版型的作用。</p>
+<ol>
+<li><strong>类的定义：</strong><ul>
+<li>类是面向对象建模中的一个基本概念，它封装了数据（属性）和行为（方法）。类图用于描述系统中的类以及类之间的关系。</li>
+</ul>
+</li>
+</ol>
+<img src="https://pic.imgdb.cn/item/67657637d0e0a243d4e7451d.png" alt="wps6.png">
+
+<ol start="2">
+<li><p><strong>可见性：</strong></p>
+<ul>
+<li>在类图中，属性和方法的可见性用不同的标记表示，以指示它们是否可以被类外部访问。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>可视性级别</th>
+<th>属性的图标</th>
+<th>操作的图标</th>
+<th>文本符号</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>私有</td>
+<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/privattr.gif" alt="该图显示属性的“Eclipse 私有”可视性装饰图标。"></td>
+<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/privoper.gif" alt="该图显示操作的“Eclipse 私有”可视性装饰图标。"></td>
+<td><code>-</code></td>
+<td>只有位于同一个容器中的类才能看见和使用这些类。</td>
+</tr>
+<tr>
+<td>保护</td>
+<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/protattr.gif" alt="该图显示属性的“Eclipse 保护”可视性装饰图标。"></td>
+<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/protoper.gif" alt="该图显示操作的“Eclipse 保护”可视性装饰图标。"></td>
+<td><code>#</code></td>
+<td>只有位于同一容器或该容器的后代中的类才能看见和使用这些类。</td>
+</tr>
+<tr>
+<td>公有</td>
+<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/publattr.gif" alt="该图显示属性的“Eclipse 公有”可视性装饰图标。"></td>
+<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/publoper.gif" alt="该图显示操作的“Eclipse 公有”可视性装饰图标。"></td>
+<td><code>+</code></td>
+<td>任何可以看见容器的类也就可以看见和使用这些类。</td>
+</tr>
+<tr>
+<td>包</td>
+<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/packattr.gif" alt="该图显示属性的“Eclipse 包”可视性装饰图标。"></td>
+<td><img src="https://www.ibm.com/docs/zh/SS4JE2_7.5.5/com.ibm.xtools.viz.class.diagram.doc/images/packoper.gif" alt="该图显示操作的“Eclipse 包”可视性装饰图标。"></td>
+<td><code>~</code></td>
+<td>只有与容器位于同一个包中的类才能看见和使用这些类。</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>类之间的关系：</strong></p>
+<table>
+<thead>
+<tr>
+<th>关系类型</th>
+<th align="left">描述</th>
+<th>比较</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>关联 <code>Association</code></td>
+<td align="left">一个类 <strong>持有对另一个类的引用</strong></td>
+<td>两者之间并无明显包含关系、仅仅就是持有引用</td>
+</tr>
+<tr>
+<td>聚合 <code>Aggregation</code></td>
+<td align="left">一个类 <strong>包含</strong> 另一个类</td>
+<td>后者必须作为前者的部件或是组成元素</td>
+</tr>
+<tr>
+<td>组合 <code>Composition</code></td>
+<td align="left">一个类 <strong>包含</strong> 另一个类</td>
+<td>后者除了作为前者的部件或是组成元素之外，还必须是专属于前者的部件(离开前者则无含义的部件)</td>
+</tr>
+<tr>
+<td>依赖 <code>Dependency</code></td>
+<td align="left">一个类 <strong>使用(依赖)</strong> 另一个类</td>
+<td>前者在方法中直接、简介使用到了后者类型(参数、局部变量、静态方法调用)</td>
+</tr>
+<tr>
+<td>泛化 <code>Generalization</code></td>
+<td align="left">一个类 <strong>继承&#x2F;扩展&#x2F;泛化</strong> 另一个类</td>
+<td>前者基于一个具体存在的类型(后者)进行扩展</td>
+</tr>
+<tr>
+<td>实现 <code>Realization</code></td>
+<td align="left">一个类 <strong>实现</strong> 一个接口的方法</td>
+<td>前者实现接口的方法后具备接口的特征，也就可以作为接口的类型(如 Runnable)被引用</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>关联关系的组成：</strong></p>
+<ul>
+<li><p><strong>角色（Role）：</strong>关联中的每个类所扮演的角色。</p>
+</li>
+<li><p><strong>关联名（Name）：</strong>关联的名称。</p>
+</li>
+<li><p><strong>多重性（Multiplication）：</strong>表示一个类的对象可以与另一个类的对象形成多少个关联。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>聚合和组合的特征：</strong></p>
+</li>
+</ol>
+<ul>
+<li><p><strong>聚合（Aggregation）：</strong>表示整体与部分的关系，但部分可以独立于整体存在。</p>
+</li>
+<li><p><strong>组合（Composition）：</strong>表示整体与部分的强关系，部分不能独立于整体存在。</p>
+</li>
+</ul>
+<ol start="6">
+<li><p><strong>类的版型：</strong></p>
+<ul>
+<li><p><strong>边界类（Boundary Class）：</strong>与外部系统交互的类，如用户界面元素。</p>
+<img src="https://pic.imgdb.cn/item/676574dad0e0a243d4e744c5.png" alt="bianjielei.png">
+</li>
+<li><p><strong>控制类（Control Class）：</strong>协调其他类的行为，如业务逻辑类。</p>
+<img src="https://pic.imgdb.cn/item/676574dad0e0a243d4e744c7.png" alt="kzl.png">
+</li>
+<li><p><strong>实体类（Entity Class）：</strong>存储数据的类，通常与数据库表对应。</p>
+<img src="https://pic.imgdb.cn/item/676574dad0e0a243d4e744c8.png" alt="stl.png"></li>
+</ul>
+</li>
+<li><p><strong>包：</strong></p>
+<ul>
+<li><strong>包（Package）：</strong>用于把元素组织成组的通用机制。合理的分组能提高模型的可读性及可维护性。</li>
+</ul>
+</li>
+</ol>
+<img src="https://pic.imgdb.cn/item/67657637d0e0a243d4e7451f.jpg" alt="wps8.jpg">
+
+
+
+<h3 id="第七章-交互图"><a href="#第七章-交互图" class="headerlink" title="第七章 交互图"></a><strong>第七章 交互图</strong></h3><p><em><strong>*要求掌握：</strong></em>顺序图的相关概念，顺序图中的建模元素，及这些元素的特点。</p>
+<ol>
+<li>交互图的分类<ul>
+<li>交互图主要分为两种类型：<strong>顺序图</strong>和<strong>协作图</strong>。</li>
+</ul>
+</li>
+</ol>
+<img src="https://pic.imgdb.cn/item/67657638d0e0a243d4e74520.png" alt="wps9.png">
+
+<ol start="2">
+<li><p><strong>顺序图</strong></p>
+<ul>
+<li><p><strong>顺序图</strong>：也称为序列图，用于展示对象之间如何以及何时进行交互，强调时间顺序。</p>
+</li>
+<li><p><strong>主要元素</strong>：</p>
+<img src="https://pic.imgdb.cn/item/676574dbd0e0a243d4e744c9.png" alt="sxt.png"></li>
+</ul>
+</li>
+</ol>
+<h3 id="第八章-构件图和部署图"><a href="#第八章-构件图和部署图" class="headerlink" title="第八章 构件图和部署图"></a><strong>第八章 构件图和部署图</strong></h3><p><em><strong>*要求掌握：</strong></em>组件图部署图的概念、包含的建模元素，及组件图和部署图的作用。</p>
+<ol>
+<li><p><strong>构件图和部署图的作用：</strong></p>
+<ul>
+<li><strong>构件图(Component Diagram)：</strong>又称为组件图，他描述的是在软件系统中遵从并实现一组接口的物理的、可替换的*软件模块。</li>
+<li><strong>部署图(deployment diagram，配置图)：</strong>是用来显示系统中软件和硬件的物理架构。</li>
+</ul>
+</li>
+<li><p><strong>构件的定义、作用及分类：</strong></p>
+<ul>
+<li><p><strong>定义</strong>：遵从一定接口规范，具有提供其实现的物理的，可替换的部分。</p>
+</li>
+<li><p><strong>作用：</strong></p>
+<ul>
+<li>使系统测试人员和开发人员能够从整体上了解系统的所有物理部件；</li>
+<li>从软件架构的角度来描述一个系统的主要功能；</li>
+<li>方便项目组的成员了解系统的结构和功能；</li>
+<li>有利于软件复用。</li>
+</ul>
+</li>
+<li><p><strong>按照组件在系统中的角色分类：</strong></p>
+<ul>
+<li><strong>部署组件(Deployment Component) ：</strong>组成可执行系统的<strong>必要组件</strong>。例如Java虚拟机、数据库管理系统、<code>EXE</code>文件、<code>DLL</code>文件。</li>
+<li><strong>工作产品组件(Work Product Component) ：</strong>开发过程的<strong>中间产物</strong>，不直接参与到可执行系统中。例如源代码文件、数据文件。</li>
+<li><strong>执行组件</strong>(Execution Component)：在<strong>运行时</strong>创建的组件，<code>不常见</code>。例如实例化的<code>Servlets</code>、<code>COM+</code>对象、<code>XML</code>文档。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>构件图的组成：</strong></p>
+<ul>
+<li><strong>基本组成元素：</strong>构件（组件）+ 接口 + 关系（依赖和实现）</li>
+<li><strong>详细组成元素：</strong>构件 + 接口 + 关系 + 端口(Port) + 连接器(Connector)</li>
+</ul>
+</li>
+</ol>
+<img src="https://pic.imgdb.cn/item/67657638d0e0a243d4e74521.jpg" alt="wps10.jpg">
+
+<ol start="4">
+<li><p><strong>部署图：</strong></p>
+<ul>
+<li><strong>部署图</strong>：用于描述系统硬件的物理拓扑结构以及在此结构上运行的软构件。</li>
+</ul>
+</li>
+<li><p><strong>部署图的主要元素：</strong></p>
+<ul>
+<li><p><strong>节点</strong>：处理器、设备等。</p>
+</li>
+<li><p><strong>连接</strong>：表示节点之间的物理或逻辑连接。</p>
+<img src="https://pic.imgdb.cn/item/676574dad0e0a243d4e744c6.png" alt="bstys.png"></li>
+</ul>
+</li>
+<li><p><strong>部署图的特点：</strong></p>
+<ul>
+<li><strong>物理架构表示</strong>：部署图展示了系统的物理部署，包括硬件和软件的物理分布。</li>
+<li><strong>节点和构件</strong>：图中的节点代表物理设备（如服务器、数据库等），而构件代表部署在这些节点上的软件组件或文件。</li>
+<li><strong>通信连接</strong>：显示了节点之间的通信连接，如网络链接，体现了系统各部分之间的物理联系。</li>
+<li><strong>系统级视图</strong>：提供了整个系统的物理部署视图，通常一个系统只有一个部署图。</li>
+<li><strong>抽象级别</strong>：虽然关注物理部署，但部署图不涉及具体的技术实现细节，保持一定程度的抽象。</li>
+<li><strong>静态视图</strong>：部署图是静态的，它不展示系统随时间变化的行为，而是展示某一时刻的系统状态。</li>
+<li><strong>部署和配置</strong>：为系统部署和配置提供蓝图，有助于理解系统的物理配置需求。</li>
+<li><strong>维护和升级</strong>：通过可视化的部署图，可以更容易地规划和执行系统的维护和升级。</li>
+<li><strong>安全性分析</strong>：有助于分析系统的安全性，因为可以直观地看到数据和处理的分布。</li>
+<li><strong>可靠性和容错性</strong>：通过展示系统的物理组件和它们的连接，部署图有助于评估系统的可靠性和容错性。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>附件：</p>
+<p><a href="./%E4%B9%9D%E7%A7%8D%E5%B8%B8%E8%A7%81UML%E5%9B%BE%EF%BC%88%E5%88%86%E7%B1%BB+%E5%9B%BE%E8%A7%A3%EF%BC%89.pdf">九种常见<code>UML</code>图（分类+图解）</a></p>
+]]></content>
+      <categories>
+        <category>期末复习</category>
+      </categories>
+      <tags>
+        <tag>期末复习</tag>
+        <tag>软件建模</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>站点更新日志</title>
+    <url>https://kfufys.github.io/2024/11/16/sitelogs-md/</url>
+    <content><![CDATA[<h3 id="2024-11-16"><a href="#2024-11-16" class="headerlink" title="2024.11.16"></a>2024.11.16</h3><blockquote>
+<p><strong>网站初次上线</strong></p>
+<p><strong>域名</strong>：<a href="https://dcyyd.github.io/hexo_websites">https://dcyyd.github.io/hexo_websites</a></p>
+<p><strong>详细信息</strong>：基于 hexo和 Github搭建的静态 web blog站点，成功托管至Github Pages页，网站主题基于开源 Next 主题，并对其进行了一些优化。</p>
+</blockquote>
+<h3 id="2024-11-25"><a href="#2024-11-25" class="headerlink" title="2024.11.25"></a>2024.11.25</h3><blockquote>
+<p><strong>网站域名更换</strong></p>
+<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
+<p><strong>详细信息</strong>：因业务转型，旧域名停用，网站整体迁移至新域名 <a href="kfufys.github.io">kfufys.github.io</a> ，旧域名内容继续保留，但不再对其进行任何更新。</p>
+</blockquote>
+<h3 id="2024-12-02"><a href="#2024-12-02" class="headerlink" title="2024.12.02"></a>2024.12.02</h3><blockquote>
+<p><strong>对网站设备适配做了一些优化</strong></p>
+<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
+<p><strong>详细信息</strong>：运用响应式设计重写 CSS，不同设备屏幕下页面自适应。移动端导航栏变汉堡菜单，图片依像素密度加载，优化 touch 事件，提升多设备交互体验。</p>
+</blockquote>
+<h3 id="2024-12-20"><a href="#2024-12-20" class="headerlink" title="2024.12.20"></a>2024.12.20</h3><blockquote>
+<p><strong>新增网站亮暗主题变换功能</strong></p>
+<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
+<p><strong>详细信息</strong>：前端植入 JavaScript 脚本与 CSS 变量，实现亮暗主题切换。点右上角按钮可切换，系统还能依设备系统主题偏好预设默认主题，增强个性化。</p>
+</blockquote>
+<h3 id="2025-01-20"><a href="#2025-01-20" class="headerlink" title="2025.01.20"></a>2025.01.20</h3><blockquote>
+<p><strong>对网站 SEO 做了一些优化</strong></p>
+<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
+<p><strong>详细信息</strong>：优化页面 Title Tag 含核心关键词，更新 Meta Description 文案吸引点击，为图片添 alt 属性助搜索引擎理解，优化内链结构均衡权重。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>站点日志</category>
+      </categories>
+      <tags>
+        <tag>website</tag>
+        <tag>log</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基于GitHub+hexo部署静态Blog</title>
+    <url>https://kfufys.github.io/2024/12/07/%E5%9F%BA%E4%BA%8EGitHub-hexo%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81Blog/</url>
+    <content><![CDATA[<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a><strong>一、前言</strong></h3><p>本文详细介绍了如何使用Hexo框架搭建一个个人博客，并将其部署到GitHub Pages上。主要内容包括：</p>
+<ul>
+<li><strong>环境准备：</strong>安装Node.js和Git</li>
+<li><strong>配置Git和GitHub：</strong>设置SSH密钥，创建GitHub仓库</li>
+<li><strong>初始化Hexo项目：</strong>安装Hexo，创建新博客</li>
+<li><strong>部署到GitHub Pages：</strong>配置部署设置，推送静态文件</li>
+<li><strong>基本使用方法：</strong>创建新文章，本地预览，发布更新</li>
+</ul>
+<p>这个教程适合那些想要快速搭建个人博客，但又不想花费太多成本的人。通过使用Hexo和GitHub的免费服务，您可以轻松创建一个高效、简洁的博客网站。</p>
+<h3 id="二、事前准备"><a href="#二、事前准备" class="headerlink" title="二、事前准备"></a><strong>二、事前准备</strong></h3><ol>
+<li><h4 id="在线支持"><a href="#在线支持" class="headerlink" title="在线支持"></a><strong>在线支持</strong></h4><ul>
+<li><a href="https://app.rainyun.com/"><strong>域名注册 | 雨云</strong></a>：（非必须，你也可以使用免费域名，或者<code>GitHub.io</code>或<code>Pages.dev</code>分配的域名也可以）</li>
+<li><a href="https://github.com/"><strong>GitHub</strong></a>：（必须，你需要注册一个 GitHub 帐号）</li>
+</ul>
+</li>
+<li><h4 id="软件支持"><a href="#软件支持" class="headerlink" title="软件支持"></a><strong>软件支持</strong></h4><ul>
+<li><a href="https://blog.kingxujw.com/2024/10/07/%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/#2-1-%E5%AE%89%E8%A3%85-Node"><strong>Node</strong></a>：（必须，Nodejs 是一个基于<strong>Chrome V8</strong>引擎的<strong>JS</strong>运行环境，可以用<strong>JS</strong>写服务器和前端代码。）</li>
+<li><a href="https://blog.kingxujw.com/2024/10/07/%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/#2-2-%E5%AE%89%E8%A3%85-Git"><strong>Git</strong></a>：（必须，Git 是当前最先进、最主流的<strong>分布式</strong>版本控制系统，免费、开源）</li>
+<li><a href="https://gohugo.io/"><strong>Hugo</strong></a>：（必须，Hugo 是用<strong>Go</strong>语言写的静态网站生成器（Static Site Generator），可以把 Markdown 文件转化成 HTML 文件）</li>
+<li><a href="https://dcloud.io/hbuilderx.html"><strong>HBuilderX</strong></a>：（非必须，HBuilderX 是一款为<strong>Vue</strong>开发精心打造的超强集成开发环境（<strong>IDE</strong>））</li>
+</ul>
+</li>
+</ol>
+<h3 id="三、软件安装"><a href="#三、软件安装" class="headerlink" title="三、软件安装"></a><strong>三、软件安装</strong></h3><ol>
+<li><h4 id="安装-Node"><a href="#安装-Node" class="headerlink" title="安装 Node"></a><strong>安装 Node</strong></h4><ul>
+<li><p>打开<a href="https://nodejs.org/zh-cn/download/prebuilt-installer"><strong>Node.js</strong></a>官网，下载和自己系统相配的Node的安装程序，否则会出现安装问题</p>
+</li>
+<li><p>下载后安装，安装的目录可以使用默认目录<code>C:/Program Files/nodejs/</code></p>
+</li>
+<li><p>安装完成后，检查是否安装成功。在键盘按下win + R键，输入CMD，然后回车，打开CMD窗口，执行<code>node -v</code>命令，看到版本信息，则说明安装成功</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\Administrator&gt;node -v</span><br><span class="line">v20.18.0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改npm源。npm下载各种模块，默认是从国处服务器下载，速度较慢，建议配置成华为云镜像源。打开CMD窗口，运行如下命令:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set registry https://mirrors.huaweicloud.com/repository/npm/</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><h4 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a><strong>安装 Git</strong></h4><ul>
+<li><p>进入<a href="https://git-scm.com/downloads/win"><strong>Git</strong></a>官网下载适合你当前系统的版本</p>
+</li>
+<li><p>下载后傻瓜式安装Git即可，安装的目录最好使用默认目录<code>C:/Program Files/Git</code></p>
+</li>
+<li><p>按win + R键，输入CMD，然后回车，打开CMD窗口，执行<code>git -v</code>命令，看到版本信息，则说明安装成功</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\Administrator&gt;git -v</span><br><span class="line">git version 2.42.0.windows.2</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>Git组件：</strong></p>
+<p><strong><code>Git CMD</code></strong> 是windows 命令行的指令风格</p>
+<p><strong><code>Git Bash</code></strong> 是linux系统的指令风格（建议使用）</p>
+<p>**<code>Git GUI</code>**是图形化界面（新手学习不建议使用）</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="四、配置-Git-密钥并连接至-Github"><a href="#四、配置-Git-密钥并连接至-Github" class="headerlink" title="四、配置 Git 密钥并连接至 Github"></a><strong>四、配置 Git 密钥并连接至 Github</strong></h3><ol>
+<li><h4 id="常用-Git-命令："><a href="#常用-Git-命令：" class="headerlink" title="常用 Git 命令："></a><strong>常用 Git 命令：</strong></h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config -l	//查看所有配置</span><br><span class="line">git config --system --list	//查看系统配置</span><br><span class="line">git config --global --list	//查看用户（全局）配置</span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="配置用户名和邮箱："><a href="#配置用户名和邮箱：" class="headerlink" title="配置用户名和邮箱："></a><strong>配置用户名和邮箱：</strong></h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;你的用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="配置公钥连接-Github："><a href="#配置公钥连接-Github：" class="headerlink" title="配置公钥连接 Github："></a><strong>配置公钥连接 Github：</strong></h4><ul>
+<li><p><strong>生成ssh公钥</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>id_rsa</code>私钥</p>
+<p><code>id_rsa.pub</code>公钥</p>
+</blockquote>
+</li>
+</ul>
+<p> 用记事本打开上述图片中的公钥<code>id_rsa.pub</code>，复制里面的内容，然后开始在github中配置ssh密钥。</p>
+<ul>
+<li><p><strong>将 SSH KEY 配置到 GitHub</strong>  </p>
+<ul>
+<li>进入github，点击右上角头像 选择<code>settings</code>，进入设置页后选择 <code>SSH and GPG keys</code>，名字随便起，公钥填到<code>Key</code>那一栏。</li>
+</ul>
+</li>
+<li><p><strong>测试连接，输入以下命令</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T [email protected]</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p> 第一次连接会提示<code>Are you sure you want to continue connecting (yes/no/[fingerprint])?</code>，输入<code>yes</code>即可<br> 出现连接到账户的信息，说明已经大功告成，至此完成了环境准备工作。
+ </p>
+</li>
+<li><h4 id="创建GitHub-io仓库"><a href="#创建GitHub-io仓库" class="headerlink" title="创建GitHub.io仓库"></a><strong>创建GitHub.io仓库</strong></h4><ul>
+<li><p>注册登录<a href="https://github.com/"><strong>GitHub</strong></a></p>
+</li>
+<li><p>点击右上角的<code>+</code>按钮，选择<strong>New repository</strong>，创建一个<code>&lt;用户名&gt;.github.io</code>的仓库。</p>
+</li>
+<li><p>仓库名字的格式必须为：<code>&lt;用户名&gt;.github.io</code> (注意：前缀必须为用户名，此为预览博客需要，后期可修改仓库名)</p>
+</li>
+<li><p>可见性必须选择 <code>Public</code> 方便第一次部署检查问题，点击 <strong>Creat repository</strong> 进行创建即可</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="五、初始化-Hexo-博客"><a href="#五、初始化-Hexo-博客" class="headerlink" title="五、初始化 Hexo 博客"></a><strong>五、初始化 Hexo 博客</strong></h3><ol>
+<li><p>创建一个文件夹来保存博客源码（我这里选的路径为<code>D:/Hexo-Blog</code>），在文件夹内右键鼠标，选择<code>Open Git Bash here</code></p>
+</li>
+<li><p>在<code>Git BASH</code>输入如下命令安装 Hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli &amp;&amp; hexo -v</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装完后输入<code>hexo -v</code>验证是否安装成功。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Users\Administrator&gt;hexo -v</span><br><span class="line">hexo-cli: 4.3.2</span><br><span class="line">os: win32 10.0.22631 undefined</span><br><span class="line">node: 20.18.0</span><br><span class="line">acorn: 8.12.1</span><br><span class="line">ada: 2.9.0</span><br><span class="line">ares: 1.33.1</span><br><span class="line">base64: 0.5.2</span><br><span class="line">brotli: 1.1.0</span><br><span class="line">cjs_module_lexer: 1.4.1</span><br><span class="line">cldr: 45.0</span><br><span class="line">icu: 75.1</span><br><span class="line">llhttp: 8.1.2</span><br><span class="line">modules: 115</span><br><span class="line">napi: 9</span><br><span class="line">nghttp2: 1.61.0</span><br><span class="line">nghttp3: 0.7.0</span><br><span class="line">ngtcp2: 1.1.0</span><br><span class="line">openssl: 3.0.13+quic</span><br><span class="line">simdutf: 5.5.0</span><br><span class="line">tz: 2024a</span><br><span class="line">undici: 6.19.8</span><br><span class="line">unicode: 15.1</span><br><span class="line">uv: 1.46.0</span><br><span class="line">uvwasi: 0.0.21</span><br><span class="line">v8: 11.3.244.8-node.23</span><br><span class="line">zlib: 1.3.0.1-motley-71660e1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化 Hexo 项目安装相关依赖。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init blog-demo //创建项目</span><br><span class="line">cd blog-demo //切换路径</span><br><span class="line">npm i //安装依赖</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化项目后，<code>blog-demo</code>有如下结构：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">blog-demo</span><br><span class="line">├── node_modules //依赖包</span><br><span class="line">├── scaffolds //生成文章的一些模板</span><br><span class="line">├── source //用来存放你的文章</span><br><span class="line">├── themes //主题</span><br><span class="line">├──.npmignore //发布时忽略的文件（可忽略）</span><br><span class="line">├── _config.landscape.yml //主题的配置文件</span><br><span class="line">├── config.yml //博客的配置文件</span><br><span class="line">└── package.json //项目名称、描述、版本、运行和开发等信息</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>命令行输入<code>hexo cl &amp;&amp; hexo s</code>启动项目</p>
+</li>
+<li><p>打开浏览器，输入地址：<a href="http://localhost:4000/"><code>http://localhost:4000/</code></a> ，看到欢迎界面，说明你的博客已经构建成功了。</p>
+</li>
+</ol>
+<h3 id="六、将静态博客挂载到-GitHub-Pages"><a href="#六、将静态博客挂载到-GitHub-Pages" class="headerlink" title="六、将静态博客挂载到 GitHub Pages"></a><strong>六、将静态博客挂载到 GitHub Pages</strong></h3><ol>
+<li><p>安装 hexo-deployer-git</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改 <code>_config.yml</code> 文件<br>在blog-demo目录下的_config.yml，就是整个Hexo框架的配置文件，详细可参考官方的<a href="https://hexo.io/zh-cn/docs/configuration">配置描述</a><br>修改最后一行的配置，将repository修改为你自己的github项目地址即可，还有分支要改为<code>main</code>代表主分支（注意缩进）。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:  </span><br><span class="line">    type: git</span><br><span class="line">    repository: [email protected]:kingmoon3/kingmoon3.github.io.git</span><br><span class="line">    branch: main</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改好配置后，运行如下命令，将代码部署到 GitHub（Hexo三连）。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// Git BASH终端</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>**<code>hexo clean</code>**：删除之前生成的文件，可以用<code>hexo cl</code>缩写。</p>
+<p>**<code>hexo generate</code>**：生成静态文章，可以用<code>hexo g</code>缩写</p>
+<p>**<code>hexo deploy</code>**：部署文章，可以用<code>hexo d</code>缩写</p>
+</blockquote>
+</li>
+</ol>
+<p><em>注意：deploy时可能要你输入 username 和 password。</em></p>
+<p>如果出现 **<code>INFO  Deploy done: git</code>**，则说明部署成功了。</p>
+<p>稍等两分钟，打开浏览器访问：<a href="https://你的github用户名.github.io/">https:&#x2F;&#x2F;[你的github用户名].github.io</a> ，这时候我们就可以看到博客内容了。</p>
+<h3 id="附：GitHub网站部署常用命令："><a href="#附：GitHub网站部署常用命令：" class="headerlink" title="附：GitHub网站部署常用命令："></a>附：GitHub网站部署常用命令：</h3><ol>
+<li><h4 id="Git相关："><a href="#Git相关：" class="headerlink" title="Git相关："></a>Git相关：</h4></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>git init</code></td>
+<td>在当前目录初始化一个Git仓库</td>
+<td><code>git init my_project</code>（在<code>my_project</code>目录下初始化仓库）</td>
+</tr>
+<tr>
+<td><code>git clone [url]</code></td>
+<td>克隆远程仓库到本地</td>
+<td><code>git clone https://github.com/user/repo.git</code>（克隆指定仓库）</td>
+</tr>
+<tr>
+<td><code>git status</code></td>
+<td>查看仓库中文件的状态</td>
+<td>在仓库目录下执行<code>git status</code>查看文件修改、暂存等状态</td>
+</tr>
+<tr>
+<td><code>git add [file/dir]</code></td>
+<td>将文件或目录添加到暂存区</td>
+<td><code>git add file.txt</code>（添加单个文件），<code>git add.</code>（添加当前目录下所有文件）</td>
+</tr>
+<tr>
+<td><code>git commit -m &quot;[message]&quot;</code></td>
+<td>提交暂存区的内容，并添加提交消息</td>
+<td><code>git commit -m &quot;Update README&quot;</code>（提交并添加消息）</td>
+</tr>
+<tr>
+<td><code>git branch</code></td>
+<td>查看本地分支列表</td>
+<td>执行<code>git branch</code>查看当前仓库的分支情况</td>
+</tr>
+<tr>
+<td><code>git branch [branch - name]</code></td>
+<td>创建一个新的本地分支</td>
+<td><code>git branch new_branch</code>（创建名为<code>new_branch</code>的分支）</td>
+</tr>
+<tr>
+<td><code>git checkout [branch - name]</code></td>
+<td>切换到指定分支</td>
+<td><code>git checkout master</code>（切换到<code>master</code>分支）</td>
+</tr>
+<tr>
+<td><code>git merge [branch - name]</code></td>
+<td>合并指定分支到当前分支</td>
+<td>假设在<code>master</code>分支，<code>git merge feature_branch</code>（合并<code>feature_branch</code>）</td>
+</tr>
+<tr>
+<td><code>git log</code></td>
+<td>查看提交历史</td>
+<td>执行<code>git log</code>查看之前的提交记录，包括作者、日期、消息等</td>
+</tr>
+<tr>
+<td><code>git remote add [name] [url]</code></td>
+<td>添加远程仓库</td>
+<td><code>git remote add origin https://github.com/user/repo.git</code>（添加名为<code>origin</code>的远程仓库）</td>
+</tr>
+<tr>
+<td><code>git push [remote - name] [branch - name]</code></td>
+<td>将本地分支推送到远程仓库</td>
+<td><code>git push origin master</code>（推送<code>master</code>分支到<code>origin</code>）</td>
+</tr>
+<tr>
+<td><code>git pull [remote - name] [branch - name]</code></td>
+<td>从远程仓库拉取并合并更新</td>
+<td><code>git pull origin master</code>（拉取<code>master</code>分支更新）</td>
+</tr>
+<tr>
+<td><code>git diff [file]</code></td>
+<td>查看文件的修改差异</td>
+<td><code>git diff file.txt</code>（查看<code>file.txt</code>的修改差异）</td>
+</tr>
+<tr>
+<td><code>git stash</code></td>
+<td>暂存当前工作区的修改</td>
+<td>在未完成的修改状态下，执行<code>git stash</code>暂存修改</td>
+</tr>
+<tr>
+<td><code>git stash pop</code></td>
+<td>恢复暂存的修改</td>
+<td>执行<code>git stash pop</code>恢复之前暂存的修改</td>
+</tr>
+<tr>
+<td><code>git tag [tag - name]</code></td>
+<td>给当前提交打标签</td>
+<td><code>git tag v1.0</code>（给当前提交打<code>v1.0</code>标签）</td>
+</tr>
+<tr>
+<td><code>git show [tag - name]</code></td>
+<td>查看标签相关的提交信息</td>
+<td><code>git show v1.0</code>查看<code>v1.0</code>标签对应的提交内容</td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li><h4 id="Hexo相关："><a href="#Hexo相关：" class="headerlink" title="Hexo相关："></a>Hexo相关：</h4></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>hexo init [folder]</code></td>
+<td>初始化一个 Hexo 项目，可选参数<code>[folder]</code>指定项目文件夹名称。</td>
+<td><code>hexo init my-blog</code>（在当前目录下创建名为<code>my-blog</code>的 Hexo 项目）</td>
+</tr>
+<tr>
+<td><code>hexo new [layout] &lt;title&gt;</code></td>
+<td>创建一篇新文章，<code>[layout]</code>是布局模板，<code>&lt;title&gt;</code>是文章标题。</td>
+<td><code>hexo new post &quot;My New Post&quot;</code>（创建一篇新的<code>post</code>布局的文章）</td>
+</tr>
+<tr>
+<td><code>hexo generate</code>或<code>hexo g</code></td>
+<td>生成静态文件。</td>
+<td>执行该命令会根据主题模板生成 HTML、CSS、JS 等静态文件到<code>public</code>目录。</td>
+</tr>
+<tr>
+<td><code>hexo server</code>或<code>hexo s</code></td>
+<td>启动本地服务器进行预览。</td>
+<td>在本地浏览器中输入<code>http://localhost:4000</code>可查看生成的博客效果。</td>
+</tr>
+<tr>
+<td><code>hexo clean</code></td>
+<td>清除之前生成的静态文件和缓存。</td>
+<td>当遇到生成问题或切换主题后可先执行此命令。</td>
+</tr>
+<tr>
+<td><code>hexo deploy</code>或<code>hexo d</code></td>
+<td>部署博客到指定平台。</td>
+<td>配置好后执行该命令可将静态文件推送到远程仓库等部署目标。</td>
+</tr>
+<tr>
+<td><code>hexo list &lt;type&gt;</code></td>
+<td>列出特定类型的内容，如<code>post</code>（文章）、<code>page</code>（页面）等。</td>
+<td><code>hexo list post</code>列出所有文章信息。</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>网站部署</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>网站部署</tag>
+        <tag>GitHub</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
