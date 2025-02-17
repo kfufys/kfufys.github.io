@@ -153,27 +153,6 @@
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/tags/%E4%B8%AA%E6%80%A7%E5%8C%96/</loc>
-    <lastmod>2025-02-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kfufys.github.io/tags/Hexo-Next/</loc>
-    <lastmod>2025-02-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kfufys.github.io/tags/Blog-Themes/</loc>
-    <lastmod>2025-02-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kfufys.github.io/tags/Google/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -189,6 +168,27 @@
   
   <url>
     <loc>https://kfufys.github.io/tags/AIGC/</loc>
+    <lastmod>2025-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/tags/%E4%B8%AA%E6%80%A7%E5%8C%96/</loc>
+    <lastmod>2025-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/tags/Hexo-Next/</loc>
+    <lastmod>2025-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/tags/Blog-Themes/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -281,14 +281,14 @@
 
   
   <url>
-    <loc>https://kfufys.github.io/categories/Themes-%E9%85%8D%E7%BD%AE/</loc>
+    <loc>https://kfufys.github.io/categories/AI%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/categories/AI%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://kfufys.github.io/categories/Themes-%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
