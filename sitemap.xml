@@ -174,20 +174,6 @@
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E5%B8%88/</loc>
-    <lastmod>2025-02-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kfufys.github.io/tags/%E8%80%83%E8%AF%95%E7%9F%A5%E8%AF%86%E7%82%B9/</loc>
-    <lastmod>2025-02-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kfufys.github.io/tags/Google/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -224,6 +210,20 @@
   
   <url>
     <loc>https://kfufys.github.io/tags/DemoCode/</loc>
+    <lastmod>2025-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E5%B8%88/</loc>
+    <lastmod>2025-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/tags/%E8%80%83%E8%AF%95%E7%9F%A5%E8%AF%86%E7%82%B9/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -288,13 +288,6 @@
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/categories/%E7%BD%91%E5%B7%A5/</loc>
-    <lastmod>2025-02-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kfufys.github.io/categories/AI%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -310,6 +303,13 @@
   
   <url>
     <loc>https://kfufys.github.io/categories/Markdown/</loc>
+    <lastmod>2025-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/categories/%E7%BD%91%E5%B7%A5/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
