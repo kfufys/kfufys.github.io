@@ -183,7 +183,11 @@
 <blockquote>
 <p><strong>局限性</strong>: <code>crc16 算法</code> 生成的最大文章数量为 65535，不过这个对绝大多数人都几乎没影响，如果一个 abbrlink 的值已存在，那么它会尝试其他可用的值。</p>
 </blockquote>
-<h4 id="25-评论-Valine-增强版"><a href="#25-评论-Valine-增强版" class="headerlink" title="25. 评论 Valine 增强版"></a>25. 评论 Valine 增强版</h4><h4 id="26-各版块透明度修改"><a href="#26-各版块透明度修改" class="headerlink" title="26. 各版块透明度修改"></a>26. 各版块透明度修改</h4><h5 id="26-1-内容板块透明化"><a href="#26-1-内容板块透明化" class="headerlink" title="26.1 内容板块透明化"></a>26.1 内容板块透明化</h5><p>博客根目录 <code>themes\next\source\css_schemes\Pisces_layout.styl</code> 文件 <code>.content-wrap</code> 标签下 <code>background: white</code> 修改为：</p>
+<h4 id="25-页脚添加访客量"><a href="#25-页脚添加访客量" class="headerlink" title="25. 页脚添加访客量"></a>25. 页脚添加访客量</h4><p>在 footer 模板文件（<code>themes/next/layout/_partials/footer.swig</code>）底部添加以下代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;div class=<span class="string">&quot;powered-by&quot;</span>&gt;</span><br><span class="line">    &lt;script async src=<span class="string">&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;i class=<span class="string">&quot;fa fa-user-md&quot;</span>&gt;&lt;/i&gt;</span><br><span class="line">    &lt;span id=<span class="string">&quot;busuanzi_container_site_uv&quot;</span>&gt;</span><br><span class="line">        本站访客数:&lt;span id=<span class="string">&quot;busuanzi_value_site_uv&quot;</span>&gt;&lt;/span&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line">    &lt;span class=<span class="string">&quot;post-meta-divider&quot;</span>&gt;|&lt;/span&gt;</span><br><span class="line">    &lt;span id=<span class="string">&quot;busuanzi_container_site_pv&quot;</span>&gt;</span><br><span class="line">        本站访问量&lt;span id=<span class="string">&quot;busuanzi_value_site_pv&quot;</span>&gt;&lt;/span&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="26-各版块透明度修改"><a href="#26-各版块透明度修改" class="headerlink" title="26. 各版块透明度修改"></a>26. 各版块透明度修改</h4><h5 id="26-1-内容板块透明化"><a href="#26-1-内容板块透明化" class="headerlink" title="26.1 内容板块透明化"></a>26.1 内容板块透明化</h5><p>博客根目录 <code>themes\next\source\css_schemes\Pisces_layout.styl</code> 文件 <code>.content-wrap</code> 标签下 <code>background: white</code> 修改为：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">background: rgba(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.7</span>); <span class="comment">//0.7是透明度</span></span><br></pre></td></tr></table></figure>
 
 <p>博客根目录 <code>themes\next\source\css_schemes\Gemini\index.styl</code> 文件 <code>.post-block</code> 标签下的 <code>background: white</code> 修改为：</p>
@@ -223,7 +227,46 @@
 
 
 <h4 id="30-配置代码块样式"><a href="#30-配置代码块样式" class="headerlink" title="30. 配置代码块样式"></a>30. 配置代码块样式</h4><p>在主题配置文件中，搜索 <code>highlight</code>根据注释修改：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">highlight:</span><br><span class="line">      enable: <span class="literal">true</span> #是否开启代码高亮</span><br><span class="line">      line_number: <span class="literal">false</span> #是否增加代码行号</span><br><span class="line">      auto_detect: <span class="literal">true</span> #自动判断代码语言</span><br><span class="line">      tab_replace:</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">highlight:</span><br><span class="line">      enable: <span class="literal">true</span> #是否开启代码高亮</span><br><span class="line">      line_number: <span class="literal">false</span> #是否增加代码行号</span><br><span class="line">      auto_detect: <span class="literal">true</span> #自动判断代码语言</span><br><span class="line">      tab_replace:</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="31-站点地图"><a href="#31-站点地图" class="headerlink" title="31. 站点地图"></a>31. 站点地图</h4><blockquote>
+<p>站点地图的作用向搜索引擎提供你的网站的概要，给你的网站做 SEO。</p>
+</blockquote>
+<p>安装插件</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<p>在站点配置文件中添加配置项：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">plugins: hexo-generator-sitemap</span><br></pre></td></tr></table></figure>
+
+<p>修改主题配置文件，将对应注释打开：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">    sitemap: /sitemap.xml || sitemap</span><br></pre></td></tr></table></figure>
+
+<p>执行命令重新生成源文件：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo g</span><br></pre></td></tr></table></figure>
+
+<p>上述操作顺利的话，可以发现首页左侧边栏多了一项站点地图，点进去可以看到以 xml 格式组织的你的所有文章的 url。</p>
+<h4 id="32-广告"><a href="#32-广告" class="headerlink" title="32. 广告"></a>32. 广告</h4><p>这里主要针对谷歌广告来说。</p>
+<h5 id="32-1-开通账号"><a href="#32-1-开通账号" class="headerlink" title="32.1 开通账号"></a>32.1 开通账号</h5><p>众所周知，谷歌是全球最大的广告中间商，让你可以出卖流量来换小钱。具体做法是将你有流量的位置告诉谷歌，他会根据浏览你网站的用户行为来动态给他们推广告。</p>
+<p>你可以在这里：<a href="https://www.google.com/adsense">https://www.google.com/adsense</a> 开通，将你的网站提交，然后谷歌会给你审核。</p>
+<h5 id="32-2-嵌入代码"><a href="#32-2-嵌入代码" class="headerlink" title="32.2 嵌入代码"></a>32.2 嵌入代码</h5><p>有个问题，如何兼顾页面美观性和广告数量、大小和位置间的平衡呢？这是个见仁见智的事情，推荐的做法主要有三点：</p>
+<h6 id="32-2-1-只做展示广告。"><a href="#32-2-1-只做展示广告。" class="headerlink" title="32.2.1 只做展示广告。"></a>32.2.1 只做展示广告。</h6><p>谷歌广告类型提供了三种。推荐选择展示广告，因为位置、大小可以受我们可以严格控制。</p>
+<img src="https://kfufys.github.io/posts/9aae07a1/7.png" alt="guanggao" width="1200">
+
+<h6 id="32-2-2-限制广告尺寸。"><a href="#32-2-2-限制广告尺寸。" class="headerlink" title="32.2.2 限制广告尺寸。"></a>32.2.2 限制广告尺寸。</h6><p>在定义广告的时候，在右侧边栏可以定义广告尺寸，如果是自适应的不好控制其页面上的呈现方式。我们可以限制到很小：<code>280px * 100px</code>，并且只放一个。</p>
+<h6 id="32-2-3-挑选放置位置。"><a href="#32-2-3-挑选放置位置。" class="headerlink" title="32.2.3 挑选放置位置。"></a>32.2.3 挑选放置位置。</h6><p>推荐选在侧边栏最下面，并且用分割线隔开，这里需要自定义一些样式。定义css 可以新建一个自己的样式集：<code>themes/next/source/css/_my/mycss.styl</code> ，然后在 <code>themes/next/source/css/main.styl</code> 中引用即可：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@import</span> <span class="string">&quot;_my/mycss&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>只增加了一个样式：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">.sidebar-ads &#123;</span><br><span class="line">  border-top: 1px dotted #ccc;</span><br><span class="line">  width: <span class="number">100</span>%;</span><br><span class="line">  height: 100px;</span><br><span class="line">  padding-top: 15px;</span><br><span class="line">  margin-bottom: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="33-修改站点页脚"><a href="#33-修改站点页脚" class="headerlink" title="33. 修改站点页脚"></a>33. 修改站点页脚</h4><p>在主题配置文件中修改网站页脚信息：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"># themes\next\_config.yml</span><br><span class="line"></span><br><span class="line">footer:  # 底部信息区</span><br><span class="line">  since: <span class="number">2018</span>  # 建站时间</span><br><span class="line">  icon:</span><br><span class="line">    name: heart   # 图标名称</span><br><span class="line">    animated: <span class="literal">true</span>   # 开启动画</span><br><span class="line">    color: <span class="string">&quot;#ff0000&quot;</span>   # 图标颜色</span><br><span class="line"></span><br><span class="line">  powered:</span><br><span class="line">    enable: <span class="literal">false</span>  # 隐藏由 Hexo 强力驱动</span><br><span class="line">    version: <span class="literal">false</span>  # 隐藏 Hexo 版本号</span><br><span class="line"></span><br><span class="line">  theme:</span><br><span class="line">    enable: <span class="literal">false</span>  # 隐藏所用的主题名称</span><br><span class="line">    version: <span class="literal">false</span>  # 隐藏主题版本号</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="34-修改文章-meta-信息"><a href="#34-修改文章-meta-信息" class="headerlink" title="34. 修改文章 meta 信息"></a>34. 修改文章 meta 信息</h4><p>默认主题下， 标题下方会显示文章的创建时间、文章的修改时间、文章分类信息等元数据，用户可以在主题配置文件中自定义设置需要显示的 meta 元信息：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"># themes\next\_config.yml</span><br><span class="line">post_meta:</span><br><span class="line">  item_text: <span class="literal">true</span>  # 显示文字说明</span><br><span class="line">  created_at: <span class="literal">true</span>  # 显示文章创建时间</span><br><span class="line">  updated_at:</span><br><span class="line">    enabled: <span class="literal">false</span>  # 隐藏文章修改时间</span><br><span class="line">    another_day: <span class="literal">true</span>  # 只有当修改时间和创建时间不是同一天的时候才显示</span><br><span class="line">  categories: <span class="literal">false</span>  # 隐藏分类信息</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Themes 配置</category>
       </categories>
