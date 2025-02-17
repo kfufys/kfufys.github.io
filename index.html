@@ -707,7 +707,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>执行此命令可能会不成功，提示你缺少相应的依赖，比如babel-eslint、mini-css-extract-plugin、webpack-cli…<br>使用npm命令安装即可，比如npm install <a href="mailto:&#x65;&#x73;&#x6c;&#105;&#110;&#x74;&#x40;&#52;&#x2e;&#120;">&#x65;&#x73;&#x6c;&#105;&#110;&#x74;&#x40;&#52;&#x2e;&#120;</a> babel-eslint@8 –save-dev</p>
+<p>执行此命令可能会不成功，提示你缺少相应的依赖，比如babel-eslint、mini-css-extract-plugin、webpack-cli…<br>使用npm命令安装即可，比如npm install <a href="mailto:&#101;&#115;&#x6c;&#x69;&#110;&#116;&#x40;&#52;&#x2e;&#x78;">&#101;&#115;&#x6c;&#x69;&#110;&#116;&#x40;&#52;&#x2e;&#x78;</a> babel-eslint@8 –save-dev</p>
 </blockquote>
 <p>修改根目录站点配置文件<code>config.yml</code>，改为：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">permalink: posts/:abbrlink/</span><br><span class="line">abbrlink:</span><br><span class="line">	alg: crc32   #算法： crc16(<span class="keyword">default</span>) and crc32</span><br><span class="line">	rep: hex     #进制： dec(<span class="keyword">default</span>) and hex</span><br></pre></td></tr></table></figure>
