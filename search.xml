@@ -154,17 +154,17 @@
 <p>在主题配置文件中搜索 <code>codeblock</code>，把默认配置改为如下配置：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">codeblock:</span><br><span class="line">  # Code Highlight theme</span><br><span class="line">  # All available themes: https:<span class="comment">//theme-next.js.org/highlight/</span></span><br><span class="line">  theme:</span><br><span class="line">    light: <span class="keyword">default</span></span><br><span class="line">    dark: stackoverflow-dark</span><br><span class="line">  prism:</span><br><span class="line">    light: prism</span><br><span class="line">    dark: prism-dark</span><br><span class="line">  # Add copy button on codeblock</span><br><span class="line">  copy_button:</span><br><span class="line">    enable: enable</span><br><span class="line">    show_result: <span class="literal">true</span></span><br><span class="line">    # Available values: <span class="keyword">default</span> | flat | mac</span><br><span class="line">    style: mac</span><br><span class="line">  # Fold code block</span><br><span class="line">  fold:</span><br><span class="line">    enable: <span class="literal">false</span></span><br><span class="line">    height: <span class="number">500</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="22-添加加载特效"><a href="#22-添加加载特效" class="headerlink" title="22. 添加加载特效"></a>22. 添加加载特效</h4><p>由于网页不可能一直都秒进，总会等待一段时间的，所以可以设置顶部加载条。Next 已经集成了很多加载特效，可以在下面选项中在线调试测试一下。</p>
-<p>搜索<code>pace</code>，找到如下代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"># 页面顶部加载条</span><br><span class="line"># Progress bar in the top during page loading.</span><br><span class="line">pace: <span class="literal">true</span></span><br><span class="line"># Themes list:</span><br><span class="line">#pace-theme-big-counter</span><br><span class="line">#pace-theme-bounce</span><br><span class="line">#pace-theme-barber-shop</span><br><span class="line">#pace-theme-center-atom</span><br><span class="line">#pace-theme-center-circle</span><br><span class="line">#pace-theme-center-radar</span><br><span class="line">#pace-theme-center-simple</span><br><span class="line">#pace-theme-corner-indicator</span><br><span class="line">#pace-theme-fill-left</span><br><span class="line">#pace-theme-flash</span><br><span class="line">#pace-theme-loading-bar</span><br><span class="line">#pace-theme-mac-osx</span><br><span class="line">#pace-theme-minimal</span><br><span class="line"># For example</span><br><span class="line"># pace_theme: pace-theme-center-simple</span><br><span class="line">pace_theme: pace-theme-minimal  #默认设置，可以修改为上述任何一个</span><br></pre></td></tr></table></figure>
+<h4 id="22-添加加载特效"><a href="#22-添加加载特效" class="headerlink" title="22. 添加加载特效"></a>22. 添加加载特效</h4><p>在主题配置文件中搜索 <code>pace</code>，找的如下代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"># Progress bar in the top during page loading.</span><br><span class="line"># For more information: https:<span class="comment">//github.com/CodeByZach/pace</span></span><br><span class="line">pace:</span><br><span class="line">  enable: <span class="literal">true</span></span><br><span class="line">  # All available colors:</span><br><span class="line">  # black | blue | green | orange | pink | purple | red | silver | white | yellow</span><br><span class="line">  color: silver</span><br><span class="line">  # All available themes:</span><br><span class="line">  # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple</span><br><span class="line">  # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal</span><br><span class="line">  theme: flash</span><br></pre></td></tr></table></figure>
 
+<p>根据注释进行修改。</p>
 <h4 id="修改文章链接"><a href="#修改文章链接" class="headerlink" title="修改文章链接"></a>修改文章链接</h4><p>在做次优化之前，hexo-next文章链接默认的生成规则是：<code>:year/:month/:day/:title</code>，是按照年、月、日、标题来生成的。<br>比如：<code>https://zxiaoxuan.github.io/2019/08/12/hello-world/</code> 这样，如果文章标题是中文的话，URL链接是也会是中文，<br><img src="https://api.smain.cn/pics/pic_e382b5ae.png" alt="pic_e382b5ae.png"></p>
 <p>那么要生存简洁且唯一的URL，怎么办呢</p>
 <p>安装插件</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>执行此命令可能会不成功，提示你缺少相应的依赖，比如babel-eslint、mini-css-extract-plugin、webpack-cli…<br>使用npm命令安装即可，比如npm install <a href="mailto:&#x65;&#x73;&#x6c;&#105;&#x6e;&#116;&#x40;&#x34;&#46;&#120;">&#x65;&#x73;&#x6c;&#105;&#x6e;&#116;&#x40;&#x34;&#46;&#120;</a> babel-eslint@8 –save-dev</p>
+<p>执行此命令可能会不成功，提示你缺少相应的依赖，比如babel-eslint、mini-css-extract-plugin、webpack-cli…<br>使用npm命令安装即可，比如npm install <a href="mailto:&#101;&#115;&#x6c;&#105;&#110;&#x74;&#x40;&#52;&#x2e;&#120;">&#101;&#115;&#x6c;&#105;&#110;&#x74;&#x40;&#52;&#x2e;&#120;</a> babel-eslint@8 –save-dev</p>
 </blockquote>
 <p>修改根目录站点配置文件<code>config.yml</code>，改为：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">permalink: posts/:abbrlink/</span><br><span class="line">abbrlink:</span><br><span class="line">	alg: crc32   #算法： crc16(<span class="keyword">default</span>) and crc32</span><br><span class="line">	rep: hex     #进制： dec(<span class="keyword">default</span>) and hex</span><br></pre></td></tr></table></figure>
@@ -1811,40 +1811,6 @@
       </tags>
   </entry>
   <entry>
-    <title>About</title>
-    <url>https://kfufys.github.io/posts/7477.html</url>
-    <content><![CDATA[<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><hr>
-<ul>
-<li><p>我是<strong>窦长友</strong>，一名摄影爱好者，编程小渣渣~~</p>
-</li>
-<li><p>目前就读于<strong>开封大学</strong>….</p>
-</li>
-</ul>
-<h3 id="我的爱好"><a href="#我的爱好" class="headerlink" title="我的爱好"></a>我的爱好</h3><hr>
-<p>热衷于研究所有与计算机相关的事物，包括：</p>
-<ul>
-<li><p><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。 </p>
-</li>
-<li><p><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。 </p>
-</li>
-<li><p><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</p>
-</li>
-<li><p><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</p>
-</li>
-</ul>
-<h3 id="我的白日梦"><a href="#我的白日梦" class="headerlink" title="我的白日梦"></a>我的白日梦</h3><hr>
-<p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
-<p>要是大家有什么好的建议，欢迎告知呀！</p>
-]]></content>
-      <categories>
-        <category>About</category>
-      </categories>
-      <tags>
-        <tag>about</tag>
-        <tag>关于我</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>终极 Nginx 配置指南（超详细）</title>
     <url>https://kfufys.github.io/posts/59687.html</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p>对于自己上线项目的前端来说，nginx也是必须要了解和熟悉的，查了很多的nginx文章，看着写的都很详细，但是却没有了整体的概念。这里就重新梳理一遍，也理清思路。</p>
@@ -2084,6 +2050,40 @@
       <tags>
         <tag>website</tag>
         <tag>log</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About</title>
+    <url>https://kfufys.github.io/posts/7477.html</url>
+    <content><![CDATA[<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><hr>
+<ul>
+<li><p>我是<strong>窦长友</strong>，一名摄影爱好者，编程小渣渣~~</p>
+</li>
+<li><p>目前就读于<strong>开封大学</strong>….</p>
+</li>
+</ul>
+<h3 id="我的爱好"><a href="#我的爱好" class="headerlink" title="我的爱好"></a>我的爱好</h3><hr>
+<p>热衷于研究所有与计算机相关的事物，包括：</p>
+<ul>
+<li><p><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。 </p>
+</li>
+<li><p><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。 </p>
+</li>
+<li><p><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</p>
+</li>
+<li><p><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</p>
+</li>
+</ul>
+<h3 id="我的白日梦"><a href="#我的白日梦" class="headerlink" title="我的白日梦"></a>我的白日梦</h3><hr>
+<p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
+<p>要是大家有什么好的建议，欢迎告知呀！</p>
+]]></content>
+      <categories>
+        <category>About</category>
+      </categories>
+      <tags>
+        <tag>about</tag>
+        <tag>关于我</tag>
       </tags>
   </entry>
   <entry>
