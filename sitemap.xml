@@ -267,20 +267,6 @@
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/tags/GitHub/</loc>
-    <lastmod>2025-02-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kfufys.github.io/tags/Hexo/</loc>
-    <lastmod>2025-02-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kfufys.github.io/tags/website/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -289,6 +275,20 @@
   
   <url>
     <loc>https://kfufys.github.io/tags/log/</loc>
+    <lastmod>2025-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/tags/GitHub/</loc>
+    <lastmod>2025-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/tags/Hexo/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

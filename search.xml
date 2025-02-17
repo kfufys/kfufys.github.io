@@ -2296,6 +2296,43 @@
       </tags>
   </entry>
   <entry>
+    <title>站点更新日志</title>
+    <url>https://kfufys.github.io/posts/7178.html</url>
+    <content><![CDATA[<h3 id="2024-11-16"><a href="#2024-11-16" class="headerlink" title="2024.11.16"></a>2024.11.16</h3><blockquote>
+<p><strong>网站初次上线</strong></p>
+<p><strong>域名</strong>：<span class="exturl" data-url="aHR0cHM6Ly9kY3l5ZC5naXRodWIuaW8vaGV4b193ZWJzaXRlcw==">https://dcyyd.github.io/hexo_websites<i class="fa fa-external-link-alt"></i></span></p>
+<p><strong>详细信息</strong>：基于 hexo和 Github搭建的静态 web blog站点，成功托管至Github Pages页，网站主题基于开源 Next 主题，并对其进行了一些优化。</p>
+</blockquote>
+<h3 id="2024-11-25"><a href="#2024-11-25" class="headerlink" title="2024.11.25"></a>2024.11.25</h3><blockquote>
+<p><strong>网站域名更换</strong></p>
+<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
+<p><strong>详细信息</strong>：因业务转型，旧域名停用，网站整体迁移至新域名 <a href="kfufys.github.io">kfufys.github.io</a> ，旧域名内容继续保留，但不再对其进行任何更新。</p>
+</blockquote>
+<h3 id="2024-12-02"><a href="#2024-12-02" class="headerlink" title="2024.12.02"></a>2024.12.02</h3><blockquote>
+<p><strong>对网站设备适配做了一些优化</strong></p>
+<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
+<p><strong>详细信息</strong>：运用响应式设计重写 CSS，不同设备屏幕下页面自适应。移动端导航栏变汉堡菜单，图片依像素密度加载，优化 touch 事件，提升多设备交互体验。</p>
+</blockquote>
+<h3 id="2024-12-20"><a href="#2024-12-20" class="headerlink" title="2024.12.20"></a>2024.12.20</h3><blockquote>
+<p><strong>新增网站亮暗主题变换功能</strong></p>
+<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
+<p><strong>详细信息</strong>：前端植入 JavaScript 脚本与 CSS 变量，实现亮暗主题切换。点右上角按钮可切换，系统还能依设备系统主题偏好预设默认主题，增强个性化。</p>
+</blockquote>
+<h3 id="2025-01-20"><a href="#2025-01-20" class="headerlink" title="2025.01.20"></a>2025.01.20</h3><blockquote>
+<p><strong>对网站 SEO 做了一些优化</strong></p>
+<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
+<p><strong>详细信息</strong>：优化页面 Title Tag 含核心关键词，更新 Meta Description 文案吸引点击，为图片添 alt 属性助搜索引擎理解，优化内链结构均衡权重。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>站点日志</category>
+      </categories>
+      <tags>
+        <tag>website</tag>
+        <tag>log</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>基于GitHub+hexo部署静态Blog</title>
     <url>https://kfufys.github.io/posts/60795.html</url>
     <content><![CDATA[<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a><strong>一、前言</strong></h3><p>本文详细介绍了如何使用Hexo框架搭建一个个人博客，并将其部署到GitHub Pages上。主要内容包括：</p>
@@ -2590,43 +2627,6 @@
         <tag>网站部署</tag>
         <tag>GitHub</tag>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>站点更新日志</title>
-    <url>https://kfufys.github.io/posts/7178.html</url>
-    <content><![CDATA[<h3 id="2024-11-16"><a href="#2024-11-16" class="headerlink" title="2024.11.16"></a>2024.11.16</h3><blockquote>
-<p><strong>网站初次上线</strong></p>
-<p><strong>域名</strong>：<span class="exturl" data-url="aHR0cHM6Ly9kY3l5ZC5naXRodWIuaW8vaGV4b193ZWJzaXRlcw==">https://dcyyd.github.io/hexo_websites<i class="fa fa-external-link-alt"></i></span></p>
-<p><strong>详细信息</strong>：基于 hexo和 Github搭建的静态 web blog站点，成功托管至Github Pages页，网站主题基于开源 Next 主题，并对其进行了一些优化。</p>
-</blockquote>
-<h3 id="2024-11-25"><a href="#2024-11-25" class="headerlink" title="2024.11.25"></a>2024.11.25</h3><blockquote>
-<p><strong>网站域名更换</strong></p>
-<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
-<p><strong>详细信息</strong>：因业务转型，旧域名停用，网站整体迁移至新域名 <a href="kfufys.github.io">kfufys.github.io</a> ，旧域名内容继续保留，但不再对其进行任何更新。</p>
-</blockquote>
-<h3 id="2024-12-02"><a href="#2024-12-02" class="headerlink" title="2024.12.02"></a>2024.12.02</h3><blockquote>
-<p><strong>对网站设备适配做了一些优化</strong></p>
-<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
-<p><strong>详细信息</strong>：运用响应式设计重写 CSS，不同设备屏幕下页面自适应。移动端导航栏变汉堡菜单，图片依像素密度加载，优化 touch 事件，提升多设备交互体验。</p>
-</blockquote>
-<h3 id="2024-12-20"><a href="#2024-12-20" class="headerlink" title="2024.12.20"></a>2024.12.20</h3><blockquote>
-<p><strong>新增网站亮暗主题变换功能</strong></p>
-<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
-<p><strong>详细信息</strong>：前端植入 JavaScript 脚本与 CSS 变量，实现亮暗主题切换。点右上角按钮可切换，系统还能依设备系统主题偏好预设默认主题，增强个性化。</p>
-</blockquote>
-<h3 id="2025-01-20"><a href="#2025-01-20" class="headerlink" title="2025.01.20"></a>2025.01.20</h3><blockquote>
-<p><strong>对网站 SEO 做了一些优化</strong></p>
-<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
-<p><strong>详细信息</strong>：优化页面 Title Tag 含核心关键词，更新 Meta Description 文案吸引点击，为图片添 alt 属性助搜索引擎理解，优化内链结构均衡权重。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>站点日志</category>
-      </categories>
-      <tags>
-        <tag>website</tag>
-        <tag>log</tag>
       </tags>
   </entry>
 </search>
