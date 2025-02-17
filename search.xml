@@ -248,7 +248,7 @@
 <p>上述操作顺利的话，可以发现首页左侧边栏多了一项站点地图，点进去可以看到以 xml 格式组织的你的所有文章的 url。</p>
 <h4 id="32-广告"><a href="#32-广告" class="headerlink" title="32. 广告"></a>32. 广告</h4><p>这里主要针对谷歌广告来说。</p>
 <h5 id="32-1-开通账号"><a href="#32-1-开通账号" class="headerlink" title="32.1 开通账号"></a>32.1 开通账号</h5><p>众所周知，谷歌是全球最大的广告中间商，让你可以出卖流量来换小钱。具体做法是将你有流量的位置告诉谷歌，他会根据浏览你网站的用户行为来动态给他们推广告。</p>
-<p>你可以在这里：<a href="https://www.google.com/adsense">https://www.google.com/adsense</a> 开通，将你的网站提交，然后谷歌会给你审核。</p>
+<p>你可以在这里：<span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9hZHNlbnNl">https://www.google.com/adsense<i class="fa fa-external-link-alt"></i></span> 开通，将你的网站提交，然后谷歌会给你审核。</p>
 <h5 id="32-2-嵌入代码"><a href="#32-2-嵌入代码" class="headerlink" title="32.2 嵌入代码"></a>32.2 嵌入代码</h5><p>有个问题，如何兼顾页面美观性和广告数量、大小和位置间的平衡呢？这是个见仁见智的事情，推荐的做法主要有三点：</p>
 <h6 id="32-2-1-只做展示广告。"><a href="#32-2-1-只做展示广告。" class="headerlink" title="32.2.1 只做展示广告。"></a>32.2.1 只做展示广告。</h6><p>谷歌广告类型提供了三种。推荐选择展示广告，因为位置、大小可以受我们可以严格控制。</p>
 <img src="https://kfufys.github.io/posts/9aae07a1/7.png" alt="guanggao" width="1200">
@@ -307,7 +307,7 @@
 <li>导入长篇论文让它分析 </li>
 <li>输入完整项目文档进行梳理</li>
 </ul>
-<h2 id="二、上手指南：三步开启AI效率之旅"><a href="#二、上手指南：三步开启AI效率之旅" class="headerlink" title="二、上手指南：三步开启AI效率之旅"></a><strong>二、上手指南：三步开启AI效率之旅</strong></h2><h3 id="第一步：访问平台"><a href="#第一步：访问平台" class="headerlink" title="第一步：访问平台"></a><strong>第一步：访问平台</strong></h3><p>打开<code>Google AI Studio</code>（<a href="https://aistudio.google.com/app/prompts/new_chat%EF%BC%89">https://aistudio.google.com/app/prompts/new_chat）</a><br><strong>注意：</strong>需要确保网络环境流畅</p>
+<h2 id="二、上手指南：三步开启AI效率之旅"><a href="#二、上手指南：三步开启AI效率之旅" class="headerlink" title="二、上手指南：三步开启AI效率之旅"></a><strong>二、上手指南：三步开启AI效率之旅</strong></h2><h3 id="第一步：访问平台"><a href="#第一步：访问平台" class="headerlink" title="第一步：访问平台"></a><strong>第一步：访问平台</strong></h3><p>打开<code>Google AI Studio</code>（<span class="exturl" data-url="aHR0cHM6Ly9haXN0dWRpby5nb29nbGUuY29tL2FwcC9wcm9tcHRzL25ld19jaGF0JUVGJUJDJTg5">https://aistudio.google.com/app/prompts/new_chat）<i class="fa fa-external-link-alt"></i></span><br><strong>注意：</strong>需要确保网络环境流畅</p>
 <img src="https://kfufys.github.io/posts/2266/2.png" alt="2.png">
 
 <h3 id="第二步：选择模型"><a href="#第二步：选择模型" class="headerlink" title="第二步：选择模型"></a><strong>第二步：选择模型</strong></h3><ul>
@@ -906,7 +906,7 @@
 
 <h3 id="五、Markdown工具"><a href="#五、Markdown工具" class="headerlink" title="五、Markdown工具"></a>五、Markdown工具</h3><p>Markdown 编辑器有很多，它们在功能、适用平台、界面设计等方面各有特色，以下为你介绍一些常用的 Markdown 编辑器：</p>
 <h4 id="5-1-通用跨平台编辑器"><a href="#5-1-通用跨平台编辑器" class="headerlink" title="5.1 通用跨平台编辑器"></a>5.1 通用跨平台编辑器</h4><ul>
-<li><p><b><a href="https://typoraio.cn/" target="_blank" title>Typora</a></b></p>
+<li><p><b><span class="exturl" data-url="aHR0cHM6Ly90eXBvcmFpby5jbi8=">Typora<i class="fa fa-external-link-alt"></i></span></b></p>
 <ul>
 <li><p><strong>特点</strong>：这是一款简洁美观的 Markdown 编辑器，最大的亮点是采用所见即所得的编辑模式，支持多平台，包括 Windows、Mac 和 Linux。</p>
 </li>
@@ -914,7 +914,7 @@
 </li>
 </ul>
 </li>
-<li><p><b><a href="https://vscode.js.cn/Download" target="_blank" title>Visual Studio Code</a></b></p>
+<li><p><b><span class="exturl" data-url="aHR0cHM6Ly92c2NvZGUuanMuY24vRG93bmxvYWQ=">Visual Studio Code<i class="fa fa-external-link-alt"></i></span></b></p>
 <ul>
 <li><p><strong>特点</strong>：作为一款强大的开源代码编辑器，VS Code 通过安装 Markdown 相关的扩展插件，可实现丰富的 Markdown 编辑功能，如语法高亮、自动补全、预览等。支持 Git 集成，方便进行版本控制。</p>
 </li>
@@ -922,7 +922,7 @@
 </li>
 </ul>
 </li>
-<li><p><b><a href="https://obsidian.md" target="_blank" title>Obsidian</a></b></p>
+<li><p><b><span class="exturl" data-url="aHR0cHM6Ly9vYnNpZGlhbi5tZA==">Obsidian<i class="fa fa-external-link-alt"></i></span></b></p>
 <ul>
 <li><p><strong>特点</strong>：它是一款基于本地文件的知识管理和笔记应用，支持 Markdown 格式。具有强大的链接和图谱功能，可以方便地建立笔记之间的关联，形成个人知识网络。</p>
 </li>
@@ -932,7 +932,7 @@
 </li>
 </ul>
 <h4 id="5-2-在线编辑器"><a href="#5-2-在线编辑器" class="headerlink" title="5.2 在线编辑器"></a>5.2 在线编辑器</h4><ul>
-<li><p><b><a href="https://github.com" target="_blank" title>GitHub</a></b></p>
+<li><p><b><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29t">GitHub<i class="fa fa-external-link-alt"></i></span></b></p>
 <ul>
 <li><p><strong>特点</strong>：作为全球最大的代码托管平台，GitHub 内置了 Markdown 编辑器，在创建和编辑 README 文件、Wiki 页面时可直接使用。支持 Markdown 语法，方便开发者展示项目信息和文档。</p>
 </li>
@@ -940,7 +940,7 @@
 </li>
 </ul>
 </li>
-<li><p><b><a href="https://www.zybuluo.com/mdeditor" target="_blank" title>Cmd Markdown</a></b></p>
+<li><p><b><span class="exturl" data-url="aHR0cHM6Ly93d3cuenlidWx1by5jb20vbWRlZGl0b3I=">Cmd Markdown<i class="fa fa-external-link-alt"></i></span></b></p>
 <ul>
 <li><p><strong>特点</strong>：这是一款功能丰富的在线 Markdown 编辑器，支持云存储，方便在不同设备间同步文档。提供多种主题和模板，可导出为多种格式，还支持数学公式、流程图等高级功能。</p>
 </li>
@@ -951,7 +951,7 @@
 </ul>
 <hr>
 <blockquote>
-<p>如须学习更多 Markdown 实用小技巧，可以参考这个 Blog：<a href="https://markdown.com.cn/cheat-sheet.html" target="_blank" title>Markdown 教程</a></p>
+<p>如须学习更多 Markdown 实用小技巧，可以参考这个 Blog：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZG93bi5jb20uY24vY2hlYXQtc2hlZXQuaHRtbA==">Markdown 教程<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
 ]]></content>
       <categories>
@@ -2248,9 +2248,9 @@
 <p><strong>注：</strong>如果有<code>nginx.conf</code>配置的更改，需要重启<code>nginx</code>配置才会生效。如果只是更改<code>dist</code>包<code>/html</code>，则可以不重启<code>nginx</code>。</p>
 </blockquote>
 <h3 id="六、参考文章："><a href="#六、参考文章：" class="headerlink" title="六、参考文章："></a><strong>六、参考文章：</strong></h3><ul>
-<li><a href="https://github.com/rui-rui-an/nginxpages">rui-rui-an&#x2F;nginxpages: nginx的配置文件</a></li>
-<li><a href="https://juejin.cn/post/6844904144235413512">Nginx 从入门到实践，万字详解！ - 掘金</a></li>
-<li><a href="https://blog.csdn.net/qq_44691484/article/details/126354702">Nginx nginx.conf配置文件详解_nginxconf配置详解-CSDN博客</a></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3J1aS1ydWktYW4vbmdpbnhwYWdlcw==">rui-rui-an&#x2F;nginxpages: nginx的配置文件<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82ODQ0OTA0MTQ0MjM1NDEzNTEy">Nginx 从入门到实践，万字详解！ - 掘金<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NjkxNDg0L2FydGljbGUvZGV0YWlscy8xMjYzNTQ3MDI=">Nginx nginx.conf配置文件详解_nginxconf配置详解-CSDN博客<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 ]]></content>
       <categories>
@@ -2259,6 +2259,43 @@
       <tags>
         <tag>教程</tag>
         <tag>网站部署</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>站点更新日志</title>
+    <url>https://kfufys.github.io/posts/7178.html</url>
+    <content><![CDATA[<h3 id="2024-11-16"><a href="#2024-11-16" class="headerlink" title="2024.11.16"></a>2024.11.16</h3><blockquote>
+<p><strong>网站初次上线</strong></p>
+<p><strong>域名</strong>：<span class="exturl" data-url="aHR0cHM6Ly9kY3l5ZC5naXRodWIuaW8vaGV4b193ZWJzaXRlcw==">https://dcyyd.github.io/hexo_websites<i class="fa fa-external-link-alt"></i></span></p>
+<p><strong>详细信息</strong>：基于 hexo和 Github搭建的静态 web blog站点，成功托管至Github Pages页，网站主题基于开源 Next 主题，并对其进行了一些优化。</p>
+</blockquote>
+<h3 id="2024-11-25"><a href="#2024-11-25" class="headerlink" title="2024.11.25"></a>2024.11.25</h3><blockquote>
+<p><strong>网站域名更换</strong></p>
+<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
+<p><strong>详细信息</strong>：因业务转型，旧域名停用，网站整体迁移至新域名 <a href="kfufys.github.io">kfufys.github.io</a> ，旧域名内容继续保留，但不再对其进行任何更新。</p>
+</blockquote>
+<h3 id="2024-12-02"><a href="#2024-12-02" class="headerlink" title="2024.12.02"></a>2024.12.02</h3><blockquote>
+<p><strong>对网站设备适配做了一些优化</strong></p>
+<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
+<p><strong>详细信息</strong>：运用响应式设计重写 CSS，不同设备屏幕下页面自适应。移动端导航栏变汉堡菜单，图片依像素密度加载，优化 touch 事件，提升多设备交互体验。</p>
+</blockquote>
+<h3 id="2024-12-20"><a href="#2024-12-20" class="headerlink" title="2024.12.20"></a>2024.12.20</h3><blockquote>
+<p><strong>新增网站亮暗主题变换功能</strong></p>
+<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
+<p><strong>详细信息</strong>：前端植入 JavaScript 脚本与 CSS 变量，实现亮暗主题切换。点右上角按钮可切换，系统还能依设备系统主题偏好预设默认主题，增强个性化。</p>
+</blockquote>
+<h3 id="2025-01-20"><a href="#2025-01-20" class="headerlink" title="2025.01.20"></a>2025.01.20</h3><blockquote>
+<p><strong>对网站 SEO 做了一些优化</strong></p>
+<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
+<p><strong>详细信息</strong>：优化页面 Title Tag 含核心关键词，更新 Meta Description 文案吸引点击，为图片添 alt 属性助搜索引擎理解，优化内链结构均衡权重。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>站点日志</category>
+      </categories>
+      <tags>
+        <tag>website</tag>
+        <tag>log</tag>
       </tags>
   </entry>
   <entry>
@@ -2293,43 +2330,6 @@
       <tags>
         <tag>about</tag>
         <tag>关于我</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>站点更新日志</title>
-    <url>https://kfufys.github.io/posts/7178.html</url>
-    <content><![CDATA[<h3 id="2024-11-16"><a href="#2024-11-16" class="headerlink" title="2024.11.16"></a>2024.11.16</h3><blockquote>
-<p><strong>网站初次上线</strong></p>
-<p><strong>域名</strong>：<a href="https://dcyyd.github.io/hexo_websites">https://dcyyd.github.io/hexo_websites</a></p>
-<p><strong>详细信息</strong>：基于 hexo和 Github搭建的静态 web blog站点，成功托管至Github Pages页，网站主题基于开源 Next 主题，并对其进行了一些优化。</p>
-</blockquote>
-<h3 id="2024-11-25"><a href="#2024-11-25" class="headerlink" title="2024.11.25"></a>2024.11.25</h3><blockquote>
-<p><strong>网站域名更换</strong></p>
-<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
-<p><strong>详细信息</strong>：因业务转型，旧域名停用，网站整体迁移至新域名 <a href="kfufys.github.io">kfufys.github.io</a> ，旧域名内容继续保留，但不再对其进行任何更新。</p>
-</blockquote>
-<h3 id="2024-12-02"><a href="#2024-12-02" class="headerlink" title="2024.12.02"></a>2024.12.02</h3><blockquote>
-<p><strong>对网站设备适配做了一些优化</strong></p>
-<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
-<p><strong>详细信息</strong>：运用响应式设计重写 CSS，不同设备屏幕下页面自适应。移动端导航栏变汉堡菜单，图片依像素密度加载，优化 touch 事件，提升多设备交互体验。</p>
-</blockquote>
-<h3 id="2024-12-20"><a href="#2024-12-20" class="headerlink" title="2024.12.20"></a>2024.12.20</h3><blockquote>
-<p><strong>新增网站亮暗主题变换功能</strong></p>
-<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
-<p><strong>详细信息</strong>：前端植入 JavaScript 脚本与 CSS 变量，实现亮暗主题切换。点右上角按钮可切换，系统还能依设备系统主题偏好预设默认主题，增强个性化。</p>
-</blockquote>
-<h3 id="2025-01-20"><a href="#2025-01-20" class="headerlink" title="2025.01.20"></a>2025.01.20</h3><blockquote>
-<p><strong>对网站 SEO 做了一些优化</strong></p>
-<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
-<p><strong>详细信息</strong>：优化页面 Title Tag 含核心关键词，更新 Meta Description 文案吸引点击，为图片添 alt 属性助搜索引擎理解，优化内链结构均衡权重。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>站点日志</category>
-      </categories>
-      <tags>
-        <tag>website</tag>
-        <tag>log</tag>
       </tags>
   </entry>
   <entry>
@@ -2453,7 +2453,7 @@
 <li><p>安装 hexo-deployer-git</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>修改 <code>_config.yml</code> 文件<br>在blog-demo目录下的_config.yml，就是整个Hexo框架的配置文件，详细可参考官方的<a href="https://hexo.io/zh-cn/docs/configuration">配置描述</a><br>修改最后一行的配置，将repository修改为你自己的github项目地址即可，还有分支要改为<code>main</code>代表主分支（注意缩进）。</p>
+<li><p>修改 <code>_config.yml</code> 文件<br>在blog-demo目录下的_config.yml，就是整个Hexo框架的配置文件，详细可参考官方的<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvY29uZmlndXJhdGlvbg==">配置描述<i class="fa fa-external-link-alt"></i></span><br>修改最后一行的配置，将repository修改为你自己的github项目地址即可，还有分支要改为<code>main</code>代表主分支（注意缩进）。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:  </span><br><span class="line">    type: git</span><br><span class="line">    repository: [email protected]:kingmoon3/kingmoon3.github.io.git</span><br><span class="line">    branch: main</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改好配置后，运行如下命令，将代码部署到 GitHub（Hexo三连）。</p>
@@ -2468,7 +2468,7 @@
 </ol>
 <p><em>注意：deploy时可能要你输入 username 和 password。</em></p>
 <p>如果出现 **<code>INFO  Deploy done: git</code>**，则说明部署成功了。</p>
-<p>稍等两分钟，打开浏览器访问：<a href="https://你的github用户名.github.io/">https:&#x2F;&#x2F;[你的github用户名].github.io</a> ，这时候我们就可以看到博客内容了。</p>
+<p>稍等两分钟，打开浏览器访问：<span class="exturl" data-url="aHR0cHM6Ly/kvaDnmoRnaXRodWLnlKjmiLflkI0uZ2l0aHViLmlvLw==">https:&#x2F;&#x2F;[你的github用户名].github.io<i class="fa fa-external-link-alt"></i></span> ，这时候我们就可以看到博客内容了。</p>
 <h3 id="附：GitHub网站部署常用命令："><a href="#附：GitHub网站部署常用命令：" class="headerlink" title="附：GitHub网站部署常用命令："></a>附：GitHub网站部署常用命令：</h3><ol>
 <li><h4 id="Git相关："><a href="#Git相关：" class="headerlink" title="Git相关："></a>Git相关：</h4></li>
 </ol>
