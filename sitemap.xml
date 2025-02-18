@@ -171,6 +171,13 @@
   </url>
   
   <url>
+    <loc>https://kfufys.github.io/tags/JavaScript/</loc>
+    <lastmod>2025-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://kfufys.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-02-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -235,13 +242,6 @@
   
   <url>
     <loc>https://kfufys.github.io/tags/DemoCode/</loc>
-    <lastmod>2025-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kfufys.github.io/tags/JavaScript/</loc>
     <lastmod>2025-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -335,13 +335,6 @@
   
   <url>
     <loc>https://kfufys.github.io/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</loc>
-    <lastmod>2025-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kfufys.github.io/categories/Console/JavaScript/</loc>
     <lastmod>2025-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
