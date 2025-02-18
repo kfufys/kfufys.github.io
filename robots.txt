@@ -1,3 +1,7 @@
+# robots.txt generated at https://www.sojson.com/robots/
+Crawl-delay: 20
+Disallow:https://kfufys.github.io/sitemap.xml
+Disallow:https://kfufys.github.io/sitemap.txt
+Disallow:https://kfufys.github.io/baidusitemap.xml
 User-agent: *
 Disallow:
-Sitemap: https://kfufys.github.io/sitemap.xml
