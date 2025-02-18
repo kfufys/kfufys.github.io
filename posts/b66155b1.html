@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://kfufys.github.io/images/favicon.svg">
+
+<link rel="stylesheet" href="https://kfufys.github.io/css/main.css">
+
+<link rel="stylesheet" href="fonts.useso.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"kfufys.github.io","root":"https://kfufys.github.io/","images":"https://kfufys.github.io/images","scheme":"Gemini","darkmode":true,"version":"8.21.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"hljswrap":true,"copycode":{"enable":"enable","show_result":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":{"valine":{"text":"Valine","order":-1,"enable":true,"appid":"JFZFEC09hmHKtpi6Q2DORLum-gzGzoHsz","appkey":"KkiKFtcuCjN1RhCqqZZdzYIL"}}},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"https://kfufys.github.io/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://kfufys.github.io/js/config.js"></script>
+
+    <meta name="description" content="20 个 console 的调试小技巧，助你快速解决问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Console 调试技巧">
+<meta property="og:url" content="https://kfufys.github.io/posts/b66155b1.html">
+<meta property="og:site_name" content="Smart Space">
+<meta property="og:description" content="20 个 console 的调试小技巧，助你快速解决问题">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-02-18T09:07:16.000Z">
+<meta property="article:modified_time" content="2025-02-18T09:07:16.000Z">
+<meta property="article:author" content="Dou ChangYou">
+<meta property="article:tag" content="Console">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://kfufys.github.io/posts/b66155b1.html">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://kfufys.github.io/posts/b66155b1.html","path":"posts/b66155b1.html","title":"Console 调试技巧"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Console 调试技巧 | Smart Space</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="https://kfufys.github.io/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="https://kfufys.github.io/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Smart Space</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="https://kfufys.github.io/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="https://kfufys.github.io/posts/7477.html" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="https://kfufys.github.io/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="https://kfufys.github.io/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-sitelogs"><a href="https://kfufys.github.io/posts/7178.html" rel="section"><i class="fa fa-solid fa-book fa-fw"></i>日志</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%A0%B7%E5%BC%8F%E8%BD%B0%E7%82%B8"><span class="nav-text">1. 样式轰炸</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%8A%A8%E6%80%81%E6%A8%A1%E6%9D%BF"><span class="nav-text">2. 动态模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%A0%91%E5%BD%A2%E7%BB%93%E6%9E%84%E8%A7%A3%E6%9E%90"><span class="nav-text">3. 树形结构解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E8%A1%A8%E6%A0%BC%E9%AD%94%E6%B3%95%E5%8D%87%E7%BA%A7"><span class="nav-text">4. 表格魔法升级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%A0%87%E8%AE%B0"><span class="nav-text">5. 生命周期标记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E8%B0%83%E7%94%A8%E6%A0%88%E5%BF%AB%E7%85%A7"><span class="nav-text">6. 调用栈快照</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E5%86%85%E5%AD%98%E7%9B%91%E6%8E%A7"><span class="nav-text">7. 内存监控</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%A4%8D%E5%90%88%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95"><span class="nav-text">8. 复合性能测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E6%9D%A1%E4%BB%B6%E6%96%AD%E8%A8%80"><span class="nav-text">9. 条件断言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E7%8E%AF%E5%A2%83%E6%84%9F%E7%9F%A5%E6%97%A5%E5%BF%97"><span class="nav-text">10. 环境感知日志</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E6%95%B0%E6%8D%AE%E5%BF%AB%E7%85%A7%E5%AF%B9%E6%AF%94"><span class="nav-text">11. 数据快照对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E6%97%A5%E5%BF%97%E5%88%86%E7%B1%BB%E8%BF%87%E6%BB%A4"><span class="nav-text">12. 日志分类过滤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%B0%83%E8%AF%95"><span class="nav-text">13. 交互式调试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-%E6%97%A5%E5%BF%97%E6%8C%81%E4%B9%85%E5%8C%96"><span class="nav-text">14. 日志持久化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-%E6%80%A7%E8%83%BD%E7%83%AD%E5%8A%9B%E5%9B%BE"><span class="nav-text">15. 性能热力图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E6%A3%80%E6%B5%8B"><span class="nav-text">16. 内存泄漏检测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-%E6%BA%90%E7%A0%81%E6%98%A0%E5%B0%84%E8%B0%83%E8%AF%95"><span class="nav-text">17. 源码映射调试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-%E8%B0%83%E8%AF%95%E5%99%A8%E9%9B%86%E6%88%90"><span class="nav-text">18. 调试器集成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-%E6%97%A5%E5%BF%97%E5%88%86%E7%BA%A7%E6%8E%A7%E5%88%B6"><span class="nav-text">19. 日志分级控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E8%BF%87%E6%BB%A4"><span class="nav-text">20. 敏感信息过滤</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Dou ChangYou"
+      src="https://kfufys.github.io/images/favicon.svg">
+  <p class="site-author-name" itemprop="name">Dou ChangYou</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="https://kfufys.github.io/archives/">
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">归档</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="https://kfufys.github.io/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="https://kfufys.github.io/tags/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RjeXlk" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dcyyd"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmRjeXlkX2tjdWdAeWVhaC5uZXQ=" title="E-Mail → mailto:dcyyd_kcug@yeah.net"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+  </div>
+<div style="">
+	<canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+	(function() {
+
+		var digit = [
+			[
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 1, 1, 0, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 0, 1, 1, 0],
+				[0, 0, 1, 1, 1, 0, 0]
+			], //0
+			[
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 1, 1, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[1, 1, 1, 1, 1, 1, 1]
+			], //1
+			[
+				[0, 1, 1, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 1, 1, 0, 0, 0, 0],
+				[1, 1, 0, 0, 0, 0, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 1, 1, 1, 1, 1]
+			], //2
+			[
+				[1, 1, 1, 1, 1, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0]
+			], //3
+			[
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 1, 0],
+				[0, 0, 1, 1, 1, 1, 0],
+				[0, 1, 1, 0, 1, 1, 0],
+				[1, 1, 0, 0, 1, 1, 0],
+				[1, 1, 1, 1, 1, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 1, 1]
+			], //4
+			[
+				[1, 1, 1, 1, 1, 1, 1],
+				[1, 1, 0, 0, 0, 0, 0],
+				[1, 1, 0, 0, 0, 0, 0],
+				[1, 1, 1, 1, 1, 1, 0],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0]
+			], //5
+			[
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 1, 1, 0, 0, 0, 0],
+				[1, 1, 0, 0, 0, 0, 0],
+				[1, 1, 0, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0]
+			], //6
+			[
+				[1, 1, 1, 1, 1, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0]
+			], //7
+			[
+				[0, 1, 1, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0]
+			], //8
+			[
+				[0, 1, 1, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 1, 1, 0, 0, 0, 0]
+			], //9
+			[
+				[0, 0, 0, 0, 0, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 0, 0, 0, 0, 0],
+				[0, 0, 0, 0, 0, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 0, 0, 0, 0, 0]
+			] //:
+		];
+
+		var canvas = document.getElementById('canvas');
+
+		if (canvas.getContext) {
+			var cxt = canvas.getContext('2d');
+			//声明canvas的宽高
+			var H = 100,
+				W = 700;
+			canvas.height = H;
+			canvas.width = W;
+			cxt.fillStyle = '#f00';
+			cxt.fillRect(10, 10, 50, 50);
+
+			//存储时间数据
+			var data = [];
+			//存储运动的小球
+			var balls = [];
+			//设置粒子半径
+			var R = canvas.height / 20 - 1;
+			(function() {
+				var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+				//存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+				data.push(temp[1], temp[2], 10, temp[3], temp[4], 10, temp[5], temp[6]);
+			})();
+
+			/*生成点阵数字*/
+			function renderDigit(index, num) {
+				for (var i = 0; i < digit[num].length; i++) {
+					for (var j = 0; j < digit[num][i].length; j++) {
+						if (digit[num][i][j] == 1) {
+							cxt.beginPath();
+							cxt.arc(14 * (R + 2) * index + j * 2 * (R + 1) + (R + 1), i * 2 * (R + 1) + (R + 1), R, 0,
+								2 * Math.PI);
+							cxt.closePath();
+							cxt.fill();
+						}
+					}
+				}
+			}
+
+			/*更新时钟*/
+			function updateDigitTime() {
+				var changeNumArray = [];
+				var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+				var NewData = [];
+				NewData.push(temp[1], temp[2], 10, temp[3], temp[4], 10, temp[5], temp[6]);
+				for (var i = data.length - 1; i >= 0; i--) {
+					//时间发生变化
+					if (NewData[i] !== data[i]) {
+						//将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+						changeNumArray.push(i + '_' + (Number(data[i]) + 1) % 10);
+					}
+				}
+				//增加小球
+				for (var i = 0; i < changeNumArray.length; i++) {
+					addBalls.apply(this, changeNumArray[i].split('_'));
+				}
+				data = NewData.concat();
+			}
+
+			/*更新小球状态*/
+			function updateBalls() {
+				for (var i = 0; i < balls.length; i++) {
+					balls[i].stepY += balls[i].disY;
+					balls[i].x += balls[i].stepX;
+					balls[i].y += balls[i].stepY;
+					if (balls[i].x > W + R || balls[i].y > H + R) {
+						balls.splice(i, 1);
+						i--;
+					}
+				}
+			}
+
+			/*增加要运动的小球*/
+			function addBalls(index, num) {
+				var numArray = [1, 2, 3];
+				var colorArray = ["#3BE", "#09C", "#A6C", "#93C", "#9C0", "#690", "#FB3", "#F80", "#F44", "#C00"];
+				for (var i = 0; i < digit[num].length; i++) {
+					for (var j = 0; j < digit[num][i].length; j++) {
+						if (digit[num][i][j] == 1) {
+							var ball = {
+								x: 14 * (R + 2) * index + j * 2 * (R + 1) + (R + 1),
+								y: i * 2 * (R + 1) + (R + 1),
+								stepX: Math.floor(Math.random() * 4 - 2),
+								stepY: -2 * numArray[Math.floor(Math.random() * numArray.length)],
+								color: colorArray[Math.floor(Math.random() * colorArray.length)],
+								disY: 1
+							};
+							balls.push(ball);
+						}
+					}
+				}
+			}
+
+			/*渲染*/
+			function render() {
+				//重置画布宽度，达到清空画布的效果
+				canvas.height = 100;
+				//渲染时钟
+				for (var i = 0; i < data.length; i++) {
+					renderDigit(i, data[i]);
+				}
+				//渲染小球
+				for (var i = 0; i < balls.length; i++) {
+					cxt.beginPath();
+					cxt.arc(balls[i].x, balls[i].y, R, 0, 2 * Math.PI);
+					cxt.fillStyle = balls[i].color;
+					cxt.closePath();
+					cxt.fill();
+				}
+			}
+
+			clearInterval(oTimer);
+			var oTimer = setInterval(function() {
+				//更新时钟
+				updateDigitTime();
+				//更新小球状态
+				updateBalls();
+				//渲染
+				render();
+			}, 50);
+		}
+
+	})();
+</script>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          我的作品
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9rZnVmeXMudG9wOjEyMTIx" title="https:&#x2F;&#x2F;kfufys.top:12121">峰云网盘</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9kY3l5ZC5naXRodWIuaW8=" title="https:&#x2F;&#x2F;dcyyd.github.io">峰云导航</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9rZnVmeXMubm90aW9uLnNpdGUvUGVha0Nsb3VkLVJlc291cmNlLUxpYnJhcnktMTQ5NmVkMmMzMzdiODA2NThiNjJmZjc3MzhjZjNlMjA=" title="https:&#x2F;&#x2F;kfufys.notion.site&#x2F;PeakCloud-Resource-Library-1496ed2c337b80658b62ff7738cf3e20">峰云资源库</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9meXMubXlzeGwuY24=" title="https:&#x2F;&#x2F;fys.mysxl.cn">我的摄影作品</span>
+            </li>
+        </ul>
+      </div>
+    </div>
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://kfufys.github.io/posts/b66155b1.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://kfufys.github.io/images/favicon.svg">
+      <meta itemprop="name" content="Dou ChangYou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smart Space">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Console 调试技巧 | Smart Space">
+      <meta itemprop="description" content="20 个 console 的调试小技巧，助你快速解决问题">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Console 调试技巧
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-02-18 17:07:16" itemprop="dateCreated datePublished" datetime="2025-02-18T17:07:16+08:00">2025-02-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="https://kfufys.github.io/categories/Console/" itemprop="url" rel="index"><span itemprop="name">Console</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="https://kfufys.github.io/categories/Console/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">20 个 console 的调试小技巧，助你快速解决问题</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>说到 <code>console</code>，很多人的第一反应肯定是 <code>console.log</code>，它既简单又直接！然而，在处理复杂问题时，这种方式往往效率低下。本文分享 20 个 <code>console</code> 的调试小技巧，帮您更快速地找出并解决问题。</p>
+<h3 id="1-样式轰炸"><a href="#1-样式轰炸" class="headerlink" title="1. 样式轰炸"></a>1. 样式轰炸</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这段代码使用了 console.log 的样式功能，通过传入特定的 CSS 样式字符串，</span></span><br><span class="line"><span class="comment">// 可以为输出的文本添加自定义样式，达到醒目的效果，这里创建了一个带有渐变背景、</span></span><br><span class="line"><span class="comment">// 白色文字、圆角和内边距的“VIP调试模式”样式，以及一个后续的灰色文字样式用于显示版本号。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(</span><br><span class="line">  <span class="string">&#x27;%cVIP调试模式%c v2.0&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;background:linear-gradient(45deg,#ff6b6b,#4ecdc4);color:white;padding:4px 8px;border-radius:3px;&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;color:#666;margin-left:8px;&#x27;</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="2-动态模板"><a href="#2-动态模板" class="headerlink" title="2. 动态模板"></a>2. 动态模板</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义一个包含用户信息的对象，然后利用模板字符串结合当前时间，</span></span><br><span class="line"><span class="comment">// 在控制台输出一条包含用户名称、等级以及执行操作信息的日志，方便跟踪用户行为及操作时间。</span></span><br><span class="line"><span class="keyword">const</span> user = &#123; <span class="attr">name</span>: <span class="string">&#x27;Alice&#x27;</span>, <span class="attr">level</span>: <span class="string">&#x27;VIP&#x27;</span> &#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`[<span class="subst">$&#123;<span class="keyword">new</span> <span class="built_in">Date</span>().toISOString()&#125;</span>] <span class="subst">$&#123;user.name&#125;</span> (<span class="subst">$&#123;user.level&#125;</span>) 执行了支付操作`</span>);</span><br><span class="line"><span class="comment">// 输出示例：[2023-12-25T09:30:00Z] Alice (VIP) 执行了支付操作</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="3-树形结构解析"><a href="#3-树形结构解析" class="headerlink" title="3. 树形结构解析"></a>3. 树形结构解析</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 以一种结构化、易读的方式在控制台输出用户数据树，使用特定样式突出显示树的标题，</span></span><br><span class="line"><span class="comment">// 数据树包含用户 ID、个人资料（姓名、地址，地址又细分城市和区）以及订单列表等信息，方便查看数据层级关系。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c▸ 用户数据树&#x27;</span>, <span class="string">&#x27;color:#48bb78;font-weight:bold&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">id</span>: <span class="number">1001</span>,</span><br><span class="line">  <span class="attr">profile</span>: &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;Bob&#x27;</span>,</span><br><span class="line">    <span class="attr">address</span>: &#123;</span><br><span class="line">      <span class="attr">city</span>: <span class="string">&#x27;上海&#x27;</span>,</span><br><span class="line">      <span class="attr">district</span>: <span class="string">&#x27;浦东&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">orders</span>: [<span class="string">&#x27;#2023-1001&#x27;</span>, <span class="string">&#x27;#2023-1002&#x27;</span>]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="4-表格魔法升级"><a href="#4-表格魔法升级" class="headerlink" title="4. 表格魔法升级"></a>4. 表格魔法升级</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 对于加密货币数据数组，先对每个数据项进行处理，添加一个表示价格趋势的字段（根据 24 小时价格变化判断上升或下降），</span></span><br><span class="line"><span class="comment">// 然后使用 console.table 将处理后的数据以表格形式输出，使数据对比更加直观清晰。</span></span><br><span class="line"><span class="keyword">const</span> cryptoData = [</span><br><span class="line">  &#123; <span class="attr">coin</span>: <span class="string">&#x27;BTC&#x27;</span>, <span class="attr">price</span>: <span class="number">42000</span>, <span class="attr">change24h</span>: <span class="string">&#x27;+5.2%&#x27;</span>, <span class="attr">volatility</span>: <span class="string">&#x27;high&#x27;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">coin</span>: <span class="string">&#x27;ETH&#x27;</span>, <span class="attr">price</span>: <span class="number">2300</span>, <span class="attr">change24h</span>: <span class="string">&#x27;-1.8%&#x27;</span>, <span class="attr">volatility</span>: <span class="string">&#x27;medium&#x27;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">coin</span>: <span class="string">&#x27;SOL&#x27;</span>, <span class="attr">price</span>: <span class="number">98</span>, <span class="attr">change24h</span>: <span class="string">&#x27;+12.6%&#x27;</span>, <span class="attr">volatility</span>: <span class="string">&#x27;high&#x27;</span> &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">table</span>(cryptoData.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> (&#123;</span><br><span class="line">...item,</span><br><span class="line">  <span class="string">&#x27;价格趋势&#x27;</span>: item.<span class="property">change24h</span>.<span class="title function_">startsWith</span>(<span class="string">&#x27;+&#x27;</span>)? <span class="string">&#x27;↑&#x27;</span> : <span class="string">&#x27;↓&#x27;</span></span><br><span class="line">&#125;)));</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="5-生命周期标记"><a href="#5-生命周期标记" class="headerlink" title="5. 生命周期标记"></a>5. 生命周期标记</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 console.groupCollapsed 和 console.groupEnd 来创建一个可折叠的分组，</span></span><br><span class="line"><span class="comment">// 用于标记 API 请求流程的不同阶段，如请求发起、响应接收、数据处理等，每个阶段用不同颜色突出显示关键信息，</span></span><br><span class="line"><span class="comment">// 方便在控制台快速了解整个请求生命周期的状态。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">groupCollapsed</span>(<span class="string">&#x27;%c🔄 API请求流程追踪&#x27;</span>, <span class="string">&#x27;color:#4299e1&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c▶️ 请求发起&#x27;</span>, <span class="string">&#x27;color:#48bb78&#x27;</span>, &#123; <span class="attr">url</span>: <span class="string">&#x27;/api/users&#x27;</span>, <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span> &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c⏳ 响应接收&#x27;</span>, <span class="string">&#x27;color:#ed8936&#x27;</span>, &#123; <span class="attr">status</span>: <span class="number">200</span>, <span class="attr">time</span>: <span class="string">&#x27;320ms&#x27;</span> &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c✅ 数据处理&#x27;</span>, <span class="string">&#x27;color:#48bb78&#x27;</span>, &#123; <span class="attr">processedItems</span>: <span class="number">15</span> &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">groupEnd</span>();</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="6-调用栈快照"><a href="#6-调用栈快照" class="headerlink" title="6. 调用栈快照"></a>6. 调用栈快照</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在函数内部使用 console.trace，当执行到这一行时，会输出完整的调用栈信息，</span></span><br><span class="line"><span class="comment">// 显示函数是如何被调用的，经过了哪些路径，对于排查函数调用逻辑和定位问题根源非常有用。</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">processOrder</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">trace</span>(<span class="string">&#x27;订单处理流程追踪&#x27;</span>);</span><br><span class="line">  <span class="comment">// 其他处理逻辑</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 输出完整的调用栈信息</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="7-内存监控"><a href="#7-内存监控" class="headerlink" title="7. 内存监控"></a>7. 内存监控</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 首先获取初始的 JavaScript 堆内存使用量，执行一些内存密集型操作后，</span></span><br><span class="line"><span class="comment">// 通过计算前后内存使用量的差值并转换为 KB 单位，输出内存使用量的变化情况，以便监控内存消耗是否合理。</span></span><br><span class="line"><span class="keyword">const</span> initialMemory = performance.<span class="property">memory</span>.<span class="property">usedJSHeapSize</span>;</span><br><span class="line"><span class="comment">// 执行内存密集型操作</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;内存使用量变化:&#x27;</span>, </span><br><span class="line">  (performance.<span class="property">memory</span>.<span class="property">usedJSHeapSize</span> - initialMemory) / <span class="number">1024</span> + <span class="string">&#x27; KB&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="8-复合性能测试"><a href="#8-复合性能测试" class="headerlink" title="8. 复合性能测试"></a>8. 复合性能测试</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 console.time 和 console.timeEnd 来测量一段包含多个异步操作（如 Promise.all 中的多个异步任务）的复合操作的执行时间，</span></span><br><span class="line"><span class="comment">// 同时使用 console.timeLog 在操作的关键阶段记录时间点，方便了解各个阶段的耗时情况，精准定位性能瓶颈。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">time</span>(<span class="string">&#x27;复合操作&#x27;</span>);</span><br><span class="line"><span class="keyword">await</span> <span class="title class_">Promise</span>.<span class="title function_">all</span>([</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">timeLog</span>(<span class="string">&#x27;复合操作&#x27;</span>, <span class="string">&#x27;阶段1完成&#x27;</span>),</span><br><span class="line">  <span class="title function_">fetchData</span>(),</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">timeLog</span>(<span class="string">&#x27;复合操作&#x27;</span>, <span class="string">&#x27;阶段2完成&#x27;</span>),</span><br><span class="line">  <span class="title function_">processData</span>()</span><br><span class="line">]);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">timeEnd</span>(<span class="string">&#x27;复合操作&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="9-条件断言"><a href="#9-条件断言" class="headerlink" title="9. 条件断言"></a>9. 条件断言</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 console.assert 进行条件断言，如果条件不满足（这里是用户年龄大于 18 岁），</span></span><br><span class="line"><span class="comment">// 则按照指定的红色醒目的样式输出错误信息，包含期望年龄和实际年龄，用于快速验证数据的合法性。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">assert</span>(</span><br><span class="line">  user.<span class="property">age</span> &gt; <span class="number">18</span>, </span><br><span class="line">  <span class="string">&#x27;%c年龄验证失败&#x27;</span>, </span><br><span class="line">  <span class="string">&#x27;color:red;font-weight:bold&#x27;</span>,</span><br><span class="line">  &#123; <span class="attr">requiredAge</span>: <span class="number">18</span>, <span class="attr">actualAge</span>: user.<span class="property">age</span> &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="10-环境感知日志"><a href="#10-环境感知日志" class="headerlink" title="10. 环境感知日志"></a>10. 环境感知日志</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据当前 Node.js 环境变量（NODE_ENV）来决定是否输出日志，</span></span><br><span class="line"><span class="comment">// 在开发环境下，将 console.log 绑定并正常输出日志，而在生产环境下，</span></span><br><span class="line"><span class="comment">// 提供一个空函数替代，实现自动静默，避免在生产环境输出不必要的调试信息。</span></span><br><span class="line"><span class="keyword">const</span> debug = &#123;</span><br><span class="line">  <span class="attr">log</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&#x27;development&#x27;</span> </span><br><span class="line">  ? <span class="variable language_">console</span>.<span class="property">log</span>.<span class="title function_">bind</span>(<span class="variable language_">console</span>) </span><br><span class="line">    : <span class="function">() =&gt;</span> &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">debug.<span class="title function_">log</span>(<span class="string">&#x27;开发环境专属日志&#x27;</span>); <span class="comment">// 生产环境自动静默</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="11-数据快照对比"><a href="#11-数据快照对比" class="headerlink" title="11. 数据快照对比"></a>11. 数据快照对比</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 先将状态数据序列化为字符串保存起来，在状态修改后，通过自定义的 diff 函数（假设已定义）对比修改前后的数据，</span></span><br><span class="line"><span class="comment">// 并在控制台输出状态变更差异，有助于跟踪数据的变化情况，排查因数据变更引发的问题。</span></span><br><span class="line"><span class="keyword">const</span> before = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(state);</span><br><span class="line"><span class="comment">// 状态修改操作</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;状态变更差异:&#x27;</span>, <span class="title function_">diff</span>(<span class="title class_">JSON</span>.<span class="title function_">parse</span>(before), state));</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="12-日志分类过滤"><a href="#12-日志分类过滤" class="headerlink" title="12. 日志分类过滤"></a>12. 日志分类过滤</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个日志记录器对象，包含不同分类的日志方法，如网络、安全、支付等，</span></span><br><span class="line"><span class="comment">// 每个方法在调用 console.log 时添加对应的分类前缀，方便在控制台根据分类筛选和查看日志，</span></span><br><span class="line"><span class="comment">// 这里演示了记录支付请求发起的日志，包含金额信息。</span></span><br><span class="line"><span class="keyword">const</span> logger = &#123;</span><br><span class="line">  <span class="attr">network</span>: <span class="function">(<span class="params">...args</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[NET]&#x27;</span>,...args),</span><br><span class="line">  <span class="attr">security</span>: <span class="function">(<span class="params">...args</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[SEC]&#x27;</span>,...args),</span><br><span class="line">  <span class="attr">payment</span>: <span class="function">(<span class="params">...args</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[PAY]&#x27;</span>,...args)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">logger.<span class="title function_">payment</span>(<span class="string">&#x27;支付请求发起&#x27;</span>, &#123; <span class="attr">amount</span>: <span class="number">99.9</span> &#125;);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="13-交互式调试"><a href="#13-交互式调试" class="headerlink" title="13. 交互式调试"></a>13. 交互式调试</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在控制台输出一个包含加密数据和检查函数的对象，用户点击该输出信息时，</span></span><br><span class="line"><span class="comment">// 可以通过调用检查函数（这里是解密数据函数 decryptData）来查看详细信息，实现交互式调试体验。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;点击查看详情：&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">data</span>: encryptedData,</span><br><span class="line">  <span class="attr">inspect</span>: <span class="function">() =&gt;</span> <span class="title function_">decryptData</span>(encryptedData)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="14-日志持久化"><a href="#14-日志持久化" class="headerlink" title="14. 日志持久化"></a>14. 日志持久化</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 保存原始的 console.log 方法，并重写 console.log，</span></span><br><span class="line"><span class="comment">// 在新的 console.log 中，先执行原始的输出操作，再将日志信息发送到日志服务器（假设 sendToLogServer 函数已实现），</span></span><br><span class="line"><span class="comment">// 确保日志不仅在控制台可见，还能持久化存储以供后续分析。</span></span><br><span class="line"><span class="keyword">const</span> originalLog = <span class="variable language_">console</span>.<span class="property">log</span>.<span class="title function_">bind</span>(<span class="variable language_">console</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="property">log</span> = <span class="function">(<span class="params">...args</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">originalLog</span>(...args);</span><br><span class="line">  <span class="title function_">sendToLogServer</span>(args); <span class="comment">// 发送到日志服务器</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="15-性能热力图"><a href="#15-性能热力图" class="headerlink" title="15. 性能热力图"></a>15. 性能热力图</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 console.timeStamp 在关键的性能节点（如渲染开始、DOM 更新）记录时间戳，</span></span><br><span class="line"><span class="comment">// 之后可以在浏览器的 Performance 面板查看这些时间戳，以可视化的方式分析页面性能瓶颈，优化渲染流程。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">timeStamp</span>(<span class="string">&#x27;渲染开始&#x27;</span>);</span><br><span class="line"><span class="comment">// 渲染逻辑</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">timeStamp</span>(<span class="string">&#x27;DOM更新&#x27;</span>);</span><br><span class="line"><span class="comment">// 更新逻辑</span></span><br><span class="line"><span class="comment">// 在浏览器Performance面板查看时间戳</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="16-内存泄漏检测"><a href="#16-内存泄漏检测" class="headerlink" title="16. 内存泄漏检测"></a>16. 内存泄漏检测</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个数组来存储组件实例的引用，在组件构造函数中，每创建一个实例就将其添加到数组中，</span></span><br><span class="line"><span class="comment">// 并通过 console.count 记录实例创建的次数，同时定期检查数组中实例的数量，</span></span><br><span class="line"><span class="comment">// 如果数量持续增加，可能存在内存泄漏问题，方便及时排查。</span></span><br><span class="line"><span class="keyword">let</span> instances = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyComponent</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    instances.<span class="title function_">push</span>(<span class="variable language_">this</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">count</span>(<span class="string">&#x27;实例创建&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定期检查实例数量</span></span><br><span class="line"><span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;存活实例:&#x27;</span>, instances.<span class="property">length</span>), <span class="number">5000</span>);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="17-源码映射调试"><a href="#17-源码映射调试" class="headerlink" title="17. 源码映射调试"></a>17. 源码映射调试</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在 webpack 配置中启用 source-map，这使得在调试时能够将打包后的代码映射回原始的源代码，</span></span><br><span class="line"><span class="comment">// 方便在浏览器调试工具或 IDE 中直接查看和调试原始代码，而不是混淆后的代码，提高调试效率。</span></span><br><span class="line"><span class="comment">// 配合webpack配置</span></span><br><span class="line"><span class="attr">devtool</span>: <span class="string">&#x27;source-map&#x27;</span>,</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="18-调试器集成"><a href="#18-调试器集成" class="headerlink" title="18. 调试器集成"></a>18. 调试器集成</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在函数开头使用 console.log 输出进入函数的信息，然后使用 debugger 语句，</span></span><br><span class="line"><span class="comment">// 当代码执行到这里时，会暂停执行，等待调试器（如浏览器开发者工具或 IDE 调试功能）连接，</span></span><br><span class="line"><span class="comment">// 方便深入调试函数内部复杂的运算逻辑。</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">complexCalculation</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;进入计算函数&#x27;</span>);</span><br><span class="line">  <span class="keyword">debugger</span>; <span class="comment">// 配合IDE断点使用</span></span><br><span class="line">  <span class="comment">// 复杂运算</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="19-日志分级控制"><a href="#19-日志分级控制" class="headerlink" title="19. 日志分级控制"></a>19. 日志分级控制</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义一个日志级别对象，包含调试、信息、警告、错误等级别，</span></span><br><span class="line"><span class="comment">// 然后创建一个 Logger 类，在构造函数中接收一个日志级别参数，</span></span><br><span class="line"><span class="comment">// 类中的 debug 方法根据当前设置的级别决定是否输出调试信息，实现灵活的日志分级管理。</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">LOG_LEVEL</span> = &#123;</span><br><span class="line">  <span class="attr">DEBUG</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="attr">INFO</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">WARN</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">ERROR</span>: <span class="number">3</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Logger</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">level = LOG_LEVEL.INFO</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">level</span> = level;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">debug</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">level</span> &lt;= <span class="variable constant_">LOG_LEVEL</span>.<span class="property">DEBUG</span>) <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[DEBUG]&#x27;</span>,...args);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="20-敏感信息过滤"><a href="#20-敏感信息过滤" class="headerlink" title="20. 敏感信息过滤"></a>20. 敏感信息过滤</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义一个安全日志函数，它接收数据对象，先深度克隆数据，</span></span><br><span class="line"><span class="comment">// 然后删除可能包含敏感信息的字段（如密码、令牌），最后返回过滤后的安全数据，</span></span><br><span class="line"><span class="comment">// 并在控制台输出，确保敏感信息不会意外泄露。</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">safeLog</span> = (<span class="params">data</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> filtered = _.<span class="title function_">cloneDeep</span>(data);</span><br><span class="line">  <span class="keyword">delete</span> filtered.<span class="property">password</span>;</span><br><span class="line">  <span class="keyword">delete</span> filtered.<span class="property">token</span>;</span><br><span class="line">  <span class="keyword">return</span> filtered;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;用户数据:&#x27;</span>, <span class="title function_">safeLog</span>(userData));</span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p><strong>注意</strong>：所有调试代码应在开发环境使用，生产环境需通过构建工具自动移除。 </p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Dou ChangYou
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://kfufys.github.io/posts/b66155b1.html" title="Console 调试技巧">https://kfufys.github.io/posts/b66155b1.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="https://kfufys.github.io/tags/Console/" rel="tag"><i class="fa fa-tag"></i> Console</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="https://kfufys.github.io/posts/c5860ba2.html" rel="prev" title="JavaScript 简写技巧">
+                  <i class="fa fa-angle-left"></i> JavaScript 简写技巧
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2024 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heartbeat"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Dou ChangYou</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">89k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:21</span>
+  </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("11/16/2024 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous"></script>
+<script src="https://kfufys.github.io/js/comments.js"></script><script src="https://kfufys.github.io/js/utils.js"></script><script src="https://kfufys.github.io/js/motion.js"></script><script src="https://kfufys.github.io/js/sidebar.js"></script><script src="https://kfufys.github.io/js/next-boot.js"></script><script src="https://kfufys.github.io/js/bookmark.js"></script><script src="https://kfufys.github.io/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://kfufys.github.io/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.min.js","integrity":"sha256-G8ouPAnw4zzMbnAenHnVz6h9XpKbNdOkrqTh7AadyHs="}}</script>
+  <script src="https://kfufys.github.io/js/third-party/tags/mermaid.js"></script>
+
+
+  <script src="https://kfufys.github.io/js/third-party/fancybox.js"></script>
+
+
+
+  
+
+
+
+
+<!-- 页面点击小红心 -->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>

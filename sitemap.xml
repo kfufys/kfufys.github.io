@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kfufys.github.io/posts/b66155b1.html</loc>
+    
+    <lastmod>2025-02-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kfufys.github.io/posts/c5860ba2.html</loc>
     
     <lastmod>2025-02-17</lastmod>
@@ -155,6 +164,13 @@
 
   
   <url>
+    <loc>https://kfufys.github.io/tags/Console/</loc>
+    <lastmod>2025-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://kfufys.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-02-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -297,6 +313,13 @@
 
   
   <url>
+    <loc>https://kfufys.github.io/categories/Console/</loc>
+    <lastmod>2025-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://kfufys.github.io/categories/Themes-%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2025-02-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -312,6 +335,13 @@
   
   <url>
     <loc>https://kfufys.github.io/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</loc>
+    <lastmod>2025-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/categories/Console/JavaScript/</loc>
     <lastmod>2025-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
