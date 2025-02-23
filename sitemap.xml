@@ -164,6 +164,20 @@
 
   
   <url>
+    <loc>https://kfufys.github.io/tags/Console/</loc>
+    <lastmod>2025-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/tags/JavaScript/</loc>
+    <lastmod>2025-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://kfufys.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -186,20 +200,6 @@
   
   <url>
     <loc>https://kfufys.github.io/tags/Blog-Themes/</loc>
-    <lastmod>2025-02-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kfufys.github.io/tags/Console/</loc>
-    <lastmod>2025-02-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kfufys.github.io/tags/JavaScript/</loc>
     <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -313,13 +313,6 @@
 
   
   <url>
-    <loc>https://kfufys.github.io/categories/Themes-%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2025-02-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kfufys.github.io/categories/Console/</loc>
     <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -327,7 +320,7 @@
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/categories/JavaScript/</loc>
+    <loc>https://kfufys.github.io/categories/Themes-%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -348,7 +341,7 @@
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/categories/%E7%BD%91%E5%B7%A5/</loc>
+    <loc>https://kfufys.github.io/categories/JavaScript/</loc>
     <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -356,6 +349,13 @@
   
   <url>
     <loc>https://kfufys.github.io/categories/Markdown/</loc>
+    <lastmod>2025-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/categories/%E7%BD%91%E5%B7%A5/</loc>
     <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
