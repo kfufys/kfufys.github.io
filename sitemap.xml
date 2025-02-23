@@ -164,6 +164,20 @@
 
   
   <url>
+    <loc>https://kfufys.github.io/tags/Console/</loc>
+    <lastmod>2025-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/tags/JavaScript/</loc>
+    <lastmod>2025-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://kfufys.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -186,20 +200,6 @@
   
   <url>
     <loc>https://kfufys.github.io/tags/Blog-Themes/</loc>
-    <lastmod>2025-02-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kfufys.github.io/tags/Console/</loc>
-    <lastmod>2025-02-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kfufys.github.io/tags/JavaScript/</loc>
     <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -269,20 +269,6 @@
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/tags/about/</loc>
-    <lastmod>2025-02-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kfufys.github.io/tags/%E5%85%B3%E4%BA%8E%E6%88%91/</loc>
-    <lastmod>2025-02-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kfufys.github.io/tags/website/</loc>
     <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -291,6 +277,20 @@
   
   <url>
     <loc>https://kfufys.github.io/tags/log/</loc>
+    <lastmod>2025-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/tags/about/</loc>
+    <lastmod>2025-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/tags/%E5%85%B3%E4%BA%8E%E6%88%91/</loc>
     <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -313,14 +313,14 @@
 
   
   <url>
-    <loc>https://kfufys.github.io/categories/Themes-%E9%85%8D%E7%BD%AE/</loc>
+    <loc>https://kfufys.github.io/categories/Console/</loc>
     <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/categories/Console/</loc>
+    <loc>https://kfufys.github.io/categories/Themes-%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -369,14 +369,14 @@
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/categories/About/</loc>
+    <loc>https://kfufys.github.io/categories/%E7%AB%99%E7%82%B9%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/categories/%E7%AB%99%E7%82%B9%E6%97%A5%E5%BF%97/</loc>
+    <loc>https://kfufys.github.io/categories/About/</loc>
     <lastmod>2025-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
