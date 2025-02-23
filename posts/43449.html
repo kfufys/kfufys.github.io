@@ -37,6 +37,7 @@
 <meta property="og:site_name" content="Smart Space">
 <meta property="og:description" content="本文是一篇 Java 数据结构期末复习的 DemoCode，包含了多个数据结构算法的实现及测试...">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kfufys.github.io/posts/43449/1.png">
 <meta property="og:image" content="https://kfufys.github.io/posts/43449/demo01.png">
 <meta property="og:image" content="https://kfufys.github.io/posts/43449/demo02.png">
 <meta property="og:image" content="https://kfufys.github.io/posts/43449/demo03.png">
@@ -49,7 +50,7 @@
 <meta property="article:tag" content="期末复习">
 <meta property="article:tag" content="DemoCode">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://kfufys.github.io/posts/43449/demo01.png">
+<meta name="twitter:image" content="https://kfufys.github.io/posts/43449/1.png">
 
 
 <link rel="canonical" href="https://kfufys.github.io/posts/43449.html">
@@ -178,12 +179,12 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="https://kfufys.github.io/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="https://kfufys.github.io/tags/">
-        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -571,7 +572,9 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="题目一：顺序表-删除x-y间值"><a href="#题目一：顺序表-删除x-y间值" class="headerlink" title="题目一：顺序表_删除x~y间值"></a><strong>题目一：顺序表_删除<code>x~y</code>间值</strong></h3><p><strong>问题描述：已知线性表采用顺序存储结构<code>SeqList</code>，编写算法删除值在<code>x~y</code>之间的所有结点：</strong></p>
+    <div class="post-body" itemprop="articleBody"><img src="https://kfufys.github.io/posts/43449/1.png" alt="head-img" width="1200">
+
+<h3 id="题目一：顺序表-删除x-y间值"><a href="#题目一：顺序表-删除x-y间值" class="headerlink" title="题目一：顺序表_删除x~y间值"></a><strong>题目一：顺序表_删除<code>x~y</code>间值</strong></h3><p><strong>问题描述：已知线性表采用顺序存储结构<code>SeqList</code>，编写算法删除值在<code>x~y</code>之间的所有结点：</strong></p>
 <p><code>SeqDelTest.java</code></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo01;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@project</span>: JavaDemo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> kfufys</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2024/12/27 20:07</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 测试删除指定范围内的元素</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span>: 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SeqDelTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建一个容量为10的顺序表</span></span><br><span class="line">        top.kfufys.demo01.<span class="type">SeqList</span> <span class="variable">list</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SeqList</span>(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 添加测试数据</span></span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        list.add(<span class="number">5</span>);</span><br><span class="line">        list.add(<span class="number">10</span>);</span><br><span class="line">        list.add(<span class="number">15</span>);</span><br><span class="line">        list.add(<span class="number">20</span>);</span><br><span class="line">        list.add(<span class="number">25</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印原始列表</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Original list: &quot;</span> + list);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 定义删除范围</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 调用方法删除范围内的元素</span></span><br><span class="line">        list.removeInRange(x, y);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印删除元素后的列表</span></span><br><span class="line">        System.out.println(<span class="string">&quot;List after removing elements in range &quot;</span> + x + <span class="string">&quot; to &quot;</span> + y + <span class="string">&quot;: &quot;</span> + list);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
