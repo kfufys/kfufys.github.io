@@ -37,6 +37,7 @@
 <meta property="og:site_name" content="Smart Space">
 <meta property="og:description" content="《终极 Nginx 配置指南》详解 nginx 配置。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kfufys.github.io/posts/59687/nginx-logo.png">
 <meta property="og:image" content="https://kfufys.github.io/posts/59687/1.png">
 <meta property="og:image" content="https://kfufys.github.io/posts/59687/2.png">
 <meta property="og:image" content="https://kfufys.github.io/posts/59687/3.png">
@@ -55,7 +56,7 @@
 <meta property="article:tag" content="教程">
 <meta property="article:tag" content="网站部署">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://kfufys.github.io/posts/59687/1.png">
+<meta name="twitter:image" content="https://kfufys.github.io/posts/59687/nginx-logo.png">
 
 
 <link rel="canonical" href="https://kfufys.github.io/posts/59687.html">
@@ -577,7 +578,11 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p>对于自己上线项目的前端来说，nginx也是必须要了解和熟悉的，查了很多的nginx文章，看着写的都很详细，但是却没有了整体的概念。这里就重新梳理一遍，也理清思路。</p>
+    <div class="post-body" itemprop="articleBody"><img src="https://kfufys.github.io/posts/59687/nginx-logo.png" alt="head-img" width="1200">
+
+
+
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p>对于自己上线项目的前端来说，nginx也是必须要了解和熟悉的，查了很多的nginx文章，看着写的都很详细，但是却没有了整体的概念。这里就重新梳理一遍，也理清思路。</p>
 <p>我们在安装nginx之后，会自动生成很多的文件，但是nginx.conf这个文件是我们的核心，如何去正确的修改和优化它是nginx的核心。</p>
 <p>首先我们可以先看下原本的配置，你会觉得无所适从，因为感觉这个鬼东西也太多了吧。而且感觉根本就不理解，也不知道该怎么写。下面，就一步一步的教你如何入门到熟悉</p>
 <h3 id="一、nginx-conf原本配置到解释"><a href="#一、nginx-conf原本配置到解释" class="headerlink" title="一、nginx.conf原本配置到解释"></a><strong>一、<code>nginx.conf</code>原本配置到解释</strong></h3><p>看到这个118行是不是觉得有点害怕</p>

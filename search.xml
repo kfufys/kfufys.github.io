@@ -1,82 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Console 调试技巧</title>
-    <url>https://kfufys.github.io/posts/b66155b1.html</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>说到 <code>console</code>，很多人的第一反应肯定是 <code>console.log</code>，它既简单又直接！然而，在处理复杂问题时，这种方式往往效率低下。本文分享 20 个 <code>console</code> 的调试小技巧，帮您更快速地找出并解决问题。</p>
-<h3 id="1-样式轰炸"><a href="#1-样式轰炸" class="headerlink" title="1. 样式轰炸"></a>1. 样式轰炸</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这段代码使用了 console.log 的样式功能，通过传入特定的 CSS 样式字符串，</span></span><br><span class="line"><span class="comment">// 可以为输出的文本添加自定义样式，达到醒目的效果，这里创建了一个带有渐变背景、</span></span><br><span class="line"><span class="comment">// 白色文字、圆角和内边距的“VIP调试模式”样式，以及一个后续的灰色文字样式用于显示版本号。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(</span><br><span class="line">  <span class="string">&#x27;%cVIP调试模式%c v2.0&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;background:linear-gradient(45deg,#ff6b6b,#4ecdc4);color:white;padding:4px 8px;border-radius:3px;&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;color:#666;margin-left:8px;&#x27;</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="2-动态模板"><a href="#2-动态模板" class="headerlink" title="2. 动态模板"></a>2. 动态模板</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义一个包含用户信息的对象，然后利用模板字符串结合当前时间，</span></span><br><span class="line"><span class="comment">// 在控制台输出一条包含用户名称、等级以及执行操作信息的日志，方便跟踪用户行为及操作时间。</span></span><br><span class="line"><span class="keyword">const</span> user = &#123; <span class="attr">name</span>: <span class="string">&#x27;Alice&#x27;</span>, <span class="attr">level</span>: <span class="string">&#x27;VIP&#x27;</span> &#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`[<span class="subst">$&#123;<span class="keyword">new</span> <span class="built_in">Date</span>().toISOString()&#125;</span>] <span class="subst">$&#123;user.name&#125;</span> (<span class="subst">$&#123;user.level&#125;</span>) 执行了支付操作`</span>);</span><br><span class="line"><span class="comment">// 输出示例：[2023-12-25T09:30:00Z] Alice (VIP) 执行了支付操作</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="3-树形结构解析"><a href="#3-树形结构解析" class="headerlink" title="3. 树形结构解析"></a>3. 树形结构解析</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 以一种结构化、易读的方式在控制台输出用户数据树，使用特定样式突出显示树的标题，</span></span><br><span class="line"><span class="comment">// 数据树包含用户 ID、个人资料（姓名、地址，地址又细分城市和区）以及订单列表等信息，方便查看数据层级关系。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c▸ 用户数据树&#x27;</span>, <span class="string">&#x27;color:#48bb78;font-weight:bold&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">id</span>: <span class="number">1001</span>,</span><br><span class="line">  <span class="attr">profile</span>: &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;Bob&#x27;</span>,</span><br><span class="line">    <span class="attr">address</span>: &#123;</span><br><span class="line">      <span class="attr">city</span>: <span class="string">&#x27;上海&#x27;</span>,</span><br><span class="line">      <span class="attr">district</span>: <span class="string">&#x27;浦东&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">orders</span>: [<span class="string">&#x27;#2023-1001&#x27;</span>, <span class="string">&#x27;#2023-1002&#x27;</span>]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="4-表格魔法升级"><a href="#4-表格魔法升级" class="headerlink" title="4. 表格魔法升级"></a>4. 表格魔法升级</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 对于加密货币数据数组，先对每个数据项进行处理，添加一个表示价格趋势的字段（根据 24 小时价格变化判断上升或下降），</span></span><br><span class="line"><span class="comment">// 然后使用 console.table 将处理后的数据以表格形式输出，使数据对比更加直观清晰。</span></span><br><span class="line"><span class="keyword">const</span> cryptoData = [</span><br><span class="line">  &#123; <span class="attr">coin</span>: <span class="string">&#x27;BTC&#x27;</span>, <span class="attr">price</span>: <span class="number">42000</span>, <span class="attr">change24h</span>: <span class="string">&#x27;+5.2%&#x27;</span>, <span class="attr">volatility</span>: <span class="string">&#x27;high&#x27;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">coin</span>: <span class="string">&#x27;ETH&#x27;</span>, <span class="attr">price</span>: <span class="number">2300</span>, <span class="attr">change24h</span>: <span class="string">&#x27;-1.8%&#x27;</span>, <span class="attr">volatility</span>: <span class="string">&#x27;medium&#x27;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">coin</span>: <span class="string">&#x27;SOL&#x27;</span>, <span class="attr">price</span>: <span class="number">98</span>, <span class="attr">change24h</span>: <span class="string">&#x27;+12.6%&#x27;</span>, <span class="attr">volatility</span>: <span class="string">&#x27;high&#x27;</span> &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">table</span>(cryptoData.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> (&#123;</span><br><span class="line">...item,</span><br><span class="line">  <span class="string">&#x27;价格趋势&#x27;</span>: item.<span class="property">change24h</span>.<span class="title function_">startsWith</span>(<span class="string">&#x27;+&#x27;</span>)? <span class="string">&#x27;↑&#x27;</span> : <span class="string">&#x27;↓&#x27;</span></span><br><span class="line">&#125;)));</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="5-生命周期标记"><a href="#5-生命周期标记" class="headerlink" title="5. 生命周期标记"></a>5. 生命周期标记</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用 console.groupCollapsed 和 console.groupEnd 来创建一个可折叠的分组，</span></span><br><span class="line"><span class="comment">// 用于标记 API 请求流程的不同阶段，如请求发起、响应接收、数据处理等，每个阶段用不同颜色突出显示关键信息，</span></span><br><span class="line"><span class="comment">// 方便在控制台快速了解整个请求生命周期的状态。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">groupCollapsed</span>(<span class="string">&#x27;%c🔄 API请求流程追踪&#x27;</span>, <span class="string">&#x27;color:#4299e1&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c▶️ 请求发起&#x27;</span>, <span class="string">&#x27;color:#48bb78&#x27;</span>, &#123; <span class="attr">url</span>: <span class="string">&#x27;/api/users&#x27;</span>, <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span> &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c⏳ 响应接收&#x27;</span>, <span class="string">&#x27;color:#ed8936&#x27;</span>, &#123; <span class="attr">status</span>: <span class="number">200</span>, <span class="attr">time</span>: <span class="string">&#x27;320ms&#x27;</span> &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c✅ 数据处理&#x27;</span>, <span class="string">&#x27;color:#48bb78&#x27;</span>, &#123; <span class="attr">processedItems</span>: <span class="number">15</span> &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">groupEnd</span>();</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="6-调用栈快照"><a href="#6-调用栈快照" class="headerlink" title="6. 调用栈快照"></a>6. 调用栈快照</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在函数内部使用 console.trace，当执行到这一行时，会输出完整的调用栈信息，</span></span><br><span class="line"><span class="comment">// 显示函数是如何被调用的，经过了哪些路径，对于排查函数调用逻辑和定位问题根源非常有用。</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">processOrder</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">trace</span>(<span class="string">&#x27;订单处理流程追踪&#x27;</span>);</span><br><span class="line">  <span class="comment">// 其他处理逻辑</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 输出完整的调用栈信息</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="7-内存监控"><a href="#7-内存监控" class="headerlink" title="7. 内存监控"></a>7. 内存监控</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 首先获取初始的 JavaScript 堆内存使用量，执行一些内存密集型操作后，</span></span><br><span class="line"><span class="comment">// 通过计算前后内存使用量的差值并转换为 KB 单位，输出内存使用量的变化情况，以便监控内存消耗是否合理。</span></span><br><span class="line"><span class="keyword">const</span> initialMemory = performance.<span class="property">memory</span>.<span class="property">usedJSHeapSize</span>;</span><br><span class="line"><span class="comment">// 执行内存密集型操作</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;内存使用量变化:&#x27;</span>, </span><br><span class="line">  (performance.<span class="property">memory</span>.<span class="property">usedJSHeapSize</span> - initialMemory) / <span class="number">1024</span> + <span class="string">&#x27; KB&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="8-复合性能测试"><a href="#8-复合性能测试" class="headerlink" title="8. 复合性能测试"></a>8. 复合性能测试</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用 console.time 和 console.timeEnd 来测量一段包含多个异步操作（如 Promise.all 中的多个异步任务）的复合操作的执行时间，</span></span><br><span class="line"><span class="comment">// 同时使用 console.timeLog 在操作的关键阶段记录时间点，方便了解各个阶段的耗时情况，精准定位性能瓶颈。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">time</span>(<span class="string">&#x27;复合操作&#x27;</span>);</span><br><span class="line"><span class="keyword">await</span> <span class="title class_">Promise</span>.<span class="title function_">all</span>([</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">timeLog</span>(<span class="string">&#x27;复合操作&#x27;</span>, <span class="string">&#x27;阶段1完成&#x27;</span>),</span><br><span class="line">  <span class="title function_">fetchData</span>(),</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">timeLog</span>(<span class="string">&#x27;复合操作&#x27;</span>, <span class="string">&#x27;阶段2完成&#x27;</span>),</span><br><span class="line">  <span class="title function_">processData</span>()</span><br><span class="line">]);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">timeEnd</span>(<span class="string">&#x27;复合操作&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="9-条件断言"><a href="#9-条件断言" class="headerlink" title="9. 条件断言"></a>9. 条件断言</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用 console.assert 进行条件断言，如果条件不满足（这里是用户年龄大于 18 岁），</span></span><br><span class="line"><span class="comment">// 则按照指定的红色醒目的样式输出错误信息，包含期望年龄和实际年龄，用于快速验证数据的合法性。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">assert</span>(</span><br><span class="line">  user.<span class="property">age</span> &gt; <span class="number">18</span>, </span><br><span class="line">  <span class="string">&#x27;%c年龄验证失败&#x27;</span>, </span><br><span class="line">  <span class="string">&#x27;color:red;font-weight:bold&#x27;</span>,</span><br><span class="line">  &#123; <span class="attr">requiredAge</span>: <span class="number">18</span>, <span class="attr">actualAge</span>: user.<span class="property">age</span> &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="10-环境感知日志"><a href="#10-环境感知日志" class="headerlink" title="10. 环境感知日志"></a>10. 环境感知日志</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 根据当前 Node.js 环境变量（NODE_ENV）来决定是否输出日志，</span></span><br><span class="line"><span class="comment">// 在开发环境下，将 console.log 绑定并正常输出日志，而在生产环境下，</span></span><br><span class="line"><span class="comment">// 提供一个空函数替代，实现自动静默，避免在生产环境输出不必要的调试信息。</span></span><br><span class="line"><span class="keyword">const</span> debug = &#123;</span><br><span class="line">  <span class="attr">log</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&#x27;development&#x27;</span> </span><br><span class="line">  ? <span class="variable language_">console</span>.<span class="property">log</span>.<span class="title function_">bind</span>(<span class="variable language_">console</span>) </span><br><span class="line">    : <span class="function">() =&gt;</span> &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">debug.<span class="title function_">log</span>(<span class="string">&#x27;开发环境专属日志&#x27;</span>); <span class="comment">// 生产环境自动静默</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="11-数据快照对比"><a href="#11-数据快照对比" class="headerlink" title="11. 数据快照对比"></a>11. 数据快照对比</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 先将状态数据序列化为字符串保存起来，在状态修改后，通过自定义的 diff 函数（假设已定义）对比修改前后的数据，</span></span><br><span class="line"><span class="comment">// 并在控制台输出状态变更差异，有助于跟踪数据的变化情况，排查因数据变更引发的问题。</span></span><br><span class="line"><span class="keyword">const</span> before = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(state);</span><br><span class="line"><span class="comment">// 状态修改操作</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;状态变更差异:&#x27;</span>, <span class="title function_">diff</span>(<span class="title class_">JSON</span>.<span class="title function_">parse</span>(before), state));</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="12-日志分类过滤"><a href="#12-日志分类过滤" class="headerlink" title="12. 日志分类过滤"></a>12. 日志分类过滤</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建一个日志记录器对象，包含不同分类的日志方法，如网络、安全、支付等，</span></span><br><span class="line"><span class="comment">// 每个方法在调用 console.log 时添加对应的分类前缀，方便在控制台根据分类筛选和查看日志，</span></span><br><span class="line"><span class="comment">// 这里演示了记录支付请求发起的日志，包含金额信息。</span></span><br><span class="line"><span class="keyword">const</span> logger = &#123;</span><br><span class="line">  <span class="attr">network</span>: <span class="function">(<span class="params">...args</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[NET]&#x27;</span>,...args),</span><br><span class="line">  <span class="attr">security</span>: <span class="function">(<span class="params">...args</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[SEC]&#x27;</span>,...args),</span><br><span class="line">  <span class="attr">payment</span>: <span class="function">(<span class="params">...args</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[PAY]&#x27;</span>,...args)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">logger.<span class="title function_">payment</span>(<span class="string">&#x27;支付请求发起&#x27;</span>, &#123; <span class="attr">amount</span>: <span class="number">99.9</span> &#125;);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="13-交互式调试"><a href="#13-交互式调试" class="headerlink" title="13. 交互式调试"></a>13. 交互式调试</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在控制台输出一个包含加密数据和检查函数的对象，用户点击该输出信息时，</span></span><br><span class="line"><span class="comment">// 可以通过调用检查函数（这里是解密数据函数 decryptData）来查看详细信息，实现交互式调试体验。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;点击查看详情：&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">data</span>: encryptedData,</span><br><span class="line">  <span class="attr">inspect</span>: <span class="function">() =&gt;</span> <span class="title function_">decryptData</span>(encryptedData)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="14-日志持久化"><a href="#14-日志持久化" class="headerlink" title="14. 日志持久化"></a>14. 日志持久化</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 保存原始的 console.log 方法，并重写 console.log，</span></span><br><span class="line"><span class="comment">// 在新的 console.log 中，先执行原始的输出操作，再将日志信息发送到日志服务器（假设 sendToLogServer 函数已实现），</span></span><br><span class="line"><span class="comment">// 确保日志不仅在控制台可见，还能持久化存储以供后续分析。</span></span><br><span class="line"><span class="keyword">const</span> originalLog = <span class="variable language_">console</span>.<span class="property">log</span>.<span class="title function_">bind</span>(<span class="variable language_">console</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="property">log</span> = <span class="function">(<span class="params">...args</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">originalLog</span>(...args);</span><br><span class="line">  <span class="title function_">sendToLogServer</span>(args); <span class="comment">// 发送到日志服务器</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="15-性能热力图"><a href="#15-性能热力图" class="headerlink" title="15. 性能热力图"></a>15. 性能热力图</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用 console.timeStamp 在关键的性能节点（如渲染开始、DOM 更新）记录时间戳，</span></span><br><span class="line"><span class="comment">// 之后可以在浏览器的 Performance 面板查看这些时间戳，以可视化的方式分析页面性能瓶颈，优化渲染流程。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">timeStamp</span>(<span class="string">&#x27;渲染开始&#x27;</span>);</span><br><span class="line"><span class="comment">// 渲染逻辑</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">timeStamp</span>(<span class="string">&#x27;DOM更新&#x27;</span>);</span><br><span class="line"><span class="comment">// 更新逻辑</span></span><br><span class="line"><span class="comment">// 在浏览器Performance面板查看时间戳</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="16-内存泄漏检测"><a href="#16-内存泄漏检测" class="headerlink" title="16. 内存泄漏检测"></a>16. 内存泄漏检测</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建一个数组来存储组件实例的引用，在组件构造函数中，每创建一个实例就将其添加到数组中，</span></span><br><span class="line"><span class="comment">// 并通过 console.count 记录实例创建的次数，同时定期检查数组中实例的数量，</span></span><br><span class="line"><span class="comment">// 如果数量持续增加，可能存在内存泄漏问题，方便及时排查。</span></span><br><span class="line"><span class="keyword">let</span> instances = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyComponent</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    instances.<span class="title function_">push</span>(<span class="variable language_">this</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">count</span>(<span class="string">&#x27;实例创建&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定期检查实例数量</span></span><br><span class="line"><span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;存活实例:&#x27;</span>, instances.<span class="property">length</span>), <span class="number">5000</span>);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="17-源码映射调试"><a href="#17-源码映射调试" class="headerlink" title="17. 源码映射调试"></a>17. 源码映射调试</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在 webpack 配置中启用 source-map，这使得在调试时能够将打包后的代码映射回原始的源代码，</span></span><br><span class="line"><span class="comment">// 方便在浏览器调试工具或 IDE 中直接查看和调试原始代码，而不是混淆后的代码，提高调试效率。</span></span><br><span class="line"><span class="comment">// 配合webpack配置</span></span><br><span class="line"><span class="attr">devtool</span>: <span class="string">&#x27;source-map&#x27;</span>,</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="18-调试器集成"><a href="#18-调试器集成" class="headerlink" title="18. 调试器集成"></a>18. 调试器集成</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在函数开头使用 console.log 输出进入函数的信息，然后使用 debugger 语句，</span></span><br><span class="line"><span class="comment">// 当代码执行到这里时，会暂停执行，等待调试器（如浏览器开发者工具或 IDE 调试功能）连接，</span></span><br><span class="line"><span class="comment">// 方便深入调试函数内部复杂的运算逻辑。</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">complexCalculation</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;进入计算函数&#x27;</span>);</span><br><span class="line">  <span class="keyword">debugger</span>; <span class="comment">// 配合IDE断点使用</span></span><br><span class="line">  <span class="comment">// 复杂运算</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="19-日志分级控制"><a href="#19-日志分级控制" class="headerlink" title="19. 日志分级控制"></a>19. 日志分级控制</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义一个日志级别对象，包含调试、信息、警告、错误等级别，</span></span><br><span class="line"><span class="comment">// 然后创建一个 Logger 类，在构造函数中接收一个日志级别参数，</span></span><br><span class="line"><span class="comment">// 类中的 debug 方法根据当前设置的级别决定是否输出调试信息，实现灵活的日志分级管理。</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">LOG_LEVEL</span> = &#123;</span><br><span class="line">  <span class="attr">DEBUG</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="attr">INFO</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">WARN</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">ERROR</span>: <span class="number">3</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Logger</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">level = LOG_LEVEL.INFO</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">level</span> = level;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">debug</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">level</span> &lt;= <span class="variable constant_">LOG_LEVEL</span>.<span class="property">DEBUG</span>) <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[DEBUG]&#x27;</span>,...args);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="20-敏感信息过滤"><a href="#20-敏感信息过滤" class="headerlink" title="20. 敏感信息过滤"></a>20. 敏感信息过滤</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义一个安全日志函数，它接收数据对象，先深度克隆数据，</span></span><br><span class="line"><span class="comment">// 然后删除可能包含敏感信息的字段（如密码、令牌），最后返回过滤后的安全数据，</span></span><br><span class="line"><span class="comment">// 并在控制台输出，确保敏感信息不会意外泄露。</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">safeLog</span> = (<span class="params">data</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> filtered = _.<span class="title function_">cloneDeep</span>(data);</span><br><span class="line">  <span class="keyword">delete</span> filtered.<span class="property">password</span>;</span><br><span class="line">  <span class="keyword">delete</span> filtered.<span class="property">token</span>;</span><br><span class="line">  <span class="keyword">return</span> filtered;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;用户数据:&#x27;</span>, <span class="title function_">safeLog</span>(userData));</span><br></pre></td></tr></table></figure>
-
-
-<blockquote>
-<p><strong>注意</strong>：所有调试代码应在开发环境使用，生产环境需通过构建工具自动移除。 </p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Console</category>
-      </categories>
-      <tags>
-        <tag>Console</tag>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo-Next 主题个性化配置教程</title>
     <url>https://kfufys.github.io/posts/9aae07a1.html</url>
     <content><![CDATA[<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>因为本人是比较喜欢简约风格的，所以整个网站UI界面都是<code>简约风格</code>的，一个好的博客，应该让人一眼就能看清楚技术分类，文章也应该就是文章，让人能够最好的阅读你的博客，这才是我们应该做的，所以我的配置教程满满干货，没有太多花里胡哨的东西。接下来跟我一起来做吧：</p>
@@ -358,6 +282,268 @@
       </tags>
   </entry>
   <entry>
+    <title>Console 调试技巧</title>
+    <url>https://kfufys.github.io/posts/b66155b1.html</url>
+    <content><![CDATA[<img src="https://kfufys.github.io/posts/b66155b1/1.jpg" alt="head-img" width="1200">
+
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>说到 <code>console</code>，很多人的第一反应肯定是 <code>console.log</code>，它既简单又直接！然而，在处理复杂问题时，这种方式往往效率低下。本文分享 20 个 <code>console</code> 的调试小技巧，帮您更快速地找出并解决问题。</p>
+<h3 id="1-样式轰炸"><a href="#1-样式轰炸" class="headerlink" title="1. 样式轰炸"></a>1. 样式轰炸</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这段代码使用了 console.log 的样式功能，通过传入特定的 CSS 样式字符串，</span></span><br><span class="line"><span class="comment">// 可以为输出的文本添加自定义样式，达到醒目的效果，这里创建了一个带有渐变背景、</span></span><br><span class="line"><span class="comment">// 白色文字、圆角和内边距的“VIP调试模式”样式，以及一个后续的灰色文字样式用于显示版本号。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(</span><br><span class="line">  <span class="string">&#x27;%cVIP调试模式%c v2.0&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;background:linear-gradient(45deg,#ff6b6b,#4ecdc4);color:white;padding:4px 8px;border-radius:3px;&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;color:#666;margin-left:8px;&#x27;</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="2-动态模板"><a href="#2-动态模板" class="headerlink" title="2. 动态模板"></a>2. 动态模板</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义一个包含用户信息的对象，然后利用模板字符串结合当前时间，</span></span><br><span class="line"><span class="comment">// 在控制台输出一条包含用户名称、等级以及执行操作信息的日志，方便跟踪用户行为及操作时间。</span></span><br><span class="line"><span class="keyword">const</span> user = &#123; <span class="attr">name</span>: <span class="string">&#x27;Alice&#x27;</span>, <span class="attr">level</span>: <span class="string">&#x27;VIP&#x27;</span> &#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`[<span class="subst">$&#123;<span class="keyword">new</span> <span class="built_in">Date</span>().toISOString()&#125;</span>] <span class="subst">$&#123;user.name&#125;</span> (<span class="subst">$&#123;user.level&#125;</span>) 执行了支付操作`</span>);</span><br><span class="line"><span class="comment">// 输出示例：[2023-12-25T09:30:00Z] Alice (VIP) 执行了支付操作</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="3-树形结构解析"><a href="#3-树形结构解析" class="headerlink" title="3. 树形结构解析"></a>3. 树形结构解析</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 以一种结构化、易读的方式在控制台输出用户数据树，使用特定样式突出显示树的标题，</span></span><br><span class="line"><span class="comment">// 数据树包含用户 ID、个人资料（姓名、地址，地址又细分城市和区）以及订单列表等信息，方便查看数据层级关系。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c▸ 用户数据树&#x27;</span>, <span class="string">&#x27;color:#48bb78;font-weight:bold&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">id</span>: <span class="number">1001</span>,</span><br><span class="line">  <span class="attr">profile</span>: &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;Bob&#x27;</span>,</span><br><span class="line">    <span class="attr">address</span>: &#123;</span><br><span class="line">      <span class="attr">city</span>: <span class="string">&#x27;上海&#x27;</span>,</span><br><span class="line">      <span class="attr">district</span>: <span class="string">&#x27;浦东&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">orders</span>: [<span class="string">&#x27;#2023-1001&#x27;</span>, <span class="string">&#x27;#2023-1002&#x27;</span>]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="4-表格魔法升级"><a href="#4-表格魔法升级" class="headerlink" title="4. 表格魔法升级"></a>4. 表格魔法升级</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 对于加密货币数据数组，先对每个数据项进行处理，添加一个表示价格趋势的字段（根据 24 小时价格变化判断上升或下降），</span></span><br><span class="line"><span class="comment">// 然后使用 console.table 将处理后的数据以表格形式输出，使数据对比更加直观清晰。</span></span><br><span class="line"><span class="keyword">const</span> cryptoData = [</span><br><span class="line">  &#123; <span class="attr">coin</span>: <span class="string">&#x27;BTC&#x27;</span>, <span class="attr">price</span>: <span class="number">42000</span>, <span class="attr">change24h</span>: <span class="string">&#x27;+5.2%&#x27;</span>, <span class="attr">volatility</span>: <span class="string">&#x27;high&#x27;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">coin</span>: <span class="string">&#x27;ETH&#x27;</span>, <span class="attr">price</span>: <span class="number">2300</span>, <span class="attr">change24h</span>: <span class="string">&#x27;-1.8%&#x27;</span>, <span class="attr">volatility</span>: <span class="string">&#x27;medium&#x27;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">coin</span>: <span class="string">&#x27;SOL&#x27;</span>, <span class="attr">price</span>: <span class="number">98</span>, <span class="attr">change24h</span>: <span class="string">&#x27;+12.6%&#x27;</span>, <span class="attr">volatility</span>: <span class="string">&#x27;high&#x27;</span> &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">table</span>(cryptoData.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> (&#123;</span><br><span class="line">...item,</span><br><span class="line">  <span class="string">&#x27;价格趋势&#x27;</span>: item.<span class="property">change24h</span>.<span class="title function_">startsWith</span>(<span class="string">&#x27;+&#x27;</span>)? <span class="string">&#x27;↑&#x27;</span> : <span class="string">&#x27;↓&#x27;</span></span><br><span class="line">&#125;)));</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="5-生命周期标记"><a href="#5-生命周期标记" class="headerlink" title="5. 生命周期标记"></a>5. 生命周期标记</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用 console.groupCollapsed 和 console.groupEnd 来创建一个可折叠的分组，</span></span><br><span class="line"><span class="comment">// 用于标记 API 请求流程的不同阶段，如请求发起、响应接收、数据处理等，每个阶段用不同颜色突出显示关键信息，</span></span><br><span class="line"><span class="comment">// 方便在控制台快速了解整个请求生命周期的状态。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">groupCollapsed</span>(<span class="string">&#x27;%c🔄 API请求流程追踪&#x27;</span>, <span class="string">&#x27;color:#4299e1&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c▶️ 请求发起&#x27;</span>, <span class="string">&#x27;color:#48bb78&#x27;</span>, &#123; <span class="attr">url</span>: <span class="string">&#x27;/api/users&#x27;</span>, <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span> &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c⏳ 响应接收&#x27;</span>, <span class="string">&#x27;color:#ed8936&#x27;</span>, &#123; <span class="attr">status</span>: <span class="number">200</span>, <span class="attr">time</span>: <span class="string">&#x27;320ms&#x27;</span> &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c✅ 数据处理&#x27;</span>, <span class="string">&#x27;color:#48bb78&#x27;</span>, &#123; <span class="attr">processedItems</span>: <span class="number">15</span> &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">groupEnd</span>();</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="6-调用栈快照"><a href="#6-调用栈快照" class="headerlink" title="6. 调用栈快照"></a>6. 调用栈快照</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在函数内部使用 console.trace，当执行到这一行时，会输出完整的调用栈信息，</span></span><br><span class="line"><span class="comment">// 显示函数是如何被调用的，经过了哪些路径，对于排查函数调用逻辑和定位问题根源非常有用。</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">processOrder</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">trace</span>(<span class="string">&#x27;订单处理流程追踪&#x27;</span>);</span><br><span class="line">  <span class="comment">// 其他处理逻辑</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 输出完整的调用栈信息</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="7-内存监控"><a href="#7-内存监控" class="headerlink" title="7. 内存监控"></a>7. 内存监控</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 首先获取初始的 JavaScript 堆内存使用量，执行一些内存密集型操作后，</span></span><br><span class="line"><span class="comment">// 通过计算前后内存使用量的差值并转换为 KB 单位，输出内存使用量的变化情况，以便监控内存消耗是否合理。</span></span><br><span class="line"><span class="keyword">const</span> initialMemory = performance.<span class="property">memory</span>.<span class="property">usedJSHeapSize</span>;</span><br><span class="line"><span class="comment">// 执行内存密集型操作</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;内存使用量变化:&#x27;</span>, </span><br><span class="line">  (performance.<span class="property">memory</span>.<span class="property">usedJSHeapSize</span> - initialMemory) / <span class="number">1024</span> + <span class="string">&#x27; KB&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="8-复合性能测试"><a href="#8-复合性能测试" class="headerlink" title="8. 复合性能测试"></a>8. 复合性能测试</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用 console.time 和 console.timeEnd 来测量一段包含多个异步操作（如 Promise.all 中的多个异步任务）的复合操作的执行时间，</span></span><br><span class="line"><span class="comment">// 同时使用 console.timeLog 在操作的关键阶段记录时间点，方便了解各个阶段的耗时情况，精准定位性能瓶颈。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">time</span>(<span class="string">&#x27;复合操作&#x27;</span>);</span><br><span class="line"><span class="keyword">await</span> <span class="title class_">Promise</span>.<span class="title function_">all</span>([</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">timeLog</span>(<span class="string">&#x27;复合操作&#x27;</span>, <span class="string">&#x27;阶段1完成&#x27;</span>),</span><br><span class="line">  <span class="title function_">fetchData</span>(),</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">timeLog</span>(<span class="string">&#x27;复合操作&#x27;</span>, <span class="string">&#x27;阶段2完成&#x27;</span>),</span><br><span class="line">  <span class="title function_">processData</span>()</span><br><span class="line">]);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">timeEnd</span>(<span class="string">&#x27;复合操作&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="9-条件断言"><a href="#9-条件断言" class="headerlink" title="9. 条件断言"></a>9. 条件断言</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用 console.assert 进行条件断言，如果条件不满足（这里是用户年龄大于 18 岁），</span></span><br><span class="line"><span class="comment">// 则按照指定的红色醒目的样式输出错误信息，包含期望年龄和实际年龄，用于快速验证数据的合法性。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">assert</span>(</span><br><span class="line">  user.<span class="property">age</span> &gt; <span class="number">18</span>, </span><br><span class="line">  <span class="string">&#x27;%c年龄验证失败&#x27;</span>, </span><br><span class="line">  <span class="string">&#x27;color:red;font-weight:bold&#x27;</span>,</span><br><span class="line">  &#123; <span class="attr">requiredAge</span>: <span class="number">18</span>, <span class="attr">actualAge</span>: user.<span class="property">age</span> &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="10-环境感知日志"><a href="#10-环境感知日志" class="headerlink" title="10. 环境感知日志"></a>10. 环境感知日志</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 根据当前 Node.js 环境变量（NODE_ENV）来决定是否输出日志，</span></span><br><span class="line"><span class="comment">// 在开发环境下，将 console.log 绑定并正常输出日志，而在生产环境下，</span></span><br><span class="line"><span class="comment">// 提供一个空函数替代，实现自动静默，避免在生产环境输出不必要的调试信息。</span></span><br><span class="line"><span class="keyword">const</span> debug = &#123;</span><br><span class="line">  <span class="attr">log</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&#x27;development&#x27;</span> </span><br><span class="line">  ? <span class="variable language_">console</span>.<span class="property">log</span>.<span class="title function_">bind</span>(<span class="variable language_">console</span>) </span><br><span class="line">    : <span class="function">() =&gt;</span> &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">debug.<span class="title function_">log</span>(<span class="string">&#x27;开发环境专属日志&#x27;</span>); <span class="comment">// 生产环境自动静默</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="11-数据快照对比"><a href="#11-数据快照对比" class="headerlink" title="11. 数据快照对比"></a>11. 数据快照对比</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 先将状态数据序列化为字符串保存起来，在状态修改后，通过自定义的 diff 函数（假设已定义）对比修改前后的数据，</span></span><br><span class="line"><span class="comment">// 并在控制台输出状态变更差异，有助于跟踪数据的变化情况，排查因数据变更引发的问题。</span></span><br><span class="line"><span class="keyword">const</span> before = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(state);</span><br><span class="line"><span class="comment">// 状态修改操作</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;状态变更差异:&#x27;</span>, <span class="title function_">diff</span>(<span class="title class_">JSON</span>.<span class="title function_">parse</span>(before), state));</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="12-日志分类过滤"><a href="#12-日志分类过滤" class="headerlink" title="12. 日志分类过滤"></a>12. 日志分类过滤</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建一个日志记录器对象，包含不同分类的日志方法，如网络、安全、支付等，</span></span><br><span class="line"><span class="comment">// 每个方法在调用 console.log 时添加对应的分类前缀，方便在控制台根据分类筛选和查看日志，</span></span><br><span class="line"><span class="comment">// 这里演示了记录支付请求发起的日志，包含金额信息。</span></span><br><span class="line"><span class="keyword">const</span> logger = &#123;</span><br><span class="line">  <span class="attr">network</span>: <span class="function">(<span class="params">...args</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[NET]&#x27;</span>,...args),</span><br><span class="line">  <span class="attr">security</span>: <span class="function">(<span class="params">...args</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[SEC]&#x27;</span>,...args),</span><br><span class="line">  <span class="attr">payment</span>: <span class="function">(<span class="params">...args</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[PAY]&#x27;</span>,...args)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">logger.<span class="title function_">payment</span>(<span class="string">&#x27;支付请求发起&#x27;</span>, &#123; <span class="attr">amount</span>: <span class="number">99.9</span> &#125;);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="13-交互式调试"><a href="#13-交互式调试" class="headerlink" title="13. 交互式调试"></a>13. 交互式调试</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在控制台输出一个包含加密数据和检查函数的对象，用户点击该输出信息时，</span></span><br><span class="line"><span class="comment">// 可以通过调用检查函数（这里是解密数据函数 decryptData）来查看详细信息，实现交互式调试体验。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;点击查看详情：&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">data</span>: encryptedData,</span><br><span class="line">  <span class="attr">inspect</span>: <span class="function">() =&gt;</span> <span class="title function_">decryptData</span>(encryptedData)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="14-日志持久化"><a href="#14-日志持久化" class="headerlink" title="14. 日志持久化"></a>14. 日志持久化</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 保存原始的 console.log 方法，并重写 console.log，</span></span><br><span class="line"><span class="comment">// 在新的 console.log 中，先执行原始的输出操作，再将日志信息发送到日志服务器（假设 sendToLogServer 函数已实现），</span></span><br><span class="line"><span class="comment">// 确保日志不仅在控制台可见，还能持久化存储以供后续分析。</span></span><br><span class="line"><span class="keyword">const</span> originalLog = <span class="variable language_">console</span>.<span class="property">log</span>.<span class="title function_">bind</span>(<span class="variable language_">console</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="property">log</span> = <span class="function">(<span class="params">...args</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">originalLog</span>(...args);</span><br><span class="line">  <span class="title function_">sendToLogServer</span>(args); <span class="comment">// 发送到日志服务器</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="15-性能热力图"><a href="#15-性能热力图" class="headerlink" title="15. 性能热力图"></a>15. 性能热力图</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用 console.timeStamp 在关键的性能节点（如渲染开始、DOM 更新）记录时间戳，</span></span><br><span class="line"><span class="comment">// 之后可以在浏览器的 Performance 面板查看这些时间戳，以可视化的方式分析页面性能瓶颈，优化渲染流程。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">timeStamp</span>(<span class="string">&#x27;渲染开始&#x27;</span>);</span><br><span class="line"><span class="comment">// 渲染逻辑</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">timeStamp</span>(<span class="string">&#x27;DOM更新&#x27;</span>);</span><br><span class="line"><span class="comment">// 更新逻辑</span></span><br><span class="line"><span class="comment">// 在浏览器Performance面板查看时间戳</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="16-内存泄漏检测"><a href="#16-内存泄漏检测" class="headerlink" title="16. 内存泄漏检测"></a>16. 内存泄漏检测</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建一个数组来存储组件实例的引用，在组件构造函数中，每创建一个实例就将其添加到数组中，</span></span><br><span class="line"><span class="comment">// 并通过 console.count 记录实例创建的次数，同时定期检查数组中实例的数量，</span></span><br><span class="line"><span class="comment">// 如果数量持续增加，可能存在内存泄漏问题，方便及时排查。</span></span><br><span class="line"><span class="keyword">let</span> instances = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyComponent</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    instances.<span class="title function_">push</span>(<span class="variable language_">this</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">count</span>(<span class="string">&#x27;实例创建&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定期检查实例数量</span></span><br><span class="line"><span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;存活实例:&#x27;</span>, instances.<span class="property">length</span>), <span class="number">5000</span>);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="17-源码映射调试"><a href="#17-源码映射调试" class="headerlink" title="17. 源码映射调试"></a>17. 源码映射调试</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在 webpack 配置中启用 source-map，这使得在调试时能够将打包后的代码映射回原始的源代码，</span></span><br><span class="line"><span class="comment">// 方便在浏览器调试工具或 IDE 中直接查看和调试原始代码，而不是混淆后的代码，提高调试效率。</span></span><br><span class="line"><span class="comment">// 配合webpack配置</span></span><br><span class="line"><span class="attr">devtool</span>: <span class="string">&#x27;source-map&#x27;</span>,</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="18-调试器集成"><a href="#18-调试器集成" class="headerlink" title="18. 调试器集成"></a>18. 调试器集成</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在函数开头使用 console.log 输出进入函数的信息，然后使用 debugger 语句，</span></span><br><span class="line"><span class="comment">// 当代码执行到这里时，会暂停执行，等待调试器（如浏览器开发者工具或 IDE 调试功能）连接，</span></span><br><span class="line"><span class="comment">// 方便深入调试函数内部复杂的运算逻辑。</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">complexCalculation</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;进入计算函数&#x27;</span>);</span><br><span class="line">  <span class="keyword">debugger</span>; <span class="comment">// 配合IDE断点使用</span></span><br><span class="line">  <span class="comment">// 复杂运算</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="19-日志分级控制"><a href="#19-日志分级控制" class="headerlink" title="19. 日志分级控制"></a>19. 日志分级控制</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义一个日志级别对象，包含调试、信息、警告、错误等级别，</span></span><br><span class="line"><span class="comment">// 然后创建一个 Logger 类，在构造函数中接收一个日志级别参数，</span></span><br><span class="line"><span class="comment">// 类中的 debug 方法根据当前设置的级别决定是否输出调试信息，实现灵活的日志分级管理。</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">LOG_LEVEL</span> = &#123;</span><br><span class="line">  <span class="attr">DEBUG</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="attr">INFO</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">WARN</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">ERROR</span>: <span class="number">3</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Logger</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">level = LOG_LEVEL.INFO</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">level</span> = level;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">debug</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">level</span> &lt;= <span class="variable constant_">LOG_LEVEL</span>.<span class="property">DEBUG</span>) <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[DEBUG]&#x27;</span>,...args);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="20-敏感信息过滤"><a href="#20-敏感信息过滤" class="headerlink" title="20. 敏感信息过滤"></a>20. 敏感信息过滤</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义一个安全日志函数，它接收数据对象，先深度克隆数据，</span></span><br><span class="line"><span class="comment">// 然后删除可能包含敏感信息的字段（如密码、令牌），最后返回过滤后的安全数据，</span></span><br><span class="line"><span class="comment">// 并在控制台输出，确保敏感信息不会意外泄露。</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">safeLog</span> = (<span class="params">data</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> filtered = _.<span class="title function_">cloneDeep</span>(data);</span><br><span class="line">  <span class="keyword">delete</span> filtered.<span class="property">password</span>;</span><br><span class="line">  <span class="keyword">delete</span> filtered.<span class="property">token</span>;</span><br><span class="line">  <span class="keyword">return</span> filtered;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;用户数据:&#x27;</span>, <span class="title function_">safeLog</span>(userData));</span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p><strong>注意</strong>：所有调试代码应在开发环境使用，生产环境需通过构建工具自动移除。 </p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Console</category>
+      </categories>
+      <tags>
+        <tag>Console</tag>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript 简写技巧</title>
+    <url>https://kfufys.github.io/posts/c5860ba2.html</url>
+    <content><![CDATA[<img src="https://kfufys.github.io/posts/c5860ba2/1.png" alt="head-img" width="1200">
+
+<h3 id="一、三元运算符简化条件判断"><a href="#一、三元运算符简化条件判断" class="headerlink" title="一、三元运算符简化条件判断"></a>一、三元运算符简化条件判断</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> result;</span><br><span class="line"><span class="keyword">if</span> (someCondition) &#123;</span><br><span class="line">    result = <span class="string">&#x27;yes&#x27;</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    result = <span class="string">&#x27;no&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> result = someCondition? <span class="string">&#x27;yes&#x27;</span> : <span class="string">&#x27;no&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：当遇到简单的二选一条件判断时，使用三元运算符可以将多行代码浓缩为一行，使逻辑更加清晰简洁，避免了繁琐的 <code>if - else</code> 结构。</p>
+</blockquote>
+<h3 id="二、空值合并运算符"><a href="#二、空值合并运算符" class="headerlink" title="二、空值合并运算符"></a>二、空值合并运算符</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> name = user.<span class="property">name</span>!== <span class="literal">null</span> &amp;&amp; user.<span class="property">name</span>!== <span class="literal">undefined</span>? user.<span class="property">name</span> : <span class="string">&#x27;default&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> name = user.<span class="property">name</span>?? <span class="string">&#x27;default&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：在处理可能为空值（<code>null</code> 或 <code>undefined</code>）的变量时，以往需要双重判断，现在使用空值合并运算符，能直接简洁地指定默认值。</p>
+</blockquote>
+<h3 id="三、可选链操作符"><a href="#三、可选链操作符" class="headerlink" title="三、可选链操作符"></a>三、可选链操作符</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> street = user &amp;&amp; user.<span class="property">address</span> &amp;&amp; user.<span class="property">address</span>.<span class="property">street</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> street = user?.<span class="property">address</span>?.<span class="property">street</span>;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：当访问嵌套对象的深层属性时，为了防止中间某个属性不存在导致报错，传统写法需要层层判断。有了可选链操作符，代码更加简洁直观，它会在属性不存在时返回 <code>undefined</code>，而不会引发错误。</p>
+</blockquote>
+<h3 id="四、数组去重"><a href="#四、数组去重" class="headerlink" title="四、数组去重"></a>四、数组去重</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">unique</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> arr.<span class="title function_">filter</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> arr.<span class="title function_">indexOf</span>(item) === index);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">unique</span> = arr =&gt; [...<span class="keyword">new</span> <span class="title class_">Set</span>(arr)];</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：对于去除数组中的重复元素，传统方法使用 <code>filter</code> 结合 <code>indexOf</code> 来判断，较为复杂。利用 ES6 的 <code>Set</code> 数据结构，它会自动去除重复值，再通过扩展运算符将其转换回数组，短短一行代码就搞定，简洁高效。</p>
+</blockquote>
+<h3 id="五、快速取整"><a href="#五、快速取整" class="headerlink" title="五、快速取整"></a>五、快速取整</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> floor = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="number">4.9</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> floor = ~~<span class="number">4.9</span>;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：在需要将浮点数向下取整时，除了使用 <code>Math.floor</code> 方法，还可以用双波浪线操作符，它利用了位运算的特性，能快速实现取整功能，在一些性能要求较高且简单取整场景下很实用，不过要注意它对负数的处理稍有不同。</p>
+</blockquote>
+<h3 id="六、合并对象"><a href="#六、合并对象" class="headerlink" title="六、合并对象"></a>六、合并对象</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> merged = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;, obj1, obj2);</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> merged = &#123;...obj1,...obj2&#125;;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：把多个对象合并为一个新对象，<code>Object.assign</code> 是常见做法，但 ES6 的扩展运算符语法更简洁，直接将对象展开合并，方便快捷，常用于配置对象的合并等场景，如合并默认配置和用户自定义配置。</p>
+</blockquote>
+<h3 id="七、短路求值"><a href="#七、短路求值" class="headerlink" title="七、短路求值"></a>七、短路求值</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (condition) &#123;</span><br><span class="line">    <span class="title function_">doSomething</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">condition &amp;&amp; <span class="title function_">doSomething</span>();</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：当只想在某个条件满足时执行一个函数或表达式，短路求值可以省略 <code>if</code> 语句，让代码更紧凑。若条件为真，后面的表达式才会执行，常用于函数调用前的条件判断，比如判断用户是否有权限执行某个操作，有权限时才调用相应函数。</p>
+</blockquote>
+<h3 id="八、默认参数值"><a href="#八、默认参数值" class="headerlink" title="八、默认参数值"></a>八、默认参数值</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">greet</span>(<span class="params">name</span>) &#123;</span><br><span class="line">    name = name || <span class="string">&#x27;Guest&#x27;</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Hello <span class="subst">$&#123;name&#125;</span>`</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">greet</span> = (<span class="params">name = <span class="string">&#x27;Guest&#x27;</span></span>) =&gt; <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Hello <span class="subst">$&#123;name&#125;</span>`</span>);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：在定义函数时，给参数设置默认值，以往用逻辑或运算符来实现，存在一定缺陷，如传入 0、空字符串等假值时会误判。现在 ES6 的默认参数语法能精准地为参数指定默认值，让函数更健壮，比如定义一个打招呼函数，若不传名字就默认向“Guest”打招呼。</p>
+</blockquote>
+<h3 id="九、解构赋值"><a href="#九、解构赋值" class="headerlink" title="九、解构赋值"></a>九、解构赋值</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123; <span class="attr">name</span>: <span class="string">&#x27;John&#x27;</span>, <span class="attr">age</span>: <span class="number">30</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> name = person.<span class="property">name</span>;</span><br><span class="line"><span class="keyword">const</span> age = person.<span class="property">age</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; name, age &#125; = &#123; <span class="attr">name</span>: <span class="string">&#x27;John&#x27;</span>, <span class="attr">age</span>: <span class="number">30</span> &#125;;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：当从对象或数组中提取数据时，解构赋值能一次性完成多个变量的赋值，避免了逐个赋值的繁琐，让代码简洁易读。还可以结合函数参数使用，如函数接收一个对象参数，直接解构出需要的值，增强了代码的灵活性。</p>
+</blockquote>
+<h3 id="十、字符串转数字"><a href="#十、字符串转数字" class="headerlink" title="十、字符串转数字"></a>十、字符串转数字</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> num = <span class="built_in">parseInt</span>(<span class="string">&#x27;123&#x27;</span>, <span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> num = +<span class="string">&#x27;123&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：把字符串转换为数字，除了使用 <code>parseInt</code> 函数，还可以用一元加运算符，它会尝试将操作数转换为数字类型，对于简单的字符串数字转换场景，这种写法更加简洁，如将用户输入的数字字符串转换为实际数字进行计算。</p>
+</blockquote>
+<h3 id="十一、多重条件判断"><a href="#十一、多重条件判断" class="headerlink" title="十一、多重条件判断"></a>十一、多重条件判断</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (num &gt; <span class="number">10</span> &amp;&amp; num &lt; <span class="number">20</span>) &#123;</span><br><span class="line">    <span class="comment">// 执行操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="number">10</span> &lt; num &amp;&amp; num &lt; <span class="number">20</span>) &#123;</span><br><span class="line">    <span class="comment">// 执行操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：在进行多重比较判断时，调整一下比较顺序，有时能让代码逻辑看起来更清晰自然，尤其是连续比较大小的场景，更符合阅读习惯，减少理解成本。</p>
+</blockquote>
+<h3 id="十二、快速幂运算"><a href="#十二、快速幂运算" class="headerlink" title="十二、快速幂运算"></a>十二、快速幂运算</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">power</span>(<span class="params">base, exponent</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> result = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; exponent; i++) &#123;</span><br><span class="line">        result *= base;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">power</span> = (<span class="params">base, exponent</span>) =&gt; <span class="title class_">Math</span>.<span class="title function_">pow</span>(base, exponent);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：计算一个数的幂次方，自己实现循环累乘固然可行，但 JavaScript 内置的 <code>Math.pow</code> 函数更加高效可靠，直接调用就能完成复杂的幂运算，节省开发时间。</p>
+</blockquote>
+<h3 id="十三、对象属性简写"><a href="#十三、对象属性简写" class="headerlink" title="十三、对象属性简写"></a>十三、对象属性简写</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">&#x27;John&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> person = &#123; <span class="attr">name</span>: name &#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">&#x27;John&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> person = &#123; name &#125;;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：在创建对象时，如果对象属性名和变量名相同，ES6 允许我们直接简写，省去重复书写属性名的麻烦，让代码更简洁，常用于对象字面量的创建。</p>
+</blockquote>
+<h3 id="十四、数组映射"><a href="#十四、数组映射" class="headerlink" title="十四、数组映射"></a>十四、数组映射</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> doubled = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; numbers.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    doubled.<span class="title function_">push</span>(numbers[i] * <span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> doubled = numbers.<span class="title function_">map</span>(<span class="function"><span class="params">num</span> =&gt;</span> num * <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：对数组中的每个元素进行相同操作并返回新数组，使用数组的 <code>map</code> 方法比传统的循环遍历 <code>push</code> 更加简洁明了，函数式编程风格让代码更具可读性，常用于数据转换场景，如将一组数据统一格式化。</p>
+</blockquote>
+<h3 id="十五、交换变量值"><a href="#十五、交换变量值" class="headerlink" title="十五、交换变量值"></a>十五、交换变量值</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">let</span> temp;</span><br><span class="line">temp = a;</span><br><span class="line">a = b;</span><br><span class="line">b = temp;</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">10</span>;</span><br><span class="line">[a, b] = [b, a];</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：交换两个变量的值，传统方法需要借助临时变量，而利用解构赋值可以巧妙地在一行内完成交换，代码简洁高效，是一种很巧妙的技巧。</p>
+</blockquote>
+<h3 id="十六、动态对象属性"><a href="#十六、动态对象属性" class="headerlink" title="十六、动态对象属性"></a>十六、动态对象属性</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;&#125;;</span><br><span class="line">obj[dynamic + <span class="string">&#x27;name&#x27;</span>] = value;</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">    [<span class="string">`<span class="subst">$&#123;dynamic&#125;</span>name`</span>]: value</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：当对象的属性名需要动态生成时，以往是用字符串拼接，现在使用模板字面量结合方括号语法，更加直观，能清晰地表达属性名是动态生成的，常用于根据不同条件创建对象属性的场景。</p>
+</blockquote>
+<h3 id="十七、箭头函数简写对象方法"><a href="#十七、箭头函数简写对象方法" class="headerlink" title="十七、箭头函数简写对象方法"></a>十七、箭头函数简写对象方法</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">    <span class="attr">sayHello</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Hello&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">    <span class="attr">sayHello</span>: <span class="function">() =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Hello&#x27;</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：在定义对象的方法时，如果方法体较为简单，使用箭头函数可以让代码更简洁。这种写法在一些简单的事件处理函数或者工具函数作为对象方法时非常实用，减少了函数声明的冗余。</p>
+</blockquote>
+<h3 id="十八、利用扩展运算符复制数组"><a href="#十八、利用扩展运算符复制数组" class="headerlink" title="十八、利用扩展运算符复制数组"></a>十八、利用扩展运算符复制数组</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> originalArray = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> copiedArray = originalArray.<span class="title function_">slice</span>();</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> originalArray = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> copiedArray = [...originalArray];</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：当需要复制一个数组时，以往常用 <code>slice</code> 方法，但使用扩展运算符更加直观简洁，它会创建一个新的数组副本，避免了直接赋值导致的引用共享问题，在处理数据时能保证原数组不被意外修改。</p>
+</blockquote>
+<h3 id="十九、合并数组并去重"><a href="#十九、合并数组并去重" class="headerlink" title="十九、合并数组并去重"></a>十九、合并数组并去重</h3><p><strong>传统写法</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">const</span> combined = arr1.<span class="title function_">concat</span>(arr2).<span class="title function_">filter</span>(<span class="function">(<span class="params">item, index, self</span>) =&gt;</span> self.<span class="title function_">indexOf</span>(item) === index);</span><br></pre></td></tr></table></figure>
+
+<p><strong>简写方式</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">const</span> combined = [...<span class="keyword">new</span> <span class="title class_">Set</span>([...arr1,...arr2])];</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>解释</strong>：要合并两个数组合并去除重复元素，传统写法需要先 <code>concat</code> 再用 <code>filter</code> 配合 <code>indexOf</code> 去重，较为繁琐。利用扩展运算符结合 <code>Set</code> 结构，先展开数组合并，再利用 <code>Set</code> 去重，最后转回数组，一步到位，简洁高效。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Google Gemini 2.0 怎么用?</title>
     <url>https://kfufys.github.io/posts/2266.html</url>
     <content><![CDATA[<img src="https://kfufys.github.io/posts/2266/1.png" alt="head.png">
@@ -572,475 +758,11 @@
       </tags>
   </entry>
   <entry>
-    <title>JavaScript 简写技巧</title>
-    <url>https://kfufys.github.io/posts/c5860ba2.html</url>
-    <content><![CDATA[<h3 id="一、三元运算符简化条件判断"><a href="#一、三元运算符简化条件判断" class="headerlink" title="一、三元运算符简化条件判断"></a>一、三元运算符简化条件判断</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> result;</span><br><span class="line"><span class="keyword">if</span> (someCondition) &#123;</span><br><span class="line">    result = <span class="string">&#x27;yes&#x27;</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    result = <span class="string">&#x27;no&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> result = someCondition? <span class="string">&#x27;yes&#x27;</span> : <span class="string">&#x27;no&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：当遇到简单的二选一条件判断时，使用三元运算符可以将多行代码浓缩为一行，使逻辑更加清晰简洁，避免了繁琐的 <code>if - else</code> 结构。</p>
-</blockquote>
-<h3 id="二、空值合并运算符"><a href="#二、空值合并运算符" class="headerlink" title="二、空值合并运算符"></a>二、空值合并运算符</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> name = user.<span class="property">name</span>!== <span class="literal">null</span> &amp;&amp; user.<span class="property">name</span>!== <span class="literal">undefined</span>? user.<span class="property">name</span> : <span class="string">&#x27;default&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> name = user.<span class="property">name</span>?? <span class="string">&#x27;default&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：在处理可能为空值（<code>null</code> 或 <code>undefined</code>）的变量时，以往需要双重判断，现在使用空值合并运算符，能直接简洁地指定默认值。</p>
-</blockquote>
-<h3 id="三、可选链操作符"><a href="#三、可选链操作符" class="headerlink" title="三、可选链操作符"></a>三、可选链操作符</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> street = user &amp;&amp; user.<span class="property">address</span> &amp;&amp; user.<span class="property">address</span>.<span class="property">street</span>;</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> street = user?.<span class="property">address</span>?.<span class="property">street</span>;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：当访问嵌套对象的深层属性时，为了防止中间某个属性不存在导致报错，传统写法需要层层判断。有了可选链操作符，代码更加简洁直观，它会在属性不存在时返回 <code>undefined</code>，而不会引发错误。</p>
-</blockquote>
-<h3 id="四、数组去重"><a href="#四、数组去重" class="headerlink" title="四、数组去重"></a>四、数组去重</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">unique</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> arr.<span class="title function_">filter</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> arr.<span class="title function_">indexOf</span>(item) === index);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">unique</span> = arr =&gt; [...<span class="keyword">new</span> <span class="title class_">Set</span>(arr)];</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：对于去除数组中的重复元素，传统方法使用 <code>filter</code> 结合 <code>indexOf</code> 来判断，较为复杂。利用 ES6 的 <code>Set</code> 数据结构，它会自动去除重复值，再通过扩展运算符将其转换回数组，短短一行代码就搞定，简洁高效。</p>
-</blockquote>
-<h3 id="五、快速取整"><a href="#五、快速取整" class="headerlink" title="五、快速取整"></a>五、快速取整</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> floor = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="number">4.9</span>);</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> floor = ~~<span class="number">4.9</span>;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：在需要将浮点数向下取整时，除了使用 <code>Math.floor</code> 方法，还可以用双波浪线操作符，它利用了位运算的特性，能快速实现取整功能，在一些性能要求较高且简单取整场景下很实用，不过要注意它对负数的处理稍有不同。</p>
-</blockquote>
-<h3 id="六、合并对象"><a href="#六、合并对象" class="headerlink" title="六、合并对象"></a>六、合并对象</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> merged = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;, obj1, obj2);</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> merged = &#123;...obj1,...obj2&#125;;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：把多个对象合并为一个新对象，<code>Object.assign</code> 是常见做法，但 ES6 的扩展运算符语法更简洁，直接将对象展开合并，方便快捷，常用于配置对象的合并等场景，如合并默认配置和用户自定义配置。</p>
-</blockquote>
-<h3 id="七、短路求值"><a href="#七、短路求值" class="headerlink" title="七、短路求值"></a>七、短路求值</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (condition) &#123;</span><br><span class="line">    <span class="title function_">doSomething</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">condition &amp;&amp; <span class="title function_">doSomething</span>();</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：当只想在某个条件满足时执行一个函数或表达式，短路求值可以省略 <code>if</code> 语句，让代码更紧凑。若条件为真，后面的表达式才会执行，常用于函数调用前的条件判断，比如判断用户是否有权限执行某个操作，有权限时才调用相应函数。</p>
-</blockquote>
-<h3 id="八、默认参数值"><a href="#八、默认参数值" class="headerlink" title="八、默认参数值"></a>八、默认参数值</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">greet</span>(<span class="params">name</span>) &#123;</span><br><span class="line">    name = name || <span class="string">&#x27;Guest&#x27;</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Hello <span class="subst">$&#123;name&#125;</span>`</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">greet</span> = (<span class="params">name = <span class="string">&#x27;Guest&#x27;</span></span>) =&gt; <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Hello <span class="subst">$&#123;name&#125;</span>`</span>);</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：在定义函数时，给参数设置默认值，以往用逻辑或运算符来实现，存在一定缺陷，如传入 0、空字符串等假值时会误判。现在 ES6 的默认参数语法能精准地为参数指定默认值，让函数更健壮，比如定义一个打招呼函数，若不传名字就默认向“Guest”打招呼。</p>
-</blockquote>
-<h3 id="九、解构赋值"><a href="#九、解构赋值" class="headerlink" title="九、解构赋值"></a>九、解构赋值</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123; <span class="attr">name</span>: <span class="string">&#x27;John&#x27;</span>, <span class="attr">age</span>: <span class="number">30</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> name = person.<span class="property">name</span>;</span><br><span class="line"><span class="keyword">const</span> age = person.<span class="property">age</span>;</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; name, age &#125; = &#123; <span class="attr">name</span>: <span class="string">&#x27;John&#x27;</span>, <span class="attr">age</span>: <span class="number">30</span> &#125;;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：当从对象或数组中提取数据时，解构赋值能一次性完成多个变量的赋值，避免了逐个赋值的繁琐，让代码简洁易读。还可以结合函数参数使用，如函数接收一个对象参数，直接解构出需要的值，增强了代码的灵活性。</p>
-</blockquote>
-<h3 id="十、字符串转数字"><a href="#十、字符串转数字" class="headerlink" title="十、字符串转数字"></a>十、字符串转数字</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> num = <span class="built_in">parseInt</span>(<span class="string">&#x27;123&#x27;</span>, <span class="number">10</span>);</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> num = +<span class="string">&#x27;123&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：把字符串转换为数字，除了使用 <code>parseInt</code> 函数，还可以用一元加运算符，它会尝试将操作数转换为数字类型，对于简单的字符串数字转换场景，这种写法更加简洁，如将用户输入的数字字符串转换为实际数字进行计算。</p>
-</blockquote>
-<h3 id="十一、多重条件判断"><a href="#十一、多重条件判断" class="headerlink" title="十一、多重条件判断"></a>十一、多重条件判断</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (num &gt; <span class="number">10</span> &amp;&amp; num &lt; <span class="number">20</span>) &#123;</span><br><span class="line">    <span class="comment">// 执行操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="number">10</span> &lt; num &amp;&amp; num &lt; <span class="number">20</span>) &#123;</span><br><span class="line">    <span class="comment">// 执行操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：在进行多重比较判断时，调整一下比较顺序，有时能让代码逻辑看起来更清晰自然，尤其是连续比较大小的场景，更符合阅读习惯，减少理解成本。</p>
-</blockquote>
-<h3 id="十二、快速幂运算"><a href="#十二、快速幂运算" class="headerlink" title="十二、快速幂运算"></a>十二、快速幂运算</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">power</span>(<span class="params">base, exponent</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> result = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; exponent; i++) &#123;</span><br><span class="line">        result *= base;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">power</span> = (<span class="params">base, exponent</span>) =&gt; <span class="title class_">Math</span>.<span class="title function_">pow</span>(base, exponent);</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：计算一个数的幂次方，自己实现循环累乘固然可行，但 JavaScript 内置的 <code>Math.pow</code> 函数更加高效可靠，直接调用就能完成复杂的幂运算，节省开发时间。</p>
-</blockquote>
-<h3 id="十三、对象属性简写"><a href="#十三、对象属性简写" class="headerlink" title="十三、对象属性简写"></a>十三、对象属性简写</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">&#x27;John&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> person = &#123; <span class="attr">name</span>: name &#125;;</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">&#x27;John&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> person = &#123; name &#125;;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：在创建对象时，如果对象属性名和变量名相同，ES6 允许我们直接简写，省去重复书写属性名的麻烦，让代码更简洁，常用于对象字面量的创建。</p>
-</blockquote>
-<h3 id="十四、数组映射"><a href="#十四、数组映射" class="headerlink" title="十四、数组映射"></a>十四、数组映射</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> doubled = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; numbers.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    doubled.<span class="title function_">push</span>(numbers[i] * <span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> doubled = numbers.<span class="title function_">map</span>(<span class="function"><span class="params">num</span> =&gt;</span> num * <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：对数组中的每个元素进行相同操作并返回新数组，使用数组的 <code>map</code> 方法比传统的循环遍历 <code>push</code> 更加简洁明了，函数式编程风格让代码更具可读性，常用于数据转换场景，如将一组数据统一格式化。</p>
-</blockquote>
-<h3 id="十五、交换变量值"><a href="#十五、交换变量值" class="headerlink" title="十五、交换变量值"></a>十五、交换变量值</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">let</span> temp;</span><br><span class="line">temp = a;</span><br><span class="line">a = b;</span><br><span class="line">b = temp;</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">10</span>;</span><br><span class="line">[a, b] = [b, a];</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：交换两个变量的值，传统方法需要借助临时变量，而利用解构赋值可以巧妙地在一行内完成交换，代码简洁高效，是一种很巧妙的技巧。</p>
-</blockquote>
-<h3 id="十六、动态对象属性"><a href="#十六、动态对象属性" class="headerlink" title="十六、动态对象属性"></a>十六、动态对象属性</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;&#125;;</span><br><span class="line">obj[dynamic + <span class="string">&#x27;name&#x27;</span>] = value;</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">    [<span class="string">`<span class="subst">$&#123;dynamic&#125;</span>name`</span>]: value</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：当对象的属性名需要动态生成时，以往是用字符串拼接，现在使用模板字面量结合方括号语法，更加直观，能清晰地表达属性名是动态生成的，常用于根据不同条件创建对象属性的场景。</p>
-</blockquote>
-<h3 id="十七、箭头函数简写对象方法"><a href="#十七、箭头函数简写对象方法" class="headerlink" title="十七、箭头函数简写对象方法"></a>十七、箭头函数简写对象方法</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">    <span class="attr">sayHello</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Hello&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">    <span class="attr">sayHello</span>: <span class="function">() =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Hello&#x27;</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：在定义对象的方法时，如果方法体较为简单，使用箭头函数可以让代码更简洁。这种写法在一些简单的事件处理函数或者工具函数作为对象方法时非常实用，减少了函数声明的冗余。</p>
-</blockquote>
-<h3 id="十八、利用扩展运算符复制数组"><a href="#十八、利用扩展运算符复制数组" class="headerlink" title="十八、利用扩展运算符复制数组"></a>十八、利用扩展运算符复制数组</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> originalArray = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> copiedArray = originalArray.<span class="title function_">slice</span>();</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> originalArray = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> copiedArray = [...originalArray];</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：当需要复制一个数组时，以往常用 <code>slice</code> 方法，但使用扩展运算符更加直观简洁，它会创建一个新的数组副本，避免了直接赋值导致的引用共享问题，在处理数据时能保证原数组不被意外修改。</p>
-</blockquote>
-<h3 id="十九、合并数组并去重"><a href="#十九、合并数组并去重" class="headerlink" title="十九、合并数组并去重"></a>十九、合并数组并去重</h3><p><strong>传统写法</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">const</span> combined = arr1.<span class="title function_">concat</span>(arr2).<span class="title function_">filter</span>(<span class="function">(<span class="params">item, index, self</span>) =&gt;</span> self.<span class="title function_">indexOf</span>(item) === index);</span><br></pre></td></tr></table></figure>
-
-<p><strong>简写方式</strong>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">const</span> combined = [...<span class="keyword">new</span> <span class="title class_">Set</span>([...arr1,...arr2])];</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>解释</strong>：要合并两个数组合并去除重复元素，传统写法需要先 <code>concat</code> 再用 <code>filter</code> 配合 <code>indexOf</code> 去重，较为繁琐。利用扩展运算符结合 <code>Set</code> 结构，先展开数组合并，再利用 <code>Set</code> 去重，最后转回数组，一步到位，简洁高效。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown教程</title>
-    <url>https://kfufys.github.io/posts/c079e252.html</url>
-    <content><![CDATA[<img src="https://kfufys.github.io/posts/c079e252/1.png" alt="Markdown" width="1200">
-
-<h3 id="一、Markdown简介"><a href="#一、Markdown简介" class="headerlink" title="一、Markdown简介"></a>一、Markdown简介</h3><p><code>Markdown</code> 是一种轻量级标记语言，创始人为约翰·格鲁伯（John Gruber）。<br><code>Markdown</code> 允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的HTML文档。<br><code>Markdown</code> 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。<br><code>Markdown</code> 编写的文档后缀为 .md、.markdown。<br><code>Markdown</code> 是目前互联网上流行的写作语言之一，很多网站平台的文章、博客、论文都是基于它写的。</p>
-<h3 id="二、Markdown优点"><a href="#二、Markdown优点" class="headerlink" title="二、Markdown优点"></a>二、Markdown优点</h3><p>很多人看到【轻量级】【标记】【语言】这些标签就直接放弃了，想着自己学习了非常多的语言，为了记个笔记写个博客还要再学习一门语言吗？实则不然，Markdown的语言非常非常简单，如果想学，10分钟你完全可以学完90%的常用的语法，而且你从此摆脱排版的折磨，属实是强迫症党的福利了。它的优点不仅限于此：</p>
-<ul>
-<li>纯文本编辑，只要是支持 Markdown 编辑的都能获得同样的结果，摆脱排版苦恼</li>
-<li>学习成本低，常用的语法很少，简单易学快速上手</li>
-<li>支持跨平台同步数据</li>
-<li>支持插入图片、视频等</li>
-<li>随时修改，不必担心word等工具出现排版错误</li>
-</ul>
-<h3 id="三、Markdown基本语法"><a href="#三、Markdown基本语法" class="headerlink" title="三、Markdown基本语法"></a>三、Markdown基本语法</h3><h4 id="3-1-标题"><a href="#3-1-标题" class="headerlink" title="3.1 标题"></a>3.1 标题</h4><p>使用 <code>#</code> 标记，可表示1~6级标题， 随 <code>#</code> 的个数递增，一级标题字号最大，六级标题字号最小。  </p>
-<p><strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/2.png" alt="Markdown_Title" width="1200">
-
-<blockquote>
-<p><em><strong>注意</strong></em>：</p>
-<ul>
-<li>最好 <code>#</code> 字符与标题文本中间留一个空格</li>
-<li>标题应该置于行首，如果放入表格中可能无法正确解析</li>
-</ul>
-</blockquote>
-<h4 id="3-2-字体"><a href="#3-2-字体" class="headerlink" title="3.2 字体"></a>3.2 字体</h4><p><code>*</code> 与 <code>_</code> 都可以，1个斜体，2个粗体，3个粗斜体</p>
-<p><strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="emphasis">*这是斜体*</span></span><br><span class="line"><span class="emphasis">_这是斜体_</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**这是粗体**</span></span><br><span class="line"><span class="strong">__这是粗体__</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**<span class="emphasis">*这是粗斜体*</span>**</span></span><br><span class="line"><span class="strong">__<span class="emphasis">_这是粗斜体_</span>__</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/3.png" alt="Markdown_Font" width="1200">
-
-<blockquote>
-<p><em><strong>快捷键</strong></em>：</p>
-<ul>
-<li>加粗 <code>Ctrl+B</code></li>
-<li>斜体 <code>Ctrl+I</code></li>
-</ul>
-</blockquote>
-<h4 id="3-3-换行"><a href="#3-3-换行" class="headerlink" title="3.3 换行"></a>3.3 换行</h4><p>Markdown换行的方式有很多种:</p>
-<ul>
-<li>直接在一句话后敲两个空格</li>
-<li>两句话之间加一个空行</li>
-<li>如果你在编辑的时候，想让一行文字在显示的时候换行，就在中间加<code>&lt;br/&gt;</code></li>
-</ul>
-<p> <strong>示例代码</strong>：</p>
- <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Hello World  </span><br><span class="line">Hello World</span><br><span class="line"></span><br><span class="line">Hello World</span><br><span class="line"></span><br><span class="line">Hello World</span><br><span class="line"></span><br><span class="line">Hello World<span class="language-xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span>Hello World</span><br></pre></td></tr></table></figure>
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/4.png" alt="Markdown_enter" width="1200">
-
-<h4 id="3-4-引用"><a href="#3-4-引用" class="headerlink" title="3.4 引用"></a>3.4 引用</h4><p>Markdown 中引用通过符号 <code>&gt;</code> 来实现。</p>
-<ul>
-<li><code>&gt;</code> 符号后的空格，可有可无。  </li>
-<li>在引用的区块内，允许换行存在，换行并不会终止引用的区块。</li>
-<li>如果要结束引用，需要一行空白行，来结束引用的区块。</li>
-</ul>
-<p> <strong>示例代码</strong>：</p>
- <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 这是一个引用</span></span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/5.png" alt="Markdown_quote1" width="1200">
-
-<blockquote>
-<p><strong>此外，引用还可以嵌套使用</strong>  </p>
-</blockquote>
-<p> <strong>示例代码</strong>：</p>
- <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 这是一个引用：</span></span><br><span class="line">&gt;&gt; 这是一个引用的引用</span><br><span class="line">&gt;&gt;&gt; 这是一个引用的引用的引用</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/6.png" alt="Markdown_quote2" width="1200">
-
-<h4 id="3-5-链接"><a href="#3-5-链接" class="headerlink" title="3.5 链接"></a>3.5 链接</h4><p>Markdown 中插入链接的使用方式是：  </p>
-<p> <strong>示例代码</strong>：</p>
- <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> [<span class="string">链接名称</span>](<span class="link">链接地址</span>)</span><br><span class="line"><span class="bullet">2.</span> &lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/7.png" alt="Markdown_link" width="1200">
-
-<h4 id="3-6-图片"><a href="#3-6-图片" class="headerlink" title="3.6 图片"></a>3.6 图片</h4><p>Markdown 中插入图片的使用方式是：  </p>
-<p> <strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片描述，可写可不写，但中括号要有</span>](<span class="link">图片地址，本地链接或者URL地址。</span>)</span><br></pre></td></tr></table></figure>
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/8.png" alt="Markdown_img" width="1200">
-
-<h4 id="3-7-列表"><a href="#3-7-列表" class="headerlink" title="3.7 列表"></a>3.7 列表</h4><p>列表分为有序列表和无序列表</p>
-<ul>
-<li>无序列表，使用<code>*</code>、<code>+</code>、<code>-</code>，再加一个空格作为列表的标记</li>
-<li>有序列表，使用数字并加上<code>.</code>号，再加一个空格作为列表的标记</li>
-</ul>
-<p> <strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">*</span> 无序列表 1</span><br><span class="line"><span class="bullet">+</span> 无序列表 2</span><br><span class="line"><span class="bullet">-</span> 无序列表 3</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 有序列表 1</span><br><span class="line"><span class="bullet">2.</span> 有序列表 2</span><br><span class="line"><span class="bullet">3.</span> 有序列表 3</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/9.png" alt="Markdown_listtable1" width="1200">
-
-<blockquote>
-<p><strong>如果想要控制列表的层级，则需要在列表符号前使用 <code>Tab</code></strong></p>
-</blockquote>
-<p> <strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">+</span> 无序列表 1</span><br><span class="line"><span class="bullet">+</span> 无序列表 2</span><br><span class="line"><span class="bullet">	+</span> 无序列表 2.1</span><br><span class="line"><span class="bullet">	+</span> 无序列表 2.2</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 有序列表 1</span><br><span class="line"><span class="code">	1.1 有序列表 1.1</span></span><br><span class="line"><span class="code">2. 有序列表 2</span></span><br><span class="line"><span class="code">	2.1 有序列表2.1</span></span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/10.png" alt="Markdown_listtable2" width="1200">
-
-<h4 id="3-8-分割线"><a href="#3-8-分割线" class="headerlink" title="3.8 分割线"></a>3.8 分割线</h4><p>可在一行中用三个 <code>-</code> 、<code>_</code> 或 <code>*</code> 来建立一个分割线。</p>
-<p>*<strong>注意</strong>：在分割线的上面空一行，否则会导致前一行字体放大。</p>
-<p> <strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">#### 使用三个或更多的连字符 -</span></span><br><span class="line"></span><br><span class="line">这是分割线上面的内容。</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">这是分割线下面的内容。</span><br><span class="line"></span><br><span class="line"><span class="section">#### 使用三个或更多的星号 *</span></span><br><span class="line"></span><br><span class="line">上面部分的文本。</span><br><span class="line"></span><br><span class="line"><span class="strong">***</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">下面部分的文本。</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">#### 使用三个或更多的下划线 _</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">分割线之上。</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">___</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">分割线之下。</span></span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/11.png" alt="Markdown_splitLine" width="1200">
-
-<h4 id="3-9-删除线"><a href="#3-9-删除线" class="headerlink" title="3.9 删除线"></a>3.9 删除线</h4><p>在要添加删除线的文字前后添加两个 <code>~</code>  </p>
-<p> <strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">~~这是要被删除的文字~~</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/12.png" alt="Markdown_strikethrough" width="1200">
-
-<h4 id="3-10-下划线"><a href="#3-10-下划线" class="headerlink" title="3.10 下划线"></a>3.10 下划线</h4><p>在要添加下划线的文字首尾添加 <code>&lt;u&gt;</code>  标签</p>
-<p> <strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">u</span>&gt;</span></span>这是添加下划线的文字<span class="language-xml"><span class="tag">&lt;/<span class="name">u</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/13.png" alt="Markdown_underscore" width="1200">
-
-<h4 id="3-11-代码块"><a href="#3-11-代码块" class="headerlink" title="3.11 代码块"></a>3.11 代码块</h4><p>Markdown中代码块有两种：  </p>
-<ul>
-<li>如果在一行内需要引用代码，只需要用两个反引号引起来。</li>
-<li>如果在一个块内引用代码，则在要引用的代码块的前一行和后一行使用三个反引号，同时在前一个反引号后写入代码语言。</li>
-</ul>
-<p> <strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">### Code Blocks</span></span><br><span class="line"><span class="code">`Hello World`</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">name</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="string">f&quot;Hello, <span class="subst">&#123;name&#125;</span>!&quot;</span></span><br><span class="line"></span><br><span class="line">message = greet(<span class="string">&quot;Alice&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/14.png" alt="Markdown_CodeBlocks" width="1200">
-
-<h4 id="3-12-表格"><a href="#3-12-表格" class="headerlink" title="3.12 表格"></a>3.12 表格</h4><p>表格使用<code>|</code>来分割不同的单元格，使用<code>-</code>来分隔表头和其他行</p>
-<ul>
-<li><code>:-</code>：将表头及单元格内容左对齐</li>
-<li><code>-:</code>：将表头及单元格内容右对齐</li>
-<li><code>:-:</code>：将表头及单元格内容居中</li>
-</ul>
-<p> <strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">| 左对齐 | 右对齐 | 居中对齐 |</span><br><span class="line">| :----- | -----: | :------: |</span><br><span class="line">| 内容1  |  内容2 |  内容3   |</span><br><span class="line">| 内容4  |  内容5 |  内容6   |</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/15.png" alt="Markdown_Table" width="1200">
-
-<h4 id="3-13-脚注"><a href="#3-13-脚注" class="headerlink" title="3.13 脚注"></a>3.13 脚注</h4><p>脚注主要由两部分构成：在正文中标记脚注的位置和在文档末尾定义脚注的内容。</p>
-<ul>
-<li><strong>在正文中标记脚注</strong>：使用 [^标记名] 来标记脚注的位置，其中 “标记名” 可以是数字、字母或其他字符组合，但在同一个文档里不能重复。</li>
-<li><strong>在文档末尾定义脚注内容</strong>：使用 [^标记名]: 脚注具体内容 来给出脚注的详细说明，这里的 “标记名” 要和正文中的保持一致。</li>
-</ul>
-<p><strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">使用 Markdown[^1]可以效率的书写文档, 直接转换成 HTML[^2], 你可以使用 Typora[^T] 编辑器进行书写。</span><br><span class="line"></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">Markdown 是一种轻量级标记语言，它使用简单的文本格式来标记文本结构，能让写作者专注于内容创作，提高书写效率。</span></span><br><span class="line">[<span class="symbol">^2</span>]: <span class="link">Markdown 可以借助多种工具，如 Pandoc 等，方便快捷地转换为 HTML 格式，便于在网页上展示。</span></span><br><span class="line">[<span class="symbol">^T</span>]: <span class="link">Typora 是一款简洁易用的 Markdown 编辑器，采用所见即所得的编辑模式，能实时预览 Markdown 渲染效果，提升书写体验。</span></span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/16.png" alt="Markdown_footnotes" width="1200">
-
-<h4 id="3-14-特殊符号"><a href="#3-14-特殊符号" class="headerlink" title="3.14 特殊符号"></a>3.14 特殊符号</h4><p>对于Markdown中的语法符号，符号前面加反斜线<code>\</code>即可以显示符号本身。  </p>
-<p><strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">这是一个普通的 \# 符号，并非标题标记。</span><br><span class="line">这里有一个转义后的 \* 星号和一个 \_ 下划线。</span><br><span class="line">这是一个普通的 \- 连字符，不是列表项。</span><br><span class="line">在代码里可能会用到 \` 反引号。</span><br><span class="line">这是一个转义后的 \( 左括号和 \) 右括号，以及 \[ 左方括号和 \] 右方括号。</span><br><span class="line">这里有一个转义后的 \| 管道符号。</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/17.png" alt="Markdown_escaped character" width="1200">
-
-<h3 id="四、Markdown高级语法"><a href="#四、Markdown高级语法" class="headerlink" title="四、Markdown高级语法"></a>四、Markdown高级语法</h3><h4 id="4-1-制作待办事项"><a href="#4-1-制作待办事项" class="headerlink" title="4.1 制作待办事项"></a>4.1 制作待办事项</h4><p>用 <code>Markdown</code> 制作待办事项，格式为：<code>-[]</code> 表示未完成；<code>-[x]</code>表示已完成 </p>
-<p><strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> [ ] 支持以 <span class="code">`PDF`</span> 格式导出文稿</span><br><span class="line"><span class="bullet">-</span> [ ] 改进 <span class="code">`Cmd`</span> 渲染算法，使用局部渲染技术提高渲染效率</span><br><span class="line"><span class="bullet">-</span> [x] 新增 <span class="code">`Todo`</span> 列表功能</span><br><span class="line"><span class="bullet">-</span> [x] 修复 <span class="code">`LaTex`</span> 公式渲染问题</span><br><span class="line"><span class="bullet">-</span> [x] 新增 <span class="code">`LaTex`</span> 公式编号功能</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/4-1.png" alt="Markdown_To-do list" width="1200">
-
-<h4 id="4-2-书写公式"><a href="#4-2-书写公式" class="headerlink" title="4.2 书写公式"></a>4.2 书写公式</h4><p>Markdown支持书写公式，例如书写一个纳维 - 斯托克斯方程。<br><code>$$</code>表示整行公式  </p>
-<p><strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">对于粘性不可压缩流体，纳维 - 斯托克斯方程可以表示为：</span><br><span class="line">$$</span><br><span class="line">\rho \left( \frac&#123;\partial \mathbf&#123;v&#125;&#125;&#123;\partial t&#125; + \mathbf&#123;v&#125; \cdot \nabla \mathbf&#123;v&#125; \right) = -\nabla p + \mu \nabla^2 \mathbf&#123;v&#125; + \mathbf&#123;f&#125;</span><br><span class="line">$$</span><br><span class="line">其中 $\rho$ 是流体密度，$\mathbf&#123;v&#125;$ 是流体速度矢量，$t$ 是时间，$p$ 是压力，$\mu$ 是动力粘度，$\nabla$ 是梯度算子，$\nabla^2$ 是拉普拉斯算子，$\mathbf&#123;f&#125;$ 是作用在流体上的外力密度。</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/4-2.png" alt="Markdown_To-do list" width="1200">
-
-<h4 id="4-3-绘制流程图"><a href="#4-3-绘制流程图" class="headerlink" title="4.3 绘制流程图"></a>4.3 绘制流程图</h4><p><strong>代码解释</strong>：</p>
-<ul>
-<li><code>graph LR</code>：表示这是一个从左到右（Left to Right）方向的流程图。</li>
-<li><code>classDef</code>：用于定义不同类型节点的样式。</li>
-<li>各个节点（如 <code>A</code>、<code>B</code> 等）通过箭头连接，并且可以添加条件判断（如 <code>|是|</code>、<code>|否|</code>）。</li>
-</ul>
-<p><strong>示例代码</strong>：（在支持 Mermaid 的环境中）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;graph LR</span><br><span class="line">    classDef startend fill:#F5EBFF,stroke:#BE8FED,stroke-width:2px;</span><br><span class="line">    classDef process fill:#E5F6FF,stroke:#73A6FF,stroke-width:2px;</span><br><span class="line">    classDef decision fill:#FFF6CC,stroke:#FFBC52,stroke-width:2px;</span><br><span class="line">    </span><br><span class="line">    A([开始]):::startend --&gt; B&#123;是否需要帮助?&#125;:::decision</span><br><span class="line">    B --&gt;|是| C(寻求帮助):::process</span><br><span class="line">    B --&gt;|否| D(自行解决):::process</span><br><span class="line">    C --&gt; E(问题解决):::process</span><br><span class="line">    D --&gt; E</span><br><span class="line">    E --&gt; F([结束]):::startend&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/4-3.png" alt="Markdown_flow chart" width="1200">
-
-<h4 id="4-4-绘制序列图"><a href="#4-4-绘制序列图" class="headerlink" title="4.4 绘制序列图"></a>4.4 绘制序列图</h4><p><strong>代码解释</strong>：</p>
-<ul>
-<li><code>participant</code>：用于定义序列图中的参与者。</li>
-<li><code>-&gt;&gt;</code> 表示实线箭头（主动消息），<code>--&gt;&gt;</code> 表示虚线箭头（返回消息）。</li>
-</ul>
-<p><strong>示例代码</strong>：（在支持 Mermaid 的环境中）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;sequenceDiagram</span><br><span class="line">    participant User</span><br><span class="line">    participant System</span><br><span class="line">    User-&gt;&gt;System: 发起请求</span><br><span class="line">    System--&gt;&gt;User: 请求接收确认</span><br><span class="line">    System-&gt;&gt;System: 处理请求</span><br><span class="line">    System--&gt;&gt;User: 返回处理结果&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
-<img src="https://kfufys.github.io/posts/c079e252/4-4.png" alt="Markdown_sequence diagram" width="1200">
-
-<h4 id="4-5-绘制甘特图"><a href="#4-5-绘制甘特图" class="headerlink" title="4.5 绘制甘特图"></a>4.5 绘制甘特图</h4><p><strong>代码解释</strong>：</p>
-<ul>
-<li><code>title</code>：设置甘特图的标题。</li>
-<li><code>dateFormat</code>：指定日期的格式。</li>
-<li><code>section</code>：划分不同的项目阶段，每个任务通过任务名、任务标识（如 <code>a1</code>）、开始日期和持续时间来定义。</li>
-</ul>
-<p><strong>示例代码</strong>：（在支持 Mermaid 的环境中）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;gantt</span><br><span class="line">    title 项目进度甘特图</span><br><span class="line">    dateFormat  YYYY-MM-DD</span><br><span class="line">    section 项目阶段</span><br><span class="line">    需求分析           :a1, 2024-01-01, 30d</span><br><span class="line">    设计阶段           :after a1, 20d</span><br><span class="line">    开发阶段           :after a2, 60d</span><br><span class="line">    测试阶段           :after a3, 20d</span><br><span class="line">    上线发布           :after a4, 1d&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/4-5.png" alt="Markdown_Gantt chart" width="1200">
-
-<h4 id="4-6-内嵌Html"><a href="#4-6-内嵌Html" class="headerlink" title="4.6 内嵌Html"></a>4.6 内嵌Html</h4><p>Markdown 允许直接嵌入 HTML 标签，在 Markdown 文件中编写 HTML 代码时，Markdown 解析器会将 HTML 代码原样保留并按照 HTML 的规则进行渲染。不过要注意，不同的 Markdown 解析器对 HTML 的支持可能会有细微差异。</p>
-<p><strong>示例代码</strong>：</p>
-<p>使用 HTML 的 <code>&lt;a&gt;</code> 标签结合 CSS 样式可以创建链接按钮。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://kfufys.github.io&quot;</span> <span class="attr">style</span>=<span class="string">&quot;display: inline-block; background-color: #007BFF; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;&quot;</span>&gt;</span>访问示例网站<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/4-6.png" alt="Markdown_Embedded Html" width="1200">
-
-<h3 id="五、Markdown工具"><a href="#五、Markdown工具" class="headerlink" title="五、Markdown工具"></a>五、Markdown工具</h3><p>Markdown 编辑器有很多，它们在功能、适用平台、界面设计等方面各有特色，以下为你介绍一些常用的 Markdown 编辑器：</p>
-<h4 id="5-1-通用跨平台编辑器"><a href="#5-1-通用跨平台编辑器" class="headerlink" title="5.1 通用跨平台编辑器"></a>5.1 通用跨平台编辑器</h4><ul>
-<li><p><b><span class="exturl" data-url="aHR0cHM6Ly90eXBvcmFpby5jbi8=">Typora<i class="fa fa-external-link-alt"></i></span></b></p>
-<ul>
-<li><p><strong>特点</strong>：这是一款简洁美观的 Markdown 编辑器，最大的亮点是采用所见即所得的编辑模式，支持多平台，包括 Windows、Mac 和 Linux。</p>
-</li>
-<li><p><strong>适用场景</strong>：适合日常写作、博客撰写、笔记记录等场景，能让用户专注于内容创作。</p>
-</li>
-</ul>
-</li>
-<li><p><b><span class="exturl" data-url="aHR0cHM6Ly92c2NvZGUuanMuY24vRG93bmxvYWQ=">Visual Studio Code<i class="fa fa-external-link-alt"></i></span></b></p>
-<ul>
-<li><p><strong>特点</strong>：作为一款强大的开源代码编辑器，VS Code 通过安装 Markdown 相关的扩展插件，可实现丰富的 Markdown 编辑功能，如语法高亮、自动补全、预览等。支持 Git 集成，方便进行版本控制。</p>
-</li>
-<li><p><strong>适用场景</strong>：对于开发者来说，在编写代码文档、技术博客时使用 VS Code 非常便捷，可与开发工作无缝衔接。</p>
-</li>
-</ul>
-</li>
-<li><p><b><span class="exturl" data-url="aHR0cHM6Ly9vYnNpZGlhbi5tZA==">Obsidian<i class="fa fa-external-link-alt"></i></span></b></p>
-<ul>
-<li><p><strong>特点</strong>：它是一款基于本地文件的知识管理和笔记应用，支持 Markdown 格式。具有强大的链接和图谱功能，可以方便地建立笔记之间的关联，形成个人知识网络。</p>
-</li>
-<li><p><strong>适用场景</strong>：适合构建个人知识体系、做学习笔记、进行项目规划等，有助于知识的整理和沉淀。</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="5-2-在线编辑器"><a href="#5-2-在线编辑器" class="headerlink" title="5.2 在线编辑器"></a>5.2 在线编辑器</h4><ul>
-<li><p><b><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29t">GitHub<i class="fa fa-external-link-alt"></i></span></b></p>
-<ul>
-<li><p><strong>特点</strong>：作为全球最大的代码托管平台，GitHub 内置了 Markdown 编辑器，在创建和编辑 README 文件、Wiki 页面时可直接使用。支持 Markdown 语法，方便开发者展示项目信息和文档。</p>
-</li>
-<li><p><strong>适用场景</strong>：对于开发者来说，在 GitHub 上使用 Markdown 编写项目文档是非常常见的操作，便于与团队成员和其他开发者共享信息。</p>
-</li>
-</ul>
-</li>
-<li><p><b><span class="exturl" data-url="aHR0cHM6Ly93d3cuenlidWx1by5jb20vbWRlZGl0b3I=">Cmd Markdown<i class="fa fa-external-link-alt"></i></span></b></p>
-<ul>
-<li><p><strong>特点</strong>：这是一款功能丰富的在线 Markdown 编辑器，支持云存储，方便在不同设备间同步文档。提供多种主题和模板，可导出为多种格式，还支持数学公式、流程图等高级功能。</p>
-</li>
-<li><p><strong>适用场景</strong>：适合需要在线协作编辑、跨设备使用的场景，如团队文档编写、学术论文撰写等。</p>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<blockquote>
-<p>如须学习更多 Markdown 实用小技巧，可以参考这个 Blog：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZG93bi5jb20uY24vY2hlYXQtc2hlZXQuaHRtbA==">Markdown 教程<i class="fa fa-external-link-alt"></i></span></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Markdown</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>网络工程师考试知识点_01</title>
     <url>https://kfufys.github.io/posts/65522.html</url>
-    <content><![CDATA[<h4 id="一、计算机存储与中断相关"><a href="#一、计算机存储与中断相关" class="headerlink" title="一、计算机存储与中断相关"></a><strong>一、计算机存储与中断相关</strong><span id="more"></span></h4><ol>
+    <content><![CDATA[<img src="https://kfufys.github.io/posts/65522/1.jpg" alt="head-img" width="1200">
+
+<h4 id="一、计算机存储与中断相关"><a href="#一、计算机存储与中断相关" class="headerlink" title="一、计算机存储与中断相关"></a><strong>一、计算机存储与中断相关</strong></h4><ol>
 <li>常用的虚拟存储器由<strong>主存 - 辅存</strong>两级存储器组成。</li>
 <li>中断向量可提供<strong>中断程序的入口地址</strong>。</li>
 <li>DMA工作方式在<strong>主存与外设</strong>之间建立直接的数据通信。</li>
@@ -1549,7 +1271,9 @@
   <entry>
     <title>网络工程师考试知识点_02</title>
     <url>https://kfufys.github.io/posts/65202.html</url>
-    <content><![CDATA[<h4 id="一、事务："><a href="#一、事务：" class="headerlink" title="一、事务："></a><strong>一、事务：</strong></h4><ul>
+    <content><![CDATA[<img src="https://kfufys.github.io/posts/65202/1.jpg" alt="head-img" width="1200">
+
+<h4 id="一、事务："><a href="#一、事务：" class="headerlink" title="一、事务："></a><strong>一、事务：</strong></h4><ul>
 <li><strong>原子性：</strong>事务包含的操作要么全部成功，要么全部失败回滚。</li>
 <li><strong>一致性：</strong>事务执行前后都必须处于一个一致性状态。</li>
 <li><strong>隔离性：</strong>多事务并发执行，任一事务更新操作到成功提交的过程，对其他事务都是不可见的。</li>
@@ -2133,9 +1857,297 @@
       </tags>
   </entry>
   <entry>
+    <title>Markdown教程</title>
+    <url>https://kfufys.github.io/posts/c079e252.html</url>
+    <content><![CDATA[<img src="https://kfufys.github.io/posts/c079e252/1.png" alt="Markdown" width="1200">
+
+<h3 id="一、Markdown简介"><a href="#一、Markdown简介" class="headerlink" title="一、Markdown简介"></a>一、Markdown简介</h3><p><code>Markdown</code> 是一种轻量级标记语言，创始人为约翰·格鲁伯（John Gruber）。<br><code>Markdown</code> 允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的HTML文档。<br><code>Markdown</code> 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。<br><code>Markdown</code> 编写的文档后缀为 .md、.markdown。<br><code>Markdown</code> 是目前互联网上流行的写作语言之一，很多网站平台的文章、博客、论文都是基于它写的。</p>
+<h3 id="二、Markdown优点"><a href="#二、Markdown优点" class="headerlink" title="二、Markdown优点"></a>二、Markdown优点</h3><p>很多人看到【轻量级】【标记】【语言】这些标签就直接放弃了，想着自己学习了非常多的语言，为了记个笔记写个博客还要再学习一门语言吗？实则不然，Markdown的语言非常非常简单，如果想学，10分钟你完全可以学完90%的常用的语法，而且你从此摆脱排版的折磨，属实是强迫症党的福利了。它的优点不仅限于此：</p>
+<ul>
+<li>纯文本编辑，只要是支持 Markdown 编辑的都能获得同样的结果，摆脱排版苦恼</li>
+<li>学习成本低，常用的语法很少，简单易学快速上手</li>
+<li>支持跨平台同步数据</li>
+<li>支持插入图片、视频等</li>
+<li>随时修改，不必担心word等工具出现排版错误</li>
+</ul>
+<h3 id="三、Markdown基本语法"><a href="#三、Markdown基本语法" class="headerlink" title="三、Markdown基本语法"></a>三、Markdown基本语法</h3><h4 id="3-1-标题"><a href="#3-1-标题" class="headerlink" title="3.1 标题"></a>3.1 标题</h4><p>使用 <code>#</code> 标记，可表示1~6级标题， 随 <code>#</code> 的个数递增，一级标题字号最大，六级标题字号最小。  </p>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/2.png" alt="Markdown_Title" width="1200">
+
+<blockquote>
+<p><em><strong>注意</strong></em>：</p>
+<ul>
+<li>最好 <code>#</code> 字符与标题文本中间留一个空格</li>
+<li>标题应该置于行首，如果放入表格中可能无法正确解析</li>
+</ul>
+</blockquote>
+<h4 id="3-2-字体"><a href="#3-2-字体" class="headerlink" title="3.2 字体"></a>3.2 字体</h4><p><code>*</code> 与 <code>_</code> 都可以，1个斜体，2个粗体，3个粗斜体</p>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="emphasis">*这是斜体*</span></span><br><span class="line"><span class="emphasis">_这是斜体_</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**这是粗体**</span></span><br><span class="line"><span class="strong">__这是粗体__</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**<span class="emphasis">*这是粗斜体*</span>**</span></span><br><span class="line"><span class="strong">__<span class="emphasis">_这是粗斜体_</span>__</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/3.png" alt="Markdown_Font" width="1200">
+
+<blockquote>
+<p><em><strong>快捷键</strong></em>：</p>
+<ul>
+<li>加粗 <code>Ctrl+B</code></li>
+<li>斜体 <code>Ctrl+I</code></li>
+</ul>
+</blockquote>
+<h4 id="3-3-换行"><a href="#3-3-换行" class="headerlink" title="3.3 换行"></a>3.3 换行</h4><p>Markdown换行的方式有很多种:</p>
+<ul>
+<li>直接在一句话后敲两个空格</li>
+<li>两句话之间加一个空行</li>
+<li>如果你在编辑的时候，想让一行文字在显示的时候换行，就在中间加<code>&lt;br/&gt;</code></li>
+</ul>
+<p> <strong>示例代码</strong>：</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Hello World  </span><br><span class="line">Hello World</span><br><span class="line"></span><br><span class="line">Hello World</span><br><span class="line"></span><br><span class="line">Hello World</span><br><span class="line"></span><br><span class="line">Hello World<span class="language-xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span>Hello World</span><br></pre></td></tr></table></figure>
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/4.png" alt="Markdown_enter" width="1200">
+
+<h4 id="3-4-引用"><a href="#3-4-引用" class="headerlink" title="3.4 引用"></a>3.4 引用</h4><p>Markdown 中引用通过符号 <code>&gt;</code> 来实现。</p>
+<ul>
+<li><code>&gt;</code> 符号后的空格，可有可无。  </li>
+<li>在引用的区块内，允许换行存在，换行并不会终止引用的区块。</li>
+<li>如果要结束引用，需要一行空白行，来结束引用的区块。</li>
+</ul>
+<p> <strong>示例代码</strong>：</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 这是一个引用</span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/5.png" alt="Markdown_quote1" width="1200">
+
+<blockquote>
+<p><strong>此外，引用还可以嵌套使用</strong>  </p>
+</blockquote>
+<p> <strong>示例代码</strong>：</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 这是一个引用：</span></span><br><span class="line">&gt;&gt; 这是一个引用的引用</span><br><span class="line">&gt;&gt;&gt; 这是一个引用的引用的引用</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/6.png" alt="Markdown_quote2" width="1200">
+
+<h4 id="3-5-链接"><a href="#3-5-链接" class="headerlink" title="3.5 链接"></a>3.5 链接</h4><p>Markdown 中插入链接的使用方式是：  </p>
+<p> <strong>示例代码</strong>：</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> [<span class="string">链接名称</span>](<span class="link">链接地址</span>)</span><br><span class="line"><span class="bullet">2.</span> &lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/7.png" alt="Markdown_link" width="1200">
+
+<h4 id="3-6-图片"><a href="#3-6-图片" class="headerlink" title="3.6 图片"></a>3.6 图片</h4><p>Markdown 中插入图片的使用方式是：  </p>
+<p> <strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片描述，可写可不写，但中括号要有</span>](<span class="link">图片地址，本地链接或者URL地址。</span>)</span><br></pre></td></tr></table></figure>
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/8.png" alt="Markdown_img" width="1200">
+
+<h4 id="3-7-列表"><a href="#3-7-列表" class="headerlink" title="3.7 列表"></a>3.7 列表</h4><p>列表分为有序列表和无序列表</p>
+<ul>
+<li>无序列表，使用<code>*</code>、<code>+</code>、<code>-</code>，再加一个空格作为列表的标记</li>
+<li>有序列表，使用数字并加上<code>.</code>号，再加一个空格作为列表的标记</li>
+</ul>
+<p> <strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">*</span> 无序列表 1</span><br><span class="line"><span class="bullet">+</span> 无序列表 2</span><br><span class="line"><span class="bullet">-</span> 无序列表 3</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 有序列表 1</span><br><span class="line"><span class="bullet">2.</span> 有序列表 2</span><br><span class="line"><span class="bullet">3.</span> 有序列表 3</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/9.png" alt="Markdown_listtable1" width="1200">
+
+<blockquote>
+<p><strong>如果想要控制列表的层级，则需要在列表符号前使用 <code>Tab</code></strong></p>
+</blockquote>
+<p> <strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">+</span> 无序列表 1</span><br><span class="line"><span class="bullet">+</span> 无序列表 2</span><br><span class="line"><span class="bullet">	+</span> 无序列表 2.1</span><br><span class="line"><span class="bullet">	+</span> 无序列表 2.2</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 有序列表 1</span><br><span class="line"><span class="code">	1.1 有序列表 1.1</span></span><br><span class="line"><span class="code">2. 有序列表 2</span></span><br><span class="line"><span class="code">	2.1 有序列表2.1</span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/10.png" alt="Markdown_listtable2" width="1200">
+
+<h4 id="3-8-分割线"><a href="#3-8-分割线" class="headerlink" title="3.8 分割线"></a>3.8 分割线</h4><p>可在一行中用三个 <code>-</code> 、<code>_</code> 或 <code>*</code> 来建立一个分割线。</p>
+<p>*<strong>注意</strong>：在分割线的上面空一行，否则会导致前一行字体放大。</p>
+<p> <strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">#### 使用三个或更多的连字符 -</span></span><br><span class="line"></span><br><span class="line">这是分割线上面的内容。</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">这是分割线下面的内容。</span><br><span class="line"></span><br><span class="line"><span class="section">#### 使用三个或更多的星号 *</span></span><br><span class="line"></span><br><span class="line">上面部分的文本。</span><br><span class="line"></span><br><span class="line"><span class="strong">***</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">下面部分的文本。</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">#### 使用三个或更多的下划线 _</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">分割线之上。</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">___</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">分割线之下。</span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/11.png" alt="Markdown_splitLine" width="1200">
+
+<h4 id="3-9-删除线"><a href="#3-9-删除线" class="headerlink" title="3.9 删除线"></a>3.9 删除线</h4><p>在要添加删除线的文字前后添加两个 <code>~</code>  </p>
+<p> <strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">~~这是要被删除的文字~~</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/12.png" alt="Markdown_strikethrough" width="1200">
+
+<h4 id="3-10-下划线"><a href="#3-10-下划线" class="headerlink" title="3.10 下划线"></a>3.10 下划线</h4><p>在要添加下划线的文字首尾添加 <code>&lt;u&gt;</code>  标签</p>
+<p> <strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">u</span>&gt;</span></span>这是添加下划线的文字<span class="language-xml"><span class="tag">&lt;/<span class="name">u</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/13.png" alt="Markdown_underscore" width="1200">
+
+<h4 id="3-11-代码块"><a href="#3-11-代码块" class="headerlink" title="3.11 代码块"></a>3.11 代码块</h4><p>Markdown中代码块有两种：  </p>
+<ul>
+<li>如果在一行内需要引用代码，只需要用两个反引号引起来。</li>
+<li>如果在一个块内引用代码，则在要引用的代码块的前一行和后一行使用三个反引号，同时在前一个反引号后写入代码语言。</li>
+</ul>
+<p> <strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">### Code Blocks</span></span><br><span class="line"><span class="code">`Hello World`</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">name</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="string">f&quot;Hello, <span class="subst">&#123;name&#125;</span>!&quot;</span></span><br><span class="line"></span><br><span class="line">message = greet(<span class="string">&quot;Alice&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/14.png" alt="Markdown_CodeBlocks" width="1200">
+
+<h4 id="3-12-表格"><a href="#3-12-表格" class="headerlink" title="3.12 表格"></a>3.12 表格</h4><p>表格使用<code>|</code>来分割不同的单元格，使用<code>-</code>来分隔表头和其他行</p>
+<ul>
+<li><code>:-</code>：将表头及单元格内容左对齐</li>
+<li><code>-:</code>：将表头及单元格内容右对齐</li>
+<li><code>:-:</code>：将表头及单元格内容居中</li>
+</ul>
+<p> <strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">| 左对齐 | 右对齐 | 居中对齐 |</span><br><span class="line">| :----- | -----: | :------: |</span><br><span class="line">| 内容1  |  内容2 |  内容3   |</span><br><span class="line">| 内容4  |  内容5 |  内容6   |</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/15.png" alt="Markdown_Table" width="1200">
+
+<h4 id="3-13-脚注"><a href="#3-13-脚注" class="headerlink" title="3.13 脚注"></a>3.13 脚注</h4><p>脚注主要由两部分构成：在正文中标记脚注的位置和在文档末尾定义脚注的内容。</p>
+<ul>
+<li><strong>在正文中标记脚注</strong>：使用 [^标记名] 来标记脚注的位置，其中 “标记名” 可以是数字、字母或其他字符组合，但在同一个文档里不能重复。</li>
+<li><strong>在文档末尾定义脚注内容</strong>：使用 [^标记名]: 脚注具体内容 来给出脚注的详细说明，这里的 “标记名” 要和正文中的保持一致。</li>
+</ul>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">使用 Markdown[^1]可以效率的书写文档, 直接转换成 HTML[^2], 你可以使用 Typora[^T] 编辑器进行书写。</span><br><span class="line"></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">Markdown 是一种轻量级标记语言，它使用简单的文本格式来标记文本结构，能让写作者专注于内容创作，提高书写效率。</span></span><br><span class="line">[<span class="symbol">^2</span>]: <span class="link">Markdown 可以借助多种工具，如 Pandoc 等，方便快捷地转换为 HTML 格式，便于在网页上展示。</span></span><br><span class="line">[<span class="symbol">^T</span>]: <span class="link">Typora 是一款简洁易用的 Markdown 编辑器，采用所见即所得的编辑模式，能实时预览 Markdown 渲染效果，提升书写体验。</span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/16.png" alt="Markdown_footnotes" width="1200">
+
+<h4 id="3-14-特殊符号"><a href="#3-14-特殊符号" class="headerlink" title="3.14 特殊符号"></a>3.14 特殊符号</h4><p>对于Markdown中的语法符号，符号前面加反斜线<code>\</code>即可以显示符号本身。  </p>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">这是一个普通的 \# 符号，并非标题标记。</span><br><span class="line">这里有一个转义后的 \* 星号和一个 \_ 下划线。</span><br><span class="line">这是一个普通的 \- 连字符，不是列表项。</span><br><span class="line">在代码里可能会用到 \` 反引号。</span><br><span class="line">这是一个转义后的 \( 左括号和 \) 右括号，以及 \[ 左方括号和 \] 右方括号。</span><br><span class="line">这里有一个转义后的 \| 管道符号。</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/17.png" alt="Markdown_escaped character" width="1200">
+
+<h3 id="四、Markdown高级语法"><a href="#四、Markdown高级语法" class="headerlink" title="四、Markdown高级语法"></a>四、Markdown高级语法</h3><h4 id="4-1-制作待办事项"><a href="#4-1-制作待办事项" class="headerlink" title="4.1 制作待办事项"></a>4.1 制作待办事项</h4><p>用 <code>Markdown</code> 制作待办事项，格式为：<code>-[]</code> 表示未完成；<code>-[x]</code>表示已完成 </p>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> [ ] 支持以 <span class="code">`PDF`</span> 格式导出文稿</span><br><span class="line"><span class="bullet">-</span> [ ] 改进 <span class="code">`Cmd`</span> 渲染算法，使用局部渲染技术提高渲染效率</span><br><span class="line"><span class="bullet">-</span> [x] 新增 <span class="code">`Todo`</span> 列表功能</span><br><span class="line"><span class="bullet">-</span> [x] 修复 <span class="code">`LaTex`</span> 公式渲染问题</span><br><span class="line"><span class="bullet">-</span> [x] 新增 <span class="code">`LaTex`</span> 公式编号功能</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/4-1.png" alt="Markdown_To-do list" width="1200">
+
+<h4 id="4-2-书写公式"><a href="#4-2-书写公式" class="headerlink" title="4.2 书写公式"></a>4.2 书写公式</h4><p>Markdown支持书写公式，例如书写一个纳维 - 斯托克斯方程。<br><code>$$</code>表示整行公式  </p>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">对于粘性不可压缩流体，纳维 - 斯托克斯方程可以表示为：</span><br><span class="line">$$</span><br><span class="line">\rho \left( \frac&#123;\partial \mathbf&#123;v&#125;&#125;&#123;\partial t&#125; + \mathbf&#123;v&#125; \cdot \nabla \mathbf&#123;v&#125; \right) = -\nabla p + \mu \nabla^2 \mathbf&#123;v&#125; + \mathbf&#123;f&#125;</span><br><span class="line">$$</span><br><span class="line">其中 $\rho$ 是流体密度，$\mathbf&#123;v&#125;$ 是流体速度矢量，$t$ 是时间，$p$ 是压力，$\mu$ 是动力粘度，$\nabla$ 是梯度算子，$\nabla^2$ 是拉普拉斯算子，$\mathbf&#123;f&#125;$ 是作用在流体上的外力密度。</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/4-2.png" alt="Markdown_To-do list" width="1200">
+
+<h4 id="4-3-绘制流程图"><a href="#4-3-绘制流程图" class="headerlink" title="4.3 绘制流程图"></a>4.3 绘制流程图</h4><p><strong>代码解释</strong>：</p>
+<ul>
+<li><code>graph LR</code>：表示这是一个从左到右（Left to Right）方向的流程图。</li>
+<li><code>classDef</code>：用于定义不同类型节点的样式。</li>
+<li>各个节点（如 <code>A</code>、<code>B</code> 等）通过箭头连接，并且可以添加条件判断（如 <code>|是|</code>、<code>|否|</code>）。</li>
+</ul>
+<p><strong>示例代码</strong>：（在支持 Mermaid 的环境中）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;graph LR</span><br><span class="line">    classDef startend fill:#F5EBFF,stroke:#BE8FED,stroke-width:2px;</span><br><span class="line">    classDef process fill:#E5F6FF,stroke:#73A6FF,stroke-width:2px;</span><br><span class="line">    classDef decision fill:#FFF6CC,stroke:#FFBC52,stroke-width:2px;</span><br><span class="line">    </span><br><span class="line">    A([开始]):::startend --&gt; B&#123;是否需要帮助?&#125;:::decision</span><br><span class="line">    B --&gt;|是| C(寻求帮助):::process</span><br><span class="line">    B --&gt;|否| D(自行解决):::process</span><br><span class="line">    C --&gt; E(问题解决):::process</span><br><span class="line">    D --&gt; E</span><br><span class="line">    E --&gt; F([结束]):::startend&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/4-3.png" alt="Markdown_flow chart" width="1200">
+
+<h4 id="4-4-绘制序列图"><a href="#4-4-绘制序列图" class="headerlink" title="4.4 绘制序列图"></a>4.4 绘制序列图</h4><p><strong>代码解释</strong>：</p>
+<ul>
+<li><code>participant</code>：用于定义序列图中的参与者。</li>
+<li><code>-&gt;&gt;</code> 表示实线箭头（主动消息），<code>--&gt;&gt;</code> 表示虚线箭头（返回消息）。</li>
+</ul>
+<p><strong>示例代码</strong>：（在支持 Mermaid 的环境中）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;sequenceDiagram</span><br><span class="line">    participant User</span><br><span class="line">    participant System</span><br><span class="line">    User-&gt;&gt;System: 发起请求</span><br><span class="line">    System--&gt;&gt;User: 请求接收确认</span><br><span class="line">    System-&gt;&gt;System: 处理请求</span><br><span class="line">    System--&gt;&gt;User: 返回处理结果&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
+<img src="https://kfufys.github.io/posts/c079e252/4-4.png" alt="Markdown_sequence diagram" width="1200">
+
+<h4 id="4-5-绘制甘特图"><a href="#4-5-绘制甘特图" class="headerlink" title="4.5 绘制甘特图"></a>4.5 绘制甘特图</h4><p><strong>代码解释</strong>：</p>
+<ul>
+<li><code>title</code>：设置甘特图的标题。</li>
+<li><code>dateFormat</code>：指定日期的格式。</li>
+<li><code>section</code>：划分不同的项目阶段，每个任务通过任务名、任务标识（如 <code>a1</code>）、开始日期和持续时间来定义。</li>
+</ul>
+<p><strong>示例代码</strong>：（在支持 Mermaid 的环境中）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;gantt</span><br><span class="line">    title 项目进度甘特图</span><br><span class="line">    dateFormat  YYYY-MM-DD</span><br><span class="line">    section 项目阶段</span><br><span class="line">    需求分析           :a1, 2024-01-01, 30d</span><br><span class="line">    设计阶段           :after a1, 20d</span><br><span class="line">    开发阶段           :after a2, 60d</span><br><span class="line">    测试阶段           :after a3, 20d</span><br><span class="line">    上线发布           :after a4, 1d&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/4-5.png" alt="Markdown_Gantt chart" width="1200">
+
+<h4 id="4-6-内嵌Html"><a href="#4-6-内嵌Html" class="headerlink" title="4.6 内嵌Html"></a>4.6 内嵌Html</h4><p>Markdown 允许直接嵌入 HTML 标签，在 Markdown 文件中编写 HTML 代码时，Markdown 解析器会将 HTML 代码原样保留并按照 HTML 的规则进行渲染。不过要注意，不同的 Markdown 解析器对 HTML 的支持可能会有细微差异。</p>
+<p><strong>示例代码</strong>：</p>
+<p>使用 HTML 的 <code>&lt;a&gt;</code> 标签结合 CSS 样式可以创建链接按钮。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://kfufys.github.io&quot;</span> <span class="attr">style</span>=<span class="string">&quot;display: inline-block; background-color: #007BFF; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;&quot;</span>&gt;</span>访问示例网站<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/4-6.png" alt="Markdown_Embedded Html" width="1200">
+
+<h3 id="五、Markdown工具"><a href="#五、Markdown工具" class="headerlink" title="五、Markdown工具"></a>五、Markdown工具</h3><p>Markdown 编辑器有很多，它们在功能、适用平台、界面设计等方面各有特色，以下为你介绍一些常用的 Markdown 编辑器：</p>
+<h4 id="5-1-通用跨平台编辑器"><a href="#5-1-通用跨平台编辑器" class="headerlink" title="5.1 通用跨平台编辑器"></a>5.1 通用跨平台编辑器</h4><ul>
+<li><p><b><span class="exturl" data-url="aHR0cHM6Ly90eXBvcmFpby5jbi8=">Typora<i class="fa fa-external-link-alt"></i></span></b></p>
+<ul>
+<li><p><strong>特点</strong>：这是一款简洁美观的 Markdown 编辑器，最大的亮点是采用所见即所得的编辑模式，支持多平台，包括 Windows、Mac 和 Linux。</p>
+</li>
+<li><p><strong>适用场景</strong>：适合日常写作、博客撰写、笔记记录等场景，能让用户专注于内容创作。</p>
+</li>
+</ul>
+</li>
+<li><p><b><span class="exturl" data-url="aHR0cHM6Ly92c2NvZGUuanMuY24vRG93bmxvYWQ=">Visual Studio Code<i class="fa fa-external-link-alt"></i></span></b></p>
+<ul>
+<li><p><strong>特点</strong>：作为一款强大的开源代码编辑器，VS Code 通过安装 Markdown 相关的扩展插件，可实现丰富的 Markdown 编辑功能，如语法高亮、自动补全、预览等。支持 Git 集成，方便进行版本控制。</p>
+</li>
+<li><p><strong>适用场景</strong>：对于开发者来说，在编写代码文档、技术博客时使用 VS Code 非常便捷，可与开发工作无缝衔接。</p>
+</li>
+</ul>
+</li>
+<li><p><b><span class="exturl" data-url="aHR0cHM6Ly9vYnNpZGlhbi5tZA==">Obsidian<i class="fa fa-external-link-alt"></i></span></b></p>
+<ul>
+<li><p><strong>特点</strong>：它是一款基于本地文件的知识管理和笔记应用，支持 Markdown 格式。具有强大的链接和图谱功能，可以方便地建立笔记之间的关联，形成个人知识网络。</p>
+</li>
+<li><p><strong>适用场景</strong>：适合构建个人知识体系、做学习笔记、进行项目规划等，有助于知识的整理和沉淀。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-2-在线编辑器"><a href="#5-2-在线编辑器" class="headerlink" title="5.2 在线编辑器"></a>5.2 在线编辑器</h4><ul>
+<li><p><b><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29t">GitHub<i class="fa fa-external-link-alt"></i></span></b></p>
+<ul>
+<li><p><strong>特点</strong>：作为全球最大的代码托管平台，GitHub 内置了 Markdown 编辑器，在创建和编辑 README 文件、Wiki 页面时可直接使用。支持 Markdown 语法，方便开发者展示项目信息和文档。</p>
+</li>
+<li><p><strong>适用场景</strong>：对于开发者来说，在 GitHub 上使用 Markdown 编写项目文档是非常常见的操作，便于与团队成员和其他开发者共享信息。</p>
+</li>
+</ul>
+</li>
+<li><p><b><span class="exturl" data-url="aHR0cHM6Ly93d3cuenlidWx1by5jb20vbWRlZGl0b3I=">Cmd Markdown<i class="fa fa-external-link-alt"></i></span></b></p>
+<ul>
+<li><p><strong>特点</strong>：这是一款功能丰富的在线 Markdown 编辑器，支持云存储，方便在不同设备间同步文档。提供多种主题和模板，可导出为多种格式，还支持数学公式、流程图等高级功能。</p>
+</li>
+<li><p><strong>适用场景</strong>：适合需要在线协作编辑、跨设备使用的场景，如团队文档编写、学术论文撰写等。</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>如须学习更多 Markdown 实用小技巧，可以参考这个 Blog：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZG93bi5jb20uY24vY2hlYXQtc2hlZXQuaHRtbA==">Markdown 教程<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Markdown</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>终极 Nginx 配置指南（超详细）</title>
     <url>https://kfufys.github.io/posts/59687.html</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p>对于自己上线项目的前端来说，nginx也是必须要了解和熟悉的，查了很多的nginx文章，看着写的都很详细，但是却没有了整体的概念。这里就重新梳理一遍，也理清思路。</p>
+    <content><![CDATA[<img src="https://kfufys.github.io/posts/59687/nginx-logo.png" alt="head-img" width="1200">
+
+
+
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p>对于自己上线项目的前端来说，nginx也是必须要了解和熟悉的，查了很多的nginx文章，看着写的都很详细，但是却没有了整体的概念。这里就重新梳理一遍，也理清思路。</p>
 <p>我们在安装nginx之后，会自动生成很多的文件，但是nginx.conf这个文件是我们的核心，如何去正确的修改和优化它是nginx的核心。</p>
 <p>首先我们可以先看下原本的配置，你会觉得无所适从，因为感觉这个鬼东西也太多了吧。而且感觉根本就不理解，也不知道该怎么写。下面，就一步一步的教你如何入门到熟悉</p>
 <h3 id="一、nginx-conf原本配置到解释"><a href="#一、nginx-conf原本配置到解释" class="headerlink" title="一、nginx.conf原本配置到解释"></a><strong>一、<code>nginx.conf</code>原本配置到解释</strong></h3><p>看到这个118行是不是觉得有点害怕</p>
@@ -2340,29 +2352,33 @@
   <entry>
     <title>About</title>
     <url>https://kfufys.github.io/posts/7477.html</url>
-    <content><![CDATA[<h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><hr>
-<ul>
-<li><p>我是<strong>窦长友</strong>，一名摄影爱好者，编程小渣渣~~</p>
-</li>
-<li><p>目前就读于<strong>开封大学</strong>….</p>
-</li>
-</ul>
-<h3 id="我的爱好"><a href="#我的爱好" class="headerlink" title="我的爱好"></a>我的爱好</h3><hr>
-<p>热衷于研究所有与计算机相关的事物，包括：</p>
-<ul>
-<li><p><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。 </p>
-</li>
-<li><p><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。 </p>
-</li>
-<li><p><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</p>
-</li>
-<li><p><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</p>
-</li>
-</ul>
-<h3 id="我的白日梦"><a href="#我的白日梦" class="headerlink" title="我的白日梦"></a>我的白日梦</h3><hr>
-<p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
-<p>要是大家有什么好的建议，欢迎告知呀！</p>
-]]></content>
+    <content><![CDATA[<head>
+    <meta charset="UTF-8">
+    <style>
+        strong {
+            color: #d9363f;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./about//1.png" alt="head-img" width="1200">
+    <br>
+    <br>
+    <p><b>Hello👋</b><br>我是&ensp;<a href="https://kfufys.github.io/posts/7477.html"><strong>窦长友</strong></a>，一名摄影爱好者，编程小渣渣~~</p>
+    <p>目前就读于&ensp;<a href="https://www.kfu.edu.cn"><strong>开封大学</strong></a>....</p>
+    <h3>我的爱好</h3>
+        <p>热衷于研究所有与计算机相关的事物，包括：</p>
+        <ul>
+            <li><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。</li>
+            <li><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。</li>
+            <li><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</li>
+            <li><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</li>
+        </ul>
+        <h3>我的白日梦</h3>
+        <p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
+        <p>祝大家在我的小站玩的高兴！😃</p>
+</body>]]></content>
       <categories>
         <category>About</category>
       </categories>
@@ -2374,7 +2390,9 @@
   <entry>
     <title>站点更新日志</title>
     <url>https://kfufys.github.io/posts/7178.html</url>
-    <content><![CDATA[<h3 id="2024-11-16"><a href="#2024-11-16" class="headerlink" title="2024.11.16"></a>2024.11.16</h3><blockquote>
+    <content><![CDATA[<img src="https://kfufys.github.io/posts/7178/1.png" alt="head-img" width="1200">
+
+<h3 id="2024-11-16"><a href="#2024-11-16" class="headerlink" title="2024.11.16"></a>2024.11.16</h3><blockquote>
 <p><strong>网站初次上线</strong></p>
 <p><strong>域名</strong>：<span class="exturl" data-url="aHR0cHM6Ly9kY3l5ZC5naXRodWIuaW8vaGV4b193ZWJzaXRlcw==">https://dcyyd.github.io/hexo_websites<i class="fa fa-external-link-alt"></i></span></p>
 <p><strong>详细信息</strong>：基于 hexo和 Github搭建的静态 web blog站点，成功托管至Github Pages页，网站主题基于开源 Next 主题，并对其进行了一些优化。</p>
@@ -2399,6 +2417,11 @@
 <p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
 <p><strong>详细信息</strong>：优化页面 Title Tag 含核心关键词，更新 Meta Description 文案吸引点击，为图片添 alt 属性助搜索引擎理解，优化内链结构均衡权重。</p>
 </blockquote>
+<h3 id="2025-02-05"><a href="#2025-02-05" class="headerlink" title="2025.02.05"></a>2025.02.05</h3><blockquote>
+<p><strong>对网站 meta 标签信息及站点 image url 进行一些优化</strong></p>
+<p><strong>域名</strong>：<a href="kfufys.github.io">kfufys.github.io</a></p>
+<p><strong>详细信息</strong>：优化 meta 站点描述标签及站点关键字标签，解决先前文章图片依赖图床导致加载慢及链接失效问题。</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>站点日志</category>
@@ -2411,7 +2434,9 @@
   <entry>
     <title>基于GitHub+hexo部署静态Blog</title>
     <url>https://kfufys.github.io/posts/60795.html</url>
-    <content><![CDATA[<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a><strong>一、前言</strong></h3><p>本文详细介绍了如何使用Hexo框架搭建一个个人博客，并将其部署到GitHub Pages上。主要内容包括：</p>
+    <content><![CDATA[<img src="https://kfufys.github.io/posts/60795/1.png" alt="head-img" width="1200">
+
+<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a><strong>一、前言</strong></h3><p>本文详细介绍了如何使用Hexo框架搭建一个个人博客，并将其部署到GitHub Pages上。主要内容包括：</p>
 <ul>
 <li><strong>环境准备：</strong>安装Node.js和Git</li>
 <li><strong>配置Git和GitHub：</strong>设置SSH密钥，创建GitHub仓库</li>
