@@ -79,138 +79,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Google Gemini 2.0 怎么用?</title>
-    <url>https://kfufys.github.io/posts/2266.html</url>
-    <content><![CDATA[<img src="https://kfufys.github.io/posts/2266/1.png" alt="head.png">
-
-<p>最近，<code>Google</code>悄然发布了<code>Gemini 2.0</code>，一款功能强大的AI助手，而且完全免费！</p>
-<p>相比<code>ChatGPT Plus</code>每月<code>20</code>美元的订阅费，这简直是给数字时代的生产力工作者送来的一份大礼。</p>
-<p>让我们一起来看看这款<code>AI</code>助手究竟有多强大，以及如何充分利用它提升工作效率。</p>
-<h2 id="一、核心功能：远超想象的生产力工具"><a href="#一、核心功能：远超想象的生产力工具" class="headerlink" title="一、核心功能：远超想象的生产力工具"></a><strong>一、核心功能：远超想象的生产力工具</strong></h2><h3 id="1-超强的文本处理能力："><a href="#1-超强的文本处理能力：" class="headerlink" title="1. 超强的文本处理能力："></a><strong>1. 超强的文本处理能力：</strong></h3><p><code>Gemini 2.0</code>最令人印象深刻的是它对文字的理解和生成能力。无论是写文案、做内容规划，还是进行文本分析，它都能精准理解你的需求。</p>
-<p>实际体验：我让它帮我写一篇小红书笔记，只需简单说明主题，它就能生成一篇地道的种草文，连常用的表情符号都安排得恰到好处。(文后有具体的代码示范)</p>
-<h3 id="2-屌炸天的实时音视频通话："><a href="#2-屌炸天的实时音视频通话：" class="headerlink" title="2. 屌炸天的实时音视频通话："></a><strong>2. 屌炸天的实时音视频通话：</strong></h3><p>这可能是最革命性的功能 - 你可以直接与AI进行视频通话！想象一下：</p>
-<ul>
-<li>做菜时遇到问题？打开摄像头让AI指导 </li>
-<li>学习编程卡壳？共享屏幕让AI帮你分析代码 </li>
-<li>健身动作不标准？AI可以实时纠正你的姿势</li>
-</ul>
-<h3 id="3-超长上下文理解"><a href="#3-超长上下文理解" class="headerlink" title="3.  超长上下文理解"></a><strong>3.  超长上下文理解</strong></h3><p>支持<code>200</code>万<code>token</code>的上下文处理能力</p>
-<blockquote>
-<p>一本像《红楼梦》这样经典的中文小说，字数约为百万字，转换为<code>token</code>后可能需要约<code>100</code>万<code>token</code>。因此，<code>200</code>万<code>token</code>大约可以处理<code>2</code>本这样的长篇小说，或者<code>10</code>到<code>20</code>本字数较少的普通小说<br>这意味着什么？</p>
-</blockquote>
-<p><strong>你可以：</strong></p>
-<ul>
-<li>上传整本电子书请它总结 </li>
-<li>导入长篇论文让它分析 </li>
-<li>输入完整项目文档进行梳理</li>
-</ul>
-<h2 id="二、上手指南：三步开启AI效率之旅"><a href="#二、上手指南：三步开启AI效率之旅" class="headerlink" title="二、上手指南：三步开启AI效率之旅"></a><strong>二、上手指南：三步开启AI效率之旅</strong></h2><h3 id="第一步：访问平台"><a href="#第一步：访问平台" class="headerlink" title="第一步：访问平台"></a><strong>第一步：访问平台</strong></h3><p>打开<code>Google AI Studio</code>（<span class="exturl" data-url="aHR0cHM6Ly9haXN0dWRpby5nb29nbGUuY29tL2FwcC9wcm9tcHRzL25ld19jaGF0JUVGJUJDJTg5">https://aistudio.google.com/app/prompts/new_chat）<i class="fa fa-external-link-alt"></i></span><br><strong>注意：</strong>需要确保网络环境流畅</p>
-<img src="https://kfufys.github.io/posts/2266/2.png" alt="2.png">
-
-<h3 id="第二步：选择模型"><a href="#第二步：选择模型" class="headerlink" title="第二步：选择模型"></a><strong>第二步：选择模型</strong></h3><ul>
-<li><p>推荐选择<code>Gemini experimental 1206</code>模型，这是目前性能最强的版本 </p>
-</li>
-<li><p>如果追求速度，可以选择<code>Gemini 2.0 Flash</code>版本</p>
-</li>
-</ul>
-<img src="https://kfufys.github.io/posts/2266/3.png" alt="3.png">
-
-<h3 id="第三步：开始使用"><a href="#第三步：开始使用" class="headerlink" title="第三步：开始使用"></a><strong>第三步：开始使用</strong></h3><ul>
-<li>文字对话：直接输入问题即可 </li>
-<li>视频通话：点击左上角”实时流”按钮 </li>
-<li>视频分析：选择<code>starter apps</code>中的视频分析器</li>
-</ul>
-<p><strong>通过屏幕共享提示获取实时回答的例子:</strong>  </p>
-<img src="https://kfufys.github.io/posts/2266/4.png" alt="4.png">
-
-
-
-<h2 id="三、使用技巧：让AI更懂你"><a href="#三、使用技巧：让AI更懂你" class="headerlink" title="三、使用技巧：让AI更懂你"></a><strong>三、使用技巧：让AI更懂你</strong></h2><ul>
-<li><strong>提问技巧：</strong>明确你的目标、提供具体场景、适当补充细、分步骤提问</li>
-</ul>
-<ul>
-<li><p>如果你需要更多场景更多加精确的提示词可以使用<code>Prompt集合</code>这个免费的提示词微信小程序：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#小程序://Prompt集合/uILcjIITicfkqFC</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>视频通话目前仅支持英文回答，但是他可以听得懂中文 ，  可配合翻译软件使用 ，  如遇到日语回复，输入”Please speak in English”即可</li>
-</ul>
-</li>
-</ul>
-<h2 id="四、实用场景推荐"><a href="#四、实用场景推荐" class="headerlink" title="四、实用场景推荐"></a><strong>四、实用场景推荐</strong></h2><ul>
-<li><p><strong>内容创作者：</strong>文案撰写、选题规划、视频脚本 </p>
-</li>
-<li><p><strong>程序开发者：</strong>代码审查、问题诊断、算法优化 </p>
-</li>
-<li><p><strong>学习者：</strong>课程笔记整理、知识点讲解、习题解析</p>
-</li>
-</ul>
-<h2 id="五、实战示例，代码展示"><a href="#五、实战示例，代码展示" class="headerlink" title="五、实战示例，代码展示"></a><strong>五、实战示例，代码展示</strong></h2><p><code>Gemini 2.0 API </code>目前提供了官方 <code>sdk</code>  地址:  <code>https://ai.google.dev/gemini-api/docs/sdks</code></p>
-<p><strong>下面是 python的示范:</strong></p>
-<h3 id="1-安装依赖"><a href="#1-安装依赖" class="headerlink" title="1.  安装依赖"></a><strong>1.  安装依赖</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install google-genai</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-导入必要库"><a href="#2-导入必要库" class="headerlink" title="2.  导入必要库"></a><strong>2.  导入必要库</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> google <span class="keyword">import</span> genai</span><br><span class="line"><span class="keyword">from</span> google.genai <span class="keyword">import</span> types</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-初始化客户端"><a href="#3-初始化客户端" class="headerlink" title="3.  初始化客户端"></a><strong>3.  初始化客户端</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用API密钥初始化</span></span><br><span class="line">client = genai.Client(api_key=<span class="string">&#x27;YOUR_API_KEY&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="4-基础使用方法"><a href="#4-基础使用方法" class="headerlink" title="4.  基础使用方法"></a><strong>4.  基础使用方法</strong></h3><p><strong>4.1 简单文本生成：</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 基础文本生成</span></span><br><span class="line">response = client.models.generate_content(</span><br><span class="line">    model=<span class="string">&#x27;gemini-1.5-pro-002&#x27;</span>,  <span class="comment"># 选择模型版本</span></span><br><span class="line">    contents=<span class="string">&#x27;用简单的话解释什么是人工智能&#x27;</span></span><br><span class="line">)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
-
-<p><strong>4.2 结构化提示：</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用结构化提示获得更精确的回答</span></span><br><span class="line">prompt = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">分析以下产品的优缺点:</span></span><br><span class="line"><span class="string">产品：智能手表</span></span><br><span class="line"><span class="string">要求：</span></span><br><span class="line"><span class="string">1. 列出3个主要优点</span></span><br><span class="line"><span class="string">2. 列出2个主要缺点</span></span><br><span class="line"><span class="string">3. 给出总体评价</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">response = client.models.generate_content(</span><br><span class="line">    model=<span class="string">&#x27;gemini-1.5-pro-002&#x27;</span>,</span><br><span class="line">    contents=prompt</span><br><span class="line">)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
-
-<p><strong>4.3 多轮对话：</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建聊天会话</span></span><br><span class="line">chat = client.models.start_chat(model=<span class="string">&#x27;gemini-1.5-pro-002&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 发送消息并获取回复</span></span><br><span class="line">response = chat.send_message(<span class="string">&quot;你好，我想学习Python编程&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 继续对话</span></span><br><span class="line">response = chat.send_message(<span class="string">&quot;可以给我一个简单的开始项目吗？&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-高级功能"><a href="#5-高级功能" class="headerlink" title="5. 高级功能"></a><strong>5. 高级功能</strong></h3><p><strong>5.1  图片分析：</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">analyze_image</span>(<span class="params">image_path, prompt</span>):</span><br><span class="line">    image = Image.<span class="built_in">open</span>(image_path)</span><br><span class="line">    response = client.models.generate_content(</span><br><span class="line">        model=<span class="string">&#x27;gemini-1.5-pro-002&#x27;</span>,</span><br><span class="line">        contents=[</span><br><span class="line">            <span class="string">&quot;分析这张图片&quot;</span>,</span><br><span class="line">            image</span><br><span class="line">        ]</span><br><span class="line">    )</span><br><span class="line">    <span class="keyword">return</span> response.text</span><br></pre></td></tr></table></figure>
-
-<p><strong>5.2 代码生成与分析：</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 代码生成示例</span></span><br><span class="line">code_prompt = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">用Python写一个简单的网络爬虫，要求：</span></span><br><span class="line"><span class="string">1. 使用requests库</span></span><br><span class="line"><span class="string">2. 获取网页标题</span></span><br><span class="line"><span class="string">3. 包含错误处理</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">response = client.models.generate_content(</span><br><span class="line">    model=<span class="string">&#x27;gemini-1.5-pro-002&#x27;</span>,</span><br><span class="line">    contents=code_prompt</span><br><span class="line">)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
-
-<p><strong>5.3 参数控制：</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用生成参数控制输出</span></span><br><span class="line">response = client.models.generate_content(</span><br><span class="line">    model=<span class="string">&#x27;gemini-1.5-pro-002&#x27;</span>,</span><br><span class="line">    contents=<span class="string">&#x27;写一个短故事&#x27;</span>,</span><br><span class="line">    generation_config=&#123;</span><br><span class="line">        <span class="string">&#x27;temperature&#x27;</span>: <span class="number">0.7</span>,  <span class="comment"># 控制创造性</span></span><br><span class="line">        <span class="string">&#x27;max_output_tokens&#x27;</span>: <span class="number">500</span>,  <span class="comment"># 控制长度</span></span><br><span class="line">        <span class="string">&#x27;top_p&#x27;</span>: <span class="number">0.8</span>,  <span class="comment"># 控制多样性</span></span><br><span class="line">    &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="六、最佳实践"><a href="#六、最佳实践" class="headerlink" title="六、最佳实践"></a><strong>六、最佳实践</strong></h2><h3 id="1-错误处理"><a href="#1-错误处理" class="headerlink" title="1.  错误处理"></a><strong>1.  错误处理</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    response = client.models.generate_content(</span><br><span class="line">        model=<span class="string">&#x27;gemini-1.5-pro-002&#x27;</span>,</span><br><span class="line">        contents=<span class="string">&#x27;你的提示词&#x27;</span></span><br><span class="line">    )</span><br><span class="line">    <span class="built_in">print</span>(response.text)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;发生错误: <span class="subst">&#123;<span class="built_in">str</span>(e)&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-流式输出"><a href="#2-流式输出" class="headerlink" title="2.  流式输出"></a><strong>2.  流式输出</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取流式响应</span></span><br><span class="line">response = client.models.generate_content(</span><br><span class="line">    model=<span class="string">&#x27;gemini-1.5-pro-002&#x27;</span>,</span><br><span class="line">    contents=<span class="string">&#x27;写一篇文章&#x27;</span>,</span><br><span class="line">    stream=<span class="literal">True</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-逐步打印响应"><a href="#3-逐步打印响应" class="headerlink" title="3.  逐步打印响应"></a><strong>3.  逐步打印响应</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> chunk <span class="keyword">in</span> response:</span><br><span class="line">    <span class="built_in">print</span>(chunk.text, end=<span class="string">&#x27;&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="小红书种草文案"><a href="#小红书种草文案" class="headerlink" title="小红书种草文案"></a><strong>小红书种草文案</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 写一篇小红书种草文案</span></span><br><span class="line">prompt = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">请以种草博主的身份写一篇小红书文案，主题是某个生产力工具。要求：</span></span><br><span class="line"><span class="string">1. 标题吸引人</span></span><br><span class="line"><span class="string">2. 内容真实可信</span></span><br><span class="line"><span class="string">3. 加入表情符号</span></span><br><span class="line"><span class="string">4. 分点描述优势</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Gemini回复示例</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">💫革命性效率工具｜我用它一周省下10小时 </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">上周发现了一个神器，真的让我的工作效率直接起飞！🚀 </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">先说重点：</span></span><br><span class="line"><span class="string">✨完全免费</span></span><br><span class="line"><span class="string">✨界面超简洁</span></span><br><span class="line"><span class="string">✨上手只需5分钟</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">从此再也不用每天: </span></span><br><span class="line"><span class="string">📝手动整理笔记</span></span><br><span class="line"><span class="string">📊费力做数据分析</span></span><br><span class="line"><span class="string">📅纠结日程安排</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#效率工具 #工作技巧 #职场神器</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="代码审查示例"><a href="#代码审查示例" class="headerlink" title="代码审查示例"></a><strong>代码审查示例</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 让Gemini审查代码</span></span><br><span class="line">code_review_prompt = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">请审查以下Python代码，指出潜在问题和优化建议：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def calculate_average(numbers):</span></span><br><span class="line"><span class="string">    total = 0</span></span><br><span class="line"><span class="string">    count = 0</span></span><br><span class="line"><span class="string">    for num in numbers:</span></span><br><span class="line"><span class="string">        total += num</span></span><br><span class="line"><span class="string">        count += 1</span></span><br><span class="line"><span class="string">    return total/count</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">data = [1,2,3,4,5]</span></span><br><span class="line"><span class="string">result = calculate_average(data)</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Gemini可能的回复</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">代码审查结果：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">1. 错误处理：</span></span><br><span class="line"><span class="string">- 需添加空列表检查</span></span><br><span class="line"><span class="string">- 应处理除零异常</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">2. 性能优化：</span></span><br><span class="line"><span class="string">- 可使用sum()和len()替代循环</span></span><br><span class="line"><span class="string">- count变量可直接用len()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">优化后的代码：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def calculate_average(numbers):</span></span><br><span class="line"><span class="string">    if not numbers:</span></span><br><span class="line"><span class="string">        raise ValueError(&quot;Cannot calculate average of empty list&quot;)</span></span><br><span class="line"><span class="string">    return sum(numbers) / len(numbers)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 使用示例</span></span><br><span class="line"><span class="string">try:</span></span><br><span class="line"><span class="string">    data = [1,2,3,4,5]</span></span><br><span class="line"><span class="string">    result = calculate_average(data)</span></span><br><span class="line"><span class="string">    print(f&quot;Average: &#123;result&#125;&quot;)</span></span><br><span class="line"><span class="string">except ValueError as e:</span></span><br><span class="line"><span class="string">    print(f&quot;Error: &#123;e&#125;&quot;)</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="数据分析示例"><a href="#数据分析示例" class="headerlink" title="数据分析示例"></a><strong>数据分析示例</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 让Gemini分析数据</span></span><br><span class="line">data_analysis_prompt = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">分析以下销售数据，生成可视化代码：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">sales_data = &#123;</span></span><br><span class="line"><span class="string">    &#x27;Jan&#x27;: 1200,</span></span><br><span class="line"><span class="string">    &#x27;Feb&#x27;: 1500,</span></span><br><span class="line"><span class="string">    &#x27;Mar&#x27;: 1300,</span></span><br><span class="line"><span class="string">    &#x27;Apr&#x27;: 1800</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Gemini生成的可视化代码示例</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">import matplotlib.pyplot as plt</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 数据准备</span></span><br><span class="line"><span class="string">months = list(sales_data.keys())</span></span><br><span class="line"><span class="string">sales = list(sales_data.values())</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 创建柱状图</span></span><br><span class="line"><span class="string">plt.figure(figsize=(10, 6))</span></span><br><span class="line"><span class="string">plt.bar(months, sales, color=&#x27;skyblue&#x27;)</span></span><br><span class="line"><span class="string">plt.title(&#x27;Monthly Sales Performance&#x27;)</span></span><br><span class="line"><span class="string">plt.xlabel(&#x27;Month&#x27;)</span></span><br><span class="line"><span class="string">plt.ylabel(&#x27;Sales Amount&#x27;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 添加数值标签</span></span><br><span class="line"><span class="string">for i, v in enumerate(sales):</span></span><br><span class="line"><span class="string">    plt.text(i, v + 30, str(v), ha=&#x27;center&#x27;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">plt.show()</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-<p>建议读者在实际使用时：</p>
-<ul>
-<li>先理解代码逻辑 </li>
-<li>根据自己的需求修改参数 </li>
-<li>注意错误处理 </li>
-<li>适当添加日志记录</li>
-</ul>
-<h3 id="最后的建议："><a href="#最后的建议：" class="headerlink" title="最后的建议："></a><strong>最后的建议：</strong></h3><p>虽然<code>Gemini 2.0</code>目前完全免费，但免费的好时光可能不会太久。建议大家趁早上手，熟悉各项功能，把它变成你的得力助手。</p>
-<p><strong>记住：</strong>工具再好，也需要正确的使用方法。建议先从简单的任务开始，逐步探索更复杂的功能，这样能更好地发挥AI助手的潜力。</p>
-]]></content>
-      <categories>
-        <category>AI工具</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>Google</tag>
-        <tag>Gemini</tag>
-        <tag>AIGC</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo-Next 主题个性化配置教程</title>
     <url>https://kfufys.github.io/posts/9aae07a1.html</url>
     <content><![CDATA[<img src="https://kfufys.github.io/posts/9aae07a1/8.png" alt="head-img" width="1200">
@@ -491,6 +359,138 @@
         <tag>个性化</tag>
         <tag>Hexo-Next</tag>
         <tag>Blog Themes</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Google Gemini 2.0 怎么用?</title>
+    <url>https://kfufys.github.io/posts/2266.html</url>
+    <content><![CDATA[<img src="https://kfufys.github.io/posts/2266/1.png" alt="head.png">
+
+<p>最近，<code>Google</code>悄然发布了<code>Gemini 2.0</code>，一款功能强大的AI助手，而且完全免费！</p>
+<p>相比<code>ChatGPT Plus</code>每月<code>20</code>美元的订阅费，这简直是给数字时代的生产力工作者送来的一份大礼。</p>
+<p>让我们一起来看看这款<code>AI</code>助手究竟有多强大，以及如何充分利用它提升工作效率。</p>
+<h2 id="一、核心功能：远超想象的生产力工具"><a href="#一、核心功能：远超想象的生产力工具" class="headerlink" title="一、核心功能：远超想象的生产力工具"></a><strong>一、核心功能：远超想象的生产力工具</strong></h2><h3 id="1-超强的文本处理能力："><a href="#1-超强的文本处理能力：" class="headerlink" title="1. 超强的文本处理能力："></a><strong>1. 超强的文本处理能力：</strong></h3><p><code>Gemini 2.0</code>最令人印象深刻的是它对文字的理解和生成能力。无论是写文案、做内容规划，还是进行文本分析，它都能精准理解你的需求。</p>
+<p>实际体验：我让它帮我写一篇小红书笔记，只需简单说明主题，它就能生成一篇地道的种草文，连常用的表情符号都安排得恰到好处。(文后有具体的代码示范)</p>
+<h3 id="2-屌炸天的实时音视频通话："><a href="#2-屌炸天的实时音视频通话：" class="headerlink" title="2. 屌炸天的实时音视频通话："></a><strong>2. 屌炸天的实时音视频通话：</strong></h3><p>这可能是最革命性的功能 - 你可以直接与AI进行视频通话！想象一下：</p>
+<ul>
+<li>做菜时遇到问题？打开摄像头让AI指导 </li>
+<li>学习编程卡壳？共享屏幕让AI帮你分析代码 </li>
+<li>健身动作不标准？AI可以实时纠正你的姿势</li>
+</ul>
+<h3 id="3-超长上下文理解"><a href="#3-超长上下文理解" class="headerlink" title="3.  超长上下文理解"></a><strong>3.  超长上下文理解</strong></h3><p>支持<code>200</code>万<code>token</code>的上下文处理能力</p>
+<blockquote>
+<p>一本像《红楼梦》这样经典的中文小说，字数约为百万字，转换为<code>token</code>后可能需要约<code>100</code>万<code>token</code>。因此，<code>200</code>万<code>token</code>大约可以处理<code>2</code>本这样的长篇小说，或者<code>10</code>到<code>20</code>本字数较少的普通小说<br>这意味着什么？</p>
+</blockquote>
+<p><strong>你可以：</strong></p>
+<ul>
+<li>上传整本电子书请它总结 </li>
+<li>导入长篇论文让它分析 </li>
+<li>输入完整项目文档进行梳理</li>
+</ul>
+<h2 id="二、上手指南：三步开启AI效率之旅"><a href="#二、上手指南：三步开启AI效率之旅" class="headerlink" title="二、上手指南：三步开启AI效率之旅"></a><strong>二、上手指南：三步开启AI效率之旅</strong></h2><h3 id="第一步：访问平台"><a href="#第一步：访问平台" class="headerlink" title="第一步：访问平台"></a><strong>第一步：访问平台</strong></h3><p>打开<code>Google AI Studio</code>（<span class="exturl" data-url="aHR0cHM6Ly9haXN0dWRpby5nb29nbGUuY29tL2FwcC9wcm9tcHRzL25ld19jaGF0JUVGJUJDJTg5">https://aistudio.google.com/app/prompts/new_chat）<i class="fa fa-external-link-alt"></i></span><br><strong>注意：</strong>需要确保网络环境流畅</p>
+<img src="https://kfufys.github.io/posts/2266/2.png" alt="2.png">
+
+<h3 id="第二步：选择模型"><a href="#第二步：选择模型" class="headerlink" title="第二步：选择模型"></a><strong>第二步：选择模型</strong></h3><ul>
+<li><p>推荐选择<code>Gemini experimental 1206</code>模型，这是目前性能最强的版本 </p>
+</li>
+<li><p>如果追求速度，可以选择<code>Gemini 2.0 Flash</code>版本</p>
+</li>
+</ul>
+<img src="https://kfufys.github.io/posts/2266/3.png" alt="3.png">
+
+<h3 id="第三步：开始使用"><a href="#第三步：开始使用" class="headerlink" title="第三步：开始使用"></a><strong>第三步：开始使用</strong></h3><ul>
+<li>文字对话：直接输入问题即可 </li>
+<li>视频通话：点击左上角”实时流”按钮 </li>
+<li>视频分析：选择<code>starter apps</code>中的视频分析器</li>
+</ul>
+<p><strong>通过屏幕共享提示获取实时回答的例子:</strong>  </p>
+<img src="https://kfufys.github.io/posts/2266/4.png" alt="4.png">
+
+
+
+<h2 id="三、使用技巧：让AI更懂你"><a href="#三、使用技巧：让AI更懂你" class="headerlink" title="三、使用技巧：让AI更懂你"></a><strong>三、使用技巧：让AI更懂你</strong></h2><ul>
+<li><strong>提问技巧：</strong>明确你的目标、提供具体场景、适当补充细、分步骤提问</li>
+</ul>
+<ul>
+<li><p>如果你需要更多场景更多加精确的提示词可以使用<code>Prompt集合</code>这个免费的提示词微信小程序：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#小程序://Prompt集合/uILcjIITicfkqFC</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>视频通话目前仅支持英文回答，但是他可以听得懂中文 ，  可配合翻译软件使用 ，  如遇到日语回复，输入”Please speak in English”即可</li>
+</ul>
+</li>
+</ul>
+<h2 id="四、实用场景推荐"><a href="#四、实用场景推荐" class="headerlink" title="四、实用场景推荐"></a><strong>四、实用场景推荐</strong></h2><ul>
+<li><p><strong>内容创作者：</strong>文案撰写、选题规划、视频脚本 </p>
+</li>
+<li><p><strong>程序开发者：</strong>代码审查、问题诊断、算法优化 </p>
+</li>
+<li><p><strong>学习者：</strong>课程笔记整理、知识点讲解、习题解析</p>
+</li>
+</ul>
+<h2 id="五、实战示例，代码展示"><a href="#五、实战示例，代码展示" class="headerlink" title="五、实战示例，代码展示"></a><strong>五、实战示例，代码展示</strong></h2><p><code>Gemini 2.0 API </code>目前提供了官方 <code>sdk</code>  地址:  <code>https://ai.google.dev/gemini-api/docs/sdks</code></p>
+<p><strong>下面是 python的示范:</strong></p>
+<h3 id="1-安装依赖"><a href="#1-安装依赖" class="headerlink" title="1.  安装依赖"></a><strong>1.  安装依赖</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install google-genai</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-导入必要库"><a href="#2-导入必要库" class="headerlink" title="2.  导入必要库"></a><strong>2.  导入必要库</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> google <span class="keyword">import</span> genai</span><br><span class="line"><span class="keyword">from</span> google.genai <span class="keyword">import</span> types</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-初始化客户端"><a href="#3-初始化客户端" class="headerlink" title="3.  初始化客户端"></a><strong>3.  初始化客户端</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用API密钥初始化</span></span><br><span class="line">client = genai.Client(api_key=<span class="string">&#x27;YOUR_API_KEY&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="4-基础使用方法"><a href="#4-基础使用方法" class="headerlink" title="4.  基础使用方法"></a><strong>4.  基础使用方法</strong></h3><p><strong>4.1 简单文本生成：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 基础文本生成</span></span><br><span class="line">response = client.models.generate_content(</span><br><span class="line">    model=<span class="string">&#x27;gemini-1.5-pro-002&#x27;</span>,  <span class="comment"># 选择模型版本</span></span><br><span class="line">    contents=<span class="string">&#x27;用简单的话解释什么是人工智能&#x27;</span></span><br><span class="line">)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.2 结构化提示：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用结构化提示获得更精确的回答</span></span><br><span class="line">prompt = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">分析以下产品的优缺点:</span></span><br><span class="line"><span class="string">产品：智能手表</span></span><br><span class="line"><span class="string">要求：</span></span><br><span class="line"><span class="string">1. 列出3个主要优点</span></span><br><span class="line"><span class="string">2. 列出2个主要缺点</span></span><br><span class="line"><span class="string">3. 给出总体评价</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">response = client.models.generate_content(</span><br><span class="line">    model=<span class="string">&#x27;gemini-1.5-pro-002&#x27;</span>,</span><br><span class="line">    contents=prompt</span><br><span class="line">)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.3 多轮对话：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建聊天会话</span></span><br><span class="line">chat = client.models.start_chat(model=<span class="string">&#x27;gemini-1.5-pro-002&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 发送消息并获取回复</span></span><br><span class="line">response = chat.send_message(<span class="string">&quot;你好，我想学习Python编程&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 继续对话</span></span><br><span class="line">response = chat.send_message(<span class="string">&quot;可以给我一个简单的开始项目吗？&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-高级功能"><a href="#5-高级功能" class="headerlink" title="5. 高级功能"></a><strong>5. 高级功能</strong></h3><p><strong>5.1  图片分析：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">analyze_image</span>(<span class="params">image_path, prompt</span>):</span><br><span class="line">    image = Image.<span class="built_in">open</span>(image_path)</span><br><span class="line">    response = client.models.generate_content(</span><br><span class="line">        model=<span class="string">&#x27;gemini-1.5-pro-002&#x27;</span>,</span><br><span class="line">        contents=[</span><br><span class="line">            <span class="string">&quot;分析这张图片&quot;</span>,</span><br><span class="line">            image</span><br><span class="line">        ]</span><br><span class="line">    )</span><br><span class="line">    <span class="keyword">return</span> response.text</span><br></pre></td></tr></table></figure>
+
+<p><strong>5.2 代码生成与分析：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 代码生成示例</span></span><br><span class="line">code_prompt = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">用Python写一个简单的网络爬虫，要求：</span></span><br><span class="line"><span class="string">1. 使用requests库</span></span><br><span class="line"><span class="string">2. 获取网页标题</span></span><br><span class="line"><span class="string">3. 包含错误处理</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">response = client.models.generate_content(</span><br><span class="line">    model=<span class="string">&#x27;gemini-1.5-pro-002&#x27;</span>,</span><br><span class="line">    contents=code_prompt</span><br><span class="line">)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
+
+<p><strong>5.3 参数控制：</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用生成参数控制输出</span></span><br><span class="line">response = client.models.generate_content(</span><br><span class="line">    model=<span class="string">&#x27;gemini-1.5-pro-002&#x27;</span>,</span><br><span class="line">    contents=<span class="string">&#x27;写一个短故事&#x27;</span>,</span><br><span class="line">    generation_config=&#123;</span><br><span class="line">        <span class="string">&#x27;temperature&#x27;</span>: <span class="number">0.7</span>,  <span class="comment"># 控制创造性</span></span><br><span class="line">        <span class="string">&#x27;max_output_tokens&#x27;</span>: <span class="number">500</span>,  <span class="comment"># 控制长度</span></span><br><span class="line">        <span class="string">&#x27;top_p&#x27;</span>: <span class="number">0.8</span>,  <span class="comment"># 控制多样性</span></span><br><span class="line">    &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="六、最佳实践"><a href="#六、最佳实践" class="headerlink" title="六、最佳实践"></a><strong>六、最佳实践</strong></h2><h3 id="1-错误处理"><a href="#1-错误处理" class="headerlink" title="1.  错误处理"></a><strong>1.  错误处理</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    response = client.models.generate_content(</span><br><span class="line">        model=<span class="string">&#x27;gemini-1.5-pro-002&#x27;</span>,</span><br><span class="line">        contents=<span class="string">&#x27;你的提示词&#x27;</span></span><br><span class="line">    )</span><br><span class="line">    <span class="built_in">print</span>(response.text)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;发生错误: <span class="subst">&#123;<span class="built_in">str</span>(e)&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-流式输出"><a href="#2-流式输出" class="headerlink" title="2.  流式输出"></a><strong>2.  流式输出</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 获取流式响应</span></span><br><span class="line">response = client.models.generate_content(</span><br><span class="line">    model=<span class="string">&#x27;gemini-1.5-pro-002&#x27;</span>,</span><br><span class="line">    contents=<span class="string">&#x27;写一篇文章&#x27;</span>,</span><br><span class="line">    stream=<span class="literal">True</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-逐步打印响应"><a href="#3-逐步打印响应" class="headerlink" title="3.  逐步打印响应"></a><strong>3.  逐步打印响应</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> chunk <span class="keyword">in</span> response:</span><br><span class="line">    <span class="built_in">print</span>(chunk.text, end=<span class="string">&#x27;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="小红书种草文案"><a href="#小红书种草文案" class="headerlink" title="小红书种草文案"></a><strong>小红书种草文案</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 写一篇小红书种草文案</span></span><br><span class="line">prompt = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">请以种草博主的身份写一篇小红书文案，主题是某个生产力工具。要求：</span></span><br><span class="line"><span class="string">1. 标题吸引人</span></span><br><span class="line"><span class="string">2. 内容真实可信</span></span><br><span class="line"><span class="string">3. 加入表情符号</span></span><br><span class="line"><span class="string">4. 分点描述优势</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Gemini回复示例</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">💫革命性效率工具｜我用它一周省下10小时 </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">上周发现了一个神器，真的让我的工作效率直接起飞！🚀 </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">先说重点：</span></span><br><span class="line"><span class="string">✨完全免费</span></span><br><span class="line"><span class="string">✨界面超简洁</span></span><br><span class="line"><span class="string">✨上手只需5分钟</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">从此再也不用每天: </span></span><br><span class="line"><span class="string">📝手动整理笔记</span></span><br><span class="line"><span class="string">📊费力做数据分析</span></span><br><span class="line"><span class="string">📅纠结日程安排</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#效率工具 #工作技巧 #职场神器</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="代码审查示例"><a href="#代码审查示例" class="headerlink" title="代码审查示例"></a><strong>代码审查示例</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 让Gemini审查代码</span></span><br><span class="line">code_review_prompt = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">请审查以下Python代码，指出潜在问题和优化建议：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def calculate_average(numbers):</span></span><br><span class="line"><span class="string">    total = 0</span></span><br><span class="line"><span class="string">    count = 0</span></span><br><span class="line"><span class="string">    for num in numbers:</span></span><br><span class="line"><span class="string">        total += num</span></span><br><span class="line"><span class="string">        count += 1</span></span><br><span class="line"><span class="string">    return total/count</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">data = [1,2,3,4,5]</span></span><br><span class="line"><span class="string">result = calculate_average(data)</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Gemini可能的回复</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">代码审查结果：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">1. 错误处理：</span></span><br><span class="line"><span class="string">- 需添加空列表检查</span></span><br><span class="line"><span class="string">- 应处理除零异常</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">2. 性能优化：</span></span><br><span class="line"><span class="string">- 可使用sum()和len()替代循环</span></span><br><span class="line"><span class="string">- count变量可直接用len()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">优化后的代码：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def calculate_average(numbers):</span></span><br><span class="line"><span class="string">    if not numbers:</span></span><br><span class="line"><span class="string">        raise ValueError(&quot;Cannot calculate average of empty list&quot;)</span></span><br><span class="line"><span class="string">    return sum(numbers) / len(numbers)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 使用示例</span></span><br><span class="line"><span class="string">try:</span></span><br><span class="line"><span class="string">    data = [1,2,3,4,5]</span></span><br><span class="line"><span class="string">    result = calculate_average(data)</span></span><br><span class="line"><span class="string">    print(f&quot;Average: &#123;result&#125;&quot;)</span></span><br><span class="line"><span class="string">except ValueError as e:</span></span><br><span class="line"><span class="string">    print(f&quot;Error: &#123;e&#125;&quot;)</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="数据分析示例"><a href="#数据分析示例" class="headerlink" title="数据分析示例"></a><strong>数据分析示例</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 让Gemini分析数据</span></span><br><span class="line">data_analysis_prompt = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">分析以下销售数据，生成可视化代码：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">sales_data = &#123;</span></span><br><span class="line"><span class="string">    &#x27;Jan&#x27;: 1200,</span></span><br><span class="line"><span class="string">    &#x27;Feb&#x27;: 1500,</span></span><br><span class="line"><span class="string">    &#x27;Mar&#x27;: 1300,</span></span><br><span class="line"><span class="string">    &#x27;Apr&#x27;: 1800</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Gemini生成的可视化代码示例</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">import matplotlib.pyplot as plt</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 数据准备</span></span><br><span class="line"><span class="string">months = list(sales_data.keys())</span></span><br><span class="line"><span class="string">sales = list(sales_data.values())</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 创建柱状图</span></span><br><span class="line"><span class="string">plt.figure(figsize=(10, 6))</span></span><br><span class="line"><span class="string">plt.bar(months, sales, color=&#x27;skyblue&#x27;)</span></span><br><span class="line"><span class="string">plt.title(&#x27;Monthly Sales Performance&#x27;)</span></span><br><span class="line"><span class="string">plt.xlabel(&#x27;Month&#x27;)</span></span><br><span class="line"><span class="string">plt.ylabel(&#x27;Sales Amount&#x27;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 添加数值标签</span></span><br><span class="line"><span class="string">for i, v in enumerate(sales):</span></span><br><span class="line"><span class="string">    plt.text(i, v + 30, str(v), ha=&#x27;center&#x27;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">plt.show()</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+<p>建议读者在实际使用时：</p>
+<ul>
+<li>先理解代码逻辑 </li>
+<li>根据自己的需求修改参数 </li>
+<li>注意错误处理 </li>
+<li>适当添加日志记录</li>
+</ul>
+<h3 id="最后的建议："><a href="#最后的建议：" class="headerlink" title="最后的建议："></a><strong>最后的建议：</strong></h3><p>虽然<code>Gemini 2.0</code>目前完全免费，但免费的好时光可能不会太久。建议大家趁早上手，熟悉各项功能，把它变成你的得力助手。</p>
+<p><strong>记住：</strong>工具再好，也需要正确的使用方法。建议先从简单的任务开始，逐步探索更复杂的功能，这样能更好地发挥AI助手的潜力。</p>
+]]></content>
+      <categories>
+        <category>AI工具</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>Google</tag>
+        <tag>Gemini</tag>
+        <tag>AIGC</tag>
       </tags>
   </entry>
   <entry>
@@ -2354,6 +2354,35 @@
       </tags>
   </entry>
   <entry>
+    <title>About</title>
+    <url>https://kfufys.github.io/posts/74350de7.html</url>
+    <content><![CDATA[<head>
+    <meta charset="UTF-8">
+    <style>
+        strong {
+            color: #d9363f;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://kfufys.github.io/posts/74350de7/1.png" alt="head-img" width="1200">
+    <br>
+    <p><b>Hello👋</b><br>我是&ensp;<a href="https://kfufys.github.io/posts/7477.html"><strong>窦长友</strong></a>，一名摄影爱好者，编程小渣渣~~</p>
+    <p>目前就读于&ensp;<a href="https://www.kfu.edu.cn"><strong>开封大学</strong></a>....</p>
+    <h3>我的爱好</h3>
+        <p>热衷于研究所有与计算机相关的事物，包括：</p>
+        <ul>
+            <li><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。</li>
+            <li><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。</li>
+            <li><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</li>
+            <li><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</li>
+        </ul>
+        <h3>我的白日梦</h3>
+        <p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
+        <p>祝大家在我的小站玩的高兴！😃</p>
+</body>]]></content>
+  </entry>
+  <entry>
     <title>站点更新日志</title>
     <url>https://kfufys.github.io/posts/7178.html</url>
     <content><![CDATA[<img src="https://kfufys.github.io/posts/7178/1.png" alt="head-img" width="1200">
@@ -2396,35 +2425,6 @@
         <tag>website</tag>
         <tag>log</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>About</title>
-    <url>https://kfufys.github.io/posts/74350de7.html</url>
-    <content><![CDATA[<head>
-    <meta charset="UTF-8">
-    <style>
-        strong {
-            color: #d9363f;
-        }
-    </style>
-</head>
-<body>
-    <img src="https://kfufys.github.io/posts/74350de7/1.png" alt="head-img" width="1200">
-    <br>
-    <p><b>Hello👋</b><br>我是&ensp;<a href="https://kfufys.github.io/posts/7477.html"><strong>窦长友</strong></a>，一名摄影爱好者，编程小渣渣~~</p>
-    <p>目前就读于&ensp;<a href="https://www.kfu.edu.cn"><strong>开封大学</strong></a>....</p>
-    <h3>我的爱好</h3>
-        <p>热衷于研究所有与计算机相关的事物，包括：</p>
-        <ul>
-            <li><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。</li>
-            <li><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。</li>
-            <li><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</li>
-            <li><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</li>
-        </ul>
-        <h3>我的白日梦</h3>
-        <p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
-        <p>祝大家在我的小站玩的高兴！😃</p>
-</body>]]></content>
   </entry>
   <entry>
     <title>基于GitHub+hexo部署静态Blog</title>
