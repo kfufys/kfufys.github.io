@@ -264,7 +264,7 @@
 <img src="https://kfufys.github.io/posts/4b037ad9/10.png" alt="Config ChatBox_3" width="1200"> 
 
 <p>配置完成以后就可以在界面上和本地 deepseek 模型进行聊天交互了，如图：</p>
-<img src="https://kfufys.github.io/posts/4b037ad9/12.png" alt="Config ChatBox_4" width="1200"> 
+<img src="https://kfufys.github.io/posts/4b037ad9/11.png" alt="Config ChatBox_4" width="1200"> 
 
 <p>至此，已完成了 DeepSeek-R1 的本地部署，小白也能轻松搞定，快来试试吧，开启你的本地大模型之旅！</p>
 ]]></content>
@@ -2623,6 +2623,11 @@
         <tag>website</tag>
         <tag>log</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>annotations</title>
+    <url>https://kfufys.github.io/posts/undefined.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>基于GitHub+hexo部署静态Blog</title>
