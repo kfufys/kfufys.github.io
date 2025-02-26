@@ -79,6 +79,193 @@
       </tags>
   </entry>
   <entry>
+    <title>DeepSeek 本地部署教程</title>
+    <url>https://kfufys.github.io/posts/4b037ad9.html</url>
+    <content><![CDATA[<img src="https://kfufys.github.io/posts/4b037ad9/1.png" alt="deepseek" width="1200">
+
+<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><h4 id="1-背景分析"><a href="#1-背景分析" class="headerlink" title="1. 背景分析"></a>1. 背景分析</h4><p>DeepSeek 作为国产开源大模型，近期因在线服务压力过大，本地部署需求激增。本教程将结合全网优质资源，手把手教你完成从环境配置到交互界面搭建的全流程，即使是零基础用户也能轻松掌握。</p>
+<h4 id="2-为什么要本地部署-DeepSeek？"><a href="#2-为什么要本地部署-DeepSeek？" class="headerlink" title="2. 为什么要本地部署 DeepSeek？"></a>2. 为什么要本地部署 DeepSeek？</h4><p>在本地部署 DeepSeek 有以下几个优势：</p>
+<ol>
+<li><strong>隐私性高</strong>：数据都在本地运行，无需上传到云端，避免数据泄露风险。</li>
+<li><strong>稳定性强</strong>：不受网络波动影响，模型运行更加稳定。</li>
+<li><strong>可定制性强</strong>：可以根据需求调整模型参数，满足个性化需求。</li>
+</ol>
+<h3 id="二、部署前准备"><a href="#二、部署前准备" class="headerlink" title="二、部署前准备"></a>二、部署前准备</h3><h4 id="硬件要求"><a href="#硬件要求" class="headerlink" title="硬件要求"></a>硬件要求</h4><table> 
+ <thead> 
+  <tr> 
+   <th>硬件类型</th> 
+   <th>最低配置</th> 
+   <th>推荐配置</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><strong>显卡</strong></td> 
+   <td>NVIDIA GTX 1060 (6GB显存)</td> 
+   <td>RTX 4080 (16GB显存)</td> 
+  </tr> 
+  <tr> 
+   <td><strong>内存</strong></td> 
+   <td>16GB</td> 
+   <td>32GB</td> 
+  </tr> 
+  <tr> 
+   <td><strong>存储</strong></td> 
+   <td>50GB可用空间</td> 
+   <td>SSD固态硬盘</td> 
+  </tr> 
+  <tr> 
+   <td><strong>系统</strong></td> 
+   <td>Windows 10 / macOS 12 / Ubuntu 20.04</td> 
+   <td>Windows 11</td> 
+  </tr> 
+ </tbody> 
+</table>
+
+<blockquote>
+<p>📌 注意事项：</p>
+<ul>
+<li>AMD 显卡用户需安装 25.1.1 版本驱动并配合 LM Studio 使用</li>
+</ul>
+</blockquote>
+<h3 id="三、核心部署流程"><a href="#三、核心部署流程" class="headerlink" title="三、核心部署流程"></a>三、核心部署流程</h3><h4 id="1-安装-Ollama-框架"><a href="#1-安装-Ollama-框架" class="headerlink" title="1. 安装 Ollama 框架"></a>1. 安装 Ollama 框架</h4><h5 id="1-1-下载安装包"><a href="#1-1-下载安装包" class="headerlink" title="1.1 下载安装包"></a>1.1 下载安装包</h5><blockquote>
+<p>访问 <span class="exturl" data-url="aHR0cHM6Ly9vbGxhbWEuY29tL2Rvd25sb2Fk">Ollama官网<i class="fa fa-external-link-alt"></i></span> → 选择对应系统版本下载（Windows用户建议安装到C盘）</p>
+</blockquote>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/2.png" alt="download ollama" width="1200"><br></p>
+<p>下载完成后双击运行安装包，下一步，下一步即可。</p>
+<h5 id="1-2-验证是否安装成功"><a href="#1-2-验证是否安装成功" class="headerlink" title="1.2 验证是否安装成功"></a>1.2 验证是否安装成功</h5><p>win+R 打开 <code>cmd</code> 命令行，执行命令：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ollama -v</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://kfufys.github.io/posts/4b037ad9/5.png" alt="ollama version" width="1200"><br></p>
+<p>如果显示 <code>Ollama</code> 版本号，说明安装成功。</p>
+<h5 id="1-3-选择-deepseek-大模型版本"><a href="#1-3-选择-deepseek-大模型版本" class="headerlink" title="1.3 选择 deepseek 大模型版本"></a>1.3 选择 deepseek 大模型版本</h5><p>ollama 安装成功以后，在官网搜索 deepseek，选择 <code>deepseek-r1</code>，如图所示：  </p>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/3.png" alt="deepseek-r1_1" width="1200"><br></p>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/4.png" alt="deepseek-r1_2" width="1200"><br></p>
+<p>DeepSeek 不同参数版本介绍：</p>
+<table> 
+ <thead> 
+  <tr> 
+   <th>模型参数规模</th> 
+   <th>典型用途</th> 
+   <th>CPU 建议</th> 
+   <th>GPU 建议</th> 
+   <th>内存建议 (RAM)</th> 
+   <th>磁盘空间建议</th> 
+   <th>适用场景</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><strong>1.5b (15亿)</strong></td> 
+   <td>小型推理、轻量级任务</td> 
+   <td>4核以上 (Intel i5 / AMD Ryzen 5)</td> 
+   <td>可选，入门级 GPU (如 NVIDIA GTX 1650, 4GB 显存)</td> 
+   <td>8GB</td> 
+   <td>10GB 以上 SSD</td> 
+   <td>小型 NLP 任务、文本生成、简单分类</td> 
+  </tr> 
+  <tr> 
+   <td><strong>7b (70亿)</strong></td> 
+   <td>中等推理、通用任务</td> 
+   <td>6核以上 (Intel i7 / AMD Ryzen 7)</td> 
+   <td>中端 GPU (如 NVIDIA RTX 3060, 12GB 显存)</td> 
+   <td>16GB</td> 
+   <td>20GB 以上 SSD</td> 
+   <td>中等规模 NLP、对话系统、文本分析</td> 
+  </tr> 
+  <tr> 
+   <td><strong>14b (140亿)</strong></td> 
+   <td>中大型推理、复杂任务</td> 
+   <td>8核以上 (Intel i9 / AMD Ryzen 9)</td> 
+   <td>高端 GPU (如 NVIDIA RTX 3090, 24GB 显存)</td> 
+   <td>32GB</td> 
+   <td>50GB 以上 SSD</td> 
+   <td>复杂 NLP、多轮对话、知识问答</td> 
+  </tr> 
+  <tr> 
+   <td><strong>32b (320亿)</strong></td> 
+   <td>大型推理、高性能任务</td> 
+   <td>12核以上 (Intel Xeon / AMD Threadripper)</td> 
+   <td>高性能 GPU (如 NVIDIA A100, 40GB 显存)</td> 
+   <td>64GB</td> 
+   <td>100GB 以上 SSD</td> 
+   <td>大规模 NLP、多模态任务、研究用途</td> 
+  </tr> 
+  <tr> 
+   <td><strong>70b (700亿)</strong></td> 
+   <td>超大规模推理、研究任务</td> 
+   <td>16核以上 (服务器级 CPU)</td> 
+   <td>多 GPU 并行 (如 2x NVIDIA A100, 80GB 显存)</td> 
+   <td>128GB</td> 
+   <td>200GB 以上 SSD</td> 
+   <td>超大规模模型、研究、企业级应用</td> 
+  </tr> 
+  <tr> 
+   <td><strong>671b (6710亿)</strong></td> 
+   <td>超大规模训练、企业级任务</td> 
+   <td>服务器级 CPU (如 AMD EPYC / Intel Xeon)</td> 
+   <td>多 GPU 集群 (如 8x NVIDIA A100, 320GB 显存)</td> 
+   <td>256GB 或更高</td> 
+   <td>1TB 以上 NVMe SSD</td> 
+   <td>超大规模训练、企业级 AI 平台</td> 
+  </tr> 
+ </tbody> 
+</table>
+
+<p>根据你本地电脑的配置选择合适的参数，例如我们选择 <code>1.5b</code>这个参数，运行代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ollama run deepseek-r1:<span class="number">1.</span>5b</span><br></pre></td></tr></table></figure>
+
+<p>等待下载完毕，下载完成后就可以愉快的在本地使用大模型了，如图所示：</p>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/6.png" alt="ollama session" width="1200"><br></p>
+<h4 id="2-可视化部署-Web-UI"><a href="#2-可视化部署-Web-UI" class="headerlink" title="2. 可视化部署 Web UI"></a>2. 可视化部署 Web UI</h4><p>使用命令行进行对话很不方便，可以使用一些 UI 工具来更方便的和 deepseek 进行交互。</p>
+<h5 id="2-1-常用-AI-UI-工具"><a href="#2-1-常用-AI-UI-工具" class="headerlink" title="2.1 常用 AI UI 工具"></a>2.1 常用 AI UI 工具</h5><table> 
+ <thead> 
+  <tr> 
+   <th>工具</th> 
+   <th>描述</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><strong><span class="exturl" data-url="aHR0cHM6Ly9jaGF0Ym94YWkuYXBwL3po">Chatbox<i class="fa fa-external-link-alt"></i></span></strong></td> 
+   <td>一个支持多种流行LLM模型的桌面客户端，可在 Windows、Mac 和 Linux 上使用</td> 
+  </tr> 
+  <tr> 
+   <td><strong><span class="exturl" data-url="aHR0cHM6Ly9jaGVycnktYWkuY29tLw==">Cherry Studio<i class="fa fa-external-link-alt"></i></span></strong></td> 
+   <td>一款为创造者而生的桌面版 AI 助手</td> 
+  </tr> 
+  <tr> 
+   <td><strong><span class="exturl" data-url="aHR0cHM6Ly9hbnl0aGluZ2xsbS5jb20v">AnythingLLM<i class="fa fa-external-link-alt"></i></span></strong></td> 
+   <td>一款全方位AI应用程序。与您的文档聊天，使用AI代理，高度可配置，多用户，无需繁琐的设置。</td> 
+  </tr> 
+ </tbody> 
+</table>
+
+<p>这里我们使用 ChatBox 调用 DeepSeek 进行交互，其他工具使用方式类似。</p>
+<h5 id="2-2-ChatBox-使用示例"><a href="#2-2-ChatBox-使用示例" class="headerlink" title="2.2 ChatBox 使用示例"></a>2.2 ChatBox 使用示例</h5><blockquote>
+<p>ChatBox 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9jaGF0Ym94YWkuYXBwL3po">https://chatboxai.app/zh<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p>下载自己操作系统的安装包，进行安装。</p>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/7.png" alt="ChatBox" width="1200"><br></p>
+<p>安装完 Chatbox 之后就是配置 DeepSeek 到 Chatbox 了，如图：</p>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/8.png" alt="Config ChatBox_1" width="1200"><br></p>
+<p>配置 AI 模型提供方，这里选择 Ollama，如图：</p>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/9.png" alt="Config ChatBox_2" width="1200"><br></p>
+<p>选择 deepseek 模型</p>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/10.png" alt="Config ChatBox_3" width="1200"><br></p>
+<p>配置完成以后就可以在界面上和本地 deepseek 模型进行聊天交互了，如图：</p>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/12.png" alt="Config ChatBox_4" width="1200"><br></p>
+<p>至此，已完成了 DeepSeek-R1 的本地部署，小白也能轻松搞定，快来试试吧，开启你的本地大模型之旅！</p>
+]]></content>
+      <categories>
+        <category>AI工具</category>
+      </categories>
+      <tags>
+        <tag>AIGC</tag>
+        <tag>DeepSeek</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo-Next 主题个性化配置教程</title>
     <url>https://kfufys.github.io/posts/9aae07a1.html</url>
     <content><![CDATA[<img src="https://kfufys.github.io/posts/9aae07a1/8.png" alt="head-img" width="1200">
@@ -487,10 +674,10 @@
         <category>AI工具</category>
       </categories>
       <tags>
+        <tag>AIGC</tag>
         <tag>教程</tag>
         <tag>Google</tag>
         <tag>Gemini</tag>
-        <tag>AIGC</tag>
       </tags>
   </entry>
   <entry>
@@ -1557,6 +1744,35 @@
       </tags>
   </entry>
   <entry>
+    <title>About</title>
+    <url>https://kfufys.github.io/posts/74350de7.html</url>
+    <content><![CDATA[<head>
+    <meta charset="UTF-8">
+    <style>
+        strong {
+            color: #d9363f;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://kfufys.github.io/posts/74350de7/1.png" alt="head-img" width="1200">
+    <br>
+    <p><b>Hello👋</b><br>我是&ensp;<a href="https://kfufys.github.io/posts/7477.html"><strong>窦长友</strong></a>，一名摄影爱好者，编程小渣渣~~</p>
+    <p>目前就读于&ensp;<a href="https://www.kfu.edu.cn"><strong>开封大学</strong></a>....</p>
+    <h3>我的爱好</h3>
+        <p>热衷于研究所有与计算机相关的事物，包括：</p>
+        <ul>
+            <li><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。</li>
+            <li><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。</li>
+            <li><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</li>
+            <li><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</li>
+        </ul>
+        <h3>我的白日梦</h3>
+        <p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
+        <p>祝大家在我的小站玩的高兴！😃</p>
+</body>]]></content>
+  </entry>
+  <entry>
     <title>网络工程师考试知识点_02</title>
     <url>https://kfufys.github.io/posts/65202.html</url>
     <content><![CDATA[<img src="https://kfufys.github.io/posts/65202/1.jpg" alt="head-img" width="1200">
@@ -2352,35 +2568,6 @@
         <tag>教程</tag>
         <tag>网站部署</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>About</title>
-    <url>https://kfufys.github.io/posts/74350de7.html</url>
-    <content><![CDATA[<head>
-    <meta charset="UTF-8">
-    <style>
-        strong {
-            color: #d9363f;
-        }
-    </style>
-</head>
-<body>
-    <img src="https://kfufys.github.io/posts/74350de7/1.png" alt="head-img" width="1200">
-    <br>
-    <p><b>Hello👋</b><br>我是&ensp;<a href="https://kfufys.github.io/posts/7477.html"><strong>窦长友</strong></a>，一名摄影爱好者，编程小渣渣~~</p>
-    <p>目前就读于&ensp;<a href="https://www.kfu.edu.cn"><strong>开封大学</strong></a>....</p>
-    <h3>我的爱好</h3>
-        <p>热衷于研究所有与计算机相关的事物，包括：</p>
-        <ul>
-            <li><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。</li>
-            <li><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。</li>
-            <li><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</li>
-            <li><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</li>
-        </ul>
-        <h3>我的白日梦</h3>
-        <p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
-        <p>祝大家在我的小站玩的高兴！😃</p>
-</body>]]></content>
   </entry>
   <entry>
     <title>站点更新日志</title>

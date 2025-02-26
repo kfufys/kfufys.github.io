@@ -30,22 +30,40 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"kfufys.github.io","root":"https://kfufys.github.io/","images":"https://kfufys.github.io/images","scheme":"Gemini","darkmode":true,"version":"8.21.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"hljswrap":true,"copycode":{"enable":"enable","show_result":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":{"valine":{"text":"Valine","order":-1,"enable":true,"appid":"JFZFEC09hmHKtpi6Q2DORLum-gzGzoHsz","appkey":"KkiKFtcuCjN1RhCqqZZdzYIL"}}},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"https://kfufys.github.io/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://kfufys.github.io/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Smart Space">
-<meta property="og:url" content="https://kfufys.github.io/categories/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/index.html">
+    <meta name="description" content="一、前言1. 背景分析DeepSeek 作为国产开源大模型，近期因在线服务压力过大，本地部署需求激增。本教程将结合全网优质资源，手把手教你完成从环境配置到交互界面搭建的全流程，即使是零基础用户也能轻松掌握。 2. 为什么要本地部署 DeepSeek？在本地部署 DeepSeek 有以下几个优势：  隐私性高：数据都在本地运行，无需上传到云端，避免数据泄露风险。 稳定性强：不受网络波动影响，模型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DeepSeek 本地部署教程">
+<meta property="og:url" content="https://kfufys.github.io/posts/4b037ad9.html">
 <meta property="og:site_name" content="Smart Space">
+<meta property="og:description" content="一、前言1. 背景分析DeepSeek 作为国产开源大模型，近期因在线服务压力过大，本地部署需求激增。本教程将结合全网优质资源，手把手教你完成从环境配置到交互界面搭建的全流程，即使是零基础用户也能轻松掌握。 2. 为什么要本地部署 DeepSeek？在本地部署 DeepSeek 有以下几个优势：  隐私性高：数据都在本地运行，无需上传到云端，避免数据泄露风险。 稳定性强：不受网络波动影响，模型">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kfufys.github.io/posts/4b037ad9/1.png">
+<meta property="og:image" content="https://kfufys.github.io/posts/4b037ad9/2.png">
+<meta property="og:image" content="https://kfufys.github.io/posts/4b037ad9/5.png">
+<meta property="og:image" content="https://kfufys.github.io/posts/4b037ad9/3.png">
+<meta property="og:image" content="https://kfufys.github.io/posts/4b037ad9/4.png">
+<meta property="og:image" content="https://kfufys.github.io/posts/4b037ad9/6.png">
+<meta property="og:image" content="https://kfufys.github.io/posts/4b037ad9/7.png">
+<meta property="og:image" content="https://kfufys.github.io/posts/4b037ad9/8.png">
+<meta property="og:image" content="https://kfufys.github.io/posts/4b037ad9/9.png">
+<meta property="og:image" content="https://kfufys.github.io/posts/4b037ad9/10.png">
+<meta property="og:image" content="https://kfufys.github.io/posts/4b037ad9/12.png">
+<meta property="article:published_time" content="2025-02-26T00:19:45.000Z">
+<meta property="article:modified_time" content="2025-02-26T00:19:45.000Z">
 <meta property="article:author" content="Dou ChangYou">
+<meta property="article:tag" content="AIGC">
+<meta property="article:tag" content="DeepSeek">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kfufys.github.io/posts/4b037ad9/1.png">
 
 
-<link rel="canonical" href="https://kfufys.github.io/categories/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/">
+<link rel="canonical" href="https://kfufys.github.io/posts/4b037ad9.html">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"categories/网站部署/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://kfufys.github.io/posts/4b037ad9.html","path":"posts/4b037ad9.html","title":"DeepSeek 本地部署教程"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分类: 网站部署 | Smart Space</title>
+<title>DeepSeek 本地部署教程 | Smart Space</title>
   
 
 
@@ -131,7 +149,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -144,6 +162,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%89%8D%E8%A8%80"><span class="nav-text">一、前言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%83%8C%E6%99%AF%E5%88%86%E6%9E%90"><span class="nav-text">1. 背景分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2-DeepSeek%EF%BC%9F"><span class="nav-text">2. 为什么要本地部署 DeepSeek？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%83%A8%E7%BD%B2%E5%89%8D%E5%87%86%E5%A4%87"><span class="nav-text">二、部署前准备</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6%E8%A6%81%E6%B1%82"><span class="nav-text">硬件要求</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%A0%B8%E5%BF%83%E9%83%A8%E7%BD%B2%E6%B5%81%E7%A8%8B"><span class="nav-text">三、核心部署流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85-Ollama-%E6%A1%86%E6%9E%B6"><span class="nav-text">1. 安装 Ollama 框架</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-text">1.1 下载安装包</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-%E9%AA%8C%E8%AF%81%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F"><span class="nav-text">1.2 验证是否安装成功</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-%E9%80%89%E6%8B%A9-deepseek-%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%89%88%E6%9C%AC"><span class="nav-text">1.3 选择 deepseek 大模型版本</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%8F%AF%E8%A7%86%E5%8C%96%E9%83%A8%E7%BD%B2-Web-UI"><span class="nav-text">2. 可视化部署 Web UI</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-%E5%B8%B8%E7%94%A8-AI-UI-%E5%B7%A5%E5%85%B7"><span class="nav-text">2.1 常用 AI UI 工具</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-ChatBox-%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B"><span class="nav-text">2.2 ChatBox 使用示例</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -480,70 +499,306 @@
 
     </div>
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">网站部署
-          <small>分类</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://kfufys.github.io/posts/4b037ad9.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://kfufys.github.io/images/favicon.svg">
+      <meta itemprop="name" content="Dou ChangYou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smart Space">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="DeepSeek 本地部署教程 | Smart Space">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          DeepSeek 本地部署教程
         </h1>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2024</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-02-26 08:19:45" itemprop="dateCreated datePublished" datetime="2025-02-26T08:19:45+08:00">2025-02-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="https://kfufys.github.io/categories/AI%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">AI工具</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><img src="https://kfufys.github.io/posts/4b037ad9/1.png" alt="deepseek" width="1200">
+
+<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><h4 id="1-背景分析"><a href="#1-背景分析" class="headerlink" title="1. 背景分析"></a>1. 背景分析</h4><p>DeepSeek 作为国产开源大模型，近期因在线服务压力过大，本地部署需求激增。本教程将结合全网优质资源，手把手教你完成从环境配置到交互界面搭建的全流程，即使是零基础用户也能轻松掌握。</p>
+<h4 id="2-为什么要本地部署-DeepSeek？"><a href="#2-为什么要本地部署-DeepSeek？" class="headerlink" title="2. 为什么要本地部署 DeepSeek？"></a>2. 为什么要本地部署 DeepSeek？</h4><p>在本地部署 DeepSeek 有以下几个优势：</p>
+<ol>
+<li><strong>隐私性高</strong>：数据都在本地运行，无需上传到云端，避免数据泄露风险。</li>
+<li><strong>稳定性强</strong>：不受网络波动影响，模型运行更加稳定。</li>
+<li><strong>可定制性强</strong>：可以根据需求调整模型参数，满足个性化需求。</li>
+</ol>
+<h3 id="二、部署前准备"><a href="#二、部署前准备" class="headerlink" title="二、部署前准备"></a>二、部署前准备</h3><h4 id="硬件要求"><a href="#硬件要求" class="headerlink" title="硬件要求"></a>硬件要求</h4><table> 
+ <thead> 
+  <tr> 
+   <th>硬件类型</th> 
+   <th>最低配置</th> 
+   <th>推荐配置</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><strong>显卡</strong></td> 
+   <td>NVIDIA GTX 1060 (6GB显存)</td> 
+   <td>RTX 4080 (16GB显存)</td> 
+  </tr> 
+  <tr> 
+   <td><strong>内存</strong></td> 
+   <td>16GB</td> 
+   <td>32GB</td> 
+  </tr> 
+  <tr> 
+   <td><strong>存储</strong></td> 
+   <td>50GB可用空间</td> 
+   <td>SSD固态硬盘</td> 
+  </tr> 
+  <tr> 
+   <td><strong>系统</strong></td> 
+   <td>Windows 10 / macOS 12 / Ubuntu 20.04</td> 
+   <td>Windows 11</td> 
+  </tr> 
+ </tbody> 
+</table>
+
+<blockquote>
+<p>📌 注意事项：</p>
+<ul>
+<li>AMD 显卡用户需安装 25.1.1 版本驱动并配合 LM Studio 使用</li>
+</ul>
+</blockquote>
+<h3 id="三、核心部署流程"><a href="#三、核心部署流程" class="headerlink" title="三、核心部署流程"></a>三、核心部署流程</h3><h4 id="1-安装-Ollama-框架"><a href="#1-安装-Ollama-框架" class="headerlink" title="1. 安装 Ollama 框架"></a>1. 安装 Ollama 框架</h4><h5 id="1-1-下载安装包"><a href="#1-1-下载安装包" class="headerlink" title="1.1 下载安装包"></a>1.1 下载安装包</h5><blockquote>
+<p>访问 <span class="exturl" data-url="aHR0cHM6Ly9vbGxhbWEuY29tL2Rvd25sb2Fk">Ollama官网<i class="fa fa-external-link-alt"></i></span> → 选择对应系统版本下载（Windows用户建议安装到C盘）</p>
+</blockquote>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/2.png" alt="download ollama" width="1200"><br></p>
+<p>下载完成后双击运行安装包，下一步，下一步即可。</p>
+<h5 id="1-2-验证是否安装成功"><a href="#1-2-验证是否安装成功" class="headerlink" title="1.2 验证是否安装成功"></a>1.2 验证是否安装成功</h5><p>win+R 打开 <code>cmd</code> 命令行，执行命令：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ollama -v</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://kfufys.github.io/posts/4b037ad9/5.png" alt="ollama version" width="1200"><br></p>
+<p>如果显示 <code>Ollama</code> 版本号，说明安装成功。</p>
+<h5 id="1-3-选择-deepseek-大模型版本"><a href="#1-3-选择-deepseek-大模型版本" class="headerlink" title="1.3 选择 deepseek 大模型版本"></a>1.3 选择 deepseek 大模型版本</h5><p>ollama 安装成功以后，在官网搜索 deepseek，选择 <code>deepseek-r1</code>，如图所示：  </p>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/3.png" alt="deepseek-r1_1" width="1200"><br></p>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/4.png" alt="deepseek-r1_2" width="1200"><br></p>
+<p>DeepSeek 不同参数版本介绍：</p>
+<table> 
+ <thead> 
+  <tr> 
+   <th>模型参数规模</th> 
+   <th>典型用途</th> 
+   <th>CPU 建议</th> 
+   <th>GPU 建议</th> 
+   <th>内存建议 (RAM)</th> 
+   <th>磁盘空间建议</th> 
+   <th>适用场景</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><strong>1.5b (15亿)</strong></td> 
+   <td>小型推理、轻量级任务</td> 
+   <td>4核以上 (Intel i5 / AMD Ryzen 5)</td> 
+   <td>可选，入门级 GPU (如 NVIDIA GTX 1650, 4GB 显存)</td> 
+   <td>8GB</td> 
+   <td>10GB 以上 SSD</td> 
+   <td>小型 NLP 任务、文本生成、简单分类</td> 
+  </tr> 
+  <tr> 
+   <td><strong>7b (70亿)</strong></td> 
+   <td>中等推理、通用任务</td> 
+   <td>6核以上 (Intel i7 / AMD Ryzen 7)</td> 
+   <td>中端 GPU (如 NVIDIA RTX 3060, 12GB 显存)</td> 
+   <td>16GB</td> 
+   <td>20GB 以上 SSD</td> 
+   <td>中等规模 NLP、对话系统、文本分析</td> 
+  </tr> 
+  <tr> 
+   <td><strong>14b (140亿)</strong></td> 
+   <td>中大型推理、复杂任务</td> 
+   <td>8核以上 (Intel i9 / AMD Ryzen 9)</td> 
+   <td>高端 GPU (如 NVIDIA RTX 3090, 24GB 显存)</td> 
+   <td>32GB</td> 
+   <td>50GB 以上 SSD</td> 
+   <td>复杂 NLP、多轮对话、知识问答</td> 
+  </tr> 
+  <tr> 
+   <td><strong>32b (320亿)</strong></td> 
+   <td>大型推理、高性能任务</td> 
+   <td>12核以上 (Intel Xeon / AMD Threadripper)</td> 
+   <td>高性能 GPU (如 NVIDIA A100, 40GB 显存)</td> 
+   <td>64GB</td> 
+   <td>100GB 以上 SSD</td> 
+   <td>大规模 NLP、多模态任务、研究用途</td> 
+  </tr> 
+  <tr> 
+   <td><strong>70b (700亿)</strong></td> 
+   <td>超大规模推理、研究任务</td> 
+   <td>16核以上 (服务器级 CPU)</td> 
+   <td>多 GPU 并行 (如 2x NVIDIA A100, 80GB 显存)</td> 
+   <td>128GB</td> 
+   <td>200GB 以上 SSD</td> 
+   <td>超大规模模型、研究、企业级应用</td> 
+  </tr> 
+  <tr> 
+   <td><strong>671b (6710亿)</strong></td> 
+   <td>超大规模训练、企业级任务</td> 
+   <td>服务器级 CPU (如 AMD EPYC / Intel Xeon)</td> 
+   <td>多 GPU 集群 (如 8x NVIDIA A100, 320GB 显存)</td> 
+   <td>256GB 或更高</td> 
+   <td>1TB 以上 NVMe SSD</td> 
+   <td>超大规模训练、企业级 AI 平台</td> 
+  </tr> 
+ </tbody> 
+</table>
+
+<p>根据你本地电脑的配置选择合适的参数，例如我们选择 <code>1.5b</code>这个参数，运行代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ollama run deepseek-r1:<span class="number">1.</span>5b</span><br></pre></td></tr></table></figure>
+
+<p>等待下载完毕，下载完成后就可以愉快的在本地使用大模型了，如图所示：</p>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/6.png" alt="ollama session" width="1200"><br></p>
+<h4 id="2-可视化部署-Web-UI"><a href="#2-可视化部署-Web-UI" class="headerlink" title="2. 可视化部署 Web UI"></a>2. 可视化部署 Web UI</h4><p>使用命令行进行对话很不方便，可以使用一些 UI 工具来更方便的和 deepseek 进行交互。</p>
+<h5 id="2-1-常用-AI-UI-工具"><a href="#2-1-常用-AI-UI-工具" class="headerlink" title="2.1 常用 AI UI 工具"></a>2.1 常用 AI UI 工具</h5><table> 
+ <thead> 
+  <tr> 
+   <th>工具</th> 
+   <th>描述</th> 
+  </tr> 
+ </thead> 
+ <tbody> 
+  <tr> 
+   <td><strong><span class="exturl" data-url="aHR0cHM6Ly9jaGF0Ym94YWkuYXBwL3po">Chatbox<i class="fa fa-external-link-alt"></i></span></strong></td> 
+   <td>一个支持多种流行LLM模型的桌面客户端，可在 Windows、Mac 和 Linux 上使用</td> 
+  </tr> 
+  <tr> 
+   <td><strong><span class="exturl" data-url="aHR0cHM6Ly9jaGVycnktYWkuY29tLw==">Cherry Studio<i class="fa fa-external-link-alt"></i></span></strong></td> 
+   <td>一款为创造者而生的桌面版 AI 助手</td> 
+  </tr> 
+  <tr> 
+   <td><strong><span class="exturl" data-url="aHR0cHM6Ly9hbnl0aGluZ2xsbS5jb20v">AnythingLLM<i class="fa fa-external-link-alt"></i></span></strong></td> 
+   <td>一款全方位AI应用程序。与您的文档聊天，使用AI代理，高度可配置，多用户，无需繁琐的设置。</td> 
+  </tr> 
+ </tbody> 
+</table>
+
+<p>这里我们使用 ChatBox 调用 DeepSeek 进行交互，其他工具使用方式类似。</p>
+<h5 id="2-2-ChatBox-使用示例"><a href="#2-2-ChatBox-使用示例" class="headerlink" title="2.2 ChatBox 使用示例"></a>2.2 ChatBox 使用示例</h5><blockquote>
+<p>ChatBox 官网地址：<span class="exturl" data-url="aHR0cHM6Ly9jaGF0Ym94YWkuYXBwL3po">https://chatboxai.app/zh<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p>下载自己操作系统的安装包，进行安装。</p>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/7.png" alt="ChatBox" width="1200"><br></p>
+<p>安装完 Chatbox 之后就是配置 DeepSeek 到 Chatbox 了，如图：</p>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/8.png" alt="Config ChatBox_1" width="1200"><br></p>
+<p>配置 AI 模型提供方，这里选择 Ollama，如图：</p>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/9.png" alt="Config ChatBox_2" width="1200"><br></p>
+<p>选择 deepseek 模型</p>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/10.png" alt="Config ChatBox_3" width="1200"><br></p>
+<p>配置完成以后就可以在界面上和本地 deepseek 模型进行聊天交互了，如图：</p>
+<p><img src="https://kfufys.github.io/posts/4b037ad9/12.png" alt="Config ChatBox_4" width="1200"><br></p>
+<p>至此，已完成了 DeepSeek-R1 的本地部署，小白也能轻松搞定，快来试试吧，开启你的本地大模型之旅！</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-12-16T16:03:46+08:00"
-              content="2024-12-16">
-          12-16
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="https://kfufys.github.io/posts/59687.html" itemprop="url">
-            <span itemprop="name">终极 Nginx 配置指南（超详细）</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          
 
-      
-    </header>
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Dou ChangYou
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://kfufys.github.io/posts/4b037ad9.html" title="DeepSeek 本地部署教程">https://kfufys.github.io/posts/4b037ad9.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="https://kfufys.github.io/tags/AIGC/" rel="tag"><i class="fa fa-tag"></i> AIGC</a>
+              <a href="https://kfufys.github.io/tags/DeepSeek/" rel="tag"><i class="fa fa-tag"></i> DeepSeek</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="https://kfufys.github.io/posts/b66155b1.html" rel="prev" title="Console 调试技巧">
+                  <i class="fa fa-angle-left"></i> Console 调试技巧
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-12-07T20:16:45+08:00"
-              content="2024-12-07">
-          12-07
-        </time>
-      </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="https://kfufys.github.io/posts/60795.html" itemprop="url">
-            <span itemprop="name">基于GitHub+hexo部署静态Blog</span>
-          </a>
-      </div>
 
-      
-    </header>
-  </article>
 
-    </div>
-  </div>
-  
-  
-  
+
 
 </div>
   </main>

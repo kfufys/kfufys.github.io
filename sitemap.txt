@@ -1,3 +1,4 @@
+https://kfufys.github.io/posts/4b037ad9.html
 https://kfufys.github.io/posts/b66155b1.html
 https://kfufys.github.io/posts/c5860ba2.html
 https://kfufys.github.io/posts/9aae07a1.html
@@ -18,13 +19,14 @@ https://kfufys.github.io/posts/74350de7.html
 https://kfufys.github.io/
 https://kfufys.github.io/tags/Console/
 https://kfufys.github.io/tags/JavaScript/
+https://kfufys.github.io/tags/AIGC/
+https://kfufys.github.io/tags/DeepSeek/
 https://kfufys.github.io/tags/%E6%95%99%E7%A8%8B/
 https://kfufys.github.io/tags/%E4%B8%AA%E6%80%A7%E5%8C%96/
 https://kfufys.github.io/tags/Hexo-Next/
 https://kfufys.github.io/tags/Blog-Themes/
 https://kfufys.github.io/tags/Google/
 https://kfufys.github.io/tags/Gemini/
-https://kfufys.github.io/tags/AIGC/
 https://kfufys.github.io/tags/Java/
 https://kfufys.github.io/tags/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/
 https://kfufys.github.io/tags/DemoCode/
@@ -36,8 +38,8 @@ https://kfufys.github.io/tags/log/
 https://kfufys.github.io/tags/GitHub/
 https://kfufys.github.io/tags/Hexo/
 https://kfufys.github.io/categories/Console/
-https://kfufys.github.io/categories/Themes-%E9%85%8D%E7%BD%AE/
 https://kfufys.github.io/categories/AI%E5%B7%A5%E5%85%B7/
+https://kfufys.github.io/categories/Themes-%E9%85%8D%E7%BD%AE/
 https://kfufys.github.io/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/
 https://kfufys.github.io/categories/JavaScript/
 https://kfufys.github.io/categories/Markdown/
