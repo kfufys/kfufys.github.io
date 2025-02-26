@@ -129,7 +129,11 @@
 </ul>
 </blockquote>
 <h3 id="三、核心部署流程"><a href="#三、核心部署流程" class="headerlink" title="三、核心部署流程"></a>三、核心部署流程</h3><h4 id="1-安装-Ollama-框架"><a href="#1-安装-Ollama-框架" class="headerlink" title="1. 安装 Ollama 框架"></a>1. 安装 Ollama 框架</h4><blockquote>
-<p>因部署本地 Deepseek 软件官网下载速度较慢，这里有下载好的软件包：<span class="exturl" data-url="aHR0cDovL2tmdWZ5cy50b3A6MTIxMjEvcy8yV2lQ">http://kfufys.top:12121/s/2WiP<i class="fa fa-external-link-alt"></i></span></p>
+<p>因部署本地 Deepseek 软件官网下载速度较慢，这里有下载好的软件包：</p>
+<ul>
+<li><strong>主链接</strong>：<span class="exturl" data-url="aHR0cHM6Ly93d3cuMTIzODY1LmNvbS9zLzRDakJqdi01c3NmaA==">https://www.123865.com/s/4CjBjv-5ssfh<i class="fa fa-external-link-alt"></i></span></li>
+<li><strong>备用链接</strong>：<span class="exturl" data-url="aHR0cDovL2tmdWZ5cy50b3A6MTIxMjEvcy8yV2lQ">http://kfufys.top:12121/s/2WiP<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
 </blockquote>
 <h5 id="1-1-下载安装包"><a href="#1-1-下载安装包" class="headerlink" title="1.1 下载安装包"></a>1.1 下载安装包</h5><p>访问 <span class="exturl" data-url="aHR0cHM6Ly9vbGxhbWEuY29tL2Rvd25sb2Fk">Ollama官网<i class="fa fa-external-link-alt"></i></span> → 选择对应系统版本下载（Windows用户建议安装到C盘）</p>
 <img src="https://kfufys.github.io/posts/4b037ad9/2.png" alt="download ollama" width="1200">
@@ -692,90 +696,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA数据结构期末DemoCode</title>
-    <url>https://kfufys.github.io/posts/43449.html</url>
-    <content><![CDATA[<img src="https://kfufys.github.io/posts/43449/1.png" alt="head-img" width="1200">
-
-<h3 id="题目一：顺序表-删除x-y间值"><a href="#题目一：顺序表-删除x-y间值" class="headerlink" title="题目一：顺序表_删除x~y间值"></a><strong>题目一：顺序表_删除<code>x~y</code>间值</strong></h3><p><strong>问题描述：已知线性表采用顺序存储结构<code>SeqList</code>，编写算法删除值在<code>x~y</code>之间的所有结点：</strong></p>
-<p><code>SeqDelTest.java</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo01;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@project</span>: JavaDemo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> kfufys</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2024/12/27 20:07</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 测试删除指定范围内的元素</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span>: 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SeqDelTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建一个容量为10的顺序表</span></span><br><span class="line">        top.kfufys.demo01.<span class="type">SeqList</span> <span class="variable">list</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SeqList</span>(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 添加测试数据</span></span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        list.add(<span class="number">5</span>);</span><br><span class="line">        list.add(<span class="number">10</span>);</span><br><span class="line">        list.add(<span class="number">15</span>);</span><br><span class="line">        list.add(<span class="number">20</span>);</span><br><span class="line">        list.add(<span class="number">25</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印原始列表</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Original list: &quot;</span> + list);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 定义删除范围</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 调用方法删除范围内的元素</span></span><br><span class="line">        list.removeInRange(x, y);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印删除元素后的列表</span></span><br><span class="line">        System.out.println(<span class="string">&quot;List after removing elements in range &quot;</span> + x + <span class="string">&quot; to &quot;</span> + y + <span class="string">&quot;: &quot;</span> + list);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>SeqList.java</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo01;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * SeqList类代表一个顺序表，即一个线性数据结构</span></span><br><span class="line"><span class="comment"> * 它允许在列表的末尾添加元素，并在指定范围内删除元素</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SeqList</span> &#123;</span><br><span class="line">    <span class="comment">// data数组存储顺序表中的元素</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span>[] data;</span><br><span class="line">    <span class="comment">// size变量记录当前顺序表中元素的数量</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> size;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构造一个指定容量的顺序表</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> capacity 顺序表的初始容量</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">SeqList</span><span class="params">(<span class="type">int</span> capacity)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.data = <span class="keyword">new</span> <span class="title class_">int</span>[capacity];</span><br><span class="line">        <span class="built_in">this</span>.size = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 向顺序表中添加一个元素如果顺序表已满，则先调整大小</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> value 要添加的元素值</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> value)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (size == data.length) &#123;</span><br><span class="line">            resize();</span><br><span class="line">        &#125;</span><br><span class="line">        data[size++] = value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 从顺序表中删除指定范围内的所有元素</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> x 范围的起始值（包含）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> y 范围的结束值（包含）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IllegalArgumentException 如果x大于y</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">removeInRange</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (x &gt; y) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IllegalArgumentException</span>(<span class="string">&quot;x should not be greater than y&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">newSize</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (data[i] &lt; x || data[i] &gt; y) &#123;</span><br><span class="line">                data[newSize++] = data[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        size = newSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 返回顺序表中元素的数量</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 顺序表的大小</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">size</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> size;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取顺序表中指定位置的元素</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> index 元素的索引</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 指定位置的元素值</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IndexOutOfBoundsException 如果索引超出范围</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">get</span><span class="params">(<span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= size) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IndexOutOfBoundsException</span>(<span class="string">&quot;Index out of bounds&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> data[index];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 调整顺序表的大小，当顺序表满时自动调用</span></span><br><span class="line"><span class="comment">     * 它会创建一个更大（当前长度的两倍）的新数组，并将原数组的内容复制到新数组中</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">resize</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">int</span>[] newData = <span class="keyword">new</span> <span class="title class_">int</span>[data.length * <span class="number">2</span>];</span><br><span class="line">        System.arraycopy(data, <span class="number">0</span>, newData, <span class="number">0</span>, size);</span><br><span class="line">        data = newData;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 重写toString方法，以便于顺序表的字符串表示</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 顺序表的字符串表示</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">        sb.append(<span class="string">&quot;[&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">            sb.append(data[i]);</span><br><span class="line">            <span class="keyword">if</span> (i &lt; size - <span class="number">1</span>) &#123;</span><br><span class="line">                sb.append(<span class="string">&quot;, &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        sb.append(<span class="string">&quot;]&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>运行结果展示：</strong></p>
-<img src="https://kfufys.github.io/posts/43449/demo01.png" alt="Demo01.png" width="1200">
-
-
-
-<h3 id="题目二：顺序栈实现-进制转换"><a href="#题目二：顺序栈实现-进制转换" class="headerlink" title="题目二：顺序栈实现_进制转换"></a><strong>题目二：顺序栈实现_进制转换</strong></h3><p><strong>问题描述：已知栈使用顺序存储结构<code>Seqstack</code>，编写算法<code>conversion</code>实现进制转换：</strong></p>
-<p><code>ConversionTest.java</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo02;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@project</span> JavaDemo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> kfufys</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2024/12/27 20:30</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span> 已知栈使用顺序存储结构`Seqstack`，编写算法`conversion`实现进制转换</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ConversionTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 定义要转换的十进制数</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">number</span> <span class="operator">=</span> <span class="number">228</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 定义要转换到的进制为2（二进制）</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">base</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line">        <span class="comment">// 调用Conversion类的conversion方法进行进制转换，并打印结果</span></span><br><span class="line">        System.out.println(<span class="string">&quot;十进制 &quot;</span> + number + <span class="string">&quot; 转换为 &quot;</span> + base + <span class="string">&quot; 进制: &quot;</span> + Conversion.conversion(number, base));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将进制更改为8（八进制）</span></span><br><span class="line">        base = <span class="number">8</span>;</span><br><span class="line">        <span class="comment">// 调用Conversion类的conversion方法进行进制转换，并打印结果</span></span><br><span class="line">        System.out.println(<span class="string">&quot;十进制 &quot;</span> + number + <span class="string">&quot; 转换为 &quot;</span> + base + <span class="string">&quot; 进制: &quot;</span> + Conversion.conversion(number, base));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将进制更改为16（十六进制）</span></span><br><span class="line">        base = <span class="number">16</span>;</span><br><span class="line">        <span class="comment">// 调用Conversion类的conversion方法进行进制转换，并打印结果</span></span><br><span class="line">        System.out.println(<span class="string">&quot;十进制 &quot;</span> + number + <span class="string">&quot; 转换为 &quot;</span> + base + <span class="string">&quot; 进制: &quot;</span> + Conversion.conversion(number, base));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>Conversion.java</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo02;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 十进制转二进制、八进制、十六进制</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Conversion</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 将十进制数转换为指定进制的字符串表示。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> number 要转换的十进制数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> base   要转换到的进制（例如，2表示二进制，8表示八进制，16表示十六进制）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 转换后的字符串表示</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">conversion</span><span class="params">(<span class="type">int</span> number, <span class="type">int</span> base)</span> &#123;</span><br><span class="line">        <span class="comment">// 检查进制是否在有效范围内（2到16之间）</span></span><br><span class="line">        <span class="keyword">if</span> (base &lt; <span class="number">2</span> || base &gt; <span class="number">16</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IllegalArgumentException</span>(<span class="string">&quot;进制必须在2到16之间&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建一个顺序栈来存储转换过程中的余数</span></span><br><span class="line">        SeqStack&lt;Character&gt; stack = <span class="keyword">new</span> <span class="title class_">SeqStack</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// 定义一个字符串，包含所有可能的字符（0-9, A-F）</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">digits</span> <span class="operator">=</span> <span class="string">&quot;0123456789ABCDEF&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 使用do-while循环进行进制转换</span></span><br><span class="line">        <span class="keyword">do</span> &#123;</span><br><span class="line">            <span class="comment">// 计算当前数字除以目标进制的余数</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">remainder</span> <span class="operator">=</span> number % base;</span><br><span class="line">            <span class="comment">// 将余数对应的字符压入栈中</span></span><br><span class="line">            stack.push(digits.charAt(remainder));</span><br><span class="line">            <span class="comment">// 更新数字为除以目标进制后的商</span></span><br><span class="line">            number /= base;</span><br><span class="line">        &#125; <span class="keyword">while</span> (number &gt; <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建一个StringBuilder对象来构建最终的转换结果</span></span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">result</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">        <span class="comment">// 从栈中弹出所有字符并添加到StringBuilder中</span></span><br><span class="line">        <span class="keyword">while</span> (!stack.isEmpty()) &#123;</span><br><span class="line">            result.append(stack.pop());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 返回转换后的字符串表示</span></span><br><span class="line">        <span class="keyword">return</span> result.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>SeqStack.java</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo02;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.EmptyStackException;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 顺序栈 (SeqStack) 的实现，使用泛型 T 来存储元素。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SeqStack</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="comment">// 默认容量大小</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">DEFAULT_CAPACITY</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 存储栈元素的数组</span></span><br><span class="line">    <span class="keyword">private</span> T[] elements;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 栈顶指针，初始值为 -1 表示空栈</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> top;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构造函数，初始化一个默认容量的顺序栈。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@SuppressWarnings(&quot;unchecked&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">SeqStack</span><span class="params">()</span> &#123;</span><br><span class="line">        elements = (T[]) <span class="keyword">new</span> <span class="title class_">Object</span>[DEFAULT_CAPACITY];</span><br><span class="line">        top = -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 检查栈是否为空。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 如果栈为空返回 true，否则返回 false。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isEmpty</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> top == -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 将元素压入栈中。如果栈已满，则自动扩展容量。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> item 要压入栈中的元素。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">push</span><span class="params">(T item)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (top == elements.length - <span class="number">1</span>) &#123;</span><br><span class="line">            resize(elements.length * <span class="number">2</span>); <span class="comment">// 当栈满时，将容量扩大一倍</span></span><br><span class="line">        &#125;</span><br><span class="line">        elements[++top] = item; <span class="comment">// 将元素添加到栈顶，并更新栈顶指针</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 弹出栈顶元素。如果栈为空，则抛出 EmptyStackException。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 栈顶元素。</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> EmptyStackException 如果栈为空。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> T <span class="title function_">pop</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">EmptyStackException</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">T</span> <span class="variable">item</span> <span class="operator">=</span> elements[top]; <span class="comment">// 获取栈顶元素</span></span><br><span class="line">        elements[top--] = <span class="literal">null</span>; <span class="comment">// 更新栈顶指针并避免对象游离</span></span><br><span class="line">        <span class="keyword">if</span> (top &gt; <span class="number">0</span> &amp;&amp; top == elements.length / <span class="number">4</span>) &#123;</span><br><span class="line">            resize(elements.length / <span class="number">2</span>); <span class="comment">// 当栈容量超过四分之一且非空时，将容量减半</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> item;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 查看栈顶元素但不弹出。如果栈为空，则抛出 EmptyStackException。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 栈顶元素。</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> EmptyStackException 如果栈为空。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> T <span class="title function_">peek</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">EmptyStackException</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> elements[top];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 调整栈的容量。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> newCapacity 新的容量大小。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@SuppressWarnings(&quot;unchecked&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">resize</span><span class="params">(<span class="type">int</span> newCapacity)</span> &#123;</span><br><span class="line">        T[] newElements = (T[]) <span class="keyword">new</span> <span class="title class_">Object</span>[newCapacity];</span><br><span class="line">        System.arraycopy(elements, <span class="number">0</span>, newElements, <span class="number">0</span>, top + <span class="number">1</span>); <span class="comment">// 复制现有元素到新数组</span></span><br><span class="line">        elements = newElements; <span class="comment">// 更新引用</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>运行结果展示：</strong></p>
-<img src="https://kfufys.github.io/posts/43449/demo02.png" alt="Demo02.png" width="1200">
-
-
-
-<h3 id="题目三：顺序表-删除最小值结点"><a href="#题目三：顺序表-删除最小值结点" class="headerlink" title="题目三：顺序表_删除最小值结点"></a><strong>题目三：顺序表_删除最小值结点</strong></h3><p><strong>问题描述：已知线性表采用顺序存储结构<code>SeqList</code>，编写算法，删除值最小的结点：</strong></p>
-<p><code>TestSeqList.java</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo03;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@project</span>: JavaDemo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> kfufys</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@data</span> 2024/12/27 21:00</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 顺序表_删除最小值结点</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestSeqList</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建一个顺序表对象</span></span><br><span class="line">        <span class="type">SeqList</span> <span class="variable">seqList</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SeqList</span>();</span><br><span class="line">        <span class="comment">// 添加一些元素到顺序表中</span></span><br><span class="line">        seqList.add(<span class="number">5</span>);</span><br><span class="line">        seqList.add(<span class="number">3</span>);</span><br><span class="line">        seqList.add(<span class="number">8</span>);</span><br><span class="line">        seqList.add(<span class="number">1</span>);</span><br><span class="line">        seqList.add(<span class="number">7</span>);</span><br><span class="line">        <span class="comment">// 打印删除最小元素之前的顺序表内容</span></span><br><span class="line">        System.out.println(<span class="string">&quot;删除最小元素之前：&quot;</span>);</span><br><span class="line">        seqList.printList();</span><br><span class="line">        <span class="comment">// 删除顺序表中的最小元素</span></span><br><span class="line">        seqList.removeMin();</span><br><span class="line">        <span class="comment">// 打印删除最小元素之后的顺序表内容</span></span><br><span class="line">        System.out.println(<span class="string">&quot;删除最小元素之后：&quot;</span>);</span><br><span class="line">        seqList.printList();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>SeqList.java</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo03;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * SeqList类代表一个顺序表，即一个线性数据结构</span></span><br><span class="line"><span class="comment"> * 它允许在列表的末尾添加元素，并在指定范围内删除元素</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SeqList</span> &#123;</span><br><span class="line">    <span class="comment">// data数组存储顺序表中的元素</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span>[] data;</span><br><span class="line">    <span class="comment">// size变量记录当前顺序表中元素的数量</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> size;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构造一个指定容量的顺序表</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">SeqList</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.data = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">10</span>]; <span class="comment">// 初始化默认容量为10</span></span><br><span class="line">        <span class="built_in">this</span>.size = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 向顺序表中添加一个元素如果顺序表已满，则先调整大小</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> value 要添加的元素值</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> value)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (size == data.length) &#123;</span><br><span class="line">            resize();</span><br><span class="line">        &#125;</span><br><span class="line">        data[size++] = value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 从顺序表中删除指定范围内的所有元素</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> x 范围的起始值（包含）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> y 范围的结束值（包含）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IllegalArgumentException 如果x大于y</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">removeInRange</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (x &gt; y) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IllegalArgumentException</span>(<span class="string">&quot;x should not be greater than y&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">newSize</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (data[i] &lt; x || data[i] &gt; y) &#123;</span><br><span class="line">                data[newSize++] = data[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        size = newSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 返回顺序表中元素的数量</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 顺序表的大小</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">size</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> size;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取顺序表中指定位置的元素</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> index 元素的索引</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 指定位置的元素值</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IndexOutOfBoundsException 如果索引超出范围</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">get</span><span class="params">(<span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= size) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IndexOutOfBoundsException</span>(<span class="string">&quot;Index out of bounds&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> data[index];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 调整顺序表的大小，当顺序表满时自动调用</span></span><br><span class="line"><span class="comment">     * 它会创建一个更大（当前长度的两倍）的新数组，并将原数组的内容复制到新数组中</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">resize</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">int</span>[] newData = <span class="keyword">new</span> <span class="title class_">int</span>[data.length * <span class="number">2</span>];</span><br><span class="line">        System.arraycopy(data, <span class="number">0</span>, newData, <span class="number">0</span>, size);</span><br><span class="line">        data = newData;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 重写toString方法，以便于顺序表的字符串表示</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 顺序表的字符串表示</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">        sb.append(<span class="string">&quot;[&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">            sb.append(data[i]);</span><br><span class="line">            <span class="keyword">if</span> (i &lt; size - <span class="number">1</span>) &#123;</span><br><span class="line">                sb.append(<span class="string">&quot;, &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        sb.append(<span class="string">&quot;]&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 删除顺序表中值最小的结点</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">removeMin</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (size == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>; <span class="comment">// 如果顺序表为空，直接返回</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">minIndex</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 记录最小值的索引</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">minValue</span> <span class="operator">=</span> data[<span class="number">0</span>]; <span class="comment">// 记录最小值</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历顺序表，找到最小值及其索引</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; size; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (data[i] &lt; minValue) &#123;</span><br><span class="line">                minValue = data[i]; <span class="comment">// 更新最小值</span></span><br><span class="line">                minIndex = i; <span class="comment">// 更新最小值的索引</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 删除最小值</span></span><br><span class="line">        remove(minIndex);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 删除指定索引的元素</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> index 要删除的元素的索引</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IndexOutOfBoundsException 如果索引超出范围</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">remove</span><span class="params">(<span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= size) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IndexOutOfBoundsException</span>(<span class="string">&quot;索引: &quot;</span> + index + <span class="string">&quot;, 大小: &quot;</span> + size);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> index; i &lt; size - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            data[i] = data[i + <span class="number">1</span>]; <span class="comment">// 将后续元素向前移动</span></span><br><span class="line">        &#125;</span><br><span class="line">        data[--size] = <span class="number">0</span>; <span class="comment">// 更新元素数量并避免对象游离</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 打印顺序表中的所有元素</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">printList</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="built_in">this</span>.toString()); <span class="comment">// 使用重写的toString方法打印顺序表</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>运行结果展示：</strong></p>
-<img src="https://kfufys.github.io/posts/43449/demo03.png" alt="Demo03.png" width="1200">
-
-
-
-<h3 id="题目四：稀疏矩阵转置"><a href="#题目四：稀疏矩阵转置" class="headerlink" title="题目四：稀疏矩阵转置"></a><strong>题目四：稀疏矩阵转置</strong></h3><p><strong>问题描述：编写算法<code>TransMatrix</code>实现稀疏矩阵的转置：</strong></p>
-<p><code>SparseMatrixTransposeTest.java</code></p>
- <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo04;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> kfufys</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@project</span>: JavaDemo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2024/12/27 21:15</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 该类用于演示如何对稀疏矩阵进行转置操作，稀疏矩阵是一种特殊的数据结构，主要用于减少存储空间和提高计算效率</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SparseMatrixTransposeTest</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 主函数入口</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args 命令行参数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 初始化稀疏矩阵，以三元组形式表示非零元素的位置和值</span></span><br><span class="line">        Triple[] matrix = &#123;</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">Triple</span>(<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">Triple</span>(<span class="number">0</span>, <span class="number">3</span>, <span class="number">2</span>),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">Triple</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">Triple</span>(<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="comment">// 打印原始稀疏矩阵</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Original Sparse Matrix:&quot;</span>);</span><br><span class="line">        TransMatrix.printMatrix(matrix);</span><br><span class="line">        <span class="comment">// 执行稀疏矩阵的转置操作</span></span><br><span class="line">        Triple[] transposedMatrix = TransMatrix.transpose(matrix);</span><br><span class="line">        <span class="comment">// 打印转置后的稀疏矩阵</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Transposed Sparse Matrix:&quot;</span>);</span><br><span class="line">        TransMatrix.printMatrix(transposedMatrix);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>Triple.java</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo04;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Triple 类用于表示一个三元组，主要用于存储矩阵元素的行位置、列位置和值。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Triple</span> &#123;</span><br><span class="line">    <span class="comment">// 表示矩阵元素的行位置</span></span><br><span class="line">    <span class="type">int</span> row;</span><br><span class="line">    <span class="comment">// 表示矩阵元素的列位置</span></span><br><span class="line">    <span class="type">int</span> col;</span><br><span class="line">    <span class="comment">// 表示矩阵元素的值</span></span><br><span class="line">    <span class="type">int</span> value;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构造一个新的 Triple 实例。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> row   矩阵元素的行位置</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> col   矩阵元素的列位置</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> value 矩阵元素的值</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Triple</span><span class="params">(<span class="type">int</span> row, <span class="type">int</span> col, <span class="type">int</span> value)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.row = row;</span><br><span class="line">        <span class="built_in">this</span>.col = col;</span><br><span class="line">        <span class="built_in">this</span>.value = value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>TransMatrix.java</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo04;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> top.kfufys.demo04.Triple;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * TransMatrix类提供了矩阵转置的功能，特别适用于稀疏矩阵。</span></span><br><span class="line"><span class="comment"> * 稀疏矩阵是指大部分元素为零的矩阵。通过使用Triple数组表示矩阵，</span></span><br><span class="line"><span class="comment"> * 可以有效地存储和操作这些矩阵。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TransMatrix</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 对稀疏矩阵进行转置。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> matrix 代表原始矩阵的Triple数组，每个Triple对象包含行索引、列索引和值。</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 转置后的矩阵，以Triple数组形式返回。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Triple[] transpose(Triple[] matrix) &#123;</span><br><span class="line">        <span class="comment">// 确定矩阵的列数（即转置后矩阵的行数）</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">numCols</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (Triple triple : matrix) &#123;</span><br><span class="line">            <span class="keyword">if</span> (triple.col &gt; numCols) &#123;</span><br><span class="line">                numCols = triple.col;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        numCols++; <span class="comment">// 列索引从0开始，因此需要加1</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 初始化结果矩阵和辅助数组</span></span><br><span class="line">        Triple[] result = <span class="keyword">new</span> <span class="title class_">Triple</span>[matrix.length]; <span class="comment">// 存储转置后的矩阵</span></span><br><span class="line">        <span class="type">int</span>[] colSizes = <span class="keyword">new</span> <span class="title class_">int</span>[numCols];           <span class="comment">// 统计每列的元素个数</span></span><br><span class="line">        <span class="type">int</span>[] colIndices = <span class="keyword">new</span> <span class="title class_">int</span>[numCols];         <span class="comment">// 记录每列元素在转置矩阵中的起始位置</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 统计每列的元素个数</span></span><br><span class="line">        <span class="keyword">for</span> (Triple triple : matrix) &#123;</span><br><span class="line">            colSizes[triple.col]++; <span class="comment">// 每遇到一个元素，对应列的计数加1</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 计算每列元素在转置矩阵中的起始位置</span></span><br><span class="line">        colIndices[<span class="number">0</span>] = <span class="number">0</span>; <span class="comment">// 第一列的起始位置总是0</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; numCols; i++) &#123;</span><br><span class="line">            colIndices[i] = colIndices[i - <span class="number">1</span>] + colSizes[i - <span class="number">1</span>];</span><br><span class="line">            <span class="comment">// 当前列的起始位置等于前一列的起始位置加上前一列的元素个数</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 生成转置矩阵</span></span><br><span class="line">        <span class="keyword">for</span> (Triple triple : matrix) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> colIndices[triple.col]; <span class="comment">// 获取当前列的起始位置</span></span><br><span class="line">            result[index] = <span class="keyword">new</span> <span class="title class_">Triple</span>(triple.col, triple.row, triple.value);</span><br><span class="line">            <span class="comment">// 创建新的Triple对象，交换行列索引，并赋值给结果数组</span></span><br><span class="line">            colIndices[triple.col]++; <span class="comment">// 更新当前列的起始位置</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 打印矩阵。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> matrix 要打印的矩阵，以Triple数组形式表示。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">printMatrix</span><span class="params">(Triple[] matrix)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (Triple triple : matrix) &#123;</span><br><span class="line">            System.out.println(triple.row + <span class="string">&quot; &quot;</span> + triple.col + <span class="string">&quot; &quot;</span> + triple.value);</span><br><span class="line">            <span class="comment">// 打印每一行的行索引、列索引和值</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>运行结果展示：</strong></p>
-<img src="https://kfufys.github.io/posts/43449/demo04.png" alt="Demo04.png" width="1200">
-
-
-
-<h3 id="题目五：递归建立二叉树"><a href="#题目五：递归建立二叉树" class="headerlink" title="题目五：递归建立二叉树"></a><strong>题目五：递归建立二叉树</strong></h3><p><strong>问题描述：编写算法，使用递归方式建立二叉树：</strong></p>
-<p><code>BinaryTreeBuilder.java</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo05;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> kfufys</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@project</span>: JavaDemo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2024/12/27 21:40</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span> 二叉树构建和遍历的主类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BinaryTreeBuilder</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 主方法，程序入口</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args 命令行参数（本程序未使用）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 调用 BinaryTree 类中的静态方法 buildTree() 构建二叉树，并将根节点赋值给 root 变量</span></span><br><span class="line">        <span class="type">TreeNode</span> <span class="variable">root</span> <span class="operator">=</span> BinaryTree.buildTree();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印提示信息，表示接下来将进行中序遍历</span></span><br><span class="line">        System.out.println(<span class="string">&quot;构建的二叉树的中序遍历结果:&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 调用 BinaryTree 类中的静态方法 inorderTraversal() 对二叉树进行中序遍历并打印结果</span></span><br><span class="line">        BinaryTree.inorderTraversal(root);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>TreeNode.java</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo05;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 二叉树节点类，表示二叉树中的一个节点</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 节点存储的值</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 指向左子节点的引用</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    TreeNode left;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 指向右子节点的引用</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    TreeNode right;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构造函数，用于初始化一个新的二叉树节点</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> val 节点的值</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">TreeNode</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="comment">// 初始化节点的值</span></span><br><span class="line">        <span class="built_in">this</span>.val = val;</span><br><span class="line">        <span class="comment">// 初始化左右子节点为 null，表示当前节点没有子节点</span></span><br><span class="line">        <span class="built_in">this</span>.left = <span class="literal">null</span>;</span><br><span class="line">        <span class="built_in">this</span>.right = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>BinaryTree.java</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo05;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 二叉树类，包含构建二叉树和中序遍历的方法</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BinaryTree</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构建二叉树的方法</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回构建好的二叉树的根节点</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> TreeNode <span class="title function_">buildTree</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">// 提示用户输入节点值，并读取输入</span></span><br><span class="line">        System.out.print(<span class="string">&quot;请输入节点值（输入 -1 表示空节点）: &quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">value</span> <span class="operator">=</span> getValidInput();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果输入值为 -1，表示该节点为空，返回 null</span></span><br><span class="line">        <span class="keyword">if</span> (value == -<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 否则，创建一个新的 TreeNode 节点并初始化其值</span></span><br><span class="line">        <span class="type">TreeNode</span> <span class="variable">root</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TreeNode</span>(value);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 递归构建左子树</span></span><br><span class="line">        System.out.print(<span class="string">&quot;请输入节点 &quot;</span> + value + <span class="string">&quot; 的左子节点值（输入 -1 表示空节点）: &quot;</span>);</span><br><span class="line">        root.left = buildTree();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 递归构建右子树</span></span><br><span class="line">        System.out.print(<span class="string">&quot;请输入节点 &quot;</span> + value + <span class="string">&quot; 的右子节点值（输入 -1 表示空节点）: &quot;</span>);</span><br><span class="line">        root.right = buildTree();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">getValidInput</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">while</span> (!scanner.hasNextInt()) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;输入错误，请输入有效的整数。&quot;</span>);</span><br><span class="line">            scanner.next(); <span class="comment">// 清除错误输入</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> scanner.nextInt();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 中序遍历二叉树的方法</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> root 二叉树的根节点</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">inorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="comment">// 如果当前节点为空，直接返回</span></span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 递归遍历左子树</span></span><br><span class="line">        inorderTraversal(root.left);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 访问当前节点，打印节点值</span></span><br><span class="line">        System.out.print(root.val + <span class="string">&quot; &quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 递归遍历右子树</span></span><br><span class="line">        inorderTraversal(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>运行结果展示：</strong></p>
-<img src="https://kfufys.github.io/posts/43449/demo05.png" alt="Demo05.png" width="1200">
-
-<hr>
-<center><span> - - Done - - </span></center>
-]]></content>
-      <categories>
-        <category>期末复习</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>期末复习</tag>
-        <tag>DemoCode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JavaScript 简写技巧</title>
     <url>https://kfufys.github.io/posts/c5860ba2.html</url>
     <content><![CDATA[<img src="https://kfufys.github.io/posts/c5860ba2/1.png" alt="head-img" width="1200">
@@ -957,6 +877,90 @@
       </categories>
       <tags>
         <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA数据结构期末DemoCode</title>
+    <url>https://kfufys.github.io/posts/43449.html</url>
+    <content><![CDATA[<img src="https://kfufys.github.io/posts/43449/1.png" alt="head-img" width="1200">
+
+<h3 id="题目一：顺序表-删除x-y间值"><a href="#题目一：顺序表-删除x-y间值" class="headerlink" title="题目一：顺序表_删除x~y间值"></a><strong>题目一：顺序表_删除<code>x~y</code>间值</strong></h3><p><strong>问题描述：已知线性表采用顺序存储结构<code>SeqList</code>，编写算法删除值在<code>x~y</code>之间的所有结点：</strong></p>
+<p><code>SeqDelTest.java</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo01;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@project</span>: JavaDemo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> kfufys</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2024/12/27 20:07</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 测试删除指定范围内的元素</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span>: 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SeqDelTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建一个容量为10的顺序表</span></span><br><span class="line">        top.kfufys.demo01.<span class="type">SeqList</span> <span class="variable">list</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SeqList</span>(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 添加测试数据</span></span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        list.add(<span class="number">5</span>);</span><br><span class="line">        list.add(<span class="number">10</span>);</span><br><span class="line">        list.add(<span class="number">15</span>);</span><br><span class="line">        list.add(<span class="number">20</span>);</span><br><span class="line">        list.add(<span class="number">25</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印原始列表</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Original list: &quot;</span> + list);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 定义删除范围</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 调用方法删除范围内的元素</span></span><br><span class="line">        list.removeInRange(x, y);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印删除元素后的列表</span></span><br><span class="line">        System.out.println(<span class="string">&quot;List after removing elements in range &quot;</span> + x + <span class="string">&quot; to &quot;</span> + y + <span class="string">&quot;: &quot;</span> + list);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>SeqList.java</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo01;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * SeqList类代表一个顺序表，即一个线性数据结构</span></span><br><span class="line"><span class="comment"> * 它允许在列表的末尾添加元素，并在指定范围内删除元素</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SeqList</span> &#123;</span><br><span class="line">    <span class="comment">// data数组存储顺序表中的元素</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span>[] data;</span><br><span class="line">    <span class="comment">// size变量记录当前顺序表中元素的数量</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> size;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构造一个指定容量的顺序表</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> capacity 顺序表的初始容量</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">SeqList</span><span class="params">(<span class="type">int</span> capacity)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.data = <span class="keyword">new</span> <span class="title class_">int</span>[capacity];</span><br><span class="line">        <span class="built_in">this</span>.size = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 向顺序表中添加一个元素如果顺序表已满，则先调整大小</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> value 要添加的元素值</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> value)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (size == data.length) &#123;</span><br><span class="line">            resize();</span><br><span class="line">        &#125;</span><br><span class="line">        data[size++] = value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 从顺序表中删除指定范围内的所有元素</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> x 范围的起始值（包含）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> y 范围的结束值（包含）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IllegalArgumentException 如果x大于y</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">removeInRange</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (x &gt; y) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IllegalArgumentException</span>(<span class="string">&quot;x should not be greater than y&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">newSize</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (data[i] &lt; x || data[i] &gt; y) &#123;</span><br><span class="line">                data[newSize++] = data[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        size = newSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 返回顺序表中元素的数量</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 顺序表的大小</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">size</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> size;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取顺序表中指定位置的元素</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> index 元素的索引</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 指定位置的元素值</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IndexOutOfBoundsException 如果索引超出范围</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">get</span><span class="params">(<span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= size) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IndexOutOfBoundsException</span>(<span class="string">&quot;Index out of bounds&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> data[index];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 调整顺序表的大小，当顺序表满时自动调用</span></span><br><span class="line"><span class="comment">     * 它会创建一个更大（当前长度的两倍）的新数组，并将原数组的内容复制到新数组中</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">resize</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">int</span>[] newData = <span class="keyword">new</span> <span class="title class_">int</span>[data.length * <span class="number">2</span>];</span><br><span class="line">        System.arraycopy(data, <span class="number">0</span>, newData, <span class="number">0</span>, size);</span><br><span class="line">        data = newData;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 重写toString方法，以便于顺序表的字符串表示</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 顺序表的字符串表示</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">        sb.append(<span class="string">&quot;[&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">            sb.append(data[i]);</span><br><span class="line">            <span class="keyword">if</span> (i &lt; size - <span class="number">1</span>) &#123;</span><br><span class="line">                sb.append(<span class="string">&quot;, &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        sb.append(<span class="string">&quot;]&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>运行结果展示：</strong></p>
+<img src="https://kfufys.github.io/posts/43449/demo01.png" alt="Demo01.png" width="1200">
+
+
+
+<h3 id="题目二：顺序栈实现-进制转换"><a href="#题目二：顺序栈实现-进制转换" class="headerlink" title="题目二：顺序栈实现_进制转换"></a><strong>题目二：顺序栈实现_进制转换</strong></h3><p><strong>问题描述：已知栈使用顺序存储结构<code>Seqstack</code>，编写算法<code>conversion</code>实现进制转换：</strong></p>
+<p><code>ConversionTest.java</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo02;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@project</span> JavaDemo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> kfufys</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2024/12/27 20:30</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span> 已知栈使用顺序存储结构`Seqstack`，编写算法`conversion`实现进制转换</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ConversionTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 定义要转换的十进制数</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">number</span> <span class="operator">=</span> <span class="number">228</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 定义要转换到的进制为2（二进制）</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">base</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line">        <span class="comment">// 调用Conversion类的conversion方法进行进制转换，并打印结果</span></span><br><span class="line">        System.out.println(<span class="string">&quot;十进制 &quot;</span> + number + <span class="string">&quot; 转换为 &quot;</span> + base + <span class="string">&quot; 进制: &quot;</span> + Conversion.conversion(number, base));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将进制更改为8（八进制）</span></span><br><span class="line">        base = <span class="number">8</span>;</span><br><span class="line">        <span class="comment">// 调用Conversion类的conversion方法进行进制转换，并打印结果</span></span><br><span class="line">        System.out.println(<span class="string">&quot;十进制 &quot;</span> + number + <span class="string">&quot; 转换为 &quot;</span> + base + <span class="string">&quot; 进制: &quot;</span> + Conversion.conversion(number, base));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将进制更改为16（十六进制）</span></span><br><span class="line">        base = <span class="number">16</span>;</span><br><span class="line">        <span class="comment">// 调用Conversion类的conversion方法进行进制转换，并打印结果</span></span><br><span class="line">        System.out.println(<span class="string">&quot;十进制 &quot;</span> + number + <span class="string">&quot; 转换为 &quot;</span> + base + <span class="string">&quot; 进制: &quot;</span> + Conversion.conversion(number, base));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>Conversion.java</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo02;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 十进制转二进制、八进制、十六进制</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Conversion</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 将十进制数转换为指定进制的字符串表示。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> number 要转换的十进制数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> base   要转换到的进制（例如，2表示二进制，8表示八进制，16表示十六进制）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 转换后的字符串表示</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">conversion</span><span class="params">(<span class="type">int</span> number, <span class="type">int</span> base)</span> &#123;</span><br><span class="line">        <span class="comment">// 检查进制是否在有效范围内（2到16之间）</span></span><br><span class="line">        <span class="keyword">if</span> (base &lt; <span class="number">2</span> || base &gt; <span class="number">16</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IllegalArgumentException</span>(<span class="string">&quot;进制必须在2到16之间&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建一个顺序栈来存储转换过程中的余数</span></span><br><span class="line">        SeqStack&lt;Character&gt; stack = <span class="keyword">new</span> <span class="title class_">SeqStack</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// 定义一个字符串，包含所有可能的字符（0-9, A-F）</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">digits</span> <span class="operator">=</span> <span class="string">&quot;0123456789ABCDEF&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 使用do-while循环进行进制转换</span></span><br><span class="line">        <span class="keyword">do</span> &#123;</span><br><span class="line">            <span class="comment">// 计算当前数字除以目标进制的余数</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">remainder</span> <span class="operator">=</span> number % base;</span><br><span class="line">            <span class="comment">// 将余数对应的字符压入栈中</span></span><br><span class="line">            stack.push(digits.charAt(remainder));</span><br><span class="line">            <span class="comment">// 更新数字为除以目标进制后的商</span></span><br><span class="line">            number /= base;</span><br><span class="line">        &#125; <span class="keyword">while</span> (number &gt; <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建一个StringBuilder对象来构建最终的转换结果</span></span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">result</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">        <span class="comment">// 从栈中弹出所有字符并添加到StringBuilder中</span></span><br><span class="line">        <span class="keyword">while</span> (!stack.isEmpty()) &#123;</span><br><span class="line">            result.append(stack.pop());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 返回转换后的字符串表示</span></span><br><span class="line">        <span class="keyword">return</span> result.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>SeqStack.java</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo02;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.EmptyStackException;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 顺序栈 (SeqStack) 的实现，使用泛型 T 来存储元素。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SeqStack</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="comment">// 默认容量大小</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">DEFAULT_CAPACITY</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 存储栈元素的数组</span></span><br><span class="line">    <span class="keyword">private</span> T[] elements;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 栈顶指针，初始值为 -1 表示空栈</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> top;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构造函数，初始化一个默认容量的顺序栈。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@SuppressWarnings(&quot;unchecked&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">SeqStack</span><span class="params">()</span> &#123;</span><br><span class="line">        elements = (T[]) <span class="keyword">new</span> <span class="title class_">Object</span>[DEFAULT_CAPACITY];</span><br><span class="line">        top = -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 检查栈是否为空。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 如果栈为空返回 true，否则返回 false。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isEmpty</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> top == -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 将元素压入栈中。如果栈已满，则自动扩展容量。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> item 要压入栈中的元素。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">push</span><span class="params">(T item)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (top == elements.length - <span class="number">1</span>) &#123;</span><br><span class="line">            resize(elements.length * <span class="number">2</span>); <span class="comment">// 当栈满时，将容量扩大一倍</span></span><br><span class="line">        &#125;</span><br><span class="line">        elements[++top] = item; <span class="comment">// 将元素添加到栈顶，并更新栈顶指针</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 弹出栈顶元素。如果栈为空，则抛出 EmptyStackException。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 栈顶元素。</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> EmptyStackException 如果栈为空。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> T <span class="title function_">pop</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">EmptyStackException</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">T</span> <span class="variable">item</span> <span class="operator">=</span> elements[top]; <span class="comment">// 获取栈顶元素</span></span><br><span class="line">        elements[top--] = <span class="literal">null</span>; <span class="comment">// 更新栈顶指针并避免对象游离</span></span><br><span class="line">        <span class="keyword">if</span> (top &gt; <span class="number">0</span> &amp;&amp; top == elements.length / <span class="number">4</span>) &#123;</span><br><span class="line">            resize(elements.length / <span class="number">2</span>); <span class="comment">// 当栈容量超过四分之一且非空时，将容量减半</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> item;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 查看栈顶元素但不弹出。如果栈为空，则抛出 EmptyStackException。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 栈顶元素。</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> EmptyStackException 如果栈为空。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> T <span class="title function_">peek</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">EmptyStackException</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> elements[top];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 调整栈的容量。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> newCapacity 新的容量大小。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@SuppressWarnings(&quot;unchecked&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">resize</span><span class="params">(<span class="type">int</span> newCapacity)</span> &#123;</span><br><span class="line">        T[] newElements = (T[]) <span class="keyword">new</span> <span class="title class_">Object</span>[newCapacity];</span><br><span class="line">        System.arraycopy(elements, <span class="number">0</span>, newElements, <span class="number">0</span>, top + <span class="number">1</span>); <span class="comment">// 复制现有元素到新数组</span></span><br><span class="line">        elements = newElements; <span class="comment">// 更新引用</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>运行结果展示：</strong></p>
+<img src="https://kfufys.github.io/posts/43449/demo02.png" alt="Demo02.png" width="1200">
+
+
+
+<h3 id="题目三：顺序表-删除最小值结点"><a href="#题目三：顺序表-删除最小值结点" class="headerlink" title="题目三：顺序表_删除最小值结点"></a><strong>题目三：顺序表_删除最小值结点</strong></h3><p><strong>问题描述：已知线性表采用顺序存储结构<code>SeqList</code>，编写算法，删除值最小的结点：</strong></p>
+<p><code>TestSeqList.java</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo03;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@project</span>: JavaDemo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> kfufys</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@data</span> 2024/12/27 21:00</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 顺序表_删除最小值结点</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestSeqList</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 创建一个顺序表对象</span></span><br><span class="line">        <span class="type">SeqList</span> <span class="variable">seqList</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SeqList</span>();</span><br><span class="line">        <span class="comment">// 添加一些元素到顺序表中</span></span><br><span class="line">        seqList.add(<span class="number">5</span>);</span><br><span class="line">        seqList.add(<span class="number">3</span>);</span><br><span class="line">        seqList.add(<span class="number">8</span>);</span><br><span class="line">        seqList.add(<span class="number">1</span>);</span><br><span class="line">        seqList.add(<span class="number">7</span>);</span><br><span class="line">        <span class="comment">// 打印删除最小元素之前的顺序表内容</span></span><br><span class="line">        System.out.println(<span class="string">&quot;删除最小元素之前：&quot;</span>);</span><br><span class="line">        seqList.printList();</span><br><span class="line">        <span class="comment">// 删除顺序表中的最小元素</span></span><br><span class="line">        seqList.removeMin();</span><br><span class="line">        <span class="comment">// 打印删除最小元素之后的顺序表内容</span></span><br><span class="line">        System.out.println(<span class="string">&quot;删除最小元素之后：&quot;</span>);</span><br><span class="line">        seqList.printList();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>SeqList.java</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo03;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * SeqList类代表一个顺序表，即一个线性数据结构</span></span><br><span class="line"><span class="comment"> * 它允许在列表的末尾添加元素，并在指定范围内删除元素</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SeqList</span> &#123;</span><br><span class="line">    <span class="comment">// data数组存储顺序表中的元素</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span>[] data;</span><br><span class="line">    <span class="comment">// size变量记录当前顺序表中元素的数量</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> size;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构造一个指定容量的顺序表</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">SeqList</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.data = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">10</span>]; <span class="comment">// 初始化默认容量为10</span></span><br><span class="line">        <span class="built_in">this</span>.size = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 向顺序表中添加一个元素如果顺序表已满，则先调整大小</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> value 要添加的元素值</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> value)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (size == data.length) &#123;</span><br><span class="line">            resize();</span><br><span class="line">        &#125;</span><br><span class="line">        data[size++] = value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 从顺序表中删除指定范围内的所有元素</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> x 范围的起始值（包含）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> y 范围的结束值（包含）</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IllegalArgumentException 如果x大于y</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">removeInRange</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (x &gt; y) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IllegalArgumentException</span>(<span class="string">&quot;x should not be greater than y&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">newSize</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (data[i] &lt; x || data[i] &gt; y) &#123;</span><br><span class="line">                data[newSize++] = data[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        size = newSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 返回顺序表中元素的数量</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 顺序表的大小</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">size</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> size;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取顺序表中指定位置的元素</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> index 元素的索引</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 指定位置的元素值</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IndexOutOfBoundsException 如果索引超出范围</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">get</span><span class="params">(<span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= size) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IndexOutOfBoundsException</span>(<span class="string">&quot;Index out of bounds&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> data[index];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 调整顺序表的大小，当顺序表满时自动调用</span></span><br><span class="line"><span class="comment">     * 它会创建一个更大（当前长度的两倍）的新数组，并将原数组的内容复制到新数组中</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">resize</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">int</span>[] newData = <span class="keyword">new</span> <span class="title class_">int</span>[data.length * <span class="number">2</span>];</span><br><span class="line">        System.arraycopy(data, <span class="number">0</span>, newData, <span class="number">0</span>, size);</span><br><span class="line">        data = newData;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 重写toString方法，以便于顺序表的字符串表示</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 顺序表的字符串表示</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">        sb.append(<span class="string">&quot;[&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">            sb.append(data[i]);</span><br><span class="line">            <span class="keyword">if</span> (i &lt; size - <span class="number">1</span>) &#123;</span><br><span class="line">                sb.append(<span class="string">&quot;, &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        sb.append(<span class="string">&quot;]&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 删除顺序表中值最小的结点</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">removeMin</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (size == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>; <span class="comment">// 如果顺序表为空，直接返回</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">minIndex</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 记录最小值的索引</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">minValue</span> <span class="operator">=</span> data[<span class="number">0</span>]; <span class="comment">// 记录最小值</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历顺序表，找到最小值及其索引</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; size; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (data[i] &lt; minValue) &#123;</span><br><span class="line">                minValue = data[i]; <span class="comment">// 更新最小值</span></span><br><span class="line">                minIndex = i; <span class="comment">// 更新最小值的索引</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 删除最小值</span></span><br><span class="line">        remove(minIndex);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 删除指定索引的元素</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> index 要删除的元素的索引</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IndexOutOfBoundsException 如果索引超出范围</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">remove</span><span class="params">(<span class="type">int</span> index)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= size) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IndexOutOfBoundsException</span>(<span class="string">&quot;索引: &quot;</span> + index + <span class="string">&quot;, 大小: &quot;</span> + size);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> index; i &lt; size - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            data[i] = data[i + <span class="number">1</span>]; <span class="comment">// 将后续元素向前移动</span></span><br><span class="line">        &#125;</span><br><span class="line">        data[--size] = <span class="number">0</span>; <span class="comment">// 更新元素数量并避免对象游离</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 打印顺序表中的所有元素</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">printList</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="built_in">this</span>.toString()); <span class="comment">// 使用重写的toString方法打印顺序表</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>运行结果展示：</strong></p>
+<img src="https://kfufys.github.io/posts/43449/demo03.png" alt="Demo03.png" width="1200">
+
+
+
+<h3 id="题目四：稀疏矩阵转置"><a href="#题目四：稀疏矩阵转置" class="headerlink" title="题目四：稀疏矩阵转置"></a><strong>题目四：稀疏矩阵转置</strong></h3><p><strong>问题描述：编写算法<code>TransMatrix</code>实现稀疏矩阵的转置：</strong></p>
+<p><code>SparseMatrixTransposeTest.java</code></p>
+ <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo04;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> kfufys</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@project</span>: JavaDemo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2024/12/27 21:15</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 该类用于演示如何对稀疏矩阵进行转置操作，稀疏矩阵是一种特殊的数据结构，主要用于减少存储空间和提高计算效率</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SparseMatrixTransposeTest</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 主函数入口</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args 命令行参数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 初始化稀疏矩阵，以三元组形式表示非零元素的位置和值</span></span><br><span class="line">        Triple[] matrix = &#123;</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">Triple</span>(<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">Triple</span>(<span class="number">0</span>, <span class="number">3</span>, <span class="number">2</span>),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">Triple</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">Triple</span>(<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="comment">// 打印原始稀疏矩阵</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Original Sparse Matrix:&quot;</span>);</span><br><span class="line">        TransMatrix.printMatrix(matrix);</span><br><span class="line">        <span class="comment">// 执行稀疏矩阵的转置操作</span></span><br><span class="line">        Triple[] transposedMatrix = TransMatrix.transpose(matrix);</span><br><span class="line">        <span class="comment">// 打印转置后的稀疏矩阵</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Transposed Sparse Matrix:&quot;</span>);</span><br><span class="line">        TransMatrix.printMatrix(transposedMatrix);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>Triple.java</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo04;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Triple 类用于表示一个三元组，主要用于存储矩阵元素的行位置、列位置和值。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Triple</span> &#123;</span><br><span class="line">    <span class="comment">// 表示矩阵元素的行位置</span></span><br><span class="line">    <span class="type">int</span> row;</span><br><span class="line">    <span class="comment">// 表示矩阵元素的列位置</span></span><br><span class="line">    <span class="type">int</span> col;</span><br><span class="line">    <span class="comment">// 表示矩阵元素的值</span></span><br><span class="line">    <span class="type">int</span> value;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构造一个新的 Triple 实例。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> row   矩阵元素的行位置</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> col   矩阵元素的列位置</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> value 矩阵元素的值</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Triple</span><span class="params">(<span class="type">int</span> row, <span class="type">int</span> col, <span class="type">int</span> value)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.row = row;</span><br><span class="line">        <span class="built_in">this</span>.col = col;</span><br><span class="line">        <span class="built_in">this</span>.value = value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>TransMatrix.java</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo04;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> top.kfufys.demo04.Triple;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * TransMatrix类提供了矩阵转置的功能，特别适用于稀疏矩阵。</span></span><br><span class="line"><span class="comment"> * 稀疏矩阵是指大部分元素为零的矩阵。通过使用Triple数组表示矩阵，</span></span><br><span class="line"><span class="comment"> * 可以有效地存储和操作这些矩阵。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TransMatrix</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 对稀疏矩阵进行转置。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> matrix 代表原始矩阵的Triple数组，每个Triple对象包含行索引、列索引和值。</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 转置后的矩阵，以Triple数组形式返回。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Triple[] transpose(Triple[] matrix) &#123;</span><br><span class="line">        <span class="comment">// 确定矩阵的列数（即转置后矩阵的行数）</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">numCols</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (Triple triple : matrix) &#123;</span><br><span class="line">            <span class="keyword">if</span> (triple.col &gt; numCols) &#123;</span><br><span class="line">                numCols = triple.col;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        numCols++; <span class="comment">// 列索引从0开始，因此需要加1</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 初始化结果矩阵和辅助数组</span></span><br><span class="line">        Triple[] result = <span class="keyword">new</span> <span class="title class_">Triple</span>[matrix.length]; <span class="comment">// 存储转置后的矩阵</span></span><br><span class="line">        <span class="type">int</span>[] colSizes = <span class="keyword">new</span> <span class="title class_">int</span>[numCols];           <span class="comment">// 统计每列的元素个数</span></span><br><span class="line">        <span class="type">int</span>[] colIndices = <span class="keyword">new</span> <span class="title class_">int</span>[numCols];         <span class="comment">// 记录每列元素在转置矩阵中的起始位置</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 统计每列的元素个数</span></span><br><span class="line">        <span class="keyword">for</span> (Triple triple : matrix) &#123;</span><br><span class="line">            colSizes[triple.col]++; <span class="comment">// 每遇到一个元素，对应列的计数加1</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 计算每列元素在转置矩阵中的起始位置</span></span><br><span class="line">        colIndices[<span class="number">0</span>] = <span class="number">0</span>; <span class="comment">// 第一列的起始位置总是0</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; numCols; i++) &#123;</span><br><span class="line">            colIndices[i] = colIndices[i - <span class="number">1</span>] + colSizes[i - <span class="number">1</span>];</span><br><span class="line">            <span class="comment">// 当前列的起始位置等于前一列的起始位置加上前一列的元素个数</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 生成转置矩阵</span></span><br><span class="line">        <span class="keyword">for</span> (Triple triple : matrix) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> colIndices[triple.col]; <span class="comment">// 获取当前列的起始位置</span></span><br><span class="line">            result[index] = <span class="keyword">new</span> <span class="title class_">Triple</span>(triple.col, triple.row, triple.value);</span><br><span class="line">            <span class="comment">// 创建新的Triple对象，交换行列索引，并赋值给结果数组</span></span><br><span class="line">            colIndices[triple.col]++; <span class="comment">// 更新当前列的起始位置</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 打印矩阵。</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> matrix 要打印的矩阵，以Triple数组形式表示。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">printMatrix</span><span class="params">(Triple[] matrix)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (Triple triple : matrix) &#123;</span><br><span class="line">            System.out.println(triple.row + <span class="string">&quot; &quot;</span> + triple.col + <span class="string">&quot; &quot;</span> + triple.value);</span><br><span class="line">            <span class="comment">// 打印每一行的行索引、列索引和值</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>运行结果展示：</strong></p>
+<img src="https://kfufys.github.io/posts/43449/demo04.png" alt="Demo04.png" width="1200">
+
+
+
+<h3 id="题目五：递归建立二叉树"><a href="#题目五：递归建立二叉树" class="headerlink" title="题目五：递归建立二叉树"></a><strong>题目五：递归建立二叉树</strong></h3><p><strong>问题描述：编写算法，使用递归方式建立二叉树：</strong></p>
+<p><code>BinaryTreeBuilder.java</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo05;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> kfufys</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@project</span>: JavaDemo</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2024/12/27 21:40</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span> 二叉树构建和遍历的主类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BinaryTreeBuilder</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 主方法，程序入口</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args 命令行参数（本程序未使用）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 调用 BinaryTree 类中的静态方法 buildTree() 构建二叉树，并将根节点赋值给 root 变量</span></span><br><span class="line">        <span class="type">TreeNode</span> <span class="variable">root</span> <span class="operator">=</span> BinaryTree.buildTree();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 打印提示信息，表示接下来将进行中序遍历</span></span><br><span class="line">        System.out.println(<span class="string">&quot;构建的二叉树的中序遍历结果:&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 调用 BinaryTree 类中的静态方法 inorderTraversal() 对二叉树进行中序遍历并打印结果</span></span><br><span class="line">        BinaryTree.inorderTraversal(root);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>TreeNode.java</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo05;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 二叉树节点类，表示二叉树中的一个节点</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 节点存储的值</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 指向左子节点的引用</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    TreeNode left;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 指向右子节点的引用</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    TreeNode right;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构造函数，用于初始化一个新的二叉树节点</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> val 节点的值</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">TreeNode</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">        <span class="comment">// 初始化节点的值</span></span><br><span class="line">        <span class="built_in">this</span>.val = val;</span><br><span class="line">        <span class="comment">// 初始化左右子节点为 null，表示当前节点没有子节点</span></span><br><span class="line">        <span class="built_in">this</span>.left = <span class="literal">null</span>;</span><br><span class="line">        <span class="built_in">this</span>.right = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>BinaryTree.java</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> top.kfufys.demo05;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 二叉树类，包含构建二叉树和中序遍历的方法</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BinaryTree</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构建二叉树的方法</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回构建好的二叉树的根节点</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> TreeNode <span class="title function_">buildTree</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">// 提示用户输入节点值，并读取输入</span></span><br><span class="line">        System.out.print(<span class="string">&quot;请输入节点值（输入 -1 表示空节点）: &quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">value</span> <span class="operator">=</span> getValidInput();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果输入值为 -1，表示该节点为空，返回 null</span></span><br><span class="line">        <span class="keyword">if</span> (value == -<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 否则，创建一个新的 TreeNode 节点并初始化其值</span></span><br><span class="line">        <span class="type">TreeNode</span> <span class="variable">root</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TreeNode</span>(value);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 递归构建左子树</span></span><br><span class="line">        System.out.print(<span class="string">&quot;请输入节点 &quot;</span> + value + <span class="string">&quot; 的左子节点值（输入 -1 表示空节点）: &quot;</span>);</span><br><span class="line">        root.left = buildTree();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 递归构建右子树</span></span><br><span class="line">        System.out.print(<span class="string">&quot;请输入节点 &quot;</span> + value + <span class="string">&quot; 的右子节点值（输入 -1 表示空节点）: &quot;</span>);</span><br><span class="line">        root.right = buildTree();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">getValidInput</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">while</span> (!scanner.hasNextInt()) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;输入错误，请输入有效的整数。&quot;</span>);</span><br><span class="line">            scanner.next(); <span class="comment">// 清除错误输入</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> scanner.nextInt();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 中序遍历二叉树的方法</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> root 二叉树的根节点</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">inorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="comment">// 如果当前节点为空，直接返回</span></span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 递归遍历左子树</span></span><br><span class="line">        inorderTraversal(root.left);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 访问当前节点，打印节点值</span></span><br><span class="line">        System.out.print(root.val + <span class="string">&quot; &quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 递归遍历右子树</span></span><br><span class="line">        inorderTraversal(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>运行结果展示：</strong></p>
+<img src="https://kfufys.github.io/posts/43449/demo05.png" alt="Demo05.png" width="1200">
+
+<hr>
+<center><span> - - Done - - </span></center>
+]]></content>
+      <categories>
+        <category>期末复习</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>期末复习</tag>
+        <tag>DemoCode</tag>
       </tags>
   </entry>
   <entry>
@@ -1241,6 +1245,594 @@
       </categories>
       <tags>
         <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网络工程师考试知识点_02</title>
+    <url>https://kfufys.github.io/posts/65202.html</url>
+    <content><![CDATA[<img src="https://kfufys.github.io/posts/65202/1.jpg" alt="head-img" width="1200">
+
+<h4 id="一、事务："><a href="#一、事务：" class="headerlink" title="一、事务："></a><strong>一、事务：</strong></h4><ul>
+<li><strong>原子性：</strong>事务包含的操作要么全部成功，要么全部失败回滚。</li>
+<li><strong>一致性：</strong>事务执行前后都必须处于一个一致性状态。</li>
+<li><strong>隔离性：</strong>多事务并发执行，任一事务更新操作到成功提交的过程，对其他事务都是不可见的。</li>
+<li><strong>持久性：</strong>事务一经提交，对数据库数据的改变是永久性的。</li>
+</ul>
+<h4 id="二、寄存器："><a href="#二、寄存器：" class="headerlink" title="二、寄存器："></a><strong>二、寄存器：</strong></h4><ul>
+<li><strong>程序计数器：</strong>存放指令地址。</li>
+<li><strong>状态寄存器：</strong>记录运算中产生的标志信息。</li>
+<li><strong>通用寄存器：</strong>运算时暂存操作数、地址。</li>
+<li><strong>累加器：</strong>数据寄存器，运算中暂存操作数和中间结果，数据不长存。</li>
+</ul>
+<blockquote>
+<p>CPU在<strong>一个总线周期</strong>结束时响应DMA请求。<br><strong>加法器</strong>是算术逻辑单元的部件。<br>在程序执行过程中，cache与主存的地址映像由<strong>硬件自动完成</strong>。<br>补码自带符号位，0是唯一的，n位二进制编码可以表示<strong>2<sup>n</sup><strong>个不同的数。<br>浮点数表示为阶和尾数两部分。两浮点数相加，先对阶，即</strong>将小阶向大阶对其，同时将尾数右移n位</strong>。<br>指令寄存器位数取决于<strong>指令字长</strong>。<br>为了便于多级中断，使用<strong>堆栈</strong>保护断点和现场最有效。</p>
+</blockquote>
+<h4 id="三、存储器分类："><a href="#三、存储器分类：" class="headerlink" title="三、存储器分类："></a><strong>三、存储器分类：</strong></h4><ul>
+<li><strong>位置：</strong>内存、外存。</li>
+<li><strong>材料：</strong>磁存储器、半导体存储器、光存储器。</li>
+<li><strong>工作方式：</strong>读写存储器、只读存储器。</li>
+<li><strong>访问方式：</strong>按地址访问、按内容访问。</li>
+<li><strong>寻址方式：</strong>随机存储器、顺序存储器、直接存储器。</li>
+</ul>
+<h4 id="四、指令集："><a href="#四、指令集：" class="headerlink" title="四、指令集："></a><strong>四、指令集：</strong></h4><ol>
+<li><strong>概念：</strong><ul>
+<li><strong>RISC（Reduced Instruction Set Computer）</strong>：即精简指令集计算机。它的设计理念是通过简化指令系统，使计算机的硬件结构更简单、更规则。指令集的指令数量较少，格式相对简单且长度固定，每条指令的执行时间较短。</li>
+<li><strong>CISC（Complex Instruction Set Computer）</strong>：是复杂指令集计算机。它的指令系统较为复杂，包含大量不同功能和复杂程度的指令，指令格式多样，长度可变，能完成复杂多样的操作。</li>
+</ul>
+</li>
+<li><strong>指令特点：</strong><ul>
+<li><strong>RISC：</strong><ul>
+<li>指令数量通常较少，一般在几十条到一百多条之间。这些指令的功能比较单一，例如加法指令就只进行加法操作。</li>
+<li>指令格式简单且固定，有利于指令的快速译码和执行。</li>
+</ul>
+</li>
+<li><strong>CISC：</strong><ul>
+<li>指令数量很多，可能包含几百条甚至上千条指令。它有各种功能强大的指令，比如可以一条指令完成从内存中读取数据、进行复杂运算并且存储结果的操作。</li>
+<li>指令格式多样且长度可变。这是为了适应各种复杂指令的需求，但也使得指令的译码过程相对复杂，因为硬件需要花费更多时间来识别指令的具体格式和操作内容。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>性能特点：</strong><ul>
+<li><strong>RISC：</strong><ul>
+<li>由于指令简单、格式固定，RISC 处理器可以采用流水线技术来高效地执行指令。</li>
+<li>执行速度通常较快，尤其是对于简单、重复的任务，如数值计算等。</li>
+</ul>
+</li>
+<li><strong>CISC：</strong><ul>
+<li>CISC 处理器的优势在于可以用较少的指令完成复杂的任务。例如在处理复杂的图形绘制或者文件系统操作时，它可以通过一条复杂指令完成多个简单指令的功能，从而减少程序的指令数量。</li>
+<li>但是，由于指令复杂，其执行速度可能会受到影响。复杂指令的译码和执行需要更多的硬件资源和时间，而且指令长度可变也会对指令读取和存储产生一定的干扰。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>硬件实现复杂度：</strong><ul>
+<li><strong>RISC：</strong><ul>
+<li>硬件结构相对简单。因为指令集简单，处理器的控制单元设计比较规则，不需要复杂的微代码（微代码是一种用于解释和执行复杂指令的底层代码）生成电路。例如，在 RISC 处理器中，控制单元可以通过简单的逻辑电路来直接控制指令的执行流程。</li>
+<li>寄存器数量通常较多，这有助于提高数据的处理速度。数据可以快速地存储在寄存器中，减少了频繁访问内存的次数，因为访问寄存器比访问内存要快得多。</li>
+</ul>
+</li>
+<li><strong>CISC：</strong><ul>
+<li>硬件实现复杂。由于指令集复杂，CISC 处理器需要复杂的控制单元和微代码生成电路来处理各种不同类型的指令。这些电路的设计和实现难度较大，需要更多的芯片面积和功耗。</li>
+<li>寄存器数量可能相对较少，因为一些复杂指令可以直接在内存和运算单元之间进行操作，对寄存器的依赖程度相对较低。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>应用场景：</strong><ul>
+<li><strong>RISC：</strong><ul>
+<li>在嵌入式系统中应用广泛，如手机、平板电脑等移动设备中的处理器。这些设备通常需要高效地处理简单、重复的任务，如音频视频播放、图形显示等，RISC 处理器的快速执行和低功耗特点非常适合这些应用。</li>
+<li>也用于高性能计算领域，特别是在处理大量数据的并行计算任务时，RISC 处理器的流水线技术和多核心架构可以发挥优势。</li>
+</ul>
+</li>
+<li><strong>CISC：</strong><ul>
+<li>在传统的桌面计算机和服务器中仍然有应用。因为这些系统需要运行各种复杂的软件，包括操作系统、数据库管理系统等，CISC 处理器的复杂指令可以更高效地处理这些软件中的复杂操作。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="五、内存存储容量："><a href="#五、内存存储容量：" class="headerlink" title="五、内存存储容量："></a><strong>五、内存存储容量：</strong></h4><ul>
+<li>内存按字节编址，从A1000H–&gt;B13FFH的区域，存储容量为<strong>65KB</strong>。</li>
+<li>结束地址与起始地址差值加1为存储单元个数：B13FFH-A1000H+1&#x3D;10400H，转为十进制：65536+1024&#x3D;64KB+1KB&#x3D;65K。</li>
+</ul>
+<h4 id="六、周期："><a href="#六、周期：" class="headerlink" title="六、周期："></a><strong>六、周期：</strong></h4><ul>
+<li>计算机操作的最小时间单位：<strong>时钟周期</strong>。</li>
+<li>一个<strong>指令周期</strong>需要多个时钟周期。</li>
+<li>一个<strong>机器周期</strong>（CPU周期）完成一个计算机基本操作的时间，需要多个时钟周期。</li>
+</ul>
+<h4 id="七、CPU-与外设间通信："><a href="#七、CPU-与外设间通信：" class="headerlink" title="七、CPU 与外设间通信："></a><strong>七、CPU 与外设间通信：</strong></h4><ol>
+<li><p><strong>程序中断方式：</strong></p>
+<ul>
+<li><p>某一外设的数据准备就绪后，它“主动”向CPU发出中断请求信号，请求CPU暂时中断目前正在执行的程序转而进行数据交换；</p>
+</li>
+<li><p>当CPU响应这个中断时，便暂停运行主程序，自动转去执行该设备的中断服务程序；</p>
+</li>
+<li><p>当中断服务程序执行完毕（数据交换结束）后，CPU又<strong>回到原来的主程序继续执行</strong>。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>程序查询方式：</strong></p>
+<ul>
+<li>CPU 不断地查询外部设备的状态寄存器，以确定设备是否准备好进行数据传输。</li>
+<li>例如，在从磁盘读取数据时，CPU 会周期性地检查磁盘控制器的状态位，看数据是否已经准备好被读取。</li>
+<li>如果状态位显示数据未准备好，CPU 就继续查询；</li>
+<li>如果准备好了，CPU 就开始读取数据。（<strong>CPU 利用率很低</strong>）。</li>
+</ul>
+</li>
+<li><p><strong>直接存储器访问（DMA）方式：</strong></p>
+<ul>
+<li><p>DMA 控制器可以在不需要 CPU 干预的情况下，直接在外部设备和内存之间进行数据传输。</p>
+</li>
+<li><p>在传输数据之前，CPU 需要对 DMA 控制器进行初始化，设置好传输的起始地址、数据长度、传输方向等参数。</p>
+</li>
+<li><p>例如，在从硬盘读取大量数据到内存时，DMA 控制器会接管总线控制权，按照预先设定的参数，将硬盘中的数据直接传输到内存指定区域，期间 CPU 可以去处理其他任务。（<strong>硬件成本相对较高</strong>）。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>通道方式：</strong></p>
+<ul>
+<li><p>通道是一种特殊的处理机，它可以独立于 CPU 执行通道程序，专门负责管理和控制外部设备与内存之间的数据传输。</p>
+</li>
+<li><p>通道有自己的指令系统，可以理解为是一个 “小 CPU”，用于执行通道程序。</p>
+</li>
+<li><p>例如，在大型计算机系统中，磁带机的大量数据读写可以由通道来完成。</p>
+</li>
+<li><p>CPU 将通道程序（包括数据传输的起始地址、长度、操作类型等信息）发送给通道，通道就按照程序指令进行操作，而 CPU 可以去做其他工作。（<strong>硬件和软件实现都比较复杂，成本较高</strong>）。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="八、指令流水线："><a href="#八、指令流水线：" class="headerlink" title="八、指令流水线："></a><strong>八、指令流水线：</strong></h4><ol>
+<li><p><strong>基本概念：</strong></p>
+<ul>
+<li>指令流水线是将指令的执行过程分解为多个阶段，如取指（IF）、译码（ID）、执行（EX）、访存（MEM）和写回（WB）等阶段。每个阶段由专门的硬件电路来处理，不同指令的不同阶段可以在同一时间内重叠执行，提高指令的执行效率。</li>
+</ul>
+</li>
+<li><p><strong>计算指标：</strong></p>
+<ul>
+<li><strong>吞吐率（Throughput）：</strong><ul>
+<li><strong>定义</strong>：单位时间内执行的指令数。它是衡量流水线性能的一个重要指标。</li>
+<li><strong>计算公式</strong>：吞吐率 $TP&#x3D;\frac{n}{T_k}$，其中 $n$ 是执行的指令数，$T_k$ 是处理 $n$ 条指令所用的时间。在理想情况下（各阶段时间相等且无流水线停顿），如果流水线的时钟周期为 $T$，流水线阶段数为 $k$，则执行 $n$ 条指令的时间 $T_k&#x3D;(k + n - 1)T$，所以理想吞吐率 $TP&#x3D;\frac{n}{(k + n - 1)T}$。当 $n$ 很大时，$TP\approx\frac{1}{T}$。</li>
+<li><strong>示例</strong>：假设有一个5阶段（$k &#x3D; 5$）的流水线，时钟周期 $T &#x3D; 1ns$，要执行100条指令（$n &#x3D; 100$）。按照公式计算，$T_k&#x3D;(5 + 100 - 1)\times1ns &#x3D; 104ns$，则吞吐率 $TP&#x3D;\frac{100}{104ns}\approx0.96\times10^9$ 条指令&#x2F;秒。</li>
+</ul>
+</li>
+<li><strong>加速比（Speed - up）：</strong><ul>
+<li><strong>定义</strong>：非流水线执行时间与流水线执行时间之比。它反映了流水线相对于非流水线方式在性能上的提升程度。</li>
+<li><strong>计算公式</strong>：设非流水线方式执行一条指令的时间为 $T_0$，流水线的时钟周期为 $T$，流水线阶段数为 $k$，则加速比 $S&#x3D;\frac{nT_0}{(k + n - 1)T}$。在理想情况下，当各阶段时间相等且 $T &#x3D; \frac{T_0}{k}$ 时，对于大量指令（$n\gg k$），加速比 $S\approx k$。</li>
+<li><strong>示例</strong>：假设非流水线方式执行一条指令需要 $10ns$（$T_0 &#x3D; 10ns$），采用一个4阶段（$k &#x3D; 4$）的流水线，且每个阶段时间相等，那么流水线的时钟周期 $T&#x3D;\frac{10ns}{4}&#x3D;2.5ns$。如果要执行1000条指令（$n &#x3D; 1000$），非流水线执行时间为 $1000\times10ns &#x3D; 10000ns$，流水线执行时间 $T_k&#x3D;(4 + 1000 - 1)\times2.5ns &#x3D; 2507.5ns$，加速比 $S&#x3D;\frac{1000\times10ns}{2507.5ns}\approx3.99$。</li>
+</ul>
+</li>
+<li><strong>效率（Efficiency）：</strong><ul>
+<li><strong>定义</strong>：流水线的设备利用率。它是指流水线中各功能段的实际使用时间与整个运行时间之比。</li>
+<li><strong>计算公式</strong>：在理想情况下（各阶段时间相等），效率 $E&#x3D;\frac{n}{k(k + n - 1)}$。当 $n$ 很大时，$E\approx\frac{1}{k}$。</li>
+<li><strong>示例</strong>：同样是上述4阶段（$k &#x3D; 4$）的流水线，执行1000条指令（$n &#x3D; 1000$），根据公式计算效率 $E&#x3D;\frac{1000}{4\times(4 + 1000 - 1)}\approx0.25$。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>指令流水线操作周期为“<strong>瓶颈</strong>”段所需时间。（最大操作时间段）。</p>
+</li>
+</ol>
+<h4 id="九、指令执行时间："><a href="#九、指令执行时间：" class="headerlink" title="九、指令执行时间："></a><strong>九、指令执行时间：</strong></h4><ol>
+<li><p><strong>顺序方式执行时间计算：</strong></p>
+<ul>
+<li><p>在<strong>顺序执行</strong>方式下，每条指令都要依次经过取指令、分析和执行这三个阶段，上一条指令执行完所有阶段后，下一条指令才开始执行。</p>
+</li>
+<li><p><strong>每条指令执行总时间：</strong></p>
+</li>
+<li><p>执行一条指令时间为取指、分析和执行三个阶段时间之和，即：[4\triangle t + 2\triangle t + 3\triangle t &#x3D; 9\triangle t]</p>
+</li>
+<li><p><strong>计算600条指令执行总时间：</strong></p>
+</li>
+<li><p>由于是顺序执行，执行完(600)条指令所需的总时间就是一条指令执行时间乘以指令的条数，即：[9\triangle t×600 &#x3D; 5400\triangle t]</p>
+</li>
+</ul>
+</li>
+<li><p><strong>流水线方式执行时间计算：</strong></p>
+<ul>
+<li><p>在流水线执行方式下，不同指令的不同阶段可以<strong>重叠进行</strong>，就像工厂的流水线一样，各个阶段同时开展工作。</p>
+</li>
+<li><p><strong>确定流水线的阶段数及各阶段时间：</strong></p>
+</li>
+<li><p>本题中流水线分为取指令、分析和执行这(3)个阶段，对应的时间分别为(4\triangle t)、(2\triangle t)、(3\triangle t)。</p>
+</li>
+<li><p><strong>计算第一条指令进入流水线到最后一条指令流出流水线的时间：</strong></p>
+<ul>
+<li><p>对于流水线，执行(n)条指令所需的总时间可以用公式(T &#x3D; (k + n - 1)×\Delta t_{max})来计算（其中(k)是流水线的阶段数，(n)是指令的条数，(\Delta t_{max})是流水线各阶段中时间最长的那个阶段所用时间）。</p>
+</li>
+<li><p>在本题中，k &#x3D; 3，n &#x3D; 600，(\Delta t_{max}&#x3D; 4\triangle t)，将这些值代入上述公式可得：<br>$$<br>[T &#x3D; (3 + 600 - 1)×4\triangle t]<br>[&#x3D;(602)×4\triangle t]<br>[&#x3D; 2408\triangle t]<br>$$</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="十、中断响应时间："><a href="#十、中断响应时间：" class="headerlink" title="十、中断响应时间："></a><strong>十、中断响应时间：</strong></h4><ul>
+<li>CPU 中断响应时间是指<strong>从 CPU 检测到中断请求信号到开始执行中断服务程序</strong>的第一条指令所需要的时间。</li>
+</ul>
+<h4 id="十一、机器指令寻址方式："><a href="#十一、机器指令寻址方式：" class="headerlink" title="十一、机器指令寻址方式："></a><strong>十一、机器指令寻址方式：</strong></h4><ol>
+<li><strong>立即寻址：</strong><ul>
+<li><strong>定义</strong>：操作数直接包含在指令中，作为指令的一部分。</li>
+<li><strong>特点和用途</strong>：优点是指令执行速度快，因为不需要额外的访存操作来获取操作数，它常用于给寄存器赋初值等操作。</li>
+</ul>
+</li>
+<li><strong>直接寻址</strong><ul>
+<li><strong>定义</strong>：指令的操作数部分直接给出操作数在内存中的地址。</li>
+<li><strong>特点和用途</strong>：直接寻址方式简单直观，能直接访问内存中的数据。但是，它只能访问固定的内存单元。</li>
+</ul>
+</li>
+<li><strong>间接寻址</strong><ul>
+<li><strong>定义</strong>：指令中给出的是存放操作数地址的存储单元的地址。</li>
+<li><strong>特点和用途</strong>：这种寻址方式增加了地址的灵活性。通过改变存放操作数地址的寄存器内容，可以方便地访问不同的内存单元。</li>
+</ul>
+</li>
+<li><strong>寄存器寻址</strong><ul>
+<li><strong>定义</strong>：操作数存放在寄存器中，指令直接指定寄存器来获取操作数。</li>
+<li><strong>特点和用途</strong>：寄存器寻址的速度非常快，因为寄存器位于CPU内部，数据访问速度比内存快得多。这种寻址方式常用于在CPU内部的寄存器之间进行数据传输和操作。</li>
+</ul>
+</li>
+<li><strong>寄存器间接寻址</strong><ul>
+<li><strong>定义</strong>：操作数的地址存放在寄存器中，通过寄存器间接获取操作数的地址。</li>
+<li><strong>特点和用途</strong>：结合了寄存器寻址的速度优势和间接寻址的灵活性。它在处理数组和缓冲区等数据结构时非常有用。</li>
+</ul>
+</li>
+<li><strong>相对寻址</strong><ul>
+<li><strong>定义</strong>：以程序计数器（PC）或指令指针（IP）的当前内容为基地址，加上指令中给出的偏移量来形成操作数的有效地址。</li>
+<li><strong>特点和用途</strong>：主要用于程序的分支和循环结构中。它的优点是代码的可移植性较好，因为相对地址不依赖于程序在内存中的绝对位置。</li>
+</ul>
+</li>
+<li><strong>基址寻址</strong><ul>
+<li><strong>定义</strong>：将CPU中的基址寄存器（如8086中的BX或BP）的内容与指令中给定的偏移量相加，得到操作数的地址。</li>
+<li><strong>特点和用途</strong>：可以方便地访问一片连续的内存区域。这种寻址方式常用于访问数组、结构体等数据结构，其中基址寄存器可以指向数据结构的起始地址，偏移量用于访问内部的元素。</li>
+</ul>
+</li>
+<li><strong>变址寻址</strong><ul>
+<li><strong>定义</strong>：以变址寄存器（如8086中的SI或DI）的内容为基础，加上指令中给定的偏移量来确定操作数的地址。</li>
+<li><strong>特点和用途</strong>：与基址寻址类似，变址寻址也用于访问连续的内存区域。它的特点是变址寄存器的内容可以在程序执行过程中动态变化，常用于循环访问数组元素。</li>
+</ul>
+</li>
+</ol>
+<h4 id="十二、Flynn分类法："><a href="#十二、Flynn分类法：" class="headerlink" title="十二、Flynn分类法："></a><strong>十二、Flynn分类法：</strong></h4><p>Flynn于1972年提出计算平台分类法主要根据指令流和数据流来分类，分为四类：</p>
+<ol>
+<li><p><strong>单指令流单数据流机器（S1SD)：</strong></p>
+<ul>
+<li>SISD机器是一种传统的串行计算机，它的硬件不支持任何形式的并行计算，所有的指令都是串行执行。并且在某个时钟周期内，CPU只能处理一个数据流。</li>
+</ul>
+</li>
+<li><p><strong>单指令流多数据流机器（SIMD)：</strong></p>
+<ul>
+<li>SIMD是采用一个指令流处理多个数据流。这类机器在数字信号处理、图像处理，以及多媒体信息处理等领域非常有效。</li>
+<li>Intel处理器实现的MMXTM、SSE (Streaming SIMD Extensions)、SSE2及SSE3扩展指令集，都能在单个时钟周期内处理多个数据单元。也就是说人们现在用的单核计算机基本上都属于SIMD机器。</li>
+</ul>
+</li>
+<li><p><strong>多指令流单数据流机器(MISD)：</strong></p>
+<ul>
+<li>MISD采用多指令流处理单个数据流。实际情况中，用多指令流处理多数据流才是更有效的方法，因此MISD只作为理论模型出现，没投入实际应用。</li>
+</ul>
+</li>
+<li><p><strong>多指令流多数据流机器(MIMD)：</strong></p>
+<ul>
+<li>MIMD机器可以同时执行多个指令流，这些指令流分别对不同数据流进行操作。</li>
+</ul>
+</li>
+</ol>
+<h4 id="十三、图像数据量："><a href="#十三、图像数据量：" class="headerlink" title="十三、图像数据量："></a><strong>十三、图像数据量：</strong></h4><ol>
+<li><p><strong>计算数据量的公式：</strong></p>
+<ul>
+<li>图像数据量 &#x3D; 图像水平分辨率×图像垂直分辨率×像素深度（单位为位）÷ 8（单位转换为字节）。<ul>
+<li><strong>图像水平分辨率和垂直分辨率</strong>：分别表示图像在水平和垂直方向上所包含的像素数量。</li>
+<li><strong>像素深度</strong>：指存储每个像素所用的位数。对于真彩色图像，像素深度为24位（因为每个像素有3个基色分量，每个分量8位）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>计算示例</strong></p>
+<ul>
+<li><p>假设有一幅真彩色图像：800<em>600px，像素深度为24位，根据上述公式计算其数据量：<br>$$<br>[<br>\begin{align</em>}<br>&amp;800×600×24÷8\<br>&#x3D;&amp;800×600×3\<br>&#x3D;&amp;480000×3\<br>&#x3D;&amp;1440000字节<br>\end{align*}<br>]</p>
+<p>[1440000÷1024÷1024≈1.37MB]<br>$$</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="十四、CPI、MIPS、PCI、MFLOPS："><a href="#十四、CPI、MIPS、PCI、MFLOPS：" class="headerlink" title="十四、CPI、MIPS、PCI、MFLOPS："></a><strong>十四、CPI、MIPS、PCI、MFLOPS：</strong></h4><ul>
+<li><p><strong>CPI（Cycles Per Instruction）：</strong>每条指令执行所需的时钟周期数。它是衡量计算机性能的一个重要指标，反映了CPU执行指令的效率。<br>$$<br>CPI &#x3D; \frac{CPU执行程序所用的时钟周期数}{程序包含的指令数}<br>$$</p>
+</li>
+<li><p><strong>MIPS（Million Instructions Per Second）：</strong>表示计算机在一秒钟内能够执行的指令数量，单位是百万条指令&#x2F;秒。用于衡量计算机的运算速度。<br>$$<br>MIPS &#x3D; \frac{指令数}{执行时间\times10^{6}}<br>$$</p>
+</li>
+<li><p><strong>PCI（Peripheral Component Interconnect）：</strong>外围部件互连，是一种计算机局部总线标准。</p>
+<table>
+<thead>
+<tr>
+<th>PCIe版本</th>
+<th>单通道传输速率（GT&#x2F;s）</th>
+<th>编码方式</th>
+<th>单通道有效数据传输速率（Gbps）</th>
+<th>x16模式总带宽（Gbps）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.0</td>
+<td>2.5</td>
+<td>8b&#x2F;10b</td>
+<td>2</td>
+<td>32</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>5</td>
+<td>8b&#x2F;10b</td>
+<td>4</td>
+<td>64</td>
+</tr>
+<tr>
+<td>3.0</td>
+<td>8</td>
+<td>128b&#x2F;130b</td>
+<td>约7.88</td>
+<td>约126</td>
+</tr>
+<tr>
+<td>4.0</td>
+<td>16</td>
+<td>128b&#x2F;130b</td>
+<td>约15.75</td>
+<td>约252</td>
+</tr>
+<tr>
+<td>5.0</td>
+<td>32</td>
+<td>128b&#x2F;130b</td>
+<td>约30.5</td>
+<td>约488</td>
+</tr>
+<tr>
+<td>6.0</td>
+<td>64</td>
+<td>新编码和信号传输技术</td>
+<td>大幅提升</td>
+<td>-</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>MFLOPS（Million Floating - Point Operations Per Second）：</strong>每秒百万次浮点运算数，主要用于衡量计算机在浮点运算方面的性能。<br>$$<br>MFLOPS &#x3D; \frac{浮点运算次数}{执行时间\times10^{6}}<br>$$</p>
+</li>
+</ul>
+<h4 id="十五、WLAN标准："><a href="#十五、WLAN标准：" class="headerlink" title="十五、WLAN标准："></a><strong>十五、WLAN标准：</strong></h4><table>
+<thead>
+<tr>
+<th>标准</th>
+<th>频段</th>
+<th>最大数据速率</th>
+<th>调制方式</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>802.11a</td>
+<td>5GHz</td>
+<td>54Mbps</td>
+<td>OFDM（正交频分复用）</td>
+<td>传输速率较高，但传输距离相对较短，受障碍物影响较大，频段干扰相对较少</td>
+</tr>
+<tr>
+<td>802.11b</td>
+<td>2.4GHz</td>
+<td>11Mbps</td>
+<td>DSSS（直接序列扩频）</td>
+<td>传输距离较远，但速率较低，频段容易受到干扰，是早期广泛使用的标准之一</td>
+</tr>
+<tr>
+<td>802.11g</td>
+<td>2.4GHz</td>
+<td>54Mbps</td>
+<td>OFDM（正交频分复用）</td>
+<td>与802.11b兼容，在2.4GHz频段实现了较高的数据传输速率，应用较为广泛</td>
+</tr>
+<tr>
+<td>802.11n</td>
+<td>2.4GHz和5GHz</td>
+<td>600Mbps</td>
+<td>MIMO - OFDM（多输入多输出 - 正交频分复用）</td>
+<td>采用MIMO技术，提高了传输速率和传输距离，同时在两个频段都能工作，兼容性较好</td>
+</tr>
+<tr>
+<td>802.11ac</td>
+<td>5GHz</td>
+<td>理论上可达6.93Gbps（实际应用中速率因多种因素降低）</td>
+<td>OFDM（正交频分复用）等高级调制技术</td>
+<td>主要工作在5GHz频段，进一步提高了传输速率，支持更宽的频带和更多的空间流，适合高清视频传输等高速应用场景</td>
+</tr>
+<tr>
+<td>802.11ax（Wi - Fi 6）</td>
+<td>2.4GHz和5GHz</td>
+<td>理论上可达9.6Gbps</td>
+<td>OFDMA（正交频分多址）等新技术</td>
+<td>采用新技术提升频谱效率、降低延迟，支持更多设备同时连接，在密集用户环境下性能出色，适用于智能家居等多设备场景</td>
+</tr>
+<tr>
+<td>802.11be（Wi - Fi 7）</td>
+<td>2.4GHz、5GHz和6GHz</td>
+<td>理论上可达46Gbps</td>
+<td>进一步优化的调制和多址接入技术</td>
+<td>新增6GHz频段资源，提供更高的传输速率、更低的延迟和更好的可靠性，有望满足未来虚拟现实、8K视频等高带宽需求应用</td>
+</tr>
+</tbody></table>
+<h4 id="十六、微波："><a href="#十六、微波：" class="headerlink" title="十六、微波："></a><strong>十六、微波：</strong></h4><table>
+<thead>
+<tr>
+<th>微波分类</th>
+<th>频率范围</th>
+<th>波长范围</th>
+<th>频带名称</th>
+<th>应用场景</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>分米波（UHF）</td>
+<td>300MHz - 3GHz</td>
+<td>1m - 10cm</td>
+<td>特高频（Ultra - High Frequency）</td>
+<td>广播电视信号传输、移动通信（如GSM网络部分频段）、无绳电话</td>
+<td>传播特性近似于光波，沿直线传播，绕射能力弱，但在建筑物内的穿透能力相对较好；能被电离层反射，受气象条件影响相对较小</td>
+</tr>
+<tr>
+<td>厘米波（SHF）</td>
+<td>3GHz - 30GHz</td>
+<td>10cm - 1cm</td>
+<td>超高频（Super - High Frequency）</td>
+<td>卫星通信、雷达（如气象雷达、防空雷达）、无线局域网（如Wi - Fi 5GHz频段）</td>
+<td>频率较高，带宽较宽，能实现较高的数据传输速率；方向性好，能量集中，但传播损耗比分米波大，易受雨雾等天气影响</td>
+</tr>
+<tr>
+<td>毫米波（EHF）</td>
+<td>30GHz - 300GHz</td>
+<td>1cm - 1mm</td>
+<td>极高频（Extremely - High Frequency）</td>
+<td>5G毫米波通信、高速短距离通信（如部分短距数据传输设备）、毫米波雷达（用于汽车自动驾驶等）</td>
+<td>频带宽，可利用的频谱资源丰富；波束窄，方向性极强，可实现高精度的定位和探测；但传播损耗大，传输距离短，对障碍物遮挡非常敏感</td>
+</tr>
+<tr>
+<td>丝米波</td>
+<td>300GHz - 3THz</td>
+<td>1mm - 0.1mm</td>
+<td>太赫兹（Terahertz）</td>
+<td>安检成像（如人体安检仪）、材料无损检测、高速通信（实验阶段）</td>
+<td>位于毫米波和红外线之间的频段，兼具两者部分特性；具有高穿透性和高分辨率成像能力，但技术实现难度较大，信号衰减较为严重</td>
+</tr>
+</tbody></table>
+<h4 id="十七、CRC校验（循环冗余校验）："><a href="#十七、CRC校验（循环冗余校验）：" class="headerlink" title="十七、CRC校验（循环冗余校验）："></a><strong>十七、CRC校验（循环冗余校验）：</strong></h4><ol>
+<li><p><strong>基本原理：</strong></p>
+<ul>
+<li><p>CRC校验是一种基于多项式除法的错误检测方法。发送方和接收方事先约定一个生成多项式（如CRC - 16、CRC - 32等）。发送方将待发送的数据看成一个多项式的系数序列，用这个数据多项式除以生成多项式，得到的余数就是CRC校验码。将校验码附加在原始数据后面一起发送。</p>
+</li>
+<li><p>例如，对于一个简单的生成多项式$G(x)&#x3D;x^3 + x + 1$（对应的二进制数为1011），假设要发送的数据为1010。将1010看作多项式$M(x)&#x3D;x^3 + x$，在数据后面添加3个0（因为生成多项式最高次幂为3），得到1010000。用1010000除以1011（模2除法），得到余数为011，这个011就是CRC校验码。发送的数据就是1010011。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>计算步骤：</strong></p>
+<ul>
+<li><p><strong>步骤一：确定生成多项式和数据多项式</strong>。根据应用场景和通信协议选择生成多项式，将发送的数据表示为多项式形式。</p>
+</li>
+<li><p><strong>步骤二：数据多项式左移</strong>。将数据多项式左移生成多项式最高次幂的位数，在低位补0。</p>
+</li>
+<li><p><strong>步骤三：进行模2除法</strong>。用左移后的多项式除以生成多项式，模2除法的规则是减法不借位，即异或运算。</p>
+</li>
+<li><p><strong>步骤四：得到校验码和发送数据</strong>。除法运算得到的余数就是CRC校验码，将校验码附加在原始数据后面作为发送数据。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>校验过程：</strong></p>
+<ul>
+<li>接收方收到数据后，用接收到的数据（包括原始数据和CRC校验码）除以相同的生成多项式。如果余数为0，则认为数据没有错误；如果余数不为0，则说明数据在传输过程中出现了错误。</li>
+</ul>
+</li>
+<li><p><strong>应用场景：</strong></p>
+<ul>
+<li>CRC校验广泛应用于数据存储和数据通信领域。在数据存储中，如硬盘、U盘等存储设备写入数据时计算CRC校验码，读取数据时进行校验，以检测数据是否因存储介质损坏等原因出现错误。在数据通信中，像以太网、蓝牙等通信协议都使用CRC校验来检测传输过程中的数据错误，确保数据的完整性。</li>
+</ul>
+</li>
+</ol>
+<h4 id="十八、二进制指数退避算法："><a href="#十八、二进制指数退避算法：" class="headerlink" title="十八、二进制指数退避算法："></a><strong>十八、二进制指数退避算法：</strong></h4><ol>
+<li><p><strong>基本原理：</strong></p>
+<ul>
+<li><p>二进制指数退避算法主要用于解决在共享介质（如以太网）的网络环境中，多个设备同时发送数据产生冲突后的重发问题。当发生冲突时，每个发送设备随机选择一个等待时间，这个等待时间是一个时隙（时间片）的整数倍，时隙的大小是固定的。</p>
+</li>
+<li><p>例如，第一次发生冲突后，设备随机选择等待0或1个时隙后重发；如果再次冲突，就随机选择等待0、1、2或3个时隙后重发；每冲突一次，等待时间的上限就成倍增加，这个倍数是2的指数形式，所以称为二进制指数退避。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>计算步骤：</strong></p>
+<ul>
+<li><p><strong>步骤一：确定冲突次数</strong>。设备检测到发送数据时发生冲突的次数。</p>
+</li>
+<li><p><strong>步骤二：计算等待时隙范围</strong>。根据冲突次数$n$，计算等待时隙的范围是$[0,2^n - 1]$。例如，第一次冲突$n &#x3D; 1$，等待时隙范围是$[0,1]$；第二次冲突$n &#x3D; 2$，范围是$[0,3]$。</p>
+</li>
+<li><p><strong>步骤三：随机选择等待时间</strong>。在计算出的等待时隙范围内随机选择一个值$k$，设备等待$k$个时隙后再尝试发送数据。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>应用场景：</strong></p>
+<ul>
+<li>该算法主要应用于以太网等采用CSMA&#x2F;CD（载波监听多路访问&#x2F;冲突检测）协议的网络中。在这种网络环境下，多个节点共享传输介质，通过二进制指数退避算法可以有效减少冲突的再次发生概率，提高网络的稳定性和传输效率。例如，在一个办公室的局域网中，多台计算机通过以太网连接到交换机，当计算机同时发送数据产生冲突时，就会使用二进制指数退避算法来重发数据。</li>
+</ul>
+</li>
+</ol>
+<h4 id="十九、ipconfig参数表格："><a href="#十九、ipconfig参数表格：" class="headerlink" title="十九、ipconfig参数表格："></a><strong>十九、ipconfig参数表格：</strong></h4><table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>/all</code></td>
+<td align="left">显示完整的TCP&#x2F;IP配置信息，包括IP地址、子网掩码、默认网关、DNS服务器地址、物理（MAC）地址等所有网络适配器的详细信息。</td>
+</tr>
+<tr>
+<td align="center"><code>/release</code></td>
+<td align="left">释放通过DHCP（动态主机配置协议）获取的IP地址。</td>
+</tr>
+<tr>
+<td align="center"><code>/renew</code></td>
+<td align="left">向DHCP服务器请求更新IP地址。通常在使用<code>/release</code>释放IP地址后，或者当网络连接出现异常需要重新获取有效的IP配置时使用。</td>
+</tr>
+<tr>
+<td align="center"><code>/flushdns</code></td>
+<td align="left">清除本地DNS缓存。</td>
+</tr>
+<tr>
+<td align="center"><code>/displaydns</code></td>
+<td align="left">显示本地DNS缓存的内容。用于查看当前系统缓存的DNS记录，了解哪些域名已经被解析并存储在本地缓存中。</td>
+</tr>
+</tbody></table>
+<h4 id="二十、RAID："><a href="#二十、RAID：" class="headerlink" title="二十、RAID："></a><strong>二十、RAID：</strong></h4><table>
+<thead>
+<tr>
+<th align="center">RAIA级别</th>
+<th align="left"><strong>特点</strong></th>
+<th align="center">磁盘利用率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">RAID 0</td>
+<td align="left">数据条带化分布在多个磁盘上，无数据冗余，读写效率高，但一个磁盘损坏会导致所有数据丢失。<br>最少需要两块盘。</td>
+<td align="center">100%</td>
+</tr>
+<tr>
+<td align="center">RAID 1</td>
+<td align="left">将数据同时写入两个或多个磁盘，实现数据完全镜像备份，提供高数据冗余，但磁盘利用率低，写性能相对较差。<br>最少需要两块盘，盘数需为偶数。</td>
+<td align="center">50%</td>
+</tr>
+<tr>
+<td align="center">RAID 3</td>
+<td align="left">一块盘单独做奇偶校验盘，其余盘做RAID 0，数据以位或字节为单位分散存储在数据盘中，校验盘用于存储奇偶校验信息。<br>读写效率高，一定程度上提供数据冗余，但校验盘损坏后无法恢复数据。<br>最少需要三块盘。</td>
+<td align="center">$(n - 1) &#x2F; n$，其中$n$为磁盘总数，当$n &#x3D; 3$时，利用率约为66.7%</td>
+</tr>
+<tr>
+<td align="center">RAID 5</td>
+<td align="left">数据和奇偶校验数据分布在所有磁盘上，以块为单位进行条带化存储，最多允许坏一块盘，通过奇偶校验信息恢复数据。<br>读写性能较好，读性能优于写性能，磁盘利用率较高。<br>最少需要三块盘。</td>
+<td align="center">$(n - 1) &#x2F; n$，例如，当有5块磁盘时，磁盘利用率为80%</td>
+</tr>
+<tr>
+<td align="center">RAID 6</td>
+<td align="left">在RAID 5的基础上增加了一种校验码，最多允许坏两块盘，数据安全性更高，但性能相对较低，写性能比RAID 5更差。<br>最少需要四块盘。</td>
+<td align="center">$(n - 2) &#x2F; n$，比如，当有6块磁盘时，磁盘利用率约为66.7%</td>
+</tr>
+<tr>
+<td align="center">RAID 10</td>
+<td align="left">先进行镜像，再进行条带化，结合了RAID 0的高读写性能和RAID 1的数据冗余优势，允许一半的磁盘（每组镜像中的一个）损坏而不丢失数据。<br>最少需要四块盘，盘数必须是偶数。</td>
+<td align="center">50%</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>网工</category>
+      </categories>
+      <tags>
+        <tag>网络工程师</tag>
+        <tag>考试知识点</tag>
       </tags>
   </entry>
   <entry>
@@ -1964,623 +2556,6 @@
       </tags>
   </entry>
   <entry>
-    <title>网络工程师考试知识点_02</title>
-    <url>https://kfufys.github.io/posts/65202.html</url>
-    <content><![CDATA[<img src="https://kfufys.github.io/posts/65202/1.jpg" alt="head-img" width="1200">
-
-<h4 id="一、事务："><a href="#一、事务：" class="headerlink" title="一、事务："></a><strong>一、事务：</strong></h4><ul>
-<li><strong>原子性：</strong>事务包含的操作要么全部成功，要么全部失败回滚。</li>
-<li><strong>一致性：</strong>事务执行前后都必须处于一个一致性状态。</li>
-<li><strong>隔离性：</strong>多事务并发执行，任一事务更新操作到成功提交的过程，对其他事务都是不可见的。</li>
-<li><strong>持久性：</strong>事务一经提交，对数据库数据的改变是永久性的。</li>
-</ul>
-<h4 id="二、寄存器："><a href="#二、寄存器：" class="headerlink" title="二、寄存器："></a><strong>二、寄存器：</strong></h4><ul>
-<li><strong>程序计数器：</strong>存放指令地址。</li>
-<li><strong>状态寄存器：</strong>记录运算中产生的标志信息。</li>
-<li><strong>通用寄存器：</strong>运算时暂存操作数、地址。</li>
-<li><strong>累加器：</strong>数据寄存器，运算中暂存操作数和中间结果，数据不长存。</li>
-</ul>
-<blockquote>
-<p>CPU在<strong>一个总线周期</strong>结束时响应DMA请求。<br><strong>加法器</strong>是算术逻辑单元的部件。<br>在程序执行过程中，cache与主存的地址映像由<strong>硬件自动完成</strong>。<br>补码自带符号位，0是唯一的，n位二进制编码可以表示<strong>2<sup>n</sup><strong>个不同的数。<br>浮点数表示为阶和尾数两部分。两浮点数相加，先对阶，即</strong>将小阶向大阶对其，同时将尾数右移n位</strong>。<br>指令寄存器位数取决于<strong>指令字长</strong>。<br>为了便于多级中断，使用<strong>堆栈</strong>保护断点和现场最有效。</p>
-</blockquote>
-<h4 id="三、存储器分类："><a href="#三、存储器分类：" class="headerlink" title="三、存储器分类："></a><strong>三、存储器分类：</strong></h4><ul>
-<li><strong>位置：</strong>内存、外存。</li>
-<li><strong>材料：</strong>磁存储器、半导体存储器、光存储器。</li>
-<li><strong>工作方式：</strong>读写存储器、只读存储器。</li>
-<li><strong>访问方式：</strong>按地址访问、按内容访问。</li>
-<li><strong>寻址方式：</strong>随机存储器、顺序存储器、直接存储器。</li>
-</ul>
-<h4 id="四、指令集："><a href="#四、指令集：" class="headerlink" title="四、指令集："></a><strong>四、指令集：</strong></h4><ol>
-<li><strong>概念：</strong><ul>
-<li><strong>RISC（Reduced Instruction Set Computer）</strong>：即精简指令集计算机。它的设计理念是通过简化指令系统，使计算机的硬件结构更简单、更规则。指令集的指令数量较少，格式相对简单且长度固定，每条指令的执行时间较短。</li>
-<li><strong>CISC（Complex Instruction Set Computer）</strong>：是复杂指令集计算机。它的指令系统较为复杂，包含大量不同功能和复杂程度的指令，指令格式多样，长度可变，能完成复杂多样的操作。</li>
-</ul>
-</li>
-<li><strong>指令特点：</strong><ul>
-<li><strong>RISC：</strong><ul>
-<li>指令数量通常较少，一般在几十条到一百多条之间。这些指令的功能比较单一，例如加法指令就只进行加法操作。</li>
-<li>指令格式简单且固定，有利于指令的快速译码和执行。</li>
-</ul>
-</li>
-<li><strong>CISC：</strong><ul>
-<li>指令数量很多，可能包含几百条甚至上千条指令。它有各种功能强大的指令，比如可以一条指令完成从内存中读取数据、进行复杂运算并且存储结果的操作。</li>
-<li>指令格式多样且长度可变。这是为了适应各种复杂指令的需求，但也使得指令的译码过程相对复杂，因为硬件需要花费更多时间来识别指令的具体格式和操作内容。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>性能特点：</strong><ul>
-<li><strong>RISC：</strong><ul>
-<li>由于指令简单、格式固定，RISC 处理器可以采用流水线技术来高效地执行指令。</li>
-<li>执行速度通常较快，尤其是对于简单、重复的任务，如数值计算等。</li>
-</ul>
-</li>
-<li><strong>CISC：</strong><ul>
-<li>CISC 处理器的优势在于可以用较少的指令完成复杂的任务。例如在处理复杂的图形绘制或者文件系统操作时，它可以通过一条复杂指令完成多个简单指令的功能，从而减少程序的指令数量。</li>
-<li>但是，由于指令复杂，其执行速度可能会受到影响。复杂指令的译码和执行需要更多的硬件资源和时间，而且指令长度可变也会对指令读取和存储产生一定的干扰。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>硬件实现复杂度：</strong><ul>
-<li><strong>RISC：</strong><ul>
-<li>硬件结构相对简单。因为指令集简单，处理器的控制单元设计比较规则，不需要复杂的微代码（微代码是一种用于解释和执行复杂指令的底层代码）生成电路。例如，在 RISC 处理器中，控制单元可以通过简单的逻辑电路来直接控制指令的执行流程。</li>
-<li>寄存器数量通常较多，这有助于提高数据的处理速度。数据可以快速地存储在寄存器中，减少了频繁访问内存的次数，因为访问寄存器比访问内存要快得多。</li>
-</ul>
-</li>
-<li><strong>CISC：</strong><ul>
-<li>硬件实现复杂。由于指令集复杂，CISC 处理器需要复杂的控制单元和微代码生成电路来处理各种不同类型的指令。这些电路的设计和实现难度较大，需要更多的芯片面积和功耗。</li>
-<li>寄存器数量可能相对较少，因为一些复杂指令可以直接在内存和运算单元之间进行操作，对寄存器的依赖程度相对较低。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>应用场景：</strong><ul>
-<li><strong>RISC：</strong><ul>
-<li>在嵌入式系统中应用广泛，如手机、平板电脑等移动设备中的处理器。这些设备通常需要高效地处理简单、重复的任务，如音频视频播放、图形显示等，RISC 处理器的快速执行和低功耗特点非常适合这些应用。</li>
-<li>也用于高性能计算领域，特别是在处理大量数据的并行计算任务时，RISC 处理器的流水线技术和多核心架构可以发挥优势。</li>
-</ul>
-</li>
-<li><strong>CISC：</strong><ul>
-<li>在传统的桌面计算机和服务器中仍然有应用。因为这些系统需要运行各种复杂的软件，包括操作系统、数据库管理系统等，CISC 处理器的复杂指令可以更高效地处理这些软件中的复杂操作。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="五、内存存储容量："><a href="#五、内存存储容量：" class="headerlink" title="五、内存存储容量："></a><strong>五、内存存储容量：</strong></h4><ul>
-<li>内存按字节编址，从A1000H–&gt;B13FFH的区域，存储容量为<strong>65KB</strong>。</li>
-<li>结束地址与起始地址差值加1为存储单元个数：B13FFH-A1000H+1&#x3D;10400H，转为十进制：65536+1024&#x3D;64KB+1KB&#x3D;65K。</li>
-</ul>
-<h4 id="六、周期："><a href="#六、周期：" class="headerlink" title="六、周期："></a><strong>六、周期：</strong></h4><ul>
-<li>计算机操作的最小时间单位：<strong>时钟周期</strong>。</li>
-<li>一个<strong>指令周期</strong>需要多个时钟周期。</li>
-<li>一个<strong>机器周期</strong>（CPU周期）完成一个计算机基本操作的时间，需要多个时钟周期。</li>
-</ul>
-<h4 id="七、CPU-与外设间通信："><a href="#七、CPU-与外设间通信：" class="headerlink" title="七、CPU 与外设间通信："></a><strong>七、CPU 与外设间通信：</strong></h4><ol>
-<li><p><strong>程序中断方式：</strong></p>
-<ul>
-<li><p>某一外设的数据准备就绪后，它“主动”向CPU发出中断请求信号，请求CPU暂时中断目前正在执行的程序转而进行数据交换；</p>
-</li>
-<li><p>当CPU响应这个中断时，便暂停运行主程序，自动转去执行该设备的中断服务程序；</p>
-</li>
-<li><p>当中断服务程序执行完毕（数据交换结束）后，CPU又<strong>回到原来的主程序继续执行</strong>。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>程序查询方式：</strong></p>
-<ul>
-<li>CPU 不断地查询外部设备的状态寄存器，以确定设备是否准备好进行数据传输。</li>
-<li>例如，在从磁盘读取数据时，CPU 会周期性地检查磁盘控制器的状态位，看数据是否已经准备好被读取。</li>
-<li>如果状态位显示数据未准备好，CPU 就继续查询；</li>
-<li>如果准备好了，CPU 就开始读取数据。（<strong>CPU 利用率很低</strong>）。</li>
-</ul>
-</li>
-<li><p><strong>直接存储器访问（DMA）方式：</strong></p>
-<ul>
-<li><p>DMA 控制器可以在不需要 CPU 干预的情况下，直接在外部设备和内存之间进行数据传输。</p>
-</li>
-<li><p>在传输数据之前，CPU 需要对 DMA 控制器进行初始化，设置好传输的起始地址、数据长度、传输方向等参数。</p>
-</li>
-<li><p>例如，在从硬盘读取大量数据到内存时，DMA 控制器会接管总线控制权，按照预先设定的参数，将硬盘中的数据直接传输到内存指定区域，期间 CPU 可以去处理其他任务。（<strong>硬件成本相对较高</strong>）。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>通道方式：</strong></p>
-<ul>
-<li><p>通道是一种特殊的处理机，它可以独立于 CPU 执行通道程序，专门负责管理和控制外部设备与内存之间的数据传输。</p>
-</li>
-<li><p>通道有自己的指令系统，可以理解为是一个 “小 CPU”，用于执行通道程序。</p>
-</li>
-<li><p>例如，在大型计算机系统中，磁带机的大量数据读写可以由通道来完成。</p>
-</li>
-<li><p>CPU 将通道程序（包括数据传输的起始地址、长度、操作类型等信息）发送给通道，通道就按照程序指令进行操作，而 CPU 可以去做其他工作。（<strong>硬件和软件实现都比较复杂，成本较高</strong>）。</p>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="八、指令流水线："><a href="#八、指令流水线：" class="headerlink" title="八、指令流水线："></a><strong>八、指令流水线：</strong></h4><ol>
-<li><p><strong>基本概念：</strong></p>
-<ul>
-<li>指令流水线是将指令的执行过程分解为多个阶段，如取指（IF）、译码（ID）、执行（EX）、访存（MEM）和写回（WB）等阶段。每个阶段由专门的硬件电路来处理，不同指令的不同阶段可以在同一时间内重叠执行，提高指令的执行效率。</li>
-</ul>
-</li>
-<li><p><strong>计算指标：</strong></p>
-<ul>
-<li><strong>吞吐率（Throughput）：</strong><ul>
-<li><strong>定义</strong>：单位时间内执行的指令数。它是衡量流水线性能的一个重要指标。</li>
-<li><strong>计算公式</strong>：吞吐率 $TP&#x3D;\frac{n}{T_k}$，其中 $n$ 是执行的指令数，$T_k$ 是处理 $n$ 条指令所用的时间。在理想情况下（各阶段时间相等且无流水线停顿），如果流水线的时钟周期为 $T$，流水线阶段数为 $k$，则执行 $n$ 条指令的时间 $T_k&#x3D;(k + n - 1)T$，所以理想吞吐率 $TP&#x3D;\frac{n}{(k + n - 1)T}$。当 $n$ 很大时，$TP\approx\frac{1}{T}$。</li>
-<li><strong>示例</strong>：假设有一个5阶段（$k &#x3D; 5$）的流水线，时钟周期 $T &#x3D; 1ns$，要执行100条指令（$n &#x3D; 100$）。按照公式计算，$T_k&#x3D;(5 + 100 - 1)\times1ns &#x3D; 104ns$，则吞吐率 $TP&#x3D;\frac{100}{104ns}\approx0.96\times10^9$ 条指令&#x2F;秒。</li>
-</ul>
-</li>
-<li><strong>加速比（Speed - up）：</strong><ul>
-<li><strong>定义</strong>：非流水线执行时间与流水线执行时间之比。它反映了流水线相对于非流水线方式在性能上的提升程度。</li>
-<li><strong>计算公式</strong>：设非流水线方式执行一条指令的时间为 $T_0$，流水线的时钟周期为 $T$，流水线阶段数为 $k$，则加速比 $S&#x3D;\frac{nT_0}{(k + n - 1)T}$。在理想情况下，当各阶段时间相等且 $T &#x3D; \frac{T_0}{k}$ 时，对于大量指令（$n\gg k$），加速比 $S\approx k$。</li>
-<li><strong>示例</strong>：假设非流水线方式执行一条指令需要 $10ns$（$T_0 &#x3D; 10ns$），采用一个4阶段（$k &#x3D; 4$）的流水线，且每个阶段时间相等，那么流水线的时钟周期 $T&#x3D;\frac{10ns}{4}&#x3D;2.5ns$。如果要执行1000条指令（$n &#x3D; 1000$），非流水线执行时间为 $1000\times10ns &#x3D; 10000ns$，流水线执行时间 $T_k&#x3D;(4 + 1000 - 1)\times2.5ns &#x3D; 2507.5ns$，加速比 $S&#x3D;\frac{1000\times10ns}{2507.5ns}\approx3.99$。</li>
-</ul>
-</li>
-<li><strong>效率（Efficiency）：</strong><ul>
-<li><strong>定义</strong>：流水线的设备利用率。它是指流水线中各功能段的实际使用时间与整个运行时间之比。</li>
-<li><strong>计算公式</strong>：在理想情况下（各阶段时间相等），效率 $E&#x3D;\frac{n}{k(k + n - 1)}$。当 $n$ 很大时，$E\approx\frac{1}{k}$。</li>
-<li><strong>示例</strong>：同样是上述4阶段（$k &#x3D; 4$）的流水线，执行1000条指令（$n &#x3D; 1000$），根据公式计算效率 $E&#x3D;\frac{1000}{4\times(4 + 1000 - 1)}\approx0.25$。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>指令流水线操作周期为“<strong>瓶颈</strong>”段所需时间。（最大操作时间段）。</p>
-</li>
-</ol>
-<h4 id="九、指令执行时间："><a href="#九、指令执行时间：" class="headerlink" title="九、指令执行时间："></a><strong>九、指令执行时间：</strong></h4><ol>
-<li><p><strong>顺序方式执行时间计算：</strong></p>
-<ul>
-<li><p>在<strong>顺序执行</strong>方式下，每条指令都要依次经过取指令、分析和执行这三个阶段，上一条指令执行完所有阶段后，下一条指令才开始执行。</p>
-</li>
-<li><p><strong>每条指令执行总时间：</strong></p>
-</li>
-<li><p>执行一条指令时间为取指、分析和执行三个阶段时间之和，即：[4\triangle t + 2\triangle t + 3\triangle t &#x3D; 9\triangle t]</p>
-</li>
-<li><p><strong>计算600条指令执行总时间：</strong></p>
-</li>
-<li><p>由于是顺序执行，执行完(600)条指令所需的总时间就是一条指令执行时间乘以指令的条数，即：[9\triangle t×600 &#x3D; 5400\triangle t]</p>
-</li>
-</ul>
-</li>
-<li><p><strong>流水线方式执行时间计算：</strong></p>
-<ul>
-<li><p>在流水线执行方式下，不同指令的不同阶段可以<strong>重叠进行</strong>，就像工厂的流水线一样，各个阶段同时开展工作。</p>
-</li>
-<li><p><strong>确定流水线的阶段数及各阶段时间：</strong></p>
-</li>
-<li><p>本题中流水线分为取指令、分析和执行这(3)个阶段，对应的时间分别为(4\triangle t)、(2\triangle t)、(3\triangle t)。</p>
-</li>
-<li><p><strong>计算第一条指令进入流水线到最后一条指令流出流水线的时间：</strong></p>
-<ul>
-<li><p>对于流水线，执行(n)条指令所需的总时间可以用公式(T &#x3D; (k + n - 1)×\Delta t_{max})来计算（其中(k)是流水线的阶段数，(n)是指令的条数，(\Delta t_{max})是流水线各阶段中时间最长的那个阶段所用时间）。</p>
-</li>
-<li><p>在本题中，k &#x3D; 3，n &#x3D; 600，(\Delta t_{max}&#x3D; 4\triangle t)，将这些值代入上述公式可得：<br>$$<br>[T &#x3D; (3 + 600 - 1)×4\triangle t]<br>[&#x3D;(602)×4\triangle t]<br>[&#x3D; 2408\triangle t]<br>$$</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="十、中断响应时间："><a href="#十、中断响应时间：" class="headerlink" title="十、中断响应时间："></a><strong>十、中断响应时间：</strong></h4><ul>
-<li>CPU 中断响应时间是指<strong>从 CPU 检测到中断请求信号到开始执行中断服务程序</strong>的第一条指令所需要的时间。</li>
-</ul>
-<h4 id="十一、机器指令寻址方式："><a href="#十一、机器指令寻址方式：" class="headerlink" title="十一、机器指令寻址方式："></a><strong>十一、机器指令寻址方式：</strong></h4><ol>
-<li><strong>立即寻址：</strong><ul>
-<li><strong>定义</strong>：操作数直接包含在指令中，作为指令的一部分。</li>
-<li><strong>特点和用途</strong>：优点是指令执行速度快，因为不需要额外的访存操作来获取操作数，它常用于给寄存器赋初值等操作。</li>
-</ul>
-</li>
-<li><strong>直接寻址</strong><ul>
-<li><strong>定义</strong>：指令的操作数部分直接给出操作数在内存中的地址。</li>
-<li><strong>特点和用途</strong>：直接寻址方式简单直观，能直接访问内存中的数据。但是，它只能访问固定的内存单元。</li>
-</ul>
-</li>
-<li><strong>间接寻址</strong><ul>
-<li><strong>定义</strong>：指令中给出的是存放操作数地址的存储单元的地址。</li>
-<li><strong>特点和用途</strong>：这种寻址方式增加了地址的灵活性。通过改变存放操作数地址的寄存器内容，可以方便地访问不同的内存单元。</li>
-</ul>
-</li>
-<li><strong>寄存器寻址</strong><ul>
-<li><strong>定义</strong>：操作数存放在寄存器中，指令直接指定寄存器来获取操作数。</li>
-<li><strong>特点和用途</strong>：寄存器寻址的速度非常快，因为寄存器位于CPU内部，数据访问速度比内存快得多。这种寻址方式常用于在CPU内部的寄存器之间进行数据传输和操作。</li>
-</ul>
-</li>
-<li><strong>寄存器间接寻址</strong><ul>
-<li><strong>定义</strong>：操作数的地址存放在寄存器中，通过寄存器间接获取操作数的地址。</li>
-<li><strong>特点和用途</strong>：结合了寄存器寻址的速度优势和间接寻址的灵活性。它在处理数组和缓冲区等数据结构时非常有用。</li>
-</ul>
-</li>
-<li><strong>相对寻址</strong><ul>
-<li><strong>定义</strong>：以程序计数器（PC）或指令指针（IP）的当前内容为基地址，加上指令中给出的偏移量来形成操作数的有效地址。</li>
-<li><strong>特点和用途</strong>：主要用于程序的分支和循环结构中。它的优点是代码的可移植性较好，因为相对地址不依赖于程序在内存中的绝对位置。</li>
-</ul>
-</li>
-<li><strong>基址寻址</strong><ul>
-<li><strong>定义</strong>：将CPU中的基址寄存器（如8086中的BX或BP）的内容与指令中给定的偏移量相加，得到操作数的地址。</li>
-<li><strong>特点和用途</strong>：可以方便地访问一片连续的内存区域。这种寻址方式常用于访问数组、结构体等数据结构，其中基址寄存器可以指向数据结构的起始地址，偏移量用于访问内部的元素。</li>
-</ul>
-</li>
-<li><strong>变址寻址</strong><ul>
-<li><strong>定义</strong>：以变址寄存器（如8086中的SI或DI）的内容为基础，加上指令中给定的偏移量来确定操作数的地址。</li>
-<li><strong>特点和用途</strong>：与基址寻址类似，变址寻址也用于访问连续的内存区域。它的特点是变址寄存器的内容可以在程序执行过程中动态变化，常用于循环访问数组元素。</li>
-</ul>
-</li>
-</ol>
-<h4 id="十二、Flynn分类法："><a href="#十二、Flynn分类法：" class="headerlink" title="十二、Flynn分类法："></a><strong>十二、Flynn分类法：</strong></h4><p>Flynn于1972年提出计算平台分类法主要根据指令流和数据流来分类，分为四类：</p>
-<ol>
-<li><p><strong>单指令流单数据流机器（S1SD)：</strong></p>
-<ul>
-<li>SISD机器是一种传统的串行计算机，它的硬件不支持任何形式的并行计算，所有的指令都是串行执行。并且在某个时钟周期内，CPU只能处理一个数据流。</li>
-</ul>
-</li>
-<li><p><strong>单指令流多数据流机器（SIMD)：</strong></p>
-<ul>
-<li>SIMD是采用一个指令流处理多个数据流。这类机器在数字信号处理、图像处理，以及多媒体信息处理等领域非常有效。</li>
-<li>Intel处理器实现的MMXTM、SSE (Streaming SIMD Extensions)、SSE2及SSE3扩展指令集，都能在单个时钟周期内处理多个数据单元。也就是说人们现在用的单核计算机基本上都属于SIMD机器。</li>
-</ul>
-</li>
-<li><p><strong>多指令流单数据流机器(MISD)：</strong></p>
-<ul>
-<li>MISD采用多指令流处理单个数据流。实际情况中，用多指令流处理多数据流才是更有效的方法，因此MISD只作为理论模型出现，没投入实际应用。</li>
-</ul>
-</li>
-<li><p><strong>多指令流多数据流机器(MIMD)：</strong></p>
-<ul>
-<li>MIMD机器可以同时执行多个指令流，这些指令流分别对不同数据流进行操作。</li>
-</ul>
-</li>
-</ol>
-<h4 id="十三、图像数据量："><a href="#十三、图像数据量：" class="headerlink" title="十三、图像数据量："></a><strong>十三、图像数据量：</strong></h4><ol>
-<li><p><strong>计算数据量的公式：</strong></p>
-<ul>
-<li>图像数据量 &#x3D; 图像水平分辨率×图像垂直分辨率×像素深度（单位为位）÷ 8（单位转换为字节）。<ul>
-<li><strong>图像水平分辨率和垂直分辨率</strong>：分别表示图像在水平和垂直方向上所包含的像素数量。</li>
-<li><strong>像素深度</strong>：指存储每个像素所用的位数。对于真彩色图像，像素深度为24位（因为每个像素有3个基色分量，每个分量8位）。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>计算示例</strong></p>
-<ul>
-<li><p>假设有一幅真彩色图像：800<em>600px，像素深度为24位，根据上述公式计算其数据量：<br>$$<br>[<br>\begin{align</em>}<br>&amp;800×600×24÷8\<br>&#x3D;&amp;800×600×3\<br>&#x3D;&amp;480000×3\<br>&#x3D;&amp;1440000字节<br>\end{align*}<br>]</p>
-<p>[1440000÷1024÷1024≈1.37MB]<br>$$</p>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="十四、CPI、MIPS、PCI、MFLOPS："><a href="#十四、CPI、MIPS、PCI、MFLOPS：" class="headerlink" title="十四、CPI、MIPS、PCI、MFLOPS："></a><strong>十四、CPI、MIPS、PCI、MFLOPS：</strong></h4><ul>
-<li><p><strong>CPI（Cycles Per Instruction）：</strong>每条指令执行所需的时钟周期数。它是衡量计算机性能的一个重要指标，反映了CPU执行指令的效率。<br>$$<br>CPI &#x3D; \frac{CPU执行程序所用的时钟周期数}{程序包含的指令数}<br>$$</p>
-</li>
-<li><p><strong>MIPS（Million Instructions Per Second）：</strong>表示计算机在一秒钟内能够执行的指令数量，单位是百万条指令&#x2F;秒。用于衡量计算机的运算速度。<br>$$<br>MIPS &#x3D; \frac{指令数}{执行时间\times10^{6}}<br>$$</p>
-</li>
-<li><p><strong>PCI（Peripheral Component Interconnect）：</strong>外围部件互连，是一种计算机局部总线标准。</p>
-<table>
-<thead>
-<tr>
-<th>PCIe版本</th>
-<th>单通道传输速率（GT&#x2F;s）</th>
-<th>编码方式</th>
-<th>单通道有效数据传输速率（Gbps）</th>
-<th>x16模式总带宽（Gbps）</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1.0</td>
-<td>2.5</td>
-<td>8b&#x2F;10b</td>
-<td>2</td>
-<td>32</td>
-</tr>
-<tr>
-<td>2.0</td>
-<td>5</td>
-<td>8b&#x2F;10b</td>
-<td>4</td>
-<td>64</td>
-</tr>
-<tr>
-<td>3.0</td>
-<td>8</td>
-<td>128b&#x2F;130b</td>
-<td>约7.88</td>
-<td>约126</td>
-</tr>
-<tr>
-<td>4.0</td>
-<td>16</td>
-<td>128b&#x2F;130b</td>
-<td>约15.75</td>
-<td>约252</td>
-</tr>
-<tr>
-<td>5.0</td>
-<td>32</td>
-<td>128b&#x2F;130b</td>
-<td>约30.5</td>
-<td>约488</td>
-</tr>
-<tr>
-<td>6.0</td>
-<td>64</td>
-<td>新编码和信号传输技术</td>
-<td>大幅提升</td>
-<td>-</td>
-</tr>
-</tbody></table>
-</li>
-<li><p><strong>MFLOPS（Million Floating - Point Operations Per Second）：</strong>每秒百万次浮点运算数，主要用于衡量计算机在浮点运算方面的性能。<br>$$<br>MFLOPS &#x3D; \frac{浮点运算次数}{执行时间\times10^{6}}<br>$$</p>
-</li>
-</ul>
-<h4 id="十五、WLAN标准："><a href="#十五、WLAN标准：" class="headerlink" title="十五、WLAN标准："></a><strong>十五、WLAN标准：</strong></h4><table>
-<thead>
-<tr>
-<th>标准</th>
-<th>频段</th>
-<th>最大数据速率</th>
-<th>调制方式</th>
-<th>特点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>802.11a</td>
-<td>5GHz</td>
-<td>54Mbps</td>
-<td>OFDM（正交频分复用）</td>
-<td>传输速率较高，但传输距离相对较短，受障碍物影响较大，频段干扰相对较少</td>
-</tr>
-<tr>
-<td>802.11b</td>
-<td>2.4GHz</td>
-<td>11Mbps</td>
-<td>DSSS（直接序列扩频）</td>
-<td>传输距离较远，但速率较低，频段容易受到干扰，是早期广泛使用的标准之一</td>
-</tr>
-<tr>
-<td>802.11g</td>
-<td>2.4GHz</td>
-<td>54Mbps</td>
-<td>OFDM（正交频分复用）</td>
-<td>与802.11b兼容，在2.4GHz频段实现了较高的数据传输速率，应用较为广泛</td>
-</tr>
-<tr>
-<td>802.11n</td>
-<td>2.4GHz和5GHz</td>
-<td>600Mbps</td>
-<td>MIMO - OFDM（多输入多输出 - 正交频分复用）</td>
-<td>采用MIMO技术，提高了传输速率和传输距离，同时在两个频段都能工作，兼容性较好</td>
-</tr>
-<tr>
-<td>802.11ac</td>
-<td>5GHz</td>
-<td>理论上可达6.93Gbps（实际应用中速率因多种因素降低）</td>
-<td>OFDM（正交频分复用）等高级调制技术</td>
-<td>主要工作在5GHz频段，进一步提高了传输速率，支持更宽的频带和更多的空间流，适合高清视频传输等高速应用场景</td>
-</tr>
-<tr>
-<td>802.11ax（Wi - Fi 6）</td>
-<td>2.4GHz和5GHz</td>
-<td>理论上可达9.6Gbps</td>
-<td>OFDMA（正交频分多址）等新技术</td>
-<td>采用新技术提升频谱效率、降低延迟，支持更多设备同时连接，在密集用户环境下性能出色，适用于智能家居等多设备场景</td>
-</tr>
-<tr>
-<td>802.11be（Wi - Fi 7）</td>
-<td>2.4GHz、5GHz和6GHz</td>
-<td>理论上可达46Gbps</td>
-<td>进一步优化的调制和多址接入技术</td>
-<td>新增6GHz频段资源，提供更高的传输速率、更低的延迟和更好的可靠性，有望满足未来虚拟现实、8K视频等高带宽需求应用</td>
-</tr>
-</tbody></table>
-<h4 id="十六、微波："><a href="#十六、微波：" class="headerlink" title="十六、微波："></a><strong>十六、微波：</strong></h4><table>
-<thead>
-<tr>
-<th>微波分类</th>
-<th>频率范围</th>
-<th>波长范围</th>
-<th>频带名称</th>
-<th>应用场景</th>
-<th>特点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>分米波（UHF）</td>
-<td>300MHz - 3GHz</td>
-<td>1m - 10cm</td>
-<td>特高频（Ultra - High Frequency）</td>
-<td>广播电视信号传输、移动通信（如GSM网络部分频段）、无绳电话</td>
-<td>传播特性近似于光波，沿直线传播，绕射能力弱，但在建筑物内的穿透能力相对较好；能被电离层反射，受气象条件影响相对较小</td>
-</tr>
-<tr>
-<td>厘米波（SHF）</td>
-<td>3GHz - 30GHz</td>
-<td>10cm - 1cm</td>
-<td>超高频（Super - High Frequency）</td>
-<td>卫星通信、雷达（如气象雷达、防空雷达）、无线局域网（如Wi - Fi 5GHz频段）</td>
-<td>频率较高，带宽较宽，能实现较高的数据传输速率；方向性好，能量集中，但传播损耗比分米波大，易受雨雾等天气影响</td>
-</tr>
-<tr>
-<td>毫米波（EHF）</td>
-<td>30GHz - 300GHz</td>
-<td>1cm - 1mm</td>
-<td>极高频（Extremely - High Frequency）</td>
-<td>5G毫米波通信、高速短距离通信（如部分短距数据传输设备）、毫米波雷达（用于汽车自动驾驶等）</td>
-<td>频带宽，可利用的频谱资源丰富；波束窄，方向性极强，可实现高精度的定位和探测；但传播损耗大，传输距离短，对障碍物遮挡非常敏感</td>
-</tr>
-<tr>
-<td>丝米波</td>
-<td>300GHz - 3THz</td>
-<td>1mm - 0.1mm</td>
-<td>太赫兹（Terahertz）</td>
-<td>安检成像（如人体安检仪）、材料无损检测、高速通信（实验阶段）</td>
-<td>位于毫米波和红外线之间的频段，兼具两者部分特性；具有高穿透性和高分辨率成像能力，但技术实现难度较大，信号衰减较为严重</td>
-</tr>
-</tbody></table>
-<h4 id="十七、CRC校验（循环冗余校验）："><a href="#十七、CRC校验（循环冗余校验）：" class="headerlink" title="十七、CRC校验（循环冗余校验）："></a><strong>十七、CRC校验（循环冗余校验）：</strong></h4><ol>
-<li><p><strong>基本原理：</strong></p>
-<ul>
-<li><p>CRC校验是一种基于多项式除法的错误检测方法。发送方和接收方事先约定一个生成多项式（如CRC - 16、CRC - 32等）。发送方将待发送的数据看成一个多项式的系数序列，用这个数据多项式除以生成多项式，得到的余数就是CRC校验码。将校验码附加在原始数据后面一起发送。</p>
-</li>
-<li><p>例如，对于一个简单的生成多项式$G(x)&#x3D;x^3 + x + 1$（对应的二进制数为1011），假设要发送的数据为1010。将1010看作多项式$M(x)&#x3D;x^3 + x$，在数据后面添加3个0（因为生成多项式最高次幂为3），得到1010000。用1010000除以1011（模2除法），得到余数为011，这个011就是CRC校验码。发送的数据就是1010011。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>计算步骤：</strong></p>
-<ul>
-<li><p><strong>步骤一：确定生成多项式和数据多项式</strong>。根据应用场景和通信协议选择生成多项式，将发送的数据表示为多项式形式。</p>
-</li>
-<li><p><strong>步骤二：数据多项式左移</strong>。将数据多项式左移生成多项式最高次幂的位数，在低位补0。</p>
-</li>
-<li><p><strong>步骤三：进行模2除法</strong>。用左移后的多项式除以生成多项式，模2除法的规则是减法不借位，即异或运算。</p>
-</li>
-<li><p><strong>步骤四：得到校验码和发送数据</strong>。除法运算得到的余数就是CRC校验码，将校验码附加在原始数据后面作为发送数据。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>校验过程：</strong></p>
-<ul>
-<li>接收方收到数据后，用接收到的数据（包括原始数据和CRC校验码）除以相同的生成多项式。如果余数为0，则认为数据没有错误；如果余数不为0，则说明数据在传输过程中出现了错误。</li>
-</ul>
-</li>
-<li><p><strong>应用场景：</strong></p>
-<ul>
-<li>CRC校验广泛应用于数据存储和数据通信领域。在数据存储中，如硬盘、U盘等存储设备写入数据时计算CRC校验码，读取数据时进行校验，以检测数据是否因存储介质损坏等原因出现错误。在数据通信中，像以太网、蓝牙等通信协议都使用CRC校验来检测传输过程中的数据错误，确保数据的完整性。</li>
-</ul>
-</li>
-</ol>
-<h4 id="十八、二进制指数退避算法："><a href="#十八、二进制指数退避算法：" class="headerlink" title="十八、二进制指数退避算法："></a><strong>十八、二进制指数退避算法：</strong></h4><ol>
-<li><p><strong>基本原理：</strong></p>
-<ul>
-<li><p>二进制指数退避算法主要用于解决在共享介质（如以太网）的网络环境中，多个设备同时发送数据产生冲突后的重发问题。当发生冲突时，每个发送设备随机选择一个等待时间，这个等待时间是一个时隙（时间片）的整数倍，时隙的大小是固定的。</p>
-</li>
-<li><p>例如，第一次发生冲突后，设备随机选择等待0或1个时隙后重发；如果再次冲突，就随机选择等待0、1、2或3个时隙后重发；每冲突一次，等待时间的上限就成倍增加，这个倍数是2的指数形式，所以称为二进制指数退避。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>计算步骤：</strong></p>
-<ul>
-<li><p><strong>步骤一：确定冲突次数</strong>。设备检测到发送数据时发生冲突的次数。</p>
-</li>
-<li><p><strong>步骤二：计算等待时隙范围</strong>。根据冲突次数$n$，计算等待时隙的范围是$[0,2^n - 1]$。例如，第一次冲突$n &#x3D; 1$，等待时隙范围是$[0,1]$；第二次冲突$n &#x3D; 2$，范围是$[0,3]$。</p>
-</li>
-<li><p><strong>步骤三：随机选择等待时间</strong>。在计算出的等待时隙范围内随机选择一个值$k$，设备等待$k$个时隙后再尝试发送数据。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>应用场景：</strong></p>
-<ul>
-<li>该算法主要应用于以太网等采用CSMA&#x2F;CD（载波监听多路访问&#x2F;冲突检测）协议的网络中。在这种网络环境下，多个节点共享传输介质，通过二进制指数退避算法可以有效减少冲突的再次发生概率，提高网络的稳定性和传输效率。例如，在一个办公室的局域网中，多台计算机通过以太网连接到交换机，当计算机同时发送数据产生冲突时，就会使用二进制指数退避算法来重发数据。</li>
-</ul>
-</li>
-</ol>
-<h4 id="十九、ipconfig参数表格："><a href="#十九、ipconfig参数表格：" class="headerlink" title="十九、ipconfig参数表格："></a><strong>十九、ipconfig参数表格：</strong></h4><table>
-<thead>
-<tr>
-<th align="center">参数</th>
-<th align="left">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><code>/all</code></td>
-<td align="left">显示完整的TCP&#x2F;IP配置信息，包括IP地址、子网掩码、默认网关、DNS服务器地址、物理（MAC）地址等所有网络适配器的详细信息。</td>
-</tr>
-<tr>
-<td align="center"><code>/release</code></td>
-<td align="left">释放通过DHCP（动态主机配置协议）获取的IP地址。</td>
-</tr>
-<tr>
-<td align="center"><code>/renew</code></td>
-<td align="left">向DHCP服务器请求更新IP地址。通常在使用<code>/release</code>释放IP地址后，或者当网络连接出现异常需要重新获取有效的IP配置时使用。</td>
-</tr>
-<tr>
-<td align="center"><code>/flushdns</code></td>
-<td align="left">清除本地DNS缓存。</td>
-</tr>
-<tr>
-<td align="center"><code>/displaydns</code></td>
-<td align="left">显示本地DNS缓存的内容。用于查看当前系统缓存的DNS记录，了解哪些域名已经被解析并存储在本地缓存中。</td>
-</tr>
-</tbody></table>
-<h4 id="二十、RAID："><a href="#二十、RAID：" class="headerlink" title="二十、RAID："></a><strong>二十、RAID：</strong></h4><table>
-<thead>
-<tr>
-<th align="center">RAIA级别</th>
-<th align="left"><strong>特点</strong></th>
-<th align="center">磁盘利用率</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">RAID 0</td>
-<td align="left">数据条带化分布在多个磁盘上，无数据冗余，读写效率高，但一个磁盘损坏会导致所有数据丢失。<br>最少需要两块盘。</td>
-<td align="center">100%</td>
-</tr>
-<tr>
-<td align="center">RAID 1</td>
-<td align="left">将数据同时写入两个或多个磁盘，实现数据完全镜像备份，提供高数据冗余，但磁盘利用率低，写性能相对较差。<br>最少需要两块盘，盘数需为偶数。</td>
-<td align="center">50%</td>
-</tr>
-<tr>
-<td align="center">RAID 3</td>
-<td align="left">一块盘单独做奇偶校验盘，其余盘做RAID 0，数据以位或字节为单位分散存储在数据盘中，校验盘用于存储奇偶校验信息。<br>读写效率高，一定程度上提供数据冗余，但校验盘损坏后无法恢复数据。<br>最少需要三块盘。</td>
-<td align="center">$(n - 1) &#x2F; n$，其中$n$为磁盘总数，当$n &#x3D; 3$时，利用率约为66.7%</td>
-</tr>
-<tr>
-<td align="center">RAID 5</td>
-<td align="left">数据和奇偶校验数据分布在所有磁盘上，以块为单位进行条带化存储，最多允许坏一块盘，通过奇偶校验信息恢复数据。<br>读写性能较好，读性能优于写性能，磁盘利用率较高。<br>最少需要三块盘。</td>
-<td align="center">$(n - 1) &#x2F; n$，例如，当有5块磁盘时，磁盘利用率为80%</td>
-</tr>
-<tr>
-<td align="center">RAID 6</td>
-<td align="left">在RAID 5的基础上增加了一种校验码，最多允许坏两块盘，数据安全性更高，但性能相对较低，写性能比RAID 5更差。<br>最少需要四块盘。</td>
-<td align="center">$(n - 2) &#x2F; n$，比如，当有6块磁盘时，磁盘利用率约为66.7%</td>
-</tr>
-<tr>
-<td align="center">RAID 10</td>
-<td align="left">先进行镜像，再进行条带化，结合了RAID 0的高读写性能和RAID 1的数据冗余优势，允许一半的磁盘（每组镜像中的一个）损坏而不丢失数据。<br>最少需要四块盘，盘数必须是偶数。</td>
-<td align="center">50%</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>网工</category>
-      </categories>
-      <tags>
-        <tag>网络工程师</tag>
-        <tag>考试知识点</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>About</title>
-    <url>https://kfufys.github.io/posts/74350de7.html</url>
-    <content><![CDATA[<head>
-    <meta charset="UTF-8">
-    <style>
-        strong {
-            color: #d9363f;
-        }
-    </style>
-</head>
-<body>
-    <img src="https://kfufys.github.io/posts/74350de7/1.png" alt="head-img" width="1200">
-    <br>
-    <p><b>Hello👋</b><br>我是&ensp;<a href="https://kfufys.github.io/posts/7477.html"><strong>窦长友</strong></a>，一名摄影爱好者，编程小渣渣~~</p>
-    <p>目前就读于&ensp;<a href="https://www.kfu.edu.cn"><strong>开封大学</strong></a>....</p>
-    <h3>我的爱好</h3>
-        <p>热衷于研究所有与计算机相关的事物，包括：</p>
-        <ul>
-            <li><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。</li>
-            <li><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。</li>
-            <li><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</li>
-            <li><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</li>
-        </ul>
-        <h3>我的白日梦</h3>
-        <p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
-        <p>祝大家在我的小站玩的高兴！😃</p>
-</body>]]></content>
-  </entry>
-  <entry>
     <title>SpringBoot 常用的 50 个注解</title>
     <url>https://kfufys.github.io/posts/4233e670.html</url>
     <content><![CDATA[<img src="https://kfufys.github.io/posts/4233e670/1.png" alt="SpringBoot" width="1200">
@@ -2982,6 +2957,35 @@
         <tag>Java</tag>
         <tag>SpringBoot</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>About</title>
+    <url>https://kfufys.github.io/posts/74350de7.html</url>
+    <content><![CDATA[<head>
+    <meta charset="UTF-8">
+    <style>
+        strong {
+            color: #d9363f;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://kfufys.github.io/posts/74350de7/1.png" alt="head-img" width="1200">
+    <br>
+    <p><b>Hello👋</b><br>我是&ensp;<a href="https://kfufys.github.io/posts/7477.html"><strong>窦长友</strong></a>，一名摄影爱好者，编程小渣渣~~</p>
+    <p>目前就读于&ensp;<a href="https://www.kfu.edu.cn"><strong>开封大学</strong></a>....</p>
+    <h3>我的爱好</h3>
+        <p>热衷于研究所有与计算机相关的事物，包括：</p>
+        <ul>
+            <li><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。</li>
+            <li><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。</li>
+            <li><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</li>
+            <li><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</li>
+        </ul>
+        <h3>我的白日梦</h3>
+        <p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
+        <p>祝大家在我的小站玩的高兴！😃</p>
+</body>]]></content>
   </entry>
   <entry>
     <title>站点更新日志</title>
