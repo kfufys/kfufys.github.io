@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+
+
+<meta name="title" content="Smart Space">
+<meta name="description" content="Smart Space Blog 由窦长友创建，专注于分享计算机专业相关知识，助力计算机爱好者学习与提升。">
+<meta name="keywords" content="窦长友，GitHub Pages，Hexo，计算机专业知识分享，静态博客搭建">
+<meta name="author" content="Dou ChangYou">
+<meta name="generator" content="Hexo">
+<meta name="language" content="zh-CN">
+<meta name="copyright" content="kfufys.github.io">
+<meta name="designer" content="峰云小组">
+<meta name="publisher" content="峰云小组">
+<meta name="robots" content="All">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://kfufys.github.io/images/favicon.svg">
+
+<link rel="stylesheet" href="https://kfufys.github.io/css/main.css">
+
+<link rel="stylesheet" href="fonts.useso.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"kfufys.github.io","root":"https://kfufys.github.io/","images":"https://kfufys.github.io/images","scheme":"Gemini","darkmode":"dark","version":"8.21.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"hljswrap":true,"copycode":{"enable":"enable","show_result":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":{"valine":{"text":"Valine","order":-1,"enable":true,"appid":"JFZFEC09hmHKtpi6Q2DORLum-gzGzoHsz","appkey":"KkiKFtcuCjN1RhCqqZZdzYIL"}}},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"https://kfufys.github.io/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://kfufys.github.io/js/config.js"></script>
+
+    <meta name="description" content="npm&#x2F;pnpm&#x2F;yarn 常用命令横向对比，相同功能命令集中对比">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node包管理器命令速查手册">
+<meta property="og:url" content="https://kfufys.github.io/posts/f4908e69.html">
+<meta property="og:site_name" content="Smart Space">
+<meta property="og:description" content="npm&#x2F;pnpm&#x2F;yarn 常用命令横向对比，相同功能命令集中对比">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kfufys.github.io/posts/f4908e69/1.jpg">
+<meta property="article:published_time" content="2025-03-09T09:55:36.000Z">
+<meta property="article:modified_time" content="2025-03-09T09:55:36.000Z">
+<meta property="article:author" content="Dou ChangYou">
+<meta property="article:tag" content="Node.js">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kfufys.github.io/posts/f4908e69/1.jpg">
+
+
+<link rel="canonical" href="https://kfufys.github.io/posts/f4908e69.html">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://kfufys.github.io/posts/f4908e69.html","path":"posts/f4908e69.html","title":"Node包管理器命令速查手册"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Node包管理器命令速查手册 | Smart Space</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="https://kfufys.github.io/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="https://kfufys.github.io/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Smart Space</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="https://kfufys.github.io/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="https://kfufys.github.io/posts/74350de7.html" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="https://kfufys.github.io/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="https://kfufys.github.io/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-sitelogs"><a href="https://kfufys.github.io/posts/7178.html" rel="section"><i class="fa fa-solid fa-book fa-fw"></i>日志</a></li><li class="menu-item menu-item-rss"><a href="https://kfufys.github.io/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%9A%80-%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-text">🚀 项目初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%9B%A0%EF%B8%8F-%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="nav-text">🛠️ 安装依赖</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%94%9F%E4%BA%A7%E4%BE%9D%E8%B5%96"><span class="nav-text">安装生产依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%BC%80%E5%8F%91%E4%BE%9D%E8%B5%96"><span class="nav-text">安装开发依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85"><span class="nav-text">全局安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%85%A8%E9%83%A8%E4%BE%9D%E8%B5%96"><span class="nav-text">安装全部依赖</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%84-%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86"><span class="nav-text">🔄 依赖管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E4%BE%9D%E8%B5%96"><span class="nav-text">更新依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E4%BE%9D%E8%B5%96"><span class="nav-text">删除依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E8%BF%87%E6%97%B6%E4%BE%9D%E8%B5%96"><span class="nav-text">查看过时依赖</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8F%83-%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC"><span class="nav-text">🏃 运行脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC"><span class="nav-text">执行自定义脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E6%B5%8B%E8%AF%95"><span class="nav-text">执行测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%A6-%E4%BE%9D%E8%B5%96%E9%94%81%E5%AE%9A"><span class="nav-text">📦 依赖锁定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E9%94%81%E5%AE%9A%E6%96%87%E4%BB%B6"><span class="nav-text">生成锁定文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8C%8D-%E5%85%A8%E5%B1%80%E7%AE%A1%E7%90%86"><span class="nav-text">🌍 全局管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E5%87%BA%E5%85%A8%E5%B1%80%E5%8C%85"><span class="nav-text">列出全局包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%9A%A8-%E5%AE%89%E5%85%A8%E5%AE%A1%E8%AE%A1"><span class="nav-text">🚨 安全审计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%9F%A5"><span class="nav-text">漏洞检查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%A7%B9-%E7%BC%93%E5%AD%98%E6%B8%85%E7%90%86"><span class="nav-text">🧹 缓存清理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%85%E7%90%86%E7%BC%93%E5%AD%98"><span class="nav-text">清理缓存</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%9A-%E5%85%B6%E4%BB%96%E5%AE%9E%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-text">📚 其他实用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%8C%85%E4%BF%A1%E6%81%AF"><span class="nav-text">查看包信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A7%E8%A1%8Cnpx%E7%AD%89%E6%95%88%E6%93%8D%E4%BD%9C"><span class="nav-text">执行npx等效操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E5%BF%AB%E6%8D%B7%E6%93%8D%E4%BD%9C"><span class="nav-text">版本快捷操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8C%9F-%E5%B7%A5%E4%BD%9C%E5%8C%BA%E7%AE%A1%E7%90%86-Monorepo"><span class="nav-text">🌟 工作区管理 (Monorepo)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96-%E7%AE%A1%E7%90%86%E5%B7%A5%E4%BD%9C%E5%8C%BA"><span class="nav-text">初始化&#x2F;管理工作区</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8C%B3-%E4%BE%9D%E8%B5%96%E6%A0%91%E5%88%86%E6%9E%90"><span class="nav-text">🌳 依赖树分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E9%A1%B9%E7%9B%AE%E4%BE%9D%E8%B5%96%E7%BB%93%E6%9E%84"><span class="nav-text">查看项目依赖结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%A7%BC-%E6%B7%B1%E5%BA%A6%E6%B8%85%E7%90%86"><span class="nav-text">🧼 深度清理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%85%E9%99%A4%E5%B9%B6%E9%87%8D%E7%BD%AE%E4%BE%9D%E8%B5%96"><span class="nav-text">清除并重置依赖</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%8D-%E7%B2%BE%E7%A1%AE%E6%A3%80%E6%9F%A5"><span class="nav-text">🔍 精确检查</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81%E4%BE%9D%E8%B5%96%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-text">验证依赖完整性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A7-%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86"><span class="nav-text">🔧 配置管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-text">修改镜像源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E9%85%8D%E7%BD%AE"><span class="nav-text">查看配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9A%A1%EF%B8%8F-%E9%AB%98%E6%95%88%E6%93%8D%E4%BD%9C"><span class="nav-text">⚡️ 高效操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B6%E8%A1%8C%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4"><span class="nav-text">并行执行命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A4%E4%BA%92%E5%BC%8F%E6%9B%B4%E6%96%B0"><span class="nav-text">交互式更新</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%9C-%E8%AE%B8%E5%8F%AF%E8%AF%81%E6%A3%80%E6%9F%A5"><span class="nav-text">📜 许可证检查</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E4%BE%9D%E8%B5%96%E8%AE%B8%E5%8F%AF"><span class="nav-text">查看依赖许可</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8F%97%EF%B8%8F-%E6%9E%84%E5%BB%BA%E4%B8%8E%E5%8F%91%E5%B8%83"><span class="nav-text">🏗️ 构建与发布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="nav-text">构建项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E5%BB%BA%E5%90%8E%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88"><span class="nav-text">构建后本地预览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E5%B8%83%E5%88%B0-npm-%E4%BB%93%E5%BA%93"><span class="nav-text">发布到 npm 仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%A7%AA-%E6%9E%84%E5%BB%BA%E9%AB%98%E7%BA%A7%E6%93%8D%E4%BD%9C"><span class="nav-text">🧪 构建高级操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%A6%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E6%9E%84%E5%BB%BA"><span class="nav-text">带环境变量的构建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E5%BB%BA%E7%BC%93%E5%AD%98%E6%B8%85%E7%90%86"><span class="nav-text">构建缓存清理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%9A%A2-%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B"><span class="nav-text">🚢 自动化发布流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E5%8F%B7-%E6%9E%84%E5%BB%BA-%E5%8F%91%E5%B8%83%E4%B8%80%E9%94%AE%E6%93%8D%E4%BD%9C"><span class="nav-text">版本号+构建+发布一键操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E5%B8%83%E5%80%99%E9%80%89%E7%89%88%E6%9C%AC"><span class="nav-text">发布候选版本</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Dou ChangYou"
+      src="https://kfufys.github.io/images/favicon.svg">
+  <p class="site-author-name" itemprop="name">Dou ChangYou</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="https://kfufys.github.io/archives/">
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">归档</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="https://kfufys.github.io/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="https://kfufys.github.io/tags/">
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RjeXlk" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dcyyd"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmRjeXlkX2tjdWdAeWVhaC5uZXQ=" title="E-Mail → mailto:dcyyd_kcug@yeah.net"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+  </div>
+<div style="">
+	<canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+	(function() {
+
+		var digit = [
+			[
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 1, 1, 0, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 0, 1, 1, 0],
+				[0, 0, 1, 1, 1, 0, 0]
+			], //0
+			[
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 1, 1, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[1, 1, 1, 1, 1, 1, 1]
+			], //1
+			[
+				[0, 1, 1, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 1, 1, 0, 0, 0, 0],
+				[1, 1, 0, 0, 0, 0, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 1, 1, 1, 1, 1]
+			], //2
+			[
+				[1, 1, 1, 1, 1, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0]
+			], //3
+			[
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 1, 0],
+				[0, 0, 1, 1, 1, 1, 0],
+				[0, 1, 1, 0, 1, 1, 0],
+				[1, 1, 0, 0, 1, 1, 0],
+				[1, 1, 1, 1, 1, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 1, 1]
+			], //4
+			[
+				[1, 1, 1, 1, 1, 1, 1],
+				[1, 1, 0, 0, 0, 0, 0],
+				[1, 1, 0, 0, 0, 0, 0],
+				[1, 1, 1, 1, 1, 1, 0],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0]
+			], //5
+			[
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 1, 1, 0, 0, 0, 0],
+				[1, 1, 0, 0, 0, 0, 0],
+				[1, 1, 0, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0]
+			], //6
+			[
+				[1, 1, 1, 1, 1, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0],
+				[0, 0, 1, 1, 0, 0, 0]
+			], //7
+			[
+				[0, 1, 1, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 1, 1, 0]
+			], //8
+			[
+				[0, 1, 1, 1, 1, 1, 0],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[1, 1, 0, 0, 0, 1, 1],
+				[0, 1, 1, 1, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 0, 1, 1],
+				[0, 0, 0, 0, 1, 1, 0],
+				[0, 0, 0, 1, 1, 0, 0],
+				[0, 1, 1, 0, 0, 0, 0]
+			], //9
+			[
+				[0, 0, 0, 0, 0, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 0, 0, 0, 0, 0],
+				[0, 0, 0, 0, 0, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 1, 1, 1, 0, 0],
+				[0, 0, 0, 0, 0, 0, 0]
+			] //:
+		];
+
+		var canvas = document.getElementById('canvas');
+
+		if (canvas.getContext) {
+			var cxt = canvas.getContext('2d');
+			//声明canvas的宽高
+			var H = 100,
+				W = 700;
+			canvas.height = H;
+			canvas.width = W;
+			cxt.fillStyle = '#f00';
+			cxt.fillRect(10, 10, 50, 50);
+
+			//存储时间数据
+			var data = [];
+			//存储运动的小球
+			var balls = [];
+			//设置粒子半径
+			var R = canvas.height / 20 - 1;
+			(function() {
+				var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+				//存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+				data.push(temp[1], temp[2], 10, temp[3], temp[4], 10, temp[5], temp[6]);
+			})();
+
+			/*生成点阵数字*/
+			function renderDigit(index, num) {
+				for (var i = 0; i < digit[num].length; i++) {
+					for (var j = 0; j < digit[num][i].length; j++) {
+						if (digit[num][i][j] == 1) {
+							cxt.beginPath();
+							cxt.arc(14 * (R + 2) * index + j * 2 * (R + 1) + (R + 1), i * 2 * (R + 1) + (R + 1), R, 0,
+								2 * Math.PI);
+							cxt.closePath();
+							cxt.fill();
+						}
+					}
+				}
+			}
+
+			/*更新时钟*/
+			function updateDigitTime() {
+				var changeNumArray = [];
+				var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+				var NewData = [];
+				NewData.push(temp[1], temp[2], 10, temp[3], temp[4], 10, temp[5], temp[6]);
+				for (var i = data.length - 1; i >= 0; i--) {
+					//时间发生变化
+					if (NewData[i] !== data[i]) {
+						//将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+						changeNumArray.push(i + '_' + (Number(data[i]) + 1) % 10);
+					}
+				}
+				//增加小球
+				for (var i = 0; i < changeNumArray.length; i++) {
+					addBalls.apply(this, changeNumArray[i].split('_'));
+				}
+				data = NewData.concat();
+			}
+
+			/*更新小球状态*/
+			function updateBalls() {
+				for (var i = 0; i < balls.length; i++) {
+					balls[i].stepY += balls[i].disY;
+					balls[i].x += balls[i].stepX;
+					balls[i].y += balls[i].stepY;
+					if (balls[i].x > W + R || balls[i].y > H + R) {
+						balls.splice(i, 1);
+						i--;
+					}
+				}
+			}
+
+			/*增加要运动的小球*/
+			function addBalls(index, num) {
+				var numArray = [1, 2, 3];
+				var colorArray = ["#3BE", "#09C", "#A6C", "#93C", "#9C0", "#690", "#FB3", "#F80", "#F44", "#C00"];
+				for (var i = 0; i < digit[num].length; i++) {
+					for (var j = 0; j < digit[num][i].length; j++) {
+						if (digit[num][i][j] == 1) {
+							var ball = {
+								x: 14 * (R + 2) * index + j * 2 * (R + 1) + (R + 1),
+								y: i * 2 * (R + 1) + (R + 1),
+								stepX: Math.floor(Math.random() * 4 - 2),
+								stepY: -2 * numArray[Math.floor(Math.random() * numArray.length)],
+								color: colorArray[Math.floor(Math.random() * colorArray.length)],
+								disY: 1
+							};
+							balls.push(ball);
+						}
+					}
+				}
+			}
+
+			/*渲染*/
+			function render() {
+				//重置画布宽度，达到清空画布的效果
+				canvas.height = 100;
+				//渲染时钟
+				for (var i = 0; i < data.length; i++) {
+					renderDigit(i, data[i]);
+				}
+				//渲染小球
+				for (var i = 0; i < balls.length; i++) {
+					cxt.beginPath();
+					cxt.arc(balls[i].x, balls[i].y, R, 0, 2 * Math.PI);
+					cxt.fillStyle = balls[i].color;
+					cxt.closePath();
+					cxt.fill();
+				}
+			}
+
+			clearInterval(oTimer);
+			var oTimer = setInterval(function() {
+				//更新时钟
+				updateDigitTime();
+				//更新小球状态
+				updateBalls();
+				//渲染
+				render();
+			}, 50);
+		}
+
+	})();
+</script>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          我的作品
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cDovL3VrLmZycC5vbmU6MTIxMjE=" title="http:&#x2F;&#x2F;uk.frp.one:12121">峰云网盘</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9rZnVmeXMubm90aW9uLnNpdGUvUGVha0Nsb3VkLVJlc291cmNlLUxpYnJhcnktMTQ5NmVkMmMzMzdiODA2NThiNjJmZjc3MzhjZjNlMjA=" title="https:&#x2F;&#x2F;kfufys.notion.site&#x2F;PeakCloud-Resource-Library-1496ed2c337b80658b62ff7738cf3e20">峰云资源库</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9meXMubXlzeGwuY24=" title="https:&#x2F;&#x2F;fys.mysxl.cn">我的摄影作品</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9kY3l5ZC5naXRodWIuaW8=" title="https:&#x2F;&#x2F;dcyyd.github.io">SkillHub·DouCY</span>
+            </li>
+        </ul>
+      </div>
+    </div>
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://kfufys.github.io/posts/f4908e69.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://kfufys.github.io/images/favicon.svg">
+      <meta itemprop="name" content="Dou ChangYou">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smart Space">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Node包管理器命令速查手册 | Smart Space">
+      <meta itemprop="description" content="npm/pnpm/yarn 常用命令横向对比，相同功能命令集中对比">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Node包管理器命令速查手册
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-03-09 17:55:36" itemprop="dateCreated datePublished" datetime="2025-03-09T17:55:36+08:00">2025-03-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="https://kfufys.github.io/categories/Node-js/" itemprop="url" rel="index"><span itemprop="name">Node.js</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">npm/pnpm/yarn 常用命令横向对比，相同功能命令集中对比</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><img src="https://kfufys.github.io/posts/f4908e69/1.jpg" alt="node.js">
+
+<h2 id="🚀-项目初始化"><a href="#🚀-项目初始化" class="headerlink" title="🚀 项目初始化"></a>🚀 项目初始化</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 初始化项目</span></span><br><span class="line">npm init [-y]</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 初始化项目</span></span><br><span class="line">pnpm init [-y]</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 初始化项目（v2+需要手动创建）</span></span><br><span class="line">yarn init [-y]</span><br></pre></td></tr></table></figure>
+
+<h2 id="🛠️-安装依赖"><a href="#🛠️-安装依赖" class="headerlink" title="🛠️ 安装依赖"></a>🛠️ 安装依赖</h2><h3 id="安装生产依赖"><a href="#安装生产依赖" class="headerlink" title="安装生产依赖"></a>安装生产依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 安装并写入 dependencies</span></span><br><span class="line">npm install &lt;package&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 安装并写入 dependencies</span></span><br><span class="line">pnpm add &lt;package&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 安装并写入 dependencies</span></span><br><span class="line">yarn add &lt;package&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装开发依赖"><a href="#安装开发依赖" class="headerlink" title="安装开发依赖"></a>安装开发依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 安装并写入 devDependencies</span></span><br><span class="line">npm install &lt;package&gt; -D</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 安装并写入 devDependencies</span></span><br><span class="line">pnpm add &lt;package&gt; -D</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 安装并写入 devDependencies</span></span><br><span class="line">yarn add &lt;package&gt; -D</span><br></pre></td></tr></table></figure>
+
+<h3 id="全局安装"><a href="#全局安装" class="headerlink" title="全局安装"></a>全局安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 全局安装</span></span><br><span class="line">npm install &lt;package&gt; -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 全局安装</span></span><br><span class="line">pnpm add &lt;package&gt; -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 全局安装</span></span><br><span class="line">yarn global add &lt;package&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装全部依赖"><a href="#安装全部依赖" class="headerlink" title="安装全部依赖"></a>安装全部依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 根据 package.json 安装</span></span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 根据 package.json 安装</span></span><br><span class="line">pnpm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 根据 package.json 安装</span></span><br><span class="line">yarn install</span><br></pre></td></tr></table></figure>
+
+<h2 id="🔄-依赖管理"><a href="#🔄-依赖管理" class="headerlink" title="🔄 依赖管理"></a>🔄 依赖管理</h2><h3 id="更新依赖"><a href="#更新依赖" class="headerlink" title="更新依赖"></a>更新依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 更新指定包</span></span><br><span class="line">npm update &lt;package&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 更新指定包</span></span><br><span class="line">pnpm update &lt;package&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 更新指定包</span></span><br><span class="line">yarn up &lt;package&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除依赖"><a href="#删除依赖" class="headerlink" title="删除依赖"></a>删除依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 移除指定包</span></span><br><span class="line">npm uninstall &lt;package&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 移除指定包</span></span><br><span class="line">pnpm remove &lt;package&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 移除指定包</span></span><br><span class="line">yarn remove &lt;package&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看过时依赖"><a href="#查看过时依赖" class="headerlink" title="查看过时依赖"></a>查看过时依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 检查过时包</span></span><br><span class="line">npm outdated</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 检查过时包</span></span><br><span class="line">pnpm outdated</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 检查过时包</span></span><br><span class="line">yarn outdated</span><br></pre></td></tr></table></figure>
+
+<h2 id="🏃-运行脚本"><a href="#🏃-运行脚本" class="headerlink" title="🏃 运行脚本"></a>🏃 运行脚本</h2><h3 id="执行自定义脚本"><a href="#执行自定义脚本" class="headerlink" title="执行自定义脚本"></a>执行自定义脚本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 运行脚本</span></span><br><span class="line">npm run &lt;script&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 运行脚本</span></span><br><span class="line">pnpm run &lt;script&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 运行脚本</span></span><br><span class="line">yarn run &lt;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="执行测试"><a href="#执行测试" class="headerlink" title="执行测试"></a>执行测试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 运行 test 脚本</span></span><br><span class="line">npm <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 运行 test 脚本</span></span><br><span class="line">pnpm <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 运行 test 脚本</span></span><br><span class="line">yarn <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="📦-依赖锁定"><a href="#📦-依赖锁定" class="headerlink" title="📦 依赖锁定"></a>📦 依赖锁定</h2><h3 id="生成锁定文件"><a href="#生成锁定文件" class="headerlink" title="生成锁定文件"></a>生成锁定文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 生成 package-lock.json</span></span><br><span class="line">npm install --package-lock</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 生成 pnpm-lock.yaml（自动生成）</span></span><br><span class="line">pnpm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 生成 yarn.lock（自动生成）</span></span><br><span class="line">yarn install</span><br></pre></td></tr></table></figure>
+
+<h2 id="🌍-全局管理"><a href="#🌍-全局管理" class="headerlink" title="🌍 全局管理"></a>🌍 全局管理</h2><h3 id="列出全局包"><a href="#列出全局包" class="headerlink" title="列出全局包"></a>列出全局包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 查看全局安装的包</span></span><br><span class="line">npm list -g --depth=0</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 查看全局安装的包</span></span><br><span class="line">pnpm list -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 查看全局安装的包</span></span><br><span class="line">yarn global list</span><br></pre></td></tr></table></figure>
+
+<h2 id="🚨-安全审计"><a href="#🚨-安全审计" class="headerlink" title="🚨 安全审计"></a>🚨 安全审计</h2><h3 id="漏洞检查"><a href="#漏洞检查" class="headerlink" title="漏洞检查"></a>漏洞检查</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 安全审计</span></span><br><span class="line">npm audit</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 安全审计</span></span><br><span class="line">pnpm audit</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 安全审计（需要插件）</span></span><br><span class="line">yarn audit</span><br></pre></td></tr></table></figure>
+
+<h2 id="🧹-缓存清理"><a href="#🧹-缓存清理" class="headerlink" title="🧹 缓存清理"></a>🧹 缓存清理</h2><h3 id="清理缓存"><a href="#清理缓存" class="headerlink" title="清理缓存"></a>清理缓存</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 清理缓存</span></span><br><span class="line">npm cache clean --force</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 清理缓存</span></span><br><span class="line">pnpm store prune</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 清理缓存</span></span><br><span class="line">yarn cache clean</span><br></pre></td></tr></table></figure>
+
+<h2 id="📚-其他实用命令"><a href="#📚-其他实用命令" class="headerlink" title="📚 其他实用命令"></a>📚 其他实用命令</h2><h3 id="查看包信息"><a href="#查看包信息" class="headerlink" title="查看包信息"></a>查看包信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 查看包信息</span></span><br><span class="line">npm info &lt;package&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 查看包信息</span></span><br><span class="line">pnpm info &lt;package&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 查看包信息</span></span><br><span class="line">yarn info &lt;package&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="执行npx等效操作"><a href="#执行npx等效操作" class="headerlink" title="执行npx等效操作"></a>执行npx等效操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 执行临时包命令</span></span><br><span class="line">npx &lt;<span class="built_in">command</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 执行临时包命令</span></span><br><span class="line">pnpm dlx &lt;<span class="built_in">command</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 执行临时包命令</span></span><br><span class="line">yarn dlx &lt;<span class="built_in">command</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="版本快捷操作"><a href="#版本快捷操作" class="headerlink" title="版本快捷操作"></a>版本快捷操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 版本自增</span></span><br><span class="line">npm version [major|minor|patch]</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 版本自增</span></span><br><span class="line">pnpm version [major|minor|patch]</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 版本自增</span></span><br><span class="line">yarn version [major|minor|patch]</span><br></pre></td></tr></table></figure>
+
+<h2 id="🌟-工作区管理-Monorepo"><a href="#🌟-工作区管理-Monorepo" class="headerlink" title="🌟 工作区管理 (Monorepo)"></a>🌟 工作区管理 (Monorepo)</h2><h3 id="初始化-管理工作区"><a href="#初始化-管理工作区" class="headerlink" title="初始化&#x2F;管理工作区"></a>初始化&#x2F;管理工作区</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 创建工作区</span></span><br><span class="line">npm init -w ./packages/&lt;name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 配置工作区（需创建 pnpm-workspace.yaml）</span></span><br><span class="line">pnpm add -w &lt;package&gt;  <span class="comment"># 全局安装到根目录</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 管理工作区（需配置 workspaces）</span></span><br><span class="line">yarn workspace &lt;workspace_name&gt; add &lt;package&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="🌳-依赖树分析"><a href="#🌳-依赖树分析" class="headerlink" title="🌳 依赖树分析"></a>🌳 依赖树分析</h2><h3 id="查看项目依赖结构"><a href="#查看项目依赖结构" class="headerlink" title="查看项目依赖结构"></a>查看项目依赖结构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 列出嵌套依赖树</span></span><br><span class="line">npm <span class="built_in">ls</span> [--depth=N]</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 扁平化依赖展示</span></span><br><span class="line">pnpm list --depth=N</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 可视化依赖树</span></span><br><span class="line">yarn list --pattern &lt;package&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="🧼-深度清理"><a href="#🧼-深度清理" class="headerlink" title="🧼 深度清理"></a>🧼 深度清理</h2><h3 id="清除并重置依赖"><a href="#清除并重置依赖" class="headerlink" title="清除并重置依赖"></a>清除并重置依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 删除 node_modules 并重新安装</span></span><br><span class="line"><span class="built_in">rm</span> -rf node_modules &amp;&amp; npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 强制重新构建依赖</span></span><br><span class="line">pnpm install --force</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 清除缓存并重装</span></span><br><span class="line">yarn cache clean &amp;&amp; yarn install</span><br></pre></td></tr></table></figure>
+
+<h2 id="🔍-精确检查"><a href="#🔍-精确检查" class="headerlink" title="🔍 精确检查"></a>🔍 精确检查</h2><h3 id="验证依赖完整性"><a href="#验证依赖完整性" class="headerlink" title="验证依赖完整性"></a>验证依赖完整性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 校验依赖与 lock 文件一致性</span></span><br><span class="line">npm ci         <span class="comment"># 严格模式安装</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 校验存储完整性</span></span><br><span class="line">pnpm store status</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 验证依赖结构</span></span><br><span class="line">yarn check --integrity</span><br></pre></td></tr></table></figure>
+
+<h2 id="🔧-配置管理"><a href="#🔧-配置管理" class="headerlink" title="🔧 配置管理"></a>🔧 配置管理</h2><h3 id="修改镜像源"><a href="#修改镜像源" class="headerlink" title="修改镜像源"></a>修改镜像源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 切换淘宝镜像</span></span><br><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 切换镜像源</span></span><br><span class="line">pnpm config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 切换镜像源</span></span><br><span class="line">yarn config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看配置"><a href="#查看配置" class="headerlink" title="查看配置"></a>查看配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 列出所有配置</span></span><br><span class="line">npm config list</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 显示当前配置</span></span><br><span class="line">pnpm config list</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 输出配置信息</span></span><br><span class="line">yarn config list</span><br></pre></td></tr></table></figure>
+
+<h2 id="⚡️-高效操作"><a href="#⚡️-高效操作" class="headerlink" title="⚡️ 高效操作"></a>⚡️ 高效操作</h2><h3 id="并行执行命令"><a href="#并行执行命令" class="headerlink" title="并行执行命令"></a>并行执行命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 需安装第三方工具</span></span><br><span class="line">npx npm-run-all --parallel task1 task2</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 原生支持并行</span></span><br><span class="line">pnpm -r run build  <span class="comment"># 递归执行所有子项目 build</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 使用 workspaces 指令</span></span><br><span class="line">yarn workspaces foreach run build</span><br></pre></td></tr></table></figure>
+
+<h3 id="交互式更新"><a href="#交互式更新" class="headerlink" title="交互式更新"></a>交互式更新</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm |  guided 更新</span></span><br><span class="line">npm update --interactive</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 可视化选择更新</span></span><br><span class="line">pnpm update -i</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 需使用插件</span></span><br><span class="line">yarn upgrade-interactive</span><br></pre></td></tr></table></figure>
+
+<h2 id="📜-许可证检查"><a href="#📜-许可证检查" class="headerlink" title="📜 许可证检查"></a>📜 许可证检查</h2><h3 id="查看依赖许可"><a href="#查看依赖许可" class="headerlink" title="查看依赖许可"></a>查看依赖许可</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 生成许可证报告</span></span><br><span class="line">npm <span class="built_in">ls</span> --json | npx license-checker</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 内置许可证检查</span></span><br><span class="line">pnpm licenses list</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 使用插件支持</span></span><br><span class="line">yarn plugin import workspace-tools &amp;&amp; yarn licenses list</span><br></pre></td></tr></table></figure>
+
+<h2 id="🏗️-构建与发布"><a href="#🏗️-构建与发布" class="headerlink" title="🏗️ 构建与发布"></a>🏗️ 构建与发布</h2><h3 id="构建项目"><a href="#构建项目" class="headerlink" title="构建项目"></a>构建项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 执行 build 脚本（通常配置在 package.json）</span></span><br><span class="line">npm run build</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 执行 build 脚本（支持递归构建工作区）</span></span><br><span class="line">pnpm run build</span><br><span class="line"><span class="comment"># 或工作区批量构建</span></span><br><span class="line">pnpm -r run build</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 执行 build 脚本（支持工作区构建）</span></span><br><span class="line">yarn build</span><br><span class="line"><span class="comment"># 或工作区批量构建</span></span><br><span class="line">yarn workspaces foreach run build</span><br></pre></td></tr></table></figure>
+
+<h3 id="构建后本地预览"><a href="#构建后本地预览" class="headerlink" title="构建后本地预览"></a>构建后本地预览</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 使用 serve 等工具预览</span></span><br><span class="line">npx serve ./dist</span><br><span class="line"><span class="comment"># 或执行 preview 脚本（需提前配置）</span></span><br><span class="line">npm run preview</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 快速启动预览服务</span></span><br><span class="line">pnpm dlx serve ./dist</span><br><span class="line"><span class="comment"># 或工作区预览（如 Vite 项目）</span></span><br><span class="line">pnpm run preview</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 启动静态服务器</span></span><br><span class="line">yarn dlx serve ./dist</span><br><span class="line"><span class="comment"># 或执行预览脚本</span></span><br><span class="line">yarn preview</span><br></pre></td></tr></table></figure>
+
+<h3 id="发布到-npm-仓库"><a href="#发布到-npm-仓库" class="headerlink" title="发布到 npm 仓库"></a>发布到 npm 仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 发布包（需先登录）</span></span><br><span class="line">npm login          <span class="comment"># 首次使用需登录</span></span><br><span class="line">npm publish        <span class="comment"># 发布公开包</span></span><br><span class="line">npm publish --access public  <span class="comment"># 发布作用域公开包</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 发布包（需配置 registry）</span></span><br><span class="line">pnpm publish</span><br><span class="line"><span class="comment"># 工作区指定包发布</span></span><br><span class="line">pnpm -r publish --filter &lt;package_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 发布包（需配置 publishConfig）</span></span><br><span class="line">yarn login         <span class="comment"># 登录认证</span></span><br><span class="line">yarn publish       <span class="comment"># 交互式发布</span></span><br><span class="line">yarn publish --non-interactive  <span class="comment"># 静默发布</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="🧪-构建高级操作"><a href="#🧪-构建高级操作" class="headerlink" title="🧪 构建高级操作"></a>🧪 构建高级操作</h2><h3 id="带环境变量的构建"><a href="#带环境变量的构建" class="headerlink" title="带环境变量的构建"></a>带环境变量的构建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 注入环境变量</span></span><br><span class="line">NODE_ENV=production npm run build</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 跨平台环境变量设置</span></span><br><span class="line">pnpm run build --mode production</span><br><span class="line"><span class="comment"># 或使用 dotenv 注入</span></span><br><span class="line">pnpm add -D dotenv &amp;&amp; pnpm run build</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 使用 env-cmd 工具</span></span><br><span class="line">yarn add -D env-cmd</span><br><span class="line">yarn env-cmd -f .env.prod yarn build</span><br></pre></td></tr></table></figure>
+
+<h3 id="构建缓存清理"><a href="#构建缓存清理" class="headerlink" title="构建缓存清理"></a>构建缓存清理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 清理构建产物</span></span><br><span class="line"><span class="built_in">rm</span> -rf ./dist &amp;&amp; npm run build</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 强制全新构建</span></span><br><span class="line">pnpm <span class="built_in">exec</span> rimraf ./dist &amp;&amp; pnpm run build</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 清除构建缓存</span></span><br><span class="line">yarn clean &amp;&amp; yarn build</span><br></pre></td></tr></table></figure>
+
+<h2 id="🚢-自动化发布流程"><a href="#🚢-自动化发布流程" class="headerlink" title="🚢 自动化发布流程"></a>🚢 自动化发布流程</h2><h3 id="版本号-构建-发布一键操作"><a href="#版本号-构建-发布一键操作" class="headerlink" title="版本号+构建+发布一键操作"></a>版本号+构建+发布一键操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 组合命令</span></span><br><span class="line">npm version patch &amp;&amp; npm run build &amp;&amp; npm publish</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 管道式操作</span></span><br><span class="line">pnpm version patch &amp;&amp; pnpm build &amp;&amp; pnpm publish</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 工作流命令</span></span><br><span class="line">yarn version --patch &amp;&amp; yarn build &amp;&amp; yarn publish</span><br></pre></td></tr></table></figure>
+
+<h3 id="发布候选版本"><a href="#发布候选版本" class="headerlink" title="发布候选版本"></a>发布候选版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm | 带 tag 发布</span></span><br><span class="line">npm publish --tag beta</span><br><span class="line"></span><br><span class="line"><span class="comment"># pnpm | 指定发布通道</span></span><br><span class="line">pnpm publish --tag next</span><br><span class="line"></span><br><span class="line"><span class="comment"># yarn | 标记预发布版本</span></span><br><span class="line">yarn publish --tag canary</span><br></pre></td></tr></table></figure>
+
+<p>🏷️ <em><strong>扩展技巧</strong></em>：使用 <code>npm pack</code> &#x2F; <code>pnpm pack</code> &#x2F; <code>yarn pack</code> 可生成.tgz发布包文件用于离线验证，再通过 <code>npm publish &lt;file.tgz&gt;</code> 发布</p>
+<p>💡 <em><strong>提示</strong></em>：不同包管理器在安装速度和磁盘空间占用上有差异：</p>
+<ul>
+<li>**<code>pnpm</code>**：使用硬链接机制更节省空间</li>
+<li>**<code>yarn</code>**：擅长依赖解析优化</li>
+<li>**<code>npm</code>**：则是 <code>Node.js</code> 官方内置工具</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Dou ChangYou
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://kfufys.github.io/posts/f4908e69.html" title="Node包管理器命令速查手册">https://kfufys.github.io/posts/f4908e69.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="https://kfufys.github.io/tags/Node-js/" rel="tag"><i class="fa fa-tag"></i> Node.js</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="https://kfufys.github.io/posts/4233e670.html" rel="prev" title="SpringBoot 常用的 50 个注解">
+                  <i class="fa fa-angle-left"></i> SpringBoot 常用的 50 个注解
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2024 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heartbeat"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Dou ChangYou</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">124k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:53</span>
+  </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("11/16/2024 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous"></script>
+<script src="https://kfufys.github.io/js/comments.js"></script><script src="https://kfufys.github.io/js/utils.js"></script><script src="https://kfufys.github.io/js/motion.js"></script><script src="https://kfufys.github.io/js/sidebar.js"></script><script src="https://kfufys.github.io/js/next-boot.js"></script><script src="https://kfufys.github.io/js/bookmark.js"></script><script src="https://kfufys.github.io/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://kfufys.github.io/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.min.js","integrity":"sha256-G8ouPAnw4zzMbnAenHnVz6h9XpKbNdOkrqTh7AadyHs="}}</script>
+  <script src="https://kfufys.github.io/js/third-party/tags/mermaid.js"></script>
+
+
+  <script src="https://kfufys.github.io/js/third-party/fancybox.js"></script>
+
+
+
+  
+
+
+
+
+<!-- 页面点击小红心 -->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>
