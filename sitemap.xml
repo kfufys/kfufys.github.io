@@ -247,6 +247,20 @@
   </url>
   
   <url>
+    <loc>https://kfufys.github.io/tags/Google/</loc>
+    <lastmod>2025-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/tags/Gemini/</loc>
+    <lastmod>2025-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://kfufys.github.io/tags/Java/</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -268,20 +282,6 @@
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/tags/Google/</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kfufys.github.io/tags/Gemini/</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kfufys.github.io/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E5%B8%88/</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -296,13 +296,6 @@
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/tags/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kfufys.github.io/tags/SpringBoot/</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -311,6 +304,13 @@
   
   <url>
     <loc>https://kfufys.github.io/tags/Node-js/</loc>
+    <lastmod>2025-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/tags/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -368,13 +368,6 @@
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</loc>
-    <lastmod>2025-03-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kfufys.github.io/categories/JavaScript/</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -389,14 +382,14 @@
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/categories/%E7%BD%91%E5%B7%A5/</loc>
+    <loc>https://kfufys.github.io/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/categories/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</loc>
+    <loc>https://kfufys.github.io/categories/%E7%BD%91%E5%B7%A5/</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -411,6 +404,13 @@
   
   <url>
     <loc>https://kfufys.github.io/categories/Node-js/</loc>
+    <lastmod>2025-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/categories/%E7%BD%91%E7%AB%99%E9%83%A8%E7%BD%B2/</loc>
     <lastmod>2025-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
