@@ -1,84 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Console 调试技巧</title>
-    <url>https://kfufys.github.io/posts/b66155b1.html</url>
-    <content><![CDATA[<img src="https://kfufys.github.io/posts/b66155b1/1.jpg" alt="head-img" width="1200">
-
-<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>说到 <code>console</code>，很多人的第一反应肯定是 <code>console.log</code>，它既简单又直接！然而，在处理复杂问题时，这种方式往往效率低下。本文分享 20 个 <code>console</code> 的调试小技巧，帮您更快速地找出并解决问题。</p>
-<h3 id="1-样式轰炸"><a href="#1-样式轰炸" class="headerlink" title="1. 样式轰炸"></a>1. 样式轰炸</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这段代码使用了 console.log 的样式功能，通过传入特定的 CSS 样式字符串，</span></span><br><span class="line"><span class="comment">// 可以为输出的文本添加自定义样式，达到醒目的效果，这里创建了一个带有渐变背景、</span></span><br><span class="line"><span class="comment">// 白色文字、圆角和内边距的“VIP调试模式”样式，以及一个后续的灰色文字样式用于显示版本号。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(</span><br><span class="line">  <span class="string">&#x27;%cVIP调试模式%c v2.0&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;background:linear-gradient(45deg,#ff6b6b,#4ecdc4);color:white;padding:4px 8px;border-radius:3px;&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;color:#666;margin-left:8px;&#x27;</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="2-动态模板"><a href="#2-动态模板" class="headerlink" title="2. 动态模板"></a>2. 动态模板</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义一个包含用户信息的对象，然后利用模板字符串结合当前时间，</span></span><br><span class="line"><span class="comment">// 在控制台输出一条包含用户名称、等级以及执行操作信息的日志，方便跟踪用户行为及操作时间。</span></span><br><span class="line"><span class="keyword">const</span> user = &#123; <span class="attr">name</span>: <span class="string">&#x27;Alice&#x27;</span>, <span class="attr">level</span>: <span class="string">&#x27;VIP&#x27;</span> &#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`[<span class="subst">$&#123;<span class="keyword">new</span> <span class="built_in">Date</span>().toISOString()&#125;</span>] <span class="subst">$&#123;user.name&#125;</span> (<span class="subst">$&#123;user.level&#125;</span>) 执行了支付操作`</span>);</span><br><span class="line"><span class="comment">// 输出示例：[2023-12-25T09:30:00Z] Alice (VIP) 执行了支付操作</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="3-树形结构解析"><a href="#3-树形结构解析" class="headerlink" title="3. 树形结构解析"></a>3. 树形结构解析</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 以一种结构化、易读的方式在控制台输出用户数据树，使用特定样式突出显示树的标题，</span></span><br><span class="line"><span class="comment">// 数据树包含用户 ID、个人资料（姓名、地址，地址又细分城市和区）以及订单列表等信息，方便查看数据层级关系。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c▸ 用户数据树&#x27;</span>, <span class="string">&#x27;color:#48bb78;font-weight:bold&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">id</span>: <span class="number">1001</span>,</span><br><span class="line">  <span class="attr">profile</span>: &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;Bob&#x27;</span>,</span><br><span class="line">    <span class="attr">address</span>: &#123;</span><br><span class="line">      <span class="attr">city</span>: <span class="string">&#x27;上海&#x27;</span>,</span><br><span class="line">      <span class="attr">district</span>: <span class="string">&#x27;浦东&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">orders</span>: [<span class="string">&#x27;#2023-1001&#x27;</span>, <span class="string">&#x27;#2023-1002&#x27;</span>]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="4-表格魔法升级"><a href="#4-表格魔法升级" class="headerlink" title="4. 表格魔法升级"></a>4. 表格魔法升级</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 对于加密货币数据数组，先对每个数据项进行处理，添加一个表示价格趋势的字段（根据 24 小时价格变化判断上升或下降），</span></span><br><span class="line"><span class="comment">// 然后使用 console.table 将处理后的数据以表格形式输出，使数据对比更加直观清晰。</span></span><br><span class="line"><span class="keyword">const</span> cryptoData = [</span><br><span class="line">  &#123; <span class="attr">coin</span>: <span class="string">&#x27;BTC&#x27;</span>, <span class="attr">price</span>: <span class="number">42000</span>, <span class="attr">change24h</span>: <span class="string">&#x27;+5.2%&#x27;</span>, <span class="attr">volatility</span>: <span class="string">&#x27;high&#x27;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">coin</span>: <span class="string">&#x27;ETH&#x27;</span>, <span class="attr">price</span>: <span class="number">2300</span>, <span class="attr">change24h</span>: <span class="string">&#x27;-1.8%&#x27;</span>, <span class="attr">volatility</span>: <span class="string">&#x27;medium&#x27;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">coin</span>: <span class="string">&#x27;SOL&#x27;</span>, <span class="attr">price</span>: <span class="number">98</span>, <span class="attr">change24h</span>: <span class="string">&#x27;+12.6%&#x27;</span>, <span class="attr">volatility</span>: <span class="string">&#x27;high&#x27;</span> &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">table</span>(cryptoData.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> (&#123;</span><br><span class="line">...item,</span><br><span class="line">  <span class="string">&#x27;价格趋势&#x27;</span>: item.<span class="property">change24h</span>.<span class="title function_">startsWith</span>(<span class="string">&#x27;+&#x27;</span>)? <span class="string">&#x27;↑&#x27;</span> : <span class="string">&#x27;↓&#x27;</span></span><br><span class="line">&#125;)));</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="5-生命周期标记"><a href="#5-生命周期标记" class="headerlink" title="5. 生命周期标记"></a>5. 生命周期标记</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用 console.groupCollapsed 和 console.groupEnd 来创建一个可折叠的分组，</span></span><br><span class="line"><span class="comment">// 用于标记 API 请求流程的不同阶段，如请求发起、响应接收、数据处理等，每个阶段用不同颜色突出显示关键信息，</span></span><br><span class="line"><span class="comment">// 方便在控制台快速了解整个请求生命周期的状态。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">groupCollapsed</span>(<span class="string">&#x27;%c🔄 API请求流程追踪&#x27;</span>, <span class="string">&#x27;color:#4299e1&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c▶️ 请求发起&#x27;</span>, <span class="string">&#x27;color:#48bb78&#x27;</span>, &#123; <span class="attr">url</span>: <span class="string">&#x27;/api/users&#x27;</span>, <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span> &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c⏳ 响应接收&#x27;</span>, <span class="string">&#x27;color:#ed8936&#x27;</span>, &#123; <span class="attr">status</span>: <span class="number">200</span>, <span class="attr">time</span>: <span class="string">&#x27;320ms&#x27;</span> &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c✅ 数据处理&#x27;</span>, <span class="string">&#x27;color:#48bb78&#x27;</span>, &#123; <span class="attr">processedItems</span>: <span class="number">15</span> &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">groupEnd</span>();</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="6-调用栈快照"><a href="#6-调用栈快照" class="headerlink" title="6. 调用栈快照"></a>6. 调用栈快照</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在函数内部使用 console.trace，当执行到这一行时，会输出完整的调用栈信息，</span></span><br><span class="line"><span class="comment">// 显示函数是如何被调用的，经过了哪些路径，对于排查函数调用逻辑和定位问题根源非常有用。</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">processOrder</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">trace</span>(<span class="string">&#x27;订单处理流程追踪&#x27;</span>);</span><br><span class="line">  <span class="comment">// 其他处理逻辑</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 输出完整的调用栈信息</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="7-内存监控"><a href="#7-内存监控" class="headerlink" title="7. 内存监控"></a>7. 内存监控</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 首先获取初始的 JavaScript 堆内存使用量，执行一些内存密集型操作后，</span></span><br><span class="line"><span class="comment">// 通过计算前后内存使用量的差值并转换为 KB 单位，输出内存使用量的变化情况，以便监控内存消耗是否合理。</span></span><br><span class="line"><span class="keyword">const</span> initialMemory = performance.<span class="property">memory</span>.<span class="property">usedJSHeapSize</span>;</span><br><span class="line"><span class="comment">// 执行内存密集型操作</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;内存使用量变化:&#x27;</span>, </span><br><span class="line">  (performance.<span class="property">memory</span>.<span class="property">usedJSHeapSize</span> - initialMemory) / <span class="number">1024</span> + <span class="string">&#x27; KB&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="8-复合性能测试"><a href="#8-复合性能测试" class="headerlink" title="8. 复合性能测试"></a>8. 复合性能测试</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用 console.time 和 console.timeEnd 来测量一段包含多个异步操作（如 Promise.all 中的多个异步任务）的复合操作的执行时间，</span></span><br><span class="line"><span class="comment">// 同时使用 console.timeLog 在操作的关键阶段记录时间点，方便了解各个阶段的耗时情况，精准定位性能瓶颈。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">time</span>(<span class="string">&#x27;复合操作&#x27;</span>);</span><br><span class="line"><span class="keyword">await</span> <span class="title class_">Promise</span>.<span class="title function_">all</span>([</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">timeLog</span>(<span class="string">&#x27;复合操作&#x27;</span>, <span class="string">&#x27;阶段1完成&#x27;</span>),</span><br><span class="line">  <span class="title function_">fetchData</span>(),</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">timeLog</span>(<span class="string">&#x27;复合操作&#x27;</span>, <span class="string">&#x27;阶段2完成&#x27;</span>),</span><br><span class="line">  <span class="title function_">processData</span>()</span><br><span class="line">]);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">timeEnd</span>(<span class="string">&#x27;复合操作&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="9-条件断言"><a href="#9-条件断言" class="headerlink" title="9. 条件断言"></a>9. 条件断言</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用 console.assert 进行条件断言，如果条件不满足（这里是用户年龄大于 18 岁），</span></span><br><span class="line"><span class="comment">// 则按照指定的红色醒目的样式输出错误信息，包含期望年龄和实际年龄，用于快速验证数据的合法性。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">assert</span>(</span><br><span class="line">  user.<span class="property">age</span> &gt; <span class="number">18</span>, </span><br><span class="line">  <span class="string">&#x27;%c年龄验证失败&#x27;</span>, </span><br><span class="line">  <span class="string">&#x27;color:red;font-weight:bold&#x27;</span>,</span><br><span class="line">  &#123; <span class="attr">requiredAge</span>: <span class="number">18</span>, <span class="attr">actualAge</span>: user.<span class="property">age</span> &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="10-环境感知日志"><a href="#10-环境感知日志" class="headerlink" title="10. 环境感知日志"></a>10. 环境感知日志</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 根据当前 Node.js 环境变量（NODE_ENV）来决定是否输出日志，</span></span><br><span class="line"><span class="comment">// 在开发环境下，将 console.log 绑定并正常输出日志，而在生产环境下，</span></span><br><span class="line"><span class="comment">// 提供一个空函数替代，实现自动静默，避免在生产环境输出不必要的调试信息。</span></span><br><span class="line"><span class="keyword">const</span> debug = &#123;</span><br><span class="line">  <span class="attr">log</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&#x27;development&#x27;</span> </span><br><span class="line">  ? <span class="variable language_">console</span>.<span class="property">log</span>.<span class="title function_">bind</span>(<span class="variable language_">console</span>) </span><br><span class="line">    : <span class="function">() =&gt;</span> &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">debug.<span class="title function_">log</span>(<span class="string">&#x27;开发环境专属日志&#x27;</span>); <span class="comment">// 生产环境自动静默</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="11-数据快照对比"><a href="#11-数据快照对比" class="headerlink" title="11. 数据快照对比"></a>11. 数据快照对比</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 先将状态数据序列化为字符串保存起来，在状态修改后，通过自定义的 diff 函数（假设已定义）对比修改前后的数据，</span></span><br><span class="line"><span class="comment">// 并在控制台输出状态变更差异，有助于跟踪数据的变化情况，排查因数据变更引发的问题。</span></span><br><span class="line"><span class="keyword">const</span> before = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(state);</span><br><span class="line"><span class="comment">// 状态修改操作</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;状态变更差异:&#x27;</span>, <span class="title function_">diff</span>(<span class="title class_">JSON</span>.<span class="title function_">parse</span>(before), state));</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="12-日志分类过滤"><a href="#12-日志分类过滤" class="headerlink" title="12. 日志分类过滤"></a>12. 日志分类过滤</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建一个日志记录器对象，包含不同分类的日志方法，如网络、安全、支付等，</span></span><br><span class="line"><span class="comment">// 每个方法在调用 console.log 时添加对应的分类前缀，方便在控制台根据分类筛选和查看日志，</span></span><br><span class="line"><span class="comment">// 这里演示了记录支付请求发起的日志，包含金额信息。</span></span><br><span class="line"><span class="keyword">const</span> logger = &#123;</span><br><span class="line">  <span class="attr">network</span>: <span class="function">(<span class="params">...args</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[NET]&#x27;</span>,...args),</span><br><span class="line">  <span class="attr">security</span>: <span class="function">(<span class="params">...args</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[SEC]&#x27;</span>,...args),</span><br><span class="line">  <span class="attr">payment</span>: <span class="function">(<span class="params">...args</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[PAY]&#x27;</span>,...args)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">logger.<span class="title function_">payment</span>(<span class="string">&#x27;支付请求发起&#x27;</span>, &#123; <span class="attr">amount</span>: <span class="number">99.9</span> &#125;);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="13-交互式调试"><a href="#13-交互式调试" class="headerlink" title="13. 交互式调试"></a>13. 交互式调试</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在控制台输出一个包含加密数据和检查函数的对象，用户点击该输出信息时，</span></span><br><span class="line"><span class="comment">// 可以通过调用检查函数（这里是解密数据函数 decryptData）来查看详细信息，实现交互式调试体验。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;点击查看详情：&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">data</span>: encryptedData,</span><br><span class="line">  <span class="attr">inspect</span>: <span class="function">() =&gt;</span> <span class="title function_">decryptData</span>(encryptedData)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="14-日志持久化"><a href="#14-日志持久化" class="headerlink" title="14. 日志持久化"></a>14. 日志持久化</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 保存原始的 console.log 方法，并重写 console.log，</span></span><br><span class="line"><span class="comment">// 在新的 console.log 中，先执行原始的输出操作，再将日志信息发送到日志服务器（假设 sendToLogServer 函数已实现），</span></span><br><span class="line"><span class="comment">// 确保日志不仅在控制台可见，还能持久化存储以供后续分析。</span></span><br><span class="line"><span class="keyword">const</span> originalLog = <span class="variable language_">console</span>.<span class="property">log</span>.<span class="title function_">bind</span>(<span class="variable language_">console</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="property">log</span> = <span class="function">(<span class="params">...args</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">originalLog</span>(...args);</span><br><span class="line">  <span class="title function_">sendToLogServer</span>(args); <span class="comment">// 发送到日志服务器</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="15-性能热力图"><a href="#15-性能热力图" class="headerlink" title="15. 性能热力图"></a>15. 性能热力图</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用 console.timeStamp 在关键的性能节点（如渲染开始、DOM 更新）记录时间戳，</span></span><br><span class="line"><span class="comment">// 之后可以在浏览器的 Performance 面板查看这些时间戳，以可视化的方式分析页面性能瓶颈，优化渲染流程。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">timeStamp</span>(<span class="string">&#x27;渲染开始&#x27;</span>);</span><br><span class="line"><span class="comment">// 渲染逻辑</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">timeStamp</span>(<span class="string">&#x27;DOM更新&#x27;</span>);</span><br><span class="line"><span class="comment">// 更新逻辑</span></span><br><span class="line"><span class="comment">// 在浏览器Performance面板查看时间戳</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="16-内存泄漏检测"><a href="#16-内存泄漏检测" class="headerlink" title="16. 内存泄漏检测"></a>16. 内存泄漏检测</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建一个数组来存储组件实例的引用，在组件构造函数中，每创建一个实例就将其添加到数组中，</span></span><br><span class="line"><span class="comment">// 并通过 console.count 记录实例创建的次数，同时定期检查数组中实例的数量，</span></span><br><span class="line"><span class="comment">// 如果数量持续增加，可能存在内存泄漏问题，方便及时排查。</span></span><br><span class="line"><span class="keyword">let</span> instances = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyComponent</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    instances.<span class="title function_">push</span>(<span class="variable language_">this</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">count</span>(<span class="string">&#x27;实例创建&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定期检查实例数量</span></span><br><span class="line"><span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;存活实例:&#x27;</span>, instances.<span class="property">length</span>), <span class="number">5000</span>);</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="17-源码映射调试"><a href="#17-源码映射调试" class="headerlink" title="17. 源码映射调试"></a>17. 源码映射调试</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在 webpack 配置中启用 source-map，这使得在调试时能够将打包后的代码映射回原始的源代码，</span></span><br><span class="line"><span class="comment">// 方便在浏览器调试工具或 IDE 中直接查看和调试原始代码，而不是混淆后的代码，提高调试效率。</span></span><br><span class="line"><span class="comment">// 配合webpack配置</span></span><br><span class="line"><span class="attr">devtool</span>: <span class="string">&#x27;source-map&#x27;</span>,</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="18-调试器集成"><a href="#18-调试器集成" class="headerlink" title="18. 调试器集成"></a>18. 调试器集成</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在函数开头使用 console.log 输出进入函数的信息，然后使用 debugger 语句，</span></span><br><span class="line"><span class="comment">// 当代码执行到这里时，会暂停执行，等待调试器（如浏览器开发者工具或 IDE 调试功能）连接，</span></span><br><span class="line"><span class="comment">// 方便深入调试函数内部复杂的运算逻辑。</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">complexCalculation</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;进入计算函数&#x27;</span>);</span><br><span class="line">  <span class="keyword">debugger</span>; <span class="comment">// 配合IDE断点使用</span></span><br><span class="line">  <span class="comment">// 复杂运算</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="19-日志分级控制"><a href="#19-日志分级控制" class="headerlink" title="19. 日志分级控制"></a>19. 日志分级控制</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义一个日志级别对象，包含调试、信息、警告、错误等级别，</span></span><br><span class="line"><span class="comment">// 然后创建一个 Logger 类，在构造函数中接收一个日志级别参数，</span></span><br><span class="line"><span class="comment">// 类中的 debug 方法根据当前设置的级别决定是否输出调试信息，实现灵活的日志分级管理。</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">LOG_LEVEL</span> = &#123;</span><br><span class="line">  <span class="attr">DEBUG</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="attr">INFO</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">WARN</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">ERROR</span>: <span class="number">3</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Logger</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">level = LOG_LEVEL.INFO</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">level</span> = level;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">debug</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">level</span> &lt;= <span class="variable constant_">LOG_LEVEL</span>.<span class="property">DEBUG</span>) <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[DEBUG]&#x27;</span>,...args);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="20-敏感信息过滤"><a href="#20-敏感信息过滤" class="headerlink" title="20. 敏感信息过滤"></a>20. 敏感信息过滤</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义一个安全日志函数，它接收数据对象，先深度克隆数据，</span></span><br><span class="line"><span class="comment">// 然后删除可能包含敏感信息的字段（如密码、令牌），最后返回过滤后的安全数据，</span></span><br><span class="line"><span class="comment">// 并在控制台输出，确保敏感信息不会意外泄露。</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">safeLog</span> = (<span class="params">data</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> filtered = _.<span class="title function_">cloneDeep</span>(data);</span><br><span class="line">  <span class="keyword">delete</span> filtered.<span class="property">password</span>;</span><br><span class="line">  <span class="keyword">delete</span> filtered.<span class="property">token</span>;</span><br><span class="line">  <span class="keyword">return</span> filtered;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;用户数据:&#x27;</span>, <span class="title function_">safeLog</span>(userData));</span><br></pre></td></tr></table></figure>
-
-
-<blockquote>
-<p><strong>注意</strong>：所有调试代码应在开发环境使用，生产环境需通过构建工具自动移除。 </p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Console</category>
-      </categories>
-      <tags>
-        <tag>Console</tag>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>DeepSeek 本地部署教程</title>
     <url>https://kfufys.github.io/posts/4b037ad9.html</url>
     <content><![CDATA[<img src="https://kfufys.github.io/posts/4b037ad9/1.png" alt="deepseek" width="1200">
@@ -278,6 +200,84 @@
       <tags>
         <tag>AIGC</tag>
         <tag>DeepSeek</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Console 调试技巧</title>
+    <url>https://kfufys.github.io/posts/b66155b1.html</url>
+    <content><![CDATA[<img src="https://kfufys.github.io/posts/b66155b1/1.jpg" alt="head-img" width="1200">
+
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>说到 <code>console</code>，很多人的第一反应肯定是 <code>console.log</code>，它既简单又直接！然而，在处理复杂问题时，这种方式往往效率低下。本文分享 20 个 <code>console</code> 的调试小技巧，帮您更快速地找出并解决问题。</p>
+<h3 id="1-样式轰炸"><a href="#1-样式轰炸" class="headerlink" title="1. 样式轰炸"></a>1. 样式轰炸</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这段代码使用了 console.log 的样式功能，通过传入特定的 CSS 样式字符串，</span></span><br><span class="line"><span class="comment">// 可以为输出的文本添加自定义样式，达到醒目的效果，这里创建了一个带有渐变背景、</span></span><br><span class="line"><span class="comment">// 白色文字、圆角和内边距的“VIP调试模式”样式，以及一个后续的灰色文字样式用于显示版本号。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(</span><br><span class="line">  <span class="string">&#x27;%cVIP调试模式%c v2.0&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;background:linear-gradient(45deg,#ff6b6b,#4ecdc4);color:white;padding:4px 8px;border-radius:3px;&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;color:#666;margin-left:8px;&#x27;</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="2-动态模板"><a href="#2-动态模板" class="headerlink" title="2. 动态模板"></a>2. 动态模板</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义一个包含用户信息的对象，然后利用模板字符串结合当前时间，</span></span><br><span class="line"><span class="comment">// 在控制台输出一条包含用户名称、等级以及执行操作信息的日志，方便跟踪用户行为及操作时间。</span></span><br><span class="line"><span class="keyword">const</span> user = &#123; <span class="attr">name</span>: <span class="string">&#x27;Alice&#x27;</span>, <span class="attr">level</span>: <span class="string">&#x27;VIP&#x27;</span> &#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`[<span class="subst">$&#123;<span class="keyword">new</span> <span class="built_in">Date</span>().toISOString()&#125;</span>] <span class="subst">$&#123;user.name&#125;</span> (<span class="subst">$&#123;user.level&#125;</span>) 执行了支付操作`</span>);</span><br><span class="line"><span class="comment">// 输出示例：[2023-12-25T09:30:00Z] Alice (VIP) 执行了支付操作</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="3-树形结构解析"><a href="#3-树形结构解析" class="headerlink" title="3. 树形结构解析"></a>3. 树形结构解析</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 以一种结构化、易读的方式在控制台输出用户数据树，使用特定样式突出显示树的标题，</span></span><br><span class="line"><span class="comment">// 数据树包含用户 ID、个人资料（姓名、地址，地址又细分城市和区）以及订单列表等信息，方便查看数据层级关系。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c▸ 用户数据树&#x27;</span>, <span class="string">&#x27;color:#48bb78;font-weight:bold&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">id</span>: <span class="number">1001</span>,</span><br><span class="line">  <span class="attr">profile</span>: &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;Bob&#x27;</span>,</span><br><span class="line">    <span class="attr">address</span>: &#123;</span><br><span class="line">      <span class="attr">city</span>: <span class="string">&#x27;上海&#x27;</span>,</span><br><span class="line">      <span class="attr">district</span>: <span class="string">&#x27;浦东&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">orders</span>: [<span class="string">&#x27;#2023-1001&#x27;</span>, <span class="string">&#x27;#2023-1002&#x27;</span>]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="4-表格魔法升级"><a href="#4-表格魔法升级" class="headerlink" title="4. 表格魔法升级"></a>4. 表格魔法升级</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 对于加密货币数据数组，先对每个数据项进行处理，添加一个表示价格趋势的字段（根据 24 小时价格变化判断上升或下降），</span></span><br><span class="line"><span class="comment">// 然后使用 console.table 将处理后的数据以表格形式输出，使数据对比更加直观清晰。</span></span><br><span class="line"><span class="keyword">const</span> cryptoData = [</span><br><span class="line">  &#123; <span class="attr">coin</span>: <span class="string">&#x27;BTC&#x27;</span>, <span class="attr">price</span>: <span class="number">42000</span>, <span class="attr">change24h</span>: <span class="string">&#x27;+5.2%&#x27;</span>, <span class="attr">volatility</span>: <span class="string">&#x27;high&#x27;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">coin</span>: <span class="string">&#x27;ETH&#x27;</span>, <span class="attr">price</span>: <span class="number">2300</span>, <span class="attr">change24h</span>: <span class="string">&#x27;-1.8%&#x27;</span>, <span class="attr">volatility</span>: <span class="string">&#x27;medium&#x27;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">coin</span>: <span class="string">&#x27;SOL&#x27;</span>, <span class="attr">price</span>: <span class="number">98</span>, <span class="attr">change24h</span>: <span class="string">&#x27;+12.6%&#x27;</span>, <span class="attr">volatility</span>: <span class="string">&#x27;high&#x27;</span> &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">table</span>(cryptoData.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> (&#123;</span><br><span class="line">...item,</span><br><span class="line">  <span class="string">&#x27;价格趋势&#x27;</span>: item.<span class="property">change24h</span>.<span class="title function_">startsWith</span>(<span class="string">&#x27;+&#x27;</span>)? <span class="string">&#x27;↑&#x27;</span> : <span class="string">&#x27;↓&#x27;</span></span><br><span class="line">&#125;)));</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="5-生命周期标记"><a href="#5-生命周期标记" class="headerlink" title="5. 生命周期标记"></a>5. 生命周期标记</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用 console.groupCollapsed 和 console.groupEnd 来创建一个可折叠的分组，</span></span><br><span class="line"><span class="comment">// 用于标记 API 请求流程的不同阶段，如请求发起、响应接收、数据处理等，每个阶段用不同颜色突出显示关键信息，</span></span><br><span class="line"><span class="comment">// 方便在控制台快速了解整个请求生命周期的状态。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">groupCollapsed</span>(<span class="string">&#x27;%c🔄 API请求流程追踪&#x27;</span>, <span class="string">&#x27;color:#4299e1&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c▶️ 请求发起&#x27;</span>, <span class="string">&#x27;color:#48bb78&#x27;</span>, &#123; <span class="attr">url</span>: <span class="string">&#x27;/api/users&#x27;</span>, <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span> &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c⏳ 响应接收&#x27;</span>, <span class="string">&#x27;color:#ed8936&#x27;</span>, &#123; <span class="attr">status</span>: <span class="number">200</span>, <span class="attr">time</span>: <span class="string">&#x27;320ms&#x27;</span> &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;%c✅ 数据处理&#x27;</span>, <span class="string">&#x27;color:#48bb78&#x27;</span>, &#123; <span class="attr">processedItems</span>: <span class="number">15</span> &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">groupEnd</span>();</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="6-调用栈快照"><a href="#6-调用栈快照" class="headerlink" title="6. 调用栈快照"></a>6. 调用栈快照</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在函数内部使用 console.trace，当执行到这一行时，会输出完整的调用栈信息，</span></span><br><span class="line"><span class="comment">// 显示函数是如何被调用的，经过了哪些路径，对于排查函数调用逻辑和定位问题根源非常有用。</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">processOrder</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">trace</span>(<span class="string">&#x27;订单处理流程追踪&#x27;</span>);</span><br><span class="line">  <span class="comment">// 其他处理逻辑</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 输出完整的调用栈信息</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="7-内存监控"><a href="#7-内存监控" class="headerlink" title="7. 内存监控"></a>7. 内存监控</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 首先获取初始的 JavaScript 堆内存使用量，执行一些内存密集型操作后，</span></span><br><span class="line"><span class="comment">// 通过计算前后内存使用量的差值并转换为 KB 单位，输出内存使用量的变化情况，以便监控内存消耗是否合理。</span></span><br><span class="line"><span class="keyword">const</span> initialMemory = performance.<span class="property">memory</span>.<span class="property">usedJSHeapSize</span>;</span><br><span class="line"><span class="comment">// 执行内存密集型操作</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;内存使用量变化:&#x27;</span>, </span><br><span class="line">  (performance.<span class="property">memory</span>.<span class="property">usedJSHeapSize</span> - initialMemory) / <span class="number">1024</span> + <span class="string">&#x27; KB&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="8-复合性能测试"><a href="#8-复合性能测试" class="headerlink" title="8. 复合性能测试"></a>8. 复合性能测试</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用 console.time 和 console.timeEnd 来测量一段包含多个异步操作（如 Promise.all 中的多个异步任务）的复合操作的执行时间，</span></span><br><span class="line"><span class="comment">// 同时使用 console.timeLog 在操作的关键阶段记录时间点，方便了解各个阶段的耗时情况，精准定位性能瓶颈。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">time</span>(<span class="string">&#x27;复合操作&#x27;</span>);</span><br><span class="line"><span class="keyword">await</span> <span class="title class_">Promise</span>.<span class="title function_">all</span>([</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">timeLog</span>(<span class="string">&#x27;复合操作&#x27;</span>, <span class="string">&#x27;阶段1完成&#x27;</span>),</span><br><span class="line">  <span class="title function_">fetchData</span>(),</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">timeLog</span>(<span class="string">&#x27;复合操作&#x27;</span>, <span class="string">&#x27;阶段2完成&#x27;</span>),</span><br><span class="line">  <span class="title function_">processData</span>()</span><br><span class="line">]);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">timeEnd</span>(<span class="string">&#x27;复合操作&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="9-条件断言"><a href="#9-条件断言" class="headerlink" title="9. 条件断言"></a>9. 条件断言</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用 console.assert 进行条件断言，如果条件不满足（这里是用户年龄大于 18 岁），</span></span><br><span class="line"><span class="comment">// 则按照指定的红色醒目的样式输出错误信息，包含期望年龄和实际年龄，用于快速验证数据的合法性。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">assert</span>(</span><br><span class="line">  user.<span class="property">age</span> &gt; <span class="number">18</span>, </span><br><span class="line">  <span class="string">&#x27;%c年龄验证失败&#x27;</span>, </span><br><span class="line">  <span class="string">&#x27;color:red;font-weight:bold&#x27;</span>,</span><br><span class="line">  &#123; <span class="attr">requiredAge</span>: <span class="number">18</span>, <span class="attr">actualAge</span>: user.<span class="property">age</span> &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="10-环境感知日志"><a href="#10-环境感知日志" class="headerlink" title="10. 环境感知日志"></a>10. 环境感知日志</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 根据当前 Node.js 环境变量（NODE_ENV）来决定是否输出日志，</span></span><br><span class="line"><span class="comment">// 在开发环境下，将 console.log 绑定并正常输出日志，而在生产环境下，</span></span><br><span class="line"><span class="comment">// 提供一个空函数替代，实现自动静默，避免在生产环境输出不必要的调试信息。</span></span><br><span class="line"><span class="keyword">const</span> debug = &#123;</span><br><span class="line">  <span class="attr">log</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&#x27;development&#x27;</span> </span><br><span class="line">  ? <span class="variable language_">console</span>.<span class="property">log</span>.<span class="title function_">bind</span>(<span class="variable language_">console</span>) </span><br><span class="line">    : <span class="function">() =&gt;</span> &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">debug.<span class="title function_">log</span>(<span class="string">&#x27;开发环境专属日志&#x27;</span>); <span class="comment">// 生产环境自动静默</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="11-数据快照对比"><a href="#11-数据快照对比" class="headerlink" title="11. 数据快照对比"></a>11. 数据快照对比</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 先将状态数据序列化为字符串保存起来，在状态修改后，通过自定义的 diff 函数（假设已定义）对比修改前后的数据，</span></span><br><span class="line"><span class="comment">// 并在控制台输出状态变更差异，有助于跟踪数据的变化情况，排查因数据变更引发的问题。</span></span><br><span class="line"><span class="keyword">const</span> before = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(state);</span><br><span class="line"><span class="comment">// 状态修改操作</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;状态变更差异:&#x27;</span>, <span class="title function_">diff</span>(<span class="title class_">JSON</span>.<span class="title function_">parse</span>(before), state));</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="12-日志分类过滤"><a href="#12-日志分类过滤" class="headerlink" title="12. 日志分类过滤"></a>12. 日志分类过滤</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建一个日志记录器对象，包含不同分类的日志方法，如网络、安全、支付等，</span></span><br><span class="line"><span class="comment">// 每个方法在调用 console.log 时添加对应的分类前缀，方便在控制台根据分类筛选和查看日志，</span></span><br><span class="line"><span class="comment">// 这里演示了记录支付请求发起的日志，包含金额信息。</span></span><br><span class="line"><span class="keyword">const</span> logger = &#123;</span><br><span class="line">  <span class="attr">network</span>: <span class="function">(<span class="params">...args</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[NET]&#x27;</span>,...args),</span><br><span class="line">  <span class="attr">security</span>: <span class="function">(<span class="params">...args</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[SEC]&#x27;</span>,...args),</span><br><span class="line">  <span class="attr">payment</span>: <span class="function">(<span class="params">...args</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[PAY]&#x27;</span>,...args)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">logger.<span class="title function_">payment</span>(<span class="string">&#x27;支付请求发起&#x27;</span>, &#123; <span class="attr">amount</span>: <span class="number">99.9</span> &#125;);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="13-交互式调试"><a href="#13-交互式调试" class="headerlink" title="13. 交互式调试"></a>13. 交互式调试</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在控制台输出一个包含加密数据和检查函数的对象，用户点击该输出信息时，</span></span><br><span class="line"><span class="comment">// 可以通过调用检查函数（这里是解密数据函数 decryptData）来查看详细信息，实现交互式调试体验。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;点击查看详情：&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">data</span>: encryptedData,</span><br><span class="line">  <span class="attr">inspect</span>: <span class="function">() =&gt;</span> <span class="title function_">decryptData</span>(encryptedData)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="14-日志持久化"><a href="#14-日志持久化" class="headerlink" title="14. 日志持久化"></a>14. 日志持久化</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 保存原始的 console.log 方法，并重写 console.log，</span></span><br><span class="line"><span class="comment">// 在新的 console.log 中，先执行原始的输出操作，再将日志信息发送到日志服务器（假设 sendToLogServer 函数已实现），</span></span><br><span class="line"><span class="comment">// 确保日志不仅在控制台可见，还能持久化存储以供后续分析。</span></span><br><span class="line"><span class="keyword">const</span> originalLog = <span class="variable language_">console</span>.<span class="property">log</span>.<span class="title function_">bind</span>(<span class="variable language_">console</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="property">log</span> = <span class="function">(<span class="params">...args</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">originalLog</span>(...args);</span><br><span class="line">  <span class="title function_">sendToLogServer</span>(args); <span class="comment">// 发送到日志服务器</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="15-性能热力图"><a href="#15-性能热力图" class="headerlink" title="15. 性能热力图"></a>15. 性能热力图</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用 console.timeStamp 在关键的性能节点（如渲染开始、DOM 更新）记录时间戳，</span></span><br><span class="line"><span class="comment">// 之后可以在浏览器的 Performance 面板查看这些时间戳，以可视化的方式分析页面性能瓶颈，优化渲染流程。</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">timeStamp</span>(<span class="string">&#x27;渲染开始&#x27;</span>);</span><br><span class="line"><span class="comment">// 渲染逻辑</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">timeStamp</span>(<span class="string">&#x27;DOM更新&#x27;</span>);</span><br><span class="line"><span class="comment">// 更新逻辑</span></span><br><span class="line"><span class="comment">// 在浏览器Performance面板查看时间戳</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="16-内存泄漏检测"><a href="#16-内存泄漏检测" class="headerlink" title="16. 内存泄漏检测"></a>16. 内存泄漏检测</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建一个数组来存储组件实例的引用，在组件构造函数中，每创建一个实例就将其添加到数组中，</span></span><br><span class="line"><span class="comment">// 并通过 console.count 记录实例创建的次数，同时定期检查数组中实例的数量，</span></span><br><span class="line"><span class="comment">// 如果数量持续增加，可能存在内存泄漏问题，方便及时排查。</span></span><br><span class="line"><span class="keyword">let</span> instances = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyComponent</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    instances.<span class="title function_">push</span>(<span class="variable language_">this</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">count</span>(<span class="string">&#x27;实例创建&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定期检查实例数量</span></span><br><span class="line"><span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;存活实例:&#x27;</span>, instances.<span class="property">length</span>), <span class="number">5000</span>);</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="17-源码映射调试"><a href="#17-源码映射调试" class="headerlink" title="17. 源码映射调试"></a>17. 源码映射调试</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在 webpack 配置中启用 source-map，这使得在调试时能够将打包后的代码映射回原始的源代码，</span></span><br><span class="line"><span class="comment">// 方便在浏览器调试工具或 IDE 中直接查看和调试原始代码，而不是混淆后的代码，提高调试效率。</span></span><br><span class="line"><span class="comment">// 配合webpack配置</span></span><br><span class="line"><span class="attr">devtool</span>: <span class="string">&#x27;source-map&#x27;</span>,</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="18-调试器集成"><a href="#18-调试器集成" class="headerlink" title="18. 调试器集成"></a>18. 调试器集成</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 在函数开头使用 console.log 输出进入函数的信息，然后使用 debugger 语句，</span></span><br><span class="line"><span class="comment">// 当代码执行到这里时，会暂停执行，等待调试器（如浏览器开发者工具或 IDE 调试功能）连接，</span></span><br><span class="line"><span class="comment">// 方便深入调试函数内部复杂的运算逻辑。</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">complexCalculation</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;进入计算函数&#x27;</span>);</span><br><span class="line">  <span class="keyword">debugger</span>; <span class="comment">// 配合IDE断点使用</span></span><br><span class="line">  <span class="comment">// 复杂运算</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="19-日志分级控制"><a href="#19-日志分级控制" class="headerlink" title="19. 日志分级控制"></a>19. 日志分级控制</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义一个日志级别对象，包含调试、信息、警告、错误等级别，</span></span><br><span class="line"><span class="comment">// 然后创建一个 Logger 类，在构造函数中接收一个日志级别参数，</span></span><br><span class="line"><span class="comment">// 类中的 debug 方法根据当前设置的级别决定是否输出调试信息，实现灵活的日志分级管理。</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">LOG_LEVEL</span> = &#123;</span><br><span class="line">  <span class="attr">DEBUG</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="attr">INFO</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">WARN</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">ERROR</span>: <span class="number">3</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Logger</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">level = LOG_LEVEL.INFO</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">level</span> = level;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">debug</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">level</span> &lt;= <span class="variable constant_">LOG_LEVEL</span>.<span class="property">DEBUG</span>) <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;[DEBUG]&#x27;</span>,...args);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="20-敏感信息过滤"><a href="#20-敏感信息过滤" class="headerlink" title="20. 敏感信息过滤"></a>20. 敏感信息过滤</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义一个安全日志函数，它接收数据对象，先深度克隆数据，</span></span><br><span class="line"><span class="comment">// 然后删除可能包含敏感信息的字段（如密码、令牌），最后返回过滤后的安全数据，</span></span><br><span class="line"><span class="comment">// 并在控制台输出，确保敏感信息不会意外泄露。</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">safeLog</span> = (<span class="params">data</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> filtered = _.<span class="title function_">cloneDeep</span>(data);</span><br><span class="line">  <span class="keyword">delete</span> filtered.<span class="property">password</span>;</span><br><span class="line">  <span class="keyword">delete</span> filtered.<span class="property">token</span>;</span><br><span class="line">  <span class="keyword">return</span> filtered;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;用户数据:&#x27;</span>, <span class="title function_">safeLog</span>(userData));</span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p><strong>注意</strong>：所有调试代码应在开发环境使用，生产环境需通过构建工具自动移除。 </p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Console</category>
+      </categories>
+      <tags>
+        <tag>Console</tag>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -964,290 +964,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Markdown教程</title>
-    <url>https://kfufys.github.io/posts/c079e252.html</url>
-    <content><![CDATA[<img src="https://kfufys.github.io/posts/c079e252/1.png" alt="Markdown" width="1200">
-
-<h3 id="一、Markdown简介"><a href="#一、Markdown简介" class="headerlink" title="一、Markdown简介"></a>一、Markdown简介</h3><p><code>Markdown</code> 是一种轻量级标记语言，创始人为约翰·格鲁伯（John Gruber）。<br><code>Markdown</code> 允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的HTML文档。<br><code>Markdown</code> 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。<br><code>Markdown</code> 编写的文档后缀为 .md、.markdown。<br><code>Markdown</code> 是目前互联网上流行的写作语言之一，很多网站平台的文章、博客、论文都是基于它写的。</p>
-<h3 id="二、Markdown优点"><a href="#二、Markdown优点" class="headerlink" title="二、Markdown优点"></a>二、Markdown优点</h3><p>很多人看到【轻量级】【标记】【语言】这些标签就直接放弃了，想着自己学习了非常多的语言，为了记个笔记写个博客还要再学习一门语言吗？实则不然，Markdown的语言非常非常简单，如果想学，10分钟你完全可以学完90%的常用的语法，而且你从此摆脱排版的折磨，属实是强迫症党的福利了。它的优点不仅限于此：</p>
-<ul>
-<li>纯文本编辑，只要是支持 Markdown 编辑的都能获得同样的结果，摆脱排版苦恼</li>
-<li>学习成本低，常用的语法很少，简单易学快速上手</li>
-<li>支持跨平台同步数据</li>
-<li>支持插入图片、视频等</li>
-<li>随时修改，不必担心word等工具出现排版错误</li>
-</ul>
-<h3 id="三、Markdown基本语法"><a href="#三、Markdown基本语法" class="headerlink" title="三、Markdown基本语法"></a>三、Markdown基本语法</h3><h4 id="3-1-标题"><a href="#3-1-标题" class="headerlink" title="3.1 标题"></a>3.1 标题</h4><p>使用 <code>#</code> 标记，可表示1~6级标题， 随 <code>#</code> 的个数递增，一级标题字号最大，六级标题字号最小。  </p>
-<p><strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/2.png" alt="Markdown_Title" width="1200">
-
-<blockquote>
-<p><em><strong>注意</strong></em>：</p>
-<ul>
-<li>最好 <code>#</code> 字符与标题文本中间留一个空格</li>
-<li>标题应该置于行首，如果放入表格中可能无法正确解析</li>
-</ul>
-</blockquote>
-<h4 id="3-2-字体"><a href="#3-2-字体" class="headerlink" title="3.2 字体"></a>3.2 字体</h4><p><code>*</code> 与 <code>_</code> 都可以，1个斜体，2个粗体，3个粗斜体</p>
-<p><strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="emphasis">*这是斜体*</span></span><br><span class="line"><span class="emphasis">_这是斜体_</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**这是粗体**</span></span><br><span class="line"><span class="strong">__这是粗体__</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**<span class="emphasis">*这是粗斜体*</span>**</span></span><br><span class="line"><span class="strong">__<span class="emphasis">_这是粗斜体_</span>__</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/3.png" alt="Markdown_Font" width="1200">
-
-<blockquote>
-<p><em><strong>快捷键</strong></em>：</p>
-<ul>
-<li>加粗 <code>Ctrl+B</code></li>
-<li>斜体 <code>Ctrl+I</code></li>
-</ul>
-</blockquote>
-<h4 id="3-3-换行"><a href="#3-3-换行" class="headerlink" title="3.3 换行"></a>3.3 换行</h4><p>Markdown换行的方式有很多种:</p>
-<ul>
-<li>直接在一句话后敲两个空格</li>
-<li>两句话之间加一个空行</li>
-<li>如果你在编辑的时候，想让一行文字在显示的时候换行，就在中间加<code>&lt;br/&gt;</code></li>
-</ul>
-<p> <strong>示例代码</strong>：</p>
- <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Hello World  </span><br><span class="line">Hello World</span><br><span class="line"></span><br><span class="line">Hello World</span><br><span class="line"></span><br><span class="line">Hello World</span><br><span class="line"></span><br><span class="line">Hello World<span class="language-xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span>Hello World</span><br></pre></td></tr></table></figure>
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/4.png" alt="Markdown_enter" width="1200">
-
-<h4 id="3-4-引用"><a href="#3-4-引用" class="headerlink" title="3.4 引用"></a>3.4 引用</h4><p>Markdown 中引用通过符号 <code>&gt;</code> 来实现。</p>
-<ul>
-<li><code>&gt;</code> 符号后的空格，可有可无。  </li>
-<li>在引用的区块内，允许换行存在，换行并不会终止引用的区块。</li>
-<li>如果要结束引用，需要一行空白行，来结束引用的区块。</li>
-</ul>
-<p> <strong>示例代码</strong>：</p>
- <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 这是一个引用</span></span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/5.png" alt="Markdown_quote1" width="1200">
-
-<blockquote>
-<p><strong>此外，引用还可以嵌套使用</strong>  </p>
-</blockquote>
-<p> <strong>示例代码</strong>：</p>
- <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 这是一个引用：</span></span><br><span class="line">&gt;&gt; 这是一个引用的引用</span><br><span class="line">&gt;&gt;&gt; 这是一个引用的引用的引用</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/6.png" alt="Markdown_quote2" width="1200">
-
-<h4 id="3-5-链接"><a href="#3-5-链接" class="headerlink" title="3.5 链接"></a>3.5 链接</h4><p>Markdown 中插入链接的使用方式是：  </p>
-<p> <strong>示例代码</strong>：</p>
- <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> [<span class="string">链接名称</span>](<span class="link">链接地址</span>)</span><br><span class="line"><span class="bullet">2.</span> &lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/7.png" alt="Markdown_link" width="1200">
-
-<h4 id="3-6-图片"><a href="#3-6-图片" class="headerlink" title="3.6 图片"></a>3.6 图片</h4><p>Markdown 中插入图片的使用方式是：  </p>
-<p> <strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片描述，可写可不写，但中括号要有</span>](<span class="link">图片地址，本地链接或者URL地址。</span>)</span><br></pre></td></tr></table></figure>
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/8.png" alt="Markdown_img" width="1200">
-
-<h4 id="3-7-列表"><a href="#3-7-列表" class="headerlink" title="3.7 列表"></a>3.7 列表</h4><p>列表分为有序列表和无序列表</p>
-<ul>
-<li>无序列表，使用<code>*</code>、<code>+</code>、<code>-</code>，再加一个空格作为列表的标记</li>
-<li>有序列表，使用数字并加上<code>.</code>号，再加一个空格作为列表的标记</li>
-</ul>
-<p> <strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">*</span> 无序列表 1</span><br><span class="line"><span class="bullet">+</span> 无序列表 2</span><br><span class="line"><span class="bullet">-</span> 无序列表 3</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 有序列表 1</span><br><span class="line"><span class="bullet">2.</span> 有序列表 2</span><br><span class="line"><span class="bullet">3.</span> 有序列表 3</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/9.png" alt="Markdown_listtable1" width="1200">
-
-<blockquote>
-<p><strong>如果想要控制列表的层级，则需要在列表符号前使用 <code>Tab</code></strong></p>
-</blockquote>
-<p> <strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">+</span> 无序列表 1</span><br><span class="line"><span class="bullet">+</span> 无序列表 2</span><br><span class="line"><span class="bullet">	+</span> 无序列表 2.1</span><br><span class="line"><span class="bullet">	+</span> 无序列表 2.2</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 有序列表 1</span><br><span class="line"><span class="code">	1.1 有序列表 1.1</span></span><br><span class="line"><span class="code">2. 有序列表 2</span></span><br><span class="line"><span class="code">	2.1 有序列表2.1</span></span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/10.png" alt="Markdown_listtable2" width="1200">
-
-<h4 id="3-8-分割线"><a href="#3-8-分割线" class="headerlink" title="3.8 分割线"></a>3.8 分割线</h4><p>可在一行中用三个 <code>-</code> 、<code>_</code> 或 <code>*</code> 来建立一个分割线。</p>
-<p>*<strong>注意</strong>：在分割线的上面空一行，否则会导致前一行字体放大。</p>
-<p> <strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">#### 使用三个或更多的连字符 -</span></span><br><span class="line"></span><br><span class="line">这是分割线上面的内容。</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">这是分割线下面的内容。</span><br><span class="line"></span><br><span class="line"><span class="section">#### 使用三个或更多的星号 *</span></span><br><span class="line"></span><br><span class="line">上面部分的文本。</span><br><span class="line"></span><br><span class="line"><span class="strong">***</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">下面部分的文本。</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">#### 使用三个或更多的下划线 _</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">分割线之上。</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">___</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">分割线之下。</span></span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/11.png" alt="Markdown_splitLine" width="1200">
-
-<h4 id="3-9-删除线"><a href="#3-9-删除线" class="headerlink" title="3.9 删除线"></a>3.9 删除线</h4><p>在要添加删除线的文字前后添加两个 <code>~</code>  </p>
-<p> <strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">~~这是要被删除的文字~~</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/12.png" alt="Markdown_strikethrough" width="1200">
-
-<h4 id="3-10-下划线"><a href="#3-10-下划线" class="headerlink" title="3.10 下划线"></a>3.10 下划线</h4><p>在要添加下划线的文字首尾添加 <code>&lt;u&gt;</code>  标签</p>
-<p> <strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">u</span>&gt;</span></span>这是添加下划线的文字<span class="language-xml"><span class="tag">&lt;/<span class="name">u</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/13.png" alt="Markdown_underscore" width="1200">
-
-<h4 id="3-11-代码块"><a href="#3-11-代码块" class="headerlink" title="3.11 代码块"></a>3.11 代码块</h4><p>Markdown中代码块有两种：  </p>
-<ul>
-<li>如果在一行内需要引用代码，只需要用两个反引号引起来。</li>
-<li>如果在一个块内引用代码，则在要引用的代码块的前一行和后一行使用三个反引号，同时在前一个反引号后写入代码语言。</li>
-</ul>
-<p> <strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">### Code Blocks</span></span><br><span class="line"><span class="code">`Hello World`</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">name</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="string">f&quot;Hello, <span class="subst">&#123;name&#125;</span>!&quot;</span></span><br><span class="line"></span><br><span class="line">message = greet(<span class="string">&quot;Alice&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/14.png" alt="Markdown_CodeBlocks" width="1200">
-
-<h4 id="3-12-表格"><a href="#3-12-表格" class="headerlink" title="3.12 表格"></a>3.12 表格</h4><p>表格使用<code>|</code>来分割不同的单元格，使用<code>-</code>来分隔表头和其他行</p>
-<ul>
-<li><code>:-</code>：将表头及单元格内容左对齐</li>
-<li><code>-:</code>：将表头及单元格内容右对齐</li>
-<li><code>:-:</code>：将表头及单元格内容居中</li>
-</ul>
-<p> <strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">| 左对齐 | 右对齐 | 居中对齐 |</span><br><span class="line">| :----- | -----: | :------: |</span><br><span class="line">| 内容1  |  内容2 |  内容3   |</span><br><span class="line">| 内容4  |  内容5 |  内容6   |</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/15.png" alt="Markdown_Table" width="1200">
-
-<h4 id="3-13-脚注"><a href="#3-13-脚注" class="headerlink" title="3.13 脚注"></a>3.13 脚注</h4><p>脚注主要由两部分构成：在正文中标记脚注的位置和在文档末尾定义脚注的内容。</p>
-<ul>
-<li><strong>在正文中标记脚注</strong>：使用 [^标记名] 来标记脚注的位置，其中 “标记名” 可以是数字、字母或其他字符组合，但在同一个文档里不能重复。</li>
-<li><strong>在文档末尾定义脚注内容</strong>：使用 [^标记名]: 脚注具体内容 来给出脚注的详细说明，这里的 “标记名” 要和正文中的保持一致。</li>
-</ul>
-<p><strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">使用 Markdown[^1]可以效率的书写文档, 直接转换成 HTML[^2], 你可以使用 Typora[^T] 编辑器进行书写。</span><br><span class="line"></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">Markdown 是一种轻量级标记语言，它使用简单的文本格式来标记文本结构，能让写作者专注于内容创作，提高书写效率。</span></span><br><span class="line">[<span class="symbol">^2</span>]: <span class="link">Markdown 可以借助多种工具，如 Pandoc 等，方便快捷地转换为 HTML 格式，便于在网页上展示。</span></span><br><span class="line">[<span class="symbol">^T</span>]: <span class="link">Typora 是一款简洁易用的 Markdown 编辑器，采用所见即所得的编辑模式，能实时预览 Markdown 渲染效果，提升书写体验。</span></span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/16.png" alt="Markdown_footnotes" width="1200">
-
-<h4 id="3-14-特殊符号"><a href="#3-14-特殊符号" class="headerlink" title="3.14 特殊符号"></a>3.14 特殊符号</h4><p>对于Markdown中的语法符号，符号前面加反斜线<code>\</code>即可以显示符号本身。  </p>
-<p><strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">这是一个普通的 \# 符号，并非标题标记。</span><br><span class="line">这里有一个转义后的 \* 星号和一个 \_ 下划线。</span><br><span class="line">这是一个普通的 \- 连字符，不是列表项。</span><br><span class="line">在代码里可能会用到 \` 反引号。</span><br><span class="line">这是一个转义后的 \( 左括号和 \) 右括号，以及 \[ 左方括号和 \] 右方括号。</span><br><span class="line">这里有一个转义后的 \| 管道符号。</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/17.png" alt="Markdown_escaped character" width="1200">
-
-<h3 id="四、Markdown高级语法"><a href="#四、Markdown高级语法" class="headerlink" title="四、Markdown高级语法"></a>四、Markdown高级语法</h3><h4 id="4-1-制作待办事项"><a href="#4-1-制作待办事项" class="headerlink" title="4.1 制作待办事项"></a>4.1 制作待办事项</h4><p>用 <code>Markdown</code> 制作待办事项，格式为：<code>-[]</code> 表示未完成；<code>-[x]</code>表示已完成 </p>
-<p><strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> [ ] 支持以 <span class="code">`PDF`</span> 格式导出文稿</span><br><span class="line"><span class="bullet">-</span> [ ] 改进 <span class="code">`Cmd`</span> 渲染算法，使用局部渲染技术提高渲染效率</span><br><span class="line"><span class="bullet">-</span> [x] 新增 <span class="code">`Todo`</span> 列表功能</span><br><span class="line"><span class="bullet">-</span> [x] 修复 <span class="code">`LaTex`</span> 公式渲染问题</span><br><span class="line"><span class="bullet">-</span> [x] 新增 <span class="code">`LaTex`</span> 公式编号功能</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/4-1.png" alt="Markdown_To-do list" width="1200">
-
-<h4 id="4-2-书写公式"><a href="#4-2-书写公式" class="headerlink" title="4.2 书写公式"></a>4.2 书写公式</h4><p>Markdown支持书写公式，例如书写一个纳维 - 斯托克斯方程。<br><code>$$</code>表示整行公式  </p>
-<p><strong>示例代码</strong>：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">对于粘性不可压缩流体，纳维 - 斯托克斯方程可以表示为：</span><br><span class="line">$$</span><br><span class="line">\rho \left( \frac&#123;\partial \mathbf&#123;v&#125;&#125;&#123;\partial t&#125; + \mathbf&#123;v&#125; \cdot \nabla \mathbf&#123;v&#125; \right) = -\nabla p + \mu \nabla^2 \mathbf&#123;v&#125; + \mathbf&#123;f&#125;</span><br><span class="line">$$</span><br><span class="line">其中 $\rho$ 是流体密度，$\mathbf&#123;v&#125;$ 是流体速度矢量，$t$ 是时间，$p$ 是压力，$\mu$ 是动力粘度，$\nabla$ 是梯度算子，$\nabla^2$ 是拉普拉斯算子，$\mathbf&#123;f&#125;$ 是作用在流体上的外力密度。</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/4-2.png" alt="Markdown_To-do list" width="1200">
-
-<h4 id="4-3-绘制流程图"><a href="#4-3-绘制流程图" class="headerlink" title="4.3 绘制流程图"></a>4.3 绘制流程图</h4><p><strong>代码解释</strong>：</p>
-<ul>
-<li><code>graph LR</code>：表示这是一个从左到右（Left to Right）方向的流程图。</li>
-<li><code>classDef</code>：用于定义不同类型节点的样式。</li>
-<li>各个节点（如 <code>A</code>、<code>B</code> 等）通过箭头连接，并且可以添加条件判断（如 <code>|是|</code>、<code>|否|</code>）。</li>
-</ul>
-<p><strong>示例代码</strong>：（在支持 Mermaid 的环境中）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;graph LR</span><br><span class="line">    classDef startend fill:#F5EBFF,stroke:#BE8FED,stroke-width:2px;</span><br><span class="line">    classDef process fill:#E5F6FF,stroke:#73A6FF,stroke-width:2px;</span><br><span class="line">    classDef decision fill:#FFF6CC,stroke:#FFBC52,stroke-width:2px;</span><br><span class="line">    </span><br><span class="line">    A([开始]):::startend --&gt; B&#123;是否需要帮助?&#125;:::decision</span><br><span class="line">    B --&gt;|是| C(寻求帮助):::process</span><br><span class="line">    B --&gt;|否| D(自行解决):::process</span><br><span class="line">    C --&gt; E(问题解决):::process</span><br><span class="line">    D --&gt; E</span><br><span class="line">    E --&gt; F([结束]):::startend&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/4-3.png" alt="Markdown_flow chart" width="1200">
-
-<h4 id="4-4-绘制序列图"><a href="#4-4-绘制序列图" class="headerlink" title="4.4 绘制序列图"></a>4.4 绘制序列图</h4><p><strong>代码解释</strong>：</p>
-<ul>
-<li><code>participant</code>：用于定义序列图中的参与者。</li>
-<li><code>-&gt;&gt;</code> 表示实线箭头（主动消息），<code>--&gt;&gt;</code> 表示虚线箭头（返回消息）。</li>
-</ul>
-<p><strong>示例代码</strong>：（在支持 Mermaid 的环境中）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;sequenceDiagram</span><br><span class="line">    participant User</span><br><span class="line">    participant System</span><br><span class="line">    User-&gt;&gt;System: 发起请求</span><br><span class="line">    System--&gt;&gt;User: 请求接收确认</span><br><span class="line">    System-&gt;&gt;System: 处理请求</span><br><span class="line">    System--&gt;&gt;User: 返回处理结果&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
-<img src="https://kfufys.github.io/posts/c079e252/4-4.png" alt="Markdown_sequence diagram" width="1200">
-
-<h4 id="4-5-绘制甘特图"><a href="#4-5-绘制甘特图" class="headerlink" title="4.5 绘制甘特图"></a>4.5 绘制甘特图</h4><p><strong>代码解释</strong>：</p>
-<ul>
-<li><code>title</code>：设置甘特图的标题。</li>
-<li><code>dateFormat</code>：指定日期的格式。</li>
-<li><code>section</code>：划分不同的项目阶段，每个任务通过任务名、任务标识（如 <code>a1</code>）、开始日期和持续时间来定义。</li>
-</ul>
-<p><strong>示例代码</strong>：（在支持 Mermaid 的环境中）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;gantt</span><br><span class="line">    title 项目进度甘特图</span><br><span class="line">    dateFormat  YYYY-MM-DD</span><br><span class="line">    section 项目阶段</span><br><span class="line">    需求分析           :a1, 2024-01-01, 30d</span><br><span class="line">    设计阶段           :after a1, 20d</span><br><span class="line">    开发阶段           :after a2, 60d</span><br><span class="line">    测试阶段           :after a3, 20d</span><br><span class="line">    上线发布           :after a4, 1d&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/4-5.png" alt="Markdown_Gantt chart" width="1200">
-
-<h4 id="4-6-内嵌Html"><a href="#4-6-内嵌Html" class="headerlink" title="4.6 内嵌Html"></a>4.6 内嵌Html</h4><p>Markdown 允许直接嵌入 HTML 标签，在 Markdown 文件中编写 HTML 代码时，Markdown 解析器会将 HTML 代码原样保留并按照 HTML 的规则进行渲染。不过要注意，不同的 Markdown 解析器对 HTML 的支持可能会有细微差异。</p>
-<p><strong>示例代码</strong>：</p>
-<p>使用 HTML 的 <code>&lt;a&gt;</code> 标签结合 CSS 样式可以创建链接按钮。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://kfufys.github.io&quot;</span> <span class="attr">style</span>=<span class="string">&quot;display: inline-block; background-color: #007BFF; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;&quot;</span>&gt;</span>访问示例网站<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p> <strong>渲染效果</strong>：</p>
-<img src="https://kfufys.github.io/posts/c079e252/4-6.png" alt="Markdown_Embedded Html" width="1200">
-
-<h3 id="五、Markdown工具"><a href="#五、Markdown工具" class="headerlink" title="五、Markdown工具"></a>五、Markdown工具</h3><p>Markdown 编辑器有很多，它们在功能、适用平台、界面设计等方面各有特色，以下为你介绍一些常用的 Markdown 编辑器：</p>
-<h4 id="5-1-通用跨平台编辑器"><a href="#5-1-通用跨平台编辑器" class="headerlink" title="5.1 通用跨平台编辑器"></a>5.1 通用跨平台编辑器</h4><ul>
-<li><p><b><span class="exturl" data-url="aHR0cHM6Ly90eXBvcmFpby5jbi8=">Typora<i class="fa fa-external-link-alt"></i></span></b></p>
-<ul>
-<li><p><strong>特点</strong>：这是一款简洁美观的 Markdown 编辑器，最大的亮点是采用所见即所得的编辑模式，支持多平台，包括 Windows、Mac 和 Linux。</p>
-</li>
-<li><p><strong>适用场景</strong>：适合日常写作、博客撰写、笔记记录等场景，能让用户专注于内容创作。</p>
-</li>
-</ul>
-</li>
-<li><p><b><span class="exturl" data-url="aHR0cHM6Ly92c2NvZGUuanMuY24vRG93bmxvYWQ=">Visual Studio Code<i class="fa fa-external-link-alt"></i></span></b></p>
-<ul>
-<li><p><strong>特点</strong>：作为一款强大的开源代码编辑器，VS Code 通过安装 Markdown 相关的扩展插件，可实现丰富的 Markdown 编辑功能，如语法高亮、自动补全、预览等。支持 Git 集成，方便进行版本控制。</p>
-</li>
-<li><p><strong>适用场景</strong>：对于开发者来说，在编写代码文档、技术博客时使用 VS Code 非常便捷，可与开发工作无缝衔接。</p>
-</li>
-</ul>
-</li>
-<li><p><b><span class="exturl" data-url="aHR0cHM6Ly9vYnNpZGlhbi5tZA==">Obsidian<i class="fa fa-external-link-alt"></i></span></b></p>
-<ul>
-<li><p><strong>特点</strong>：它是一款基于本地文件的知识管理和笔记应用，支持 Markdown 格式。具有强大的链接和图谱功能，可以方便地建立笔记之间的关联，形成个人知识网络。</p>
-</li>
-<li><p><strong>适用场景</strong>：适合构建个人知识体系、做学习笔记、进行项目规划等，有助于知识的整理和沉淀。</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="5-2-在线编辑器"><a href="#5-2-在线编辑器" class="headerlink" title="5.2 在线编辑器"></a>5.2 在线编辑器</h4><ul>
-<li><p><b><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29t">GitHub<i class="fa fa-external-link-alt"></i></span></b></p>
-<ul>
-<li><p><strong>特点</strong>：作为全球最大的代码托管平台，GitHub 内置了 Markdown 编辑器，在创建和编辑 README 文件、Wiki 页面时可直接使用。支持 Markdown 语法，方便开发者展示项目信息和文档。</p>
-</li>
-<li><p><strong>适用场景</strong>：对于开发者来说，在 GitHub 上使用 Markdown 编写项目文档是非常常见的操作，便于与团队成员和其他开发者共享信息。</p>
-</li>
-</ul>
-</li>
-<li><p><b><span class="exturl" data-url="aHR0cHM6Ly93d3cuenlidWx1by5jb20vbWRlZGl0b3I=">Cmd Markdown<i class="fa fa-external-link-alt"></i></span></b></p>
-<ul>
-<li><p><strong>特点</strong>：这是一款功能丰富的在线 Markdown 编辑器，支持云存储，方便在不同设备间同步文档。提供多种主题和模板，可导出为多种格式，还支持数学公式、流程图等高级功能。</p>
-</li>
-<li><p><strong>适用场景</strong>：适合需要在线协作编辑、跨设备使用的场景，如团队文档编写、学术论文撰写等。</p>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<blockquote>
-<p>如须学习更多 Markdown 实用小技巧，可以参考这个 Blog：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZG93bi5jb20uY24vY2hlYXQtc2hlZXQuaHRtbA==">Markdown 教程<i class="fa fa-external-link-alt"></i></span></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Markdown</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>网络工程师考试知识点_01</title>
     <url>https://kfufys.github.io/posts/65522.html</url>
     <content><![CDATA[<img src="https://kfufys.github.io/posts/65202/1.jpg" alt="head-img" width="1200">
@@ -1759,212 +1475,287 @@
       </tags>
   </entry>
   <entry>
-    <title>终极 Nginx 配置指南（超详细）</title>
-    <url>https://kfufys.github.io/posts/59687.html</url>
-    <content><![CDATA[<img src="https://kfufys.github.io/posts/59687/nginx-logo.png" alt="head-img" width="1200">
+    <title>Markdown教程</title>
+    <url>https://kfufys.github.io/posts/c079e252.html</url>
+    <content><![CDATA[<img src="https://kfufys.github.io/posts/c079e252/1.png" alt="Markdown" width="1200">
 
-
-
-<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p>对于自己上线项目的前端来说，nginx也是必须要了解和熟悉的，查了很多的nginx文章，看着写的都很详细，但是却没有了整体的概念。这里就重新梳理一遍，也理清思路。</p>
-<p>我们在安装nginx之后，会自动生成很多的文件，但是nginx.conf这个文件是我们的核心，如何去正确的修改和优化它是nginx的核心。</p>
-<p>首先我们可以先看下原本的配置，你会觉得无所适从，因为感觉这个鬼东西也太多了吧。而且感觉根本就不理解，也不知道该怎么写。下面，就一步一步的教你如何入门到熟悉</p>
-<h3 id="一、nginx-conf原本配置到解释"><a href="#一、nginx-conf原本配置到解释" class="headerlink" title="一、nginx.conf原本配置到解释"></a><strong>一、<code>nginx.conf</code>原本配置到解释</strong></h3><p>看到这个118行是不是觉得有点害怕</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#user  nobody;</span></span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">#error_log  logs/error.log;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  notice;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  info;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#pid        logs/nginx.pid;</span></span><br><span class="line"></span><br><span class="line"><span class="section">events</span> &#123;</span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">    <span class="attribute">include</span>        mime.types;</span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#log_format  main  &#x27;$remote_addr  -  $remote_user  [$time_local]  &quot;$request&quot;  &#x27;</span></span><br><span class="line">    <span class="comment">#            &#x27;$status  $body_bytes_sent  &quot;$http_referer&quot;  &#x27;</span></span><br><span class="line">    <span class="comment">#            &#x27;&quot;$http_user_agent&quot;  &quot;$http_x_forwarded_for&quot;&#x27;;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#access_log  logs/access.log  main;</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;</span><br><span class="line">    <span class="comment">#tcp_nopush     on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#keepalive_timeout  0;</span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#gzip  on;</span></span><br><span class="line"></span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>        <span class="number">80</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  localhost;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#charset  koi8-r;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#access_log  logs/host.access.log  main;</span></span><br><span class="line"></span><br><span class="line">        <span class="section">location</span> / &#123;</span><br><span class="line">            <span class="attribute">root</span>   html;</span><br><span class="line">            <span class="attribute">index</span>  index.html  index.htm;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#error_page  404  /404.html;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#redirect  server  error  pages  to  the  static  page  /50x.html</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="attribute">error_page</span>  <span class="number">500</span>  <span class="number">502</span>  <span class="number">503</span>  <span class="number">504</span>  /50x.html;</span><br><span class="line">        <span class="section">location</span> = /50x.html &#123;</span><br><span class="line">            <span class="attribute">root</span>   html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#proxy  the  PHP  scripts  to  Apache  listening  on  127.0.0.1:80</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  \.php$  &#123;</span></span><br><span class="line">        <span class="comment">#    proxy_pass  http://127.0.0.1;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#pass  the  PHP  scripts  to  FastCGI  server  listening  on  127.0.0.1:9000</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  \.php$  &#123;</span></span><br><span class="line">        <span class="comment">#    root         html;</span></span><br><span class="line">        <span class="comment">#    fastcgi_pass  127.0.0.1:9000;</span></span><br><span class="line">        <span class="comment">#    fastcgi_index  index.php;</span></span><br><span class="line">        <span class="comment">#    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</span></span><br><span class="line">        <span class="comment">#    include       fastcgi_params;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#deny  access  to  .htaccess  files,  if  Apache&#x27;s  document  root</span></span><br><span class="line">        <span class="comment">#concurs  with  nginx&#x27;s  one</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  /\.ht  &#123;</span></span><br><span class="line">        <span class="comment">#    deny  all;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#another  virtual  host  using  mix  of  IP-,  name-,  and  port-based  configuration</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment">#server  &#123;</span></span><br><span class="line">    <span class="comment">#    listen        8000;</span></span><br><span class="line">    <span class="comment">#    listen        somename:8080;</span></span><br><span class="line">    <span class="comment">#    server_name   somename   alias   another.alias;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    location  /  &#123;</span></span><br><span class="line">    <span class="comment">#        root   html;</span></span><br><span class="line">    <span class="comment">#        index  index.html  index.htm;</span></span><br><span class="line">    <span class="comment">#    &#125;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#HTTPS  server</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment">#server  &#123;</span></span><br><span class="line">    <span class="comment">#    listen        443  ssl;</span></span><br><span class="line">    <span class="comment">#    server_name   localhost;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_certificate      cert.pem;</span></span><br><span class="line">    <span class="comment">#    ssl_certificate_key  cert.key;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_session_cache    shared:SSL:1m;</span></span><br><span class="line">    <span class="comment">#    ssl_session_timeout  5m;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_ciphers  HIGH:!aNULL:!MD5;</span></span><br><span class="line">    <span class="comment">#    ssl_prefer_server_ciphers  on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    location  /  &#123;</span></span><br><span class="line">    <span class="comment">#        root   html;</span></span><br><span class="line">    <span class="comment">#        index  index.html  index.htm;</span></span><br><span class="line">    <span class="comment">#    &#125;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<p>没关系，我们把其中的注释都删掉，除掉了注释之后的nginx代码，现在只有22行了。感觉好多了</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br><span class="line"><span class="section">events</span> &#123;  </span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">http</span> &#123;  </span><br><span class="line">    <span class="attribute">include</span>       mime.types;  </span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;  </span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;  </span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;  </span><br><span class="line">    <span class="section">server</span> &#123;  </span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;  </span><br><span class="line">        <span class="attribute">server_name</span>  localhost;  </span><br><span class="line">        <span class="section">location</span> / &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  </span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="attribute">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  /50x.html;  </span><br><span class="line">        <span class="section">location</span> = /50x.html &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-<p><strong>注解版本：</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#nginx进程数，建议设置为等于CPU总核心数。  </span></span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br><span class="line"><span class="comment"># 事件区块开始  </span></span><br><span class="line"><span class="section">events</span> &#123;  </span><br><span class="line">    <span class="comment">#单个进程最大连接数（最大连接数=连接数*进程数）  </span></span><br><span class="line">    <span class="comment">#根据硬件调整，和前面工作进程配合起来用，尽量大，但是别把cpu跑到100%就行。每个进程允许的最多连接数，理论上每台nginx服务器的最大连接数为。  </span></span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">#设定http服务器，利用它的反向代理功能提供负载均衡支持  </span></span><br><span class="line"><span class="section">http</span> &#123;  </span><br><span class="line">    <span class="comment">#include：导入外部文件mime.types，将所有types提取为文件，然后导入到nginx配置文件中  </span></span><br><span class="line">    <span class="attribute">include</span>       mime.types;  </span><br><span class="line">     <span class="comment">#默认文件类型  </span></span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;  </span><br><span class="line">    <span class="comment">#开启高效文件传输模式，sendfile指令指定nginx是否调用sendfile函数来输出文件，对于普通应用设为 on，如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络I/O处理速度，降低系统的负载。注意：如果图片显示不正常把这个改成off。  </span></span><br><span class="line">    <span class="comment">#sendfile指令指定 nginx 是否调用sendfile 函数（zero copy 方式）来输出文件，对于普通应用，必须设为on。如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络IO处理速度，降低系统uptime。  </span></span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;  </span><br><span class="line">      <span class="comment">#长连接超时时间，单位是秒  </span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;  </span><br><span class="line">    <span class="comment"># 第一个Server区块开始，表示一个独立的虚拟主机站点  </span></span><br><span class="line">    <span class="section">server</span> &#123;  </span><br><span class="line">        <span class="comment"># 提供服务的端口，默认80  </span></span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;  </span><br><span class="line">        <span class="comment"># 提供服务的域名主机名  </span></span><br><span class="line">        <span class="attribute">server_name</span>  localhost;  </span><br><span class="line">        <span class="comment">#对 &quot;/&quot; 启用反向代理,第一个location区块开始  </span></span><br><span class="line">        <span class="section">location</span> / &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  <span class="comment">#服务默认启动目录  </span></span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm; <span class="comment"># 默认的首页文件，多个用空格分开  </span></span><br><span class="line">        &#125;  </span><br><span class="line">         <span class="comment"># 错误页面路由  </span></span><br><span class="line">        <span class="attribute">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  /50x.html; <span class="comment"># 出现对应的http状态码时，使用50x.html回应客户  </span></span><br><span class="line">        <span class="section">location</span> = /50x.html &#123; <span class="comment"># location区块开始，访问50x.html  </span></span><br><span class="line">            <span class="attribute">root</span>   html;  <span class="comment"># 指定对应的站点目录为html  </span></span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="二、整体基本理解"><a href="#二、整体基本理解" class="headerlink" title="二、整体基本理解"></a><strong>二、整体基本理解</strong></h3><p>虽然上面有了注解，但是看起来还是很迷糊。接着解释：我们可以把**<code>nginx.conf</code>**分为三个部分进行理解：</p>
+<h3 id="一、Markdown简介"><a href="#一、Markdown简介" class="headerlink" title="一、Markdown简介"></a>一、Markdown简介</h3><p><code>Markdown</code> 是一种轻量级标记语言，创始人为约翰·格鲁伯（John Gruber）。<br><code>Markdown</code> 允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的HTML文档。<br><code>Markdown</code> 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。<br><code>Markdown</code> 编写的文档后缀为 .md、.markdown。<br><code>Markdown</code> 是目前互联网上流行的写作语言之一，很多网站平台的文章、博客、论文都是基于它写的。</p>
+<h3 id="二、Markdown优点"><a href="#二、Markdown优点" class="headerlink" title="二、Markdown优点"></a>二、Markdown优点</h3><p>很多人看到【轻量级】【标记】【语言】这些标签就直接放弃了，想着自己学习了非常多的语言，为了记个笔记写个博客还要再学习一门语言吗？实则不然，Markdown的语言非常非常简单，如果想学，10分钟你完全可以学完90%的常用的语法，而且你从此摆脱排版的折磨，属实是强迫症党的福利了。它的优点不仅限于此：</p>
 <ul>
-<li>第一部分：<strong>全局块</strong> </li>
-<li>第二部分：<strong>events块</strong> </li>
-<li>第三部分：<strong>http块</strong></li>
+<li>纯文本编辑，只要是支持 Markdown 编辑的都能获得同样的结果，摆脱排版苦恼</li>
+<li>学习成本低，常用的语法很少，简单易学快速上手</li>
+<li>支持跨平台同步数据</li>
+<li>支持插入图片、视频等</li>
+<li>随时修改，不必担心word等工具出现排版错误</li>
 </ul>
-<p><strong>对应图解：</strong></p>
-<img src="https://kfufys.github.io/posts/59687/1.png" alt="nginx.conf 分块图解">
+<h3 id="三、Markdown基本语法"><a href="#三、Markdown基本语法" class="headerlink" title="三、Markdown基本语法"></a>三、Markdown基本语法</h3><h4 id="3-1-标题"><a href="#3-1-标题" class="headerlink" title="3.1 标题"></a>3.1 标题</h4><p>使用 <code>#</code> 标记，可表示1~6级标题， 随 <code>#</code> 的个数递增，一级标题字号最大，六级标题字号最小。  </p>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="全局块："><a href="#全局块：" class="headerlink" title="全局块："></a><strong>全局块：</strong></h4><p><strong>作用：</strong>从配置文件开始到 <code>events</code>块之间的内容，主要会设置一些影响nginx服务器整体运行的配置指令，主要包括配置<strong>运行 <code>Nginx</code></strong><br><strong>服务器的用户（组）</strong>、<strong>允许生成的 <code>worker process</code> 数</strong>，<strong>进程 <code>PID</code> 存放路径</strong>、<strong>日志存放路径</strong>和<strong>类型以及配置文件的引入</strong>等。</p>
-<p>比如上面第一行配置的</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br></pre></td></tr></table></figure>
-
-
-<p>这是 <code>Nginx</code> 服务器并发处理服务的关键配置，<code>worker_processes</code> 值越大，可以支持的并发处理量也越多，但是 会受到硬件、软件等设备的制约。</p>
-<h4 id="events块："><a href="#events块：" class="headerlink" title="events块："></a><strong><code>events</code>块：</strong></h4><p>作用：<code>events</code> 块涉及的指令主要影响 <code>Nginx</code> 服务器与用户的网络连接，常用的设置包括是否开启对多 <code>work process</code>下的网络连接进行序列化，是否 允许同时接收多个网络连接，选取哪种事件驱动模型来处理连接请求，每个<code> word process</code> 可以同时支持的最大连接数等。</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br></pre></td></tr></table></figure>
-
-
-<p>上述例子就表示每个 <code>work process</code> 支持的最大连接数为 <code>1024</code>。</p>
-<p>这部分的配置对 <code>Nginx</code> 的性能影响较大，在实际中应该灵活配置。</p>
-<h4 id="http块："><a href="#http块：" class="headerlink" title="http块："></a><strong>http块：</strong></h4><p><strong>作用：</strong>这算是 <code>Nginx</code> 服务器配置中最频繁的部分，代理、缓存和日志定义等绝大多数功能和第三方模块的配置都在这里。</p>
-<blockquote>
-<p>需要注意的是：<code>http</code> 块也可以包括 <strong>http全局块</strong>、<strong>server 块</strong>。</p>
-</blockquote>
-<ul>
-<li><p><strong>http全局块</strong></p>
-<ul>
-<li>http全局块配置的指令包括<strong>文件引入</strong>、**<code>MIME-TYPE</code> 定义<strong>、</strong>日志自定义<strong>、</strong>连接超时时间<strong>、</strong>单链接请求数上限**等。</li>
-</ul>
-<ul>
-<li><p><strong>server 块</strong></p>
-<ul>
-<li><p>这块和虚拟主机有密切关系，虚拟主机从用户角度看，和一台独立的硬件主机是完全一样的，该技术的产生是为了 节省互联网服务器硬件成本。</p>
-<ul>
-<li><p>每个 http 块可以包括多个 server 块，而每个 server 块就相当于一个虚拟主机。 </p>
-</li>
-<li><p>而每个 server 块也分为全局 server 块，以及可以同时包含多个 locaton 块。</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>全局 server 块</strong></p>
-<ul>
-<li>最常见的配置是本虚拟机主机的监听配置和本虚拟主机的名称或<code>IP</code>配置。</li>
-</ul>
-</li>
-<li><p><strong>location 块</strong></p>
-<ul>
-<li>一个 <code>server</code> 块可以配置多个 <code>location</code> 块。</li>
-<li>这块的主要作用是基于 <code>Nginx</code> 服务器接收到的请求字符串（例如 server_name&#x2F;uri-string），对虚拟主机名称 （也可以是<code>IP</code>别名）之外的字符串（例如 前面的 <code>/uri-string</code>）进行匹配，对特定的请求进行处理。地址定向、数据缓存和应答控制等功能，还有许多第三方模块的配置也在这里进行。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong>对应图解：</strong></p>
-<img src="https://kfufys.github.io/posts/59687/2.png" alt="nginx.conf 三部分">
-
-
-<h3 id="三、最简单的上线"><a href="#三、最简单的上线" class="headerlink" title="三、最简单的上线"></a><strong>三、最简单的上线</strong></h3><p>以上，我们就知道了nginx整体大致的结构，以及每部分的结构是用于做什么的。接下来我们就修改nginx关键位置来实现我们网站的代理功能。看着nginx配置很繁琐，但是如果你只是需要上线一个网站，那么你只需要去修改两个地方即可：</p>
-<img src="https://kfufys.github.io/posts/59687/3.png" alt="online">
-
-<p>我们可以使用默认简单的配置，然后指定<code>server_name</code>和<code>root</code>，主要是告诉nginx代理的<code>ip</code>是xxx，然后我放在服务器的文件在bbb文件夹即可。nginx便会在用户访问这个ip时，自动的将bbb文件夹中的<code>index.html</code>返回到浏览器来展示页面。</p>
-<h3 id="四、-Nginx-优化："><a href="#四、-Nginx-优化：" class="headerlink" title="四、&#96;Nginx 优化："></a><strong>四、&#96;Nginx 优化：</strong></h3><h4 id="1-前端history模式404问题："><a href="#1-前端history模式404问题：" class="headerlink" title="1. 前端history模式404问题："></a><strong>1. 前端<code>history模式404</code>问题：</strong></h4><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">location</span> / &#123;  </span><br><span class="line">    <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-
-<p>这段代码的作用是，当用户刷新页面时，Nginx会先检查当前<code>URL</code>是否存在，如果不存在，就会尝试访问<code>index.htm</code>l，从而可以正常显示页面。</p>
-<img src="https://kfufys.github.io/posts/59687/4.png" alt="404">
-
-<h4 id="2-反向代理："><a href="#2-反向代理：" class="headerlink" title="2. 反向代理："></a><strong>2. 反向代理：</strong></h4><p>相信大家作为前端都了解跨域问题，目前前端的主流解决跨域的方式就是</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line">1. 开发生产cors解决 </span><br><span class="line">2. 开发proxy，生产nginx解决。 </span><br></pre></td></tr></table></figure>
-
-<p><strong>如何配置：</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#接口端  </span></span><br><span class="line"><span class="section">location</span> /police/ &#123;  </span><br><span class="line">    <span class="attribute">proxy_pass</span>   http://192.168.1.182:8852/police/;  </span><br><span class="line">    <span class="attribute">proxy_redirect</span> default;  </span><br><span class="line">    <span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>;  </span><br><span class="line">    <span class="attribute">proxy_connect_timeout</span>   <span class="number">60</span>;  </span><br><span class="line">    <span class="attribute">proxy_send_timeout</span>      <span class="number">60</span>;  </span><br><span class="line">    <span class="attribute">proxy_read_timeout</span>      <span class="number">90</span>;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-<p><strong>具体位置：</strong></p>
-<img src="https://kfufys.github.io/posts/59687/5.png" alt="反向代理">
-
-<p><strong>理解：</strong></p>
-<p><strong>这段代码的意思：</strong>大致就是如果遇到以<code>/police</code>请求开头的接口，那么就去访问这个ip地址(<code>http://192.168.1.182:8852/police/</code>)的后台端口。</p>
-<p><strong>例如：</strong>我们通过<code>axios</code>去访问<code>/police/getList</code>这个后台接口时，nginx会将这个请求转发到ip端口为<code>http://192.168.1.182:8852</code>的后台中，后台将结果返回给nginx，nginx再把结果给到浏览器，实现反向代理。</p>
-<p><strong>定义多个端口的反向代理：</strong></p>
-<p>copy上面的，直接修改<code>代理头</code>和<code>proxy_pass</code>即可。</p>
-<img src="https://kfufys.github.io/posts/59687/6.png" alt="代理头和proxy_pass">
-
-<h4 id="3-开启gzip："><a href="#3-开启gzip：" class="headerlink" title="3. 开启gzip："></a><strong>3. 开启<code>gzip</code>：</strong></h4><p><strong>作用：</strong></p>
-<p>开启<code>gzip</code>对于前端来说还是比较重要的，浏览器加载的包大概能节约一半的空间。例如首页需要加载<code>a.js</code>文件，该文件为<code>900kb</code>，在开启<code>gzip</code>之后，浏览器会去加载<code>a.js</code>经过<code>gzip</code>之后的文件<code>a.js.gz</code>，大概只有<code>450kb</code>，能够很好的提升浏览速度。</p>
-<p><strong>如何配置：</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">gzip</span> <span class="literal">on</span>; <span class="comment"># 默认off，是否开启gzip  </span></span><br><span class="line"><span class="attribute">gzip_types</span> text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 上面两个开启基本就能跑起了，下面的愿意折腾就了解一下  </span></span><br><span class="line"><span class="attribute">gzip_static</span> <span class="literal">on</span>;  </span><br><span class="line"><span class="attribute">gzip_proxied</span> any;  </span><br><span class="line"><span class="attribute">gzip_vary</span> <span class="literal">on</span>;  </span><br><span class="line"><span class="attribute">gzip_comp_level</span> <span class="number">6</span>;  </span><br><span class="line"><span class="attribute">gzip_buffers</span> <span class="number">16</span> <span class="number">8k</span>;  </span><br><span class="line"><span class="comment"># gzip_min_length 1k;  </span></span><br><span class="line"><span class="attribute">gzip_http_version</span> <span class="number">1</span>.<span class="number">1</span>;  </span><br></pre></td></tr></table></figure>
-
-<p><strong>具体位置：</strong></p>
-<img src="https://kfufys.github.io/posts/59687/7.png" alt="gzip">
-
-<h4 id="4-维护页面："><a href="#4-维护页面：" class="headerlink" title="4. 维护页面："></a><strong>4. 维护页面：</strong></h4><p><strong>作用：</strong></p>
-<p>在系统进行维护升级时，用户打开我们的网站看到的维护页面。</p>
-<p><strong>如何配置：</strong></p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 系统临时维护请打开下面这行注释，并重启nginx,维护完毕后请注释下年这行,并重启nginx  </span></span><br><span class="line"> <span class="comment"># rewrite ^(.*)$ /maintainace.html break;  </span></span><br></pre></td></tr></table></figure>
-
-<p><strong>具体位置：</strong></p>
-<img src="https://kfufys.github.io/posts/59687/8.png" alt="fix page">
-
-<h4 id="5-一个ip上线多个网站："><a href="#5-一个ip上线多个网站：" class="headerlink" title="5. 一个ip上线多个网站："></a><strong>5. 一个<code>ip</code>上线多个网站：</strong></h4><p><strong>作用：</strong></p>
-<p>只有一个<code>ip</code>。利用<code>nginx</code>上线多个网站。例如访问<code>192.168.1.154:8080</code>访问我们的个人博客网站，访问<code>192.168.1.154:8081</code>访问我们的直播网站。</p>
-<p><strong>如何配置：</strong></p>
-<p>直接复制<code>server块</code>即可，一个<code>server块</code>就代表了一个<code>website</code>，需要改端口和文件的路径等内容。</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 第一个网站：个人博客项目配置  </span></span><br><span class="line">  <span class="section">server</span> &#123;  </span><br><span class="line">   <span class="attribute">listen</span>       <span class="number">8080</span>;  </span><br><span class="line">   <span class="attribute">root</span>         /data/www/hexo;  </span><br><span class="line">   <span class="attribute">index</span>        index.html;  </span><br><span class="line">   <span class="section">location</span> / &#123;  </span><br><span class="line">    <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html; <span class="comment"># 路由模式history的修改  </span></span><br><span class="line">   &#125;  </span><br><span class="line">  &#125;  </span><br><span class="line">  </span><br><span class="line"> <span class="comment"># 第二个网站：直播网站项目配置  </span></span><br><span class="line"> <span class="section">server</span> &#123;  </span><br><span class="line">  <span class="attribute">listen</span>       <span class="number">8081</span>;  </span><br><span class="line">  <span class="attribute">root</span>         /data/www/geov;  </span><br><span class="line">  <span class="attribute">index</span>        index.html;  </span><br><span class="line">  <span class="section">location</span> / &#123;&#125;  </span><br><span class="line"> &#125;  </span><br></pre></td></tr></table></figure>
-
-<p><strong>具体位置：</strong></p>
-<img src="https://kfufys.github.io/posts/59687/9.png" alt="多站设置">
-
-<p><strong>注意点：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 这里的8081一定要你的服务器开放了这个端口才可以使用，否则你按照这个配置了也会访问不到（让后端去配）。 </span><br><span class="line">2. 如果是云服务器（比如阿里云，腾讯云），则需要开放相应的入口为8081,否则用户访问不到。 </span><br></pre></td></tr></table></figure>
-
-<h4 id="6-动静分离："><a href="#6-动静分离：" class="headerlink" title="6. 动静分离："></a><strong>6. 动静分离：</strong></h4><p><strong>作用：</strong></p>
-<p>在Web开发中，通常来说，动态资源其实就是指那些后台资源，而静态资源就是指<code>HTML</code>，<code>JavaScript</code>，<code>CSS</code>，<code>img</code>等文件。</p>
-<p>一般来说，都需要将动态资源和静态资源分开，将静态资源部署在<code>Nginx</code>上，当一个请求来的时候，如果是静态资源的请求，就直接到<code>nginx</code>配置的静态资源目录下面获取资源，如果是动态资源的请求，<code>nginx</code>利用反向代理的原理，把请求转发给后台应用去处理，从而实现动静分离。</p>
-<p>在使用前后端分离之后，可以很大程度的提升静态资源的访问速度，同时在开过程中也可以让前后端开发并行可以有效的提高开发时间，也可以有些的减少联调时间 。</p>
-<p><strong>解析：</strong></p>
-<p>实际上我们在代理前端的<code>html</code>和接口时就已经做到了动静分离。我们打包后的dist包实际上就是纯静态的资源，所以直接访问<code>nginx</code>静态资源服务器，就不需要经过后台的tomcat。访问接口时，就需要<code>nginx</code>先去访问后台服务器，拿到结果再给到浏览器</p>
-<img src="https://kfufys.github.io/posts/59687/10.png" alt="动静分离">
-
-<p><strong>图解：</strong></p>
-<img src="https://kfufys.github.io/posts/59687/11.png" alt="nginx动静分离图解">
-
-<p><strong>如何配置（其实是优化，因为一般配置会有动静分离）：</strong></p>
-<p>假设有比较大的图片等需要放置到服务器上，然后通过<code>nginx</code>来转发。或者是有一个纯前端的开源项目（如<code>pdf.js</code>），也需要放在服务器上。如果放在本地代码包，打包出来体积会很大。</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">location</span> /image/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> /static/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> /car/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> <span class="regexp">~ .*\.(html|htm|gif|jpg|jpeg|bmp|png|ico|js|css)$</span> &#123;  </span><br><span class="line">  <span class="attribute">root</span> /Users/dalaoyang/Downloads/static;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-<p><strong>具体位置：</strong></p>
-<img src="https://kfufys.github.io/posts/59687/12.png" alt="image">
-
-<h4 id="7-其他优化"><a href="#7-其他优化" class="headerlink" title="7. 其他优化"></a><strong>7. 其他优化</strong></h4><p>这里只讲了一些<code>nginx</code>基础的知识和一些基础的优化，基本上够用了。但是如果你需要追求更高的性能，那么可以添加其他的优化，只需要根据一些搜索到的文章内容<code>copy</code>过来就行了，<code>nginx</code>主要还是配置多一些，但是理解了整体结构和脉络的话，其实就还是蛮简单的。这里就不做过多的讲解了。</p>
-<h3 id="五、Nginx基础命令：安装，启动，重启，关闭"><a href="#五、Nginx基础命令：安装，启动，重启，关闭" class="headerlink" title="五、Nginx基础命令：安装，启动，重启，关闭"></a><strong>五、<code>Nginx</code>基础命令：安装，启动，重启，关闭</strong></h3><ol>
-<li><strong>安装<code>nginx</code>：</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install nginx  </span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><strong>看是否有<code>nginx</code>进程：</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -anput | grep nginx  </span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li><strong>查看服务器端口占用情况：</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -ntlp  </span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li><strong><code>nginx</code>启动:</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx  </span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li><strong><code>nginx</code>重启:</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -s reload  </span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li><strong>关闭<code>nginx</code>：</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -s stop	<span class="comment"># 快速停止nginx </span></span><br><span class="line">nginx -s quit	<span class="comment"># 完整有序的停止nginx </span></span><br></pre></td></tr></table></figure>
-
-<ol start="7">
-<li><strong>查看默认的<code>nginx</code>配置文件路径：</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -t  </span><br></pre></td></tr></table></figure>
-
+<p><strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/2.png" alt="Markdown_Title" width="1200">
 
 <blockquote>
-<p><strong>注：</strong>如果有<code>nginx.conf</code>配置的更改，需要重启<code>nginx</code>配置才会生效。如果只是更改<code>dist</code>包<code>/html</code>，则可以不重启<code>nginx</code>。</p>
-</blockquote>
-<h3 id="六、参考文章："><a href="#六、参考文章：" class="headerlink" title="六、参考文章："></a><strong>六、参考文章：</strong></h3><ul>
-<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3J1aS1ydWktYW4vbmdpbnhwYWdlcw==">rui-rui-an&#x2F;nginxpages: nginx的配置文件<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82ODQ0OTA0MTQ0MjM1NDEzNTEy">Nginx 从入门到实践，万字详解！ - 掘金<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NjkxNDg0L2FydGljbGUvZGV0YWlscy8xMjYzNTQ3MDI=">Nginx nginx.conf配置文件详解_nginxconf配置详解-CSDN博客<i class="fa fa-external-link-alt"></i></span></li>
+<p><em><strong>注意</strong></em>：</p>
+<ul>
+<li>最好 <code>#</code> 字符与标题文本中间留一个空格</li>
+<li>标题应该置于行首，如果放入表格中可能无法正确解析</li>
 </ul>
+</blockquote>
+<h4 id="3-2-字体"><a href="#3-2-字体" class="headerlink" title="3.2 字体"></a>3.2 字体</h4><p><code>*</code> 与 <code>_</code> 都可以，1个斜体，2个粗体，3个粗斜体</p>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="emphasis">*这是斜体*</span></span><br><span class="line"><span class="emphasis">_这是斜体_</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**这是粗体**</span></span><br><span class="line"><span class="strong">__这是粗体__</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**<span class="emphasis">*这是粗斜体*</span>**</span></span><br><span class="line"><span class="strong">__<span class="emphasis">_这是粗斜体_</span>__</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/3.png" alt="Markdown_Font" width="1200">
+
+<blockquote>
+<p><em><strong>快捷键</strong></em>：</p>
+<ul>
+<li>加粗 <code>Ctrl+B</code></li>
+<li>斜体 <code>Ctrl+I</code></li>
+</ul>
+</blockquote>
+<h4 id="3-3-换行"><a href="#3-3-换行" class="headerlink" title="3.3 换行"></a>3.3 换行</h4><p>Markdown换行的方式有很多种:</p>
+<ul>
+<li>直接在一句话后敲两个空格</li>
+<li>两句话之间加一个空行</li>
+<li>如果你在编辑的时候，想让一行文字在显示的时候换行，就在中间加<code>&lt;br/&gt;</code></li>
+</ul>
+<p> <strong>示例代码</strong>：</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Hello World  </span><br><span class="line">Hello World</span><br><span class="line"></span><br><span class="line">Hello World</span><br><span class="line"></span><br><span class="line">Hello World</span><br><span class="line"></span><br><span class="line">Hello World<span class="language-xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span>Hello World</span><br></pre></td></tr></table></figure>
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/4.png" alt="Markdown_enter" width="1200">
+
+<h4 id="3-4-引用"><a href="#3-4-引用" class="headerlink" title="3.4 引用"></a>3.4 引用</h4><p>Markdown 中引用通过符号 <code>&gt;</code> 来实现。</p>
+<ul>
+<li><code>&gt;</code> 符号后的空格，可有可无。  </li>
+<li>在引用的区块内，允许换行存在，换行并不会终止引用的区块。</li>
+<li>如果要结束引用，需要一行空白行，来结束引用的区块。</li>
+</ul>
+<p> <strong>示例代码</strong>：</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 这是一个引用</span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/5.png" alt="Markdown_quote1" width="1200">
+
+<blockquote>
+<p><strong>此外，引用还可以嵌套使用</strong>  </p>
+</blockquote>
+<p> <strong>示例代码</strong>：</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 这是一个引用：</span></span><br><span class="line">&gt;&gt; 这是一个引用的引用</span><br><span class="line">&gt;&gt;&gt; 这是一个引用的引用的引用</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/6.png" alt="Markdown_quote2" width="1200">
+
+<h4 id="3-5-链接"><a href="#3-5-链接" class="headerlink" title="3.5 链接"></a>3.5 链接</h4><p>Markdown 中插入链接的使用方式是：  </p>
+<p> <strong>示例代码</strong>：</p>
+ <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> [<span class="string">链接名称</span>](<span class="link">链接地址</span>)</span><br><span class="line"><span class="bullet">2.</span> &lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/7.png" alt="Markdown_link" width="1200">
+
+<h4 id="3-6-图片"><a href="#3-6-图片" class="headerlink" title="3.6 图片"></a>3.6 图片</h4><p>Markdown 中插入图片的使用方式是：  </p>
+<p> <strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片描述，可写可不写，但中括号要有</span>](<span class="link">图片地址，本地链接或者URL地址。</span>)</span><br></pre></td></tr></table></figure>
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/8.png" alt="Markdown_img" width="1200">
+
+<h4 id="3-7-列表"><a href="#3-7-列表" class="headerlink" title="3.7 列表"></a>3.7 列表</h4><p>列表分为有序列表和无序列表</p>
+<ul>
+<li>无序列表，使用<code>*</code>、<code>+</code>、<code>-</code>，再加一个空格作为列表的标记</li>
+<li>有序列表，使用数字并加上<code>.</code>号，再加一个空格作为列表的标记</li>
+</ul>
+<p> <strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">*</span> 无序列表 1</span><br><span class="line"><span class="bullet">+</span> 无序列表 2</span><br><span class="line"><span class="bullet">-</span> 无序列表 3</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 有序列表 1</span><br><span class="line"><span class="bullet">2.</span> 有序列表 2</span><br><span class="line"><span class="bullet">3.</span> 有序列表 3</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/9.png" alt="Markdown_listtable1" width="1200">
+
+<blockquote>
+<p><strong>如果想要控制列表的层级，则需要在列表符号前使用 <code>Tab</code></strong></p>
+</blockquote>
+<p> <strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">+</span> 无序列表 1</span><br><span class="line"><span class="bullet">+</span> 无序列表 2</span><br><span class="line"><span class="bullet">	+</span> 无序列表 2.1</span><br><span class="line"><span class="bullet">	+</span> 无序列表 2.2</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> 有序列表 1</span><br><span class="line"><span class="code">	1.1 有序列表 1.1</span></span><br><span class="line"><span class="code">2. 有序列表 2</span></span><br><span class="line"><span class="code">	2.1 有序列表2.1</span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/10.png" alt="Markdown_listtable2" width="1200">
+
+<h4 id="3-8-分割线"><a href="#3-8-分割线" class="headerlink" title="3.8 分割线"></a>3.8 分割线</h4><p>可在一行中用三个 <code>-</code> 、<code>_</code> 或 <code>*</code> 来建立一个分割线。</p>
+<p>*<strong>注意</strong>：在分割线的上面空一行，否则会导致前一行字体放大。</p>
+<p> <strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">#### 使用三个或更多的连字符 -</span></span><br><span class="line"></span><br><span class="line">这是分割线上面的内容。</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">这是分割线下面的内容。</span><br><span class="line"></span><br><span class="line"><span class="section">#### 使用三个或更多的星号 *</span></span><br><span class="line"></span><br><span class="line">上面部分的文本。</span><br><span class="line"></span><br><span class="line"><span class="strong">***</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">下面部分的文本。</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">#### 使用三个或更多的下划线 _</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">分割线之上。</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">___</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">分割线之下。</span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/11.png" alt="Markdown_splitLine" width="1200">
+
+<h4 id="3-9-删除线"><a href="#3-9-删除线" class="headerlink" title="3.9 删除线"></a>3.9 删除线</h4><p>在要添加删除线的文字前后添加两个 <code>~</code>  </p>
+<p> <strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">~~这是要被删除的文字~~</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/12.png" alt="Markdown_strikethrough" width="1200">
+
+<h4 id="3-10-下划线"><a href="#3-10-下划线" class="headerlink" title="3.10 下划线"></a>3.10 下划线</h4><p>在要添加下划线的文字首尾添加 <code>&lt;u&gt;</code>  标签</p>
+<p> <strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">u</span>&gt;</span></span>这是添加下划线的文字<span class="language-xml"><span class="tag">&lt;/<span class="name">u</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/13.png" alt="Markdown_underscore" width="1200">
+
+<h4 id="3-11-代码块"><a href="#3-11-代码块" class="headerlink" title="3.11 代码块"></a>3.11 代码块</h4><p>Markdown中代码块有两种：  </p>
+<ul>
+<li>如果在一行内需要引用代码，只需要用两个反引号引起来。</li>
+<li>如果在一个块内引用代码，则在要引用的代码块的前一行和后一行使用三个反引号，同时在前一个反引号后写入代码语言。</li>
+</ul>
+<p> <strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">### Code Blocks</span></span><br><span class="line"><span class="code">`Hello World`</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">name</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="string">f&quot;Hello, <span class="subst">&#123;name&#125;</span>!&quot;</span></span><br><span class="line"></span><br><span class="line">message = greet(<span class="string">&quot;Alice&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(message)</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/14.png" alt="Markdown_CodeBlocks" width="1200">
+
+<h4 id="3-12-表格"><a href="#3-12-表格" class="headerlink" title="3.12 表格"></a>3.12 表格</h4><p>表格使用<code>|</code>来分割不同的单元格，使用<code>-</code>来分隔表头和其他行</p>
+<ul>
+<li><code>:-</code>：将表头及单元格内容左对齐</li>
+<li><code>-:</code>：将表头及单元格内容右对齐</li>
+<li><code>:-:</code>：将表头及单元格内容居中</li>
+</ul>
+<p> <strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">| 左对齐 | 右对齐 | 居中对齐 |</span><br><span class="line">| :----- | -----: | :------: |</span><br><span class="line">| 内容1  |  内容2 |  内容3   |</span><br><span class="line">| 内容4  |  内容5 |  内容6   |</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/15.png" alt="Markdown_Table" width="1200">
+
+<h4 id="3-13-脚注"><a href="#3-13-脚注" class="headerlink" title="3.13 脚注"></a>3.13 脚注</h4><p>脚注主要由两部分构成：在正文中标记脚注的位置和在文档末尾定义脚注的内容。</p>
+<ul>
+<li><strong>在正文中标记脚注</strong>：使用 [^标记名] 来标记脚注的位置，其中 “标记名” 可以是数字、字母或其他字符组合，但在同一个文档里不能重复。</li>
+<li><strong>在文档末尾定义脚注内容</strong>：使用 [^标记名]: 脚注具体内容 来给出脚注的详细说明，这里的 “标记名” 要和正文中的保持一致。</li>
+</ul>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">使用 Markdown[^1]可以效率的书写文档, 直接转换成 HTML[^2], 你可以使用 Typora[^T] 编辑器进行书写。</span><br><span class="line"></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">Markdown 是一种轻量级标记语言，它使用简单的文本格式来标记文本结构，能让写作者专注于内容创作，提高书写效率。</span></span><br><span class="line">[<span class="symbol">^2</span>]: <span class="link">Markdown 可以借助多种工具，如 Pandoc 等，方便快捷地转换为 HTML 格式，便于在网页上展示。</span></span><br><span class="line">[<span class="symbol">^T</span>]: <span class="link">Typora 是一款简洁易用的 Markdown 编辑器，采用所见即所得的编辑模式，能实时预览 Markdown 渲染效果，提升书写体验。</span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/16.png" alt="Markdown_footnotes" width="1200">
+
+<h4 id="3-14-特殊符号"><a href="#3-14-特殊符号" class="headerlink" title="3.14 特殊符号"></a>3.14 特殊符号</h4><p>对于Markdown中的语法符号，符号前面加反斜线<code>\</code>即可以显示符号本身。  </p>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">这是一个普通的 \# 符号，并非标题标记。</span><br><span class="line">这里有一个转义后的 \* 星号和一个 \_ 下划线。</span><br><span class="line">这是一个普通的 \- 连字符，不是列表项。</span><br><span class="line">在代码里可能会用到 \` 反引号。</span><br><span class="line">这是一个转义后的 \( 左括号和 \) 右括号，以及 \[ 左方括号和 \] 右方括号。</span><br><span class="line">这里有一个转义后的 \| 管道符号。</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/17.png" alt="Markdown_escaped character" width="1200">
+
+<h3 id="四、Markdown高级语法"><a href="#四、Markdown高级语法" class="headerlink" title="四、Markdown高级语法"></a>四、Markdown高级语法</h3><h4 id="4-1-制作待办事项"><a href="#4-1-制作待办事项" class="headerlink" title="4.1 制作待办事项"></a>4.1 制作待办事项</h4><p>用 <code>Markdown</code> 制作待办事项，格式为：<code>-[]</code> 表示未完成；<code>-[x]</code>表示已完成 </p>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> [ ] 支持以 <span class="code">`PDF`</span> 格式导出文稿</span><br><span class="line"><span class="bullet">-</span> [ ] 改进 <span class="code">`Cmd`</span> 渲染算法，使用局部渲染技术提高渲染效率</span><br><span class="line"><span class="bullet">-</span> [x] 新增 <span class="code">`Todo`</span> 列表功能</span><br><span class="line"><span class="bullet">-</span> [x] 修复 <span class="code">`LaTex`</span> 公式渲染问题</span><br><span class="line"><span class="bullet">-</span> [x] 新增 <span class="code">`LaTex`</span> 公式编号功能</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/4-1.png" alt="Markdown_To-do list" width="1200">
+
+<h4 id="4-2-书写公式"><a href="#4-2-书写公式" class="headerlink" title="4.2 书写公式"></a>4.2 书写公式</h4><p>Markdown支持书写公式，例如书写一个纳维 - 斯托克斯方程。<br><code>$$</code>表示整行公式  </p>
+<p><strong>示例代码</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">对于粘性不可压缩流体，纳维 - 斯托克斯方程可以表示为：</span><br><span class="line">$$</span><br><span class="line">\rho \left( \frac&#123;\partial \mathbf&#123;v&#125;&#125;&#123;\partial t&#125; + \mathbf&#123;v&#125; \cdot \nabla \mathbf&#123;v&#125; \right) = -\nabla p + \mu \nabla^2 \mathbf&#123;v&#125; + \mathbf&#123;f&#125;</span><br><span class="line">$$</span><br><span class="line">其中 $\rho$ 是流体密度，$\mathbf&#123;v&#125;$ 是流体速度矢量，$t$ 是时间，$p$ 是压力，$\mu$ 是动力粘度，$\nabla$ 是梯度算子，$\nabla^2$ 是拉普拉斯算子，$\mathbf&#123;f&#125;$ 是作用在流体上的外力密度。</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/4-2.png" alt="Markdown_To-do list" width="1200">
+
+<h4 id="4-3-绘制流程图"><a href="#4-3-绘制流程图" class="headerlink" title="4.3 绘制流程图"></a>4.3 绘制流程图</h4><p><strong>代码解释</strong>：</p>
+<ul>
+<li><code>graph LR</code>：表示这是一个从左到右（Left to Right）方向的流程图。</li>
+<li><code>classDef</code>：用于定义不同类型节点的样式。</li>
+<li>各个节点（如 <code>A</code>、<code>B</code> 等）通过箭头连接，并且可以添加条件判断（如 <code>|是|</code>、<code>|否|</code>）。</li>
+</ul>
+<p><strong>示例代码</strong>：（在支持 Mermaid 的环境中）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;graph LR</span><br><span class="line">    classDef startend fill:#F5EBFF,stroke:#BE8FED,stroke-width:2px;</span><br><span class="line">    classDef process fill:#E5F6FF,stroke:#73A6FF,stroke-width:2px;</span><br><span class="line">    classDef decision fill:#FFF6CC,stroke:#FFBC52,stroke-width:2px;</span><br><span class="line">    </span><br><span class="line">    A([开始]):::startend --&gt; B&#123;是否需要帮助?&#125;:::decision</span><br><span class="line">    B --&gt;|是| C(寻求帮助):::process</span><br><span class="line">    B --&gt;|否| D(自行解决):::process</span><br><span class="line">    C --&gt; E(问题解决):::process</span><br><span class="line">    D --&gt; E</span><br><span class="line">    E --&gt; F([结束]):::startend&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/4-3.png" alt="Markdown_flow chart" width="1200">
+
+<h4 id="4-4-绘制序列图"><a href="#4-4-绘制序列图" class="headerlink" title="4.4 绘制序列图"></a>4.4 绘制序列图</h4><p><strong>代码解释</strong>：</p>
+<ul>
+<li><code>participant</code>：用于定义序列图中的参与者。</li>
+<li><code>-&gt;&gt;</code> 表示实线箭头（主动消息），<code>--&gt;&gt;</code> 表示虚线箭头（返回消息）。</li>
+</ul>
+<p><strong>示例代码</strong>：（在支持 Mermaid 的环境中）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;sequenceDiagram</span><br><span class="line">    participant User</span><br><span class="line">    participant System</span><br><span class="line">    User-&gt;&gt;System: 发起请求</span><br><span class="line">    System--&gt;&gt;User: 请求接收确认</span><br><span class="line">    System-&gt;&gt;System: 处理请求</span><br><span class="line">    System--&gt;&gt;User: 返回处理结果&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
+<img src="https://kfufys.github.io/posts/c079e252/4-4.png" alt="Markdown_sequence diagram" width="1200">
+
+<h4 id="4-5-绘制甘特图"><a href="#4-5-绘制甘特图" class="headerlink" title="4.5 绘制甘特图"></a>4.5 绘制甘特图</h4><p><strong>代码解释</strong>：</p>
+<ul>
+<li><code>title</code>：设置甘特图的标题。</li>
+<li><code>dateFormat</code>：指定日期的格式。</li>
+<li><code>section</code>：划分不同的项目阶段，每个任务通过任务名、任务标识（如 <code>a1</code>）、开始日期和持续时间来定义。</li>
+</ul>
+<p><strong>示例代码</strong>：（在支持 Mermaid 的环境中）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre class=&quot;mermaid&quot;&gt;gantt</span><br><span class="line">    title 项目进度甘特图</span><br><span class="line">    dateFormat  YYYY-MM-DD</span><br><span class="line">    section 项目阶段</span><br><span class="line">    需求分析           :a1, 2024-01-01, 30d</span><br><span class="line">    设计阶段           :after a1, 20d</span><br><span class="line">    开发阶段           :after a2, 60d</span><br><span class="line">    测试阶段           :after a3, 20d</span><br><span class="line">    上线发布           :after a4, 1d&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/4-5.png" alt="Markdown_Gantt chart" width="1200">
+
+<h4 id="4-6-内嵌Html"><a href="#4-6-内嵌Html" class="headerlink" title="4.6 内嵌Html"></a>4.6 内嵌Html</h4><p>Markdown 允许直接嵌入 HTML 标签，在 Markdown 文件中编写 HTML 代码时，Markdown 解析器会将 HTML 代码原样保留并按照 HTML 的规则进行渲染。不过要注意，不同的 Markdown 解析器对 HTML 的支持可能会有细微差异。</p>
+<p><strong>示例代码</strong>：</p>
+<p>使用 HTML 的 <code>&lt;a&gt;</code> 标签结合 CSS 样式可以创建链接按钮。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://kfufys.github.io&quot;</span> <span class="attr">style</span>=<span class="string">&quot;display: inline-block; background-color: #007BFF; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;&quot;</span>&gt;</span>访问示例网站<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>渲染效果</strong>：</p>
+<img src="https://kfufys.github.io/posts/c079e252/4-6.png" alt="Markdown_Embedded Html" width="1200">
+
+<h3 id="五、Markdown工具"><a href="#五、Markdown工具" class="headerlink" title="五、Markdown工具"></a>五、Markdown工具</h3><p>Markdown 编辑器有很多，它们在功能、适用平台、界面设计等方面各有特色，以下为你介绍一些常用的 Markdown 编辑器：</p>
+<h4 id="5-1-通用跨平台编辑器"><a href="#5-1-通用跨平台编辑器" class="headerlink" title="5.1 通用跨平台编辑器"></a>5.1 通用跨平台编辑器</h4><ul>
+<li><p><b><span class="exturl" data-url="aHR0cHM6Ly90eXBvcmFpby5jbi8=">Typora<i class="fa fa-external-link-alt"></i></span></b></p>
+<ul>
+<li><p><strong>特点</strong>：这是一款简洁美观的 Markdown 编辑器，最大的亮点是采用所见即所得的编辑模式，支持多平台，包括 Windows、Mac 和 Linux。</p>
+</li>
+<li><p><strong>适用场景</strong>：适合日常写作、博客撰写、笔记记录等场景，能让用户专注于内容创作。</p>
+</li>
+</ul>
+</li>
+<li><p><b><span class="exturl" data-url="aHR0cHM6Ly92c2NvZGUuanMuY24vRG93bmxvYWQ=">Visual Studio Code<i class="fa fa-external-link-alt"></i></span></b></p>
+<ul>
+<li><p><strong>特点</strong>：作为一款强大的开源代码编辑器，VS Code 通过安装 Markdown 相关的扩展插件，可实现丰富的 Markdown 编辑功能，如语法高亮、自动补全、预览等。支持 Git 集成，方便进行版本控制。</p>
+</li>
+<li><p><strong>适用场景</strong>：对于开发者来说，在编写代码文档、技术博客时使用 VS Code 非常便捷，可与开发工作无缝衔接。</p>
+</li>
+</ul>
+</li>
+<li><p><b><span class="exturl" data-url="aHR0cHM6Ly9vYnNpZGlhbi5tZA==">Obsidian<i class="fa fa-external-link-alt"></i></span></b></p>
+<ul>
+<li><p><strong>特点</strong>：它是一款基于本地文件的知识管理和笔记应用，支持 Markdown 格式。具有强大的链接和图谱功能，可以方便地建立笔记之间的关联，形成个人知识网络。</p>
+</li>
+<li><p><strong>适用场景</strong>：适合构建个人知识体系、做学习笔记、进行项目规划等，有助于知识的整理和沉淀。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-2-在线编辑器"><a href="#5-2-在线编辑器" class="headerlink" title="5.2 在线编辑器"></a>5.2 在线编辑器</h4><ul>
+<li><p><b><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29t">GitHub<i class="fa fa-external-link-alt"></i></span></b></p>
+<ul>
+<li><p><strong>特点</strong>：作为全球最大的代码托管平台，GitHub 内置了 Markdown 编辑器，在创建和编辑 README 文件、Wiki 页面时可直接使用。支持 Markdown 语法，方便开发者展示项目信息和文档。</p>
+</li>
+<li><p><strong>适用场景</strong>：对于开发者来说，在 GitHub 上使用 Markdown 编写项目文档是非常常见的操作，便于与团队成员和其他开发者共享信息。</p>
+</li>
+</ul>
+</li>
+<li><p><b><span class="exturl" data-url="aHR0cHM6Ly93d3cuenlidWx1by5jb20vbWRlZGl0b3I=">Cmd Markdown<i class="fa fa-external-link-alt"></i></span></b></p>
+<ul>
+<li><p><strong>特点</strong>：这是一款功能丰富的在线 Markdown 编辑器，支持云存储，方便在不同设备间同步文档。提供多种主题和模板，可导出为多种格式，还支持数学公式、流程图等高级功能。</p>
+</li>
+<li><p><strong>适用场景</strong>：适合需要在线协作编辑、跨设备使用的场景，如团队文档编写、学术论文撰写等。</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>如须学习更多 Markdown 实用小技巧，可以参考这个 Blog：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZG93bi5jb20uY24vY2hlYXQtc2hlZXQuaHRtbA==">Markdown 教程<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
 ]]></content>
       <categories>
-        <category>网站部署</category>
+        <category>Markdown</category>
       </categories>
       <tags>
         <tag>教程</tag>
-        <tag>网站部署</tag>
       </tags>
   </entry>
   <entry>
@@ -2556,33 +2347,213 @@
       </tags>
   </entry>
   <entry>
-    <title>About</title>
-    <url>https://kfufys.github.io/posts/74350de7.html</url>
-    <content><![CDATA[<head>
-    <meta charset="UTF-8">
-    <style>
-        strong {
-            color: #d9363f;
-        }
-    </style>
-</head>
-<body>
-    <img src="https://kfufys.github.io/posts/74350de7/1.png" alt="head-img" width="1200">
-    <br>
-    <p><b>Hello👋</b><br>我是&ensp;<a href="https://kfufys.github.io/posts/7477.html"><strong>窦长友</strong></a>，一名摄影爱好者，编程小渣渣~~</p>
-    <p>目前就读于&ensp;<a href="https://www.kfu.edu.cn"><strong>开封大学</strong></a>....</p>
-    <h3>我的爱好</h3>
-        <p>热衷于研究所有与计算机相关的事物，包括：</p>
-        <ul>
-            <li><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。</li>
-            <li><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。</li>
-            <li><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</li>
-            <li><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</li>
-        </ul>
-        <h3>我的白日梦</h3>
-        <p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
-        <p>祝大家在我的小站玩的高兴！😃</p>
-</body>]]></content>
+    <title>终极 Nginx 配置指南（超详细）</title>
+    <url>https://kfufys.github.io/posts/59687.html</url>
+    <content><![CDATA[<img src="https://kfufys.github.io/posts/59687/nginx-logo.png" alt="head-img" width="1200">
+
+
+
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p>对于自己上线项目的前端来说，nginx也是必须要了解和熟悉的，查了很多的nginx文章，看着写的都很详细，但是却没有了整体的概念。这里就重新梳理一遍，也理清思路。</p>
+<p>我们在安装nginx之后，会自动生成很多的文件，但是nginx.conf这个文件是我们的核心，如何去正确的修改和优化它是nginx的核心。</p>
+<p>首先我们可以先看下原本的配置，你会觉得无所适从，因为感觉这个鬼东西也太多了吧。而且感觉根本就不理解，也不知道该怎么写。下面，就一步一步的教你如何入门到熟悉</p>
+<h3 id="一、nginx-conf原本配置到解释"><a href="#一、nginx-conf原本配置到解释" class="headerlink" title="一、nginx.conf原本配置到解释"></a><strong>一、<code>nginx.conf</code>原本配置到解释</strong></h3><p>看到这个118行是不是觉得有点害怕</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#user  nobody;</span></span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">#error_log  logs/error.log;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  notice;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  info;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#pid        logs/nginx.pid;</span></span><br><span class="line"></span><br><span class="line"><span class="section">events</span> &#123;</span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">    <span class="attribute">include</span>        mime.types;</span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#log_format  main  &#x27;$remote_addr  -  $remote_user  [$time_local]  &quot;$request&quot;  &#x27;</span></span><br><span class="line">    <span class="comment">#            &#x27;$status  $body_bytes_sent  &quot;$http_referer&quot;  &#x27;</span></span><br><span class="line">    <span class="comment">#            &#x27;&quot;$http_user_agent&quot;  &quot;$http_x_forwarded_for&quot;&#x27;;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#access_log  logs/access.log  main;</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;</span><br><span class="line">    <span class="comment">#tcp_nopush     on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#keepalive_timeout  0;</span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#gzip  on;</span></span><br><span class="line"></span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>        <span class="number">80</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  localhost;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#charset  koi8-r;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#access_log  logs/host.access.log  main;</span></span><br><span class="line"></span><br><span class="line">        <span class="section">location</span> / &#123;</span><br><span class="line">            <span class="attribute">root</span>   html;</span><br><span class="line">            <span class="attribute">index</span>  index.html  index.htm;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#error_page  404  /404.html;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#redirect  server  error  pages  to  the  static  page  /50x.html</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="attribute">error_page</span>  <span class="number">500</span>  <span class="number">502</span>  <span class="number">503</span>  <span class="number">504</span>  /50x.html;</span><br><span class="line">        <span class="section">location</span> = /50x.html &#123;</span><br><span class="line">            <span class="attribute">root</span>   html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#proxy  the  PHP  scripts  to  Apache  listening  on  127.0.0.1:80</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  \.php$  &#123;</span></span><br><span class="line">        <span class="comment">#    proxy_pass  http://127.0.0.1;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#pass  the  PHP  scripts  to  FastCGI  server  listening  on  127.0.0.1:9000</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  \.php$  &#123;</span></span><br><span class="line">        <span class="comment">#    root         html;</span></span><br><span class="line">        <span class="comment">#    fastcgi_pass  127.0.0.1:9000;</span></span><br><span class="line">        <span class="comment">#    fastcgi_index  index.php;</span></span><br><span class="line">        <span class="comment">#    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</span></span><br><span class="line">        <span class="comment">#    include       fastcgi_params;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#deny  access  to  .htaccess  files,  if  Apache&#x27;s  document  root</span></span><br><span class="line">        <span class="comment">#concurs  with  nginx&#x27;s  one</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location  ~  /\.ht  &#123;</span></span><br><span class="line">        <span class="comment">#    deny  all;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#another  virtual  host  using  mix  of  IP-,  name-,  and  port-based  configuration</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment">#server  &#123;</span></span><br><span class="line">    <span class="comment">#    listen        8000;</span></span><br><span class="line">    <span class="comment">#    listen        somename:8080;</span></span><br><span class="line">    <span class="comment">#    server_name   somename   alias   another.alias;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    location  /  &#123;</span></span><br><span class="line">    <span class="comment">#        root   html;</span></span><br><span class="line">    <span class="comment">#        index  index.html  index.htm;</span></span><br><span class="line">    <span class="comment">#    &#125;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#HTTPS  server</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment">#server  &#123;</span></span><br><span class="line">    <span class="comment">#    listen        443  ssl;</span></span><br><span class="line">    <span class="comment">#    server_name   localhost;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_certificate      cert.pem;</span></span><br><span class="line">    <span class="comment">#    ssl_certificate_key  cert.key;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_session_cache    shared:SSL:1m;</span></span><br><span class="line">    <span class="comment">#    ssl_session_timeout  5m;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_ciphers  HIGH:!aNULL:!MD5;</span></span><br><span class="line">    <span class="comment">#    ssl_prefer_server_ciphers  on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    location  /  &#123;</span></span><br><span class="line">    <span class="comment">#        root   html;</span></span><br><span class="line">    <span class="comment">#        index  index.html  index.htm;</span></span><br><span class="line">    <span class="comment">#    &#125;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>没关系，我们把其中的注释都删掉，除掉了注释之后的nginx代码，现在只有22行了。感觉好多了</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br><span class="line"><span class="section">events</span> &#123;  </span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">http</span> &#123;  </span><br><span class="line">    <span class="attribute">include</span>       mime.types;  </span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;  </span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;  </span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;  </span><br><span class="line">    <span class="section">server</span> &#123;  </span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;  </span><br><span class="line">        <span class="attribute">server_name</span>  localhost;  </span><br><span class="line">        <span class="section">location</span> / &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  </span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="attribute">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  /50x.html;  </span><br><span class="line">        <span class="section">location</span> = /50x.html &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<p><strong>注解版本：</strong></p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#nginx进程数，建议设置为等于CPU总核心数。  </span></span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br><span class="line"><span class="comment"># 事件区块开始  </span></span><br><span class="line"><span class="section">events</span> &#123;  </span><br><span class="line">    <span class="comment">#单个进程最大连接数（最大连接数=连接数*进程数）  </span></span><br><span class="line">    <span class="comment">#根据硬件调整，和前面工作进程配合起来用，尽量大，但是别把cpu跑到100%就行。每个进程允许的最多连接数，理论上每台nginx服务器的最大连接数为。  </span></span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">#设定http服务器，利用它的反向代理功能提供负载均衡支持  </span></span><br><span class="line"><span class="section">http</span> &#123;  </span><br><span class="line">    <span class="comment">#include：导入外部文件mime.types，将所有types提取为文件，然后导入到nginx配置文件中  </span></span><br><span class="line">    <span class="attribute">include</span>       mime.types;  </span><br><span class="line">     <span class="comment">#默认文件类型  </span></span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;  </span><br><span class="line">    <span class="comment">#开启高效文件传输模式，sendfile指令指定nginx是否调用sendfile函数来输出文件，对于普通应用设为 on，如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络I/O处理速度，降低系统的负载。注意：如果图片显示不正常把这个改成off。  </span></span><br><span class="line">    <span class="comment">#sendfile指令指定 nginx 是否调用sendfile 函数（zero copy 方式）来输出文件，对于普通应用，必须设为on。如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络IO处理速度，降低系统uptime。  </span></span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;  </span><br><span class="line">      <span class="comment">#长连接超时时间，单位是秒  </span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;  </span><br><span class="line">    <span class="comment"># 第一个Server区块开始，表示一个独立的虚拟主机站点  </span></span><br><span class="line">    <span class="section">server</span> &#123;  </span><br><span class="line">        <span class="comment"># 提供服务的端口，默认80  </span></span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;  </span><br><span class="line">        <span class="comment"># 提供服务的域名主机名  </span></span><br><span class="line">        <span class="attribute">server_name</span>  localhost;  </span><br><span class="line">        <span class="comment">#对 &quot;/&quot; 启用反向代理,第一个location区块开始  </span></span><br><span class="line">        <span class="section">location</span> / &#123;  </span><br><span class="line">            <span class="attribute">root</span>   html;  <span class="comment">#服务默认启动目录  </span></span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm; <span class="comment"># 默认的首页文件，多个用空格分开  </span></span><br><span class="line">        &#125;  </span><br><span class="line">         <span class="comment"># 错误页面路由  </span></span><br><span class="line">        <span class="attribute">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  /50x.html; <span class="comment"># 出现对应的http状态码时，使用50x.html回应客户  </span></span><br><span class="line">        <span class="section">location</span> = /50x.html &#123; <span class="comment"># location区块开始，访问50x.html  </span></span><br><span class="line">            <span class="attribute">root</span>   html;  <span class="comment"># 指定对应的站点目录为html  </span></span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="二、整体基本理解"><a href="#二、整体基本理解" class="headerlink" title="二、整体基本理解"></a><strong>二、整体基本理解</strong></h3><p>虽然上面有了注解，但是看起来还是很迷糊。接着解释：我们可以把**<code>nginx.conf</code>**分为三个部分进行理解：</p>
+<ul>
+<li>第一部分：<strong>全局块</strong> </li>
+<li>第二部分：<strong>events块</strong> </li>
+<li>第三部分：<strong>http块</strong></li>
+</ul>
+<p><strong>对应图解：</strong></p>
+<img src="https://kfufys.github.io/posts/59687/1.png" alt="nginx.conf 分块图解">
+
+<h4 id="全局块："><a href="#全局块：" class="headerlink" title="全局块："></a><strong>全局块：</strong></h4><p><strong>作用：</strong>从配置文件开始到 <code>events</code>块之间的内容，主要会设置一些影响nginx服务器整体运行的配置指令，主要包括配置<strong>运行 <code>Nginx</code></strong><br><strong>服务器的用户（组）</strong>、<strong>允许生成的 <code>worker process</code> 数</strong>，<strong>进程 <code>PID</code> 存放路径</strong>、<strong>日志存放路径</strong>和<strong>类型以及配置文件的引入</strong>等。</p>
+<p>比如上面第一行配置的</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;  </span><br></pre></td></tr></table></figure>
+
+
+<p>这是 <code>Nginx</code> 服务器并发处理服务的关键配置，<code>worker_processes</code> 值越大，可以支持的并发处理量也越多，但是 会受到硬件、软件等设备的制约。</p>
+<h4 id="events块："><a href="#events块：" class="headerlink" title="events块："></a><strong><code>events</code>块：</strong></h4><p>作用：<code>events</code> 块涉及的指令主要影响 <code>Nginx</code> 服务器与用户的网络连接，常用的设置包括是否开启对多 <code>work process</code>下的网络连接进行序列化，是否 允许同时接收多个网络连接，选取哪种事件驱动模型来处理连接请求，每个<code> word process</code> 可以同时支持的最大连接数等。</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">worker_connections</span>  <span class="number">1024</span>;  </span><br></pre></td></tr></table></figure>
+
+
+<p>上述例子就表示每个 <code>work process</code> 支持的最大连接数为 <code>1024</code>。</p>
+<p>这部分的配置对 <code>Nginx</code> 的性能影响较大，在实际中应该灵活配置。</p>
+<h4 id="http块："><a href="#http块：" class="headerlink" title="http块："></a><strong>http块：</strong></h4><p><strong>作用：</strong>这算是 <code>Nginx</code> 服务器配置中最频繁的部分，代理、缓存和日志定义等绝大多数功能和第三方模块的配置都在这里。</p>
+<blockquote>
+<p>需要注意的是：<code>http</code> 块也可以包括 <strong>http全局块</strong>、<strong>server 块</strong>。</p>
+</blockquote>
+<ul>
+<li><p><strong>http全局块</strong></p>
+<ul>
+<li>http全局块配置的指令包括<strong>文件引入</strong>、**<code>MIME-TYPE</code> 定义<strong>、</strong>日志自定义<strong>、</strong>连接超时时间<strong>、</strong>单链接请求数上限**等。</li>
+</ul>
+<ul>
+<li><p><strong>server 块</strong></p>
+<ul>
+<li><p>这块和虚拟主机有密切关系，虚拟主机从用户角度看，和一台独立的硬件主机是完全一样的，该技术的产生是为了 节省互联网服务器硬件成本。</p>
+<ul>
+<li><p>每个 http 块可以包括多个 server 块，而每个 server 块就相当于一个虚拟主机。 </p>
+</li>
+<li><p>而每个 server 块也分为全局 server 块，以及可以同时包含多个 locaton 块。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>全局 server 块</strong></p>
+<ul>
+<li>最常见的配置是本虚拟机主机的监听配置和本虚拟主机的名称或<code>IP</code>配置。</li>
+</ul>
+</li>
+<li><p><strong>location 块</strong></p>
+<ul>
+<li>一个 <code>server</code> 块可以配置多个 <code>location</code> 块。</li>
+<li>这块的主要作用是基于 <code>Nginx</code> 服务器接收到的请求字符串（例如 server_name&#x2F;uri-string），对虚拟主机名称 （也可以是<code>IP</code>别名）之外的字符串（例如 前面的 <code>/uri-string</code>）进行匹配，对特定的请求进行处理。地址定向、数据缓存和应答控制等功能，还有许多第三方模块的配置也在这里进行。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>对应图解：</strong></p>
+<img src="https://kfufys.github.io/posts/59687/2.png" alt="nginx.conf 三部分">
+
+
+<h3 id="三、最简单的上线"><a href="#三、最简单的上线" class="headerlink" title="三、最简单的上线"></a><strong>三、最简单的上线</strong></h3><p>以上，我们就知道了nginx整体大致的结构，以及每部分的结构是用于做什么的。接下来我们就修改nginx关键位置来实现我们网站的代理功能。看着nginx配置很繁琐，但是如果你只是需要上线一个网站，那么你只需要去修改两个地方即可：</p>
+<img src="https://kfufys.github.io/posts/59687/3.png" alt="online">
+
+<p>我们可以使用默认简单的配置，然后指定<code>server_name</code>和<code>root</code>，主要是告诉nginx代理的<code>ip</code>是xxx，然后我放在服务器的文件在bbb文件夹即可。nginx便会在用户访问这个ip时，自动的将bbb文件夹中的<code>index.html</code>返回到浏览器来展示页面。</p>
+<h3 id="四、-Nginx-优化："><a href="#四、-Nginx-优化：" class="headerlink" title="四、&#96;Nginx 优化："></a><strong>四、&#96;Nginx 优化：</strong></h3><h4 id="1-前端history模式404问题："><a href="#1-前端history模式404问题：" class="headerlink" title="1. 前端history模式404问题："></a><strong>1. 前端<code>history模式404</code>问题：</strong></h4><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">location</span> / &#123;  </span><br><span class="line">    <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+
+<p>这段代码的作用是，当用户刷新页面时，Nginx会先检查当前<code>URL</code>是否存在，如果不存在，就会尝试访问<code>index.htm</code>l，从而可以正常显示页面。</p>
+<img src="https://kfufys.github.io/posts/59687/4.png" alt="404">
+
+<h4 id="2-反向代理："><a href="#2-反向代理：" class="headerlink" title="2. 反向代理："></a><strong>2. 反向代理：</strong></h4><p>相信大家作为前端都了解跨域问题，目前前端的主流解决跨域的方式就是</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line">1. 开发生产cors解决 </span><br><span class="line">2. 开发proxy，生产nginx解决。 </span><br></pre></td></tr></table></figure>
+
+<p><strong>如何配置：</strong></p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment">#接口端  </span></span><br><span class="line"><span class="section">location</span> /police/ &#123;  </span><br><span class="line">    <span class="attribute">proxy_pass</span>   http://192.168.1.182:8852/police/;  </span><br><span class="line">    <span class="attribute">proxy_redirect</span> default;  </span><br><span class="line">    <span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>;  </span><br><span class="line">    <span class="attribute">proxy_connect_timeout</span>   <span class="number">60</span>;  </span><br><span class="line">    <span class="attribute">proxy_send_timeout</span>      <span class="number">60</span>;  </span><br><span class="line">    <span class="attribute">proxy_read_timeout</span>      <span class="number">90</span>;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<p><strong>具体位置：</strong></p>
+<img src="https://kfufys.github.io/posts/59687/5.png" alt="反向代理">
+
+<p><strong>理解：</strong></p>
+<p><strong>这段代码的意思：</strong>大致就是如果遇到以<code>/police</code>请求开头的接口，那么就去访问这个ip地址(<code>http://192.168.1.182:8852/police/</code>)的后台端口。</p>
+<p><strong>例如：</strong>我们通过<code>axios</code>去访问<code>/police/getList</code>这个后台接口时，nginx会将这个请求转发到ip端口为<code>http://192.168.1.182:8852</code>的后台中，后台将结果返回给nginx，nginx再把结果给到浏览器，实现反向代理。</p>
+<p><strong>定义多个端口的反向代理：</strong></p>
+<p>copy上面的，直接修改<code>代理头</code>和<code>proxy_pass</code>即可。</p>
+<img src="https://kfufys.github.io/posts/59687/6.png" alt="代理头和proxy_pass">
+
+<h4 id="3-开启gzip："><a href="#3-开启gzip：" class="headerlink" title="3. 开启gzip："></a><strong>3. 开启<code>gzip</code>：</strong></h4><p><strong>作用：</strong></p>
+<p>开启<code>gzip</code>对于前端来说还是比较重要的，浏览器加载的包大概能节约一半的空间。例如首页需要加载<code>a.js</code>文件，该文件为<code>900kb</code>，在开启<code>gzip</code>之后，浏览器会去加载<code>a.js</code>经过<code>gzip</code>之后的文件<code>a.js.gz</code>，大概只有<code>450kb</code>，能够很好的提升浏览速度。</p>
+<p><strong>如何配置：</strong></p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">gzip</span> <span class="literal">on</span>; <span class="comment"># 默认off，是否开启gzip  </span></span><br><span class="line"><span class="attribute">gzip_types</span> text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 上面两个开启基本就能跑起了，下面的愿意折腾就了解一下  </span></span><br><span class="line"><span class="attribute">gzip_static</span> <span class="literal">on</span>;  </span><br><span class="line"><span class="attribute">gzip_proxied</span> any;  </span><br><span class="line"><span class="attribute">gzip_vary</span> <span class="literal">on</span>;  </span><br><span class="line"><span class="attribute">gzip_comp_level</span> <span class="number">6</span>;  </span><br><span class="line"><span class="attribute">gzip_buffers</span> <span class="number">16</span> <span class="number">8k</span>;  </span><br><span class="line"><span class="comment"># gzip_min_length 1k;  </span></span><br><span class="line"><span class="attribute">gzip_http_version</span> <span class="number">1</span>.<span class="number">1</span>;  </span><br></pre></td></tr></table></figure>
+
+<p><strong>具体位置：</strong></p>
+<img src="https://kfufys.github.io/posts/59687/7.png" alt="gzip">
+
+<h4 id="4-维护页面："><a href="#4-维护页面：" class="headerlink" title="4. 维护页面："></a><strong>4. 维护页面：</strong></h4><p><strong>作用：</strong></p>
+<p>在系统进行维护升级时，用户打开我们的网站看到的维护页面。</p>
+<p><strong>如何配置：</strong></p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 系统临时维护请打开下面这行注释，并重启nginx,维护完毕后请注释下年这行,并重启nginx  </span></span><br><span class="line"> <span class="comment"># rewrite ^(.*)$ /maintainace.html break;  </span></span><br></pre></td></tr></table></figure>
+
+<p><strong>具体位置：</strong></p>
+<img src="https://kfufys.github.io/posts/59687/8.png" alt="fix page">
+
+<h4 id="5-一个ip上线多个网站："><a href="#5-一个ip上线多个网站：" class="headerlink" title="5. 一个ip上线多个网站："></a><strong>5. 一个<code>ip</code>上线多个网站：</strong></h4><p><strong>作用：</strong></p>
+<p>只有一个<code>ip</code>。利用<code>nginx</code>上线多个网站。例如访问<code>192.168.1.154:8080</code>访问我们的个人博客网站，访问<code>192.168.1.154:8081</code>访问我们的直播网站。</p>
+<p><strong>如何配置：</strong></p>
+<p>直接复制<code>server块</code>即可，一个<code>server块</code>就代表了一个<code>website</code>，需要改端口和文件的路径等内容。</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 第一个网站：个人博客项目配置  </span></span><br><span class="line">  <span class="section">server</span> &#123;  </span><br><span class="line">   <span class="attribute">listen</span>       <span class="number">8080</span>;  </span><br><span class="line">   <span class="attribute">root</span>         /data/www/hexo;  </span><br><span class="line">   <span class="attribute">index</span>        index.html;  </span><br><span class="line">   <span class="section">location</span> / &#123;  </span><br><span class="line">    <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html; <span class="comment"># 路由模式history的修改  </span></span><br><span class="line">   &#125;  </span><br><span class="line">  &#125;  </span><br><span class="line">  </span><br><span class="line"> <span class="comment"># 第二个网站：直播网站项目配置  </span></span><br><span class="line"> <span class="section">server</span> &#123;  </span><br><span class="line">  <span class="attribute">listen</span>       <span class="number">8081</span>;  </span><br><span class="line">  <span class="attribute">root</span>         /data/www/geov;  </span><br><span class="line">  <span class="attribute">index</span>        index.html;  </span><br><span class="line">  <span class="section">location</span> / &#123;&#125;  </span><br><span class="line"> &#125;  </span><br></pre></td></tr></table></figure>
+
+<p><strong>具体位置：</strong></p>
+<img src="https://kfufys.github.io/posts/59687/9.png" alt="多站设置">
+
+<p><strong>注意点：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 这里的8081一定要你的服务器开放了这个端口才可以使用，否则你按照这个配置了也会访问不到（让后端去配）。 </span><br><span class="line">2. 如果是云服务器（比如阿里云，腾讯云），则需要开放相应的入口为8081,否则用户访问不到。 </span><br></pre></td></tr></table></figure>
+
+<h4 id="6-动静分离："><a href="#6-动静分离：" class="headerlink" title="6. 动静分离："></a><strong>6. 动静分离：</strong></h4><p><strong>作用：</strong></p>
+<p>在Web开发中，通常来说，动态资源其实就是指那些后台资源，而静态资源就是指<code>HTML</code>，<code>JavaScript</code>，<code>CSS</code>，<code>img</code>等文件。</p>
+<p>一般来说，都需要将动态资源和静态资源分开，将静态资源部署在<code>Nginx</code>上，当一个请求来的时候，如果是静态资源的请求，就直接到<code>nginx</code>配置的静态资源目录下面获取资源，如果是动态资源的请求，<code>nginx</code>利用反向代理的原理，把请求转发给后台应用去处理，从而实现动静分离。</p>
+<p>在使用前后端分离之后，可以很大程度的提升静态资源的访问速度，同时在开过程中也可以让前后端开发并行可以有效的提高开发时间，也可以有些的减少联调时间 。</p>
+<p><strong>解析：</strong></p>
+<p>实际上我们在代理前端的<code>html</code>和接口时就已经做到了动静分离。我们打包后的dist包实际上就是纯静态的资源，所以直接访问<code>nginx</code>静态资源服务器，就不需要经过后台的tomcat。访问接口时，就需要<code>nginx</code>先去访问后台服务器，拿到结果再给到浏览器</p>
+<img src="https://kfufys.github.io/posts/59687/10.png" alt="动静分离">
+
+<p><strong>图解：</strong></p>
+<img src="https://kfufys.github.io/posts/59687/11.png" alt="nginx动静分离图解">
+
+<p><strong>如何配置（其实是优化，因为一般配置会有动静分离）：</strong></p>
+<p>假设有比较大的图片等需要放置到服务器上，然后通过<code>nginx</code>来转发。或者是有一个纯前端的开源项目（如<code>pdf.js</code>），也需要放在服务器上。如果放在本地代码包，打包出来体积会很大。</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">location</span> /image/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> /static/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> /car/ &#123;  </span><br><span class="line">  <span class="attribute">root</span>   /var/filecenter/;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="section">location</span> <span class="regexp">~ .*\.(html|htm|gif|jpg|jpeg|bmp|png|ico|js|css)$</span> &#123;  </span><br><span class="line">  <span class="attribute">root</span> /Users/dalaoyang/Downloads/static;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<p><strong>具体位置：</strong></p>
+<img src="https://kfufys.github.io/posts/59687/12.png" alt="image">
+
+<h4 id="7-其他优化"><a href="#7-其他优化" class="headerlink" title="7. 其他优化"></a><strong>7. 其他优化</strong></h4><p>这里只讲了一些<code>nginx</code>基础的知识和一些基础的优化，基本上够用了。但是如果你需要追求更高的性能，那么可以添加其他的优化，只需要根据一些搜索到的文章内容<code>copy</code>过来就行了，<code>nginx</code>主要还是配置多一些，但是理解了整体结构和脉络的话，其实就还是蛮简单的。这里就不做过多的讲解了。</p>
+<h3 id="五、Nginx基础命令：安装，启动，重启，关闭"><a href="#五、Nginx基础命令：安装，启动，重启，关闭" class="headerlink" title="五、Nginx基础命令：安装，启动，重启，关闭"></a><strong>五、<code>Nginx</code>基础命令：安装，启动，重启，关闭</strong></h3><ol>
+<li><strong>安装<code>nginx</code>：</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install nginx  </span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>看是否有<code>nginx</code>进程：</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -anput | grep nginx  </span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong>查看服务器端口占用情况：</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -ntlp  </span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><strong><code>nginx</code>启动:</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx  </span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><strong><code>nginx</code>重启:</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -s reload  </span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li><strong>关闭<code>nginx</code>：</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -s stop	<span class="comment"># 快速停止nginx </span></span><br><span class="line">nginx -s quit	<span class="comment"># 完整有序的停止nginx </span></span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li><strong>查看默认的<code>nginx</code>配置文件路径：</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nginx -t  </span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p><strong>注：</strong>如果有<code>nginx.conf</code>配置的更改，需要重启<code>nginx</code>配置才会生效。如果只是更改<code>dist</code>包<code>/html</code>，则可以不重启<code>nginx</code>。</p>
+</blockquote>
+<h3 id="六、参考文章："><a href="#六、参考文章：" class="headerlink" title="六、参考文章："></a><strong>六、参考文章：</strong></h3><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3J1aS1ydWktYW4vbmdpbnhwYWdlcw==">rui-rui-an&#x2F;nginxpages: nginx的配置文件<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82ODQ0OTA0MTQ0MjM1NDEzNTEy">Nginx 从入门到实践，万字详解！ - 掘金<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NjkxNDg0L2FydGljbGUvZGV0YWlscy8xMjYzNTQ3MDI=">Nginx nginx.conf配置文件详解_nginxconf配置详解-CSDN博客<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+]]></content>
+      <categories>
+        <category>网站部署</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>网站部署</tag>
+      </tags>
   </entry>
   <entry>
     <title>Node包管理器命令速查手册</title>
@@ -2669,6 +2640,35 @@
       <tags>
         <tag>Node.js</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>About</title>
+    <url>https://kfufys.github.io/posts/74350de7.html</url>
+    <content><![CDATA[<head>
+    <meta charset="UTF-8">
+    <style>
+        strong {
+            color: #d9363f;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://kfufys.github.io/posts/74350de7/1.png" alt="head-img" width="1200">
+    <br>
+    <p><b>Hello👋</b><br>我是&ensp;<a href="https://kfufys.github.io/posts/7477.html"><strong>窦长友</strong></a>，一名摄影爱好者，编程小渣渣~~</p>
+    <p>目前就读于&ensp;<a href="https://www.kfu.edu.cn"><strong>开封大学</strong></a>....</p>
+    <h3>我的爱好</h3>
+        <p>热衷于研究所有与计算机相关的事物，包括：</p>
+        <ul>
+            <li><strong>摄影修图</strong>：通过各种软件和技巧来让拍摄的照片更加完美。</li>
+            <li><strong>视频编辑</strong>：对拍摄的视频素材进行剪辑、添加特效等操作，使其成为富有吸引力的视频作品。</li>
+            <li><strong>PPT设计</strong>：精心构思PPT的内容结构、排版以及动画效果等，打造出高质量的演示文稿。</li>
+            <li><strong>网页设计</strong>：从页面布局、色彩搭配到交互功能等方面进行设计，创建美观实用的网页。</li>
+        </ul>
+        <h3>我的白日梦</h3>
+        <p>带着相机和好心情，与自己喜欢的人一起环游世界。</p>
+        <p>祝大家在我的小站玩的高兴！😃</p>
+</body>]]></content>
   </entry>
   <entry>
     <title>SpringBoot 常用的 50 个注解</title>
