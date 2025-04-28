@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://kfufys.github.io/posts/c672cb3c.html</loc>
+    
+    <lastmod>2025-04-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kfufys.github.io/posts/e411cc6f.html</loc>
     
     <lastmod>2025-03-15</lastmod>
@@ -209,6 +218,13 @@
 
   
   <url>
+    <loc>https://kfufys.github.io/tags/AIGC/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://kfufys.github.io/tags/Console/</loc>
     <lastmod>2025-04-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -217,13 +233,6 @@
   
   <url>
     <loc>https://kfufys.github.io/tags/JavaScript/</loc>
-    <lastmod>2025-04-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://kfufys.github.io/tags/AIGC/</loc>
     <lastmod>2025-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -386,13 +395,6 @@
 
   
   <url>
-    <loc>https://kfufys.github.io/categories/Console/</loc>
-    <lastmod>2025-04-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kfufys.github.io/categories/AI%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2025-04-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -400,14 +402,14 @@
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/categories/Themes-%E9%85%8D%E7%BD%AE/</loc>
+    <loc>https://kfufys.github.io/categories/Console/</loc>
     <lastmod>2025-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://kfufys.github.io/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</loc>
+    <loc>https://kfufys.github.io/categories/Themes-%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2025-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -422,6 +424,13 @@
   
   <url>
     <loc>https://kfufys.github.io/categories/Markdown/</loc>
+    <lastmod>2025-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kfufys.github.io/categories/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</loc>
     <lastmod>2025-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
